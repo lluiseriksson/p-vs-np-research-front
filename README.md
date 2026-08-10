@@ -522,6 +522,15 @@ circuit is minimum, its loss is `K-m`; the essential-restriction lower bound
 is short by exactly that same `m`. GATE-004Z is the active concrete
 falsification audit. No minimality or quotient-survival theorem is claimed.
 
+The sixty-second cycle audits the standalone factorized predicate. LEMMA-065
+proves its inversion decrease parameter is exactly `m`. Essential dependence
+forces `3m-1` binary gates; equality forces a formula and hence `m` NOT gates.
+Together with Markov's general inversion bound, this gives
+`C(W_m)>=min(4m-1,3m+ceil(log_2(m+1)))` and exact size `4m-1` for
+`m=1,2,3,4`. From `m=5`, the remaining gap is
+`m-1-ceil(log_2(m+1))`. The formula-boundary route is therefore `NO-GO` for
+the growing regime, and it supplies no base additivity.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

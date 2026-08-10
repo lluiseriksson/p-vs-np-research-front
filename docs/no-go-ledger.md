@@ -1192,3 +1192,24 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This closes only clausewise
 minimality. Representation-independent quotient survival, GATE-004Y,
 GATE-004X, and P versus NP remain open.
+
+## NG-057 — the minimum-binary formula boundary closes the growing signed-triple tail
+
+**Label: NO-GO**
+
+Scope: combine essential-input connectivity, equality forcing a formula,
+Morizumi formula inversion complexity, and Markov circuit inversion
+complexity to prove the factorized `4m-1` standalone signed-triple circuit
+minimum for growing `m`.
+
+Failure: LEMMA-065 proves exact size for `m<=4`. Starting at `m=5`, a circuit
+with at least `3m` binary gates escapes the formula case and needs only
+`ceil(log_2(m+1))` NOT gates by this certificate. The resulting gap from the
+factorized upper bound is `m-1-ceil(log_2(m+1))`, linear asymptotically.
+
+Model: exact non-uniform unrestricted circuits; disjoint factorized signed
+width-three predicates; Boolean-lattice inversion complexity and output-cone
+connectivity; unrestricted depth; fan-in-two AND/OR and fan-in-one NOT; no
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+This is a method no-go only. It proves neither a smaller circuit nor base
+additivity, and GATE-004Z, GATE-004X, and P versus NP remain open.

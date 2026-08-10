@@ -25,10 +25,13 @@ an additive black box inside unrestricted DAG circuits.
 
 ## Next attack
 
-Analyze the standalone predicate's minimum binary-gate equality case and
-inversion complexity, then separate what survives composition with the
-canonical base. Any result must audit polarity sharing and semantic quotient
-classes, not merely standalone size.
+LEMMA-065 completes the minimum-binary/formula-boundary audit. It proves the
+standalone factorized circuit exact only for `m<=4`; from `m=5`, the method
+leaves gap `m-1-ceil(log_2(m+1))`. The next attack must control the
+binary-for-NOT tradeoff away from equality or bypass standalone size with a
+direct minimum-quotient argument over the canonical base. Any result must
+audit polarity sharing and semantic quotient classes, not merely count a
+particular representation.
 
 ## Model card
 

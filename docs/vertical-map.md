@@ -100,6 +100,8 @@ Adjacent collision-aware active branch:
        - GATE-004Y-CLAUSEWISE-MINIMALITY (no-go by LEMMA-064)
        ! GATE-004Z (active concrete audit): factorized signed-triple minimality
          + LEMMA-064 (proved `K+3m` to `K+4m` bracket and `5m` displayed classes)
+         + LEMMA-065 (proved standalone exact size for `m<=4`)
+         - GATE-004Z-FORMULA-BOUNDARY-ONLY (no-go by LEMMA-065)
 
 Stronger dependent-region branch:
   GATE-004I

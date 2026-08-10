@@ -3263,7 +3263,41 @@
       "field_or_algebraic_model": "Boolean syntax and circuits; inherited affine prefix geometry over F_2 only in base rows",
       "asymptotic_quantifiers": "Fixed sufficiently small context exponent; every sufficiently large compatible length; m=P/4; exact canonical-base statement",
       "case_regime": "Worst-case exact falsification gate for GATE-004X; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004Z-factorized-signed-triple-minimality.md; proofs/LEMMA-064-factorized-signed-triple-tail.md"
+      "evidence": "proofs/GATE-004Z-factorized-signed-triple-minimality.md; proofs/LEMMA-064-factorized-signed-triple-tail.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md"
+    },
+    {
+      "id": "LEMMA065",
+      "label": "PROVED",
+      "statement": "The standalone conjunction of m factorized signed triples has size at least min(4m-1,3m+ceil(log_2(m+1))) and exact size 4m-1 for m from one through four.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, Boolean-lattice inversion complexity, and equality-case fan-in-two connectivity",
+      "uniformity": "Fully non-uniform finite circuits; uniform disjoint signed-triple family and chain witness",
+      "circuit_size": "Lower min(4m-1,3m+ceil(log_2(m+1))), upper 4m-1; exact for one through four",
+      "circuit_depth": "Unrestricted; formula conclusion only at the minimum binary-gate boundary",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice and graph connectivity only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every m at least one; exact finite cases one through four; explicit remaining gap for every m at least five",
+      "case_regime": "Worst-case exact standalone-function bound; not a base direct sum, quotient theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md; docs/source-citations/markov-1958.md; docs/source-citations/morizumi-2008.md"
+    },
+    {
+      "id": "GATE004Z-FORMULA-BOUNDARY-ONLY",
+      "label": "NO-GO",
+      "statement": "The minimum-binary formula-boundary and general inversion dichotomy cannot settle growing signed-triple size because from m=5 it leaves gap m-1-ceil(log_2(m+1)).",
+      "computational_model": "Unrestricted Boolean circuits, binary connectivity equality, formula and circuit inversion complexity, and disjoint factorized signed triples",
+      "uniformity": "Fully non-uniform circuits; uniform signed-triple family",
+      "circuit_size": "Exact through m=4; lower 3m+ceil(log_2(m+1)) versus upper 4m-1 from m=5, with stated gap",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice and graph connectivity only",
+      "asymptotic_quantifiers": "Every m at least one; method insufficient for every m at least five and linearly short asymptotically",
+      "case_regime": "Quantitative method no-go only; exact growing size, base additivity, quotient survival, GATE-004Z, GATE-004X, and P versus NP remain open",
+      "evidence": "proofs/GATE-004Z-formula-boundary-only.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md; docs/no-go-ledger.md NG-057"
     }
   ]
 }
