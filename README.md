@@ -704,6 +704,18 @@ The eighty-fifth cycle finds the sharp next repair: identifier 4,210,754 gives
 a length-100 block reading `11110` on the shifted representative. LEMMA-095 is
 again only a local repair. The complete length-100 audit is next.
 
+The eighty-sixth cycle completes that audit. The exact 640,000-type sweep
+finds 46 failures, partitioned `10,12,12,12` by residue. On
+`(100,112,120,123,124)`, a separately derived 851-identifier basis has zero
+selected-projection coverage failures, and its literal DP agrees with the
+symbolic oracle that only mask 8 is absent. LEMMA-096 retains an
+`N/28-O(1)` packing, so complete length 100 is `NO-GO`.
+
+The eighty-seventh cycle finds the next local repair. Identifier 8,390,664
+gives a length-104 block reading `11101` on the shifted representative.
+LEMMA-097 does not establish global coverage; the complete length-104 audit is
+the next operational gate.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

@@ -71,6 +71,11 @@ obstruction survives the exact complete alphabets through lengths 92 and 96.
 Thus all length-at-most-96 specializations are `NO-GO`. LEMMA-095 gives a
 length-100 local repair; the complete length-100 audit is next.
 
+LEMMA-096 completes that audit and finds 46 failures. One mask-8 failure
+translates to an `N/28-O(1)` packing, so every length-at-most-100
+specialization is `NO-GO`. LEMMA-097 gives the first length-104 local repair;
+the complete length-104 type audit is next.
+
 ## Model card
 
 | Field | Value |

@@ -149,3 +149,95 @@ def all_length_projection_coverage_failures() -> tuple[
         for columns, pattern in projection_coverage_failures(free_bit_count):
             failures.append((free_bit_count, columns, pattern))
     return tuple(failures)
+
+
+def selected_position_projection_sets(
+    free_bit_count: int,
+    positions: tuple[int, ...],
+    representative_length: int,
+) -> tuple[tuple[int, ...], ...]:
+    """Return the identifier-bit projections touched by relevant placements.
+
+    This derives the two repeated gamma suffix locations directly from the
+    literal block layout, independently of the symbolic-template oracle.
+    """
+    if free_bit_count < 0:
+        raise ValueError("free bit count must be nonnegative")
+    if (
+        not positions
+        or len(positions) > 5
+        or positions != tuple(sorted(set(positions)))
+        or positions[0] < 0
+        or positions[-1] >= representative_length
+    ):
+        raise ValueError("positions must be 1-5 strictly increasing coordinates")
+    block_length = 12 + 4 * free_bit_count
+    projections = set()
+    for start in range(0, representative_length - block_length + 1, 4):
+        if start > positions[-1] or start + block_length <= positions[0]:
+            continue
+        columns = set()
+        for position in positions:
+            relative = position - start
+            if free_bit_count + 7 <= relative <= 2 * free_bit_count + 6:
+                columns.add(2 * free_bit_count + 6 - relative)
+            elif 3 * free_bit_count + 12 <= relative <= 4 * free_bit_count + 11:
+                columns.add(4 * free_bit_count + 11 - relative)
+        projections.add(tuple(sorted(columns)))
+    return tuple(sorted(projections))
+
+
+@lru_cache(maxsize=None)
+def identifier_projection_basis_for_positions(
+    max_free_bit_count: int,
+    positions: tuple[int, ...],
+    representative_length: int,
+) -> tuple[int, ...]:
+    """Represent every relevant selected-coordinate behavior through a bound."""
+    identifiers = set()
+    for free_bit_count in range(max_free_bit_count + 1):
+        for columns in selected_position_projection_sets(
+            free_bit_count, positions, representative_length
+        ):
+            for pattern in range(1 << len(columns)):
+                suffix = sum(
+                    ((pattern >> index) & 1) << column
+                    for index, column in enumerate(columns)
+                )
+                identifiers.add((1 << free_bit_count) | suffix)
+    return tuple(sorted(identifiers))
+
+
+def selected_position_projection_coverage_failures(
+    max_free_bit_count: int,
+    positions: tuple[int, ...],
+    representative_length: int,
+) -> tuple[tuple[int, tuple[int, ...], int], ...]:
+    """Check the position-specific basis against every required projection."""
+    basis = identifier_projection_basis_for_positions(
+        max_free_bit_count, positions, representative_length
+    )
+    by_length = {
+        free_bit_count: tuple(
+            identifier ^ (1 << free_bit_count)
+            for identifier in basis
+            if identifier.bit_length() == free_bit_count + 1
+        )
+        for free_bit_count in range(max_free_bit_count + 1)
+    }
+    failures = []
+    for free_bit_count in range(max_free_bit_count + 1):
+        for columns in selected_position_projection_sets(
+            free_bit_count, positions, representative_length
+        ):
+            reached = {
+                sum(
+                    ((word >> column) & 1) << index
+                    for index, column in enumerate(columns)
+                )
+                for word in by_length[free_bit_count]
+            }
+            for pattern in range(1 << len(columns)):
+                if pattern not in reached:
+                    failures.append((free_bit_count, columns, pattern))
+    return tuple(failures)

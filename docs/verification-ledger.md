@@ -315,6 +315,9 @@ truth. Each row has exactly one label.
 | LEMMA-094 | PROVED | The complete length-at-most-96 alphabet still omits `11110` and retains `N/24-O(1)` common width-five clauses | `proofs/LEMMA-094-complete-length96-four-block-obstruction.md`; exact symbolic oracle | Complete bounded-length obstruction |
 | GATE-004AF-LENGTH96-ONLY | NO-GO | Every standard neutral block through length 96 retains the linear width-five packing | `proofs/GATE-004AF-length96-only.md`; LEMMA-094; NG-076 | Length at least 100 required |
 | LEMMA-095 | PROVED | Identifier 4,210,754 gives a length-100 block realizing mask 16 on the shifted boundary quintuple | `proofs/LEMMA-095-first-length100-quintet-repair.md`; regression test | Local repair only; complete length-100 audit open |
+| LEMMA-096 | PROVED | The complete length-at-most-100 alphabet omits `11101` and retains `N/28-O(1)` common width-five clauses | `proofs/LEMMA-096-complete-length100-four-block-obstruction.md`; symbolic and projection-complete literal DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH100-ONLY | NO-GO | Every standard neutral block through length 100 retains the linear width-five packing | `proofs/GATE-004AF-length100-only.md`; LEMMA-096; NG-077 | Length at least 104 required |
+| LEMMA-097 | PROVED | Identifier 8,390,664 gives a length-104 block realizing mask 8 on the shifted boundary quintuple | `proofs/LEMMA-097-first-length104-quintet-repair.md`; regression test | Local repair only; complete length-104 audit open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

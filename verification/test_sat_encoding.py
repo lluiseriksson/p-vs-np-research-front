@@ -18,8 +18,10 @@ from covering_basis import (
     all_length_identifier_projection_basis,
     all_length_projection_coverage_failures,
     identifier_projection_basis,
+    identifier_projection_basis_for_positions,
     identifier_projection_basis_through,
     projection_coverage_failures,
+    selected_position_projection_coverage_failures,
     strength_five_coverage_failures,
     strength_five_identifier_basis,
 )
@@ -1105,6 +1107,56 @@ class FormulaEncodingTests(unittest.TestCase):
             22, 720
         ).reached_masks_positions(positions_100, 4)
         self.assertTrue((reached_100 >> 16) & 1)
+
+    def test_position_specific_projection_basis_matches_literal_alphabet(self) -> None:
+        positions = (40, 52, 60, 63, 64)
+        length = 180
+        basis = identifier_projection_basis_for_positions(6, positions, length)
+        self.assertFalse(
+            selected_position_projection_coverage_failures(6, positions, length)
+        )
+        basis_masks = reached_masks_direct_positions(positions, 4, basis, length)
+        literal_masks = reached_masks_direct_positions(
+            positions, 4, tuple(range(1, 128)), length
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(basis_masks & relevant, literal_masks & relevant)
+
+    def test_complete_length_100_obstruction_and_length_104_repair(self) -> None:
+        positions_100 = (100, 112, 120, 123, 124)
+        basis = identifier_projection_basis_for_positions(22, positions_100, 720)
+        self.assertEqual(len(basis), 851)
+        self.assertFalse(
+            selected_position_projection_coverage_failures(
+                22, positions_100, 720
+            )
+        )
+        direct = reached_masks_direct_positions(positions_100, 4, basis, 720)
+        symbolic = CompleteIdentifierAuditor(
+            22, 720
+        ).reached_masks_positions(positions_100, 4)
+        relevant = (1 << 31) - 2
+        self.assertEqual(direct & relevant, symbolic & relevant)
+        self.assertFalse((symbolic >> 8) & 1)
+
+        identifier = 8390664
+        block = "01" + tautology(identifier)
+        positions_104 = (104, 116, 124, 127, 128)
+        start = 24
+        self.assertEqual(len(block), 104)
+        self.assertEqual(
+            "".join(
+                block[position - start]
+                if start <= position < start + len(block)
+                else "1"
+                for position in positions_104
+            ),
+            "11101",
+        )
+        repaired = CompleteIdentifierAuditor(
+            23, 760
+        ).reached_masks_positions(positions_104, 4)
+        self.assertTrue((repaired >> 8) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
