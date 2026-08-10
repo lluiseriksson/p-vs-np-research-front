@@ -32,10 +32,12 @@ Alternative active route:
   <- GATE-004I (active parent): aggregate signed identifier surplus
      + LEMMA-015 (proved incidence averaging)
      - GATE-004H-CANDIDATE-COUNT (no-go)
-  <- GATE-004J (active smallest brick): loss from forced dependent region
+  <- GATE-004J (active parent): loss from forced dependent region
      + ENC-009 (proved complementary columns)
      + ENC-010 (proved all-large-length padding)
      + LEMMA-021 (proved dependent-region size)
+  <- GATE-004K (active smallest brick): compress actual dependent traces
+     + LEMMA-023 (proved dependent/independent accounting)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -286,7 +288,7 @@ saving. `GATE-004I-GLOBAL-POOLING — NO-GO` therefore requires any successful
 trace argument to bound the actual sum of pairwise quotients, not a globally
 shared multi-output circuit.
 
-## Smallest active brick: GATE-004J
+## Active parent: GATE-004J
 
 ENC-010 first ensures that ENC-009's witness matrix fits every sufficiently
 large parent length for any fixed `0<c<1`, rather than only one length
@@ -308,6 +310,19 @@ restricted gate occurrences occupy a negligible fraction of the possible
 classes. `GATE-004J-BOUNDARY-PIGEONHOLE — NO-GO` requires the next attack to
 prove a SAT-specific restriction on the trace family, not merely count its
 formal inputs.
+
+## Smallest active brick: GATE-004K
+
+LEMMA-023 removes the prefix-independent core from the missing inequality. If
+`P` parent labels are prefix-dependent and their two restricted copies realize
+`|T_j|` active functions, then
+
+`S-q_j >= P-|T_j|`.
+
+Thus only the actual dependent traces can create an excess over the stable
+one-class-per-label baseline. GATE-004K asks for a polynomial positive average
+of this exact deficit. Unlike raw pigeonholing, it is sensitive to the fact
+that every trace comes from one shared minimum SAT circuit.
 
 ## Downstream amplification obligation: GATE-005
 

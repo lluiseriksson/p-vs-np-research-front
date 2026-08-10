@@ -132,7 +132,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9ad4751505d1f4dd936475448f7ac721c143694cdf769e155a0b7c67ff57faf3"
+      "sha256": "d0f699d6b6080ad98eb6fcca149ee8f5966ccbed49034e022983a11483c560f9"
     },
     {
       "path": "docs/result-labels.md",
@@ -220,11 +220,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3b02d72f85b1743dcf84680c1dc28092b54140e21c83b33946cab2e41f799321"
+      "sha256": "55c75d3ece7e84271fa9f7828e01c2c40ab323b922e19c695e2c02de1639f1d0"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "6266774fc39029374829acaea91b04821150908909b332b4dc7ef386ed7fb8fd"
+      "sha256": "6425b6b2cd07a78fa6bb0c94bed0201c4a9fd5f213ece0d6670ac2a063040230"
     },
     {
       "path": "experiments/README.md",
@@ -285,6 +285,10 @@
     {
       "path": "proofs/GATE-004J-dependent-region-loss.md",
       "sha256": "2b2b830a3b50a045e0298efdb56a0f1ec18a62765c28d9e6169780903d73ea9a"
+    },
+    {
+      "path": "proofs/GATE-004K-dependent-trace-compression.md",
+      "sha256": "687925e40db3a0c5be0845f11a1a9aa1ea9d217d47ad18680527d6454c1c6286"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -379,8 +383,12 @@
       "sha256": "afbeb15986629f5c4adc892718c3f20a877aafce000b75b3ddcee4553ce42ed8"
     },
     {
+      "path": "proofs/LEMMA-023-dependent-trace-accounting.md",
+      "sha256": "e7a244909c3d73f83b986e5a286090ce00c49b375aaaf5f75c7fd4fd39baaa46"
+    },
+    {
       "path": "README.md",
-      "sha256": "9a2851e766c56c6f328bec36900581c2b41f70212d193155b49bf31d08874bf6"
+      "sha256": "d8e026f0ee4514dbac2c50cb602ca01f5aad490ba47fd420ea9b9b2ce3f00883"
     },
     {
       "path": "verification/audit.py",
@@ -388,7 +396,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "667fc6234847690c02b9467ab78e18379ad88a847dcea22d372c1356281e9daf"
+      "sha256": "5b93f8714312034fffb902632b4fb409fd56fd89fed2140b7bc5d66b2c25d8ec"
     },
     {
       "path": "verification/generate_manifest.py",

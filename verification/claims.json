@@ -1411,6 +1411,40 @@
       "asymptotic_quantifiers": "Every polynomial size exponent and every positive boundary exponent at sufficiently large lengths",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-022-boundary-function-universe.md; docs/no-go-ledger.md NG-025"
+    },
+    {
+      "id": "LEMMA-023",
+      "label": "PROVED",
+      "statement": "If P parent gates are prefix-dependent and T is the set of their distinct active residual functions under a restriction pair, prefix-independent labels give q at most S-P+|T| and hence S-q at least P-|T|.",
+      "computational_model": "One acyclic parent circuit, two complete prefix restrictions, and exact semantic residual quotient",
+      "uniformity": "Fully non-uniform semantic dependence and quotient classification",
+      "circuit_size": "Exact lower bound S-q>=P-|T|=e+h-P",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one in the intended application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite residual-function set counting only",
+      "asymptotic_quantifiers": "Every finite parent circuit, every designated prefix block, and every pair of complete prefix restrictions",
+      "case_regime": "Worst-case exact multi-output circuit computation",
+      "evidence": "proofs/LEMMA-023-dependent-trace-accounting.md"
+    },
+    {
+      "id": "GATE-004K",
+      "label": "EXPLORATORY",
+      "statement": "Across the full conditioned identifier block, the actual active residual traces of all prefix-dependent parent labels have a polynomial positive deficit below the one-class-per-label baseline.",
+      "computational_model": "Minimum unrestricted SAT-gamma circuits, semantic prefix-dependent labels, and exact residual traces under every conditioned pair",
+      "uniformity": "Fully non-uniform circuit adversary and semantic trace classification",
+      "circuit_size": "Aggregate trace deficit at least |J|(B P^eta+1)",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the block",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/GATE-004K-dependent-trace-compression.md"
     }
   ]
 }

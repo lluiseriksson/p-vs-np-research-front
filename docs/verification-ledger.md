@@ -102,6 +102,8 @@ truth. Each row has exactly one label.
 | GATE-004J | EXPLORATORY | Prove average pairwise loss by a positive power of the forced prefix-dependent top region | `proofs/GATE-004J-dependent-region-loss.md` | Active smallest brick; sufficient for GATE-004I |
 | LEMMA-022 | PROVED | `k` suffix-boundary signals admit `2^(2^k)-k-2` nonconstant non-coordinate functions, dwarfing polynomial gate counts | `proofs/LEMMA-022-boundary-function-universe.md` | Exact semantic-capacity ceiling |
 | GATE-004J-BOUNDARY-PIGEONHOLE | NO-GO | Dependent-region size and boundary arity alone cannot force residual-function collisions | LEMMA-022; NG-025 | Requires a smaller SAT-specific trace family |
+| LEMMA-023 | PROVED | Prefix-independent labels contribute at most one joint class each, giving `S-q>=P-|T|=e+h-P` | `proofs/LEMMA-023-dependent-trace-accounting.md` | Exact dependent-trace lower bound |
+| GATE-004K | EXPLORATORY | Prove a polynomial average deficit in the actual residual traces of all prefix-dependent parent gates | `proofs/GATE-004K-dependent-trace-compression.md` | Active smallest brick; sufficient for GATE-004J |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

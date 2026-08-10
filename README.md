@@ -196,13 +196,20 @@ polynomial-size region. Region size plus boundary arity cannot force even one
 collision. This route is `NO-GO`; the next transfer must prove that SAT's
 actual gate traces occupy a much smaller structured family.
 
+The twenty-third cycle makes the missing trace statement exact. LEMMA-023
+proves that prefix-independent labels contribute at most one class each, so a
+pair's genuine improvement is at least `P-|T|`, where `P` is the number of
+prefix-dependent parent labels and `T` their distinct active residual traces.
+GATE-004K is now the smallest brick: prove a polynomial positive average of
+this deficit for minimum SAT circuits.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 61% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent, cross-identifier, prefix-dependent-region, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 62% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | A polynomially large prefix-dependent region is located, but raw collision counting fails and no loss, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | The dependent-trace deficit is exact, but its required positive average, a superlinear SAT lower bound, a polynomial SAT algorithm, and a terminal chain remain unproved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
