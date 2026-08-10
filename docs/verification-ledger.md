@@ -47,6 +47,9 @@ truth. Each row has exactly one label.
 | LEMMA-008 | PROVED | The exact neutral family has a linear recognizer and can retain an arbitrary shared core behind a `3p+5`-gate shell | `proofs/LEMMA-008-regular-neutral-shared-core.md` | Sharpens the generic limitation |
 | GATE-004E-CROSS-TABLE | NO-GO | Full output-level geometry and parser-state statistics of the neutral family do not generically force internal collisions | LEMMA-008; NG-013 | SAT-specific same-column property required |
 | GATE-004F | EXPLORATORY | Prove many same-column internal residual gates become constant, input-equivalent, or mutually equivalent | `proofs/GATE-004F-same-column-collisions.md` | Active smallest brick; sufficient for GATE-004E |
+| ENC-005 | PROVED | A prefix two bits from the neutral context has constant-zero SAT-gamma residual | `docs/sat-encoding.md`; reference test | Supplies a local cofactor comparison only |
+| LEMMA-009 | PROVED | Adjacent hard and zero cofactors can differ in minimum complexity by only one selector gate | `proofs/LEMMA-009-annihilating-cofactor-selector.md` | Generic selector limitation |
+| GATE-004F-ANNIHILATOR | NO-GO | A nearby zero residual does not generically force loss inside the retained hard column | LEMMA-009; NG-014 | Full SAT-specific cofactor structure remains open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

@@ -149,6 +149,12 @@ restriction column, at least `B n^(beta+delta)+3` gates become constant,
 input-equivalent, or semantically equal to an earlier gate. LEMMA-005 converts
 that count into the net gate loss required upstream.
 
+ENC-005 supplies a constant-zero cofactor only two prefix bits from the neutral
+SAT cofactor. LEMMA-009 proves that this proximity still has no generic force:
+`s AND G` retains the entire `G` core when `s=1` although the other cofactor is
+zero. This is `GATE-004F-ANNIHILATOR — NO-GO`; the next audit uses the complete
+two-bit cofactor table rather than the hard/zero pair alone.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

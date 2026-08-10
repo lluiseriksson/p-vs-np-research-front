@@ -248,3 +248,23 @@ unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, oracle,
 field, promise, or distribution. The no-go is generic and method-specific; it
 does not refute an additional internal property special to minimum SAT-gamma
 circuits.
+
+## NG-014 — adjacent annihilating parser state
+
+**Label: NO-GO**
+
+Scope: use the ENC-005 constant-zero residual, only two prefix bits away from a
+neutral SAT residual, to force substantial gate loss in the neutral column.
+
+Failure: LEMMA-009 takes any nonzero core `G` and forms `F(s,z)=s AND G(z)`.
+The selector is essential, the zero cofactor is constant, and the hard
+cofactor is exactly `G`, but selecting the hard cofactor can remove at most one
+gate from a minimum circuit. A circuit may isolate the entire core behind a
+constant-size selector. Proximity and annihilation of the neighboring column
+do not force collisions inside the retained column.
+
+Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. The no-go concerns the generic
+cofactor-pair inference, not a stronger SAT-specific invariant of the full
+operator-bit cofactor table.

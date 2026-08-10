@@ -186,6 +186,11 @@ def context_prefix(*, left_tautologies: int = 0, double_nots: int = 0) -> str:
     )
 
 
+def annihilating_prefix(identifier: int = 1) -> str:
+    """Prefix for ``AND(false, hole)``, whose SAT residual is constant zero."""
+    return "01" + contradiction(identifier)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

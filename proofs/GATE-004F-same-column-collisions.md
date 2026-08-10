@@ -47,6 +47,14 @@ small recognizer for the neutral set do not establish it: LEMMA-008 realizes
 all those features with an arbitrary core and only an `O(p)` shell. This failed
 route is `GATE-004E-CROSS-TABLE — NO-GO`.
 
+ENC-005 adds a tempting local comparison: a prefix two bits from the neutral
+context has constant-zero residual. LEMMA-009 shows that this also fails
+generically. The selector `s AND G` has adjacent hard and zero cofactors while
+the hard restriction loses at most one gate. Hence
+`GATE-004F-ANNIHILATOR — NO-GO` for any inference using only that cofactor
+pair and selector essentiality.
+
 The next attempt must identify a SAT-specific invariant of internal residual
-gate functions that forces many same-column equivalence classes to merge. No
-such invariant is assumed or claimed here.
+gate functions that forces many same-column equivalence classes to merge. The
+next audit will examine the full four-cofactor table of the two differing
+operator bits; no derivative or sensitivity claim is assumed in advance.

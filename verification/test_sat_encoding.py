@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from sat_encoding import (
+    annihilating_prefix,
     context_wrap,
     context_prefix,
     contradiction,
@@ -154,6 +155,17 @@ class FormulaEncodingTests(unittest.TestCase):
                     self.assertIsNone(neutral_prefix_index(flipped))
         self.assertIsNone(neutral_prefix_index("1"))
         self.assertIsNone(neutral_prefix_index("x" * 12))
+
+    def test_annihilating_prefix(self) -> None:
+        prefix = annihilating_prefix()
+        neutral = context_prefix(left_tautologies=1)
+        self.assertEqual(len(prefix), 12)
+        self.assertEqual(sum(a != b for a, b in zip(prefix, neutral)), 2)
+        samples = [self.x, self.y, encode_or(self.x, self.y), "", self.x + "11"]
+        for bits in samples:
+            wrapped = prefix + bits
+            self.assertFalse(verify_assignment(wrapped, {1: True, 7: True}))
+            self.assertEqual(parse_formula(bits) is None, parse_formula(wrapped) is None)
 
 
 if __name__ == "__main__":

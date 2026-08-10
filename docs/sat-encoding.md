@@ -171,6 +171,35 @@ distance `6|l-j|`. LEMMA-006 proves the exact parser-state and distance claims.
 | Asymptotic quantifiers | Every `k>=0`, all indices `0<=l,j<=k`, and every binary suffix |
 | Regime | Exact total-language validity and satisfiability; malformed suffixes reject |
 
+## ENC-005 — adjacent annihilating prefix
+
+Let `F=AND(V,NOT(V))`, the ten-bit contradiction using `V=variable 1`, and
+define the twelve-bit prefix
+
+`Z=01F`.
+
+For every suffix `y`, `Zy` is valid iff `y` is valid. If valid, it encodes
+`AND(F,y)` and is unsatisfiable; if malformed, SAT-gamma also rejects it.
+Therefore the total residual decision function under prefix `Z` is constant
+zero. The neutral prefix `W=01T` from ENC-004 differs from `Z` in exactly the
+two bits selecting OR versus AND inside `T` and `F`.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix parser and coordinate restrictions |
+| Uniform/non-uniform | Uniform fixed-prefix construction |
+| Circuit size | No circuit-size conclusion |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every binary suffix at every length |
+| Regime | Exact total-language decision; the residual is zero on valid and malformed suffixes |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,
