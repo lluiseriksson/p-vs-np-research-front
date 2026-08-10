@@ -132,7 +132,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d552b4feeff17ca31d52c6f11619b36bf57a89a5eb087842e8d4f76169567861"
+      "sha256": "86966bad85131890e3a6ab58b3db3cd101c7c50b81b75022185429c93db7d8e5"
     },
     {
       "path": "docs/problem-statement.md",
@@ -140,7 +140,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "ac85cb74e229d858ac19efad17291a7c008f5de3eb1a85dd09ab42419ae1dd75"
+      "sha256": "6a9f20a3249ff277df36dab41eff869640e345fb6b5de55cd9b1c3cdd2fd9901"
     },
     {
       "path": "docs/result-labels.md",
@@ -228,11 +228,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "e42e823250989c3edb3073599515679c1f1786877a466ccb41813b0520e76d67"
+      "sha256": "674e6666f7041f9344d872f27da9389337e6e48bf196ff9963e284b669e37e4a"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "3d78ab296b6b6f4122214de5baa068859f97df5d3e63a2ac6485b7883494fc3d"
+      "sha256": "f9a8a55143d6cf456e4d0cab0d6291d98366489bc87aeb4ce50d8e0717280ddd"
     },
     {
       "path": "experiments/README.md",
@@ -403,8 +403,12 @@
       "sha256": "f6199095026736a296676c7a2dc4c574720dc3647475682147b76962e3617c2e"
     },
     {
+      "path": "proofs/LEMMA-025-label-score-implementation-instability.md",
+      "sha256": "ff661829c0893ddf5796eb77f5a2420092987c992b6451adf789ee178b855519"
+    },
+    {
       "path": "README.md",
-      "sha256": "4eb6fcbf8e704f3f454f1fff2751afad6368bd1cfd68deacb1111f932341d80f"
+      "sha256": "bee28598e72671a0306f850cdca722ad6f6864cf71e5fd1403c7b0ac99175fe4"
     },
     {
       "path": "verification/audit.py",
@@ -412,7 +416,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "d2cb990e334bc0b37ff26777208ac81c8a628fbde1c174454c3adb624e55e6df"
+      "sha256": "c853e12b40df56c9a77afd3a0fda300e6b39c4c62b5a213f9af6e3cafbcc7951"
     },
     {
       "path": "verification/generate_manifest.py",

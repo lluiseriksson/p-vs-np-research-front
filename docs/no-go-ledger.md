@@ -504,3 +504,25 @@ Model: exact unrestricted non-uniform semantic residual classes; unbounded
 depth; fan-in-two AND/OR and fan-in-one NOT in the parent; no randomness,
 advice, oracle, field, promise, or distribution. The no-go leaves open a
 SAT-specific theorem placing actual residual traces in a far smaller family.
+
+## NG-026 — deriving labelwise bias from output semantics alone
+
+**Label: NO-GO**
+
+Scope: infer a positive disappeared-minus-split score `z_j-t_j` from exact SAT
+semantics, conditioned-output distinctness, or the existence of a large
+prefix-dependent region, without quantitatively invoking parent-circuit
+minimality or cross-label collisions.
+
+Failure: LEMMA-025 appends arbitrarily long even NOT chains without changing
+the function. Every new label splits into two active conditioned residuals, so
+`z_j-t_j` falls by the chain length for every identifier. The exact trace
+deficit is not harmed because the repeated output/complement functions create
+an offsetting cross-label collision surplus and vanish in the semantic
+quotient.
+
+Model: exact unrestricted non-uniform circuits and semantic paired quotients;
+unbounded depth; fan-in-one NOT with the parent AND/OR basis; no randomness,
+advice, oracle, field, promise, or distribution. The construction is
+deliberately nonminimum and therefore leaves GATE-004L open only as a
+minimality-sensitive theorem.

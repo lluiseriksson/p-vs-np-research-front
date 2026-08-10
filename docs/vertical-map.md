@@ -338,6 +338,13 @@ GATE-004L conservatively discards the helpful `kappa_j` term and asks for a
 polynomial positive average of `z_j-t_j`. This is the exact survival
 imbalance that a topology- or minimality-based charging argument must prove.
 
+LEMMA-025 shows why minimality is indispensable. A removable even NOT chain
+preserves every output but adds split labels under every pair, driving `z-t`
+arbitrarily negative; repeated residual functions increase `kappa` and vanish
+in the quotient. `GATE-004L-SEMANTICS-ONLY — NO-GO` blocks any proof that uses
+only the computed function or conditioned-output distinctness. The next attack
+must extract a quantitative trace restriction from minimum-circuit optimality.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

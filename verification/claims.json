@@ -1479,6 +1479,40 @@
       "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the selected block",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004L-labelwise-survival-imbalance.md"
+    },
+    {
+      "id": "LEMMA-025",
+      "label": "PROVED",
+      "statement": "Appending an even NOT chain preserves the function but makes every new label split under each active-distinct restriction pair, decreasing z-t arbitrarily while cross-label collisions compensate.",
+      "computational_model": "Unrestricted acyclic Boolean circuits, paired prefix restrictions, and semantics-preserving even NOT chains",
+      "uniformity": "Fully non-uniform circuit implementations and semantic quotienting",
+      "circuit_size": "Adds 2r redundant gates; decreases z_j-t_j by exactly 2r per pair while adding no required quotient class",
+      "circuit_depth": "Increases by 2r; otherwise unrestricted",
+      "fan_in": "NOT one; parent may use fan-in-two AND/OR",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every finite circuit and pair family satisfying active distinctness; every integer r at least one",
+      "case_regime": "Worst-case exact total functions; implementation-level obstruction, not a minimum-circuit statement",
+      "evidence": "proofs/LEMMA-025-label-score-implementation-instability.md"
+    },
+    {
+      "id": "GATE-004L-SEMANTICS-ONLY",
+      "label": "NO-GO",
+      "statement": "Exact output semantics and conditioned-output distinctness alone cannot force a positive disappeared-minus-split label score without minimum-circuit structure or cross-label collision accounting.",
+      "computational_model": "Unrestricted non-uniform circuits and exact semantic paired quotients",
+      "uniformity": "Fully non-uniform implementation adversary",
+      "circuit_size": "Removable chains make z-t arbitrarily negative while leaving required quotient complexity unchanged",
+      "circuit_depth": "Unrestricted; redundant chain depth arbitrary",
+      "fan_in": "NOT one with parent AND/OR fan-in two",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Arbitrarily long even output chains for every active-distinct pair family",
+      "case_regime": "Worst-case method-specific obstruction; explicitly nonminimum",
+      "evidence": "proofs/LEMMA-025-label-score-implementation-instability.md; docs/no-go-ledger.md NG-026"
     }
   ]
 }
