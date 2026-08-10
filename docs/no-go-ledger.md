@@ -1397,3 +1397,19 @@ contexts; fixed 412-identifier alphabet; one long option; signed width-five
 matching; unrestricted later non-uniform circuits; no randomness, advice,
 oracle, promise, distribution, or algebraic computation. The next construction
 must cover complete-block phases. GATE-004AF and P versus NP remain open.
+
+## NG-069 — some length-at-most-68 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+LEMMA-081 proves that 2,066 representatives cover every five-coordinate
+behavior of the literal complete identifier range 1 through 32,767. LEMMA-082
+then checks that range directly and through the projection reduction: mask 16
+is absent on offsets `{0,1,10,15,16}` under four nonoverlapping blocks.
+Twenty-spaced translations leave a linear common signed width-five packing.
+
+Model: complete standard neutral alphabet of block length at most 68;
+four-block options; one six-one long option; signed width-five matching;
+unrestricted later non-uniform circuits; no randomness, advice, oracle,
+promise, distribution, or algebraic computation. Any repair must use block
+length at least 72. GATE-004AF and P versus NP remain open.

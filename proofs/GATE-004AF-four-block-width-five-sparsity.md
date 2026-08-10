@@ -30,6 +30,12 @@ the fourteen free identifier bits. It reduces the local failure count from
 obstruction. The next enrichment must cover complete-block phases, not merely
 free binary projections.
 
+LEMMA-081 extends the covering basis across every identifier length and proves
+behavioral completeness for all five-coordinate projections. LEMMA-082 then
+shows that the obstruction survives the literal complete identifier range
+1 through 32,767. Therefore every length-at-most-68 specialization is
+`NO-GO`; the next construction must use block length at least 72.
+
 ## Model card
 
 | Field | Value |

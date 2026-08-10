@@ -292,6 +292,9 @@ truth. Each row has exactly one label.
 | LEMMA-079 | PROVED | 318 explicit 15-bit identifiers cover all 64,064 strength-five free-bit obligations | `proofs/LEMMA-079-strength-five-identifier-covering-basis.md`; exact checker | Systematic basis; fixed syntax excluded |
 | LEMMA-080 | PROVED | The 412-identifier covering alphabet omits `11110` on a token-boundary quintuple and retains `N/20-O(1)` common clauses | `proofs/LEMMA-080-covering-basis-token-boundary-obstruction.md`; two DPs; local audit | Locates remaining phase defect |
 | GATE-004AF-FREE-BIT-COVERING-ONLY | NO-GO | Exact free-bit strength-five coverage does not cover fixed token/gamma-boundary phases | `proofs/GATE-004AF-free-bit-covering-only.md`; LEMMA-079/080; NG-068 | Complete-block phase basis required |
+| LEMMA-081 | PROVED | 2,066 all-length representatives cover every five-coordinate behavior of identifiers 1 through 32,767 | `proofs/LEMMA-081-all-length-five-projection-basis.md`; exact checker | Projection-complete bounded alphabet |
+| LEMMA-082 | PROVED | The complete length-at-most-68 alphabet omits `11110` on a token-boundary quintuple and retains `N/20-O(1)` common clauses | `proofs/LEMMA-082-complete-length68-four-block-obstruction.md`; full-range and reduced DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH68-ONLY | NO-GO | Every standard neutral block through length 68 retains the linear width-five packing | `proofs/GATE-004AF-length68-only.md`; LEMMA-082; NG-069 | Length at least 72 required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

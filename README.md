@@ -639,6 +639,14 @@ token-boundary mask-16 obstruction on offsets `{0,1,10,15,16}` and an
 `N/20-O(1)` common packing. Free-bit coverage alone is `NO-GO`; the next
 GATE-004AF construction must cover phases of the complete neutral-block word.
 
+The seventy-sixth cycle closes the entire length-68 alphabet. LEMMA-081 builds
+2,066 projection-complete representatives across all fifteen identifier
+lengths and proves they capture every five-coordinate behavior of identifiers
+1 through 32,767. LEMMA-082 checks both that basis and the literal full range:
+mask 16 still fails on offsets `{0,1,10,15,16}`, leaving an `N/20-O(1)` common
+packing. Every length-at-most-68 specialization is `NO-GO`; GATE-004AF now
+requires blocks of length at least 72. No circuit or terminal claim follows.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

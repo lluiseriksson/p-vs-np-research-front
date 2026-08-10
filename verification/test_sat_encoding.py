@@ -15,6 +15,8 @@ from quartet_type_audit import (
 )
 from quartet_type_audit_fast import QuartetAuditor
 from covering_basis import (
+    all_length_identifier_projection_basis,
+    all_length_projection_coverage_failures,
     strength_five_coverage_failures,
     strength_five_identifier_basis,
 )
@@ -920,6 +922,19 @@ class FormulaEncodingTests(unittest.TestCase):
         relevant = (1 << 31) - 2
         self.assertEqual(fast & relevant, direct & relevant)
         self.assertFalse((fast >> 16) & 1)
+
+    def test_all_identifier_lengths_have_complete_five_projection_basis(self) -> None:
+        basis = all_length_identifier_projection_basis()
+        self.assertEqual(len(basis), 2066)
+        self.assertEqual(len(set(basis)), 2066)
+        self.assertEqual(all_length_projection_coverage_failures(), ())
+        self.assertEqual(max(basis), 32763)
+
+    def test_complete_length_68_alphabet_retains_mask_16(self) -> None:
+        reached = reached_masks_direct_positions(
+            (70, 71, 80, 85, 86), 4, tuple(range(1, 32768)), 432
+        )
+        self.assertFalse((reached >> 16) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

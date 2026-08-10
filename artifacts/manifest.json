@@ -327,6 +327,10 @@
       "sha256": "dacfc01e437fe6a31e710eee73a2ed0efcf38250af3b86233ceea35c61d30e61"
     },
     {
+      "path": "artifacts/cycle-076-complete-length68-audit.md",
+      "sha256": "ca62d6ffb04e39ccce2ab1141c6f25b88ed224a38e793d521fcd220437ccede8"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -352,7 +356,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "405f850fb7d0723105c0f4d6d14705b25c2ffc2719266f0a32d279fa08fff2f4"
+      "sha256": "cdab1bb91ee9177fa83fa81668501c3de5cfdf5dff9caa65a462f69790cf1c39"
     },
     {
       "path": "docs/problem-statement.md",
@@ -456,11 +460,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "06b933e16cd35beb7bda2173120f4a46569f89a1996bdad03a775c82f006c976"
+      "sha256": "1b7bfd8533a372a2d09a6b89ab010d2d630bbdf7ba8d6efe7fa0e41cad481c42"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "3ce31017aa086a03f860b4b51c2895030621b4895140c94acfd5efec2cf6a51b"
+      "sha256": "4ab321176e71849b127d857eaccc02c0fd13f91328be3618e81b859cbf656e4d"
     },
     {
       "path": "experiments/README.md",
@@ -536,7 +540,7 @@
     },
     {
       "path": "proofs/GATE-004AF-four-block-width-five-sparsity.md",
-      "sha256": "ad139cee98d8d2de77bf06082625974ec9c3c8aae359bccf253b8bc417e3ce65"
+      "sha256": "7ec080b6a3c9fe361dfab9bbb005370ce65b33f980fa55f087c45717646fbfae"
     },
     {
       "path": "proofs/GATE-004AF-free-bit-covering-only.md",
@@ -545,6 +549,10 @@
     {
       "path": "proofs/GATE-004AF-lemma075-alphabet-only.md",
       "sha256": "b8406f5cf0f89767dee05d4496698320afd98da8176f0192f5c7a912a3937a08"
+    },
+    {
+      "path": "proofs/GATE-004AF-length68-only.md",
+      "sha256": "a8a457e4e4f49c43ebb121a37e4627b2c53a196847e39b3c800f4b6c5f3eb59b"
     },
     {
       "path": "proofs/GATE-004AF-two-id-repair-only.md",
@@ -1035,8 +1043,16 @@
       "sha256": "337e54bcf78e8efb9f9386daa667c0f124726b213ca0bb6e6f7157307c378fe6"
     },
     {
+      "path": "proofs/LEMMA-081-all-length-five-projection-basis.md",
+      "sha256": "3549fffca75d21f4800eaabcf39cc893603c4865af95c69694b10984b7b917b6"
+    },
+    {
+      "path": "proofs/LEMMA-082-complete-length68-four-block-obstruction.md",
+      "sha256": "d13fde3b5f9d64a0980329fcd4adb972821d29cbb713ea70c219a151007c2102"
+    },
+    {
       "path": "README.md",
-      "sha256": "681205effe141ee31a5e22e9c333677462a9d8a29024068a111c4d6063ab45a4"
+      "sha256": "a85ec6f76d5546bade1a3798f3eb9f2e6f044b1cb25f8a26edd64f26b600b6cc"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1048,11 +1064,11 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "41346967ac5a78416516920c21b86974b95f5db01d2eeeff2ad676f6994a1949"
+      "sha256": "0b507413b8a23be04a393d262b545dd732330ceaf14d77581aea121856721071"
     },
     {
       "path": "verification/covering_basis.py",
-      "sha256": "af7350d461724ea208c6d98ab52e41589ad31b2165b82d01590e960ffc6c4129"
+      "sha256": "8f99d3c08f33c13ad112d4a974fd37fb2c8a9236aeb633dc73f1e4b4a7720b58"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -1088,7 +1104,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "244289ebfecb5641a88678c478c520d9f766243c6db2e8971a80584a1e11add2"
+      "sha256": "f194565dddac8e8d93c976cdae74c6de504e4ac937b92a16eec8950fa49e71b7"
     },
     {
       "path": "verification/test_trace_accounting.py",

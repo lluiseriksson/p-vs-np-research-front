@@ -57,3 +57,73 @@ def strength_five_coverage_failures(
             if pattern not in reached:
                 failures.append((columns, pattern))
     return tuple(failures)
+
+
+@lru_cache(maxsize=None)
+def identifier_projection_basis(free_bit_count: int) -> tuple[int, ...]:
+    """Cover every assignment on up to five free bits at one ID length."""
+    if not 0 <= free_bit_count <= 14:
+        raise ValueError("free bit count must lie between zero and fourteen")
+    if free_bit_count == 0:
+        return (1,)
+    strength = min(5, free_bit_count)
+    column_subsets = tuple(combinations(range(free_bit_count), strength))
+    uncovered = {
+        (columns, pattern)
+        for columns in column_subsets
+        for pattern in range(1 << strength)
+    }
+    identifiers: list[int] = []
+    seen: set[int] = set()
+    counter = 0
+    while uncovered:
+        digest = sha256(
+            f"p-vs-np-width5-n{free_bit_count}-{counter}".encode("ascii")
+        ).digest()
+        counter += 1
+        word = int.from_bytes(digest[:4], "big") & ((1 << free_bit_count) - 1)
+        if word in seen:
+            continue
+        seen.add(word)
+        identifiers.append((1 << free_bit_count) | word)
+        for columns in column_subsets:
+            pattern = sum(
+                ((word >> column) & 1) << index
+                for index, column in enumerate(columns)
+            )
+            uncovered.discard((columns, pattern))
+    return tuple(identifiers)
+
+
+@lru_cache(maxsize=1)
+def all_length_identifier_projection_basis() -> tuple[int, ...]:
+    """Projection-complete representatives for every ID from 1 through 32767."""
+    return tuple(
+        identifier
+        for free_bit_count in range(15)
+        for identifier in identifier_projection_basis(free_bit_count)
+    )
+
+
+def all_length_projection_coverage_failures() -> tuple[
+    tuple[int, tuple[int, ...], int], ...
+]:
+    failures = []
+    for free_bit_count in range(15):
+        identifiers = identifier_projection_basis(free_bit_count)
+        words = tuple(
+            identifier ^ (1 << free_bit_count) for identifier in identifiers
+        )
+        strength = min(5, free_bit_count)
+        for columns in combinations(range(free_bit_count), strength):
+            reached = {
+                sum(
+                    ((word >> column) & 1) << index
+                    for index, column in enumerate(columns)
+                )
+                for word in words
+            }
+            for pattern in range(1 << strength):
+                if pattern not in reached:
+                    failures.append((free_bit_count, columns, pattern))
+    return tuple(failures)
