@@ -3,6 +3,10 @@
   "generator": "python verification/generate_manifest.py",
   "files": [
     {
+      "path": ".gitattributes",
+      "sha256": "946388c7c74c7c2f8623c6f305ba4c451a44b7331bbc6ce9c177f3784f008081"
+    },
+    {
       "path": ".github/workflows/verify.yml",
       "sha256": "e13148c0b36a9352a210643a3487e5a9b6571f3091375d934c41d0592e319bda"
     },
