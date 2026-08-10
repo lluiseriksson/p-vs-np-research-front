@@ -69,6 +69,7 @@ truth. Each row has exactly one label.
 | INFRA-062 | PROVED | Cycle-062 standalone signed-triple formula-boundary theorem and quantitative no-go reproduce from a cold clone | `artifacts/cold-clone-070bfe3.md` | None |
 | INFRA-063 | PROVED | Cycle-063 exact derived-implication reduction, quotient transfer, and GATE-004AA reproduce from a cold clone | `artifacts/cold-clone-2f1df11.md` | None |
 | INFRA-064 | PROVED | Cycle-064 one-block distant-triple obstruction and GATE-004AB reproduce from a cold clone | `artifacts/cold-clone-5660e73.md` | None |
+| INFRA-065 | PROVED | Cycle-065 two-block plus long-option distant pattern completeness reproduces from a cold clone | `artifacts/cold-clone-c3152a8.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
