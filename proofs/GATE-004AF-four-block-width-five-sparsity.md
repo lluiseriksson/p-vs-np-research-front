@@ -46,6 +46,12 @@ and 494 local failures. LEMMA-086 supplies 2,873 behaviorally complete
 representatives for the full length-76 alphabet; its complete audit is the
 next operational task.
 
+LEMMA-087 replaces representative materialization by an exact symbolic oracle.
+Its exhaustive local audit finds 195 failures for the complete length-76
+alphabet, and LEMMA-088 turns one into a translated packing. Every
+length-at-most-76 specialization is therefore `NO-GO`; the next repair must
+use block length at least 80.
+
 ## Model card
 
 | Field | Value |

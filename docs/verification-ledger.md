@@ -301,6 +301,9 @@ truth. Each row has exactly one label.
 | LEMMA-085 | PROVED | The single length-76 repair omits `11110` on a shifted quintuple and retains `N/20-O(1)` common clauses | `proofs/LEMMA-085-single-length76-repair-obstruction.md`; two DPs; local audit | Refutes one-identifier repair |
 | GATE-004AF-SINGLE-LENGTH76-REPAIR-ONLY | NO-GO | Identifier 98,370 alone leaves a shifted mask-16 obstruction and 494 local failures | `proofs/GATE-004AF-single-length76-repair-only.md`; LEMMA-085; NG-071 | Complete length-76 audit remains open |
 | LEMMA-086 | PROVED | 2,873 representatives cover every five-coordinate behavior of all standard blocks through length 76 | `proofs/LEMMA-086-length76-projection-complete-basis.md`; exact checker | Finite complete-basis reduction |
+| LEMMA-087 | PROVED | Symbolic templates and earliest-end DP exactly equal literal complete-identifier enumeration | `proofs/LEMMA-087-symbolic-complete-identifier-oracle.md`; regression comparisons | Exact verifier optimization |
+| LEMMA-088 | PROVED | The complete length-at-most-76 alphabet omits `11110` and retains `N/20-O(1)` common width-five clauses | `proofs/LEMMA-088-complete-length76-four-block-obstruction.md`; two DPs; local audit | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH76-ONLY | NO-GO | Every standard neutral block through length 76 retains the linear width-five packing | `proofs/GATE-004AF-length76-only.md`; LEMMA-088; NG-072 | Length at least 80 required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

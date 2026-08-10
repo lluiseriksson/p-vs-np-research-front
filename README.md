@@ -662,6 +662,13 @@ projection-complete representatives for every standard block through length
 76. A 5,000-type sample finds no failure for that complete basis, but this is
 only EXPLORATORY; the exhaustive or analytic bound-76 audit remains open.
 
+The seventy-ninth cycle resolves that uncertainty negatively. LEMMA-087 proves
+that a symbolic fixed-token/free-column oracle is exactly equivalent to literal
+identifier enumeration. Its complete bound-76 local audit finds 195 failures.
+LEMMA-088 and the direct full-range DP agree that mask 16 is absent on offsets
+`{0,4,12,17,18}`, leaving an `N/20-O(1)` packing. Every length-at-most-76
+specialization is `NO-GO`; GATE-004AF now requires block length at least 80.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

@@ -1444,3 +1444,19 @@ options; one long option; signed width-five matching; unrestricted later
 non-uniform circuits; no randomness in the exact audit, advice, oracle,
 promise, distribution, or algebraic computation. The projection-complete full
 length-76 alphabet remains open under LEMMA-086. P versus NP is unaffected.
+
+## NG-072 — some length-at-most-76 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+LEMMA-087 gives an exact symbolic oracle for the complete identifier alphabet.
+The bound-76 local audit finds 195 failures. LEMMA-088 confirms with both the
+symbolic oracle and literal enumeration that mask 16 is absent on offsets
+`{0,4,12,17,18}` under four blocks. Twenty-spaced translations leave a linear
+common signed width-five packing.
+
+Model: every standard neutral block of length at most 76; four-block options;
+one six-one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness, advice, oracle, promise, distribution,
+or algebraic computation. Any repair must use length at least 80. GATE-004AF
+and P versus NP remain open.

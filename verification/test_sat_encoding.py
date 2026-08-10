@@ -23,6 +23,7 @@ from covering_basis import (
     strength_five_coverage_failures,
     strength_five_identifier_basis,
 )
+from symbolic_identifier_audit import CompleteIdentifierAuditor
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
@@ -984,6 +985,32 @@ class FormulaEncodingTests(unittest.TestCase):
         relevant = (1 << 31) - 2
         self.assertEqual(fast & relevant, direct & relevant)
         self.assertFalse((fast >> 16) & 1)
+
+    def test_symbolic_complete_identifier_oracle_matches_direct_dp(self) -> None:
+        auditor = CompleteIdentifierAuditor(6, 220)
+        for positions in (
+            (40, 41, 48, 55, 56),
+            (43, 50, 61, 79, 104),
+            (52, 68, 91, 117, 151),
+            (60, 63, 70, 74, 89),
+        ):
+            symbolic = auditor.reached_masks_positions(positions, 4)
+            direct = reached_masks_direct_positions(
+                positions, 4, tuple(range(1, 128)), 220
+            )
+            self.assertEqual(symbolic & ((1 << 31) - 2), direct & ((1 << 31) - 2))
+
+    def test_complete_length_76_alphabet_retains_mask_16(self) -> None:
+        positions = (76, 80, 88, 93, 94)
+        symbolic = CompleteIdentifierAuditor(16, 500).reached_masks_positions(
+            positions, 4
+        )
+        direct = reached_masks_direct_positions(
+            positions, 4, tuple(range(1, 131072)), 500
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(symbolic & relevant, direct & relevant)
+        self.assertFalse((symbolic >> 16) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
