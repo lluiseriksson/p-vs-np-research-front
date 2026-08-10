@@ -289,6 +289,9 @@ truth. Each row has exactly one label.
 | GATE-004AF-LEMMA075-ALPHABET-ONLY | NO-GO | The 92-identifier width-four alphabet retains a linear signed width-five packing | `proofs/GATE-004AF-lemma075-alphabet-only.md`; LEMMA-077; NG-066 | Richer fixed alphabet required |
 | LEMMA-078 | PROVED | The 94-identifier two-ID repair alphabet omits `11101` on a translation-stable quintuple, leaving `N/12-O(1)` common clauses | `proofs/LEMMA-078-two-id-repair-quintet-obstruction.md`; two DPs; local audit | Refutes narrow repair only |
 | GATE-004AF-TWO-ID-REPAIR-ONLY | NO-GO | The two-identifier repair retains a mask-8 obstruction and 1,787 local failures | `proofs/GATE-004AF-two-id-repair-only.md`; LEMMA-078; NG-067 | Broader alphabet required |
+| LEMMA-079 | PROVED | 318 explicit 15-bit identifiers cover all 64,064 strength-five free-bit obligations | `proofs/LEMMA-079-strength-five-identifier-covering-basis.md`; exact checker | Systematic basis; fixed syntax excluded |
+| LEMMA-080 | PROVED | The 412-identifier covering alphabet omits `11110` on a token-boundary quintuple and retains `N/20-O(1)` common clauses | `proofs/LEMMA-080-covering-basis-token-boundary-obstruction.md`; two DPs; local audit | Locates remaining phase defect |
+| GATE-004AF-FREE-BIT-COVERING-ONLY | NO-GO | Exact free-bit strength-five coverage does not cover fixed token/gamma-boundary phases | `proofs/GATE-004AF-free-bit-covering-only.md`; LEMMA-079/080; NG-068 | Complete-block phase basis required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

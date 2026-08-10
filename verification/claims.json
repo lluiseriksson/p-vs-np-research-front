@@ -3630,6 +3630,32 @@
       "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Every sufficiently large compatible slot; exact local audit over 640,000 reduced types", "case_regime": "Alphabet-specific no-go; GATE-004AF and P versus NP remain open",
       "evidence": "proofs/GATE-004AF-two-id-repair-only.md; proofs/LEMMA-078-two-id-repair-quintet-obstruction.md; docs/no-go-ledger.md NG-067"
+    },
+    {
+      "id": "LEMMA079", "label": "PROVED",
+      "statement": "An explicit set of 318 fifteen-bit identifiers realizes all 32 patterns on every five-column subset of its fourteen free binary positions.",
+      "computational_model": "Explicit binary covering array and exact finite enumeration", "uniformity": "Uniform deterministic construction of one fixed identifier set; no circuit selected",
+      "circuit_size": "No lower bound; 318 rows cover 64,064 finite obligations", "circuit_depth": "Not applicable; later circuits unrestricted", "fan_in": "Encoded formulas later use AND/OR two and NOT one",
+      "randomness": "None; SHA-256 is only a deterministic public row generator", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite binary incidence only",
+      "asymptotic_quantifiers": "Exact finite statement over all five-column subsets and all 32 patterns", "case_regime": "Identifier-bit construction lemma; not a circuit, average-case, promise, or terminal result",
+      "evidence": "proofs/LEMMA-079-strength-five-identifier-covering-basis.md; verification/covering_basis.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA080", "label": "PROVED",
+      "statement": "The 412-identifier free-bit covering alphabet omits 11110 on a translation-stable token-boundary quintuple, leaving N/20-O(1) common signed width-five clauses.",
+      "computational_model": "Exact four-block neutral contexts, two independent interval DPs, one long option, signed width-five clauses, and matching",
+      "uniformity": "Uniform fixed 412-identifier alphabet and translations; no circuit selected", "circuit_size": "No lower bound; common signed width-five packing N/20-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Alphabet-specific exact obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-080-covering-basis-token-boundary-obstruction.md; verification/quintet_type_audit.py; verification/test_sat_encoding.py; artifacts/cycle-075-covering-basis-audit.md"
+    },
+    {
+      "id": "GATE004AF-FREE-BIT-COVERING-ONLY", "label": "NO-GO",
+      "statement": "Exact strength-five coverage on free identifier bits does not yield four-block width-five universality because fixed token and gamma boundaries retain a linear packing.",
+      "computational_model": "Exact four-block neutral contexts and signed width-five matching", "uniformity": "Uniform fixed 412-identifier alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot; exact local audit over 640,000 types", "case_regime": "Construction-method no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-free-bit-covering-only.md; proofs/LEMMA-079-strength-five-identifier-covering-basis.md; proofs/LEMMA-080-covering-basis-token-boundary-obstruction.md; docs/no-go-ledger.md NG-068"
     }
   ]
 }

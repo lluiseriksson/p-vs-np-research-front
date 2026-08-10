@@ -1380,3 +1380,20 @@ alphabet; one long option; signed width-five matching; unrestricted later
 non-uniform circuits; no randomness in the exhaustive local audit, advice,
 oracle, promise, distribution, or algebraic computation. This closes only the
 two-identifier patch; GATE-004AF and P versus NP remain open.
+
+## NG-068 — strength-five coverage of free identifier bits suffices
+
+**Label: NO-GO**
+
+LEMMA-079 constructs and exhaustively verifies a 318-row covering basis for
+all five-column patterns on the fourteen free bits of a 15-bit identifier.
+After adjoining it, the exact local quintet failure count drops from 1,787 to
+497 but does not vanish. LEMMA-080 isolates mask 16 on offsets
+`{0,1,10,15,16}`; the selected coordinates cross fixed syntax and gamma
+boundaries, which the free-bit covering property does not constrain.
+
+Model: deterministic exact covering array; four-block SAT-gamma neutral
+contexts; fixed 412-identifier alphabet; one long option; signed width-five
+matching; unrestricted later non-uniform circuits; no randomness, advice,
+oracle, promise, distribution, or algebraic computation. The next construction
+must cover complete-block phases. GATE-004AF and P versus NP remain open.

@@ -125,6 +125,7 @@ Adjacent collision-aware active branch:
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
+     - GATE-004AF-FREE-BIT-COVERING-ONLY (no-go by LEMMA-079/080)
 
 Stronger dependent-region branch:
   GATE-004I

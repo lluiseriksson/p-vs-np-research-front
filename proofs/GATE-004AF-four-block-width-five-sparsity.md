@@ -24,6 +24,12 @@ Identifiers 1,089 and 1,098 repair that representative at the same length
 bound, but LEMMA-078 finds a new mask-8 obstruction and 1,787 failures in the
 gap-at-most-20 audit. This two-identifier specialization is also `NO-GO`.
 
+LEMMA-079 replaces ad hoc patches by an exact strength-five covering basis on
+the fourteen free identifier bits. It reduces the local failure count from
+1,787 to 497, but LEMMA-080 finds a fixed-token/gamma-boundary mask-16
+obstruction. The next enrichment must cover complete-block phases, not merely
+free binary projections.
+
 ## Model card
 
 | Field | Value |

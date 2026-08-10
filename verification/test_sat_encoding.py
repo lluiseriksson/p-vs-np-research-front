@@ -14,6 +14,10 @@ from quartet_type_audit import (
     LENGTH68_REPRESENTATIVE_LENGTH,
 )
 from quartet_type_audit_fast import QuartetAuditor
+from covering_basis import (
+    strength_five_coverage_failures,
+    strength_five_identifier_basis,
+)
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
@@ -892,6 +896,30 @@ class FormulaEncodingTests(unittest.TestCase):
         relevant = (1 << 31) - 2
         self.assertEqual(fast & relevant, direct & relevant)
         self.assertFalse((fast >> 8) & 1)
+
+    def test_strength_five_identifier_basis_is_complete(self) -> None:
+        basis = strength_five_identifier_basis()
+        self.assertEqual(len(basis), 318)
+        self.assertEqual(strength_five_coverage_failures(basis), ())
+        self.assertTrue(all(1 << 14 <= identifier < 1 << 15 for identifier in basis))
+
+    def test_free_bit_covering_basis_retains_token_boundary_obstruction(self) -> None:
+        from quartet_type_audit import WIDTH5_REPAIR_IDENTIFIERS
+
+        identifiers = tuple(
+            dict.fromkeys(
+                WIDTH5_REPAIR_IDENTIFIERS + strength_five_identifier_basis()
+            )
+        )
+        self.assertEqual(len(identifiers), 412)
+        positions = (70, 71, 80, 85, 86)
+        fast = QuartetAuditor(identifiers, 432).reached_masks_positions(
+            positions, 4
+        )
+        direct = reached_masks_direct_positions(positions, 4, identifiers, 432)
+        relevant = (1 << 31) - 2
+        self.assertEqual(fast & relevant, direct & relevant)
+        self.assertFalse((fast >> 16) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

@@ -631,6 +631,14 @@ leave an `N/12-O(1)` common width-five packing after at most one `A_rho`
 repair. The 94-identifier specialization is `NO-GO`; the full 101-million-type
 GATE-004AF audit remains open and no circuit conclusion is drawn.
 
+The seventy-fifth cycle replaces ad hoc patches by an exact covering basis.
+LEMMA-079 constructs 318 explicit 15-bit identifiers covering all 64,064
+five-column patterns on their fourteen free bits. Adding them reduces the
+gap-at-most-20 failure count from 1,787 to 497, but LEMMA-080 finds a
+token-boundary mask-16 obstruction on offsets `{0,1,10,15,16}` and an
+`N/20-O(1)` common packing. Free-bit coverage alone is `NO-GO`; the next
+GATE-004AF construction must cover phases of the complete neutral-block word.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
