@@ -936,3 +936,28 @@ whose matching number is only two. LEMMA-047 therefore prevents this specific
 no-go from extending to the enlarged one/two-block witness family. This
 repair is not promoted to a loss theorem; higher-width and overlapping common
 predicates remain unaudited.
+
+## NG-045 — almost pairwise-zero contexts force quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive polynomial diagonal quotient loss from exact SAT-gamma
+agreement on common-inner-length DNF cores under every one/two-block ENC-022
+context.
+
+Failure: ENC-023 partitions the outer coordinates into triples separated by
+`P/3`. An ENC-022 context has only two blocks, each shorter than the triple
+spacing, so every width-three OR clause is one on every witness. LEMMA-048
+proves that `m` disjoint width-`w` clauses add exactly `wm` gates and expose at
+least `(w+1)m` quotient classes. At width three and `m=P/3`, the counterexample
+has exact size `K+P`, quotient at least `4P/3`, and loss at most `K-P/3<0` for
+sufficiently small fixed context exponent.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; common-inner-
+length compact DNF cores and every one/two-block ENC-022 placement; disjoint
+width-three positive clauses; exact size and semantic quotient accounting;
+unrestricted depth, fan-in-two AND/OR and fan-in-one NOT; no randomness,
+advice, oracle, promise, distribution, or algebraic computation. This is a
+no-go for ENC-022-only forcing, not full GATE-004U. The next defense requires
+triple-zero coverage or broader syntax interactions, and any fixed-width
+repair remains subject to the general LEMMA-048 audit.

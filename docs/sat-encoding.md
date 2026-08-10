@@ -1072,6 +1072,40 @@ tail but does not address higher-width or overlapping predicates.
 | Asymptotic quantifiers | Every source string, every four-divisible `P>=32`, and every coordinate pair outside four explicit root pairs |
 | Regime | Worst-case exact total-language syntax theorem; not a circuit lower bound |
 
+## ENC-023 — two-block contexts leave distant common triples
+
+**Label: PROVED**
+
+Let `P>=84` be divisible by twelve and put `m=P/3`. The `m` triples
+
+`(i,i+m,i+2m)`, `0<=i<m`,
+
+partition the outer coordinates. Every ENC-022 context has zeros inside at
+most two inserted blocks, each of length at most 28. Since triple coordinates
+are separated by at least 28, one block contains at most one of them. Thus
+
+`z_i OR z_{i+m} OR z_{i+2m}=1`
+
+on every ENC-022 context for every `i`. LEMMA-048 gives the exact minimum-
+circuit consequence of conjoining these disjoint width-three clauses to a
+base function.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact one/two-block ENC-022 contexts and disjoint positive width-three raw-coordinate clauses |
+| Uniform/non-uniform | Uniform outer-coordinate partition and explicit neutral contexts |
+| Circuit size | `P/3` common width-three clauses; exact circuit application deferred to LEMMA-048 |
+| Circuit depth | Contexts and later circuits unrestricted |
+| Fan-in | AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every twelve-divisible `P>=84`, every source string, every ENC-022 context, and all `P/3` distant triples |
+| Regime | Worst-case exact syntax-location statement; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

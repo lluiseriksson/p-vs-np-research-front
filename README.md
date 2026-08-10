@@ -402,13 +402,22 @@ repairs the exact cycle-045 counterexample but does not prove GATE-004U; the
 next audit concerns overlapping clauses, higher-width predicates, and the
 complete DNF syntax set.
 
+The forty-seventh cycle shows that the repair is width-specific. ENC-023
+partitions the padding into distant triples; every one/two-block context makes
+each corresponding width-three clause true. LEMMA-048 proves generally that
+`m` disjoint width-`w` clauses have exact additive cost `wm` and expose at
+least `(w+1)m` quotient classes. At width three this restores loss at most
+`K-P/3`, so ENC-022-only forcing is `NO-GO`. The next construction target is
+triple-zero density, alongside an audit of the obstruction at growing clause
+width.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 85% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, distant common-clause geometry, product-domain and exact fresh literal/clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 86% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, distant common-clause geometry at widths two and three, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Almost-pairwise syntax density removes one exact clause tail, but higher-width predicates and full GATE-004U remain open; no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | Two-block syntax density still admits an exact width-three tail; triple/growing-width density and full GATE-004U remain open, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

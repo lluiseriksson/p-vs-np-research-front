@@ -57,6 +57,7 @@ Adjacent collision-aware active branch:
      + ENC-020 (proved coordinate-dense neutral padding)
      + ENC-021 (proved distant common clauses on ENC-020)
      + ENC-022 (proved almost pairwise-zero neutral padding)
+     + ENC-023 (proved distant common triples on ENC-022)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -69,6 +70,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-COMMON-PADDING-ONLY (no-go by LEMMA-044)
      - GATE-004U-RAW-COORDINATE-TAIL (no-go by LEMMA-045)
      - GATE-004U-NEUTRAL-CONTEXT-ONLY (no-go by LEMMA-046)
+     - GATE-004U-TWO-BLOCK-CONTEXT-ONLY (no-go by LEMMA-048)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -602,6 +604,13 @@ exceptions have matching number two, so the exact disjoint paired-clause tail
 cannot grow on the enlarged witness set. This repairs the cycle-045
 counterexample but does not prove loss; the next GATE-004U audit concerns
 overlapping or higher-width common predicates and the full DNF syntax set.
+
+ENC-023 and LEMMA-048 immediately close the width-three audit: two localized
+blocks leave `P/3` distant three-coordinate clauses common, and the general
+width-`w` exact-cost identity again yields loss at most `K-m`. ENC-022-only
+forcing is therefore `NO-GO`. The next syntax construction must supply
+triple-zero coverage, while the broader audit must confront that every fixed
+block count leaves a next-width clause predicate.
 
 ### Smallest active brick: GATE-004U
 

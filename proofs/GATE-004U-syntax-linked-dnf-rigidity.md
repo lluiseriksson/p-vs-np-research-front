@@ -77,6 +77,14 @@ overlapping clauses, higher-width CNF predicates, and interactions already
 present in the complete DNF suffix set. No pairwise-coverage statement is
 treated as sufficient for loss.
 
+ENC-023 and LEMMA-048 show that this repair is width-specific. Any context
+with at most two localized blocks satisfies a linear family of distant
+width-three clauses, whose exact minimum circuit again has loss at most
+`K-P/3`. Thus one/two-block forcing alone is `NO-GO`. The next construction
+target is triple-zero coverage; the structural audit simultaneously asks
+whether allowing an unbounded block count merely moves the obstruction to a
+growing-width common predicate.
+
 ## Model card
 
 | Field | Value |

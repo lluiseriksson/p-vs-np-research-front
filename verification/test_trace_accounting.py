@@ -5,6 +5,45 @@ import unittest
 
 
 class FullTraceAccountingTests(unittest.TestCase):
+    def test_width_w_clause_tail_has_w_plus_one_classes_per_clause(self) -> None:
+        for width in range(1, 5):
+            for clause_count in range(1, 4):
+                suffixes = tuple(
+                    itertools.product(
+                        (False, True), repeat=1 + width * clause_count
+                    )
+                )
+                common_traces = []
+                clauses = []
+                for clause_index in range(clause_count):
+                    inputs = tuple(
+                        1 + clause_index * width + offset
+                        for offset in range(width)
+                    )
+                    clause_values = []
+                    prefix_values = [[] for _ in range(max(0, width - 1))]
+                    for suffix in suffixes:
+                        value = suffix[inputs[0]]
+                        for offset in range(1, width):
+                            value = value or suffix[inputs[offset]]
+                            prefix_values[offset - 1].append(value)
+                        clause_values.append(value)
+                    common_traces.extend(map(tuple, prefix_values))
+                    clauses.append(tuple(clause_values))
+
+                row_tails = []
+                for row in (False, True):
+                    traces = [[] for _ in range(clause_count)]
+                    for suffix_index, suffix in enumerate(suffixes):
+                        value = suffix[0] if not row else not suffix[0]
+                        for clause_index in range(clause_count):
+                            value = value and clauses[clause_index][suffix_index]
+                            traces[clause_index].append(value)
+                    row_tails.extend(map(tuple, traces))
+
+                active = set(common_traces) | set(row_tails)
+                self.assertEqual(len(active), (width + 1) * clause_count)
+
     def test_paired_clause_tail_has_three_classes_per_pair(self) -> None:
         for pair_count in range(1, 6):
             suffixes = tuple(

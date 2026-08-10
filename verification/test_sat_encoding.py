@@ -14,6 +14,7 @@ from sat_encoding import (
     context_prefix,
     contradiction,
     decode_gamma,
+    distant_outer_triples,
     double_not_wrap,
     encode_and,
     encode_gamma,
@@ -26,6 +27,7 @@ from sat_encoding import (
     satisfiability_padding_wrap,
     neutral_prefix_family,
     neutral_prefix_index,
+    one_two_block_neutral_paddings,
     one_bit_auxiliary_identifier,
     one_bit_conditioned_prefix,
     one_bit_context_cube_prefix,
@@ -706,6 +708,23 @@ class FormulaEncodingTests(unittest.TestCase):
             padded = pair_zero_neutral_padding(malformed, 64, *pair)
             self.assertIsNotNone(padded)
             self.assertIsNone(parse_formula(padded or ""))
+
+    def test_two_block_contexts_leave_every_distant_triple_clause_true(self) -> None:
+        formula = encode_variable(1)
+        extra_length = 84
+        triples = distant_outer_triples(extra_length)
+        contexts = one_two_block_neutral_paddings(formula, extra_length)
+        self.assertTrue(contexts)
+        for padded in contexts:
+            self.assertEqual(len(padded), len(formula) + extra_length)
+            for triple in triples:
+                self.assertNotEqual(
+                    tuple(padded[position] for position in triple),
+                    ("0", "0", "0"),
+                )
+        sample_stride = max(1, len(contexts) // 25)
+        for padded in contexts[::sample_stride]:
+            self.assertTrue(self.brute_sat(padded))
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

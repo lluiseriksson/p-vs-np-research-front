@@ -502,6 +502,50 @@ def pair_zero_neutral_padding(
     return None
 
 
+def one_two_block_neutral_paddings(
+    bits: str,
+    extra_length: int,
+) -> tuple[str, ...]:
+    """Enumerate the ENC-022 one/two-block neutral context family."""
+    if extra_length < 32 or extra_length % 4:
+        raise ValueError("extra_length must be a multiple of four at least 32")
+    placements = _pair_zero_neutral_placements(extra_length)
+
+    def assemble(selected: tuple[tuple[int, str, frozenset[int]], ...]) -> str:
+        context = []
+        cursor = 0
+        for start, block, _ in sorted(selected):
+            context.append("1" * (start - cursor))
+            context.append(block)
+            cursor = start + len(block)
+        context.append("1" * (extra_length - cursor))
+        return "".join(context) + bits
+
+    contexts = {assemble((placement,)) for placement in placements}
+    for left_index, left in enumerate(placements):
+        left_start, left_block, _ = left
+        left_end = left_start + len(left_block)
+        for right in placements[left_index + 1:]:
+            right_start, right_block, _ = right
+            right_end = right_start + len(right_block)
+            if left_end <= right_start or right_end <= left_start:
+                contexts.add(assemble((left, right)))
+    return tuple(sorted(contexts))
+
+
+def distant_outer_triples(
+    extra_length: int,
+) -> tuple[tuple[int, int, int], ...]:
+    """Partition a 12-divisible outer region into separated triples."""
+    if extra_length < 84 or extra_length % 12:
+        raise ValueError("extra_length must be a multiple of twelve at least 84")
+    third = extra_length // 3
+    return tuple(
+        (position, position + third, position + 2 * third)
+        for position in range(third)
+    )
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 
