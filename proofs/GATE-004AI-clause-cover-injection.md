@@ -49,6 +49,11 @@ index. GATE-004AJ asks to trace those events nonlocally to NOT gates or cycle
 coordinates with no collisions. The birth node itself cannot be the NOT
 witness.
 
+GATE-004AK makes the collision condition explicit as Hall expansion of
+sensitive NOT-or-chord neighborhoods. LEMMA-115 closes singleton subsets;
+larger subsets remain open, and a De Morgan formula refutes any range-free
+semantic proof of that expansion.
+
 ## Model card
 
 | Field | Value |

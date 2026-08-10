@@ -4171,6 +4171,30 @@
       "circuit_size": "No lower bound; direct identification of each first birth node with a NOT is impossible", "circuit_depth": "Unrestricted finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean XOR comparison only",
       "asymptotic_quantifiers": "Every m at least one, every clause index, and every first birth node from LEMMA114", "case_regime": "Structural no-go for direct birth-to-NOT charging; GATE004AJ, GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AJ-direct-birth-to-NOT.md; proofs/LEMMA-114-first-cofactor-difference-birth.md; docs/no-go-ledger.md NG-087; artifacts/cycle-101-first-birth-audit.md"
+    },
+    {
+      "id": "LEMMA115", "label": "PROVED",
+      "statement": "For every negative clause input, the nodes that change on its canonical witness pair contain a directed input-to-output path with an odd number of NOT gates.",
+      "computational_model": "Assignment-sensitive subgraphs of unrestricted AND/OR/NOT circuits for the fixed-sign clause product", "uniformity": "Every individual non-uniform circuit; uniform witness pair per clause index",
+      "circuit_size": "No size lower bound; at least one sensitive odd-NOT path per negative essential input", "circuit_depth": "Unrestricted finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean value changes and path parity only",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, every clause index, and every circuit computing W_m", "case_regime": "Exact worst-case sensitivity-path theorem; not an additive resource charge, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-115-sensitive-odd-NOT-path.md; proofs/LEMMA-112-canonical-positive-cofactors.md; artifacts/cycle-102-sensitive-Hall-audit.md"
+    },
+    {
+      "id": "GATE004AK", "label": "EXPLORATORY",
+      "statement": "In the unresolved low-N range, some output-cone spanning tree gives Hall expansion for the clause-indexed neighborhoods of sensitive NOT gates and non-tree edges.",
+      "computational_model": "Pruned unrestricted Boolean circuits, assignment-sensitive subgraphs, spanning trees, and fundamental cycle resources", "uniformity": "Every individual non-uniform circuit in the low-N range; uniform witness pairs",
+      "circuit_size": "Hall target yields m<=N+t and exactly the standalone B+N>=6m-1 bound", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean sensitivity incidence",
+      "asymptotic_quantifiers": "Every m at least five, every pruned circuit with ceil(log2(m+1))<=N<=m-1, and every subset of clause indices", "case_regime": "Exact worst-case Hall gate; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AK-sensitive-resource-Hall.md; proofs/LEMMA-115-sensitive-odd-NOT-path.md; proofs/GATE-004AJ-birth-resource-matching.md"
+    },
+    {
+      "id": "GATE004AK-RANGE-FREE-SENSITIVE-HALL", "label": "NO-GO",
+      "statement": "Sensitivity semantics alone cannot prove Hall expansion: an explicit De Morgan formula makes every sensitive resource neighborhood the same final-NOT singleton.",
+      "computational_model": "Explicit fan-out-one De Morgan AND/OR/NOT formula and its assignment-sensitive subgraphs", "uniformity": "Uniform explicit circuit family; range-free method audit",
+      "circuit_size": "B=5m-1, N=4m+1, t=0; all m neighborhoods equal one singleton", "circuit_depth": "Unrestricted; displayed balanced or unbalanced formula allowed", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean sensitivity incidence; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every m at least two; Hall fails on every index subset of size at least two", "case_regime": "Explicit no-go outside the low-N target range; GATE004AK, GATE004AJ, GATE004AI, GATE004AH, GATE004AG, and GATE004AE remain open",
+      "evidence": "proofs/GATE-004AK-range-free-sensitive-Hall.md; docs/no-go-ledger.md NG-088; artifacts/cycle-102-sensitive-Hall-audit.md"
     }
   ]
 }

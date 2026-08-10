@@ -463,6 +463,10 @@
       "sha256": "5eb936c34f7ba911056188ef06c033baac5118893af668cbe7ee61398f8c5dc8"
     },
     {
+      "path": "artifacts/cycle-102-sensitive-Hall-audit.md",
+      "sha256": "b8b770e2f20e92cb298cf3dc4d76172c25d2caaf517ba7ed167099ef7ba43126"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -488,7 +492,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "6c518b9c6adc82ab046a9e229e88513fa69e66e2f18985026a42b6c38f41e43a"
+      "sha256": "8f03307a3b45f23d94ed386c665be6dfb3a39e990de4ec3283ba06eb2030f9a0"
     },
     {
       "path": "docs/problem-statement.md",
@@ -496,7 +500,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9d3eab52aaec65f13f3aa878e55a6eb8ec6c9cdee4ad2a72feca6b9b3c0e69c9"
+      "sha256": "09444c823230b08676bb783fe3caa331f3f388157fd38cc9a148de29daf641c8"
     },
     {
       "path": "docs/result-labels.md",
@@ -600,11 +604,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a172e89def2a17a016c19a57c59e962086aee756d3da4b458f66d0088e21ae54"
+      "sha256": "30fecbf2bf69743100f0589f57345a976d8cd2f1af2dfdce1178915eced62f40"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ae2c4611a982af09c263ddead13b73cd6d7977ebe93b20eeae3470618a108e97"
+      "sha256": "c2ea316a502567a4c8c67a3a7edd31392e6bd11cc9377714a7783572700f83a5"
     },
     {
       "path": "experiments/README.md",
@@ -776,7 +780,7 @@
     },
     {
       "path": "proofs/GATE-004AI-clause-cover-injection.md",
-      "sha256": "8161a968785a7cd929c613d27e3bddd88c277339b2312e4f655d7d7cc563d41a"
+      "sha256": "c1314aac22ceb5fc81cbe9d3dbf0366b53c581b564bd6382fd8a285642b106c9"
     },
     {
       "path": "proofs/GATE-004AI-output-transition-counting-only.md",
@@ -784,11 +788,19 @@
     },
     {
       "path": "proofs/GATE-004AJ-birth-resource-matching.md",
-      "sha256": "d156ed35b387fb61124f68e0fef23319ea0174a7361b12a47f47d69ceceafa1c"
+      "sha256": "5e31fc37be7cec5a90d9c1166a39cf6f9106823e59788f29fe7b17bcff458229"
     },
     {
       "path": "proofs/GATE-004AJ-direct-birth-to-NOT.md",
       "sha256": "4558b3bef9024f6e34c7a53e256ebc6f11f714dcf6df8a36a4ff0ff2ba096a16"
+    },
+    {
+      "path": "proofs/GATE-004AK-range-free-sensitive-Hall.md",
+      "sha256": "132f66a363d19dae3d742310ab6485d3032dda77ad4c16aa79c3862195202829"
+    },
+    {
+      "path": "proofs/GATE-004AK-sensitive-resource-Hall.md",
+      "sha256": "8837e90302354dba78a54c67ce140a8574b42bc4c68435e5c4c229d14320e018"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1411,8 +1423,12 @@
       "sha256": "94d9ae04678c3ad5d7260fa3d932fde0b2ca85edf140137fd0b4798a9c4cb754"
     },
     {
+      "path": "proofs/LEMMA-115-sensitive-odd-NOT-path.md",
+      "sha256": "eb5747f602a00e2de1b2ce659907fef020bc9f584a3cbeb28c325b7a7e18de7a"
+    },
+    {
       "path": "README.md",
-      "sha256": "d2ed9b96a349bebb529c1490c8f33005c2fcc581d5dfd68791bf46f99971e681"
+      "sha256": "9252e9532dbd42a0780de160fa755d584bb4fb0dcbf0074cc283df736c27676e"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1424,7 +1440,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "830c38f486c52fb525fd1a449beff263235f289f27786fa2ab4329fee4df2dd0"
+      "sha256": "c7a5f1ad9295ded9e89ebd64b9a798db2db5c8563d558c93cb84d3b8b524ee62"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -824,11 +824,20 @@ events injectively to NOT gates elsewhere or to independent cycle
 coordinates. Direct birth-to-NOT identification is `NO-GO`; the active brick
 is now a nonlocal trace with a proved collision bound.
 
+The one-hundred-and-second cycle makes that collision question falsifiable.
+LEMMA-115 traces every negative essential input through nodes that actually
+change on a canonical witness pair and obtains a path with odd NOT parity.
+GATE-004AK forms Hall neighborhoods from sensitive NOT gates and non-tree
+edges. Singleton expansion is proved, but the range-free Hall claim is
+`NO-GO`: an explicit De Morgan formula makes every neighborhood the same top
+NOT singleton. The restricted low-N Hall expansion remains open and must use
+the negation budget substantively.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–101 isolate the fixed-sign tail, exhaust generic unfolding, and localize the remaining function-specific sharing problem to nonlocal resource matching. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–102 isolate the fixed-sign tail, exhaust generic unfolding, and reduce function-specific sharing to low-N Hall expansion of sensitive resources. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

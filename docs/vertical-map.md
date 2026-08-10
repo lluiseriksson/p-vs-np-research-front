@@ -147,7 +147,10 @@ Adjacent collision-aware active branch:
               + LEMMA-114 (first `u_i`-dependent cofactor difference is born at a binary gate)
               <- GATE-004AJ (active internal brick): match birth events to NOTs or cycles
                  - GATE-004AJ-DIRECT-BIRTH-TO-NOT (no-go: NOT preserves paired XOR)
-                 <- nonlocal trace plus collision bound (next attackable brick)
+                 + LEMMA-115 (each canonical witness has a sensitive odd-NOT path)
+                 <- GATE-004AK (active collision brick): low-N Hall expansion
+                    - GATE-004AK-RANGE-FREE-SENSITIVE-HALL (no-go: all neighborhoods can share the top NOT)
+                    <- exploit `N<=m-1` for subset expansion (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

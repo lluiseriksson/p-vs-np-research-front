@@ -33,6 +33,11 @@ What remains unproved is the collision bound: one NOT or one cycle coordinate
 must not discharge two different clause indices. This is the precise internal
 bounded-reuse brick.
 
+LEMMA-115 and GATE-004AK now instantiate a concrete admissibility relation
+using assignment-sensitive NOT gates and non-tree edges. Singleton
+neighborhoods are nonempty, but the range-free Hall property is false; the
+remaining proof must exploit `N<=m-1` to obtain expansion for larger subsets.
+
 ## Model card
 
 | Field | Value |

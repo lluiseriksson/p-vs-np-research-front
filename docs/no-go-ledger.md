@@ -1746,3 +1746,26 @@ tail; paired canonical cofactor functions at every node; unrestricted depth;
 AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Direct birth-to-NOT charging is
 closed, while GATE-004AJ/AI/AH/AG/AE and P versus NP remain open.
+
+## NG-088 — sensitivity semantics alone gives Hall expansion
+
+**Label: NO-GO**
+
+Scope: define each clause index's resources as the NOT gates and non-tree
+edges whose values or endpoints change on its canonical witness pair, then
+prove Hall expansion without using the low-N restriction.
+
+Failure: the explicit formula
+`NOT OR_i (u_i AND AND_j NOT v_{i,j})` has `B=5m-1`, `t=0`, and `N=4m+1`.
+For witness `i`, the only changing NOT is the final shared NOT; all local
+`NOT v_{i,j}` gates remain fixed. Hence every resource neighborhood is the
+same singleton, and every index subset of size at least two violates Hall.
+The example is outside the unresolved range, so it does not refute
+GATE-004AK; it proves that the quantitative condition `N<=m-1` must enter any
+successful expansion proof.
+
+Model: uniform explicit fan-out-one De Morgan formulas; assignment-sensitive
+subgraphs; `B=5m-1`, `N=4m+1`, `t=0`; unrestricted depth; AND/OR fan-in two
+and NOT fan-in one; no randomness, advice, oracle, promise, distribution, or
+algebraic circuit model. Range-free sensitive Hall is closed, while the low-N
+GATE-004AK and GATE-004AJ/AI/AH/AG/AE remain open.
