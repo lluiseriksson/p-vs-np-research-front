@@ -253,6 +253,12 @@ aggregate disappearance must exceed aggregate splitting by
 `|J_n|(B n^delta+1)`. The next attack must use a proved incompatibility among
 the distinct conditioned-SAT residual functions, not prefix sensitivity.
 
+ENC-009 supplies the first exact SAT-specific input to that attack. At a
+common suffix length, complete-assignment formulas make the `2|J|`
+conditioned outputs realize all complementary vectors. This is output-level
+shattering only. It receives no circuit-loss credit until an explicit theorem
+transfers it to the internal disappeared-minus-split incidence sum.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

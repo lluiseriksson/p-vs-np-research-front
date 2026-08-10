@@ -108,7 +108,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4157a59e99d0d23e447b42fc003c6d59b720b15f6d668dab1cff59f4cd4d2f45"
+      "sha256": "cc6a7b816e82007b4ff27151339fffdb3c85bc7b6957a9caf708a2a17a6957f3"
     },
     {
       "path": "docs/result-labels.md",
@@ -116,7 +116,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "f93bb5577bcdc4c32ade39d13158303b4af1cb56f5fa0e2ac9f2e5bd627a93d9"
+      "sha256": "545e2844ef0d91bb08953bd4a1c88b7eb50cde1b0a162cd69556fea148f4fe99"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -188,11 +188,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a5dd9248900cded8c2eecaf69706924cbc91f1afee1c27464732bd99fa53bf4c"
+      "sha256": "62e55aa9557c8a4a98f0fc8b1903ead7fd409ceda4de5f9738596271fc73bf3b"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "6c10a0d50e05a388f4b22413dc6cc60cbedfbbca73b0dd530ef3111a9f5c13f6"
+      "sha256": "d951a5e9fcd80ab4ab10570f0bb9d598fec17986125f6317c45a0c72b54409df"
     },
     {
       "path": "experiments/README.md",
@@ -324,7 +324,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "d885c3b7cec5c71ae259e1c8c3f162ac76887d082f7ff16cbde9d74ca692999f"
+      "sha256": "e9dc974179c6e7aac1f348b69a79a08fac6f31dfdaca05c5fe5b801110a30977"
     },
     {
       "path": "verification/audit.py",
@@ -332,7 +332,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "df6459deeb0a8bd25891643f3fc53a9baef3d99a08d0e6e95d128c1a66a270fd"
+      "sha256": "146a651fe2344a3d269c7fd2458e050d94e8242d8dc1e317ea615e260f3b83f9"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -340,11 +340,11 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "9516f6fab5abf6704300db094d338d55c49588d0e8f5551a05e2097b4437abe0"
+      "sha256": "b8b7d6197e389daab1e916bdbe6c261a47ff2e0acf1cbf1083f83c49be901226"
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "c17dfe573b0c4a75de9225a20eb4ab8ab7b3c549d90fae085fd3bc06ec550a3a"
+      "sha256": "43dcd21ebcbc3fa9b790f5a9ebc1c6cdbfbe35d0586a2f0ee3f7cf25286d013d"
     }
   ]
 }

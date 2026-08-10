@@ -312,6 +312,55 @@ supply only; it gives no averaging or circuit-loss theorem.
 | Asymptotic quantifiers | Every `ell>=1`, every identifier with that bit length, and every binary suffix |
 | Regime | Worst-case exact total-language decision; malformed suffixes reject |
 
+## ENC-009 — complementary shattering witnesses
+
+**Label: PROVED**
+
+Fix a bit length `ell>=1` and a nonempty set `J` of `R` distinct identifiers
+of that bit length. For every bit vector `a in {0,1}^J`, form
+
+`Phi_a = AND_{j in J} A_{j,a_j}`,
+
+using any one fixed binary conjunction order, where the equal-length literal
+gadgets `A_{j,b}` are those from ENC-008. Every `Phi_a` has the common length
+
+`L=R(4ell+10)-2`.
+
+Its satisfying assignments are exactly those extending `a` on `J`. Therefore,
+for every `j in J` and `b in {0,1}`,
+
+`SAT-gamma(R_{j,b} Phi_a)=1 iff b=a_j`.
+
+As `a` varies, the vector of all `2R` conditioned outputs realizes all `2^R`
+complementary patterns: in each identifier pair exactly one output is one.
+Applying the same number of double negations to every `Phi_a` preserves the
+statement and increases the common suffix length by any multiple of four.
+
+### Proof
+
+ENC-008 gives `|A_{j,0}|=|A_{j,1}|=4ell+8`. Joining `R` gadgets uses `R-1`
+two-bit AND tokens, which gives the displayed length. Each gadget is
+semantically the literal `x_j=a_j`; their conjunction is satisfiable exactly
+under extensions of `a`. Adding the conditioned prefix conjoins the additional
+literal `x_j=b`, so consistency and hence satisfiability hold exactly when
+`b=a_j`. Double negation preserves parsing and semantics by ENC-002. QED.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formulas and all false/true conditioned residual outputs for an identifier block |
+| Uniform/non-uniform | Uniform witness construction and evaluation statement |
+| Circuit size | No lower bound; `2^R` explicitly witnessed output patterns at common suffix length `R(4ell+10)-2+4d` |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every `ell>=1`, every nonempty finite identifier subset of that bit length, every assignment vector, and every integer padding count `d>=0` |
+| Regime | Worst-case exact total-language decision on valid witness formulas |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

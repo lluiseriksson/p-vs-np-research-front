@@ -1173,6 +1173,23 @@
       "asymptotic_quantifiers": "Arbitrarily large prefix length and exponentially many selected pairs for every nonzero shared core",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-017-essential-prefix-selector-shell.md; docs/no-go-ledger.md NG-021"
+    },
+    {
+      "id": "ENC-009",
+      "label": "PROVED",
+      "statement": "Equal-length complete-assignment SAT-gamma formulas realize all complementary false/true conditioned-output vectors across any same-bit-length identifier block.",
+      "computational_model": "Exact SAT-gamma formulas and all two-output conditioned residuals for an identifier block",
+      "uniformity": "Uniform witness construction and evaluation statement",
+      "circuit_size": "No lower bound; 2^R witnessed output patterns at common suffix length R(4ell+10)-2+4d",
+      "circuit_depth": "Unrestricted in later circuit applications",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every ell at least one, every nonempty same-bit-length identifier subset, every assignment vector, and every nonnegative double-negation padding count",
+      "case_regime": "Worst-case exact total-language decision on valid witness formulas",
+      "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
     }
   ]
 }

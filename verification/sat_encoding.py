@@ -213,6 +213,22 @@ def conditioned_prefix(value: bool, identifier: int = 1) -> str:
     return "01" + conditioned_formula(value, identifier)
 
 
+def assignment_conjunction(assignment: Mapping[int, bool]) -> str:
+    """Encode an equal-polarity-length conjunction fixing every identifier.
+
+    The true and false gadgets for a fixed identifier have equal length, so
+    all assignments on the same identifier set produce formulas of one common
+    length.
+    """
+    if not assignment:
+        raise ValueError("assignment must be nonempty")
+    items = sorted(assignment.items())
+    result = conditioned_formula(items[0][1], items[0][0])
+    for identifier, value in items[1:]:
+        result = encode_and(result, conditioned_formula(value, identifier))
+    return result
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

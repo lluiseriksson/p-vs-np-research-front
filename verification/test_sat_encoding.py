@@ -4,6 +4,7 @@ import itertools
 import unittest
 
 from sat_encoding import (
+    assignment_conjunction,
     annihilating_prefix,
     context_wrap,
     conditioned_prefix,
@@ -231,6 +232,45 @@ class FormulaEncodingTests(unittest.TestCase):
                 for value in (False, True)
             }
             self.assertEqual(lengths, {4 * bit_length + 10})
+
+    def test_assignment_witnesses_shatter_conditioned_outputs(self) -> None:
+        identifiers = tuple(range(4, 8))
+        expected_length = len(identifiers) * (4 * 3 + 10) - 2
+        observed_vectors: set[tuple[bool, ...]] = set()
+        for values in itertools.product((False, True), repeat=len(identifiers)):
+            assignment = dict(zip(identifiers, values))
+            formula = assignment_conjunction(assignment)
+            self.assertEqual(len(formula), expected_length)
+            parsed = parse_formula(formula)
+            self.assertIsNotNone(parsed)
+            self.assertEqual(parsed.variables, frozenset(identifiers))
+
+            output_vector = []
+            for identifier in identifiers:
+                for forced_value in (False, True):
+                    output = self.brute_sat(
+                        conditioned_prefix(forced_value, identifier) + formula
+                    )
+                    self.assertEqual(output, forced_value == assignment[identifier])
+                    output_vector.append(output)
+            observed_vectors.add(tuple(output_vector))
+
+            padded = double_not_wrap(formula, 3)
+            self.assertEqual(len(padded), expected_length + 12)
+            for identifier in identifiers:
+                for forced_value in (False, True):
+                    self.assertEqual(
+                        self.brute_sat(
+                            conditioned_prefix(forced_value, identifier) + padded
+                        ),
+                        forced_value == assignment[identifier],
+                    )
+
+        self.assertEqual(len(observed_vectors), 2 ** len(identifiers))
+
+    def test_assignment_conjunction_rejects_empty_map(self) -> None:
+        with self.assertRaises(ValueError):
+            assignment_conjunction({})
 
 
 if __name__ == "__main__":

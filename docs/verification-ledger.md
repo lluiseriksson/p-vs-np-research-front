@@ -82,6 +82,7 @@ truth. Each row has exactly one label.
 | GATE-004I | EXPLORATORY | Prove polynomial average signed quotient loss across an identifier block | `proofs/GATE-004I-aggregate-identifier-surplus.md` | Active smallest brick; sufficient for GATE-004H |
 | LEMMA-017 | PROVED | Essential dependence on every prefix bit can be confined to an `O(p)` parity-selector shell | `proofs/LEMMA-017-essential-prefix-selector-shell.md` | Generic essentiality obstruction |
 | GATE-004I-PREFIX-ESSENTIALITY | NO-GO | Prefix essentiality plus many reconstructing pairs does not imply polynomial aggregate surplus | LEMMA-017; NG-021 | Conditioned-SAT internal structure remains necessary |
+| ENC-009 | PROVED | Equal-length complete-assignment formulas realize every complementary output pattern across an identifier block | `docs/sat-encoding.md`; reference test | Exact SAT-specific output structure; no circuit lower bound |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

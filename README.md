@@ -152,13 +152,20 @@ pairs retain one shared core. At `p=O(log n)` the resulting overhead is only
 logarithmic. Prefix essentiality is therefore `NO-GO`; GATE-004I remains open
 and now explicitly requires distinct conditioned-SAT internal structure.
 
+The seventeenth cycle establishes one such exact structure without promoting
+it prematurely. `ENC-009` builds equal-length complete-assignment formulas on
+an identifier block; the conditioned outputs realize every complementary bit
+vector. This is a SAT-specific shattering theorem at the output level. The
+next audit must either transfer it to the internal signed incidence surplus or
+produce a shared-multiplexer no-go.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 55% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioned-prefix tests, exact quotient, per-parent and cross-identifier incidence accounting, selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 56% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The SAT-specific aggregate-surplus obligation is explicit and both pure counting and prefix essentiality are excluded; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | A SAT-specific complementary-output theorem is proved, but no transfer to the aggregate gate surplus exists; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
