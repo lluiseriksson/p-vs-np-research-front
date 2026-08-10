@@ -1213,3 +1213,27 @@ connectivity; unrestricted depth; fan-in-two AND/OR and fan-in-one NOT; no
 randomness, advice, oracle, promise, distribution, or algebraic computation.
 This is a method no-go only. It proves neither a smaller circuit nor base
 additivity, and GATE-004Z, GATE-004X, and P versus NP remain open.
+
+## NG-058 — signed-triple standalone size is an independent route
+
+**Label: NO-GO**
+
+Scope: treat exact size or displayed minimality of the factorized signed-
+triple tail as a structurally new way around the unresolved implication-tail
+direct sum.
+
+Failure: LEMMA-066 proves an exact identity over every disjoint nonconstant
+base. Computing the pairwise AND inputs adds `m` gates to a minimum implication
+circuit; restricting one input of each pair to one removes at least `m` gates
+and recovers that implication function. The lifted circuit is minimum, and
+the derived AND gates add exactly `m` distinct quotient classes. Therefore
+the signed-triple displayed-minimality question is precisely the implication
+question plus a settled additive layer.
+
+Model: exact globally minimum non-uniform unrestricted circuits; disjoint
+implication and signed width-three tails; functional substitution,
+restrictions, and paired-row semantic quotients; unrestricted depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This rejects only an independent-
+route interpretation. GATE-004W/Z quotient survival, GATE-004X, and P versus
+NP remain open.

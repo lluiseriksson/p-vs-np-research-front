@@ -33,6 +33,13 @@ direct minimum-quotient argument over the canonical base. Any result must
 audit polarity sharing and semantic quotient classes, not merely count a
 particular representation.
 
+LEMMA-066 then proves that the full signed-triple base extension has exact
+size `m` plus the corresponding implication base extension and transfers the
+`m` derived-AND quotient classes. Thus the displayed-minimality branch is
+exactly the unresolved implication bottleneck, not a new route. GATE-004AA
+takes the constructive alternative: strengthen the neutral alphabet until
+all disjoint common signed clauses through width three are sparse.
+
 ## Model card
 
 | Field | Value |

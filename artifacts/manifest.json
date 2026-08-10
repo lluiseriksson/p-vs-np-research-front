@@ -288,7 +288,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2b6d63f3f35488e90ebc4f71499e74aca2e168fa5ecba139bab58924ba47bc28"
+      "sha256": "dc198351f3c7f8c1f40c81726e0bfd1862d0c78e465ea7466720e5422d451e8f"
     },
     {
       "path": "docs/problem-statement.md",
@@ -296,7 +296,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "58c2ec89507f333fc19d4cd8b297eb42637552d51210a14fa97ebf0f88702789"
+      "sha256": "4562c379b3bc1233d9a5b99bc4c69fb87bab1847ba29a52072a1ecbe00bf9947"
     },
     {
       "path": "docs/result-labels.md",
@@ -392,11 +392,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "187462480d8fec312ae18f31b549f876f47b12895875dd0acbebfe9de728cf0b"
+      "sha256": "f8d31095b0af35604b7704cc0b6f1ac63d527337a80f2a0401519803435854ea"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "d390c5e8314232ab4d27962e67dbbaac7485435ade210634601f6f360249623f"
+      "sha256": "24105bcff587dcc34172cd2a7be8982d70fd51aa92f6b4ade9ba526eb66a0bdb"
     },
     {
       "path": "experiments/README.md",
@@ -425,6 +425,10 @@
     {
       "path": "proofs/GATE-004-sat-superlinear.md",
       "sha256": "1d35bbb864041964b7d3beb5d3586c37e740d50aaf97d250344a5f54609c4497"
+    },
+    {
+      "path": "proofs/GATE-004AA-finite-neutral-alphabet-three-sparsity.md",
+      "sha256": "5f7de7290536e135a8479852f7d8be596b326ef4a4d6478f71da49f8c66eb2db"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -576,11 +580,15 @@
     },
     {
       "path": "proofs/GATE-004Z-factorized-signed-triple-minimality.md",
-      "sha256": "8db6d2f23116b23437b0c14b69e548093aaab36e60522508d5a9fab35305e7b4"
+      "sha256": "41c40798c4b76fcc6c30649bb2e33c4714f64ffe974624f8068077328d67fb4f"
     },
     {
       "path": "proofs/GATE-004Z-formula-boundary-only.md",
       "sha256": "02f78021a0ea52cb7e7faa120894b0c93b487e06514719efa417e342fc9ee25a"
+    },
+    {
+      "path": "proofs/GATE-004Z-standalone-separate.md",
+      "sha256": "02afb4524aec1cee4fb6c94234989bc4658534551f9e428a20e9c128f959836f"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -847,8 +855,12 @@
       "sha256": "8ea53459e968726ead0a2b86eaf24dc0dfdae03ab9f4c22b74779a8cf4898ad5"
     },
     {
+      "path": "proofs/LEMMA-066-signed-triples-are-derived-implications.md",
+      "sha256": "1bc220412d466ff76886f789c7e8e1c43ef51b93d8897f00eb33861b42eac4ea"
+    },
+    {
       "path": "README.md",
-      "sha256": "eac8455eeb09c3663dbd98ec53c5a69254e82a85710053920e6ebf95a153f009"
+      "sha256": "0fc32244d74166912c2aa1beea32f9c9b653ffc4c365f918a93a1236424419ef"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -860,7 +872,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "2767bb23afa13a0896f49878c36e9a72b224ac702f0895598b2b9c7d6a077867"
+      "sha256": "dd37480d3de8eddb747a8629d37da05d9928b6ddf177b94e06abd76b9b89fef5"
     },
     {
       "path": "verification/generate_manifest.py",

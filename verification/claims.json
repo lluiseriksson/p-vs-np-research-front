@@ -3263,7 +3263,7 @@
       "field_or_algebraic_model": "Boolean syntax and circuits; inherited affine prefix geometry over F_2 only in base rows",
       "asymptotic_quantifiers": "Fixed sufficiently small context exponent; every sufficiently large compatible length; m=P/4; exact canonical-base statement",
       "case_regime": "Worst-case exact falsification gate for GATE-004X; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004Z-factorized-signed-triple-minimality.md; proofs/LEMMA-064-factorized-signed-triple-tail.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md"
+      "evidence": "proofs/GATE-004Z-factorized-signed-triple-minimality.md; proofs/LEMMA-064-factorized-signed-triple-tail.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md; proofs/LEMMA-066-signed-triples-are-derived-implications.md"
     },
     {
       "id": "LEMMA065",
@@ -3298,6 +3298,57 @@
       "asymptotic_quantifiers": "Every m at least one; method insufficient for every m at least five and linearly short asymptotically",
       "case_regime": "Quantitative method no-go only; exact growing size, base additivity, quotient survival, GATE-004Z, GATE-004X, and P versus NP remain open",
       "evidence": "proofs/GATE-004Z-formula-boundary-only.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md; docs/no-go-ledger.md NG-057"
+    },
+    {
+      "id": "LEMMA066",
+      "label": "PROVED",
+      "statement": "Replacing each fresh negative implication input t_i by a fresh pairwise AND u_i AND v_i increases exact circuit size by exactly m over every disjoint nonconstant base and transfers m distinct semantic quotient classes.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, disjoint fresh implications, derived pairwise-AND inputs, restrictions, and exact semantic joint quotients",
+      "uniformity": "Fully non-uniform base and minimum implication circuit; uniform substitution and restriction maps",
+      "circuit_size": "Exact identity C(F)=C(J)+m; factorized signed-triple displayed minimality equivalent to displayed implication-tail minimality",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean functional substitution only",
+      "asymptotic_quantifiers": "Every nonconstant finite base H, every m at least one, every disjoint fresh variable family, and every base-only row family with nonconstant residuals",
+      "case_regime": "Worst-case exact total-function identity and quotient transfer; no implication direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-066-signed-triples-are-derived-implications.md"
+    },
+    {
+      "id": "GATE004Z-STANDALONE-SEPARATE",
+      "label": "NO-GO",
+      "statement": "Factorized signed-triple exact size is not an independent route around implication-tail minimality because it equals the corresponding implication size plus exactly m gates.",
+      "computational_model": "Minimum unrestricted Boolean circuits, disjoint implication tails, derived pairwise-AND substitution, restrictions, and semantic quotients",
+      "uniformity": "Fully non-uniform bases and minimizing circuits; uniform exact reduction",
+      "circuit_size": "Exact additive identity C(F)=C(J)+m; no lower bound beyond the unresolved implication component",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean functional substitution only",
+      "asymptotic_quantifiers": "Every finite nonconstant disjoint base and every m at least one",
+      "case_regime": "Structural route no-go only; implication minimality, quotient survival, GATE-004Z, GATE-004X, and P versus NP remain open",
+      "evidence": "proofs/GATE-004Z-standalone-separate.md; proofs/LEMMA-066-signed-triples-are-derived-implications.md; docs/no-go-ledger.md NG-058"
+    },
+    {
+      "id": "GATE004AA",
+      "label": "EXPLORATORY",
+      "statement": "There is a fixed finite universally neutral SAT-gamma block alphabet whose aligned translations bound every disjoint common signed clause family of width at most three by a constant per slot.",
+      "computational_model": "Exact total SAT-gamma parser contexts, finite neutral block alphabets, aligned translations, independent slot products, and signed clause matching through width three",
+      "uniformity": "Uniform finite alphabet once the length bound is fixed; uniform placements and parameters; later circuit adversary fully non-uniform",
+      "circuit_size": "No lower bound; target common signed width-at-most-three matching at most c_3*s, chosen below base floor K",
+      "circuit_depth": "Neutral blocks have constant depth and length for fixed L; tunable block may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded and circuit AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite parser-state actions and Boolean pattern incidence only",
+      "asymptotic_quantifiers": "Exists fixed constants L and c_3; every rho>L; every disjoint common signed clause family of width at most three; later every sufficiently large canonical parameter",
+      "case_regime": "Worst-case exact witness-construction gate; not a circuit lower bound, promise statement, average-case statement, or terminal result",
+      "evidence": "proofs/GATE-004AA-finite-neutral-alphabet-three-sparsity.md; proofs/LEMMA-066-signed-triples-are-derived-implications.md"
     }
   ]
 }
