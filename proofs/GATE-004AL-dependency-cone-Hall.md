@@ -37,6 +37,10 @@ one-bit-factorization LEMMA-120 and cofactor dichotomy LEMMA-121. LEMMA-122
 therefore closes Hall through subset size five. Size six is the first open
 case of this gate.
 
+LEMMA-123 generalizes the unicyclic exclusion to every block count, and
+LEMMA-124 uses it to force any deficient sextet into the exact bicyclic
+three-NOT stratum. GATE-004AN is the active size-six exclusion.
+
 ## Model card
 
 | Field | Value |

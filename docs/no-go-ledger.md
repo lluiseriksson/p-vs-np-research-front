@@ -1813,3 +1813,25 @@ Boolean-lattice inversion; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Occurrence counting is closed,
 while GATE-004AM was later proved by a different factorization argument;
 GATE-004AL beyond size five and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+
+## NG-091 — total path multiplicity excludes the deficient sextet
+
+**Label: NO-GO**
+
+Scope: unfold the exact bicyclic three-NOT residual forced by LEMMA-124 and
+compare only the total number of resulting NOT occurrences with formula
+inversion complexity `d(W_6)=6`.
+
+Failure: cycle rank two gives each NOT gate between one and four directed
+paths to the output. The formula lower bound requires only
+`r_1+r_2+r_3>=6`, compatible with patterns including `(2,2,2)` and
+`(1,1,4)`. Thus total multiplicity neither contradicts the stratum nor
+distinguishes the two-cycle block-cut topologies. Interface dimension and
+clause cofactor incidence must enter.
+
+Model: every pruned non-uniform candidate for fixed `W_6` with 31 binary
+gates, three NOT gates, and cycle rank two; unrestricted depth; AND/OR fan-in
+two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
+randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. Path-counting alone is closed, while GATE-004AN/AL/AK/AJ/AI/AH/AG/AE
+remain open.

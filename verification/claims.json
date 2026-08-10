@@ -4283,6 +4283,38 @@
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=5", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
       "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(5,m)", "case_regime": "Exact worst-case local Hall theorem; size six, full matching, SAT lower bounds, and P versus NP remain open",
       "evidence": "proofs/LEMMA-122-dependency-cone-Hall-through-five.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
+    },
+    {
+      "id": "LEMMA123", "label": "PROVED",
+      "statement": "For every block count, a pruned cycle-rank-one circuit computing W_m contains at least m NOT gates.",
+      "computational_model": "Pruned unicyclic AND/OR/NOT circuits for disjoint fixed-sign clause products", "uniformity": "Every individual non-uniform circuit; uniform function family",
+      "circuit_size": "NOT count at least m; binary gate count unrestricted beyond cycle rank one", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank, one-bit cofactors, and Boolean-lattice inversion",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, and every pruned circuit with cycle rank one", "case_regime": "Exact worst-case unicyclic NOT lower bound; not a general circuit-size or terminal result",
+      "evidence": "proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-120-unicyclic-one-bit-factorization.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; artifacts/cycle-106-deficient-sextet-stratum.md"
+    },
+    {
+      "id": "LEMMA124", "label": "PROVED",
+      "statement": "Every Hall-deficient six-index dependency-cone union has exactly five resources and restricts to W_6 with exactly three NOT gates and cycle rank two.",
+      "computational_model": "Six-block restrictions of unrestricted circuits and dependency-cone NOT/non-tree-edge resources", "uniformity": "Every individual non-uniform parent circuit, spanning tree, and deficient six-index subset",
+      "circuit_size": "Deficiency forces union size five and residual q=3,c=2, hence 31 binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restrictions/inversion complexity",
+      "asymptotic_quantifiers": "Every parent m at least six and every Hall-deficient selected sextet", "case_regime": "Exact worst-case obstruction stratum; not existence of a deficient sextet, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-124-deficient-sextet-exact-stratum.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; artifacts/cycle-106-deficient-sextet-stratum.md"
+    },
+    {
+      "id": "GATE004AN", "label": "EXPLORATORY",
+      "statement": "No pruned AND/OR/NOT circuit computing W_6 has cycle rank two and exactly three NOT gates.",
+      "computational_model": "Pruned unrestricted Boolean circuits for fixed W_6 with exact cycle rank two and three NOT gates", "uniformity": "Every individual non-uniform six-block circuit",
+      "circuit_size": "Target exclusion of c=2,q=3; binary count exactly 31 and total 34", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean cofactor interfaces",
+      "asymptotic_quantifiers": "The fixed six-block function and every pruned circuit with c=2,q=3", "case_regime": "Exact finite structural gate for sextet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md; proofs/LEMMA-124-deficient-sextet-exact-stratum.md"
+    },
+    {
+      "id": "GATE004AN-PATH-MULTIPLICITY-ONLY", "label": "NO-GO",
+      "statement": "Bicyclic unfolding path multiplicity cannot exclude c=2,q=3 because three multiplicities between one and four can sum to the required six in several ways.",
+      "computational_model": "Bicyclic formula unfolding and NOT path multiplicities for fixed W_6", "uniformity": "Every individual non-uniform candidate in the exact c=2,q=3 stratum",
+      "circuit_size": "Three parent NOT gates; unfolded requirement only six total occurrences with multiplicity at most four each", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
+      "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN and larger gates remain open",
+      "evidence": "proofs/GATE-004AN-path-multiplicity-only.md; docs/no-go-ledger.md NG-091; artifacts/cycle-106-deficient-sextet-stratum.md"
     }
   ]
 }

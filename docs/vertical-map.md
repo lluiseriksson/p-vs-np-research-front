@@ -161,7 +161,11 @@ Adjacent collision-aware active branch:
                        + GATE-004AM (proved: no unicyclic three-NOT `W_5`)
                           - GATE-004AM-NOT-OCCURRENCE-COUNTING-ONLY (no-go: five occurrences meet the bound)
                        + LEMMA-122 (dependency-cone Hall expansion through size five)
-                       <- size-six dependency-cone Hall (next attackable brick)
+                       + LEMMA-123 (one cycle cannot save a NOT for any `W_m`)
+                       + LEMMA-124 (a deficient sextet is exactly bicyclic with three NOTs)
+                       <- GATE-004AN (active sextet brick): exclude bicyclic three-NOT `W_6`
+                          - GATE-004AN-PATH-MULTIPLICITY-ONLY (no-go: six unfolded occurrences are feasible)
+                          <- two-cycle interface/cofactor classification (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
