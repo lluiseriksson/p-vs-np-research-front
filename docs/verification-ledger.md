@@ -84,6 +84,8 @@ truth. Each row has exactly one label.
 | LEMMA-017 | PROVED | Essential dependence on every prefix bit can be confined to an `O(p)` parity-selector shell | `proofs/LEMMA-017-essential-prefix-selector-shell.md` | Generic essentiality obstruction |
 | GATE-004I-PREFIX-ESSENTIALITY | NO-GO | Prefix essentiality plus many reconstructing pairs does not imply polynomial aggregate surplus | LEMMA-017; NG-021 | Conditioned-SAT internal structure remains necessary |
 | ENC-009 | PROVED | Equal-length complete-assignment formulas realize every complementary output pattern across an identifier block | `docs/sat-encoding.md`; reference test | Exact SAT-specific output structure; no circuit lower bound |
+| LEMMA-018 | PROVED | `2^R` distinct prefix-row output columns force `R` essential suffix coordinates and `R-1` binary gates | `proofs/LEMMA-018-shattering-support-bound.md` | Gives only `Omega(n/log n)` on ENC-009 lengths |
+| GATE-004I-SHATTERING-SUPPORT | NO-GO | Essential-coordinate/connectedness counting cannot transfer complementary shattering to aggregate quotient loss | LEMMA-018; NG-022 | Requires a SAT-specific internal trace theorem |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

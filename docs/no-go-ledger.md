@@ -418,3 +418,24 @@ two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
 NOT; no randomness, advice, oracle, field, promise, or distribution. The
 result does not refute a theorem using the distinct internal structure of
 SAT's conditioned residuals.
+
+## NG-022 — complementary shattering via essential-coordinate counting
+
+**Label: NO-GO**
+
+Scope: transfer ENC-009's `2^R` complementary output columns to GATE-004I by
+counting the suffix coordinates on which the parent function depends and then
+counting the gates needed to connect those inputs.
+
+Failure: LEMMA-018 proves the strongest direct conclusion of this argument:
+at least `R` essential suffix coordinates and `R-1` binary gates. With the
+explicit ENC-009 witnesses, total input length is `Theta(R log R)`, so the
+result is only `Omega(n/log n)` on the constructed lengths. More decisively,
+it is an absolute lower bound on the parent and contains no term comparing
+parent size with any joint quotient `q_j`. It therefore supplies neither the
+superlinear GATE-004 bound nor the signed aggregate loss required by GATE-004I.
+
+Model: exact unrestricted non-uniform acyclic circuits; unbounded depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, field,
+promise, or distribution. The no-go is specific to support/connectedness
+counting and does not exclude a stronger SAT-specific internal trace theorem.

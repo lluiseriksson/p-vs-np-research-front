@@ -259,6 +259,14 @@ conditioned outputs realize all complementary vectors. This is output-level
 shattering only. It receives no circuit-loss credit until an explicit theorem
 transfers it to the internal disappeared-minus-split incidence sum.
 
+LEMMA-018 performs the first such transfer as far as support counting permits:
+the columns force `R` essential suffix coordinates and hence `R-1` binary
+gates. For the explicit witnesses this is only `Omega(n/log n)`, and it is an
+absolute parent lower bound rather than a parent-minus-quotient inequality.
+`GATE-004I-SHATTERING-SUPPORT — NO-GO` records the ceiling. Any next transfer
+must compare internal traces before and after conditioning, not merely count
+essential inputs.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

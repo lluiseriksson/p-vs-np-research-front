@@ -1190,6 +1190,40 @@
       "asymptotic_quantifiers": "Every ell at least one, every nonempty same-bit-length identifier subset, every assignment vector, and every nonnegative double-negation padding count",
       "case_regime": "Worst-case exact total-language decision on valid witness formulas",
       "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-018",
+      "label": "PROVED",
+      "statement": "If a prefix-row evaluation matrix has 2^R distinct suffix columns, the function has at least R essential suffix coordinates and every fan-in-two circuit has at least R-1 binary gates.",
+      "computational_model": "Total Boolean functions with a prefix/suffix partition and unrestricted acyclic Boolean circuits",
+      "uniformity": "Fully non-uniform circuit lower bound at each stated length",
+      "circuit_size": "At least R-1 binary gates; Omega(n/log n) for the explicit unpadded ENC-009 length sequence",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every finite function satisfying the column hypothesis; every identifier bit length in the SAT corollary",
+      "case_regime": "Worst-case exact total-function computation; absolute size only",
+      "evidence": "proofs/LEMMA-018-shattering-support-bound.md"
+    },
+    {
+      "id": "GATE-004I-SHATTERING-SUPPORT",
+      "label": "NO-GO",
+      "statement": "Essential-coordinate and output-cone connectedness counting cannot transfer complementary output shattering into a superlinear or aggregate parent-to-quotient loss.",
+      "computational_model": "Unrestricted non-uniform acyclic SAT-gamma circuits and conditioned output evaluation matrices",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Method yields only R-1 absolute gates, Omega(n/log n) on explicit witnesses, and no S-q_j term",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "All ENC-009 witness blocks and their associated unpadded total lengths",
+      "case_regime": "Worst-case method-specific obstruction; not a superlinear SAT lower bound",
+      "evidence": "proofs/LEMMA-018-shattering-support-bound.md; docs/no-go-ledger.md NG-022"
     }
   ]
 }

@@ -104,7 +104,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "fb65ffb0f4a707176c21e7275d02221f443ac74f42d0dfa014f9acac6e3aeee0"
+      "sha256": "1b02097c36d63544fbccff3f5e9f3e0b7123dad3de208fe7aa9f9dd637e1f6ad"
     },
     {
       "path": "docs/problem-statement.md",
@@ -112,7 +112,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "cc6a7b816e82007b4ff27151339fffdb3c85bc7b6957a9caf708a2a17a6957f3"
+      "sha256": "ee53cb37b9a4c01f43ee8b40e5b217432ca02914adb315c528e3e51a0be8bf52"
     },
     {
       "path": "docs/result-labels.md",
@@ -192,11 +192,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "e7cff539ee5d64eff28be6a68a136078ea343bb0b029459b40e32f663c002561"
+      "sha256": "0b8a8b650cd85f31daea1801c94bfe8fa90c347495d1f4aaa1b142b0610d67c1"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "d951a5e9fcd80ab4ab10570f0bb9d598fec17986125f6317c45a0c72b54409df"
+      "sha256": "2bc36bd60fc2687676a741da34a776e7c62f75e33389f5050b6a5527ccb46abb"
     },
     {
       "path": "experiments/README.md",
@@ -327,8 +327,12 @@
       "sha256": "5a08ad98ecf830e95c976b0fe0d81b602f0c5ce7a51f4229a868b51b5b7bd02a"
     },
     {
+      "path": "proofs/LEMMA-018-shattering-support-bound.md",
+      "sha256": "7b560eb449168b9bc85a639eb43def22a8e7d8644db8ef5d138eaa3f797c3734"
+    },
+    {
       "path": "README.md",
-      "sha256": "e9dc974179c6e7aac1f348b69a79a08fac6f31dfdaca05c5fe5b801110a30977"
+      "sha256": "164e1d487606e87ced4f399fd8ae3263e7ec8ace657d04f49004a88b42d72fb1"
     },
     {
       "path": "verification/audit.py",
@@ -336,7 +340,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "146a651fe2344a3d269c7fd2458e050d94e8242d8dc1e317ea615e260f3b83f9"
+      "sha256": "a1b32b2f71e9f775c9e5c18aae4547c673749a64051da466ab19c34facaf0be9"
     },
     {
       "path": "verification/generate_manifest.py",

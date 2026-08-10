@@ -159,13 +159,20 @@ vector. This is a SAT-specific shattering theorem at the output level. The
 next audit must either transfer it to the internal signed incidence surplus or
 produce a shared-multiplexer no-go.
 
+The eighteenth cycle carries out the first transfer and measures its ceiling.
+LEMMA-018 converts the `2^R` columns into `R` essential suffix coordinates and
+an unrestricted `R-1` binary-gate lower bound. At the explicit witness lengths
+this is only `Omega(n/log n)`, and it never compares the parent with a joint
+quotient. `GATE-004I-SHATTERING-SUPPORT` is therefore `NO-GO`; a successful
+next brick must control conditioned internal traces rather than input support.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 56% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 57% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, support-count and selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | A SAT-specific complementary-output theorem is proved, but no transfer to the aggregate gate surplus exists; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | Complementary shattering yields only an audited sublinear absolute bound and no aggregate quotient loss; no new superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
