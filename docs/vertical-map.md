@@ -115,12 +115,14 @@ Adjacent collision-aware active branch:
      + LEMMA-071 (proved seven-pattern universality and `78s` matching bound)
   <- GATE-004AC (active smallest positive brick): width-three-sparse rigidity
      - GATE-004AC-WIDTH3-ONLY (no-go by LEMMA-072)
-  <- GATE-004AD (proved constructive brick): three-block sparsity through width four
+  <- GATE-004AD (reopened constructive brick): three-block sparsity through width four
      - GATE-004AD-IDENTIFIER68-ONLY (no-go by LEMMA-073)
      - GATE-004AD-LENGTH48-ONLY (no-go by LEMMA-074)
      - GATE-004AD-INITIAL-LENGTH68-REPAIR-ONLY (no-go by six finite failures)
-     + LEMMA-075 (proved fourteen-pattern universality and `142s` matching bound)
-  <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
+     ! LEMMA-075 (exploratory: old reduced-domain certificate only)
+     - GATE-004AD-BOUND-GAP-REDUCTION-ONLY (no-go by LEMMA-101)
+     + LEMMA-102 (safe `2B..2B+3` finite reduction)
+  <- GATE-004AE (contingent positive brick): width-four-sparse rigidity
      - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
@@ -144,6 +146,8 @@ Adjacent collision-aware active branch:
      - GATE-004AF-LENGTH104-ONLY (no-go by LEMMA-098)
      - GATE-004AF-LENGTH112-ONLY (no-go by LEMMA-099)
      + LEMMA-100 (explicit length-116 repair of the mask-16 representative)
+     + LEMMA-101 (counterexample to unsafe one-bound gap truncation)
+     + LEMMA-102 (safe double-bound gap reduction; corrected full domain open)
 
 Stronger dependent-region branch:
   GATE-004I

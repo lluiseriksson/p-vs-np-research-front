@@ -1318,18 +1318,18 @@ Scope: use the first 86-identifier length-68 alphabet, selected to repair all
 Cycle-070 counterquartets, and infer four-coordinate universality from those
 repairs plus a 1,000-type random sample.
 
-Failure: the complete `4*71^3` audit returns six residue-1 types, all omitting
+Failure: the audited `4*71^3` subdomain returns six residue-1 types, all omitting
 zero mask 8: `(69,72,77,78)`, `(69,73,77,78)`, `(69,74,77,78)`,
 `(69,75,77,78)`, `(69,76,81,82)`, and `(69,77,81,82)`. The sampling inference
 is therefore false. This is not a structural length-68 obstruction: identifiers
-`1044,1060,1092,1156,16452,16516` repair the six types, and the completed
-alphabet passes the exhaustive audit in LEMMA-075.
+`1044,1060,1092,1156,16452,16516` repair the six types. The completed alphabet
+passes the same subdomain audit, while its corrected all-quartet audit is open.
 
 Model: exact three-block neutral contexts; fixed 86-identifier alphabet;
 four-coordinate finite incidence; unrestricted later non-uniform circuits;
 no randomness in the exhaustive result, advice, oracle, promise,
-distribution, or algebraic computation. GATE-004AD is separately proved by
-the repaired alphabet; P versus NP remains open.
+distribution, or algebraic computation. GATE-004AD is `EXPLORATORY`; P versus
+NP remains open.
 
 ## NG-065 — width-four sparsity controls all disjoint signed tails
 
@@ -1569,3 +1569,20 @@ identifier through 67,108,863; four-block options; one six-one long option;
 unrestricted later non-uniform circuits; no randomness, advice, oracle,
 promise, average-case, distributional, or algebraic computation. Identifier
 67,125,314 repairs the representative at length 116. P versus NP is unaffected.
+
+## NG-080 — one-block-length gap truncation can destroy nonoverlap
+
+**Label: NO-GO**
+
+The finite-certificate route used for LEMMA-075 truncated every gap at least
+the block bound `B` to `{B,...,B+3}`. LEMMA-101 gives a four-aligned `B=8`
+counterexample: mask 3 is reachable on coordinates `(8,23)` by adjacent
+length-eight blocks but is unreachable after reducing the congruent gap from
+15 to 11 because the two forced placements overlap.
+
+LEMMA-102 proves the safe geometry-only threshold `2B`. Thus the prior
+`4*71^3` LEMMA-075 audit covers a strict subdomain of the corrected
+`4*139^3` domain. LEMMA-075 and GATE-004AD are `EXPLORATORY` pending that
+extension. The corrected LEMMA-071 domain is small enough to audit and passes
+all 22,500 types, so GATE-004AB remains `PROVED`. No circuit or terminal claim
+is affected positively; P versus NP remains open.

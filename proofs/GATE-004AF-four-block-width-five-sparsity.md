@@ -80,7 +80,10 @@ LEMMA-098 completes that audit and retains 44 failures. LEMMA-099 follows the
 resulting mask-16 obstruction through the complete length-108 and length-112
 alphabets, retaining an `N/28-O(1)` packing. Every length-at-most-112
 specialization is `NO-GO`. LEMMA-100 gives the first length-116 local repair;
-the complete length-116 audit is next.
+a gap-at-most-20 audit can search for a new obstruction but cannot prove
+universality. LEMMA-101/102 show that the geometry-only complete length-116
+domain has gaps through 235. The next justified gate is a SAT-specific normal
+form shrinking that domain or a sharded corrected audit outside Windows.
 
 ## Model card
 

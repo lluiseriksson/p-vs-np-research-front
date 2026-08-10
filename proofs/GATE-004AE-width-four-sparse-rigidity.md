@@ -2,9 +2,10 @@
 
 **Label: EXPLORATORY**
 
-Choose the LEMMA-075 three-block slot product with
-`s=floor((R-1)/192)`. Since every disjoint common signed clause family of
-width at most four has at most `142s < R-1 <= K` members, prove that every
+Condition on completing the reopened LEMMA-075/GATE-004AD width-four
+sparsity premise, and choose its three-block slot product with
+`s=floor((R-1)/192)`. The intended bound is
+`142s < R-1 <= K`; under it, prove that every
 minimum unrestricted circuit agreeing with SAT-gamma on the canonical
 expanded rows and these witnesses has polynomial positive average diagonal
 quotient loss.
@@ -25,7 +26,7 @@ claim.
 |---|---|
 | Computational model | Minimum unrestricted Boolean circuits agreeing with SAT-gamma on expanded rows and width-four-sparse slot products; exact diagonal quotients |
 | Uniform/non-uniform | Uniform witnesses and parameters; fully non-uniform circuit adversary |
-| Circuit size | Polynomial average-loss target; known disjoint signed width-at-most-four packing below `K` |
+| Circuit size | Polynomial average-loss target; required width-at-most-four packing bound is currently open |
 | Circuit depth | Unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |

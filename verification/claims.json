@@ -3382,7 +3382,7 @@
       "field_or_algebraic_model": "Finite parser-state actions, Boolean pattern incidence, and matching only",
       "asymptotic_quantifiers": "L=36 and c_3=78; every sufficiently large rho; every disjoint common signed clause family through width three",
       "case_regime": "Worst-case exact witness-construction theorem; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md"
+      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md; proofs/LEMMA-102-safe-double-bound-gap-reduction.md"
     },
     {
       "id": "ENC032",
@@ -3459,7 +3459,7 @@
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
       "asymptotic_quantifiers": "Every sufficiently large rho greater than 36, every interior type, every disjoint common width-at-most-three family, and every s at least one",
       "case_regime": "Exact witness-family theorem; not a circuit lower bound or terminal result",
-      "evidence": "proofs/LEMMA-071-two-block-seven-pattern-universality.md; verification/test_sat_encoding.py"
+      "evidence": "proofs/LEMMA-071-two-block-seven-pattern-universality.md; proofs/LEMMA-102-safe-double-bound-gap-reduction.md; verification/test_sat_encoding.py"
     },
     {
       "id": "GATE004AC", "label": "EXPLORATORY",
@@ -3491,13 +3491,13 @@
       "evidence": "proofs/GATE-004AC-width-three-only.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md; docs/no-go-ledger.md NG-061"
     },
     {
-      "id": "GATE004AD", "label": "PROVED",
-      "statement": "Three-block neutral slot families bound every disjoint family of non-tautological common signed clauses through width four by a constant per slot.",
+      "id": "GATE004AD", "label": "EXPLORATORY",
+      "statement": "A fixed three-block neutral slot family is conjectured to bound every disjoint family of non-tautological common signed clauses through width four by a constant per slot.",
       "computational_model": "Exact three-block neutral contexts, one long option, signed clauses through width four, and matching",
-      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; proved matching bound 142s across s slots",
+      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; target matching bound 142s across s slots",
       "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation",
-      "asymptotic_quantifiers": "Fixed L=68 and c_4=142; every sufficiently large rho; every disjoint width-at-most-four common family",
-      "case_regime": "Exact witness-construction theorem; not a circuit lower bound or terminal result",
+      "asymptotic_quantifiers": "Target: fixed L=68 and c_4=142; every sufficiently large rho; every disjoint width-at-most-four common family",
+      "case_regime": "Open witness-construction gate with a finite subdomain certificate; not a circuit lower bound or terminal result",
       "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
     },
     {
@@ -3546,25 +3546,25 @@
       "computational_model": "Exact three-block neutral contexts and four-coordinate pattern incidence", "uniformity": "Uniform fixed 86-identifier alphabet; no circuit selected",
       "circuit_size": "No lower bound; six finite missing-pattern types", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
-      "asymptotic_quantifiers": "Exhaustive over all 4*71^3 reduced quartet types", "case_regime": "Subset-specific construction no-go; superseded by LEMMA-075, with P versus NP open",
+      "asymptotic_quantifiers": "Exhaustive over the audited 4*71^3 quartet subdomain", "case_regime": "Subset-specific construction no-go; the repaired alphabet remains exploratory globally, with P versus NP open",
       "evidence": "proofs/GATE-004AD-initial-length68-repair-only.md; verification/quartet_type_audit_fast.py; docs/no-go-ledger.md NG-064"
     },
     {
-      "id": "LEMMA075", "label": "PROVED",
-      "statement": "A fixed 92-identifier three-block alphabet realizes every nonzero ordinary mask through width four and yields a 142-coordinate hitting set per slot for non-tautological common clauses with the all-one and long options.",
+      "id": "LEMMA075", "label": "EXPLORATORY",
+      "statement": "A fixed 92-identifier three-block alphabet realizes every nonzero ordinary mask on the audited gap-at-most-71 subdomain; extension to every quartet and the proposed 142-coordinate hitting set remain open.",
       "computational_model": "Exact three-block SAT-gamma neutral contexts, finite pattern certificate, signed clauses through width four, hitting sets, and slot products",
       "uniformity": "Uniform fixed 92-identifier alphabet, placements, reduction, and parameters; later circuits fully non-uniform",
-      "circuit_size": "No lower bound; disjoint common signed width-at-most-four packing at most 142s", "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "circuit_size": "No lower bound; candidate disjoint common signed width-at-most-four packing bound 142s", "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
-      "asymptotic_quantifiers": "Every sufficiently large compatible slot, every interior type, every disjoint common width-at-most-four family, and every s at least one",
-      "case_regime": "Exact worst-case witness-family theorem; not a circuit lower bound, average-case claim, promise claim, or terminal result",
+      "asymptotic_quantifiers": "Target: every sufficiently large compatible slot, every interior type, every disjoint common width-at-most-four family, and every s at least one",
+      "case_regime": "Incomplete worst-case witness-family candidate with an exact finite subdomain certificate; not a circuit lower bound, average-case claim, promise claim, or terminal result",
       "evidence": "proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; verification/quartet_type_audit_fast.py; verification/test_sat_encoding.py"
     },
     {
       "id": "GATE004AE", "label": "EXPLORATORY",
       "statement": "Width-four-sparse three-block slot products force polynomial positive diagonal quotient loss for every minimum circuit agreeing with SAT-gamma on the canonical witnesses.",
       "computational_model": "Minimum unrestricted Boolean circuits agreeing with SAT-gamma on expanded rows and width-four-sparse slot products; exact diagonal quotients",
-      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary", "circuit_size": "Polynomial average-loss target; known disjoint signed width-at-most-four packing below K",
+      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary", "circuit_size": "Polynomial average-loss target; required width-four packing premise is currently open",
       "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with affine prefix geometry over F_2",
       "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
       "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
@@ -3915,6 +3915,46 @@
       "circuit_size": "No lower bound; one missing mask repaired", "circuit_depth": "Fixed finite encoding depth; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Exact finite witness, reusable by four-aligned translation", "case_regime": "Local worst-case repair lemma; not promise, average-case, distributional, universality, circuit, or terminal progress",
       "evidence": "proofs/LEMMA-100-first-length116-quintet-repair.md; verification/test_sat_encoding.py; artifacts/cycle-090-length116-local-repair.md"
+    },
+    {
+      "id": "EXP002", "label": "NUMERICAL",
+      "statement": "The corrected 22,500-type finite audit for identifiers 1 through 68 found zero missing ordinary triple masks under two blocks.",
+      "computational_model": "Exact two-block SAT-gamma neutral contexts and three-coordinate zero-mask incidence", "uniformity": "Uniform fixed identifier alphabet and finite residue/gap domain; no circuit selected",
+      "circuit_size": "No lower bound; finite certificate supports the separate LEMMA-071 proof", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Exactly four residues and two gaps in 1 through 75", "case_regime": "Exact finite computation only; asymptotic use requires LEMMA-102 and the human hitting-set argument",
+      "evidence": "artifacts/cycle-091-gap-reduction-audit.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "EXP003", "label": "NUMERICAL",
+      "statement": "A targeted exact length-116 query found no missing ordinary mask on 1,792 predecessor-shaped quintet types.",
+      "computational_model": "Complete symbolic length-at-most-116 neutral alphabet, at most four nonoverlapping blocks, and five-coordinate incidence", "uniformity": "Uniform finite query family; no circuit selected",
+      "circuit_size": "No lower bound; witness search only", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Four residues, seven fixed first-two-gap skeletons, and final two gaps in 1 through 8", "case_regime": "Targeted finite computation; neither universality nor a circuit result",
+      "evidence": "artifacts/cycle-091-gap-reduction-audit.md; verification/symbolic_identifier_audit.py"
+    },
+    {
+      "id": "LEMMA101", "label": "PROVED",
+      "statement": "Four-alignment and maximum block length B alone do not preserve nonoverlap when every gap at least B is truncated to its representative in B through B+3.",
+      "computational_model": "Finite aligned binary interval placements and zero-mask union", "uniformity": "One explicit finite alphabet; no circuit selected",
+      "circuit_size": "No circuit claim", "circuit_depth": "Irrelevant", "fan_in": "Irrelevant to the interval counterexample", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Universal reduction claim falsified by one exact instance with B=8", "case_regime": "Structural counterexample to a proof step; not a SAT lower bound or terminal result",
+      "evidence": "proofs/LEMMA-101-unsafe-bound-gap-reduction.md; verification/gap_reduction.py; verification/test_gap_reduction.py; artifacts/cycle-091-gap-reduction-audit.md"
+    },
+    {
+      "id": "LEMMA102", "label": "PROVED",
+      "statement": "For four-aligned blocks of length at most B, replacing every selected-coordinate gap at least 2B by its congruent representative in 2B through 2B+3 preserves exactly every obtainable zero mask.",
+      "computational_model": "Finite aligned bounded intervals, nonoverlap, selected-coordinate zero masks", "uniformity": "Uniform geometric reduction for every finite block alphabet",
+      "circuit_size": "No circuit claim", "circuit_depth": "Irrelevant", "fan_in": "Irrelevant to the interval theorem", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation modulo four",
+      "asymptotic_quantifiers": "Every B and block budget, every finite length-at-most-B alphabet, and every selected-coordinate tuple with adequate margins", "case_regime": "Exact finite-reduction theorem; not a universality, circuit, or terminal result",
+      "evidence": "proofs/LEMMA-102-safe-double-bound-gap-reduction.md; artifacts/cycle-091-gap-reduction-audit.md"
+    },
+    {
+      "id": "GATE004AD-BOUND-GAP-REDUCTION-ONLY", "label": "NO-GO",
+      "statement": "The geometry-only proof route truncating every gap at one block length cannot certify GATE-004AD because it may destroy nonoverlap.",
+      "computational_model": "Aligned bounded neutral-block contexts and quartet zero-mask incidence", "uniformity": "Uniform geometric proof method; later circuits not reached",
+      "circuit_size": "No lower bound", "circuit_depth": "Later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "The claimed all-gap reduction is refuted; the specific 92-identifier alphabet remains open outside the audited subdomain", "case_regime": "Structural proof-method no-go; no SAT or terminal conclusion",
+      "evidence": "proofs/GATE-004AD-bound-gap-reduction-only.md; proofs/LEMMA-101-unsafe-bound-gap-reduction.md; docs/no-go-ledger.md NG-080"
     }
   ]
 }

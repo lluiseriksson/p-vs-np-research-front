@@ -657,15 +657,17 @@ def identifier_enriched_complete_aligned_triples(
 @lru_cache(maxsize=None)
 def identifier_68_two_block_interior_failures(
 ) -> tuple[tuple[tuple[int, int, int], tuple[int, ...]], ...]:
-    """Audit all reduced interior triple types for seven-pattern coverage.
+    """Audit the safely reduced interior triples for seven-pattern coverage.
 
     Identifiers 1 through 68 give neutral blocks of length at most 36.  Gaps
-    at least 36 decouple and reduce modulo four to representatives 36..39.
-    A failure records a triple and a zero-coordinate subset of size one or
-    two that no one/two-block context realizes exactly.
+    at least 72 decouple with enough room to preserve nonoverlap and reduce
+    modulo four to representatives 72..75.  Gaps below 72 remain exact.  A
+    failure records a triple and a zero-coordinate subset of size one or two
+    that no one/two-block context realizes exactly.
     """
     bound = 36
-    length = 160
+    gap_cap = 2 * bound + 3
+    length = 260
     blocks = {
         block
         for identifier in range(1, 69)
@@ -674,52 +676,70 @@ def identifier_68_two_block_interior_failures(
             "10" + contradiction(identifier),
         )
     }
-    placements: list[tuple[int, int, frozenset[int]]] = []
-    by_zero: list[list[int]] = [[] for _ in range(length)]
+    placements: list[tuple[int, int, int]] = []
     for block in blocks:
         for start in range(0, length - len(block) + 1, 4):
-            zeros = frozenset(
-                start + offset for offset, bit in enumerate(block) if bit == "0"
+            zeros = sum(
+                1 << (start + offset)
+                for offset, bit in enumerate(block)
+                if bit == "0"
             )
-            index = len(placements)
-            placements.append((start, start + len(block), zeros))
-            for position in zeros:
-                by_zero[position].append(index)
+            placements.append((start + len(block), start, zeros))
+    placements.sort()
+    universe = (1 << len(placements)) - 1
+    ends = tuple(end for end, _, _ in placements)
+    zero_at = [0] * length
+    starts = [0] * (length + 1)
+    for index, (_, start, zeros) in enumerate(placements):
+        placement_bit = 1 << index
+        starts[start] |= placement_bit
+        remaining = zeros
+        while remaining:
+            lowest = remaining & -remaining
+            zero_at[lowest.bit_length() - 1] |= placement_bit
+            remaining -= lowest
+    start_ge = [0] * (length + 1)
+    running = 0
+    for threshold in range(length, -1, -1):
+        running |= starts[threshold]
+        start_ge[threshold] = running
 
     failures = []
     for residue in range(4):
         first = bound + residue
-        for first_gap in range(1, bound + 4):
-            for second_gap in range(1, bound + 4):
+        for first_gap in range(1, gap_cap + 1):
+            for second_gap in range(1, gap_cap + 1):
                 triple = (first, first + first_gap, first + first_gap + second_gap)
-                triple_set = set(triple)
-                subsets = (
-                    (triple[0],), (triple[1],), (triple[2],),
-                    (triple[0], triple[1]),
-                    (triple[0], triple[2]),
-                    (triple[1], triple[2]),
-                )
-                for zero_subset in subsets:
-                    forbidden = triple_set - set(zero_subset)
-                    left = [
-                        index for index in by_zero[zero_subset[0]]
-                        if not (placements[index][2] & forbidden)
-                    ]
-                    covered = bool(left)
-                    if len(zero_subset) == 2:
-                        right = [
-                            index for index in by_zero[zero_subset[1]]
-                            if not (placements[index][2] & forbidden)
-                        ]
-                        covered = bool(set(left) & set(right))
-                        if not covered and left and right:
-                            covered = (
-                                min(placements[index][1] for index in left)
-                                <= max(placements[index][0] for index in right)
-                                or min(placements[index][1] for index in right)
-                                <= max(placements[index][0] for index in left)
-                            )
-                    if not covered:
+                coordinate_sets = tuple(zero_at[position] for position in triple)
+                exact: dict[int, int] = {}
+                for mask in range(1, 7):
+                    placement_set = universe
+                    for bit, zero_set in enumerate(coordinate_sets):
+                        placement_set &= (
+                            zero_set if (mask >> bit) & 1
+                            else universe ^ zero_set
+                        )
+                    if placement_set:
+                        exact[mask] = placement_set
+                reached = set(exact)
+                for left_mask, left_placements in exact.items():
+                    remaining = left_placements
+                    while remaining:
+                        lowest = remaining & -remaining
+                        end = ends[lowest.bit_length() - 1]
+                        for right_mask, right_placements in exact.items():
+                            if right_placements & start_ge[end]:
+                                combined = left_mask | right_mask
+                                if combined != 7:
+                                    reached.add(combined)
+                        remaining -= lowest
+                        # The first placement is earliest-ending by construction.
+                        break
+                for mask in range(1, 7):
+                    if mask not in reached:
+                        zero_subset = tuple(
+                            triple[bit] for bit in range(3) if (mask >> bit) & 1
+                        )
                         failures.append((triple, zero_subset))
     return tuple(failures)
 

@@ -567,7 +567,8 @@ translations complete all eight patterns on every aligned chunk except the
 first five. Nonaligned local and intermediate-span triples remain active.
 
 The sixty-seventh cycle closes the full two-block construction. Identifiers
-1 through 68 have maximum block length 36. A 6,084-type translation
+1 through 68 have maximum block length 36. Cycle 091 corrects its finite
+reduction to a 22,500-type translation
 certificate proves that two blocks realize every triple pattern except
 `000` in the interior; `A_rho` supplies `000` away from its six one bits.
 Every common signed clause through width three therefore meets a 78-coordinate
@@ -596,16 +597,15 @@ specialization is `NO-GO`. Explicit length-52-or-longer identifiers repair
 the representatives; GATE-004AD therefore advances to a larger-bound audit
 without any circuit or terminal claim.
 
-The seventy-first cycle completes the width-four witness construction. A first
+The seventy-first cycle proposed the width-four witness construction. A first
 86-identifier length-68 repair set passes sampling but fails on six of
 1,431,644 reduced types, recorded as a subset-specific `NO-GO`. Six explicit
-same-bound identifiers repair those types. LEMMA-075 exhaustively verifies
-that the resulting 92-identifier alphabet realizes all fourteen ordinary
-nonzero masks with at most three blocks. With the all-one and six-one long
-options, every common signed clause through width four hits at most 142
-coordinates per slot. GATE-004AD is deliberately `PROVED` as a witness theorem
-only. GATE-004AE is the new positive rigidity brick; no circuit lower bound or
-terminal progress is inferred.
+same-bound identifiers repair those types. The original LEMMA-075 audit
+verified 1,431,644 types, but Cycle 091 shows that its one-block-length gap
+reduction does not preserve nonoverlap in general. The corrected safe domain
+has 10,742,476 types. LEMMA-075 and GATE-004AD are therefore `EXPLORATORY`;
+the 142-coordinate hitting set is not claimed. GATE-004AE remains contingent
+on that witness premise, with no circuit or terminal progress inferred.
 
 The seventy-second cycle exposes the next-width ladder without promoting a
 circuit claim. LEMMA-076 proves that three bounded blocks plus one exceptional
@@ -727,15 +727,25 @@ the symbolic result. LEMMA-099 closes all length-at-most-112 specializations.
 
 The ninetieth cycle locates the next local repair: identifier 67,125,314 gives
 a length-116 block reading `11110` on the shifted representative. LEMMA-100 is
-not global coverage; the complete length-116 audit is next.
+not global coverage. A gap-at-most-20 query is only a witness search; an all-
+type universality audit needs the corrected reduction described next.
+
+The ninety-first cycle audits the finite gap reduction itself. LEMMA-101 gives
+an exact aligned length-eight counterexample to truncating at one block length;
+that proof method is `NO-GO`. LEMMA-102 proves the safe threshold `2B`, making
+the geometry-only length-116 quintet domain `4*235^4=12,199,202,500` types.
+The corrected 22,500-type LEMMA-071 audit has zero failures, so width-three
+sparsity remains proved. The corrected LEMMA-075 audit is not run locally and
+width-four sparsity reopens. A separate 1,792-type length-116 targeted query
+found no obstruction and is labeled only `NUMERICAL`.
 
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, bitset-equivalent exhaustive quartet verification, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 found and corrected an unsafe finite gap reduction; the width-three certificate survives the corrected domain, while the width-four certificate must be rerun or replaced. Formal foundations and broader independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Three-block contexts now suppress every established disjoint signed tail through width four, but GATE-004AE rigidity, width-five/overlapping/nonclausal predicates, and every terminal lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | Two-block contexts have a corrected width-three sparsity proof. Width-four sparsity has reopened, width-five/overlapping/nonclausal predicates remain unresolved, and no unrestricted SAT circuit lower bound is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

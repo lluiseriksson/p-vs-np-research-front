@@ -1,6 +1,6 @@
 # GATE-004AD — three-block sparsity through signed width four
 
-**Label: PROVED**
+**Label: EXPLORATORY**
 
 There is a fixed alphabet of universally neutral blocks of maximum length 68
 such that, after allowing up to three nonoverlapping translated blocks per
@@ -22,12 +22,12 @@ all identifiers 1 through 1,023: pattern `1110` remains absent on offsets
 identifiers repair the returned representatives, so the full gate remains
 falsifiable rather than rejected.
 
-LEMMA-075 completes the repair with a fixed 92-identifier alphabet of maximum
-block length 68. Its exhaustive `4*71^3` certificate realizes all fourteen
-ordinary nonzero masks, while the all-one and `A_rho` options supply masks 0
-and 15. Every common signed clause through width four hits a 142-coordinate
-set per slot. This proves the gate as a witness construction only. The new
-positive rigidity question is GATE-004AE.
+LEMMA-075's `4*71^3` certificate realizes all fourteen ordinary nonzero masks
+on its audited subdomain. LEMMA-101 invalidates the geometry-only reduction
+used to extend that certificate to every quartet. LEMMA-102 expands the safe
+domain to gaps through 139. Until that corrected audit or a stronger normal-
+form proof closes, the 142-coordinate hitting set and this gate remain
+exploratory. GATE-004AE is therefore contingent on this open premise.
 
 ## Model card
 
@@ -35,7 +35,7 @@ positive rigidity question is GATE-004AE.
 |---|---|
 | Computational model | Exact three-block neutral contexts, one long option, signed clauses through width four, and matching |
 | Uniform/non-uniform | Uniform finite alphabet/placements; later circuits fully non-uniform |
-| Circuit size | No lower bound; proved matching bound `142s` across `s` slots |
+| Circuit size | No lower bound; target matching bound `142s` across `s` slots |
 | Circuit depth | Fixed blocks bounded; long option may have linear depth; later circuits unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |
@@ -43,4 +43,4 @@ positive rigidity question is GATE-004AE.
 | Oracle access | None |
 | Field/algebraic model | Finite Boolean incidence and translation |
 | Asymptotic quantifiers | Fixed `L=68,c_4=142`; every sufficiently large `rho`; every disjoint width-at-most-four common family |
-| Regime | Exact witness-construction theorem; not a circuit lower bound or terminal result |
+| Regime | Open witness-construction gate with a finite subdomain certificate; not a circuit lower bound or terminal result |

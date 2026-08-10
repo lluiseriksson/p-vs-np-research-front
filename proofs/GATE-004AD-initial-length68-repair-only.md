@@ -12,8 +12,8 @@ mask 8:
 
 Run each residue with `quartet_type_audit_fast.py --length68-initial` to
 reproduce the counts. This is a subset-specific NO-GO, not a length-68
-obstruction: six additional identifiers repair the failures, and LEMMA-075
-proves the completed alphabet universal through width four.
+obstruction: six additional identifiers repair the displayed failures.
+LEMMA-075 covers its audited subdomain but its all-quartet extension is open.
 
 ## Model card
 
@@ -29,4 +29,4 @@ proves the completed alphabet universal through width four.
 | Oracle access | None |
 | Field/algebraic model | Finite Boolean incidence |
 | Asymptotic quantifiers | Exhaustive over all `4*71^3` reduced quartet types |
-| Regime | Subset-specific construction no-go; superseded by LEMMA-075, with P versus NP open |
+| Regime | Subset-specific construction no-go; the repaired alphabet remains exploratory globally, with P versus NP open |

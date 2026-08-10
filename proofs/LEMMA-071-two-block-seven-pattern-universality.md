@@ -7,11 +7,11 @@ most `B`. On every triple at distance at least `B` from both slot boundaries,
 one or two nonoverlapping aligned blocks realize each pattern other than
 `000`.
 
-If a coordinate gap is at least 36, no block crosses it. Moving the right
-cluster by a multiple of four preserves patterns and nonoverlap, so that gap
-reduces to one of `36,37,38,39`. Smaller gaps stay exact. Translate the first
-coordinate to `36+r`, `0<=r<4`, inside a length-160 representative slot.
-This leaves `4*39^2=6084` types. For each type the deterministic certificate
+By LEMMA-102, a coordinate gap at least 72 safely reduces to one of
+`72,73,74,75`; smaller gaps stay exact. This threshold, rather than 36,
+preserves cross-component nonoverlap. Translate the first coordinate to
+`36+r`, `0<=r<4`, inside a length-260 representative slot. This leaves
+`4*75^2=22,500` types. For each type the deterministic certificate
 `identifier_68_two_block_interior_failures` checks the six requested zero
 sets of size one or two; its output is empty. The all-one option gives `111`.
 
