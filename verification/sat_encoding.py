@@ -199,6 +199,20 @@ def operator_square_prefix(token: str, identifier: int = 1) -> str:
     return "01" + token + variable + encode_not(variable)
 
 
+def conditioned_formula(value: bool, identifier: int = 1) -> str:
+    """A twelve-bit formula equivalent to variable ``identifier`` or its NOT."""
+    variable = encode_variable(identifier)
+    if value:
+        return double_not_wrap(encode_and(variable, variable))
+    negated = encode_not(variable)
+    return encode_and(negated, negated)
+
+
+def conditioned_prefix(value: bool, identifier: int = 1) -> str:
+    """Fourteen-bit prefix for AND(conditioned literal, hole)."""
+    return "01" + conditioned_formula(value, identifier)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

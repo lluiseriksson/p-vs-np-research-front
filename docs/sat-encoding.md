@@ -236,6 +236,48 @@ Thus on this entire two-bit cofactor square the decision function is exactly
 | Asymptotic quantifiers | Every suffix length `m>=1` and every `m`-bit suffix |
 | Regime | Exact total-language decision including malformed suffixes |
 
+## ENC-007 — equal-length conditioned-SAT pair
+
+Let
+
+`A_1 = NOT(NOT(AND(V,V)))`
+
+and
+
+`A_0 = AND(NOT(V),NOT(V))`.
+
+Both encodings have length 12; `A_1` is equivalent to `V` and `A_0` to
+`NOT(V)`. Define the equal-length fourteen-bit prefixes
+
+`R_b = 01 A_b`, for `b in {0,1}`.
+
+For every suffix `y`, `R_b y` is valid iff `y` is valid. Its SAT-gamma value is
+one exactly when `y` has a satisfying assignment with variable identifier 1
+fixed to `b`. Denote this total residual language by `CSAT_b(y)`, with malformed
+suffixes rejected. Then, for every binary string,
+
+`SAT-gamma(y) = CSAT_0(y) OR CSAT_1(y)`.
+
+The identity holds even when identifier 1 is absent from `y`, because any
+satisfying assignment can be extended with either value; it also holds on
+malformed strings because all three functions reject.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix formulas, conditioned assignments, and two equal-length coordinate restrictions |
+| Uniform/non-uniform | Uniform fixed-prefix construction |
+| Circuit size | No lower bound; supplies a two-output decomposition of SAT |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every suffix length and every binary suffix |
+| Regime | Worst-case exact total-language decision; malformed suffixes reject |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

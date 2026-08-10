@@ -291,3 +291,24 @@ Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
 unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
 oracle, field, promise, or distribution. The no-go is confined to this local
 output-cofactor inference; longer SAT-prefix residuals remain unaudited.
+
+## NG-016 — direct sum from conditioned-branch union
+
+**Label: NO-GO**
+
+Scope: infer the GATE-004G joint compression from the facts that two
+conditioned residuals are distinct, disjoint, and have pointwise OR equal to
+the original hard function.
+
+Failure: LEMMA-011 takes an arbitrary nonzero core `G` and defines conditioned
+branches `G AND NOT(t)` and `G AND t`. They are distinct, disjoint, and their
+OR is `G`. A shared circuit computes both with only three gates beyond `G`, and
+the corresponding selector parent `G AND (s XNOR t)` is within seven gates of
+the minimum shared-pair complexity. Thus these output relations do not imply
+an `Omega(n^delta)` joint quotient gap or any generic direct-sum surplus.
+
+Model: exact minimum gate count for unrestricted non-uniform single- and
+two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
+NOT; no randomness, advice, oracle, field, promise, or distribution. This
+no-go does not refute a SAT-specific constraint on internal sharing between
+`CSAT_0` and `CSAT_1`.

@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import itertools
 import unittest
 
 from sat_encoding import (
     annihilating_prefix,
     context_wrap,
+    conditioned_prefix,
     context_prefix,
     contradiction,
     decode_gamma,
@@ -14,6 +16,7 @@ from sat_encoding import (
     encode_not,
     encode_or,
     encode_variable,
+    evaluate,
     parse_formula,
     neutral_prefix_family,
     neutral_prefix_index,
@@ -37,6 +40,19 @@ class FormulaEncodingTests(unittest.TestCase):
     def setUp(self) -> None:
         self.x = encode_variable(1)
         self.y = encode_variable(7)
+
+    @staticmethod
+    def brute_sat(bits: str, forced: dict[int, bool] | None = None) -> bool:
+        parsed = parse_formula(bits)
+        if parsed is None:
+            return False
+        assignment = dict(forced or {})
+        free = sorted(parsed.variables - assignment.keys())
+        for values in itertools.product((False, True), repeat=len(free)):
+            trial = assignment | dict(zip(free, values))
+            if evaluate(parsed, trial):
+                return True
+        return False
 
     def test_parse_and_evaluate(self) -> None:
         formula = encode_and(self.x, encode_not(self.y))
@@ -185,6 +201,26 @@ class FormulaEncodingTests(unittest.TestCase):
         self.assertEqual(operator_square_prefix("01"), annihilating_prefix())
         with self.assertRaises(ValueError):
             operator_square_prefix("xx")
+
+    def test_equal_length_conditioned_sat_prefixes(self) -> None:
+        prefixes = {value: conditioned_prefix(value) for value in (False, True)}
+        self.assertEqual({len(prefix) for prefix in prefixes.values()}, {14})
+        suffixes = [
+            self.x,
+            encode_not(self.x),
+            self.y,
+            encode_or(self.x, encode_not(self.x)),
+            encode_and(self.x, encode_not(self.x)),
+            self.x + "11",
+        ]
+        for suffix in suffixes:
+            branches = []
+            for value in (False, True):
+                branch = self.brute_sat(prefixes[value] + suffix)
+                expected = self.brute_sat(suffix, {1: value})
+                self.assertEqual(branch, expected)
+                branches.append(branch)
+            self.assertEqual(any(branches), self.brute_sat(suffix))
 
 
 if __name__ == "__main__":

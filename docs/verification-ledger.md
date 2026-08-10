@@ -48,13 +48,17 @@ truth. Each row has exactly one label.
 | GATE-004E | EXPLORATORY | Prove the collision surplus within one explicit ENC-004 neutral-prefix family | `proofs/GATE-004E-neutral-family-collisions.md` | Active parent gate; sufficient for GATE-004D |
 | LEMMA-008 | PROVED | The exact neutral family has a linear recognizer and can retain an arbitrary shared core behind a `3p+5`-gate shell | `proofs/LEMMA-008-regular-neutral-shared-core.md` | Sharpens the generic limitation |
 | GATE-004E-CROSS-TABLE | NO-GO | Full output-level geometry and parser-state statistics of the neutral family do not generically force internal collisions | LEMMA-008; NG-013 | SAT-specific same-column property required |
-| GATE-004F | EXPLORATORY | Prove many same-column internal residual gates become constant, input-equivalent, or mutually equivalent | `proofs/GATE-004F-same-column-collisions.md` | Active smallest brick; sufficient for GATE-004E |
+| GATE-004F | EXPLORATORY | Prove many same-column internal residual gates become constant, input-equivalent, or mutually equivalent | `proofs/GATE-004F-same-column-collisions.md` | Open alternative route; sufficient for GATE-004E |
 | ENC-005 | PROVED | A prefix two bits from the neutral context has constant-zero SAT-gamma residual | `docs/sat-encoding.md`; reference test | Supplies a local cofactor comparison only |
 | LEMMA-009 | PROVED | Adjacent hard and zero cofactors can differ in minimum complexity by only one selector gate | `proofs/LEMMA-009-annihilating-cofactor-selector.md` | Generic selector limitation |
 | GATE-004F-ANNIHILATOR | NO-GO | A nearby zero residual does not generically force loss inside the retained hard column | LEMMA-009; NG-014 | Full SAT-specific cofactor structure remains open |
 | ENC-006 | PROVED | The complete local operator-bit square has one SAT residual and three zero residuals | `docs/sat-encoding.md`; reference test | Exact local output table only |
 | LEMMA-010 | PROVED | A one-hot two-bit selector retains an arbitrary hard core with only three gates overhead | `proofs/LEMMA-010-one-hot-cofactor-selector.md` | Generic selector limitation |
 | GATE-004F-FOUR-COFACTOR | NO-GO | The complete local one-hard/three-zero cofactor table does not force hard-column loss | LEMMA-010; NG-015 | A nonlocal SAT-specific invariant is required |
+| ENC-007 | PROVED | Equal-length prefixes produce SAT conditioned on variable 1 false/true, whose OR is exact SAT | `docs/sat-encoding.md`; reference test | Supplies a nonlocal two-output decomposition |
+| LEMMA-011 | PROVED | Distinct disjoint conditioned branches can share an arbitrary hard core with constant overhead | `proofs/LEMMA-011-conditioned-union-shared-core.md` | Generic direct-sum limitation |
+| GATE-004G-CONDITIONED-UNION | NO-GO | Conditioned-branch distinctness, disjointness, and union identity do not force joint compression | LEMMA-011; NG-016 | SAT-specific internal sharing must be controlled |
+| GATE-004G | EXPLORATORY | Jointly quotient both conditioned SAT residuals below the parent circuit by `B n^delta+1` gates | `proofs/GATE-004G-joint-conditioned-quotient.md` | Active smallest brick; directly sufficient for GATE-004 |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

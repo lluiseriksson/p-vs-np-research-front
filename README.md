@@ -105,13 +105,20 @@ three-gate one-hot selector realizes the complete pattern around any hard core.
 Constant-width parser windows are therefore closed as a generic collision
 source; the next GATE-004F attack moves to nonlocal prefix residuals.
 
+The tenth cycle opens that nonlocal route. ENC-007 gives equal-length prefixes
+for SAT conditioned on variable identifier 1 being false or true, whose OR is
+exactly SAT. GATE-004G asks for a shared two-output quotient smaller than the
+single parent circuit by `Omega(n^delta)`; this would directly yield GATE-004.
+LEMMA-011 shows that branch distinctness, disjointness, and union alone do not
+provide the gap, so the remaining obligation is explicitly SAT-internal.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 45% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context/full-cofactor tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 47% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context/conditioned-residual tests, single- and multi-output semantic quotient specifications, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, shared-core, parser lifting, cross-table, and local-cofactor failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, shared-core, parser lifting, local-cofactor, and conditioned-union failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

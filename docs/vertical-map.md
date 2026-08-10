@@ -18,8 +18,14 @@ P != NP
   <- GATE-004C (active): semantic loss under exact prefix contexts
   <- GATE-004D (active): SAT internal residual-function collisions
   <- GATE-004E (active): collisions in one neutral-prefix family
-  <- GATE-004F (active smallest brick): same-column residual-function collisions
+  <- GATE-004F (open alternative): same-column residual-function collisions
      + LEMMA-002 (proved recurrence)
+
+Alternative active route:
+  GATE-004
+  <- GATE-004G (active smallest brick): joint conditioned-SAT quotient
+     + ENC-007 (proved conditioned union)
+     + LEMMA-002 with beta=0 (proved recurrence)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -137,7 +143,7 @@ core with every prefix bit essential and only an `O(pr)` decoder shell. This is
 `GATE-004D-PARSER-LIFT — NO-GO`; the open gate must use an internal property
 specific to SAT circuits, not only the output parser states.
 
-## Smallest active brick: GATE-004F
+## Open same-column route: GATE-004F
 
 LEMMA-008 sharpens the generic obstruction: the exact ENC-004 family is the
 block language `X*W*`, so a linear-size decoder reproduces its complete output
@@ -160,6 +166,24 @@ three zero columns. LEMMA-010 shows that this entire table is realized by a
 three-gate one-hot selector around an arbitrary core. Therefore
 `GATE-004F-FOUR-COFACTOR — NO-GO`; the next attack must use nonlocal prefix
 residual structure rather than any constant-width operator window.
+
+## Smallest active brick: GATE-004G
+
+ENC-007 supplies two equal-length fourteen-bit restrictions computing SAT
+conditioned on variable identifier 1 being zero or one. Their pointwise OR is
+exactly the shorter SAT slice. GATE-004G asks whether the two restricted copies
+of every minimum parent circuit can be semantically quotiented *jointly* to a
+shared two-output circuit smaller than the parent by `B n^delta+1` gates.
+
+Adding one OR gate would then give
+
+`S(n)>=S(n-14)+B n^delta`,
+
+and LEMMA-002 yields the GATE-004 superlinear bound. LEMMA-011 prevents a
+generic direct-sum promotion: distinct, disjoint conditioned branches whose OR
+is hard can share an arbitrary core with constant overhead. The open content
+is therefore a SAT-specific constraint on internal sharing, not the output
+union identity alone.
 
 ## Downstream amplification obligation: GATE-005
 

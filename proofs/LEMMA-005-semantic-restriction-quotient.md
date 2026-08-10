@@ -52,3 +52,8 @@ and one from any remaining free input. QED.
 
 This quotient is semantic and need not be computable efficiently. Its role is
 to make the exact missing mathematical property in GATE-004D auditable.
+
+The same proof applies to finitely many restricted copies with multiple
+outputs: process the disjoint union topologically, merge gates across copies
+when their residual functions agree, and delete only gates reaching none of
+the designated outputs. This multi-output corollary is used in GATE-004G.
