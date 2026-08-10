@@ -267,6 +267,13 @@ absolute parent lower bound rather than a parent-minus-quotient inequality.
 must compare internal traces before and after conditioning, not merely count
 essential inputs.
 
+The primary restriction/depth-reduction literature does not close this edge.
+GKST17 assumes a sufficient measure drop under an allowed substitution;
+GATE-004I is exactly such an unproved drop. GKW20 gives a general OR-of-16-CNF
+representation, but LEMMA-019 shows that top-component counting alone has a
+linear ceiling. `GATE-004-DEPTH-COUNT — NO-GO` prevents promotion of that
+structural result to GATE-004 without a richer SAT-specific lower bound.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

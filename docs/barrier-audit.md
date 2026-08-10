@@ -70,6 +70,13 @@ Design constraint: every restriction on gates, depth, size, uniformity, or input
 distribution is part of the theorem name and model card. Dropping it requires a
 separate proved lifting theorem.
 
+The GKST17 framework makes sufficient complexity-measure loss under an allowed
+substitution an explicit technical premise; it does not produce the open
+conditioned-SAT loss. GKW20's unrestricted depth reduction is genuinely
+general-circuit structural information, but LEMMA-019 proves that counting only
+its top width-16-CNF components has a `3.9n` ceiling. A superlinear use must
+exploit additional component structure through a separately audited theorem.
+
 ## Uniform versus non-uniform complexity — B-UNI
 
 Uniform polynomial time is contained in non-uniform polynomial-size circuits,

@@ -100,7 +100,7 @@
     },
     {
       "path": "docs/barrier-audit.md",
-      "sha256": "d32549633e50be734195cb976f06e620799cfc67ca9c29ac5d1fe91b0c3a51aa"
+      "sha256": "6f434e391227983a4d7540e3aadcdee7b097bbc00d0cd948f19b6285c9f4d2d3"
     },
     {
       "path": "docs/bridge-audit.md",
@@ -108,7 +108,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "1b02097c36d63544fbccff3f5e9f3e0b7123dad3de208fe7aa9f9dd637e1f6ad"
+      "sha256": "910465f254d16a7d534e184b39111ccd8604afa3d2fa5adf86ec09b1cfde5eaa"
     },
     {
       "path": "docs/problem-statement.md",
@@ -116,7 +116,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "ee53cb37b9a4c01f43ee8b40e5b217432ca02914adb315c528e3e51a0be8bf52"
+      "sha256": "acd0df92ffe05cd2436a651bea85800a1ab8575be0e32380fcf223185eaaf22d"
     },
     {
       "path": "docs/result-labels.md",
@@ -149,6 +149,14 @@
     {
       "path": "docs/source-citations/golovnev-et-al-gate-elimination.md",
       "sha256": "a1a56931866bff2ea3e3531e06eafbf2e43badbd27d8d9ae5d002a36ba4f5d0d"
+    },
+    {
+      "path": "docs/source-citations/golovnev-kulikov-smal-tamaki-2017.md",
+      "sha256": "ad1a15f9cf4c412760869a90bf333fb5188a97c18628be7ad644dd3b856116a3"
+    },
+    {
+      "path": "docs/source-citations/golovnev-kulikov-williams-2020.md",
+      "sha256": "be704d24513029c116c1c505d2912e00c0a631f1c6399bb8af9fd7ad5398b01f"
     },
     {
       "path": "docs/source-citations/ilango-loff-oliveira-2020.md",
@@ -196,11 +204,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "e175942525b72d5d3de5b86da312d0a6cff3a1f527bb0eeffeef7c57015b8c77"
+      "sha256": "d5168e27df92acda1f6e80d8c44505c98f90fe17f02ed9d9b81c7e6b10af3d8a"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2bc36bd60fc2687676a741da34a776e7c62f75e33389f5050b6a5527ccb46abb"
+      "sha256": "a301347a749a853713d9997859b2b755fefe049673127ede35b948e10a23d4aa"
     },
     {
       "path": "experiments/README.md",
@@ -335,8 +343,12 @@
       "sha256": "7b560eb449168b9bc85a639eb43def22a8e7d8644db8ef5d138eaa3f797c3734"
     },
     {
+      "path": "proofs/LEMMA-019-depth-reduction-cover-ceiling.md",
+      "sha256": "234105972f54d376f3dc707342219e018e7f5c155476d89554d616caf9f6b5e4"
+    },
+    {
       "path": "README.md",
-      "sha256": "164e1d487606e87ced4f399fd8ae3263e7ec8ace657d04f49004a88b42d72fb1"
+      "sha256": "ed78fcded505cc20b16497ef9118d7bd9b377abea8fcbecbe3c3e43f8990e531"
     },
     {
       "path": "verification/audit.py",
@@ -344,7 +356,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "a1b32b2f71e9f775c9e5c18aae4547c673749a64051da466ab19c34facaf0be9"
+      "sha256": "78e052f0cffbdd546f1aad3401313c7999ed1cef73c6d758d6655e75bbdbc439"
     },
     {
       "path": "verification/generate_manifest.py",

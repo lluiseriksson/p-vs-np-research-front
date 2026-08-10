@@ -87,6 +87,10 @@ truth. Each row has exactly one label.
 | ENC-009 | PROVED | Equal-length complete-assignment formulas realize every complementary output pattern across an identifier block | `docs/sat-encoding.md`; reference test | Exact SAT-specific output structure; no circuit lower bound |
 | LEMMA-018 | PROVED | `2^R` distinct prefix-row output columns force `R` essential suffix coordinates and `R-1` binary gates | `proofs/LEMMA-018-shattering-support-bound.md` | Gives only `Omega(n/log n)` on ENC-009 lengths |
 | GATE-004I-SHATTERING-SUPPORT | NO-GO | Essential-coordinate/connectedness counting cannot transfer complementary shattering to aggregate quotient loss | LEMMA-018; NG-022 | Requires a SAT-specific internal trace theorem |
+| BR-GKST17 | PROVED | The substitution framework takes sufficient circuit-measure loss plus an explicit disperser/extractor as technical inputs | GKST17 primary-source note | Does not supply GATE-004I's SAT-specific quotient loss |
+| BR-GKW20 | PROVED | Every size-`s` unrestricted circuit is an OR of `2^(s/3.9)` width-16 CNFs | GKW20 primary-source note | Structural theorem only |
+| LEMMA-019 | PROVED | Every `n`-bit function is an OR of at most `2^n` width-one CNFs, capping top-component-count bounds at linear size | `proofs/LEMMA-019-depth-reduction-cover-ceiling.md` | Exact method ceiling |
+| GATE-004-DEPTH-COUNT | NO-GO | GKW20 plus only a lower bound on the number of CNF components cannot prove superlinear size | LEMMA-019; NG-023 | Richer component structure would need a new bridge |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

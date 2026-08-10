@@ -439,3 +439,25 @@ Model: exact unrestricted non-uniform acyclic circuits; unbounded depth;
 fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, field,
 promise, or distribution. The no-go is specific to support/connectedness
 counting and does not exclude a stronger SAT-specific internal trace theorem.
+
+## NG-023 — unrestricted depth reduction plus component count
+
+**Label: NO-GO**
+
+Scope: use GKW20's representation of every size-`s` unrestricted circuit as
+an OR of `2^(s/3.9)` width-16 CNFs, prove that SAT needs many such components,
+and infer a superlinear circuit lower bound solely from the component count.
+
+Failure: LEMMA-019 gives every `n`-bit Boolean function an exact OR cover by at
+most `2^n` width-one CNFs, one per accepting input. Hence the logarithm of any
+valid minimum-component lower bound is at most `n`. Inserted into the GKW20
+reduction, component count can certify at most `3.9n`, never `n^(1+delta)`.
+
+The related GKST17 substitution framework likewise does not supply the open
+GATE-004I measure drop: sufficient loss under an allowed substitution is the
+framework's technical input, not its output.
+
+Model: exact unrestricted non-uniform Boolean circuits and exact ORs of
+bounded-width CNFs; unbounded parent depth; no randomness, advice, oracle,
+field, promise, or distribution. The no-go leaves open methods using richer
+component structure or a separately proved SAT-specific quotient theorem.

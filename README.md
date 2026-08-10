@@ -166,13 +166,20 @@ this is only `Omega(n/log n)`, and it never compares the parent with a joint
 quotient. `GATE-004I-SHATTERING-SUPPORT` is therefore `NO-GO`; a successful
 next brick must control conditioned internal traces rather than input support.
 
+The nineteenth cycle checks the closest primary restriction and depth-
+reduction frameworks. GKST17 requires the sufficient substitution loss that
+GATE-004I is trying to prove. GKW20 reduces a size-`s` unrestricted circuit to
+an OR of `2^(s/3.9)` width-16 CNFs, but LEMMA-019 proves that top-component
+counting has a universal `3.9n` ceiling. Neither result is promoted to a
+superlinear SAT lower bound.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 57% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, support-count and selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 58% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Complementary shattering yields only an audited sublinear absolute bound and no aggregate quotient loss; no new superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | The closest generic restriction and depth-reduction promotions are explicitly blocked; no SAT-specific aggregate quotient loss, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
