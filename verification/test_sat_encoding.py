@@ -3,9 +3,11 @@ from __future__ import annotations
 import itertools
 import unittest
 
+import sat_encoding
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
+    bounded_block_distant_groups,
     context_wrap,
     conditioned_prefix,
     common_outer_double_not_pad,
@@ -725,6 +727,22 @@ class FormulaEncodingTests(unittest.TestCase):
         sample_stride = max(1, len(contexts) // 25)
         for padded in contexts[::sample_stride]:
             self.assertTrue(self.brute_sat(padded))
+
+    def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
+        max_block_length = 28
+        for block_count in range(1, 6):
+            extra_length = max_block_length * (block_count + 1)
+            groups = bounded_block_distant_groups(
+                extra_length, block_count, max_block_length
+            )
+            placements = sat_encoding._pair_zero_neutral_placements(
+                extra_length
+            )
+            self.assertEqual(len(groups), max_block_length)
+            for group in groups:
+                self.assertEqual(len(group), block_count + 1)
+                for _, _, zeros in placements:
+                    self.assertLessEqual(len(set(group) & zeros), 1)
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

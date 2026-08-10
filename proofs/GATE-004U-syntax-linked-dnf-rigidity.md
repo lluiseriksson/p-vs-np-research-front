@@ -85,6 +85,17 @@ target is triple-zero coverage; the structural audit simultaneously asks
 whether allowing an unbounded block count merely moves the obstruction to a
 growing-width common predicate.
 
+ENC-024 and LEMMA-049 replace that iterative concern by a quantitative
+theorem. For `b(P)` zero blocks of maximum length `D(P)`, put
+`m=floor(P/(b(P)+1))`. Whenever `m>K(P),D(P)`, an exact width-`b+1` clause
+tail gives negative loss. Every fixed block count and every sparse growing
+regime satisfying those inequalities is therefore `NO-GO`.
+
+The next audit no longer adds a fixed number of blocks. It must analyze a
+sufficiently dense unbounded-block family or use the full variation of DNF
+core lengths and syntax so that no common outer predicate remains. Full
+GATE-004U remains open.
+
 ## Model card
 
 | Field | Value |

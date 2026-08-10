@@ -411,13 +411,21 @@ least `(w+1)m` quotient classes. At width three this restores loss at most
 triple-zero density, alongside an audit of the obstruction at growing clause
 width.
 
+The forty-eighth cycle closes the entire fixed-block ladder. ENC-024 and
+LEMMA-049 show that `b` zero blocks of length at most `D` leave
+`m=floor(P/(b+1))` disjoint common clauses of width `b+1` whenever `m>=D`.
+The extension has exact loss at most `K-m`, so every regime with `m>K` is
+`NO-GO`, including every fixed block count. The next audit must use a
+sufficiently dense unbounded-block family or the broader variation of full
+DNF syntax.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 86% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, distant common-clause geometry at widths two and three, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 87% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block common-clause geometry, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Two-block syntax density still admits an exact width-three tail; triple/growing-width density and full GATE-004U remain open, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Every sparse-block syntax family admits an exact growing-width tail; dense unbounded blocks and full GATE-004U remain open, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

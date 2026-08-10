@@ -2584,6 +2584,57 @@
       "asymptotic_quantifiers": "Infinitely many compatible lengths with twelve-divisible P at least 84, all compact DNF cores and ENC-022 placements, and sufficiently small fixed context exponent c",
       "case_regime": "Worst-case exact counterexample to ENC-022-only forcing; full GATE-004U remains open",
       "evidence": "proofs/GATE-004U-two-block-context-only.md; docs/sat-encoding.md ENC-023; proofs/LEMMA-048-width-w-clause-exact-tail.md; docs/no-go-ledger.md NG-045"
+    },
+    {
+      "id": "ENC-024",
+      "label": "PROVED",
+      "statement": "If every outer zero support is covered by at most b intervals of length D and floor(P/(b+1)) is at least D, then floor(P/(b+1)) disjoint width-(b+1) positive clauses are one on every context.",
+      "computational_model": "Raw-coordinate zero supports covered by bounded intervals and disjoint positive clauses",
+      "uniformity": "Arbitrary context family; uniform distant-group construction",
+      "circuit_size": "m common clauses of width b+1 for m=floor(P/(b+1)); exact circuit consequence supplied by LEMMA-049",
+      "circuit_depth": "Contexts and later circuits unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer interval geometry only",
+      "asymptotic_quantifiers": "Every finite P,b,D with floor(P/(b+1)) at least D, every qualifying context, and every one of the m distant groups",
+      "case_regime": "Worst-case exact syntax-location theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-049",
+      "label": "PROVED",
+      "statement": "A b-block zero-support family admits an exact width-(b+1) clause tail of size K+(b+1)m, quotient at least (b+2)m, and loss at most K-m, where m=floor(P/(b+1)), under the separation bound m>=D.",
+      "computational_model": "Exact total Boolean functions, bounded interval zero supports, disjoint positive clauses, globally minimum unrestricted circuits, and semantic joint quotients",
+      "uniformity": "Arbitrary witness family and fully non-uniform base/minimum circuit; uniform clause construction",
+      "circuit_size": "Exact K+(b+1)m; quotient at least (b+2)m; signed loss at most K-m",
+      "circuit_depth": "Unrestricted; displayed OR and AND chains may be sequential",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer interval geometry only",
+      "asymptotic_quantifiers": "Every finite P,b,D with m=floor(P/(b+1)) at least D, every qualifying family and nonconstant base, and every distinct nonconstant row pair",
+      "case_regime": "Worst-case exact total-function method obstruction; not a SAT circuit lower bound",
+      "evidence": "proofs/LEMMA-049-bounded-block-width-obstruction.md; verification/test_sat_encoding.py; proofs/LEMMA-048-width-w-clause-exact-tail.md"
+    },
+    {
+      "id": "GATE-004U-BOUNDED-BLOCK-CONTEXTS",
+      "label": "NO-GO",
+      "statement": "Exact agreement on common-inner-length DNF cores under sparse neutral-block context families does not force positive diagonal loss whenever the distant-group size exceeds both block length and base circuit size.",
+      "computational_model": "Globally minimum unrestricted circuits, exact syntax-linked sparse-block agreement, canonical DNF core evaluation, and diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary/base minimum circuit; uniform DNF maps and distant clauses",
+      "circuit_size": "Counterexample exact size K+(b+1)m; quotient at least (b+2)m; loss at most K-m<0",
+      "circuit_depth": "Unrestricted base with width-(b+1) OR chains and a sequential AND tail",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer interval geometry only",
+      "asymptotic_quantifiers": "Every parameter sequence with m=floor(P/(b+1)) at least D and strictly greater than K; all compact DNF cores and qualifying sparse-block contexts",
+      "case_regime": "Worst-case exact counterexample to sparse-block context forcing; full GATE-004U remains open",
+      "evidence": "proofs/GATE-004U-bounded-block-contexts.md; docs/sat-encoding.md ENC-024; proofs/LEMMA-049-bounded-block-width-obstruction.md; docs/no-go-ledger.md NG-046"
     }
   ]
 }

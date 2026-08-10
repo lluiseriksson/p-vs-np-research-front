@@ -58,6 +58,7 @@ Adjacent collision-aware active branch:
      + ENC-021 (proved distant common clauses on ENC-020)
      + ENC-022 (proved almost pairwise-zero neutral padding)
      + ENC-023 (proved distant common triples on ENC-022)
+     + ENC-024 (proved general bounded-block distant groups)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -71,6 +72,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-RAW-COORDINATE-TAIL (no-go by LEMMA-045)
      - GATE-004U-NEUTRAL-CONTEXT-ONLY (no-go by LEMMA-046)
      - GATE-004U-TWO-BLOCK-CONTEXT-ONLY (no-go by LEMMA-048)
+     - GATE-004U-BOUNDED-BLOCK-CONTEXTS (no-go by LEMMA-049)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -611,6 +613,13 @@ width-`w` exact-cost identity again yields loss at most `K-m`. ENC-022-only
 forcing is therefore `NO-GO`. The next syntax construction must supply
 triple-zero coverage, while the broader audit must confront that every fixed
 block count leaves a next-width clause predicate.
+
+ENC-024 and LEMMA-049 close the whole sparse-block ladder. With `b` blocks,
+the distant-group size `m=floor(P/(b+1))` gives an exact width-`b+1` clause
+tail and loss at most `K-m` whenever `m` exceeds block length. Thus every
+fixed block count, and every growing count with `m>K,D`, is `NO-GO`. The next
+active audit must use unbounded sufficiently dense block count or exploit the
+complete DNF syntax beyond an isolated outer-context family.
 
 ### Smallest active brick: GATE-004U
 

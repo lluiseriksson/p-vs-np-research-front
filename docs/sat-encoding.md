@@ -1106,6 +1106,40 @@ base function.
 | Asymptotic quantifiers | Every twelve-divisible `P>=84`, every source string, every ENC-022 context, and all `P/3` distant triples |
 | Regime | Worst-case exact syntax-location statement; not a circuit lower bound |
 
+## ENC-024 — bounded blocks leave distant common groups
+
+**Label: PROVED**
+
+Let an outer region have length `P`, and suppose every required context has
+all zero bits inside at most `b` intervals of length at most `D`. Set
+
+`m=floor(P/(b+1))`
+
+and assume `m>=D`. For every `0<=i<m`, select the width-`b+1` group
+
+`{i,i+m,...,i+bm}`.
+
+Every zero interval hits at most one selected coordinate, so `b` intervals
+cannot zero the entire group. The corresponding positive OR clause is one on
+every context. The `m` groups are disjoint. LEMMA-049 proves the exact
+circuit and quotient consequence.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Raw-coordinate zero supports covered by bounded intervals and disjoint positive clauses |
+| Uniform/non-uniform | Arbitrary context family; uniform distant-group construction |
+| Circuit size | `m` common clauses of width `b+1`; exact consequence deferred to LEMMA-049 |
+| Circuit depth | Contexts and later circuits unrestricted |
+| Fan-in | AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Integer interval geometry only |
+| Asymptotic quantifiers | Every finite `P,b,D` with `floor(P/(b+1))>=D`, every qualifying context, and all `m` distant groups |
+| Regime | Worst-case exact syntax-location theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

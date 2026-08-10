@@ -961,3 +961,27 @@ advice, oracle, promise, distribution, or algebraic computation. This is a
 no-go for ENC-022-only forcing, not full GATE-004U. The next defense requires
 triple-zero coverage or broader syntax interactions, and any fixed-width
 repair remains subject to the general LEMMA-048 audit.
+
+## NG-046 — a bounded number of neutral blocks forces quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal quotient loss from exact SAT-gamma agreement on
+common-inner-length DNF cores under a neutral-context family whose zero
+supports use at most `b(P)` intervals of length at most `D(P)`.
+
+Failure: ENC-024 and LEMMA-049 put
+`m=floor(P/(b(P)+1))` coordinates into each of `m` disjoint distant groups of
+width `b(P)+1`. When `m>=D(P)`, each block hits at most one coordinate in a
+group, so every group clause is common. The exact extension has size
+`K+(b+1)m`, quotient at least `(b+2)m`, and loss at most `K-m`. It is negative
+whenever `m>K`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; arbitrary
+sparse-block outer context families; common-inner-length canonical DNF base;
+exact disjoint width-`b+1` positive clauses; unrestricted depth, fan-in-two
+AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This closes every fixed-block-count
+repair and every growing regime satisfying `m>=D` and `m>K`. It does not
+cover dense block counts, long blocks, or full GATE-004U's broader syntax
+interactions.

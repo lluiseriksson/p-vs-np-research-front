@@ -546,6 +546,26 @@ def distant_outer_triples(
     )
 
 
+def bounded_block_distant_groups(
+    extra_length: int,
+    block_count: int,
+    max_block_length: int,
+) -> tuple[tuple[int, ...], ...]:
+    """Build the groups missed by a bounded number of short zero blocks."""
+    if block_count < 0:
+        raise ValueError("block_count must be nonnegative")
+    if max_block_length < 1:
+        raise ValueError("max_block_length must be positive")
+    width = block_count + 1
+    group_count = extra_length // width
+    if group_count < max_block_length:
+        raise ValueError("outer region is too short for separated groups")
+    return tuple(
+        tuple(position + offset * group_count for offset in range(width))
+        for position in range(group_count)
+    )
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 
