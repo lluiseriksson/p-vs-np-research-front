@@ -7,6 +7,7 @@ truth. Each row has exactly one label.
 |---|---|---|---|---|
 | INFRA-001 | PROVED | Required repository tree, policies, manifest, and cold-clone reproduction exist | `verification/audit.py`; `artifacts/cold-clone-a9865ce.md` | None |
 | INFRA-002 | PROVED | Cycle-002 claim taxonomy and manifest reproduce from a cold clone | `artifacts/cold-clone-eb4ac30.md` | None |
+| INFRA-003 | PROVED | Cycle-003 exact encoding, manifest, and reference tests reproduce from a cold clone | `artifacts/cold-clone-b8f06a0.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
