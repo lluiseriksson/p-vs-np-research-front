@@ -40,6 +40,7 @@ truth. Each row has exactly one label.
 | INFRA-033 | PROVED | Cycle-033 exact adjacent conditioning and hard-core adjacency no-go reproduce from a cold clone | `artifacts/cold-clone-05b77a8.md` | None |
 | INFRA-034 | PROVED | Cycle-034 parallel affine-context geometry and trace-region audit reproduce from a cold clone | `artifacts/cold-clone-e7c2387.md` | None |
 | INFRA-035 | PROVED | Cycle-035 minimum context-chain quotient expansion reproduces from a cold clone | `artifacts/cold-clone-1f914a8.md` | None |
+| INFRA-036 | PROVED | Cycle-036 one-hot shattering no-go and compressed-context gate reproduce from a cold clone | `artifacts/cold-clone-9137e8c.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
