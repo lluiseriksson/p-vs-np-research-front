@@ -480,6 +480,11 @@ Thus the conditioned-output matrix is the exact complementary INDEX/XNOR
 matrix on an affine subspace, not merely an arbitrary collection of `2^R`
 witness strings.
 
+LEMMA-028 audits the exact logical strength of this observation. The same
+row/subspace values admit a total Boolean extension of size `O(R log R)`.
+Consequently ENC-012 supplies structured SAT witnesses, but a circuit-loss
+argument must also use SAT's behavior away from this affine table.
+
 ### Model card
 
 | Field | Value |

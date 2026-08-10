@@ -122,7 +122,10 @@ truth. Each row has exactly one label.
 | ENC-011 | PROVED | Formula encoding-weight parity is determined by binary-node count and leaf-identifier popcounts | `docs/sat-encoding.md` | Globally excludes one-bit pairs with fixed leaf data |
 | GATE-004L-ONEBIT-FIXED-LEAVES | NO-GO | A one-bit polarity gadget cannot use only identifier 1 or preserve the leaf-identifier multiset | ENC-011; NG-028 | Auxiliary-leaf gadgets not excluded |
 | ENC-012 | PROVED | The complete-assignment witness family is an exact affine subspace with disjoint nonzero directions and complementary INDEX outputs | `docs/sat-encoding.md`; reference test | Stronger SAT-specific witness geometry; no quotient loss yet |
+| LEMMA-028 | PROVED | Every affine complementary-INDEX witness table has an explicit total AND/OR/NOT extension of size at most `2Rp+3R+p-1` | `proofs/LEMMA-028-affine-index-extension-upper-bound.md`; reference test | Exact table-only upper bound |
+| GATE-004L-AFFINE-TABLE-ONLY | NO-GO | Affine geometry plus complementary-INDEX values alone cannot force superlinear unrestricted-circuit size or positive quotient loss | LEMMA-028; NG-029 | Must use off-table SAT semantics, SAT-specific minimality, or `kappa` |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
-There are no `FORMALLY VERIFIED` or `NUMERICAL` results at this commit.
+There are no `FORMALLY VERIFIED` results at this commit. `EXP-001` is the one
+`NUMERICAL` result and remains segregated from the proved claims.

@@ -1632,6 +1632,40 @@
       "asymptotic_quantifiers": "Every finite same-bit-length identifier block, every assignment vector, and every common exact-length padding",
       "case_regime": "Worst-case exact total-language evaluation on an affine witness subspace",
       "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-028",
+      "label": "PROVED",
+      "statement": "Every complementary-INDEX table on 2R distinct p-bit prefix rows and an affine suffix subspace with disjoint nonzero directions has a total AND/OR/NOT extension of size at most 2Rp+3R+p-1.",
+      "computational_model": "Total Boolean functions and acyclic AND/OR/NOT circuits extending prescribed values on a prefix-row by affine-subspace product",
+      "uniformity": "Uniform explicit construction; valid as a non-uniform circuit at every finite parameter tuple",
+      "circuit_size": "At most 2Rp+3R+p-1; O(R log R) for the conditioned SAT-gamma prefix width",
+      "circuit_depth": "At most 2+ceil(log_2 p)+ceil(log_2(2R))",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine witness notation over F_2 only; computation is by Boolean gates",
+      "asymptotic_quantifiers": "Every finite R,p,m at least one, every 2R distinct prefix rows, and every base with nonzero pairwise-disjoint affine directions; fixed-c asymptotic corollary",
+      "case_regime": "Worst-case exact total-function computation; prescribed complementary-INDEX behavior on the selected product and zero on unlisted prefix rows",
+      "evidence": "proofs/LEMMA-028-affine-index-extension-upper-bound.md; verification/test_affine_index_extension.py"
+    },
+    {
+      "id": "GATE-004L-AFFINE-TABLE-ONLY",
+      "label": "NO-GO",
+      "statement": "Affine witness geometry and complementary-INDEX values alone cannot force superlinear unrestricted-circuit size, positive joint-quotient loss, or the GATE-004L labelwise bias.",
+      "computational_model": "Total unrestricted Boolean circuits constrained only on selected prefix rows and an affine suffix subspace",
+      "uniformity": "Uniform counterconstruction against a table-only universal implication; non-uniform target circuits",
+      "circuit_size": "Explicit compatible size O(Rp), equal to O(R log R) for the SAT-gamma row width and o(n) for R=Theta(n^c), fixed c<1",
+      "circuit_depth": "Logarithmic in p and R in the counterconstruction; unrestricted in the rejected inference",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine notation over F_2 only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every finite compatible table has the small extension; asymptotic ceiling for every fixed 0<c<1",
+      "case_regime": "Worst-case method-specific obstruction; not a circuit upper bound for SAT-gamma",
+      "evidence": "proofs/LEMMA-028-affine-index-extension-upper-bound.md; docs/no-go-ledger.md NG-029"
     }
   ]
 }

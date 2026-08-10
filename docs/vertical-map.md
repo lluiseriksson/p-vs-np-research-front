@@ -376,6 +376,17 @@ restricts to the exact complementary INDEX matrix on that subspace. The next
 GATE-004L attack may use this affine geometry, but no implication to labelwise
 loss is currently claimed.
 
+Cycle 030 audits that implication directly. LEMMA-028 constructs a total
+fan-in-two Boolean extension of every such table using at most
+`2R p+3R+p-1` gates, where `p` is the conditioned-prefix width. Here
+`p=O(log R)`, so the entire table is compatible with `O(R log R)` circuit
+size and, for `R=Theta(n^c)` with `c<1`, even `o(n)` size in the ambient length.
+`GATE-004L-AFFINE-TABLE-ONLY — NO-GO` therefore blocks any transfer using only
+the selected affine table. The smallest active brick remains GATE-004L, but
+its next viable attack must use SAT's values outside the witness subspace,
+minimum-circuit consequences tied to those values, or restore and control
+`kappa_j` rather than discard it.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

@@ -565,3 +565,29 @@ promise, or distribution. The no-go does not exclude one-bit gadgets using
 different auxiliary leaf multisets. ENC-012 shows that a coordinate cube is
 unnecessary for the current witnesses: they already form an affine subspace
 with multi-bit independent directions.
+
+## NG-029 — affine complementary-INDEX table alone
+
+**Label: NO-GO**
+
+Scope: infer a superlinear unrestricted-circuit lower bound, a positive
+parent-minus-joint-quotient loss, or GATE-004L's labelwise bias using only the
+facts that selected suffix witnesses form an affine subspace with disjoint
+directions and selected conditioned rows realize complementary INDEX.
+
+Failure: LEMMA-028 constructs, for every such `R`-coordinate table with
+`p`-bit distinct prefix rows, a total Boolean extension computed by a
+fan-in-two AND/OR and fan-in-one NOT circuit of size at most
+`2Rp+3R+p-1`. For the exact conditioned-row width `p=O(log R)`, this is
+`O(R log R)`; for the repository's `R=Theta(n^c)`, fixed `0<c<1`, it is
+`o(n)`. The extension matches every selected row/subspace value and differs
+from SAT only away from the audited table. Therefore no universal implication
+from the table data alone can establish the required loss.
+
+Model: total non-uniform unrestricted Boolean circuits; unbounded size outside
+the explicit upper bound, depth at most logarithmic in the construction,
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. Affine notation is over `F_2` only.
+The no-go does not give a small circuit for SAT-gamma and leaves open arguments
+using SAT's off-table values, global minimum-circuit structure tied to those
+values, or cross-label collision surplus `kappa`.

@@ -156,7 +156,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "149f272ba5f202916b83b3193542180835dda5074fcaf71daf78f6ebc9b604af"
+      "sha256": "963ca037b52cd8beacf3e50a183740ec643739a7b8ef5e6d73dd09fae9b3c692"
     },
     {
       "path": "docs/problem-statement.md",
@@ -164,7 +164,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "8c146518aa90eec921f6a2839260aacd8484c5f26b240808ea166106c00e7220"
+      "sha256": "4717f107d5d1971a04a8ba2a3bb03a064875fa4c18d6b99f0bad1f9663736de0"
     },
     {
       "path": "docs/result-labels.md",
@@ -172,7 +172,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "ba2a1f7f8b4eec0c96bcbee6aa527556a0fc2441c7df465f9241379655a44de7"
+      "sha256": "40e177e6bdb840929f4f731ad89c97f5269795f686e1da04a0c9994cf7957543"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -252,11 +252,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "dbcb362b32d1a87834fe85bfba99f3dd5350a327ac70a99fc53001863fc7bfa4"
+      "sha256": "23f139a2323a58e676ef2759a1792d0f187667208d0a607d08e65aca34f3b718"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "fba884351a3553b4b028340de61d1cb8435e07f9223241ae191ed89da80dc94a"
+      "sha256": "ae5585618fb55ec6f7f93cc85f98c0ffa9692c28c5a497285e5590d578cfbf6b"
     },
     {
       "path": "experiments/README.md",
@@ -443,8 +443,16 @@
       "sha256": "39e350132ce86c50b770fe568b23a044bfb3bcbcfca41753c3089ca931fb9868"
     },
     {
+      "path": "proofs/LEMMA-028-affine-index-extension-upper-bound.md",
+      "sha256": "7020e19e2209818904d1c6ec0b593a51df0397a6a52c8d5f045a02d840ba73c4"
+    },
+    {
       "path": "README.md",
-      "sha256": "5eef36f22ead788d5841aa2303cf853674dcdd78937fba5c0f29f43027a9236e"
+      "sha256": "b00959499613e157cc4bedbd1ac033cc83e1d2e7da168c92be8c709bc0eacf11"
+    },
+    {
+      "path": "verification/affine_index_extension.py",
+      "sha256": "193746a7ce770a9bf25a7606c32cdc29e66058069f49cf41d55aab6428fc1bb0"
     },
     {
       "path": "verification/audit.py",
@@ -452,7 +460,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "26404ad77c3564cadb082ea9ee47eaf44132325cec6946c8da2445c574c213d1"
+      "sha256": "016aab5e87c7892045a315b2caeca3b692c5ea9b1eec5254ad2bf15367cbab36"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -461,6 +469,10 @@
     {
       "path": "verification/sat_encoding.py",
       "sha256": "6b348d1cfc12f23a2a6670d9bb44b0eeaa8449105f7d423fe599b873a803f260"
+    },
+    {
+      "path": "verification/test_affine_index_extension.py",
+      "sha256": "0a544e201c12e000f5e3c2572642e0fbd54cc1166ffe3a93fddacaed71ab6403"
     },
     {
       "path": "verification/test_experiments.py",
