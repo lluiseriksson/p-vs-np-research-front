@@ -1073,6 +1073,39 @@ class FormulaEncodingTests(unittest.TestCase):
         )
         self.assertTrue((repaired >> 8) & 1)
 
+    def test_complete_length_88_alphabet_retains_mask_16(self) -> None:
+        positions = (88, 96, 104, 109, 110)
+        symbolic = CompleteIdentifierAuditor(19, 580).reached_masks_positions(
+            positions, 4
+        )
+        direct = reached_masks_direct_positions(
+            positions, 4, tuple(range(1, 1048576)), 580
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(symbolic & relevant, direct & relevant)
+        self.assertFalse((symbolic >> 16) & 1)
+
+    def test_complete_length_96_boundary_and_length_100_repair(self) -> None:
+        positions_96 = (96, 104, 112, 117, 118)
+        reached_96 = CompleteIdentifierAuditor(
+            21, 700
+        ).reached_masks_positions(positions_96, 4)
+        self.assertFalse((reached_96 >> 16) & 1)
+
+        identifier = 4210754
+        block = "01" + tautology(identifier)
+        positions_100 = (100, 108, 116, 121, 122)
+        start = 72
+        self.assertEqual(len(block), 100)
+        self.assertEqual(
+            "".join(block[position - start] for position in positions_100),
+            "11110",
+        )
+        reached_100 = CompleteIdentifierAuditor(
+            22, 720
+        ).reached_masks_positions(positions_100, 4)
+        self.assertTrue((reached_100 >> 16) & 1)
+
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
         for block_count in range(1, 6):

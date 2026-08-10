@@ -136,6 +136,9 @@ Adjacent collision-aware active branch:
      + LEMMA-090 (explicit length-84 repair of the shifted representative)
      - GATE-004AF-LENGTH84-ONLY (no-go by LEMMA-091)
      + LEMMA-092 (explicit length-88 repair of the mask-8 representative)
+     - GATE-004AF-LENGTH88-ONLY (no-go by LEMMA-093)
+     - GATE-004AF-LENGTH96-ONLY (no-go by LEMMA-094)
+     + LEMMA-095 (explicit length-100 repair of the mask-16 representative)
 
 Stronger dependent-region branch:
   GATE-004I

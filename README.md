@@ -690,6 +690,20 @@ padding, realizes the missing mask 8 on the shifted LEMMA-091 representative.
 LEMMA-092 records the exact bit-string witness. The complete length-88 audit,
 not this single repaired type, is the next operational gate.
 
+The eighty-third cycle completes that audit and finds 111 failures, partitioned
+`21,30,30,30` by residue. Symbolic and literal DPs over all 1,048,575
+identifiers agree that `(88,96,104,109,110)` omits only mask 16. LEMMA-093
+retains an `N/24-O(1)` packing, making complete length 88 `NO-GO`.
+
+The eighty-fourth cycle follows the counterexample rather than rerunning the
+whole local domain. The exact symbolic oracle proves that the shifted mask-16
+type survives every identifier through block lengths 92 and 96. LEMMA-094
+therefore closes all length-at-most-96 specializations with the same packing.
+
+The eighty-fifth cycle finds the sharp next repair: identifier 4,210,754 gives
+a length-100 block reading `11110` on the shifted representative. LEMMA-095 is
+again only a local repair. The complete length-100 audit is next.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

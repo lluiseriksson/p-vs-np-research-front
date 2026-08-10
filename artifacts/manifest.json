@@ -375,6 +375,18 @@
       "sha256": "3d957fce22a015e0b1e1cf732d7e90993eef35461332b7fc6250716b8e606843"
     },
     {
+      "path": "artifacts/cycle-083-symbolic-length88-audit.md",
+      "sha256": "bdc5a3c28d9c9de8a1774ba9db62c70529bcf3de7dec32db1e70e0f7b854fe0f"
+    },
+    {
+      "path": "artifacts/cycle-084-symbolic-length96-boundary.md",
+      "sha256": "2ce9e20e9518edf6c3a7300f5d3a9718862844fec265b31026d5e83a0cc2924d"
+    },
+    {
+      "path": "artifacts/cycle-085-length100-local-repair.md",
+      "sha256": "b5029ccb87acc458ac4abe1aed72a9885f4c97e8af65ebacf17c4f23c726b053"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -400,7 +412,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "6c2776371f00418464499d09c58dde503f6b8e136221770cf79f529051d7e7d1"
+      "sha256": "5949c059e10767342dd4e8e4af92cf70a04837525e98c1a20f7d3225e6259ff9"
     },
     {
       "path": "docs/problem-statement.md",
@@ -504,11 +516,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "b6795532fc8cfc8f505e68212650d4c8d8aeef45925764c10717ca37042d3d51"
+      "sha256": "9e852c953cfb3330dd478ef59b317ec8684c4fcc79076c0ff9587871137fcfde"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "b0a7cf524183152b186590e4e935e3e2d10a0ddc1697f789e5235da1057caa57"
+      "sha256": "deb8b7e2cb3908c0a669df4b183f6b4e9206fddce109e592a1dc307a361f533d"
     },
     {
       "path": "experiments/README.md",
@@ -584,7 +596,7 @@
     },
     {
       "path": "proofs/GATE-004AF-four-block-width-five-sparsity.md",
-      "sha256": "e033728c936dc19e7c3e84b2620217c6dbd85cac5af600dcbcd656e58ee0ffdf"
+      "sha256": "c1ede24ad107d0e88979116b987eef25a47bade7702e6d52a61fcfb1a0a78f48"
     },
     {
       "path": "proofs/GATE-004AF-free-bit-covering-only.md",
@@ -613,6 +625,14 @@
     {
       "path": "proofs/GATE-004AF-length84-only.md",
       "sha256": "026ada5b1f21ade0e6b409fbef992a37f520e9ba0b11a032b96836a1f817c9c0"
+    },
+    {
+      "path": "proofs/GATE-004AF-length88-only.md",
+      "sha256": "ec1edb713dc688ba13f269c4068bab6a2faaf80a90ad87ebbe45fe8073f81046"
+    },
+    {
+      "path": "proofs/GATE-004AF-length96-only.md",
+      "sha256": "88ff1d88d701665f91e67d2a3445e6529f1337e255d66483c0133fe2e68c19cf"
     },
     {
       "path": "proofs/GATE-004AF-single-length76-repair-only.md",
@@ -1155,8 +1175,20 @@
       "sha256": "0a8fa0e5ff1efdc213b10ad6a691641cb78368dbf16f227137da67a9ac7a8cca"
     },
     {
+      "path": "proofs/LEMMA-093-complete-length88-four-block-obstruction.md",
+      "sha256": "fbf63c40fa8447a5f32d34e210a55b08ae8ec1725ca16afbafa97f681c889533"
+    },
+    {
+      "path": "proofs/LEMMA-094-complete-length96-four-block-obstruction.md",
+      "sha256": "f40cceca90e314d1df2e6c71e2f3a2cbecb6b1de595ecc366e3cbfd361608322"
+    },
+    {
+      "path": "proofs/LEMMA-095-first-length100-quintet-repair.md",
+      "sha256": "91b743a26b770bee06a2c6b8c9b802693fe2418d4770c1c48ade377de1f6cfba"
+    },
+    {
       "path": "README.md",
-      "sha256": "f46bc0bf715ec96e9f283f19a64af02c7a41bf4b5d320c6fe47efea6054c7888"
+      "sha256": "2899f7f14043aa313547c7db151f2dff32edcf791f4a3fcb08298ed8b80fc461"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1168,7 +1200,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "719e33f8ae53438e5e69780ef6f0c3df37c667cf44fd0fe2815cdbeaf139b962"
+      "sha256": "70ce39a50fafc9efbb3844895058b4f985bcbd78ea310acae2f629837967f113"
     },
     {
       "path": "verification/covering_basis.py",
@@ -1212,7 +1244,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "ed77f7c79dbf92d4be5000e193a0df26789aa2e18f6fdf1be9fbbbf416d32018"
+      "sha256": "fdb3555288dfc8a7ba486c451614604964bdf3fb9bd50aad3829ff37626d9894"
     },
     {
       "path": "verification/test_trace_accounting.py",

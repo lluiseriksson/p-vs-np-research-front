@@ -1492,3 +1492,33 @@ one six-one long option; signed width-five matching; unrestricted later
 non-uniform circuits; no randomness, advice, oracle, promise, distribution,
 or algebraic computation. Any repair must use length at least 88. GATE-004AF
 and P versus NP remain open.
+
+## NG-075 — some length-at-most-88 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+The complete symbolic local audit finds 111 failures across 640,000 types.
+LEMMA-093 independently checks one by literal enumeration of all 1,048,575
+identifiers: mask 16 is absent on offsets `{0,8,16,21,22}`. Twenty-four-spaced
+translations leave a linear common signed width-five packing.
+
+Model: every standard neutral block of length at most 88; four-block options;
+one six-one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness, advice, oracle, promise, distribution,
+or algebraic computation. Longer blocks remain open. P versus NP is unaffected.
+
+## NG-076 — some length-at-most-96 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+The exact LEMMA-087 symbolic oracle shows that the LEMMA-093 mask-16
+obstruction survives the complete length-92 and length-96 alphabets. LEMMA-094
+translates offsets `{0,8,16,21,22}` by twenty-four to retain a linear common
+signed width-five packing.
+
+Model: every standard neutral block of length at most 96, equivalently every
+identifier through 4,194,303; four-block options; one six-one long option;
+unrestricted later non-uniform circuits; no randomness, advice, oracle,
+promise, distribution, or algebraic computation. Identifier 4,210,754 repairs
+the representative at length 100, so the full gate remains open. P versus NP
+is unaffected.

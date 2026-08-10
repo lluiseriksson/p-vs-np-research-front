@@ -65,6 +65,12 @@ LEMMA-092 supplies that first local repair explicitly with identifier 526,344.
 The complete length-88 type audit is the next operational gate; no global
 coverage is inferred from the repaired representative.
 
+LEMMA-093's complete length-88 audit retains 111 failures and an
+`N/24-O(1)` packing. LEMMA-094 then observes that the same translated
+obstruction survives the exact complete alphabets through lengths 92 and 96.
+Thus all length-at-most-96 specializations are `NO-GO`. LEMMA-095 gives a
+length-100 local repair; the complete length-100 audit is next.
+
 ## Model card
 
 | Field | Value |

@@ -3808,6 +3808,47 @@
       "circuit_size": "No lower bound; one missing mask repaired", "circuit_depth": "Fixed finite encoding depth; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Exact finite witness, reusable by four-aligned translation", "case_regime": "Local repair lemma; not universality, circuit, or terminal progress",
       "evidence": "proofs/LEMMA-092-first-length88-quintet-repair.md; verification/test_sat_encoding.py; artifacts/cycle-082-length88-local-repair.md"
+    },
+    {
+      "id": "LEMMA093", "label": "PROVED",
+      "statement": "The complete identifier-1-through-1048575 alphabet omits 11110 on a stable quintuple under four-block unions, leaving N/24-O(1) common signed width-five clauses.",
+      "computational_model": "Complete four-block neutral alphabet, symbolic and literal interval DPs, one long option, signed width-five clauses, and matching",
+      "uniformity": "Uniform complete identifier-1-through-1048575 alphabet and translations; no circuit selected", "circuit_size": "No lower bound; common signed width-five packing N/24-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Complete bounded-length witness obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-093-complete-length88-four-block-obstruction.md; verification/quintet_type_audit.py; verification/symbolic_identifier_audit.py; verification/quartet_type_audit.py; verification/test_sat_encoding.py; artifacts/cycle-083-symbolic-length88-audit.md"
+    },
+    {
+      "id": "GATE004AF-LENGTH88-ONLY", "label": "NO-GO",
+      "statement": "Even the complete identifier-1-through-1048575 alphabet cannot yield four-block width-five sparsity because it retains a linear packing.",
+      "computational_model": "Complete four-block neutral contexts and signed width-five matching", "uniformity": "Uniform complete length-at-most-88 alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-length88-only.md; proofs/LEMMA-093-complete-length88-four-block-obstruction.md; docs/no-go-ledger.md NG-075"
+    },
+    {
+      "id": "LEMMA094", "label": "PROVED",
+      "statement": "The exact complete identifier alphabet through length 96 omits 11110 on a stable quintuple, leaving N/24-O(1) common signed width-five clauses.",
+      "computational_model": "Complete symbolic four-block neutral alphabet, one long option, signed width-five clauses, and matching", "uniformity": "Uniform complete identifier-1-through-4194303 alphabet and translations; no circuit selected",
+      "circuit_size": "No lower bound; common signed width-five packing N/24-O(1) per slot", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Exact complete bounded-length witness obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-094-complete-length96-four-block-obstruction.md; verification/symbolic_identifier_audit.py; verification/test_sat_encoding.py; artifacts/cycle-084-symbolic-length96-boundary.md"
+    },
+    {
+      "id": "GATE004AF-LENGTH96-ONLY", "label": "NO-GO",
+      "statement": "Even the complete identifier-1-through-4194303 alphabet cannot yield four-block width-five sparsity because it retains a linear packing.",
+      "computational_model": "Complete four-block neutral contexts and signed width-five matching", "uniformity": "Uniform complete length-at-most-96 alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-length96-only.md; proofs/LEMMA-094-complete-length96-four-block-obstruction.md; docs/no-go-ledger.md NG-076"
+    },
+    {
+      "id": "LEMMA095", "label": "PROVED",
+      "statement": "The length-100 neutral block 01 T_4210754 aligned at start 72 realizes mask 16 on the shifted boundary quintuple.",
+      "computational_model": "Exact SAT-gamma neutral block and five-coordinate incidence", "uniformity": "One explicit uniform identifier and aligned placement; no circuit selected",
+      "circuit_size": "No lower bound; one missing mask repaired", "circuit_depth": "Fixed finite encoding depth; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Exact finite witness, reusable by four-aligned translation", "case_regime": "Local repair lemma; not universality, circuit, or terminal progress",
+      "evidence": "proofs/LEMMA-095-first-length100-quintet-repair.md; verification/test_sat_encoding.py; artifacts/cycle-085-length100-local-repair.md"
     }
   ]
 }
