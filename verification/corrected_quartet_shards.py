@@ -11,6 +11,7 @@ from typing import Iterable
 
 from quartet_type_audit import LENGTH68_REPAIR_IDENTIFIERS
 from quartet_type_audit_fast import QuartetAuditor
+from phase_gap_reduction import phase_gap_caps, reduced_type_counts
 
 
 SCHEMA_VERSION = 1
@@ -20,7 +21,7 @@ FIRST_FAILURE_LIMIT = 10
 @dataclass(frozen=True)
 class AuditConfig:
     bound: int
-    gap_cap: int
+    phase_gap_caps: tuple[int, ...]
     representative_length: int
     max_blocks: int
     identifiers: tuple[int, ...]
@@ -28,7 +29,7 @@ class AuditConfig:
 
 PRODUCTION_CONFIG = AuditConfig(
     bound=68,
-    gap_cap=139,
+    phase_gap_caps=phase_gap_caps(LENGTH68_REPAIR_IDENTIFIERS),
     representative_length=600,
     max_blocks=3,
     identifiers=LENGTH68_REPAIR_IDENTIFIERS,
@@ -63,10 +64,15 @@ def run_shard(
     """Audit one half-open first-gap shard and return a sealed JSON object."""
     if residue not in range(4):
         raise ValueError("residue must be 0, 1, 2, or 3")
-    if not 1 <= gap_1_start < gap_1_end <= config.gap_cap + 1:
+    if (
+        len(config.phase_gap_caps) != 4
+        or any(cap < 1 for cap in config.phase_gap_caps)
+    ):
+        raise ValueError("phase caps must contain four positive integers")
+    if not 1 <= gap_1_start < gap_1_end <= config.phase_gap_caps[residue] + 1:
         raise ValueError("invalid half-open first-gap interval")
     minimum_length = (
-        config.bound + 3 + 3 * config.gap_cap + config.bound
+        config.bound + 3 + 3 * max(config.phase_gap_caps) + config.bound
     )
     if config.representative_length <= minimum_length:
         raise ValueError("representative length lacks a strict right margin")
@@ -77,8 +83,10 @@ def run_shard(
     failure_count = 0
     checked = 0
     for gap_1 in range(gap_1_start, gap_1_end):
-        for gap_2 in range(1, config.gap_cap + 1):
-            for gap_3 in range(1, config.gap_cap + 1):
+        residue_1 = (residue + gap_1) % 4
+        for gap_2 in range(1, config.phase_gap_caps[residue_1] + 1):
+            residue_2 = (residue_1 + gap_2) % 4
+            for gap_3 in range(1, config.phase_gap_caps[residue_2] + 1):
                 quartet = (
                     first,
                     first + gap_1,
@@ -105,7 +113,7 @@ def run_shard(
         "engine": "QuartetAuditor.reached_masks_positions",
         "config": {
             "bound": config.bound,
-            "gap_cap": config.gap_cap,
+            "phase_gap_caps": list(config.phase_gap_caps),
             "representative_length": config.representative_length,
             "max_blocks": config.max_blocks,
             "identifier_count": len(config.identifiers),
@@ -131,7 +139,7 @@ def merge_shards(
     """Validate exact domain coverage and merge sealed shard summaries."""
     expected_config = {
         "bound": config.bound,
-        "gap_cap": config.gap_cap,
+        "phase_gap_caps": list(config.phase_gap_caps),
         "representative_length": config.representative_length,
         "max_blocks": config.max_blocks,
         "identifier_count": len(config.identifiers),
@@ -162,10 +170,15 @@ def merge_shards(
             or residue not in range(4)
             or not isinstance(start, int)
             or not isinstance(end, int)
-            or not 1 <= start < end <= config.gap_cap + 1
+            or not 1 <= start < end <= config.phase_gap_caps[residue] + 1
         ):
             raise ValueError("invalid shard interval")
-        expected_checked = (end - start) * config.gap_cap**2
+        expected_checked = 0
+        for gap_1 in range(start, end):
+            residue_1 = (residue + gap_1) % 4
+            for gap_2 in range(1, config.phase_gap_caps[residue_1] + 1):
+                residue_2 = (residue_1 + gap_2) % 4
+                expected_checked += config.phase_gap_caps[residue_2]
         if shard.get("checked") != expected_checked:
             raise ValueError("shard checked-count mismatch")
         failure_count = shard.get("failure_count")
@@ -198,10 +211,13 @@ def merge_shards(
             gaps = tuple(
                 quartet[index + 1] - quartet[index] for index in range(3)
             )
+            residue_1 = (residue + gaps[0]) % 4
+            residue_2 = (residue_1 + gaps[1]) % 4
             if (
                 quartet[0] != config.bound + residue
                 or not start <= gaps[0] < end
-                or any(not 1 <= gap <= config.gap_cap for gap in gaps)
+                or not 1 <= gaps[1] <= config.phase_gap_caps[residue_1]
+                or not 1 <= gaps[2] <= config.phase_gap_caps[residue_2]
             ):
                 raise ValueError("counterexample lies outside its shard")
             if counterexample_auditor is None:
@@ -230,10 +246,10 @@ def merge_shards(
                 kind = "overlap" if start < cursor else "gap"
                 raise ValueError(f"residue {residue} has shard {kind}")
             cursor = end
-        if cursor != config.gap_cap + 1:
+        if cursor != config.phase_gap_caps[residue] + 1:
             raise ValueError(f"residue {residue} has incomplete coverage")
 
-    expected_total = 4 * config.gap_cap**3
+    expected_total = sum(reduced_type_counts(config.phase_gap_caps))
     if total_checked != expected_total:
         raise ValueError("merged checked count does not equal full domain")
     return {

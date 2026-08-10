@@ -1580,9 +1580,10 @@ counterexample: mask 3 is reachable on coordinates `(8,23)` by adjacent
 length-eight blocks but is unreachable after reducing the congruent gap from
 15 to 11 because the two forced placements overlap.
 
-LEMMA-102 proves the safe geometry-only threshold `2B`. Thus the prior
-`4*71^3` LEMMA-075 audit covers a strict subdomain of the corrected
-`4*139^3` domain. LEMMA-075 and GATE-004AD are `EXPLORATORY` pending that
-extension. The corrected LEMMA-071 domain is small enough to audit and passes
+LEMMA-102 proves the safe geometry-only threshold `2B`; LEMMA-103 then derives
+the smaller exact 9,515,749-type phase domain for the literal alphabet. Thus
+the prior `4*71^3` LEMMA-075 audit covers a strict subdomain. LEMMA-075 and
+GATE-004AD are `EXPLORATORY` pending that extension. The corrected LEMMA-071
+domain is small enough to audit and passes
 all 22,500 types, so GATE-004AB remains `PROVED`. No circuit or terminal claim
 is affected positively; P versus NP remains open.

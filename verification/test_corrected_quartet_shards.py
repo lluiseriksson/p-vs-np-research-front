@@ -15,7 +15,7 @@ from quartet_type_audit import LENGTH68_REPAIR_IDENTIFIERS
 
 TINY = AuditConfig(
     bound=68,
-    gap_cap=3,
+    phase_gap_caps=(3, 3, 3, 3),
     representative_length=160,
     max_blocks=3,
     identifiers=LENGTH68_REPAIR_IDENTIFIERS,

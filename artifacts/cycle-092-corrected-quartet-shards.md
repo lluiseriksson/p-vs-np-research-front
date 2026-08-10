@@ -19,3 +19,7 @@ No production shard was run on Windows. GATE-004AD-CORRECTED-FULL-AUDIT
 requires 556 external shards of 19,321 types each. Zero merged failures would
 repair the finite premise of LEMMA-075; one failure would be an exact
 counterexample. Neither outcome is claimed here.
+
+Cycle 093 supersedes this uniform 139-gap production partition by a proved
+phase-sensitive 9,515,749-type partition. The Cycle 092 contract remains a
+safe historical design, not the current smallest domain.

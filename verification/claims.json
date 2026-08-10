@@ -3961,16 +3961,32 @@
       "statement": "The corrected quartet shard contract seals production parameters and results and accepts only exact nonoverlapping coverage of every residue and first-gap interval.",
       "computational_model": "Deterministic exact quartet auditor, sealed JSON shards, and fail-closed domain merger", "uniformity": "Uniform fixed production configuration and deterministic partition; no circuit selected",
       "circuit_size": "No lower bound; verification infrastructure only", "circuit_depth": "Irrelevant to the shard contract", "fan_in": "Underlying encoded contexts use AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and SHA-256 artifact sealing",
-      "asymptotic_quantifiers": "Exact production domain of four residues and three gaps in 1 through 139; merger coverage checked for every shard interval", "case_regime": "Verification infrastructure; production mathematical result not executed or inferred",
-      "evidence": "verification/corrected_quartet_shards.py; verification/test_corrected_quartet_shards.py; artifacts/cycle-092-corrected-quartet-shards.md"
+      "asymptotic_quantifiers": "Exact initial production domain of four residues and three gaps in 1 through 139; merger coverage checked for every shard interval", "case_regime": "Historical verification infrastructure superseded by the phase-sensitive contract; production mathematical result not executed or inferred",
+      "evidence": "artifacts/cycle-092-corrected-quartet-shards.md; verification/test_corrected_quartet_shards.py"
     },
     {
       "id": "GATE004AD-CORRECTED-FULL-AUDIT", "label": "EXPLORATORY",
-      "statement": "The 92-identifier alphabet realizes every ordinary nonzero quartet mask on all 10,742,476 safely reduced types.",
+      "statement": "The 92-identifier alphabet realizes every ordinary nonzero quartet mask on all 9,515,749 phase-reduced types.",
       "computational_model": "Exact three-block SAT-gamma neutral contexts and four-coordinate zero-mask incidence", "uniformity": "Uniform fixed 92-identifier alphabet, placements, shard partition, and parameters; no circuit selected",
       "circuit_size": "No lower bound; target 142s common-clause packing bound downstream", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
-      "asymptotic_quantifiers": "Exactly four residues and three gaps in 1 through 139; LEMMA-102 supplies the all-interior reduction if zero failures are established", "case_regime": "Falsifiable finite witness-construction gate; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AD-corrected-full-audit.md; verification/corrected_quartet_shards.py; artifacts/cycle-092-corrected-quartet-shards.md"
+      "asymptotic_quantifiers": "Exactly four residues and three phase-capped gaps; LEMMA-103 supplies the all-interior reduction if zero failures are established", "case_regime": "Falsifiable finite witness-construction gate; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-corrected-full-audit.md; verification/corrected_quartet_shards.py; artifacts/cycle-093-phase-sensitive-gap-reduction.md"
+    },
+    {
+      "id": "LEMMA103", "label": "PROVED",
+      "statement": "Exact zero overhangs for the 92-identifier alphabet yield safe phase gap caps 135,134,133,132 and reduce the full quartet domain to 9,515,749 types.",
+      "computational_model": "Exact four-aligned length-at-most-68 SAT-gamma neutral blocks, nonoverlap, and selected-coordinate zero masks", "uniformity": "Uniform fixed 92-identifier alphabet and deterministic phase reduction; no circuit selected",
+      "circuit_size": "No lower bound; finite-domain reduction only", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation modulo four",
+      "asymptotic_quantifiers": "Every selected quartet with adequate slot margins and every union of at most three nonoverlapping blocks from the fixed alphabet", "case_regime": "Exact SAT-specific finite-reduction theorem; not universality, a circuit lower bound, or terminal progress",
+      "evidence": "proofs/LEMMA-103-phase-sensitive-gap-reduction.md; verification/phase_gap_reduction.py; verification/test_phase_gap_reduction.py; artifacts/cycle-093-phase-sensitive-gap-reduction.md"
+    },
+    {
+      "id": "INFRA093", "label": "PROVED",
+      "statement": "The phase-sensitive shard contract derives the literal-block caps, seals exact ragged-domain coverage, and independently reproduces any reported counterexample.",
+      "computational_model": "Deterministic exact quartet auditor, phase-sensitive sealed JSON shards, and fail-closed merger", "uniformity": "Uniform fixed production configuration and deterministic ragged partition; no circuit selected",
+      "circuit_size": "No lower bound; verification infrastructure only", "circuit_depth": "Irrelevant to the shard contract", "fan_in": "Underlying encoded contexts use AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and SHA-256 artifact sealing",
+      "asymptotic_quantifiers": "Exact 9,515,749-type phase-reduced domain and every shard interval in its 534-shard one-gap partition", "case_regime": "Verification infrastructure; production mathematical result not executed or inferred",
+      "evidence": "verification/phase_gap_reduction.py; verification/corrected_quartet_shards.py; verification/test_phase_gap_reduction.py; verification/test_corrected_quartet_shards.py; artifacts/cycle-093-phase-sensitive-gap-reduction.md"
     }
   ]
 }

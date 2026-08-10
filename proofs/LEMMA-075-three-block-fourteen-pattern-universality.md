@@ -22,8 +22,10 @@ domain with gaps through 139. The existing verifier checked only
 
 `4 * 71^3 = 1,431,644`
 
-types. The corrected geometry-only domain has
-`4*139^3=10,742,476` types and has not been exhaustively audited here.
+types. LEMMA-102 first gives the geometry-only `4*139^3` domain; LEMMA-103
+uses the literal alphabet's exact zero overhangs to reduce it safely to
+9,515,749 phase-dependent types. That corrected domain has not been
+exhaustively audited here.
 
 `verification/quartet_type_audit_fast.py` exhaustively checks all four residue
 partitions and returns zero failures. It represents placements by exact

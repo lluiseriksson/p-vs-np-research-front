@@ -424,7 +424,11 @@
     },
     {
       "path": "artifacts/cycle-092-corrected-quartet-shards.md",
-      "sha256": "9356d0806e453c8d502609d05325e775e4ffe4460df60592952f998833e767c4"
+      "sha256": "c9ce2260be5f36c7548a80c0769f475d8b8c397f1f930d7f52c63ba550d00165"
+    },
+    {
+      "path": "artifacts/cycle-093-phase-sensitive-gap-reduction.md",
+      "sha256": "f5ed5c3c8da2c5c3d203213c81739be00a2246b2ca0a486843ab0e150f169c63"
     },
     {
       "path": "artifacts/literal-subcube-search-31.json",
@@ -452,7 +456,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "f7845f48fdb8bfa5cfe28d491cf8c5108ab77eb671661d14012e9641d95a06be"
+      "sha256": "e9d89275bca7f4fd7c72acecb2663ef6bc992a10ed65e4862784d13ffc4a7e01"
     },
     {
       "path": "docs/problem-statement.md",
@@ -460,7 +464,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "018afaf584b1c243f799438d4216076c1fb4e772b3b3f8d386611340f3d2aea3"
+      "sha256": "3ffdc447e8886415dbf394c3ab66e77849ba123f3bf0a73a980e5cadfd9362b6"
     },
     {
       "path": "docs/result-labels.md",
@@ -556,11 +560,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "efad12efa4b6032e6f1f7d22cbcca8bc1917f1114abcd5a345a8371c8d95eb93"
+      "sha256": "ab1dd915c9cb969a3882ed428c5a271b20234658069a86df68c625a76b46182e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "7d4068d06bd055767fceca00dface88681fcc82573988c4c2979beb7843974b5"
+      "sha256": "9b5ee3887f1c3f659e0391e9964fd65bf9a782fae2bdd7d3a5330af686991ab3"
     },
     {
       "path": "experiments/README.md",
@@ -616,7 +620,7 @@
     },
     {
       "path": "proofs/GATE-004AD-corrected-full-audit.md",
-      "sha256": "2563ed114fcfee6646554c32c8decfd95252dcd67878bd2f7b4e58bec926474f"
+      "sha256": "06410722113e1e9f0204511b0adf158960dabe8292c867a74a8b16adab90fc0c"
     },
     {
       "path": "proofs/GATE-004AD-identifier68-only.md",
@@ -1164,7 +1168,7 @@
     },
     {
       "path": "proofs/LEMMA-075-three-block-fourteen-pattern-universality.md",
-      "sha256": "c36142dbdea5edc761b60528df20d9b36a320fc51042c743cd9b04a682c0a276"
+      "sha256": "c47bede51dd029d58b25589def566561028a30cf1548f110b58d45a9cd054966"
     },
     {
       "path": "proofs/LEMMA-076-three-block-one-exception-retains-width-five.md",
@@ -1275,8 +1279,12 @@
       "sha256": "4f43eb5bae186c97e925ac2ef5d7696edd6bd7af190ccd6d01dff0bbf2dd4726"
     },
     {
+      "path": "proofs/LEMMA-103-phase-sensitive-gap-reduction.md",
+      "sha256": "e6e7bdd1a2ea355b09a74c9900a1870af51dabe3e1b7e72579721d562bbdb9e8"
+    },
+    {
       "path": "README.md",
-      "sha256": "12bae08b14b6c7217e920a48efde30f793eda4cae17cf0a535a46f6c50a5ef14"
+      "sha256": "f686947a6b66cc0442eb383fb722227bc7407efc83e705af0ff78f856939af1a"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1288,11 +1296,11 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "fa9d87b4f7227cc4af262ec16ad2940741c9039332a05d063fdf4d69ec48eb41"
+      "sha256": "b29b3fc6f8b8d484203be17331422a4d811f261d09aed73590038c4fe549632f"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
-      "sha256": "f061b8c8d82280572e6e80a279874d668a706df6f4d25a85c3e133c56114aa6a"
+      "sha256": "38ccd11eb2e2eff26585b3c410f23966b54be2cddd2513e64de79174610e9fab"
     },
     {
       "path": "verification/covering_basis.py",
@@ -1305,6 +1313,10 @@
     {
       "path": "verification/generate_manifest.py",
       "sha256": "d15b059b86ceaace7a04937755943c13ac9610f880212c1d5132e957884a7c54"
+    },
+    {
+      "path": "verification/phase_gap_reduction.py",
+      "sha256": "f96ea8afba753eb38ba9e57f1ee9fd72aeeeedcdc6d0e2323e0f94882ff6526b"
     },
     {
       "path": "verification/quartet_type_audit.py",
@@ -1332,7 +1344,7 @@
     },
     {
       "path": "verification/test_corrected_quartet_shards.py",
-      "sha256": "9c45243188cf5853fe73a58054ce63c1a2eeacf778031caa8950be2cc14ef975"
+      "sha256": "94c5a0dbc3e7580b633101cc6231b6a3cbbf987fd2a2444432e064e5e72dc42f"
     },
     {
       "path": "verification/test_expanded_context_incidence.py",
@@ -1345,6 +1357,10 @@
     {
       "path": "verification/test_gap_reduction.py",
       "sha256": "287b17a0168ef79983948dd725a4c2c29869fc9b2fff54ccc26fe195cc6b48ac"
+    },
+    {
+      "path": "verification/test_phase_gap_reduction.py",
+      "sha256": "0ec970a8df5d0749d3337d8873e14190884feb7015b7bc0ad1ac668bad02ec88"
     },
     {
       "path": "verification/test_sat_encoding.py",
