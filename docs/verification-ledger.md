@@ -74,6 +74,10 @@ truth. Each row has exactly one label.
 | ENC-008 | PROVED | Every identifier bit-length block supplies exponentially many equal-length conditioned SAT pairs | `docs/sat-encoding.md`; reference test | Projection supply only |
 | LEMMA-014 | PROVED | An `n^delta` gain per `O(log n)` length loss yields `Omega(n^(1+delta)/log n)` size | `proofs/LEMMA-014-logarithmic-step-recurrence.md` | Closes the logarithmic-step summation |
 | GATE-004H | EXPLORATORY | Choose one identifier among polynomially many whose joint conditioned quotient has `B n^delta` net loss | `proofs/GATE-004H-many-identifier-conditioned-quotient.md` | Active smallest brick; sufficient for GATE-004 |
+| LEMMA-015 | PROVED | Identifier-by-parent-label incidences sum exactly to the aggregate joint-quotient improvement | `proofs/LEMMA-015-identifier-incidence-averaging.md` | Exact averaging reduction |
+| LEMMA-016 | PROVED | Arbitrarily many distinct paired prefixes can retain one shared core with zero quotient loss | `proofs/LEMMA-016-many-prefix-shared-core.md` | Generic multiplicity obstruction |
+| GATE-004H-CANDIDATE-COUNT | NO-GO | Candidate count and OR reconstruction alone do not imply a favorable quotient column | LEMMA-016; NG-020 | SAT-specific signed surplus is required |
+| GATE-004I | EXPLORATORY | Prove polynomial average signed quotient loss across an identifier block | `proofs/GATE-004I-aggregate-identifier-surplus.md` | Active smallest brick; sufficient for GATE-004H |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

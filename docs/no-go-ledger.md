@@ -379,3 +379,22 @@ two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
 NOT; no randomness, advice, oracle, field, promise, or distribution. The no-go
 does not refute a SAT-specific structural injection from split labels to a
 larger set of disappeared labels.
+
+## NG-020 — candidate multiplicity as quotient loss
+
+**Label: NO-GO**
+
+Scope: infer a positive, superconstant, or polynomial joint-quotient gap from
+the existence of polynomially many distinct equal-length restriction pairs
+whose two outputs OR back to the parent function.
+
+Failure: LEMMA-016 takes a parent function independent of all designated
+prefix inputs. Arbitrarily many distinct prefix pairs then retain the same
+hard core, reconstruct it by OR, and have zero parent-to-joint gap for every
+pair. LEMMA-015 shows that adding columns only helps after a positive signed
+incidence total has been proved; it does not create that total.
+
+Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
+unbounded depth; fixed complete Boolean basis; no randomness, advice, oracle,
+field, promise, or distribution. SAT-gamma does depend on its prefixes, so the
+no-go leaves open a quantitative SAT-specific aggregate surplus theorem.

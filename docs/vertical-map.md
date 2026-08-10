@@ -26,9 +26,12 @@ Alternative active route:
   <- GATE-004G (active parent): joint conditioned-SAT quotient
      + ENC-007 (proved conditioned union)
      + LEMMA-002 with beta=0 (proved recurrence)
-  <- GATE-004H (active smallest brick): choose among many identifiers
+  <- GATE-004H (active parent): choose among many identifiers
      + ENC-008 (proved equal-length pair supply)
      + LEMMA-014 (proved logarithmic-step recurrence)
+  <- GATE-004I (active smallest brick): aggregate signed identifier surplus
+     + LEMMA-015 (proved incidence averaging)
+     - GATE-004H-CANDIDATE-COUNT (no-go)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -216,7 +219,7 @@ residuals can never create the negative split term, but raw sensitivity does
 not imply disappearance; `GATE-004G-SENSITIVITY — NO-GO` records that generic
 selector obstruction.
 
-## Smallest active brick: GATE-004H
+## Active parent: GATE-004H
 
 ENC-008 generalizes conditioning to every identifier. All identifiers with
 binary length `ell` have prefix length `4ell+10`, so choosing
@@ -229,6 +232,20 @@ LEMMA-014 proves that the resulting recurrence gives
 SAT lower bound. Candidate multiplicity alone receives no credit: the next
 audit must build a signed disappeared/split incidence matrix across identifiers
 and prove a positive column surplus.
+
+## Smallest active brick: GATE-004I
+
+LEMMA-015 supplies the exact incidence matrix. Its column sum is the parent
+size minus that identifier's joint quotient size, and its total sum is the sum
+of the row scores of the parent labels. A polynomial positive average would
+force the favorable GATE-004H column.
+
+LEMMA-016 shows why the number of columns is not evidence: a function can
+ignore every prefix and retain the same shared core in every pair, giving zero
+surplus throughout the matrix. `GATE-004H-CANDIDATE-COUNT — NO-GO` therefore
+blocks pure counting. GATE-004I asks for the missing SAT-specific row theorem:
+aggregate disappearance must exceed aggregate splitting by
+`|J_n|(B n^delta+1)`.
 
 ## Downstream amplification obligation: GATE-005
 

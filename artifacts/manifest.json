@@ -92,7 +92,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8d79f7ddcd3f33984b8f4254f8ee019e0b3087d8abc27724a03b6a848ccb68ca"
+      "sha256": "160ff64224ba007adfcf30d03785719043888554eb9b272beff831d5c7ade1a8"
     },
     {
       "path": "docs/problem-statement.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "d7807f8d9cbacbeffa24efaac7cf7796365db321fda92e4d5ebc9568bc81e1b7"
+      "sha256": "97b774fed8663fa76e83105183a0b9bf61b3419b6f87ec5838dac3dacbe98a3b"
     },
     {
       "path": "docs/result-labels.md",
@@ -180,11 +180,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "f0606e1e99eba5130a663ee48a4c77f4fd525ffdba6e5188a4d0a5952daad8a3"
+      "sha256": "d2be553a171e543981f7add091f3745f211c27e0eb113018c7b247057210ed08"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "4e876c25a271bfbc90cfc1220d66029e91139d0ad1f83bd21baf410621d19f03"
+      "sha256": "4cea2ab32722152a3a9c5b372f55f021571eca95ede8630a326a6ed1a7e2c263"
     },
     {
       "path": "experiments/README.md",
@@ -237,6 +237,10 @@
     {
       "path": "proofs/GATE-004H-many-identifier-conditioned-quotient.md",
       "sha256": "8c87d5eb4794a09c48eca7d169c25fd0b6db8855e2bc05f95c86d20ae0b8a139"
+    },
+    {
+      "path": "proofs/GATE-004I-aggregate-identifier-surplus.md",
+      "sha256": "fc2f0e0e521ada2e867656617c4de18e49a03d7ee9c01b994e5bef1e1b1bc782"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -299,8 +303,16 @@
       "sha256": "7564706f082b6b9f5f257badbd8ffb9c3dd60bf6bfca857f4d75793887610006"
     },
     {
+      "path": "proofs/LEMMA-015-identifier-incidence-averaging.md",
+      "sha256": "871f212631d6af10db188f9fa90d92e80d1ce23486045d78ca1b78c56c61f59e"
+    },
+    {
+      "path": "proofs/LEMMA-016-many-prefix-shared-core.md",
+      "sha256": "8521f768ae6a8ce122cfe66d9681f8e397636dbc3f8797cd748cd68971f5a9bb"
+    },
+    {
       "path": "README.md",
-      "sha256": "99249ec371c288c012c4767f8842fca048cd0a18e403a12d3649a220cfd273eb"
+      "sha256": "501a12a9bacc23c3cfd949cab3e18345e4288bacbaa8698587852afc35073a56"
     },
     {
       "path": "verification/audit.py",
@@ -308,7 +320,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "dfc791476322b3e81950f7c6958f266675a14cea2898602991f96c5da535598d"
+      "sha256": "fcab2da75efa538150f0adb58c5c7157c2e0eb62d0936717ae0709c39921381e"
     },
     {
       "path": "verification/generate_manifest.py",

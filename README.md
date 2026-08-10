@@ -138,13 +138,20 @@ identifier of a fixed bit length supplies an equal-size conditioned pair, so
 bound despite the logarithmic step. GATE-004H makes the required averaging
 theorem explicit; candidate count alone is not treated as evidence.
 
+The fifteenth cycle makes that warning exact. LEMMA-015 expresses the total
+quotient improvement as an identifier-by-parent-label signed incidence sum.
+LEMMA-016 constructs arbitrarily many equal-length candidate pairs with a
+single unchanged core and zero loss, so candidate multiplicity is formally
+`NO-GO`. GATE-004I is now the smallest active brick: prove a polynomial
+positive average using a SAT-specific disappeared-versus-split row theorem.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 52% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioned-prefix tests, exact quotient and per-parent surplus accounting, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 54% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioned-prefix tests, exact quotient, per-parent and cross-identifier incidence accounting, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The multi-identifier averaging gate is explicit and all preceding surrogate routes remain excluded; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | The SAT-specific aggregate-surplus obligation is explicit and pure candidate counting is excluded; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
