@@ -145,13 +145,20 @@ single unchanged core and zero loss, so candidate multiplicity is formally
 `NO-GO`. GATE-004I is now the smallest active brick: prove a polynomial
 positive average using a SAT-specific disappeared-versus-split row theorem.
 
+The sixteenth cycle tests whether essential dependence on every prefix bit can
+supply that theorem. It cannot generically: LEMMA-017 stores all such
+dependence in a parity-selector shell of `O(p)` gates while exponentially many
+pairs retain one shared core. At `p=O(log n)` the resulting overhead is only
+logarithmic. Prefix essentiality is therefore `NO-GO`; GATE-004I remains open
+and now explicitly requires distinct conditioned-SAT internal structure.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 54% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioned-prefix tests, exact quotient, per-parent and cross-identifier incidence accounting, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 55% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioned-prefix tests, exact quotient, per-parent and cross-identifier incidence accounting, selector-shell stress tests, logarithmic recurrence bridge, source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The SAT-specific aggregate-surplus obligation is explicit and pure candidate counting is excluded; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | The SAT-specific aggregate-surplus obligation is explicit and both pure counting and prefix essentiality are excluded; no new SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

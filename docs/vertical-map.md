@@ -243,9 +243,15 @@ force the favorable GATE-004H column.
 LEMMA-016 shows why the number of columns is not evidence: a function can
 ignore every prefix and retain the same shared core in every pair, giving zero
 surplus throughout the matrix. `GATE-004H-CANDIDATE-COUNT — NO-GO` therefore
-blocks pure counting. GATE-004I asks for the missing SAT-specific row theorem:
+blocks pure counting. Merely adding essential dependence does not repair it:
+LEMMA-017 confines essentiality in every prefix bit to an `O(log n)` parity
+shell while exponentially many conditioned pairs retain one core.
+`GATE-004I-PREFIX-ESSENTIALITY — NO-GO` records that quantitative failure.
+
+GATE-004I therefore still asks for the missing SAT-specific row theorem:
 aggregate disappearance must exceed aggregate splitting by
-`|J_n|(B n^delta+1)`.
+`|J_n|(B n^delta+1)`. The next attack must use a proved incompatibility among
+the distinct conditioned-SAT residual functions, not prefix sensitivity.
 
 ## Downstream amplification obligation: GATE-005
 

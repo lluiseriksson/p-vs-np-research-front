@@ -1139,6 +1139,40 @@
       "asymptotic_quantifiers": "Exists fixed c,B,delta>0; every sufficiently large n; every minimum circuit; sum over the full selected identifier bit-length block",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004I-aggregate-identifier-surplus.md"
+    },
+    {
+      "id": "LEMMA-017",
+      "label": "PROVED",
+      "statement": "Essential dependence on every prefix coordinate can be confined to a parity selector of O(p) gates while exponentially many prefix pairs retain one shared core.",
+      "computational_model": "Unrestricted acyclic single- and two-output Boolean circuits with complete designated-prefix restrictions",
+      "uniformity": "Fully non-uniform circuits and prefix-pair choice",
+      "circuit_size": "Parent-to-minimum-pair gap at most 4p-3",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every nonzero Boolean core G, every p at least two, and every R between one and 2^(p-2)",
+      "case_regime": "Worst-case exact total Boolean functions; method-specific counterexample",
+      "evidence": "proofs/LEMMA-017-essential-prefix-selector-shell.md"
+    },
+    {
+      "id": "GATE-004I-PREFIX-ESSENTIALITY",
+      "label": "NO-GO",
+      "statement": "Essential dependence on every prefix bit, many conditioned pairs, and OR reconstruction alone do not imply a polynomial aggregate surplus at logarithmic prefix length.",
+      "computational_model": "Minimum unrestricted single- and two-output circuits with parity-selected complete-prefix restrictions",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Generic parent-to-minimum-pair gap is at most 4p-3, hence O(log n) when p=O(log n)",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Arbitrarily large prefix length and exponentially many selected pairs for every nonzero shared core",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-017-essential-prefix-selector-shell.md; docs/no-go-ledger.md NG-021"
     }
   ]
 }

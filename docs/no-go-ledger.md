@@ -398,3 +398,23 @@ Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
 unbounded depth; fixed complete Boolean basis; no randomness, advice, oracle,
 field, promise, or distribution. SAT-gamma does depend on its prefixes, so the
 no-go leaves open a quantitative SAT-specific aggregate surplus theorem.
+
+## NG-021 — essential prefix dependence as polynomial aggregate surplus
+
+**Label: NO-GO**
+
+Scope: repair NG-020 by additionally requiring that the parent function depend
+essentially on every prefix coordinate, then infer a polynomial
+parent-to-conditioned-pair gap when the prefix length is logarithmic.
+
+Failure: LEMMA-017 places all essential prefix dependence in a parity selector
+of at most `4p-4` gates around an arbitrary nonzero core. Exponentially many
+odd-parity prefix pairs retain the identical core and OR back to it, while the
+function-level parent-to-minimum-pair gap is at most `4p-3`. For
+`p=O(log n)` this is only `O(log n)`, not `Omega(n^delta)`.
+
+Model: exact minimum gate count in unrestricted non-uniform single- and
+two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
+NOT; no randomness, advice, oracle, field, promise, or distribution. The
+result does not refute a theorem using the distinct internal structure of
+SAT's conditioned residuals.
