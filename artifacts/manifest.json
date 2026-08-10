@@ -312,7 +312,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "97c06f0c0472a24358268e8b2fdcb5cdd5ff8a55bfef4a44d9b8999ce00f6bd9"
+      "sha256": "da11fe46e98c4cc44ccbe9b92a506c0223daa1cb06b353cae7599ebd4351ab12"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -400,11 +400,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "19daabe61f38593f59a749e8967baa8c039bd029eacf3045df1ddb437fa4f73c"
+      "sha256": "cf5f5f43482a37091a272d6a61c13c33f080c9ae4f89bca56c4f410ddd731297"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "fc1f40f4828dacad6ab382300d69c7ef60aba0262303cdf2a96a4dc5aad845db"
+      "sha256": "fb3c83d36ebe2d501af3a38ce6d69b69124403d5696fb6ef082b7e165bafc0a3"
     },
     {
       "path": "experiments/README.md",
@@ -440,7 +440,7 @@
     },
     {
       "path": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md",
-      "sha256": "dcb665d94efae826a9db239ba2ff847f68f47358b59e063f983578e497f5d5f2"
+      "sha256": "b6a26a303b7c1bc08ce06f96024db4ee04248b34b34bcf9dbe889a1add73e8df"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -875,8 +875,12 @@
       "sha256": "09a085cd56224fd05b3b12497e4d34672c8c3dfa808e22fc1070a80b72497c03"
     },
     {
+      "path": "proofs/LEMMA-068-two-block-long-run-distant-completeness.md",
+      "sha256": "52dcb9127fccad90386de0be4bbc0ba273d1afb8845cee07f8f4d7945437281e"
+    },
+    {
       "path": "README.md",
-      "sha256": "94933e6dc6dcb112d621bdd537679de85fdc55e5e3436e0de70021d299725e4b"
+      "sha256": "f853cd85653fae780068db133ce769d4571346861a933dfb2f40e9b898927727"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -888,7 +892,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "36a5deed595c1ca4a91b018f6a763c1eccfa6f7657f1296340f563492bc79574"
+      "sha256": "6d8941687fc3cda0808331782aa1a8a9dbeca8628a2b7eb2489d5a6721754513"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -896,7 +900,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "2c211b0452b2e1335ba7fb1db81ed3baac4c43bf4efba7602ca8dda3d3f676bc"
+      "sha256": "1c4da9585ffd00c07a73f130b28f1b996241f4b5c538628e1ffd7bd248fc9203"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -912,7 +916,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "aa630025fc6aa5b016ab58a57386fd2ffd1380cc55531ce34ae7c8c755dc493b"
+      "sha256": "779848ccfd789192198cdcb243132354368d973644a570bc487165350807e6b4"
     },
     {
       "path": "verification/test_trace_accounting.py",

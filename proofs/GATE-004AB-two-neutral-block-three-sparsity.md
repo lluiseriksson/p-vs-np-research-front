@@ -40,6 +40,11 @@ and boundary type. Either prove all interior patterns occur and confine every
 common signed triple to constant boundary regions, or extract a new distant
 packing obstruction.
 
+LEMMA-068 completes the distant-partition case using only the ten ENC-022
+blocks: all but six canonical distant triples realize all eight patterns. The
+active subproblem is therefore a matching bound for local and intermediate-
+span triples, not the LEMMA-067 distant geometry.
+
 ## Model card
 
 | Field | Value |

@@ -3382,7 +3382,41 @@
       "field_or_algebraic_model": "Finite parser-state actions, Boolean pattern incidence, and matching only",
       "asymptotic_quantifiers": "Exists fixed L and c_3; every rho>L; every disjoint common signed clause family of width at most three; later all sufficiently large canonical parameters",
       "case_regime": "Worst-case exact witness-construction gate; not a circuit lower bound, promise statement, average-case statement, or terminal result",
-      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-067-one-bounded-block-plus-one-exception-retains-triples.md"
+      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-067-one-bounded-block-plus-one-exception-retains-triples.md; proofs/LEMMA-068-two-block-long-run-distant-completeness.md"
+    },
+    {
+      "id": "ENC032",
+      "label": "PROVED",
+      "statement": "One/two-block ENC-022 contexts, the all-one option, and A_rho realize all eight patterns on at least floor(4rho/3)-6 canonical distant triples.",
+      "computational_model": "Exact one/two-block neutral contexts, the tunable long option, and three-coordinate pattern incidence",
+      "uniformity": "Uniform fixed block alphabet, placements, distant partition, and parameters; no circuit selected",
+      "circuit_size": "No lower bound; full pattern coverage on at least floor(4rho/3)-6 distant triples",
+      "circuit_depth": "Fixed blocks bounded; tunable block may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded and circuit AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite Boolean pattern incidence only",
+      "asymptotic_quantifiers": "Every rho at least twenty-four; all but at most six triples in the stated partition",
+      "case_regime": "Worst-case exact partial witness theorem; not a general matching bound or circuit lower bound",
+      "evidence": "docs/sat-encoding.md ENC-032; proofs/LEMMA-068-two-block-long-run-distant-completeness.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA068",
+      "label": "PROVED",
+      "statement": "Two bounded neutral blocks realize every one- and two-zero pattern on canonical distant triples, while the six-one long option supplies 000 on all but at most six of them.",
+      "computational_model": "Exact one/two-block SAT-gamma neutral contexts, one tunable long option, three-coordinate pattern incidence, and disjoint triples",
+      "uniformity": "Uniform ten-block ENC-022 alphabet, placements, tunable option, and distant partition; no circuit selected",
+      "circuit_size": "No lower bound; at least floor(4rho/3)-6 distant triples realize all eight patterns",
+      "circuit_depth": "Fixed blocks have bounded depth; tunable option may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded AND/OR two and NOT one; later circuits use the same basis",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite Boolean pattern incidence only",
+      "asymptotic_quantifiers": "Every rho at least twenty-four; every triple in the explicit partition except at most six meeting an A_rho one bit",
+      "case_regime": "Worst-case exact witness-family theorem for one packing geometry; not a general matching bound, circuit lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-068-two-block-long-run-distant-completeness.md; verification/test_sat_encoding.py"
     }
   ]
 }

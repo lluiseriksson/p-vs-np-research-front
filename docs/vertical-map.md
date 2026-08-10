@@ -66,6 +66,7 @@ Adjacent collision-aware active branch:
      + ENC-029 (proved linear common mixed-implication packing)
      + ENC-030 (proved implication-sparse translated-long-block slots)
      + ENC-031 (proved linear aligned common signed-triple packing)
+     + ENC-032 (proved two-block full patterns on almost every distant triple)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -108,6 +109,7 @@ Adjacent collision-aware active branch:
      - LEMMA-067 (linear distant signed-triple packing)
   <- GATE-004AB (active smallest constructive brick): two-block neutral-alphabet
      sparsity for every disjoint common signed clause of width at most three
+     + LEMMA-068 (proved distant partition complete except at most six triples)
 
 Stronger dependent-region branch:
   GATE-004I

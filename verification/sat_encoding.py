@@ -546,6 +546,50 @@ def distant_outer_triples(
     )
 
 
+def two_block_long_run_complete_distant_triples(
+    zero_run: int,
+) -> tuple[tuple[int, int, int], ...]:
+    """Return distant triples realizing all eight patterns.
+
+    Witnesses use the all-one option, one/two-block ENC-022 contexts for the
+    six patterns with one or two zeroes, and ``A_zero_run`` for ``000``.
+    The separation is at least 32, so a selected bounded block cannot alter
+    the unused coordinate.
+    """
+    if zero_run < 24:
+        raise ValueError("zero_run must be at least twenty-four")
+    slot_length = 4 * zero_run
+    third = slot_length // 3
+    long_option = power_two_long_zero_neutral_block(zero_run)
+    complete = []
+    expected = {format(pattern, "03b") for pattern in range(8)}
+    for offset in range(third):
+        triple = (offset, offset + third, offset + 2 * third)
+        if "".join(long_option[position] for position in triple) != "000":
+            continue
+        patterns = {"111", "000"}
+        for first in range(3):
+            selected = (triple[first],)
+            context = pair_zero_neutral_padding(
+                "", slot_length, selected[0], selected[0]
+            )
+            if context is None:
+                raise AssertionError("missing one-zero context")
+            patterns.add("".join(context[position] for position in triple))
+        for first in range(3):
+            for second in range(first + 1, 3):
+                context = pair_zero_neutral_padding(
+                    "", slot_length, triple[first], triple[second]
+                )
+                if context is None:
+                    raise AssertionError("missing two-zero context")
+                patterns.add("".join(context[position] for position in triple))
+        if patterns != expected:
+            raise AssertionError("distant triple does not realize every pattern")
+        complete.append(triple)
+    return tuple(complete)
+
+
 def bounded_block_distant_groups(
     extra_length: int,
     block_count: int,

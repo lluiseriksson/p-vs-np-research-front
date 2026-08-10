@@ -550,6 +550,15 @@ group for every fixed alphabet. GATE-004AA is `NO-GO`. GATE-004AB is the new
 constructive brick and permits two independently translated neutral blocks
 per option, the first geometry not covered by this counting obstruction.
 
+The sixty-fifth cycle verifies that the two-block threshold genuinely removes
+the canonical distant obstruction. ENC-032 and LEMMA-068 use exact ENC-022
+contexts to realize `111`, all one-zero patterns, and all two-zero patterns on
+each distant triple. The six-one option `A_rho` supplies `000` on all but at
+most six disjoint triples. Hence at least `floor(4rho/3)-6` triples realize all
+eight patterns and support no common signed clause. GATE-004AB remains open
+because arbitrary local and intermediate-span triple matchings are not yet
+bounded.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

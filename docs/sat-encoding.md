@@ -1384,6 +1384,39 @@ unrestricted circuit pays for or preserves the candidate clauses.
 | Asymptotic quantifiers | Every `rho>=13,s>=1`; every aligned chunk and every product member |
 | Regime | Worst-case exact witness-family theorem; not a circuit lower bound or counterexample |
 
+## ENC-032 — two-block contexts complete almost every distant triple
+
+**Label: PROVED**
+
+For `rho>=24`, put `N=4rho`, `D=floor(N/3)`, and partition the first `3D`
+coordinates into the distant triples `(i,i+D,i+2D)`. Add the all-one option,
+every one/two-block ENC-022 context, and `A_rho`.
+
+LEMMA-068 proves that at least `D-6` triples realize all eight bit patterns.
+The all-one member supplies `111`; one bounded block supplies each one-zero
+pattern; two blocks supply each two-zero pattern; and `A_rho` supplies `000`
+unless the triple meets one of its six one bits. Thus the canonical distant
+signed-clause packing is eliminated up to six exceptions.
+
+Local and intermediate-span triples are not classified, so ENC-032 does not
+prove GATE-004AB.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact one/two-block neutral contexts, the tunable long option, and three-coordinate pattern incidence |
+| Uniform/non-uniform | Uniform fixed block alphabet, placements, distant partition, and parameters; no circuit selected |
+| Circuit size | No lower bound; full pattern coverage on at least `floor(4rho/3)-6` distant triples |
+| Circuit depth | Fixed blocks bounded; tunable block may have linear NOT depth; later circuits unrestricted |
+| Fan-in | Encoded and circuit AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Finite Boolean pattern incidence only |
+| Asymptotic quantifiers | Every `rho>=24`; all but at most six triples in the stated partition |
+| Regime | Worst-case exact partial witness theorem; not a general matching bound or circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

@@ -20,6 +20,7 @@ from sat_encoding import (
     contradiction,
     decode_gamma,
     distant_outer_triples,
+    two_block_long_run_complete_distant_triples,
     double_not_wrap,
     encode_and,
     encode_gamma,
@@ -735,6 +736,15 @@ class FormulaEncodingTests(unittest.TestCase):
         sample_stride = max(1, len(contexts) // 25)
         for padded in contexts[::sample_stride]:
             self.assertTrue(self.brute_sat(padded))
+
+    def test_two_blocks_plus_long_option_cover_distant_triple_patterns(self) -> None:
+        for zero_run in (24, 27, 32):
+            slot_length = 4 * zero_run
+            third = slot_length // 3
+            triples = two_block_long_run_complete_distant_triples(zero_run)
+            self.assertGreaterEqual(len(triples), third - 6)
+            used = [position for triple in triples for position in triple]
+            self.assertEqual(len(used), len(set(used)))
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
