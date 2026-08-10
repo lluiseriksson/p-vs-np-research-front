@@ -163,21 +163,23 @@ Adjacent collision-aware active branch:
                        + LEMMA-122 (dependency-cone Hall expansion through size five)
                        + LEMMA-123 (one cycle cannot save a NOT for any `W_m`)
                        + LEMMA-124 (a deficient sextet is exactly bicyclic with three NOTs)
-                       <- GATE-004AN (active sextet brick): exclude bicyclic three-NOT `W_6`
+                       + GATE-004AN (proved: no bicyclic three-NOT `W_6`)
                           - GATE-004AN-PATH-MULTIPLICITY-ONLY (no-go: six unfolded occurrences are feasible)
                           + LEMMA-125 (bicyclic cores are theta, figure-eight, or dumbbell)
                           + LEMMA-126 (figure-eight and dumbbell candidates are impossible)
-                          <- GATE-004AO (active theta brick): exclude theta-core three-NOT `W_6`
+                          + GATE-004AO (proved: no theta-core three-NOT `W_6`)
                              - GATE-004AO-ARTICULATION-ONLY (no-go: theta has no cycle-separating cut vertex)
                              + LEMMA-127 (theta split-excess budget is exactly two)
                              + LEMMA-128 (the single ternary-source orientation is impossible)
-                             <- GATE-004AP (active orientation brick): exclude two binary splits
+                             + GATE-004AP (proved: both binary-split orientations excluded)
                                 - GATE-004AP-SINGLE-BIT-ONLY (no-go: no proved common one-bit cut)
                                 + LEMMA-129 (two binary splits are parallel sources or nested)
                                 + LEMMA-130 (parallel sources are impossible)
-                                <- GATE-004AQ (active final theta orientation): exclude nested split
+                                + GATE-004AQ (proved: nested split excluded by source restriction)
                                    - GATE-004AQ-INDEPENDENT-TWO-BIT-ONLY (no-go: second state depends on first)
-                                   <- sequential cofactor/path-region theorem (next attackable brick)
+                       + LEMMA-131 (first nested source restriction leaves rank at most one)
+                       + LEMMA-132 (dependency-cone Hall expansion through size six)
+                       <- size-seven dependency-cone Hall (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

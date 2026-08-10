@@ -1833,8 +1833,9 @@ Model: every pruned non-uniform candidate for fixed `W_6` with 31 binary
 gates, three NOT gates, and cycle rank two; unrestricted depth; AND/OR fan-in
 two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
-model. Path-counting alone is closed, while GATE-004AN/AL/AK/AJ/AI/AH/AG/AE
-remain open.
+model. Path-counting alone is closed. GATE-004AN was later proved by
+core/orientation analysis; GATE-004AL beyond size six and
+GATE-004AK/AJ/AI/AH/AG/AE remain open.
 
 ## NG-092 — one-bit articulation factorization excludes the theta core
 
@@ -1854,8 +1855,9 @@ Model: every pruned non-uniform theta-core candidate for fixed `W_6` with 31
 binary gates and three NOT gates; unrestricted depth; AND/OR fan-in two and
 NOT fan-in one; undirected vertex connectivity and Boolean cofactors; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
-model. Articulation-only reuse is closed, while two-vertex GATE-004AO and
-GATE-004AN/AL/AK/AJ/AI/AH/AG/AE remain open.
+model. Articulation-only reuse is closed, while GATE-004AO/AN were later
+proved by orientation analysis; GATE-004AL beyond size six and the larger
+gates remain open.
 
 ## NG-093 — collapse the two theta splits to one intermediary bit
 
@@ -1876,8 +1878,9 @@ Model: every pruned non-uniform two-binary-split theta candidate for fixed
 `W_6` with 31 binary gates and three NOT gates; unrestricted depth; AND/OR
 fan-in two and NOT fan-in one; directed split topology and Boolean cofactors;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
-model. Single-bit collapse is closed, while two-bit/sequential GATE-004AP and
-GATE-004AO/AN/AL/AK/AJ/AI/AH/AG/AE remain open.
+model. Single-bit collapse is closed, while GATE-004AP/AO/AN were later
+proved by separate parallel/nested analysis; GATE-004AL beyond size six and
+the larger gates remain open.
 
 ## NG-094 — treat the nested theta state as an independent second bit
 
@@ -1898,4 +1901,5 @@ Model: every pruned non-uniform nested theta candidate for fixed `W_6` with
 and NOT fan-in one; sequential Boolean interfaces and directed path regions;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Independent-two-bit reuse is closed, while sequential GATE-004AQ and
-GATE-004AP/AO/AN/AL/AK/AJ/AI/AH/AG/AE remain open.
+GATE-004AP/AO/AN were later proved by first-source restriction; GATE-004AL
+beyond size six and GATE-004AK/AJ/AI/AH/AG/AE remain open.

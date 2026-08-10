@@ -13,8 +13,9 @@ can have more output paths than gates introduced between the splits. The
 parallel equality placing all NOTs in independent source trees does not carry
 over automatically.
 
-This is a method no-go only. It does not refute GATE-004AQ. A sequential
-cofactor theorem and region-specific path accounting are required.
+This is a method no-go only. GATE-004AQ was subsequently proved by fixing the
+first source bit and reducing the residual cycle rank; independent-bit reuse
+itself remains invalid.
 
 ## Model card
 

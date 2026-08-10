@@ -13,8 +13,8 @@ is absent. Treating either branch vertex as a one-bit cut without proving that
 all relevant input paths pass through it would silently discard one or more
 theta branches and is invalid.
 
-This is a topology-method no-go only. It does not refute GATE-004AO. A
-two-vertex or multi-branch interface theorem is required.
+This is a topology-method no-go only. GATE-004AO was subsequently proved by
+orientation-stratum analysis; articulation-only reuse remains invalid.
 
 ## Model card
 

@@ -893,11 +893,20 @@ place all six negative inputs in those trees. GATE-004AQ is the sole remaining
 nested orientation. Treating its sequential state as an independent second
 bit is `NO-GO`.
 
+The one-hundred-and-tenth cycle closes the nested orientation without assuming
+independent bits. LEMMA-131 fixes only the first source bit; deleting that
+degree-two source reduces the residual cycle rank to at most one. The uncut
+partition costs six NOTs in total, while the cut partition leaves `W_5` and
+costs five downstream, both contradicting three. This proves GATE-004AQ and,
+by the audited orientation/core cascade, GATE-004AP, GATE-004AO, and
+GATE-004AN. LEMMA-132 extends dependency-cone Hall expansion through subset
+size six. Size seven is now the smallest open local Hall brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–109 prove dependency-cone Hall through five indices and reduce the first open sextet to one nested theta orientation. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–110 prove dependency-cone Hall through six indices and expose size seven as the first open local case. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

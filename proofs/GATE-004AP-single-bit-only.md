@@ -13,8 +13,8 @@ Therefore invoking LEMMA-121 with a single intermediary bit would assume the
 factorization that must be proved. The correct interface has up to two source
 bits in the parallel case and a sequential state in the nested case.
 
-This is a method no-go only. It does not refute GATE-004AP. A two-bit cofactor
-classification or a sharper topology-dependent reduction is required.
+This is a method no-go only. GATE-004AP was subsequently proved by separating
+parallel and nested orientations; the common-one-bit shortcut remains invalid.
 
 ## Model card
 

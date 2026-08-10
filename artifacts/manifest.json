@@ -495,6 +495,10 @@
       "sha256": "4933f40269e3f22df48022863d9dda81980f4d7ff44e7a16669d503f95acad5e"
     },
     {
+      "path": "artifacts/cycle-110-nested-theta-exclusion.md",
+      "sha256": "8e441d03162cea44ace982eb6f4d286f02a4f4e96129f47235b6608b0d10e9ca"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -520,7 +524,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "6a288802c593cb46b2e8d4978119ad3820690118e8214bcbab14cf9d7bbd6789"
+      "sha256": "7a961fa2baa361bd8d994ff50b0768231668b27a78af54ee08720479a79985da"
     },
     {
       "path": "docs/problem-statement.md",
@@ -528,7 +532,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "785e36f501c1a2250a926622a99a2cef45cb859cf40ce44c54e9bda955499147"
+      "sha256": "f98735d64929e3f5d02e9ff3e238c805137343024491e54a7b9a63fdfbd6bc4b"
     },
     {
       "path": "docs/result-labels.md",
@@ -632,11 +636,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "cb21888fbecea3c715ab511753ade7d7a5151e825e9f9efecc406e0ea19ed744"
+      "sha256": "eb4c139a57f56ffe2b8c94cc7483bb1f16979df135d49c17535c66641d0dcde9"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "4a754b4fe7bcbfc6a8ca0369c56ecea960191617240012ab2090005791b6fd23"
+      "sha256": "3e0be68ae98ffcdff0b1969dd7caeaf1f1d09ff02522a122a7ebabb33f5b6061"
     },
     {
       "path": "experiments/README.md",
@@ -832,7 +836,7 @@
     },
     {
       "path": "proofs/GATE-004AL-dependency-cone-Hall.md",
-      "sha256": "3324623e6bb2197009db4bf21d0dc4745156aa64b29e4d0108a2624a353f8f25"
+      "sha256": "91ab2cd04d3879dba57f2062ba6703aedb0c7eca683cd8ad9555c90957bbb97b"
     },
     {
       "path": "proofs/GATE-004AL-LEMMA111-only.md",
@@ -848,35 +852,35 @@
     },
     {
       "path": "proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md",
-      "sha256": "fbf33fdc01fcbdc3b4d49046f733a63c86188594ee0039fe6392859d7d4b6389"
+      "sha256": "4f30a3002466172ca7f93f301ebe3420345559023095350363e58f565d7d4ebb"
     },
     {
       "path": "proofs/GATE-004AN-path-multiplicity-only.md",
-      "sha256": "c70066d4f77f635fb9bee5eae4484edea6ec0cb0e6dcf05be0fcebd81aca50b7"
+      "sha256": "8380d00bafa907e5dcf05072e74f947678e027c852bd6fdd6ceb86a86bd71e05"
     },
     {
       "path": "proofs/GATE-004AO-articulation-only.md",
-      "sha256": "e2ce158cc88ce6c089dea8e4bc07fd4ef74621280d2bf21055e3148deede31c3"
+      "sha256": "a2a30f1f625f919a18b174d5f52bdc485c067525b0a3d8c5c0d225d71b79565d"
     },
     {
       "path": "proofs/GATE-004AO-theta-three-NOT-exclusion.md",
-      "sha256": "33707785bcdbc2c61666960033da0acb1d45511a83aea397067c5fa7490d6e64"
+      "sha256": "783748dedad718fe2ed7714aa61d45a43ba2f3b8ae1ccfae1e5ee7e534b7042c"
     },
     {
       "path": "proofs/GATE-004AP-single-bit-only.md",
-      "sha256": "57319b78f625e4e5c65cfd5d1a726e27ebb59b0939be5156b243c43113ed24c1"
+      "sha256": "524879bb202dbb01a925b33aa496f53902eb9355c166be6d35512fff79a069fa"
     },
     {
       "path": "proofs/GATE-004AP-two-binary-split-theta-exclusion.md",
-      "sha256": "60045b90f157d97521c4b4b9ee8cc432d2e41d4c049d2211c43718a2bf44f11b"
+      "sha256": "2da6bd7acec5d5a5c1e996150b130cf38c9a7915b5ec4839f02a0d5c06e8c913"
     },
     {
       "path": "proofs/GATE-004AQ-independent-two-bit-only.md",
-      "sha256": "5b8605750824647e7dba80e4d8b11fab53de61cad691c41f10ade27ff058c4f0"
+      "sha256": "1227bf7e3c764c8eeab97828fea408ffa3c32be96ddf4bc74c37b6d24c4437b8"
     },
     {
       "path": "proofs/GATE-004AQ-nested-theta-exclusion.md",
-      "sha256": "22e85b68b45663c05a770ca5787ffd3b51cce2c01193115f1ed320587ca78e45"
+      "sha256": "49bbcbe5e5e4efe4bc325ba439b7950efaf3eb7d21ff6d763c75717e36c9eb0e"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1563,8 +1567,16 @@
       "sha256": "4ac7670452c8e48f7be233b220dfadffb93ea5280d7a77d46527fa74e44edc04"
     },
     {
+      "path": "proofs/LEMMA-131-nested-theta-source-reduction.md",
+      "sha256": "419a8c6f1210639c7261ba1453ed4a0c62fd388700059fb7e264115f2153e15c"
+    },
+    {
+      "path": "proofs/LEMMA-132-dependency-cone-Hall-through-six.md",
+      "sha256": "2bca0f80c6d84e795fc7add27d37d573eac4be4c439e6e5dcb02abe1671c37d3"
+    },
+    {
       "path": "README.md",
-      "sha256": "ec577ddbec2e6f07f58ccf35c3f7274c0325c34f76e16a7a75b9b8dee9137085"
+      "sha256": "0abbbfd838597c78924327ac953aaf23994a2d4b6781f5d305aa6e855c58a962"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1576,7 +1588,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "b50d87049fbc000e6eb23cef821815c2afa6680575181839e1911d7302600602"
+      "sha256": "63104e22a0d80ff39205c6f9d15ac8dd099ed640864d70e2a2a971e0ea2a7fe7"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -39,7 +39,9 @@ case of this gate.
 
 LEMMA-123 generalizes the unicyclic exclusion to every block count, and
 LEMMA-124 uses it to force any deficient sextet into the exact bicyclic
-three-NOT stratum. GATE-004AN is the active size-six exclusion.
+three-NOT stratum. GATE-004AN excludes that stratum after the core/orientation
+analysis through LEMMA-131. LEMMA-132 therefore closes size six; size seven is
+the first open case of this gate.
 
 ## Model card
 

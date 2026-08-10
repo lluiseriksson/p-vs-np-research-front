@@ -4301,19 +4301,19 @@
       "evidence": "proofs/LEMMA-124-deficient-sextet-exact-stratum.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; artifacts/cycle-106-deficient-sextet-stratum.md"
     },
     {
-      "id": "GATE004AN", "label": "EXPLORATORY",
+      "id": "GATE004AN", "label": "PROVED",
       "statement": "No pruned AND/OR/NOT circuit computing W_6 has cycle rank two and exactly three NOT gates.",
       "computational_model": "Pruned unrestricted Boolean circuits for fixed W_6 with exact cycle rank two and three NOT gates", "uniformity": "Every individual non-uniform six-block circuit",
-      "circuit_size": "Target exclusion of c=2,q=3; binary count exactly 31 and total 34", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean cofactor interfaces",
-      "asymptotic_quantifiers": "The fixed six-block function and every pruned circuit with c=2,q=3", "case_regime": "Exact finite structural gate for sextet Hall; not a full family lower bound or terminal result",
-      "evidence": "proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md; proofs/LEMMA-124-deficient-sextet-exact-stratum.md"
+      "circuit_size": "Excludes c=2,q=3; binary count would be 31 and total 34", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean cofactor interfaces",
+      "asymptotic_quantifiers": "The fixed six-block function and every pruned circuit with c=2,q=3", "case_regime": "Exact finite structural exclusion for sextet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md; proofs/LEMMA-125-bicyclic-core-trichotomy.md; proofs/LEMMA-126-bicyclic-cactus-exclusion.md; proofs/GATE-004AO-theta-three-NOT-exclusion.md; artifacts/cycle-110-nested-theta-exclusion.md"
     },
     {
       "id": "GATE004AN-PATH-MULTIPLICITY-ONLY", "label": "NO-GO",
       "statement": "Bicyclic unfolding path multiplicity cannot exclude c=2,q=3 because three multiplicities between one and four can sum to the required six in several ways.",
       "computational_model": "Bicyclic formula unfolding and NOT path multiplicities for fixed W_6", "uniformity": "Every individual non-uniform candidate in the exact c=2,q=3 stratum",
       "circuit_size": "Three parent NOT gates; unfolded requirement only six total occurrences with multiplicity at most four each", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
-      "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN and larger gates remain open",
+      "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN was proved by another route, while GATE004AL beyond size six remains open",
       "evidence": "proofs/GATE-004AN-path-multiplicity-only.md; docs/no-go-ledger.md NG-091; artifacts/cycle-106-deficient-sextet-stratum.md"
     },
     {
@@ -4333,19 +4333,19 @@
       "evidence": "proofs/LEMMA-126-bicyclic-cactus-exclusion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-125-bicyclic-core-trichotomy.md; artifacts/cycle-107-bicyclic-core-audit.md"
     },
     {
-      "id": "GATE004AO", "label": "EXPLORATORY",
+      "id": "GATE004AO", "label": "PROVED",
       "statement": "No theta-core cycle-rank-two circuit with exactly three NOT gates computes W_6.",
       "computational_model": "Pruned theta-core bicyclic Boolean circuits for fixed W_6 with exact NOT count", "uniformity": "Every individual non-uniform theta-core candidate",
-      "circuit_size": "Target exclusion of the remaining c=2,q=3, 31-binary-gate stratum", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Theta multigraph topology and Boolean separator cofactors",
-      "asymptotic_quantifiers": "Fixed W_6 and every pruned theta-core circuit with three NOT gates", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AO-theta-three-NOT-exclusion.md; proofs/LEMMA-126-bicyclic-cactus-exclusion.md"
+      "circuit_size": "Excludes the theta part of c=2,q=3, 31 binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Theta multigraph topology and Boolean separator cofactors",
+      "asymptotic_quantifiers": "Fixed W_6 and every pruned theta-core circuit with three NOT gates", "case_regime": "Exact finite structural exclusion; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AO-theta-three-NOT-exclusion.md; proofs/LEMMA-127-theta-split-budget.md; proofs/LEMMA-128-theta-ternary-source-exclusion.md; proofs/GATE-004AP-two-binary-split-theta-exclusion.md; artifacts/cycle-110-nested-theta-exclusion.md"
     },
     {
       "id": "GATE004AO-ARTICULATION-ONLY", "label": "NO-GO",
       "statement": "One-bit articulation factorization cannot address the theta core because neither branch vertex separates a leaf cycle block.",
       "computational_model": "Theta 2-cores of pruned bicyclic Boolean circuits and articulation-based factorizations", "uniformity": "Every individual non-uniform theta-core candidate",
       "circuit_size": "No additional lower bound; one-vertex factorization does not apply", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected vertex connectivity only",
-      "asymptotic_quantifiers": "Every theta-core candidate in GATE004AO", "case_regime": "Structural no-go for articulation-only reuse; GATE004AO and larger gates remain open",
+      "asymptotic_quantifiers": "Every theta-core candidate in GATE004AO", "case_regime": "Structural no-go for articulation-only reuse; GATE004AO was proved by orientation analysis, while larger Hall gates remain open",
       "evidence": "proofs/GATE-004AO-articulation-only.md; docs/no-go-ledger.md NG-092; artifacts/cycle-107-bicyclic-core-audit.md"
     },
     {
@@ -4365,19 +4365,19 @@
       "evidence": "proofs/LEMMA-128-theta-ternary-source-exclusion.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-127-theta-split-budget.md; artifacts/cycle-108-theta-orientation-audit.md"
     },
     {
-      "id": "GATE004AP", "label": "EXPLORATORY",
+      "id": "GATE004AP", "label": "PROVED",
       "statement": "No theta-core cycle-rank-two circuit with exactly two binary core split vertices and exactly three NOT gates computes W_6.",
       "computational_model": "Two-binary-split theta-core bicyclic circuits for fixed W_6 with three NOT gates", "uniformity": "Every individual non-uniform remaining theta orientation",
-      "circuit_size": "Target exclusion of the final orientation strata inside c=2,q=3, 31 binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta split structure and Boolean two-bit/sequential interfaces",
-      "asymptotic_quantifiers": "Fixed W_6 and every theta-core candidate with exactly two binary core splits", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AP-two-binary-split-theta-exclusion.md; proofs/LEMMA-127-theta-split-budget.md; proofs/LEMMA-128-theta-ternary-source-exclusion.md"
+      "circuit_size": "Excludes the final orientation strata inside c=2,q=3, 31 binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta split structure and Boolean two-bit/sequential interfaces",
+      "asymptotic_quantifiers": "Fixed W_6 and every theta-core candidate with exactly two binary core splits", "case_regime": "Exact finite structural exclusion; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AP-two-binary-split-theta-exclusion.md; proofs/LEMMA-129-two-split-theta-dichotomy.md; proofs/LEMMA-130-parallel-theta-source-exclusion.md; proofs/GATE-004AQ-nested-theta-exclusion.md; artifacts/cycle-110-nested-theta-exclusion.md"
     },
     {
       "id": "GATE004AP-SINGLE-BIT-ONLY", "label": "NO-GO",
       "statement": "The two remaining theta splits cannot be collapsed to one intermediary bit without assuming an unproved common functional cut.",
       "computational_model": "Two-binary-split theta orientations and attempted one-bit functional factorization", "uniformity": "Every individual non-uniform remaining theta candidate",
       "circuit_size": "No lower bound; a common one-bit interface is unproved and generally absent topologically", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed split topology and Boolean interfaces only",
-      "asymptotic_quantifiers": "Every candidate in GATE004AP", "case_regime": "Structural no-go for single-bit reuse; GATE004AP and larger gates remain open",
+      "asymptotic_quantifiers": "Every candidate in GATE004AP", "case_regime": "Structural no-go for single-bit reuse; GATE004AP was proved by splitting parallel and nested cases, while larger Hall gates remain open",
       "evidence": "proofs/GATE-004AP-single-bit-only.md; docs/no-go-ledger.md NG-093; artifacts/cycle-108-theta-orientation-audit.md"
     },
     {
@@ -4397,20 +4397,36 @@
       "evidence": "proofs/LEMMA-130-parallel-theta-source-exclusion.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-129-two-split-theta-dichotomy.md; artifacts/cycle-109-parallel-theta-exclusion.md"
     },
     {
-      "id": "GATE004AQ", "label": "EXPLORATORY",
+      "id": "GATE004AQ", "label": "PROVED",
       "statement": "No theta-core circuit with one binary source, one downstream non-source binary split, and exactly three NOT gates computes W_6.",
       "computational_model": "Nested-split theta-core bicyclic circuits for fixed W_6 with exactly three NOT gates", "uniformity": "Every individual non-uniform final theta orientation",
-      "circuit_size": "Target exclusion of the final c=2,q=3, 31-binary-gate orientation stratum", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta topology and triangular Boolean interfaces",
-      "asymptotic_quantifiers": "Fixed W_6 and every nested theta candidate with three NOT gates", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AQ-nested-theta-exclusion.md; proofs/LEMMA-129-two-split-theta-dichotomy.md; proofs/LEMMA-130-parallel-theta-source-exclusion.md"
+      "circuit_size": "Excludes the final c=2,q=3, 31-binary-gate orientation stratum", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta topology and triangular Boolean interfaces",
+      "asymptotic_quantifiers": "Fixed W_6 and every nested theta candidate with three NOT gates", "case_regime": "Exact finite structural exclusion; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AQ-nested-theta-exclusion.md; proofs/LEMMA-131-nested-theta-source-reduction.md; artifacts/cycle-110-nested-theta-exclusion.md"
     },
     {
       "id": "GATE004AQ-INDEPENDENT-TWO-BIT-ONLY", "label": "NO-GO",
       "statement": "The nested theta state cannot be treated as an independent second source bit because it depends on the first bit and has different path multiplicity.",
       "computational_model": "Nested theta split and attempted independent two-bit factorization", "uniformity": "Every individual non-uniform nested theta candidate",
       "circuit_size": "No lower bound; parallel-source NOT allocation cannot be imported", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Sequential Boolean interfaces and directed path regions",
-      "asymptotic_quantifiers": "Every candidate in GATE004AQ", "case_regime": "Structural no-go for independent-bit reuse; GATE004AQ and larger gates remain open",
+      "asymptotic_quantifiers": "Every candidate in GATE004AQ", "case_regime": "Structural no-go for independent-bit reuse; GATE004AQ was proved by first-source restriction, while larger Hall gates remain open",
       "evidence": "proofs/GATE-004AQ-independent-two-bit-only.md; docs/no-go-ledger.md NG-094; artifacts/cycle-109-parallel-theta-exclusion.md"
+    },
+    {
+      "id": "LEMMA131", "label": "PROVED",
+      "statement": "Fixing the first source bit of a nested theta circuit leaves cycle rank at most one; the uncut partition needs m total NOTs and the cut partition needs m-1 downstream.",
+      "computational_model": "Nested-source theta circuits, one-bit source restrictions, and residual cycle rank at most one", "uniformity": "Every individual non-uniform nested theta circuit for either polarity of W_m",
+      "circuit_size": "NOT lower m in the uncut source partition and m-1 downstream in the cut case", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Theta cycle rank, Boolean cofactors, and formula/unicyclic inversion",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least two, and every nested theta orientation", "case_regime": "Exact source-restriction theorem; not a general bicyclic or terminal lower bound",
+      "evidence": "proofs/LEMMA-131-nested-theta-source-reduction.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; artifacts/cycle-110-nested-theta-exclusion.md"
+    },
+    {
+      "id": "LEMMA132", "label": "PROVED",
+      "statement": "For every parent circuit and spanning tree, dependency-cone Hall expansion holds for every clause-index subset of size one through six.",
+      "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most six",
+      "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=6", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(6,m)", "case_regime": "Exact worst-case local Hall theorem; size seven, full matching, SAT lower bounds, and P versus NP remain open",
+      "evidence": "proofs/LEMMA-132-dependency-cone-Hall-through-six.md; proofs/LEMMA-124-deficient-sextet-exact-stratum.md; proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md; artifacts/cycle-110-nested-theta-exclusion.md"
     }
   ]
 }

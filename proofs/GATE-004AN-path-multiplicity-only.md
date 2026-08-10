@@ -15,10 +15,10 @@ This is compatible with many integer patterns, including `(2,2,2)` and
 `(1,1,4)`. Therefore total path multiplicity alone gives no contradiction;
 the generic bound is attained at the resource parameters `c=2,q=3`.
 
-The method no-go does not exhibit a circuit or refute GATE-004AN. A successful
-proof must use how the two cycles overlap, the dimension of the intervening
-Boolean interface, and the clause partition induced by its articulation
-components.
+The method no-go does not exhibit a circuit or refute GATE-004AN. GATE-004AN
+was later proved by using how the two cycles overlap and the clause partition
+induced by source and articulation factorizations; path multiplicity alone
+remains insufficient.
 
 ## Model card
 
