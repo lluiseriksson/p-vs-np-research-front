@@ -482,6 +482,15 @@ context. GATE-004O asks for a positive-power average elimination of this
 specific region when the context is completely fixed. Proving it would yield
 GATE-004 through the existing logarithmic-step recurrence.
 
+Cycle 035 tests whether region size plus global minimality supplies that
+elimination. LEMMA-035 gives a minimum `m`-gate chain in which every gate
+depends on the context bit, but the two restricted copies have `2m-3`
+distinct active classes. Its signed parent-to-quotient loss is `3-m`.
+`GATE-004O-REGION-SIZE-ONLY — NO-GO` therefore rules out a generic
+context-dependence charging argument. The surviving proof obligation must use
+the simultaneous `2^R` SAT assignment columns across all `R` contexts to
+prevent this split-heavy trace behavior.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

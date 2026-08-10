@@ -54,6 +54,41 @@ class FullTraceAccountingTests(unittest.TestCase):
             tuple(w1 and w2 for _, _, w1, w2 in suffixes),
         )
 
+    def test_minimum_context_chain_joint_quotient_count(self) -> None:
+        for size in range(3, 9):
+            suffixes = tuple(itertools.product((False, True), repeat=size))
+
+            def gate_traces(context: bool) -> tuple[tuple[bool, ...], ...]:
+                traces = [[] for _ in range(size)]
+                for suffix in suffixes:
+                    value = context or suffix[0]
+                    traces[0].append(value)
+                    for index in range(1, size):
+                        value = value and suffix[index]
+                        traces[index].append(value)
+                return tuple(tuple(trace) for trace in traces)
+
+            input_traces = {
+                tuple(suffix[index] for suffix in suffixes)
+                for index in range(size)
+            }
+            active = set()
+            all_gate_traces = []
+            for context in (False, True):
+                for trace in gate_traces(context):
+                    all_gate_traces.append(trace)
+                    if trace in input_traces or len(set(trace)) == 1:
+                        continue
+                    active.add(trace)
+
+            self.assertEqual(len(active), 2 * size - 3)
+            self.assertEqual(size - len(active), 3 - size)
+            for gate_index in range(size):
+                self.assertNotEqual(
+                    gate_traces(False)[gate_index],
+                    gate_traces(True)[gate_index],
+                )
+
 
 if __name__ == "__main__":
     unittest.main()

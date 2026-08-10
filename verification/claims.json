@@ -1921,6 +1921,40 @@
       "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all 2^(L-2) contexts",
       "case_regime": "Worst-case exact total-language computation; malformed strings reject; no promise or distribution",
       "evidence": "proofs/GATE-004O-context-trace-elimination.md"
+    },
+    {
+      "id": "LEMMA-035",
+      "label": "PROVED",
+      "statement": "For every m at least three, an explicit globally minimum m-gate circuit has every gate context-dependent but its two-context joint quotient has 2m-3 active classes and signed loss 3-m.",
+      "computational_model": "Exact total Boolean functions, globally minimum acyclic circuits, one context bit, and a two-output semantic joint quotient",
+      "uniformity": "Explicit non-uniform circuit family with a uniform description for every m",
+      "circuit_size": "Minimum parent size m; exact joint quotient size 2m-3; signed loss 3-m",
+      "circuit_depth": "m in the displayed chain; lower bound permits unrestricted depth",
+      "fan_in": "AND/OR two; no NOT gates used",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every integer m at least three",
+      "case_regime": "Worst-case exact total-function computation; generic method obstruction, not SAT-gamma",
+      "evidence": "proofs/LEMMA-035-minimum-context-chain-expands.md; verification/test_trace_accounting.py"
+    },
+    {
+      "id": "GATE-004O-REGION-SIZE-ONLY",
+      "label": "NO-GO",
+      "statement": "Global minimum size and an arbitrarily large region in which every gate depends on context do not force positive semantic joint-quotient loss.",
+      "computational_model": "Globally minimum unrestricted non-uniform Boolean circuits under a complete one-bit context pair",
+      "uniformity": "Explicit non-uniform counterexample family",
+      "circuit_size": "Context-dependent region m but signed quotient loss 3-m",
+      "circuit_depth": "Unrestricted in the minimum lower bound",
+      "fan_in": "AND/OR two; no NOT required",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every m at least three; loss becomes arbitrarily negative",
+      "case_regime": "Worst-case method-specific obstruction; lacks SAT's simultaneous assignment-column shattering",
+      "evidence": "proofs/LEMMA-035-minimum-context-chain-expands.md; docs/no-go-ledger.md NG-034"
     }
   ]
 }

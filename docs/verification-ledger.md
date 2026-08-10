@@ -144,6 +144,8 @@ truth. Each row has exactly one label.
 | GATE-004N-DIRECTION-ONLY | NO-GO | Sensitivity along every parallel edge does not force a polynomial edge-dependent region | LEMMA-033; NG-033 | Must eliminate the context-dependent region |
 | LEMMA-034 | PROVED | After fixing one polarity and tracing the affine context cube, at least `2^(L-2)` parent binary gates depend on context | `proofs/LEMMA-034-context-dependent-trace-region.md` | Polynomial region survives edge-shell no-go |
 | GATE-004O | EXPLORATORY | Prove polynomial average joint-quotient loss from the forced context-dependent trace region | `proofs/GATE-004O-context-trace-elimination.md` | Active smallest brick; sufficient for GATE-004 |
+| LEMMA-035 | PROVED | A globally minimum `m`-gate circuit with every gate context-dependent has joint quotient size `2m-3` and signed loss `3-m` | `proofs/LEMMA-035-minimum-context-chain-expands.md`; reference test | Minimum region size alone can favor splitting |
+| GATE-004O-REGION-SIZE-ONLY | NO-GO | Global minimum size plus an arbitrarily large fully context-dependent region does not force positive quotient loss | LEMMA-035; NG-034 | Must use SAT's simultaneous assignment-column shattering |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

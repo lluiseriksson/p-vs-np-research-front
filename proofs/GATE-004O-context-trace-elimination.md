@@ -44,3 +44,9 @@ sit in a four-gate XOR shell around an arbitrary context function. The missing
 theorem must instead show that completely fixing the affine context `s`
 eliminates, merges, or makes input-equivalent a positive power of the actual
 `U_n` trace region on average, after all split residuals are counted.
+
+LEMMA-035 further blocks using only the size of that region and parent
+minimality. Its globally minimum `m`-gate context chain has every gate
+context-dependent, yet the two-context joint quotient has `2m-3` classes and
+signed loss `3-m`. A proof must use the full SAT shattering relation across all
+`2^(L-2)` contexts, not merely contextual dependence of individual gates.

@@ -673,3 +673,25 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, field,
 promise, or distribution. The no-go concerns only dependence on the common
 edge bit. LEMMA-034 separately forces a large context-dependent region, which
 GATE-004O must eliminate on average.
+
+## NG-034 — minimum context-region size forces positive quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive, let alone polynomial, joint-quotient loss solely from
+global minimum circuit size and an arbitrarily large top region in which every
+gate depends semantically on the context.
+
+Failure: LEMMA-035 proves that
+`F_m=(s OR y_1) AND y_2 AND ... AND y_m` has minimum circuit size exactly `m`,
+with all `m` displayed gates depending on `s`. After the two context
+restrictions, its semantic joint quotient contains the `m-1` distinct
+functions `y_1 AND ... AND y_k` and the `m-2` distinct functions
+`y_2 AND ... AND y_k`, for exact size `2m-3`. The signed loss is `3-m`, which
+is nonpositive and tends to negative infinity.
+
+Model: exact globally minimum non-uniform AND/OR circuits; one context bit;
+parent depth `m` but lower bound depth unrestricted; fan-in two; no NOT,
+randomness, advice, oracle, field, promise, or distribution. The construction
+has only two contexts and no SAT assignment-column shattering, so GATE-004O
+remains open only as a simultaneous SAT-specific theorem.
