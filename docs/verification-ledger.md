@@ -295,6 +295,9 @@ truth. Each row has exactly one label.
 | LEMMA-081 | PROVED | 2,066 all-length representatives cover every five-coordinate behavior of identifiers 1 through 32,767 | `proofs/LEMMA-081-all-length-five-projection-basis.md`; exact checker | Projection-complete bounded alphabet |
 | LEMMA-082 | PROVED | The complete length-at-most-68 alphabet omits `11110` on a token-boundary quintuple and retains `N/20-O(1)` common clauses | `proofs/LEMMA-082-complete-length68-four-block-obstruction.md`; full-range and reduced DPs | Complete bounded-length obstruction |
 | GATE-004AF-LENGTH68-ONLY | NO-GO | Every standard neutral block through length 68 retains the linear width-five packing | `proofs/GATE-004AF-length68-only.md`; LEMMA-082; NG-069 | Length at least 72 required |
+| LEMMA-083 | PROVED | The complete length-at-most-72 alphabet still omits `11110` and retains `N/20-O(1)` common width-five clauses | `proofs/LEMMA-083-complete-length72-four-block-obstruction.md`; full-range and 2,437-row DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH72-ONLY | NO-GO | Every standard neutral block through length 72 retains the linear width-five packing | `proofs/GATE-004AF-length72-only.md`; LEMMA-083; NG-070 | Length at least 76 required |
+| LEMMA-084 | PROVED | Identifier 98,370 gives a length-76 block realizing mask 16 on the stable quintuple | `proofs/LEMMA-084-first-length76-quintet-repair.md`; regression test | Local repair only; global audit open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

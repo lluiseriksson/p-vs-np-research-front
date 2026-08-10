@@ -36,6 +36,11 @@ shows that the obstruction survives the literal complete identifier range
 1 through 32,767. Therefore every length-at-most-68 specialization is
 `NO-GO`; the next construction must use block length at least 72.
 
+LEMMA-083 extends the complete obstruction through length 72. LEMMA-084 then
+finds the first repair at length 76, using identifier 98,370. The next finite
+audit must use bound 76 and must not infer global universality from that one
+repaired quintuple.
+
 ## Model card
 
 | Field | Value |

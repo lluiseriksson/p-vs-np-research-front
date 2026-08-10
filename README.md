@@ -647,6 +647,13 @@ mask 16 still fails on offsets `{0,1,10,15,16}`, leaving an `N/20-O(1)` common
 packing. Every length-at-most-68 specialization is `NO-GO`; GATE-004AF now
 requires blocks of length at least 72. No circuit or terminal claim follows.
 
+The seventy-seventh cycle locates the next exact boundary. LEMMA-083 audits
+all identifiers 1 through 65,535 and an independent 2,437-row
+projection-complete basis; both retain mask 16 on the stable quintuple, so
+every length-at-most-72 specialization is `NO-GO`. LEMMA-084 finds the first
+repair at length 76: `01 T_98370` aligned at start 48 realizes the missing
+mask. This repairs one type only; the bound-76 GATE-004AF audit remains open.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

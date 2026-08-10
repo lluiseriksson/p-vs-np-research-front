@@ -1413,3 +1413,19 @@ four-block options; one six-one long option; signed width-five matching;
 unrestricted later non-uniform circuits; no randomness, advice, oracle,
 promise, distribution, or algebraic computation. Any repair must use block
 length at least 72. GATE-004AF and P versus NP remain open.
+
+## NG-070 — some length-at-most-72 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+LEMMA-083 audits the literal identifier range 1 through 65,535 and an
+independent 2,437-row projection-complete basis. Both exact DPs omit mask 16
+on offsets `{0,1,10,15,16}` with four blocks. Twenty-spaced translations leave
+a linear common signed width-five packing after at most one long-option repair.
+
+Model: complete standard neutral alphabet of block length at most 72;
+four-block options; one six-one long option; signed width-five matching;
+unrestricted later non-uniform circuits; no randomness, advice, oracle,
+promise, distribution, or algebraic computation. Identifier 98,370 repairs
+the representative at length 76, so the full gate remains open. P versus NP
+is unaffected.

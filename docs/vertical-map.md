@@ -127,6 +127,8 @@ Adjacent collision-aware active branch:
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
      - GATE-004AF-FREE-BIT-COVERING-ONLY (no-go by LEMMA-079/080)
      - GATE-004AF-LENGTH68-ONLY (no-go by LEMMA-081/082)
+     - GATE-004AF-LENGTH72-ONLY (no-go by LEMMA-083)
+     + LEMMA-084 (length-76 repair of the stable representative)
 
 Stronger dependent-region branch:
   GATE-004I
