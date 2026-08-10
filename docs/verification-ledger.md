@@ -13,6 +13,7 @@ truth. Each row has exactly one label.
 | INFRA-006 | PROVED | Cycle-006 neutral parser-state audit, manifest, and thirteen reference tests reproduce from a cold clone | `artifacts/cold-clone-17cab2f.md` | None |
 | INFRA-007 | PROVED | Cycle-007 linear neutral-family audit, manifest, and fourteen reference tests reproduce from a cold clone | `artifacts/cold-clone-2d2b0de.md` | None |
 | INFRA-008 | PROVED | Cycle-008 adjacent-annihilator audit, manifest, and fifteen reference tests reproduce from a cold clone | `artifacts/cold-clone-8797bc3.md` | None |
+| INFRA-009 | PROVED | Cycle-009 full local cofactor audit, manifest, and sixteen reference tests reproduce from a cold clone | `artifacts/cold-clone-f444670.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
