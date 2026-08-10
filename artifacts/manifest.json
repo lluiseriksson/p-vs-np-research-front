@@ -15,22 +15,6 @@
       "sha256": "edcd29509c4be2a5a42c158ee0b1764b66f2e80640497faf7eaca277b714fb64"
     },
     {
-      "path": ".pytest_cache/.gitignore",
-      "sha256": "e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d"
-    },
-    {
-      "path": ".pytest_cache/CACHEDIR.TAG",
-      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-    },
-    {
-      "path": ".pytest_cache/README.md",
-      "sha256": "420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70"
-    },
-    {
-      "path": ".pytest_cache/v/cache/nodeids",
-      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-    },
-    {
       "path": "artifacts/cold-clone-01d5a8b.md",
       "sha256": "8be566b90832d215552183c32ba03284fa4903fca7e8ea9d26887a9ca810db0e"
     },
@@ -980,7 +964,7 @@
     },
     {
       "path": "verification/generate_manifest.py",
-      "sha256": "85d1f11e701822f9958c6b77838e5aba3917eb2cacd20d55716dc549a22714ae"
+      "sha256": "d15b059b86ceaace7a04937755943c13ac9610f880212c1d5132e957884a7c54"
     },
     {
       "path": "verification/quartet_type_audit.py",

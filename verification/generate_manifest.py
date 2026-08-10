@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "artifacts" / "manifest.json"
-EXCLUDED_PARTS = {".git", "__pycache__"}
+EXCLUDED_PARTS = {".git", ".pytest_cache", "__pycache__"}
 
 
 def included(path: Path) -> bool:
