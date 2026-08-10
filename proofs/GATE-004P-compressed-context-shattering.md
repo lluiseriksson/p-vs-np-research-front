@@ -1,6 +1,6 @@
 # GATE-004P — compressed full-context shattering loss
 
-**Label: EXPLORATORY**
+**Label: NO-GO**
 
 ## Falsifiable theorem
 
@@ -52,7 +52,20 @@ copies of the ambient minimum circuit `C` under prefix rows
 | Asymptotic quantifiers | Exists fixed `B,eta>0,d_0`; every `d>=d_0`, every ambient prefix/suffix dimension, every eligible embedding, and every ambient minimum circuit satisfying all hypotheses |
 | Regime | Worst-case exact total-function computation; no promise or distribution |
 
-## Bridge to SAT
+## Falsification
+
+LEMMA-038 satisfies every displayed hypothesis with the identity affine
+embedding. If `K` is the minimum size of its XNOR-INDEX base, appending `m`
+fresh conjunctive suffix variables gives an ambient minimum circuit of size
+`K+m`, a context-dependent trace region `U>=m`, and at least `2m` active joint
+quotient classes for every context. For `m>=max(K+1,R)`, every required
+hypothesis holds but
+
+`|C|-q_s<=K-m<0`.
+
+The claimed positive lower bound is therefore false.
+
+## Would-be bridge to SAT
 
 ENC-013 and ENC-014 identify `q` with the common one-bit polarity coordinate
 and `s` with all `d=L-2` context assignments. The pointwise conditioned-SAT
@@ -64,14 +77,13 @@ it does not assume that the affinely substituted trace circuit is itself
 minimum. Thus the application does not silently transfer minimality through a
 restriction.
 
-Therefore GATE-004P implies GATE-004O for the exact SAT row family. Since
+Had GATE-004P held, it would have implied GATE-004O for the exact SAT row family. Since
 `R=Omega(n^c)` and the prefix length is `O(log n)`, LEMMA-014 then yields the
 same-language superlinear SAT circuit lower bound GATE-004.
 
-## First attack boundary
+## Scope of the no-go
 
-LEMMA-036 shows that parallel adjacency, common union, full `2^R` shattering,
-global minimality, and a fully context-dependent parent are still insufficient
-when the `R` contexts are one-hot vectors in `R` coordinates. A proof must use
-that the SAT contexts exhaust every assignment of only `d=log_2 R` bits (or an
-equivalent consequence of this compressed full-cube geometry).
+LEMMA-038 shows that even the compressed full cube is insufficient for
+arbitrary total functions. The counterexample is not SAT-gamma. GATE-004Q
+therefore returns to the exact ambient SAT function and makes off-cube behavior
+an explicit required input rather than another generic table hypothesis.

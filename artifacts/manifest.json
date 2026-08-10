@@ -184,7 +184,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "813fbb7391db4f0c2b9a179522b8f237e1fea2338d976c94fc566a8530990f8e"
+      "sha256": "c9b8a2ad52da587804acffed0fb6d7c8bebeaf94b7c03e4881172bf5c3f24df4"
     },
     {
       "path": "docs/problem-statement.md",
@@ -192,7 +192,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9b7a321eeb94df9b00c82aa1e4a2b37907db632885b1b04cb60d1095178d1f0e"
+      "sha256": "f4c38983b9c7862361898e05d2ef939ee4388b6c712a1917bfab7cc4f6fb8f9c"
     },
     {
       "path": "docs/result-labels.md",
@@ -280,11 +280,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "5ded9bbecc5256cafd0a9aaa29b6fa1bfd72fdafe799041e68c7e9ddbfa4ff22"
+      "sha256": "374e8d5bb2ec3f53afc1773fd6463e33bc040adb0b8e5ed056f4e3c67f36a661"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "1307dcd7138ef8fce3107a11c85a30828f1c2e08fea1eb73605c1ef3db50eaf8"
+      "sha256": "52c523eb68278be94208e4b1a45ab1d6e0cec3890b820a769b93e9795f628c9d"
     },
     {
       "path": "experiments/README.md",
@@ -372,7 +372,11 @@
     },
     {
       "path": "proofs/GATE-004P-compressed-context-shattering.md",
-      "sha256": "555449420ad5ecab62d29e6c2b5e8c8b5e59d963a88711aecc68c4cd40da950f"
+      "sha256": "3e266dc406120c461cf0e71053c8f88e70b635998721bc449896d64b4708d0c4"
+    },
+    {
+      "path": "proofs/GATE-004Q-sat-off-cube-rigidity.md",
+      "sha256": "cdd8ccb3d60488471c661f595a674c65e49fefe883b0f444fd6eefa1c79c9646"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -523,8 +527,16 @@
       "sha256": "dec67a334c28345e73cbc32a8ddacda7b674b4d5305d529d96ee18abde08d4fe"
     },
     {
+      "path": "proofs/LEMMA-037-fresh-conjunction-exact-cost.md",
+      "sha256": "a056096cc0a85b6092bdc174eb840503cb9389c1efd95bf1d8aa97bba04e54ac"
+    },
+    {
+      "path": "proofs/LEMMA-038-compressed-cube-tail-counterexample.md",
+      "sha256": "b272c0854d85c7c488ef31939eb86545fc868cd051ef7666b79af6a461fa1c80"
+    },
+    {
       "path": "README.md",
-      "sha256": "ba169e388a77e35b1f6a1c7d0f3793e8a288bc5ee66bf8d4511fa56e2b03d5be"
+      "sha256": "791d6058a92f3c31372d78442919973e049cf82b78c8df84404fcf580b714d63"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -536,7 +548,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7bd7b69192ff1cd1526b40dae07b3ba7afb2a409be92fa807be6f7b76c5bb291"
+      "sha256": "b545a516179e9a560d87bc2542f5094db6ac6a676e37a0f8aabc614ed86c0314"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -560,7 +572,7 @@
     },
     {
       "path": "verification/test_trace_accounting.py",
-      "sha256": "d0acb9e6d151813c89bf00a38e5cd0e99b567e8a3e5eec5f1340b0e4cd61ce30"
+      "sha256": "c7a665d41d528ac2f88566a2fc8c97ff248fa9435f6c3c8579ae5c41d8877556"
     }
   ]
 }

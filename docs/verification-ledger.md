@@ -150,7 +150,10 @@ truth. Each row has exactly one label.
 | GATE-004O-REGION-SIZE-ONLY | NO-GO | Global minimum size plus an arbitrarily large fully context-dependent region does not force positive quotient loss | LEMMA-035; NG-034 | Must use SAT's simultaneous assignment-column shattering |
 | LEMMA-036 | PROVED | A minimum circuit with parallel adjacent pairs, common union, full `2^R` shattering, and every gate context-dependent has per-pair loss `2R-m+2` | `proofs/LEMMA-036-one-hot-shattering-minimum-expansion.md`; reference test | One-hot contexts permit arbitrarily negative loss |
 | GATE-004O-SHATTERING-ONLY | NO-GO | Parallel adjacency, common union, full shattering, minimality, and context dependence do not force positive loss for one-hot contexts | LEMMA-036; NG-035 | Must use the compressed full context cube |
-| GATE-004P | EXPLORATORY | Prove polynomial loss from full shattering when `R` contexts exhaust a `log_2 R`-bit cube | `proofs/GATE-004P-compressed-context-shattering.md` | Active smallest brick; explicit bridge to GATE-004O and GATE-004 |
+| GATE-004P | NO-GO | Even a compressed full context cube, common union, shattering, ambient minimality, and a large context trace region do not force positive loss | LEMMA-038; NG-036 | Fresh conjunctive tails make every quotient larger |
+| LEMMA-037 | PROVED | Conjoining a fresh input to any nonconstant Boolean function increases exact unrestricted circuit size by one | `proofs/LEMMA-037-fresh-conjunction-exact-cost.md` | Exact minimum-circuit padding identity |
+| LEMMA-038 | PROVED | A compressed XNOR-INDEX cube with a fresh minimum tail satisfies every GATE-004P hypothesis but has loss at most `K-m` | `proofs/LEMMA-038-compressed-cube-tail-counterexample.md`; reference test | Falsifies GATE-004P |
+| GATE-004Q | EXPLORATORY | Prove polynomial average loss for the exact ambient SAT-gamma function using its behavior outside the affine row cube | `proofs/GATE-004Q-sat-off-cube-rigidity.md` | Active smallest brick; next audit is the one-bit off-cube halo |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

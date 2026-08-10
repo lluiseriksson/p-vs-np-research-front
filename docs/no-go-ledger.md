@@ -718,3 +718,27 @@ minimum lower bound; fan-in two; no NOT, randomness, advice, oracle, field,
 promise, or distribution. The obstruction does not use all assignments of a
 `log_2 R`-bit context cube. GATE-004P isolates that remaining compact-context
 hypothesis and its proved SAT bridge.
+
+## NG-036 — compressed full-cube shattering forces positive loss
+
+**Label: NO-GO**
+
+Scope: infer positive polynomial average loss from an affine embedded full
+`d`-bit context cube with `R=2^d`, parallel adjacent pairs, one common branch
+union, exact complementary `2^R` shattering, ambient minimum-circuit size, and
+at least `R` context-dependent trace gates.
+
+Failure: LEMMA-037 first proves that conjoining one fresh input raises exact
+minimum circuit size by exactly one. LEMMA-038 applies this to the base
+`w AND XNOR(q,y_s)` and an `m`-gate fresh conjunction tail. The resulting
+ambient minimum circuit has size `K+m`, satisfies the identity compressed-cube
+embedding and every other hypothesis, has `U>=m`, and leaves at least `2m`
+distinct active tail classes in every joint quotient. Thus loss is at most
+`K-m`, negative whenever `m>K`, including choices with `m>=R`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; identity affine
+edge/context cube with `d=log_2 R`; unrestricted base depth and an AND tail;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. The construction is not SAT-gamma.
+It proves that the next gate must use SAT's values outside the embedded cube or
+another genuinely SAT-specific ambient relation.

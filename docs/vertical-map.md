@@ -46,8 +46,9 @@ Adjacent collision-aware active branch:
   <- GATE-004O (open parent): affine-context trace elimination
      + ENC-014 (proved parallel affine edge cube)
      + LEMMA-034 (proved context-dependent region)
-  <- GATE-004P (active smallest brick): compressed full-context shattering
-     - GATE-004O-SHATTERING-ONLY (one-hot-context no-go)
+  <- GATE-004P (no-go): compressed full-context shattering
+     - LEMMA-038 (fresh-tail counterexample)
+  <- GATE-004Q (active smallest brick): SAT off-cube rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -501,7 +502,7 @@ pairs, a common branch union, every parent gate context-dependent, and all
 `GATE-004O-SHATTERING-ONLY — NO-GO` shows that shattering is not enough when
 the context block has `R` coordinates.
 
-## Smallest active brick: GATE-004P
+## Rejected generic brick: GATE-004P
 
 GATE-004P retains the remaining structural difference: the `R` SAT contexts
 are every assignment of only `d=log_2 R` bits, embedded by ENC-014's disjoint
@@ -510,9 +511,26 @@ common conditioned union, full shattering, and this compressed full-cube
 context. ENC-013, ENC-014, ENC-009/010, and LEMMA-034 prove every hypothesis
 for SAT and give an explicit implication to GATE-004O and then GATE-004.
 
-The next attack must derive a consequence of exhausting the full compressed
-cube; repeating one-hot shattering or gatewise context sensitivity is already
-blocked.
+Cycle 037 proves that even this compressed generic statement is false.
+LEMMA-037 establishes the exact identity `C(f AND z)=C(f)+1` for a fresh
+conjunctive input. LEMMA-038 appends a long fresh conjunction to
+`w AND XNOR(q,y_s)`. The resulting ambient circuit is globally minimum,
+satisfies the full compressed cube, common union, exact shattering, and
+`U>=R`, yet every pair has loss at most `K-m`, negative for `m>K`.
+
+## Smallest active brick: GATE-004Q
+
+GATE-004Q stops abstracting away the ambient language. It asks for the same
+polynomial average loss only for minimum circuits computing the full total
+`SAT-gamma_n` function on every prefix string. Its bridge to GATE-004 remains
+the exact ENC-013 conditioned union and LEMMA-014 logarithmic recurrence.
+
+The first concrete attack is SAT's off-cube halo. Each ENC-014 context bit is
+repeated in three prefix positions. Independently flipping one occurrence
+leaves the affine cube and produces a nearby ambient SAT input. The next audit
+classifies those rows exactly—malformed, annihilating, neutral, or related
+conditioning—and tests whether their simultaneous relations block the fresh-
+tail quotient expansion of LEMMA-038.
 
 ## Downstream amplification obligation: GATE-005
 

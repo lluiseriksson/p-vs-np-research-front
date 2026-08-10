@@ -132,6 +132,59 @@ class FullTraceAccountingTests(unittest.TestCase):
                     observed_columns.add(tuple(column))
                 self.assertEqual(len(observed_columns), 2**context_count)
 
+    def test_compressed_cube_fresh_tail_counterexample(self) -> None:
+        for context_width in (1, 2):
+            context_count = 2**context_width
+            for tail_count in range(2, 5):
+                suffixes = tuple(
+                    itertools.product(
+                        (False, True), repeat=context_count + 1 + tail_count
+                    )
+                )
+                for context in range(context_count):
+                    active_tail_traces = set()
+                    branch_outputs = {}
+                    for edge in (False, True):
+                        traces = [[] for _ in range(tail_count)]
+                        outputs = []
+                        for suffix in suffixes:
+                            y = suffix[:context_count]
+                            witness = suffix[context_count]
+                            tail = suffix[context_count + 1:]
+                            value = witness and (edge == y[context])
+                            for index, tail_bit in enumerate(tail):
+                                value = value and tail_bit
+                                traces[index].append(value)
+                            outputs.append(value)
+                        branch_outputs[edge] = tuple(outputs)
+                        active_tail_traces.update(map(tuple, traces))
+
+                    self.assertEqual(len(active_tail_traces), 2 * tail_count)
+                    common_union = tuple(
+                        left or right
+                        for left, right in zip(
+                            branch_outputs[False], branch_outputs[True]
+                        )
+                    )
+                    expected_union = tuple(
+                        suffix[context_count]
+                        and all(suffix[context_count + 1:])
+                        for suffix in suffixes
+                    )
+                    self.assertEqual(common_union, expected_union)
+
+                observed_columns = set()
+                for assignment in itertools.product(
+                    (False, True), repeat=context_count
+                ):
+                    column = tuple(
+                        edge == assignment[context]
+                        for context in range(context_count)
+                        for edge in (False, True)
+                    )
+                    observed_columns.add(column)
+                self.assertEqual(len(observed_columns), 2**context_count)
+
 
 if __name__ == "__main__":
     unittest.main()
