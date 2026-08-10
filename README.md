@@ -771,11 +771,19 @@ essential restrictions miss minimality by exactly `m`. GATE-004AG isolates
 the required minimality-or-quotient theorem, while the restriction-only route
 is `NO-GO`. GATE-004AE and every terminal bridge remain `EXPLORATORY`.
 
+The ninety-sixth cycle audits the remaining standalone tradeoff. LEMMA-109
+computes inversion decrease `d(W_m)=m` and combines minimum binary
+connectivity, the formula boundary, and Markov/Morizumi inversion complexity.
+It proves the displayed `6m-1` circuit exact for `m<=4`, but from `m=5` leaves
+gap `m-1-ceil(log_2(m+1))`. GATE-004AG-BINARY-INVERSION-ONLY is therefore
+`NO-GO`; the asymptotic gate still needs a new DAG-sharing or direct quotient
+theorem.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycle 095 isolates the next fixed-sign tail and its exact one-gate-per-clause proof gap. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–096 isolate the fixed-sign tail and close two insufficient lower-bound methods quantitatively. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

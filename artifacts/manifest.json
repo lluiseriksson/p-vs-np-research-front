@@ -439,6 +439,10 @@
       "sha256": "b80225e1ebfb5e45c928a1432a19ebbe9f7163e6199b19461cfafc961bad4b35"
     },
     {
+      "path": "artifacts/cycle-096-one-negative-formula-boundary.md",
+      "sha256": "4d8cdc572ae9b83c9b094bdd630af5e15d713fc9facc3c26a15e905432fd44c5"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -464,7 +468,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "0c9eccb2e196369664b941f0078cff337e4f12606a596254798cd99b1185ed53"
+      "sha256": "51e3a8160e5bc460ab69497463313a79323b12c01659a6abaabecf0500eb1903"
     },
     {
       "path": "docs/problem-statement.md",
@@ -472,7 +476,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "8738a26f3253a011c50976d315487ca6e8a3f85b0ad2fd5a1690629575eb8698"
+      "sha256": "9cd5ebcac8e15fc8cc01bafcabc1583db9bb31d6baa0f57bbc8922cd472dcac2"
     },
     {
       "path": "docs/result-labels.md",
@@ -568,11 +572,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "49faf828ed2bbb1f04f80d363f47d9f4a89e5342bc3950a0614f36fcda7b4e62"
+      "sha256": "b9aa6b362d6343ac28d2ebc3ac5f8feb622f146c86ee79a41492a1008c4f0a27"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "341d346cf4f85033aba4640e1f2b688001f5c679d4f5e036a485514d01be1826"
+      "sha256": "dcada208f55fb6b833e18ea02299c41d68822ab4eb97203445d37df50c13a776"
     },
     {
       "path": "experiments/README.md",
@@ -715,8 +719,12 @@
       "sha256": "fc50c09c5c2fd81a55afd8e43862fa4f5a12654089939987eb34f5938176fef2"
     },
     {
+      "path": "proofs/GATE-004AG-binary-inversion-only.md",
+      "sha256": "da64b88649cfd4d1861f1732aba36a0a45590370782f88a04138ec11f56ce672"
+    },
+    {
       "path": "proofs/GATE-004AG-one-negative-width-five-tail.md",
-      "sha256": "6a4a66d9cc890d000381decc9ba41646ba068935b8352eda77d7d1367a7a8e58"
+      "sha256": "680957de0985c4410dadb7950992605106fe32c6fea37f8bd82ab02b29dde933"
     },
     {
       "path": "proofs/GATE-004AG-restriction-only.md",
@@ -1319,8 +1327,12 @@
       "sha256": "62db64206d48af23e7ebd1bce5f493d9e86c5a4a477cd188e938459aabe55747"
     },
     {
+      "path": "proofs/LEMMA-109-formula-boundary-one-negative-width-five.md",
+      "sha256": "dd48e96e7c8a5307cf25874f32d18b90f9a4d7d72601c1de8a3c7b77f4065d83"
+    },
+    {
       "path": "README.md",
-      "sha256": "40e557d1d896a995d5bbec4dcb5b5cf1b5b7db6773138c2f5818e90c3ca0bd0e"
+      "sha256": "a4d48966b96c7e85f205bbf30ceaf9c654a921dd5fc606274fc43047ea0008ad"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1332,7 +1344,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "03db3fca62ab9510a3f030068ef368a5e021d87c4fd23a4b09aea18e3a0bc310"
+      "sha256": "2638d11eb9954c591ec228f9faf0239d417fe1152704a388418a0ed9bbd8ff3c"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

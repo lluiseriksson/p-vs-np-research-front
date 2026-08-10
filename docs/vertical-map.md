@@ -132,6 +132,8 @@ Adjacent collision-aware active branch:
      + LEMMA-107 (`K+5m..K+6m` tail-cost bracket; displayed `7m` quotient)
      <- GATE-004AG (active smallest tail brick): exact minimality or quotient survival
         - GATE-004AG-RESTRICTION-ONLY (no-go: lower certificate misses by `m`)
+        + LEMMA-109 (formula boundary exact for `m<=4`; quantified general gap)
+        - GATE-004AG-BINARY-INVERSION-ONLY (no-go: linear gap for `m>=5`)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

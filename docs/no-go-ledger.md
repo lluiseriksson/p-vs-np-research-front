@@ -1610,3 +1610,25 @@ width-five clauses with four positive and one negative literal; AND/OR fan-in
 two and NOT fan-in one; exact worst-case quantifiers; no randomness, advice,
 oracle, promise, distribution, or algebraic computation. The restriction-only
 method is closed, while GATE-004AG, GATE-004AE, and P versus NP remain open.
+
+## NG-082 — binary connectivity plus inversion complexity closes GATE-004AG
+
+**Label: NO-GO**
+
+Scope: prove the standalone four-positive/one-negative tail circuit minimum by
+combining essential-input connectivity, the formula forced at minimum binary
+gate count, and Markov/Morizumi inversion complexity.
+
+Failure: LEMMA-109 computes `d(W_m)=m` and proves
+`min(6m-1,5m+ceil(log_2(m+1)))<=C(W_m)<=6m-1`. Equality follows only for
+`m<=4`. For every `m>=5`, the certificate deficit is
+`m-1-ceil(log_2(m+1))`, which is linear in the asymptotic family. One extra
+binary gate leaves the formula regime and permits only the logarithmic
+circuit inversion bound; no representation-independent quotient count is
+obtained.
+
+Model: minimum unrestricted non-uniform Boolean circuits; AND/OR fan-in two,
+NOT fan-in one; Boolean-lattice chains and graph connectivity; exact
+worst-case quantifiers; no randomness, advice, oracle, promise, distribution,
+or algebraic circuit model. This combined method is closed, while
+GATE-004AG, GATE-004AE, and P versus NP remain open.

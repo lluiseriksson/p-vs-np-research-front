@@ -4043,6 +4043,22 @@
       "circuit_size": "Method lower bound K+5m versus upper K+6m; exact deficit m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "None; Boolean circuits only",
       "asymptotic_quantifiers": "Every finite nonconstant base and every m at least one qualifying disjoint clause family", "case_regime": "Structural no-go for the restriction-only proof method; GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AG-restriction-only.md; proofs/LEMMA-107-one-negative-clause-tail-bracket.md; docs/no-go-ledger.md NG-081; artifacts/cycle-095-one-negative-width-five-tail.md"
+    },
+    {
+      "id": "LEMMA109", "label": "PROVED",
+      "statement": "The standalone conjunction of m disjoint clauses with p positive and one negative literal has size at least min((p+2)m-1,(p+1)m+ceil(log2(m+1))) and at most (p+2)m-1, with equality for m through four.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, Boolean-lattice inversion complexity, and equality-case fan-in-two connectivity", "uniformity": "Fully non-uniform finite circuits; uniform disjoint one-negative clause family and chain witness",
+      "circuit_size": "Lower min((p+2)m-1,(p+1)m+ceil(log2(m+1))), upper (p+2)m-1; exact for 1<=m<=4", "circuit_depth": "Unrestricted; formula conclusion only at minimum binary-gate count", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean lattice and graph connectivity only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every fixed p at least one and every m at least one; exact finite cases m=1,2,3,4; explicit remaining gap for every m at least five", "case_regime": "Worst-case exact standalone-function bound; not a base direct sum, quotient theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; proofs/LEMMA-059-formula-boundary-implication-lower-bound.md; proofs/LEMMA-065-formula-boundary-signed-triple-lower-bound.md; artifacts/cycle-096-one-negative-formula-boundary.md"
+    },
+    {
+      "id": "GATE004AG-BINARY-INVERSION-ONLY", "label": "NO-GO",
+      "statement": "Essential-input connectivity plus formula/circuit inversion complexity cannot prove the asymptotic GATE004AG minimality branch because its standalone lower certificate has a linear gap from m=5 onward.",
+      "computational_model": "Unrestricted Boolean circuits, essential-input connectivity, formula-boundary graphs, and Markov/Morizumi inversion complexity", "uniformity": "Fully non-uniform finite circuits; uniform fixed-sign clause family",
+      "circuit_size": "Lower min(6m-1,5m+ceil(log2(m+1))) versus upper 6m-1; deficit m-1-ceil(log2(m+1))", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean lattice and graph connectivity only",
+      "asymptotic_quantifiers": "Every m at least one; exact method closure for m through four and explicit deficit for every m at least five", "case_regime": "Structural no-go for the connectivity-plus-inversion method; GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AG-binary-inversion-only.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; docs/no-go-ledger.md NG-082; artifacts/cycle-096-one-negative-formula-boundary.md"
     }
   ]
 }

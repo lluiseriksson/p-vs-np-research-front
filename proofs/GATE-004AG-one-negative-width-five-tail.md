@@ -36,10 +36,13 @@ minimization may remove those gates and merge their semantic classes. The
 essential-variable restriction route therefore does not prove either
 alternative.
 
-The next attack must control the binary-gate/negation tradeoff for the
-standalone one-negative clause product or establish quotient survival
-directly for a minimum circuit over the canonical base. Clause-local syntax
-cannot be assumed additive inside an unrestricted DAG.
+LEMMA-109 next audits the binary-gate/negation tradeoff. It proves the
+standalone displayed circuit exact for `m<=4`, but its combined connectivity
+and inversion certificate has linear gap
+`m-1-ceil(log_2(m+1))` from `m=5`. The next attack must constrain this tradeoff
+away from the formula boundary or establish quotient survival directly for a
+minimum circuit over the canonical base. Clause-local syntax cannot be
+assumed additive inside an unrestricted DAG.
 
 ## Model card
 
