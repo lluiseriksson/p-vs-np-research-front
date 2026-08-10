@@ -19,6 +19,7 @@ truth. Each row has exactly one label.
 | INFRA-012 | PROVED | Cycle-012 multi-output literature audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-c2d3bb7.md` | None |
 | INFRA-013 | PROVED | Cycle-013 signed parent-label audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-a839d1b.md` | None |
 | INFRA-014 | PROVED | Cycle-014 many-identifier quotient audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-6bc7ef9.md` | None |
+| INFRA-015 | PROVED | Cycle-015 cross-identifier incidence audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-f860c57.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
