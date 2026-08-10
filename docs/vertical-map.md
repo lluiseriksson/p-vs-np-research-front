@@ -14,7 +14,8 @@ P != NP
   <- all same-language rungs: for every k, SAT notin SIZE(n^k)
   <- GATE-005 (downstream, open): same-language exponent amplification
   <- GATE-004 (active): first superlinear unrestricted SAT circuit lower bound
-  <- GATE-004B (active smallest brick): SAT-specific amortized block restriction
+  <- GATE-004B (active): SAT-specific amortized block restriction
+  <- GATE-004C (active smallest brick): semantic loss under exact formula contexts
      + LEMMA-002 (proved recurrence)
 ```
 
@@ -80,7 +81,7 @@ circuit families.
 | Asymptotic quantifiers | Exists fixed `delta>0`; infinitely many lengths; every circuit within the size bound fails on some input |
 | Regime | Worst-case exact total-language decision; malformed encodings reject |
 
-## Smallest active brick: GATE-004B
+## Active block-restriction gate: GATE-004B
 
 For every minimum circuit computing `SAT-gamma_n`, find a coordinate projection
 to `SAT-gamma_m`, losing at most `A n^beta` input length but forcing at least
@@ -88,6 +89,22 @@ to `SAT-gamma_m`, losing at most `A n^beta` input length but forcing at least
 recurrence yields the GATE-004 lower bound. ENC-002 supplies exact
 double-negation projections; generic fanout counting does not supply the needed
 gate loss.
+
+## Smallest active brick: GATE-004C
+
+ENC-003 enlarges the proved prefix projection family: fixed tautologies can be
+conjoined before the embedded formula while preserving exact validity and
+satisfiability. The symmetric right context fails because suffix bits can
+repair malformed trailing syntax. GATE-004C asks for the GATE-004B loss under
+the exact prefix family only.
+
+LEMMA-003 proves a scoped limitation: even if every sublinear contiguous
+placement were available, the placements would leave a large common variable
+core, so arbitrary coordinate-weight averaging cannot force any positive fixed
+weight. This is recorded as
+`GATE-004B-CONTEXT-AVERAGING — NO-GO`. GATE-004C remains open because a proof
+could use semantic structure unique to minimum SAT circuits or propagation
+beyond the input boundary.
 
 ## Downstream amplification obligation: GATE-005
 

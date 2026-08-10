@@ -64,20 +64,22 @@ non-terminal. See
 [`docs/vertical-map.md`](docs/vertical-map.md) and
 [`docs/no-go-ledger.md`](docs/no-go-ledger.md).
 
-The third cycle fixes the exact `SAT-gamma` representation and reduces
+The third cycle fixed the exact `SAT-gamma` representation and reduced
 GATE-004 to GATE-004B: a SAT-specific block projection must lose
 `n^(beta+delta)` gates while shortening the encoding by only `O(n^beta)` bits.
-LEMMA-002 proves that this recurrence is sufficient. Double negation supplies
-exact slice projections, but generic fanout counting does not prove the gate
-loss.
+The fourth cycle proved a broader exact prefix-context family, rejected the
+tempting right-context analogue because it repairs some malformed strings, and
+proved a general contiguous-placement coverage limit. Coordinate averaging
+cannot force gate loss, so GATE-004C isolates the surviving semantic-loss
+obligation for minimum SAT circuits.
 
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 36% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/tests, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and hosted CI evidence remain immature. |
+| Infrastructure maturity | 38% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/context tests, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, and fanout-only failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, and contiguous-coverage failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

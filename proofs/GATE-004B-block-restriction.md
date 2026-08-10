@@ -84,7 +84,12 @@ minimum SAT circuits, whose special structure is unknown.
 
 ## Next attack
 
-The next brick is a SAT-specific descendant audit: characterize the functions
-obtained by fixing a block of prefix/suffix encoding coordinates, and search for
-a potential on minimum circuits whose loss can be certified from semantic
-properties of those descendants rather than boundary fanout alone.
+ENC-003 now supplies exact left/right tautology contexts, not only a fixed
+prefix. LEMMA-003 proves that averaging arbitrary coordinate weights over this
+contiguous family still cannot force gate loss: every sublinearly padded
+placement retains a large common core. This route is
+`GATE-004B-CONTEXT-AVERAGING — NO-GO`.
+
+The active subgate is GATE-004C. It restricts GATE-004B to the explicit ENC-003
+family and demands a loss proof based on semantic structure of minimum SAT
+circuits or downstream propagation rather than input-coordinate coverage.

@@ -144,3 +144,34 @@ def double_not_wrap(bits: str, count: int = 1) -> str:
     if count < 0:
         raise ValueError("count must be nonnegative")
     return "1111" * count + bits
+
+
+def tautology(identifier: int = 1) -> str:
+    variable = encode_variable(identifier)
+    return encode_or(variable, encode_not(variable))
+
+
+def contradiction(identifier: int = 1) -> str:
+    variable = encode_variable(identifier)
+    return encode_and(variable, encode_not(variable))
+
+
+def context_wrap(
+    bits: str,
+    *,
+    left_tautologies: int = 0,
+    double_nots: int = 0,
+) -> str:
+    """Prefix ``bits`` with an exact satisfiability-preserving context.
+
+    The source is the final literal substring.  If ``l`` and ``d`` are the two
+    counts, its zero-based start is ``12*l + 4*d``.
+    """
+    if min(left_tautologies, double_nots) < 0:
+        raise ValueError("context counts must be nonnegative")
+
+    result = bits
+    true_formula = tautology()
+    for _ in range(left_tautologies):
+        result = encode_and(true_formula, result)
+    return double_not_wrap(result, double_nots)

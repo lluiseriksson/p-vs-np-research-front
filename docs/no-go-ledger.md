@@ -136,3 +136,41 @@ Model: exact `SAT-gamma` slices; unrestricted non-uniform acyclic circuits;
 unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
 oracle, field, promise, or distribution. The no-go concerns the generic
 fanout-only inference, not GATE-004B itself.
+
+## NG-009 — right syntax context as an exact total-language projection
+
+**Label: NO-GO**
+
+Scope: diversify exact SAT-gamma projections by placing the source before a
+fixed tautology, using `x -> AND(x,T)`.
+
+Failure: total-language validity is not preserved. Let `V` be a valid variable
+encoding and let malformed `x=V 11`, where `11` is a truncated NOT token. Then
+`AND(x,T)` parses as the valid formula `AND(V,NOT(T))`. Fixed suffix bits can
+repair malformed trailing syntax, so this context is not a projection of the
+exact SAT-gamma slice.
+
+Model: exact SAT-gamma prefix grammar and coordinate projections; no circuit
+size, depth, uniformity, randomness, advice, oracle, field, promise, or
+distributional assertion. The no-go concerns this proposed right-context
+construction, not all possible non-prefix projections.
+
+## NG-010 — contiguous placements plus coordinate-weight averaging
+
+**Label: NO-GO**
+
+Scope: even granting an exact family of arbitrary contiguous source placements,
+derive GATE-004B loss by averaging weights assigned to fixed input coordinates.
+
+Failure: if the padding length is `p<n/2`, every length-`n-p` contiguous source
+placement contains a common core of `n-2p` target coordinates. All coordinate
+weight may be concentrated on one common-core coordinate, so every placement
+fixes weight zero. Thus no positive fixed-weight bound—hence no superlinear
+gate-loss bound—follows from total coordinate weight alone. This is the exact
+combinatorial statement proved in LEMMA-003.
+
+Model: exact SAT-gamma context projections; unrestricted non-uniform acyclic
+circuits at the input-boundary abstraction; unbounded depth; fan-in-two AND/OR
+and fan-in-one NOT; no randomness, advice, oracle, field, promise, or
+distribution. The no-go does not constrain semantic structure of minimum SAT
+circuits, non-contiguous projections, or GATE-004B itself.

@@ -3,6 +3,8 @@ from __future__ import annotations
 import unittest
 
 from sat_encoding import (
+    context_wrap,
+    contradiction,
     decode_gamma,
     double_not_wrap,
     encode_and,
@@ -11,6 +13,7 @@ from sat_encoding import (
     encode_or,
     encode_variable,
     parse_formula,
+    tautology,
     verify_assignment,
 )
 
@@ -64,6 +67,50 @@ class FormulaEncodingTests(unittest.TestCase):
                     verify_assignment(bits, assignment),
                     verify_assignment(wrapped, assignment),
                 )
+
+    def test_fixed_truth_formulas(self) -> None:
+        for value in (False, True):
+            self.assertTrue(verify_assignment(tautology(), {1: value}))
+            self.assertFalse(verify_assignment(contradiction(), {1: value}))
+
+    def test_context_projection_span_and_semantics(self) -> None:
+        samples = [
+            self.x,
+            encode_and(self.x, self.y),
+            "",
+            "01" + self.x,
+            self.x + "11",
+        ]
+        l_count, d_count = 2, 4
+        start = 12 * l_count + 4 * d_count
+        added = start
+        for bits in samples:
+            wrapped = context_wrap(
+                bits,
+                left_tautologies=l_count,
+                double_nots=d_count,
+            )
+            self.assertEqual(len(wrapped), len(bits) + added)
+            self.assertEqual(wrapped[start : start + len(bits)], bits)
+            self.assertEqual(parse_formula(bits) is None, parse_formula(wrapped) is None)
+            if parse_formula(bits) is not None:
+                for assignment in ({1: False, 7: False}, {1: True, 7: True}):
+                    self.assertEqual(
+                        verify_assignment(bits, assignment),
+                        verify_assignment(wrapped, assignment),
+                    )
+
+    def test_right_context_can_repair_malformed_trailing_token(self) -> None:
+        malformed = self.x + "11"
+        repaired = encode_and(malformed, tautology())
+        self.assertIsNone(parse_formula(malformed))
+        self.assertIsNotNone(parse_formula(repaired))
+        for value in (False, True):
+            self.assertFalse(verify_assignment(repaired, {1: value}))
+
+    def test_context_counts_must_be_nonnegative(self) -> None:
+        with self.assertRaises(ValueError):
+            context_wrap(self.x, left_tautologies=-1)
 
 
 if __name__ == "__main__":

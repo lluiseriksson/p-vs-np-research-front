@@ -1,7 +1,7 @@
 # Canonical SAT encoding SAT-gamma
 
-**Label: PROVED** for unique parsing, NP membership, NP-hardness, and the
-double-negation projection stated below. The separation target remains open.
+**Label: PROVED** for unique parsing, NP membership, NP-hardness, and the exact
+context projections stated below. The separation target remains open.
 
 Fine-grained circuit-size exponents depend on representation. Therefore every
 unqualified `SAT` claim in this repository now means the exact total binary
@@ -90,8 +90,62 @@ length-`m+4t` slice obtained by fixing the first `4t` bits to one.
 This exact self-embedding will be used in GATE-004B. It says nothing about how
 many gates a circuit loses after those prefix bits are fixed.
 
+## ENC-003 — exact prefix formula contexts
+
+Let `V=enc(variable 1)`, so `|V|=3`, and define
+
+`T = OR(V,NOT(V))`.
+
+Then `|T|=10` and `T` is true under every assignment. For arbitrary bits `x`,
+the context
+
+`AND(T,x)`
+
+adds 12 bits. It is valid exactly when `x` is valid and, when valid, has the
+same satisfiability value as `x`. This remains true even if variable
+identifier 1 occurs in `x`, because `T` is a tautology for both values.
+
+For nonnegative integers `l,d`, apply `l` such contexts and then `d`
+double-NOT contexts. The resulting string has length
+
+`|x| + 12l + 4d`.
+
+The source `x` remains a literal contiguous substring beginning at zero-based
+coordinate `12l+4d` and ending at the end of the target. Hence fixing the
+prefix gives an exact coordinate projection of the length-`|x|` slice into the
+longer slice. Structural induction on the context proves both validity
+equivalence and satisfiability equivalence.
+
+The apparently symmetric right context is not exact for this total language.
+Let `x=V 11`, a variable followed by a truncated NOT token. Although `x` is
+malformed, `AND(x,T)` parses as `AND(V,NOT(T))`, a valid unsatisfiable formula.
+Suffix context bits can repair malformed trailing syntax. This counterexample
+is recorded as `GATE-004B-RIGHT-CONTEXT — NO-GO` and is why ENC-003 claims only
+prefix contexts.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix formulas and coordinate projections |
+| Uniform/non-uniform | Uniform prefix-context construction; later circuit application may choose a context non-uniformly |
+| Circuit size | Projection statement only; no circuit gate-loss conclusion |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every binary string and every nonnegative integer pair `(l,d)` |
+| Regime | Exact validity and satisfiability, including malformed-string rejection |
+
+ENC-003 broadens the attainable prefix lengths but does not diversify which
+source coordinates survive. LEMMA-003 separately proves that even a
+hypothetical family of all contiguous placements would not support a generic
+coordinate-coverage averaging argument.
+
 ## Reference implementation
 
-`verification/sat_encoding.py` is an iterative reference parser and evaluator.
-Its tests exercise the grammar and projections, but test success is
+`verification/sat_encoding.py` is an iterative reference parser, evaluator,
+and context constructor. Its tests exercise the grammar and projections, but test success is
 infrastructure evidence, not `FORMALLY VERIFIED` mathematics.
