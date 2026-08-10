@@ -4379,6 +4379,38 @@
       "circuit_size": "No lower bound; a common one-bit interface is unproved and generally absent topologically", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed split topology and Boolean interfaces only",
       "asymptotic_quantifiers": "Every candidate in GATE004AP", "case_regime": "Structural no-go for single-bit reuse; GATE004AP and larger gates remain open",
       "evidence": "proofs/GATE-004AP-single-bit-only.md; docs/no-go-ledger.md NG-093; artifacts/cycle-108-theta-orientation-audit.md"
+    },
+    {
+      "id": "LEMMA129", "label": "PROVED",
+      "statement": "Every theta orientation with exactly two binary split vertices has either two parallel core sources or one source followed by one nested non-source split.",
+      "computational_model": "Acyclic orientations of two-binary-split theta cores", "uniformity": "Every individual remaining theta-core orientation",
+      "circuit_size": "No gate lower bound; exact parallel/nested orientation dichotomy", "circuit_depth": "Unrestricted finite DAG", "fan_in": "Original AND/OR two and NOT one; core degree at most three", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta topology only",
+      "asymptotic_quantifiers": "Every theta orientation in GATE004AP", "case_regime": "Exact topology theorem; not a Boolean lower bound or terminal result",
+      "evidence": "proofs/LEMMA-129-two-split-theta-dichotomy.md; artifacts/cycle-109-parallel-theta-exclusion.md"
+    },
+    {
+      "id": "LEMMA130", "label": "PROVED",
+      "statement": "No fixed-W_6 theta circuit with two parallel core sources and exactly three NOT gates exists.",
+      "computational_model": "Parallel-source theta-core circuits, independent source formulas, and a NOT-free downstream formula", "uniformity": "Every individual non-uniform parallel-source candidate for fixed W_6",
+      "circuit_size": "Excludes the parallel part of c=2,q=3; all three NOTs would have to lie in source trees", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta topology, one-bit cofactors, and formula inversion",
+      "asymptotic_quantifiers": "Fixed W_6 and every parallel two-source theta circuit with three NOT gates", "case_regime": "Exact orientation-stratum exclusion; nested split remains open",
+      "evidence": "proofs/LEMMA-130-parallel-theta-source-exclusion.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-129-two-split-theta-dichotomy.md; artifacts/cycle-109-parallel-theta-exclusion.md"
+    },
+    {
+      "id": "GATE004AQ", "label": "EXPLORATORY",
+      "statement": "No theta-core circuit with one binary source, one downstream non-source binary split, and exactly three NOT gates computes W_6.",
+      "computational_model": "Nested-split theta-core bicyclic circuits for fixed W_6 with exactly three NOT gates", "uniformity": "Every individual non-uniform final theta orientation",
+      "circuit_size": "Target exclusion of the final c=2,q=3, 31-binary-gate orientation stratum", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta topology and triangular Boolean interfaces",
+      "asymptotic_quantifiers": "Fixed W_6 and every nested theta candidate with three NOT gates", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AQ-nested-theta-exclusion.md; proofs/LEMMA-129-two-split-theta-dichotomy.md; proofs/LEMMA-130-parallel-theta-source-exclusion.md"
+    },
+    {
+      "id": "GATE004AQ-INDEPENDENT-TWO-BIT-ONLY", "label": "NO-GO",
+      "statement": "The nested theta state cannot be treated as an independent second source bit because it depends on the first bit and has different path multiplicity.",
+      "computational_model": "Nested theta split and attempted independent two-bit factorization", "uniformity": "Every individual non-uniform nested theta candidate",
+      "circuit_size": "No lower bound; parallel-source NOT allocation cannot be imported", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Sequential Boolean interfaces and directed path regions",
+      "asymptotic_quantifiers": "Every candidate in GATE004AQ", "case_regime": "Structural no-go for independent-bit reuse; GATE004AQ and larger gates remain open",
+      "evidence": "proofs/GATE-004AQ-independent-two-bit-only.md; docs/no-go-ledger.md NG-094; artifacts/cycle-109-parallel-theta-exclusion.md"
     }
   ]
 }

@@ -16,6 +16,9 @@ nested, with a source split feeding a later non-source split. A valid proof
 must derive the corresponding two-bit or sequential-bit functional interface
 before applying clause cofactor counts.
 
+LEMMA-129 makes this dichotomy exact, and LEMMA-130 excludes the parallel
+source case. GATE-004AQ is the sole remaining nested orientation.
+
 ## Model card
 
 | Field | Value |

@@ -1878,3 +1878,24 @@ fan-in two and NOT fan-in one; directed split topology and Boolean cofactors;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Single-bit collapse is closed, while two-bit/sequential GATE-004AP and
 GATE-004AO/AN/AL/AK/AJ/AI/AH/AG/AE remain open.
+
+## NG-094 — treat the nested theta state as an independent second bit
+
+**Label: NO-GO**
+
+Scope: reuse LEMMA-130 by writing the two split values as independent
+functions `z_1(X_1)` and `z_2(X_2)`, then apply the one-bit cofactor dichotomy
+to each group separately.
+
+Failure: in the nested orientation the later split lies downstream of the
+first and has the form `z_2=H(z_1,X_2)`. It may therefore carry information
+about `X_1`, and its NOT gates have different unfolding multiplicities from
+those in the first source tree. Treating `z_2` as independent of `X_1` assumes
+both the variable partition and the NOT allocation that must be proved.
+
+Model: every pruned non-uniform nested theta candidate for fixed `W_6` with
+31 binary gates and three NOT gates; unrestricted depth; AND/OR fan-in two
+and NOT fan-in one; sequential Boolean interfaces and directed path regions;
+no randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. Independent-two-bit reuse is closed, while sequential GATE-004AQ and
+GATE-004AP/AO/AN/AL/AK/AJ/AI/AH/AG/AE remain open.

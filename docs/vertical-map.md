@@ -173,7 +173,11 @@ Adjacent collision-aware active branch:
                              + LEMMA-128 (the single ternary-source orientation is impossible)
                              <- GATE-004AP (active orientation brick): exclude two binary splits
                                 - GATE-004AP-SINGLE-BIT-ONLY (no-go: no proved common one-bit cut)
-                                <- parallel two-bit versus nested sequential interface (next attackable brick)
+                                + LEMMA-129 (two binary splits are parallel sources or nested)
+                                + LEMMA-130 (parallel sources are impossible)
+                                <- GATE-004AQ (active final theta orientation): exclude nested split
+                                   - GATE-004AQ-INDEPENDENT-TWO-BIT-ONLY (no-go: second state depends on first)
+                                   <- sequential cofactor/path-region theorem (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
