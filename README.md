@@ -580,6 +580,13 @@ so five patterns with at least three zeros are absent and the sole long option
 can add only one. A linear common signed width-four packing survives.
 GATE-004AC-WIDTH3-ONLY is `NO-GO`; GATE-004AD opens the three-block repair.
 
+The sixty-ninth cycle audits the first three-block alphabet exhaustively and
+finds a stable failure. LEMMA-073 proves that identifiers 1 through 68 cannot
+realize `1110` on offsets `{0,21,25,26}` with three nonoverlapping blocks.
+Translations spaced by eight are disjoint, and the six-one long option repairs
+at most two, leaving a linear width-four packing. The identifier-68
+specialization is `NO-GO`; GATE-004AD remains open for a richer alphabet.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

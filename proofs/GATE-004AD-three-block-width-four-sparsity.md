@@ -13,6 +13,11 @@ attack is a finite four-coordinate translation certificate analogous to
 LEMMA-071. A surviving unbounded matching for every fixed alphabet falsifies
 the gate.
 
+The complete identifier-1-through-68 audit finds a stable failure, isolated
+in LEMMA-073. The next attack must enrich the alphabet (the first missing
+patterns have explicit witnesses among larger identifiers) and rerun the
+finite type reduction with the resulting larger block-length bound.
+
 ## Model card
 
 | Field | Value |

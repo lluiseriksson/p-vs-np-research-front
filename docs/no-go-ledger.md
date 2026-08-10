@@ -1279,3 +1279,13 @@ per slot when options contain at most two bounded blocks plus `A_rho`.
 Therefore the proved width-three hitting set cannot be extrapolated to higher
 width. This is an incidence no-go only: the circuit cost of the width-four
 tail, GATE-004AC, and P versus NP remain open.
+
+## NG-062 — the identifier-68 alphabet lifts unchanged to width four
+
+**Label: NO-GO**
+
+LEMMA-073 certifies that three nonoverlapping identifier-1-through-68 blocks
+cannot realize `1110` on offsets `{0,21,25,26}`. Disjoint translations leave
+a linear common signed width-four packing after `A_rho` repairs at most two.
+This closes only that fixed alphabet; richer GATE-004AD constructions and P
+versus NP remain open.

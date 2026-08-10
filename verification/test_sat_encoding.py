@@ -4,6 +4,7 @@ import itertools
 import unittest
 
 import sat_encoding
+from quartet_type_audit import reached_masks
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
@@ -811,6 +812,10 @@ class FormulaEncodingTests(unittest.TestCase):
 
     def test_identifier_68_alphabet_covers_all_interior_triple_types(self) -> None:
         self.assertEqual(identifier_68_two_block_interior_failures(), ())
+
+    def test_identifier_68_three_block_quartet_obstruction(self) -> None:
+        reached = reached_masks((36, 57, 61, 62))
+        self.assertFalse((reached >> 8) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
