@@ -43,6 +43,7 @@ truth. Each row has exactly one label.
 | INFRA-036 | PROVED | Cycle-036 one-hot shattering no-go and compressed-context gate reproduce from a cold clone | `artifacts/cold-clone-9137e8c.md` | None |
 | INFRA-037 | PROVED | Cycle-037 fresh-conjunction identity and compressed-cube counterexample reproduce from a cold clone | `artifacts/cold-clone-b2535a5.md` | None |
 | INFRA-038 | PROVED | Cycle-038 six-case SAT halo semantics and neutral-duplication no-go reproduce from a cold clone | `artifacts/cold-clone-0ca57cb.md` | None |
+| INFRA-039 | PROVED | Cycle-039 full radius-one halo countermodel and radius-two gate reproduce from a cold clone | `artifacts/cold-clone-2e50afc.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
