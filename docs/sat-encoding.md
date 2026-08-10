@@ -407,6 +407,95 @@ every sufficiently large parent length, not only on a congruence subsequence.
 | Asymptotic quantifiers | Every valid source avoiding identifier 1, every forced identifier other than 1, and every integer increase `d>=12`; every sufficiently large `n` in the `0<c<1` corollary |
 | Regime | Worst-case exact satisfiability preservation; total-language parser remains exact |
 
+## ENC-011 — formula-code Hamming-weight parity
+
+**Label: PROVED**
+
+For a valid SAT-gamma formula `F`, let `L(F)` be its number of variable leaves
+and let the leaf identifiers, with multiplicity, be `j_1,...,j_L`. Then
+
+`weight(F) = L(F)-1 + sum_i popcount(j_i) (mod 2)`,
+
+where `weight` is the number of one bits in the complete encoding.
+
+Indeed, a rooted unary/binary formula tree with `L` leaves has exactly `L-1`
+binary nodes. Every AND token `01` and OR token `10` contributes one one-bit;
+every NOT token `11` contributes two and vanishes modulo two. A variable token
+`00 gamma(j)` contributes the Hamming weight of `gamma(j)`, which is exactly
+the popcount of the binary representation of `j`. Summing proves the formula.
+
+Two equal-length formula encodings with the same multiset of leaf identifiers
+therefore have equal weight parity and must be at even Hamming distance. More
+strongly, every formula using only identifier 1 has odd weight, because
+
+`(L-1)+L popcount(1)=2L-1`.
+
+Thus no two identifier-1 formulas—of any semantics or length—are at Hamming
+distance one. This proves the unbounded absence suggested by EXP-001, but the
+finite experiment remains separately labeled `NUMERICAL` and is not promoted.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma unary/binary parse trees and binary encodings |
+| Uniform/non-uniform | Uniform combinatorial identity |
+| Circuit size | Not applicable; encoding distance theorem only |
+| Circuit depth | Arbitrary formula depth |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Parity arithmetic over integers modulo two only |
+| Asymptotic quantifiers | Every valid finite SAT-gamma formula; every pair with the stated leaf-multiset condition |
+| Regime | Exact syntax-level theorem; no circuit lower-bound implication |
+
+## ENC-012 — the assignment witnesses are an affine subspace
+
+**Label: PROVED**
+
+Fix a same-bit-length identifier block `J` of size `R`, a fixed conjunction
+tree, and the ENC-009 formulas `Phi_a` indexed by `a in {0,1}^J`. Let `y_0`
+be the encoding for the all-zero assignment. For each `j`, define
+
+`d_j = y_0 XOR y_{e_j}`,
+
+where `e_j` is the unit assignment at `j`. Then
+
+`y_a = y_0 XOR XOR_{j:a_j=1} d_j`.
+
+The support of `d_j` lies entirely inside the fixed substring occupied by the
+literal gadget `A_{j,a_j}`. These supports are pairwise disjoint, and every
+`d_j` is nonzero because `A_{j,0}` and `A_{j,1}` are different encodings.
+Hence the directions are linearly independent over `F_2`, and the witness set
+is an exact `R`-dimensional affine subspace of the suffix cube.
+
+ENC-010 applies the same fixed padding wrapper to every witness. The wrapper
+bits cancel in every XOR difference, so the affine-subspace statement persists
+at every sufficiently large exact suffix length. On this affine subspace,
+
+`SAT-gamma(R_{j,b} y_a)=1 iff b=a_j`.
+
+Thus the conditioned-output matrix is the exact complementary INDEX/XNOR
+matrix on an affine subspace, not merely an arbitrary collection of `2^R`
+witness strings.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma assignment formulas, coordinate XOR geometry, and all conditioned identifier outputs |
+| Uniform/non-uniform | Uniform explicit affine embedding |
+| Circuit size | No lower bound; `R` independent affine directions inside the suffix input cube |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Affine geometry over `F_2` only; Boolean circuit model remains unchanged |
+| Asymptotic quantifiers | Every finite same-bit-length identifier block, every assignment vector, and every common ENC-010 padding length |
+| Regime | Worst-case exact total-language evaluation on an affine witness subspace |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

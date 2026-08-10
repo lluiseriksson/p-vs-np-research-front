@@ -545,3 +545,23 @@ depth in the lower bound; fan-in-two AND/OR and fan-in-one NOT; no randomness,
 advice, oracle, field, promise, or distribution. The example is not SAT-gamma
 and has only one restriction pair, so the no-go leaves open a theorem using
 SAT's full multi-identifier trace relations.
+
+## NG-028 — one-bit polarity gadget with fixed leaf data
+
+**Label: NO-GO**
+
+Scope: upgrade ENC-009 to a coordinate subcube by finding two valid
+equal-length polarity gadgets at Hamming distance one while keeping the same
+leaf-identifier multiset, or by using only identifier 1.
+
+Failure: ENC-011 proves that the encoding-weight parity is determined by the
+leaf multiset. Equal leaf data therefore forces even Hamming distance. Every
+identifier-1 formula has odd encoding weight regardless of its tree, so no two
+such formulas can differ in exactly one bit.
+
+Model: exact SAT-gamma syntax and Hamming geometry; arbitrary formula depth;
+no circuit restriction, randomness, advice, oracle, field computation,
+promise, or distribution. The no-go does not exclude one-bit gadgets using
+different auxiliary leaf multisets. ENC-012 shows that a coordinate cube is
+unnecessary for the current witnesses: they already form an affine subspace
+with multi-bit independent directions.

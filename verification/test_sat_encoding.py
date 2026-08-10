@@ -294,6 +294,60 @@ class FormulaEncodingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             satisfiability_padding_wrap(self.x, 11)
 
+    def test_assignment_witnesses_form_affine_subspace(self) -> None:
+        identifiers = (4, 5, 6, 7)
+        zero_assignment = {identifier: False for identifier in identifiers}
+        base = assignment_conjunction(zero_assignment)
+
+        def xor(left: str, right: str) -> str:
+            self.assertEqual(len(left), len(right))
+            return "".join("1" if a != b else "0" for a, b in zip(left, right))
+
+        directions = {}
+        occupied: set[int] = set()
+        for identifier in identifiers:
+            unit = dict(zero_assignment)
+            unit[identifier] = True
+            direction = xor(base, assignment_conjunction(unit))
+            support = {i for i, bit in enumerate(direction) if bit == "1"}
+            self.assertTrue(support)
+            self.assertTrue(occupied.isdisjoint(support))
+            occupied.update(support)
+            directions[identifier] = direction
+
+        for values in itertools.product((False, True), repeat=len(identifiers)):
+            assignment = dict(zip(identifiers, values))
+            reconstructed = list(base)
+            for identifier, value in assignment.items():
+                if value:
+                    reconstructed = [
+                        "1" if bit != delta else "0"
+                        for bit, delta in zip(reconstructed, directions[identifier])
+                    ]
+            self.assertEqual("".join(reconstructed), assignment_conjunction(assignment))
+
+        padded_base = satisfiability_padding_wrap(base, 17)
+        padded_directions = {}
+        for identifier in identifiers:
+            unit = dict(zero_assignment)
+            unit[identifier] = True
+            padded_directions[identifier] = xor(
+                padded_base,
+                satisfiability_padding_wrap(assignment_conjunction(unit), 17),
+            )
+        self.assertEqual(
+            satisfiability_padding_wrap(
+                assignment_conjunction({4: True, 5: False, 6: True, 7: False}),
+                17,
+            ),
+            "".join(
+                str((int(base_bit) + int(d4) + int(d6)) % 2)
+                for base_bit, d4, d6 in zip(
+                    padded_base, padded_directions[4], padded_directions[6]
+                )
+            ),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

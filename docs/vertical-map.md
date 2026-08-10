@@ -364,6 +364,18 @@ distance-two pair occurs at length 15. This bounded result receives no
 asymptotic credit. A coordinate-subcube route remains open only with a proof
 or a gadget beyond the searched range.
 
+ENC-011 replaces that bounded absence with a proof for the fixed-leaf route:
+formula-code weight parity forces even Hamming distance whenever the leaf
+multiset is fixed, and every identifier-1 formula has odd weight.
+`GATE-004L-ONEBIT-FIXED-LEAVES — NO-GO` records the exact scope.
+
+The failed one-bit search also reveals that a coordinate cube is unnecessary.
+ENC-012 proves that the existing ENC-009 witnesses already form an
+`|J|`-dimensional affine subspace with disjoint XOR directions. Conditioned SAT
+restricts to the exact complementary INDEX matrix on that subspace. The next
+GATE-004L attack may use this affine geometry, but no implication to labelwise
+loss is currently claimed.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

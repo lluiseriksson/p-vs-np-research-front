@@ -234,13 +234,20 @@ equal-length `x_1`/`NOT x_1` encodings at Hamming distance one through length
 31; the first distance-two pair is at length 15. The result is labeled
 `NUMERICAL` and cannot close the coordinate-subcube question.
 
+The twenty-ninth cycle proves the underlying parity invariant. Formula-code
+weight parity excludes every one-bit pair with fixed leaf data, globally.
+More importantly, ENC-012 proves that the existing assignment witnesses
+already form an exact affine subspace with independent disjoint directions;
+conditioned SAT realizes complementary INDEX on that subspace. This strengthens
+the SAT-specific input to GATE-004L but does not itself imply gate loss.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 67% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, a reproducible bounded literal-subcube search, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 68% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length affine complementary-INDEX tests, a reproducible bounded literal search plus global weight-parity theorem, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The bounded gadget search is numerical only; no coordinate-subcube theorem, compensating multi-pair bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | The affine complementary-INDEX embedding is exact, but no transfer to labelwise bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

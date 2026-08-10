@@ -1581,6 +1581,57 @@
       "asymptotic_quantifiers": "Formula lengths 3 through 31 only; variable identifier exactly 1",
       "case_regime": "Finite exhaustive numerical search; no asymptotic or circuit-lower-bound implication",
       "evidence": "experiments/search_literal_subcube.py; artifacts/literal-subcube-search-31.json; verification/test_experiments.py"
+    },
+    {
+      "id": "ENC-011",
+      "label": "PROVED",
+      "statement": "The Hamming-weight parity of every SAT-gamma formula encoding equals its binary-node count plus the sum of leaf-identifier popcounts, so fixed leaf data forces even pairwise Hamming distance.",
+      "computational_model": "Exact SAT-gamma unary/binary parse trees and binary encodings",
+      "uniformity": "Uniform combinatorial identity",
+      "circuit_size": "Not applicable; encoding-distance theorem only",
+      "circuit_depth": "Arbitrary formula depth",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Parity arithmetic over integers modulo two only",
+      "asymptotic_quantifiers": "Every valid finite formula and every pair with the stated leaf-multiset condition",
+      "case_regime": "Exact syntax-level theorem; no circuit lower-bound implication",
+      "evidence": "docs/sat-encoding.md"
+    },
+    {
+      "id": "GATE-004L-ONEBIT-FIXED-LEAVES",
+      "label": "NO-GO",
+      "statement": "Equal-length polarity gadgets with the same leaf-identifier multiset, including all identifier-1-only gadgets, cannot differ in exactly one bit.",
+      "computational_model": "Exact SAT-gamma formula encodings and Hamming geometry",
+      "uniformity": "Uniform syntax-level obstruction",
+      "circuit_size": "Not applicable",
+      "circuit_depth": "Arbitrary formula depth",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Parity invariant only",
+      "asymptotic_quantifiers": "Every equal-length pair with fixed leaf multiset; every pair of identifier-1-only formulas",
+      "case_regime": "Exact encoding-route obstruction; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md ENC-011; docs/no-go-ledger.md NG-028"
+    },
+    {
+      "id": "ENC-012",
+      "label": "PROVED",
+      "statement": "The equal-length complete-assignment SAT-gamma witnesses form an injective affine subspace with disjoint nonzero directions, on which conditioned outputs are the complementary INDEX matrix.",
+      "computational_model": "Exact SAT-gamma assignment formulas, coordinate XOR geometry, and all conditioned identifier outputs",
+      "uniformity": "Uniform explicit affine embedding",
+      "circuit_size": "No lower bound; R independent affine directions inside the suffix cube",
+      "circuit_depth": "Unrestricted in later applications",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine geometry over F_2 only; Boolean circuit model unchanged",
+      "asymptotic_quantifiers": "Every finite same-bit-length identifier block, every assignment vector, and every common exact-length padding",
+      "case_regime": "Worst-case exact total-language evaluation on an affine witness subspace",
+      "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
     }
   ]
 }
