@@ -3955,6 +3955,22 @@
       "circuit_size": "No lower bound", "circuit_depth": "Later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
       "asymptotic_quantifiers": "The claimed all-gap reduction is refuted; the specific 92-identifier alphabet remains open outside the audited subdomain", "case_regime": "Structural proof-method no-go; no SAT or terminal conclusion",
       "evidence": "proofs/GATE-004AD-bound-gap-reduction-only.md; proofs/LEMMA-101-unsafe-bound-gap-reduction.md; docs/no-go-ledger.md NG-080"
+    },
+    {
+      "id": "INFRA092", "label": "PROVED",
+      "statement": "The corrected quartet shard contract seals production parameters and results and accepts only exact nonoverlapping coverage of every residue and first-gap interval.",
+      "computational_model": "Deterministic exact quartet auditor, sealed JSON shards, and fail-closed domain merger", "uniformity": "Uniform fixed production configuration and deterministic partition; no circuit selected",
+      "circuit_size": "No lower bound; verification infrastructure only", "circuit_depth": "Irrelevant to the shard contract", "fan_in": "Underlying encoded contexts use AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and SHA-256 artifact sealing",
+      "asymptotic_quantifiers": "Exact production domain of four residues and three gaps in 1 through 139; merger coverage checked for every shard interval", "case_regime": "Verification infrastructure; production mathematical result not executed or inferred",
+      "evidence": "verification/corrected_quartet_shards.py; verification/test_corrected_quartet_shards.py; artifacts/cycle-092-corrected-quartet-shards.md"
+    },
+    {
+      "id": "GATE004AD-CORRECTED-FULL-AUDIT", "label": "EXPLORATORY",
+      "statement": "The 92-identifier alphabet realizes every ordinary nonzero quartet mask on all 10,742,476 safely reduced types.",
+      "computational_model": "Exact three-block SAT-gamma neutral contexts and four-coordinate zero-mask incidence", "uniformity": "Uniform fixed 92-identifier alphabet, placements, shard partition, and parameters; no circuit selected",
+      "circuit_size": "No lower bound; target 142s common-clause packing bound downstream", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Exactly four residues and three gaps in 1 through 139; LEMMA-102 supplies the all-interior reduction if zero failures are established", "case_regime": "Falsifiable finite witness-construction gate; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-corrected-full-audit.md; verification/corrected_quartet_shards.py; artifacts/cycle-092-corrected-quartet-shards.md"
     }
   ]
 }

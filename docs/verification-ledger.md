@@ -328,6 +328,8 @@ truth. Each row has exactly one label.
 | LEMMA-101 | PROVED | Four-alignment and a maximum length `B` do not justify truncating every large gap to `{B,...,B+3}` | `proofs/LEMMA-101-unsafe-bound-gap-reduction.md`; exact regression test | Structural counterexample only |
 | LEMMA-102 | PROVED | Truncating gaps at the safe threshold `{2B,...,2B+3}` preserves every obtainable zero mask | `proofs/LEMMA-102-safe-double-bound-gap-reduction.md`; human proof | Geometry-only full reduction |
 | GATE-004AD-BOUND-GAP-REDUCTION-ONLY | NO-GO | The one-block-length gap truncation cannot certify GATE-004AD | `proofs/GATE-004AD-bound-gap-reduction-only.md`; LEMMA-101; NG-080 | Corrected domain or SAT-specific normal form required |
+| INFRA-092 | PROVED | Corrected quartet shards seal engine/configuration/results and merge only exact nonoverlapping full-domain coverage | `verification/corrected_quartet_shards.py`; five contract tests; `artifacts/cycle-092-corrected-quartet-shards.md` | Production sweep not run locally |
+| GATE-004AD-CORRECTED-FULL-AUDIT | EXPLORATORY | Audit every one of the 10,742,476 safe reduced quartet types for the 92-identifier alphabet | `proofs/GATE-004AD-corrected-full-audit.md`; shard contract | Requires 556 external shards; zero failures or exact counterexample pending |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

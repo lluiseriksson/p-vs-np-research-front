@@ -739,11 +739,18 @@ sparsity remains proved. The corrected LEMMA-075 audit is not run locally and
 width-four sparsity reopens. A separate 1,792-type length-116 targeted query
 found no obstruction and is labeled only `NUMERICAL`.
 
+The ninety-second cycle makes the corrected width-four gate externally
+executable without weakening it. A fixed 556-shard contract covers exactly
+all `10,742,476` safe quartet types, seals each alphabet/configuration/result,
+and fails closed on gaps, overlaps, tampering, or incomplete coverage. Tiny
+local contract tests pass; the production sweep is not run on Windows.
+GATE-004AD-CORRECTED-FULL-AUDIT is the next falsifiable brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 found and corrected an unsafe finite gap reduction; the width-three certificate survives the corrected domain, while the width-four certificate must be rerun or replaced. Formal foundations and broader independent review remain immature. |
+| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 corrected an unsafe finite gap reduction; Cycle 092 adds a sealed fail-closed external shard contract for the reopened width-four audit. The production result, formal foundations, and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Two-block contexts have a corrected width-three sparsity proof. Width-four sparsity has reopened, width-five/overlapping/nonclausal predicates remain unresolved, and no unrestricted SAT circuit lower bound is proved. |
 

@@ -122,6 +122,7 @@ Adjacent collision-aware active branch:
      ! LEMMA-075 (exploratory: old reduced-domain certificate only)
      - GATE-004AD-BOUND-GAP-REDUCTION-ONLY (no-go by LEMMA-101)
      + LEMMA-102 (safe `2B..2B+3` finite reduction)
+     ! GATE-004AD-CORRECTED-FULL-AUDIT (active 10,742,476-type external gate)
   <- GATE-004AE (contingent positive brick): width-four-sparse rigidity
      - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
