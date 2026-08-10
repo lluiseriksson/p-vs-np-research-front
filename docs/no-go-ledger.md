@@ -1834,7 +1834,7 @@ gates, three NOT gates, and cycle rank two; unrestricted depth; AND/OR fan-in
 two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Path-counting alone is closed. GATE-004AN was later proved by
-core/orientation analysis; GATE-004AL beyond size six and
+core/orientation analysis; GATE-004AL beyond size eight and
 GATE-004AK/AJ/AI/AH/AG/AE remain open.
 
 ## NG-092 — one-bit articulation factorization excludes the theta core
@@ -1856,7 +1856,7 @@ binary gates and three NOT gates; unrestricted depth; AND/OR fan-in two and
 NOT fan-in one; undirected vertex connectivity and Boolean cofactors; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Articulation-only reuse is closed, while GATE-004AO/AN were later
-proved by orientation analysis; GATE-004AL beyond size six and the larger
+proved by orientation analysis; GATE-004AL beyond size eight and the larger
 gates remain open.
 
 ## NG-093 — collapse the two theta splits to one intermediary bit
@@ -1879,7 +1879,7 @@ Model: every pruned non-uniform two-binary-split theta candidate for fixed
 fan-in two and NOT fan-in one; directed split topology and Boolean cofactors;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Single-bit collapse is closed, while GATE-004AP/AO/AN were later
-proved by separate parallel/nested analysis; GATE-004AL beyond size six and
+proved by separate parallel/nested analysis; GATE-004AL beyond size eight and
 the larger gates remain open.
 
 ## NG-094 — treat the nested theta state as an independent second bit
@@ -1902,7 +1902,7 @@ and NOT fan-in one; sequential Boolean interfaces and directed path regions;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Independent-two-bit reuse is closed, while sequential GATE-004AQ and
 GATE-004AP/AO/AN were later proved by first-source restriction; GATE-004AL
-beyond size six and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+beyond size eight and GATE-004AK/AJ/AI/AH/AG/AE remain open.
 
 ## NG-095 — total path multiplicity for the tricyclic septet stratum
 
@@ -1921,5 +1921,26 @@ Model: every pruned non-uniform candidate for fixed `W_7` with 37 binary
 gates, three NOT gates, and cycle rank three; unrestricted depth; AND/OR
 fan-in two and NOT fan-in one; formula unfolding and Boolean-lattice
 inversion; no randomness, advice, oracle, promise, distribution, or algebraic
-circuit model. Path multiplicity alone is closed, while GATE-004AR and Hall
-beyond size six remain open.
+circuit model. Path multiplicity alone is closed. GATE-004AR was later proved
+by the structural rank-three reduction LEMMA-135; Hall beyond size eight and
+the larger gates remain open.
+
+## NG-096 — total path multiplicity for the tetracyclic nonet stratum
+
+**Label: NO-GO**
+
+Scope: unfold a fixed `W_9` circuit with cycle rank four and exactly four NOT
+gates, then combine the generic at-most-sixteen path multiplicity per gate
+with the nine-NOT formula inversion lower bound.
+
+Failure: the constraints `1<=r_j<=16` and `sum_j r_j>=9` admit patterns such
+as `(1,1,1,6)` and `(2,2,2,3)`. They contain no information about rank-four
+blocks, source deletion, or separators and therefore do not exclude the exact
+residual stratum.
+
+Model: every pruned non-uniform candidate for fixed `W_9` with 48 binary
+gates, four NOT gates, and cycle rank four; unrestricted depth; AND/OR fan-in
+two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
+randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. Path multiplicity alone is closed, while GATE-004AS and Hall beyond
+size eight remain open.

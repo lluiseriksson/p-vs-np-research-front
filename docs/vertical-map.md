@@ -181,9 +181,15 @@ Adjacent collision-aware active branch:
                        + LEMMA-132 (dependency-cone Hall expansion through size six)
                        + LEMMA-133 (two cycles save at most one NOT for any `W_m`)
                        + LEMMA-134 (a deficient septet is exactly tricyclic with three NOTs)
-                       <- GATE-004AR (active septet brick): exclude tricyclic three-NOT `W_7`
+                       + GATE-004AR (proved: no tricyclic three-NOT `W_7`)
                           - GATE-004AR-PATH-MULTIPLICITY-ONLY (no-go: seven unfolded occurrences are feasible)
-                          <- connected tricyclic-kernel classification (next attackable brick)
+                          + LEMMA-135 (three cycles save at most two NOTs for any `W_m`)
+                       + LEMMA-136 (dependency-cone Hall expansion through size seven)
+                       + LEMMA-137 (dependency-cone Hall expansion through size eight)
+                       + LEMMA-138 (a deficient nonet is exactly tetracyclic with four NOTs)
+                       <- GATE-004AS (active nonet brick): exclude tetracyclic four-NOT `W_9`
+                          - GATE-004AS-PATH-MULTIPLICITY-ONLY (no-go: nine unfolded occurrences are feasible)
+                          <- rank-four block/source reduction (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

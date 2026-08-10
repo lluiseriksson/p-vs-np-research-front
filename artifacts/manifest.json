@@ -503,6 +503,10 @@
       "sha256": "946e78c6432b2f79a58a31fdfb242d4615b7fc917e642a01d39b4680d1f741c9"
     },
     {
+      "path": "artifacts/cycle-112-tricyclic-reduction-audit.md",
+      "sha256": "02590dae82cde762f24429f148b3f3d2c4729ca26b35d0229e6554b8bef344ca"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -528,7 +532,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "55c09999f6736b90519dd8d944ea27325c1f9e327fad5d59db4e8213648e2520"
+      "sha256": "542de76541cbdb205985d086414454f326f330073c35ed6604eff9478b34b15b"
     },
     {
       "path": "docs/problem-statement.md",
@@ -536,7 +540,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "05cf142297dd5ca8de32cf6db73d0e353fd94f13479f4e8f6e6e6308966e7f19"
+      "sha256": "e14a60bb37cfb4b06ba43c991a977ea4cfd4baab0e1d78dd87d8fe685cef47ec"
     },
     {
       "path": "docs/result-labels.md",
@@ -640,11 +644,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "e9d6a396d43531f98f57b67d92bb8171b360a7489843cf16efd688581163df04"
+      "sha256": "3949f984a0d0c4e3f3b29df39c4a03a723fb22c3fae82cd43611c17c95fe23d3"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ef30f3bc76641a8026d70267491184e9a1833c549eb24ac3feafed9c0e0d12e5"
+      "sha256": "d4c7a55448ebfef22d4c81641b0ec941f5bbc5182229e9b26344f0f489ee6fac"
     },
     {
       "path": "experiments/README.md",
@@ -840,7 +844,7 @@
     },
     {
       "path": "proofs/GATE-004AL-dependency-cone-Hall.md",
-      "sha256": "d98eaba0ab6dfec11f1fcca085e5b97dda36bc9dbec781663a0db058749b9397"
+      "sha256": "04258fed704cb2b2f5ff3f0b90498e9ec8ad8be906533f6f5602a0e93a2e417a"
     },
     {
       "path": "proofs/GATE-004AL-LEMMA111-only.md",
@@ -888,11 +892,19 @@
     },
     {
       "path": "proofs/GATE-004AR-path-multiplicity-only.md",
-      "sha256": "666eaaf266177093925931626c82ed2e1759f699612dd4c90a619e05cab09b8f"
+      "sha256": "99b7461e7bfbfb146aab723ce085dd3532852071ebe77dfe39890e24ac732b4a"
     },
     {
       "path": "proofs/GATE-004AR-tricyclic-three-NOT-exclusion.md",
-      "sha256": "c7f147093671b962d731fc532f7a6e3661424e685976d4fd5ea47eee0d83a2a4"
+      "sha256": "b9f522ff2cd37d972ad4ce9513f946f26292c3b702eaa97ee2f254f1c9825bee"
+    },
+    {
+      "path": "proofs/GATE-004AS-path-multiplicity-only.md",
+      "sha256": "19df6d89676023a81195271433bb1a82f6f9baff29bf7e4e76f832ce20736c40"
+    },
+    {
+      "path": "proofs/GATE-004AS-tetracyclic-four-NOT-exclusion.md",
+      "sha256": "d74c65b2d637430284591ca53c15de3438c24c0fa0b232462882b4a5cffbe7e1"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1595,8 +1607,24 @@
       "sha256": "98c05ed2d77eb77bd336118901a3af8db987f767fd497050c9d5e69909b1b297"
     },
     {
+      "path": "proofs/LEMMA-135-tricyclic-negation-lower-bound.md",
+      "sha256": "4692714c8d4e33990eb4a6ddba982bef4161f2400dcf66ebf242efabd4a4ab2f"
+    },
+    {
+      "path": "proofs/LEMMA-136-dependency-cone-Hall-through-seven.md",
+      "sha256": "0792e79f67ac1445b2c17ad7de75b46460e9db14a868b231a258821afcd50b6c"
+    },
+    {
+      "path": "proofs/LEMMA-137-dependency-cone-Hall-through-eight.md",
+      "sha256": "00b4fca15811b6356ce636b8da941fa61c43efc32b521a0e8a8d203ce413ed43"
+    },
+    {
+      "path": "proofs/LEMMA-138-deficient-nonet-exact-stratum.md",
+      "sha256": "fc4c4e2e87d12f39acbcc9447388a157c86637625134a3eb846e503c5dfe95ea"
+    },
+    {
       "path": "README.md",
-      "sha256": "53258811bb9ce95c8e38fca6fe205d73bd57ec670ee53053d2c394974c792934"
+      "sha256": "55f4c1e96e6296a377e703415b2d2cf27c942bfeef1235ebd15c0faf4c1f6fbf"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1608,7 +1636,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3d55f0e1052c971beef0f283d940ee0c3bbf561183e2c609fab2189a690b04a4"
+      "sha256": "5816ea4b165a4960847b9b9cc9a591934850ec186b3dc28e17c8ac2673b05772"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

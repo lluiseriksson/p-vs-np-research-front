@@ -14,8 +14,8 @@ and `(2,2,3)`. Markov's circuit bound is also exactly three. Therefore the
 generic path-count and inversion inequalities do not contradict `c=3,q=3`.
 
 This method no-go neither constructs such a circuit nor refutes GATE-004AR.
-Further progress requires topology-sensitive information about how the three
-cycles share source regions, separators, or NOT gates.
+GATE-004AR was later proved by the topology-sensitive LEMMA-135; multiplicity
+alone remains insufficient.
 
 ## Model card
 
@@ -31,4 +31,4 @@ cycles share source regions, separators, or NOT gates.
 | Oracle access | None |
 | Field/algebraic model | Binary cycle space and Boolean-lattice inversion; no algebraic circuit model |
 | Asymptotic quantifiers | Fixed `W_7` and every cycle-rank-three candidate with three NOT gates |
-| Regime | Quantitative no-go for path multiplicity alone; GATE-004AR remains open |
+| Regime | Quantitative no-go for path multiplicity alone; GATE-004AR was proved by a separate structural argument |

@@ -45,8 +45,10 @@ the first open case of this gate.
 
 LEMMA-133 proves the general bicyclic NOT lower bound `q>=m-1`. LEMMA-134
 therefore forces any deficient septet into the exact tricyclic three-NOT
-stratum. GATE-004AR is the active size-seven exclusion; path multiplicity
-alone is recorded as a no-go.
+stratum. LEMMA-135 excludes it, proving GATE-004AR and LEMMA-136. The same
+rank-three bound plus Markov proves size eight directly in LEMMA-137.
+LEMMA-138 forces any deficient nonet into exact `c=4,q=4`; GATE-004AS is the
+active size-nine exclusion. Path multiplicity alone is recorded as a no-go.
 
 ## Model card
 

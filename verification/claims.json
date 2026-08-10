@@ -4313,7 +4313,7 @@
       "statement": "Bicyclic unfolding path multiplicity cannot exclude c=2,q=3 because three multiplicities between one and four can sum to the required six in several ways.",
       "computational_model": "Bicyclic formula unfolding and NOT path multiplicities for fixed W_6", "uniformity": "Every individual non-uniform candidate in the exact c=2,q=3 stratum",
       "circuit_size": "Three parent NOT gates; unfolded requirement only six total occurrences with multiplicity at most four each", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
-      "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN was proved by another route, while GATE004AL beyond size six remains open",
+      "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN was proved by another route, while GATE004AL beyond size eight remains open",
       "evidence": "proofs/GATE-004AN-path-multiplicity-only.md; docs/no-go-ledger.md NG-091; artifacts/cycle-106-deficient-sextet-stratum.md"
     },
     {
@@ -4445,20 +4445,68 @@
       "evidence": "proofs/LEMMA-134-deficient-septet-exact-stratum.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; artifacts/cycle-111-septet-stratum-audit.md"
     },
     {
-      "id": "GATE004AR", "label": "EXPLORATORY",
+      "id": "GATE004AR", "label": "PROVED",
       "statement": "No cycle-rank-three circuit with exactly three NOT gates computes fixed W_7.",
       "computational_model": "Pruned unrestricted Boolean circuits for fixed W_7 with exact cycle rank three and three NOT gates", "uniformity": "Every individual non-uniform seven-block circuit in the exact stratum",
-      "circuit_size": "Target exclusion of c=3,q=3; 37 binary and 40 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean source and articulation cofactors",
-      "asymptotic_quantifiers": "Fixed W_7 and every pruned circuit with c=3,q=3", "case_regime": "Exact finite structural gate for septet Hall; not a full family lower bound or terminal result",
-      "evidence": "proofs/GATE-004AR-tricyclic-three-NOT-exclusion.md; proofs/LEMMA-134-deficient-septet-exact-stratum.md; artifacts/cycle-111-septet-stratum-audit.md"
+      "circuit_size": "Excludes c=3,q=3; a candidate would have 37 binary and 40 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean source and articulation cofactors",
+      "asymptotic_quantifiers": "Fixed W_7 and every pruned circuit with c=3,q=3", "case_regime": "Exact finite structural exclusion for septet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AR-tricyclic-three-NOT-exclusion.md; proofs/LEMMA-134-deficient-septet-exact-stratum.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
     },
     {
       "id": "GATE004AR-PATH-MULTIPLICITY-ONLY", "label": "NO-GO",
       "statement": "Generic tricyclic unfolding permits path-multiplicity patterns meeting the seven-NOT formula lower bound.",
       "computational_model": "Tricyclic formula unfolding and NOT path multiplicities for fixed W_7", "uniformity": "Every individual non-uniform candidate in the exact c=3,q=3 stratum",
       "circuit_size": "Three parent NOT gates, each unfolding at most eight times, while only seven total occurrences are required", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Binary cycle space and Boolean-lattice inversion; no algebraic circuit model",
-      "asymptotic_quantifiers": "Fixed W_7 and every cycle-rank-three candidate with three NOT gates", "case_regime": "Quantitative no-go for path multiplicity alone; GATE004AR remains open",
+      "asymptotic_quantifiers": "Fixed W_7 and every cycle-rank-three candidate with three NOT gates", "case_regime": "Quantitative no-go for path multiplicity alone; GATE004AR was proved separately by LEMMA135",
       "evidence": "proofs/GATE-004AR-path-multiplicity-only.md; docs/no-go-ledger.md NG-095; artifacts/cycle-111-septet-stratum-audit.md"
+    },
+    {
+      "id": "LEMMA135", "label": "PROVED",
+      "statement": "Every cycle-rank-three circuit computing either polarity of W_m contains at least m-2 NOT gates.",
+      "computational_model": "Pruned cycle-rank-three AND/OR/NOT circuits, block-cut decompositions, and core-source restrictions", "uniformity": "Every individual non-uniform circuit for either polarity of W_m",
+      "circuit_size": "NOT count at least m-2; binary count unrestricted beyond exact cycle rank three", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2, vertex sums, Boolean cofactors, and lower-rank inversion",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least three, and every pruned circuit with cycle rank three", "case_regime": "Exact worst-case tricyclic NOT lower bound; not a general circuit-size or terminal result",
+      "evidence": "proofs/LEMMA-135-tricyclic-negation-lower-bound.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "LEMMA136", "label": "PROVED",
+      "statement": "Dependency-cone Hall expansion holds for every clause-index subset of size one through seven.",
+      "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most seven",
+      "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=7", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(7,m)", "case_regime": "Exact worst-case local Hall theorem; larger subsets and terminal bridges are not implied",
+      "evidence": "proofs/LEMMA-136-dependency-cone-Hall-through-seven.md; proofs/LEMMA-134-deficient-septet-exact-stratum.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "LEMMA137", "label": "PROVED",
+      "statement": "Dependency-cone Hall expansion holds for every clause-index subset of size one through eight.",
+      "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods and restricted W_8 circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most eight",
+      "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=8", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2, Boolean restrictions, and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(8,m)", "case_regime": "Exact worst-case local Hall theorem; size nine and terminal bridges remain open",
+      "evidence": "proofs/LEMMA-137-dependency-cone-Hall-through-eight.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "LEMMA138", "label": "PROVED",
+      "statement": "Every deficient dependency nonet has exactly eight resources and restricts to a W_9 circuit with cycle rank four and exactly four NOT gates.",
+      "computational_model": "Nine-block restrictions of unrestricted circuits and dependency-cone NOT/non-tree-edge resources", "uniformity": "Every individual non-uniform parent circuit, spanning tree, and deficient nine-index subset",
+      "circuit_size": "Deficiency forces union size eight and residual c=4,q=4, hence 48 binary and 52 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean restrictions and inversion complexity",
+      "asymptotic_quantifiers": "Every parent m at least nine and every Hall-deficient selected nonet", "case_regime": "Exact worst-case obstruction stratum; not existence, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-138-deficient-nonet-exact-stratum.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "GATE004AS", "label": "EXPLORATORY",
+      "statement": "No cycle-rank-four circuit with exactly four NOT gates computes fixed W_9.",
+      "computational_model": "Pruned unrestricted Boolean circuits for fixed W_9 with exact cycle rank four and four NOT gates", "uniformity": "Every individual non-uniform nine-block circuit in the exact stratum",
+      "circuit_size": "Target exclusion of c=4,q=4; 48 binary and 52 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean source and articulation cofactors",
+      "asymptotic_quantifiers": "Fixed W_9 and every pruned circuit with c=4,q=4", "case_regime": "Exact finite structural gate for nonet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AS-tetracyclic-four-NOT-exclusion.md; proofs/LEMMA-138-deficient-nonet-exact-stratum.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "GATE004AS-PATH-MULTIPLICITY-ONLY", "label": "NO-GO",
+      "statement": "Generic tetracyclic unfolding permits path-multiplicity patterns meeting the nine-NOT formula lower bound.",
+      "computational_model": "Tetracyclic formula unfolding and NOT path multiplicities for fixed W_9", "uniformity": "Every individual non-uniform candidate in the exact c=4,q=4 stratum",
+      "circuit_size": "Four parent NOT gates, each unfolding at most sixteen times, while only nine total occurrences are required", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Binary cycle space and Boolean-lattice inversion; no algebraic circuit model",
+      "asymptotic_quantifiers": "Fixed W_9 and every cycle-rank-four candidate with four NOT gates", "case_regime": "Quantitative no-go for path multiplicity alone; GATE004AS remains open",
+      "evidence": "proofs/GATE-004AS-path-multiplicity-only.md; docs/no-go-ledger.md NG-096; artifacts/cycle-112-tricyclic-reduction-audit.md"
     }
   ]
 }
