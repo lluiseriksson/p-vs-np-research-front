@@ -164,7 +164,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "c4cec618cc196aee3a2a4b7ea2250713935f9a7b610e88014fe375a9588fef53"
+      "sha256": "eb0e9cd3eb55543b8a2a233141e8327039e5b303123456caa13705b9aaa3ad9a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -172,7 +172,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "ff2846b844033ad2bb911dff760aee0a770f55e32409ae1ab8e1c1516efb7f77"
+      "sha256": "369545b52dc8e6cdbd8e3832ece1f2df1b8c54b23970bbeca082c1e575b355d8"
     },
     {
       "path": "docs/result-labels.md",
@@ -260,11 +260,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "0ac6cf9093ce7f64dd6bdb6a361dcb464bea8e42ca510e2b163e30db49e23112"
+      "sha256": "86b4e8db1145975db19c0e131e202c8e4dcdaa735ddce24de45c26801f9cd32e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "006ec6ba3410d4dbdae12ab257f78efddff7f60c8950a8b2086897e1069287ba"
+      "sha256": "d09ad77513a9f8534ae538f759573e062c1bca01a0ece4222218ad440447edff"
     },
     {
       "path": "experiments/README.md",
@@ -467,12 +467,16 @@
       "sha256": "706dea3935454274433127c987af764c92a76b8d21173dff77aef526b22e2700"
     },
     {
+      "path": "proofs/LEMMA-031-raw-boundary-affine-index.md",
+      "sha256": "b09f5cba23673051b9a5d048c66cc694a04b95005d819ec4872f1ffbc2d89bb2"
+    },
+    {
       "path": "README.md",
-      "sha256": "19a4d2f87e0baeaf08a7820369cc978f473bf62f41ace95eed9dac36ad3e0c96"
+      "sha256": "a440703419fd0a6a0e98bd6dd2ff07b02e325696c66c34c69a06087f1af535c6"
     },
     {
       "path": "verification/affine_index_extension.py",
-      "sha256": "193746a7ce770a9bf25a7606c32cdc29e66058069f49cf41d55aab6428fc1bb0"
+      "sha256": "e9452fd7d8d95983eabdace9e8973a2c0ae2f31ca446e4d264067b73bcec985e"
     },
     {
       "path": "verification/audit.py",
@@ -480,7 +484,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7b548e4698396c23706386e92d14beb14bd175c6d0f22fbb4844203e8ed6fccd"
+      "sha256": "b82490c64ebd27dc0401b8781f1488b7fb68483c3c2033d0e0faad1beeace110"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -492,7 +496,7 @@
     },
     {
       "path": "verification/test_affine_index_extension.py",
-      "sha256": "0a544e201c12e000f5e3c2572642e0fbd54cc1166ffe3a93fddacaed71ab6403"
+      "sha256": "cd4bc511a22b80600dab4bc6b198c3374803e0f7ee2d8b35c6f22c51b2cf6f67"
     },
     {
       "path": "verification/test_experiments.py",

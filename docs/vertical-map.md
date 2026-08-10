@@ -419,6 +419,17 @@ the mandatory output split alone. The next attack must connect minimum SAT
 structure across many identifiers to stable-core collisions or to the other
 terms in the exact identity.
 
+Cycle 032 tests whether LEMMA-021's large suffix boundary supplies that
+connection. It does not by counting alone: boundary signals may be raw suffix
+inputs rather than prefix-independent gate functions. LEMMA-031 realizes the
+entire affine complementary-INDEX matrix with distinct active non-input
+cofactors, `4|J|` raw suffix-boundary nodes, and every circuit gate
+prefix-dependent. Hence `I=0` and `lambda_j=0` for all pairs.
+`GATE-004M-BOUNDARY-CORE — NO-GO` closes the boundary-only transfer. GATE-004M
+remains active, but its next viable proof must use global minimum-circuit
+factorization forced by SAT's off-table values, or extract the reserve from
+`z`, `kappa`, and `alpha` rather than assuming a stable gate boundary.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

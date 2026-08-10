@@ -1734,6 +1734,40 @@
       "asymptotic_quantifiers": "One finite counterexample suffices against the universal output-only inference",
       "case_regime": "Worst-case method-specific obstruction; not a minimum-circuit or SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-030-output-split-without-stable-core.md; docs/no-go-ledger.md NG-030"
+    },
+    {
+      "id": "LEMMA-031",
+      "label": "PROVED",
+      "statement": "Every distinct 2R-row prefix family admits an affine complementary-INDEX extension with distinct active non-input cofactors, 4R raw suffix-boundary inputs, and an explicit circuit in which every gate is prefix-dependent.",
+      "computational_model": "Explicit total Boolean function and acyclic AND/OR/NOT circuit with a prefix/suffix partition",
+      "uniformity": "Uniform explicit family; valid as a non-uniform circuit at every finite parameter tuple",
+      "circuit_size": "At most 2Rp+4R+p-1; every gate is prefix-dependent",
+      "circuit_depth": "At most 3+ceil(log_2 p)+ceil(log_2(2R))",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine witness notation over F_2 only; computation is Boolean",
+      "asymptotic_quantifiers": "Every finite R,p at least one admitting 2R distinct p-bit prefix rows",
+      "case_regime": "Worst-case exact total-function computation; method counterexample, not minimum and not SAT-gamma",
+      "evidence": "proofs/LEMMA-031-raw-boundary-affine-index.md; verification/test_affine_index_extension.py"
+    },
+    {
+      "id": "GATE-004M-BOUNDARY-CORE",
+      "label": "NO-GO",
+      "statement": "A polynomial suffix-boundary count, affine complementary-INDEX values, and distinct active conditioned cofactors do not force any prefix-independent gate or positive stable-core collision term.",
+      "computational_model": "Unrestricted total Boolean circuits with a semantic prefix-dependent top region and raw-or-gate suffix boundary",
+      "uniformity": "Uniform counterconstruction against a boundary-only inference; non-uniform target circuits",
+      "circuit_size": "Explicit size 2Rp+4R+p-1 counterexample has I=0 and lambda_j=0 for every pair",
+      "circuit_depth": "Logarithmic in p and R in the counterconstruction; unrestricted in the rejected inference",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine notation over F_2 only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every finite compatible row family has the counterconstruction; one family at each scale refutes the universal boundary-only inference",
+      "case_regime": "Worst-case method-specific obstruction; not a minimum-circuit or SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-031-raw-boundary-affine-index.md; docs/no-go-ledger.md NG-031"
     }
   ]
 }

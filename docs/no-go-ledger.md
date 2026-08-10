@@ -610,3 +610,25 @@ AND/OR and fan-in-one NOT; no randomness, advice, oracle, field, promise, or
 distribution. The circuit is not claimed minimum and is not SAT-gamma. Thus
 the no-go blocks only output-semantics-only compensation; GATE-004M remains
 open for a minimum-SAT, multi-identifier argument.
+
+## NG-031 — suffix-boundary count forces a stable gate core
+
+**Label: NO-GO**
+
+Scope: infer a polynomial lower bound on `lambda_j`, or even on the number of
+prefix-independent gate labels, from LEMMA-021's polynomial number of suffix-
+boundary signals together with the affine complementary-INDEX table and
+distinct active conditioned output functions.
+
+Failure: LEMMA-031 constructs the full multi-identifier table with `4R` raw
+suffix-input boundary nodes and no prefix-independent gate at all. Every gate
+depends semantically on the prefix block, while each selected cofactor is a
+distinct two-input AND and the suffix witnesses retain disjoint affine
+directions. Consequently `I=0` and `lambda_j=0` for every pair despite meeting
+the audited boundary and output hypotheses.
+
+Model: an explicit total non-uniform AND/OR/NOT circuit family of size
+`2Rp+4R+p-1` and logarithmic depth; fan-in-two AND/OR and fan-in-one NOT; no
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+The circuit is not claimed minimum and is not SAT-gamma. The no-go therefore
+blocks the boundary-only inference, not GATE-004M's minimum-SAT theorem.

@@ -260,13 +260,22 @@ output-only attack is `NO-GO`: LEMMA-030 realizes two active output cofactors
 with every gate prefix-dependent and hence `lambda=0`. A proof must exploit
 minimum SAT structure across the identifier block.
 
+The thirty-second cycle checks whether LEMMA-021's large suffix boundary can
+force the new `lambda` term. LEMMA-031 gives a stronger counterexample than a
+single output pair: it realizes the full affine complementary-INDEX table with
+distinct active two-input-AND cofactors and `4R` raw suffix-boundary inputs,
+yet every gate is prefix-dependent. Thus `I=lambda_j=0` for every pair.
+Boundary-signal abundance alone is `NO-GO`; the surviving GATE-004M attack must
+use minimum SAT factorization tied to off-table values or the other exact
+surplus terms.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 70% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length affine complementary-INDEX tests and the exact table-only extension ceiling, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 71% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length affine complementary-INDEX tests, exact table-only and raw-boundary/no-stable-core constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The exact accounting restores two helpful collision terms and identifies GATE-004M, but no positive average surplus, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | GATE-004M is exact, but affine witnesses and boundary abundance do not force its stable-core term; no positive average surplus, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
