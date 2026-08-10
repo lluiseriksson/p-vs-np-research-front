@@ -31,7 +31,11 @@ truth. Each row has exactly one label.
 | GATE-004B | EXPLORATORY | Prove the SAT-specific amortized block-restriction inequality for minimum circuits | `proofs/GATE-004B-block-restriction.md` | Active parent gate |
 | GATE-004B-RIGHT-CONTEXT | NO-GO | A fixed suffix context can repair malformed source syntax and is not an exact total-language projection | `docs/sat-encoding.md`; NG-009 | Prefix context remains exact |
 | GATE-004B-CONTEXT-AVERAGING | NO-GO | Even hypothetical contiguous placements plus arbitrary coordinate-weight averaging cannot force positive loss | `proofs/LEMMA-003-contiguous-context-coverage.md` | Semantic or non-contiguous argument required |
-| GATE-004C | EXPLORATORY | Prove semantic gate loss for minimum SAT circuits under the explicit ENC-003 context family | `proofs/GATE-004C-context-semantic-loss.md` | Active smallest brick; sufficient for GATE-004B |
+| GATE-004C | EXPLORATORY | Prove semantic gate loss for minimum SAT circuits under the explicit ENC-003 context family | `proofs/GATE-004C-context-semantic-loss.md` | Active parent gate; sufficient for GATE-004B |
+| LEMMA-004 | PROVED | Essential restricted inputs and all `2^p` distinct residuals can coexist with only an `O(p)` minimum-size gap | `proofs/LEMMA-004-shared-core-obstruction.md` | Generic shared-core limitation only |
+| LEMMA-005 | PROVED | Exact residual-function quotienting preserves the restricted circuit output | `proofs/LEMMA-005-semantic-restriction-quotient.md` | Makes the semantic loss obligation exact |
+| GATE-004C-GENERIC-SEMANTICS | NO-GO | Minimality, essentiality, and maximal input-residual diversity cannot generically force superlinear block loss | LEMMA-004; NG-011 | SAT-specific internal collisions required |
+| GATE-004D | EXPLORATORY | Prove a superlinear surplus of constant, colliding, or dead internal residual gates under an exact SAT prefix restriction | `proofs/GATE-004D-sat-residual-collisions.md` | Active smallest brick; sufficient for GATE-004C |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

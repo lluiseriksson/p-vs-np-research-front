@@ -19,6 +19,10 @@ a circuit `D` with
 The source bits occupy the exact suffix specified in ENC-003, and `D` computes
 `SAT-gamma_m` on every `m`-bit string.
 
+Any constants introduced by restriction are normalized to the original
+constant-free basis before `|D|` is counted; LEMMA-005 bounds this by three
+gates, and the stated loss is net of that cost.
+
 ## Model card
 
 | Field | Value |
@@ -53,5 +57,11 @@ could concentrate in their common core and defeat coordinate averaging.
 Accordingly, a proof of GATE-004C must use a property special to minimum
 circuits for the SAT-gamma function or a downstream semantic potential; exact
 projection identity and direct input-incidence weights are not enough. The next
-audit will test candidate semantic potentials against sharing and reconvergence
-in unrestricted circuit DAGs.
+audit tested minimality, essentiality, and input-residual diversity against
+sharing and reconvergence in unrestricted circuit DAGs. LEMMA-004 proves that
+even maximal diversity permits an `O(p)` shell around an arbitrarily complex
+shared core. This generic route is `GATE-004C-GENERIC-SEMANTICS — NO-GO`.
+
+The active subgate is GATE-004D: show that the exact SAT restriction forces a
+superlinear surplus of constant, equivalent, or dead *internal gate residuals*
+in the semantic quotient from LEMMA-005.

@@ -52,7 +52,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "6377752170c84439c1b0893d862fffb64f9c6c408450a9d33239fc6632b879dd"
+      "sha256": "f0481d2797898e20d605044ebe03ad1aa06784fccd426e0c3b4fb2bcc4b9bbf2"
     },
     {
       "path": "docs/problem-statement.md",
@@ -60,7 +60,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "370eddb47c42185d4c5499383b6b668863d03f8a74b7c5e796dd123b6b6316ac"
+      "sha256": "fc4efc4da8345582ed2e548e71f77dd721162db69858f13dc5962906d3979898"
     },
     {
       "path": "docs/result-labels.md",
@@ -132,11 +132,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "306e45922b0b279efbfad9fe482529130715e3044acdee2cb195c70ca9f2cbdb"
+      "sha256": "3a2aa16a726264cd27a15a38f343623da9415ffa1b5f94cff821239d40f70f3b"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "0a299909df2d5ac05c6ad5737696e9df4e83de666e3a69a3f899577ebe3eae13"
+      "sha256": "3b74149170776e7f3160eed0fbc4ac23e4daaee2bd5b29c4bf80e06c6a2ff599"
     },
     {
       "path": "experiments/README.md",
@@ -164,11 +164,15 @@
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
-      "sha256": "50bb79c9e407857880321d68f0b9c7bc9978e7a985f299358e126abac6010513"
+      "sha256": "e84b1400ad87419d440a35a3675fd7fb19cba50f1c07d145a99d43da74596c8f"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
-      "sha256": "9eb071f89729e6814be3de6b50b97bc22a9123ec5aed4ec246bd68083881607c"
+      "sha256": "114726ed1d63f784402484ecc3ad74e22b54ea67b91dcadf93d36c79666f185a"
+    },
+    {
+      "path": "proofs/GATE-004D-sat-residual-collisions.md",
+      "sha256": "a59ffcb99527270f03422b86c1b9b9c552531c6250cb4eed22ac23b4dd114410"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -187,8 +191,16 @@
       "sha256": "e91c4b1d217044b484d940eec9e058fb65cd0539934a007bb10e44de3f49570d"
     },
     {
+      "path": "proofs/LEMMA-004-shared-core-obstruction.md",
+      "sha256": "56718072b4492fe78c5cef89bd3125a7044ef92bc20596c7d388f9b22eb7428a"
+    },
+    {
+      "path": "proofs/LEMMA-005-semantic-restriction-quotient.md",
+      "sha256": "89154b8bfc5532354d372fe7b3546d3ff04f263e2c758883882f13ef0771f136"
+    },
+    {
       "path": "README.md",
-      "sha256": "72b95076bf8f00cbfb8e85b22cdb1c0f740b1b233e5df08a5d7075ba0ffa5be1"
+      "sha256": "d0007f6cdf9554704e76aaf3e94ae16c5896aa426f7ef1ce7fa9aba086e54b57"
     },
     {
       "path": "verification/audit.py",
@@ -196,7 +208,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "a70b51492c0e4b1dc12d206a7c079bf56d180fbfc9fbe4e2a6a03cad35c36f17"
+      "sha256": "f3834d8b65a9d7984ce3a0014544648a4b5451e1e8dc84f6a29bec0db27e5159"
     },
     {
       "path": "verification/generate_manifest.py",

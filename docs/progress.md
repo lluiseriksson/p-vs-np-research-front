@@ -4,9 +4,9 @@ Date: 2026-08-10
 
 | Measure | Estimate | Audit note |
 |---|---:|---|
-| Infrastructure maturity | 38% | Required tree, exact bit-level `SAT-gamma` target, iterative parser/context tests, corrected open-target/bridge labels, literature/barrier audits, ledgers, claims registry, manifest, and cold-clone evidence exist. Formal foundations and broader independent review are incomplete. |
+| Infrastructure maturity | 40% | Required tree, exact bit-level `SAT-gamma` target, iterative parser/context tests, semantic quotient specification, corrected open-target/bridge labels, literature/barrier audits, ledgers, claims registry, manifest, and cold-clone evidence exist. Formal foundations and broader independent review are incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical statement has a proof-assistant artifact. |
-| Real progress toward P vs NP | 0.00% | The work detects that GATE-003 was equivalent to the desired non-uniform separation, closes padding/reindexing, generic fanout, and contiguous-coverage pseudo-routes, and isolates a semantic block-restriction obligation. It proves no new lower bound for SAT and supplies no polynomial SAT algorithm. |
+| Real progress toward P vs NP | 0.00% | The work detects that GATE-003 was equivalent to the desired non-uniform separation, closes padding/reindexing, fanout, contiguous-coverage, and generic shared-core pseudo-routes, and isolates an internal residual-collision obligation. It proves no new lower bound for SAT and supplies no polynomial SAT algorithm. |
 
 The third estimate is intentionally insensitive to repository size, test count,
 commit count, formalized bookkeeping, numerical evidence, or restricted cases.

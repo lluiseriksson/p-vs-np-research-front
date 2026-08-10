@@ -174,3 +174,28 @@ circuits at the input-boundary abstraction; unbounded depth; fan-in-two AND/OR
 and fan-in-one NOT; no randomness, advice, oracle, field, promise, or
 distribution. The no-go does not constrain semantic structure of minimum SAT
 circuits, non-contiguous projections, or GATE-004B itself.
+
+## NG-011 — minimality plus maximal input-residual diversity
+
+**Label: NO-GO**
+
+Scope: infer the GATE-004C superlinear block loss from circuit minimality,
+essentiality of every restricted coordinate, and the fact that the `p`-bit
+block induces many distinct residual output functions.
+
+Failure: LEMMA-004 constructs
+
+`F(x,w,u)=G(u) XOR XOR_i(x_i AND w_i)`.
+
+Every `x_i` is essential and the `2^p` restrictions of `x` give pairwise
+distinct residual functions—the maximum possible. Nevertheless every residual
+has minimum circuit complexity within `5p+3` gates of `F`. A large `G(u)` core
+is shared by all restrictions, while only an `O(p)` shell changes. Therefore
+these generic semantic properties cannot imply the required
+`p n^delta`-scale loss.
+
+Model: exact minimum gate count for unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. This is a generic method limitation,
+not a claim about SAT-gamma; SAT-specific internal residual-gate collisions
+remain possible.

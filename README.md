@@ -73,13 +73,20 @@ proved a general contiguous-placement coverage limit. Coordinate averaging
 cannot force gate loss, so GATE-004C isolates the surviving semantic-loss
 obligation for minimum SAT circuits.
 
+The fifth cycle audits that semantic obligation against unrestricted sharing.
+LEMMA-004 proves that minimality, essential prefix inputs, and even all `2^p`
+distinct residual functions can coexist with only an `O(p)` size gap because a
+large core survives every restriction. GATE-004D now states the precise
+SAT-specific internal residual-collision surplus that would have to overcome
+this obstruction.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 38% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/context tests, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 40% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/context tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, and contiguous-coverage failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, and generic shared-core failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

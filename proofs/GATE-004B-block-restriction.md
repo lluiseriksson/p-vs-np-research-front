@@ -23,6 +23,11 @@ substituting the projection and deleting or constant-folding gates, with at most
 
 gates.
 
+The base circuit model has no free constant inputs. Any constants introduced
+by restriction are normalized back to that model before `|D|` is counted. By
+LEMMA-005 this costs at most three gates whenever `m>=1`; the displayed loss is
+required after paying that additive cost.
+
 ### Model card
 
 | Field | Value |

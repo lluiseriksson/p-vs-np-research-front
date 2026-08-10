@@ -15,7 +15,8 @@ P != NP
   <- GATE-005 (downstream, open): same-language exponent amplification
   <- GATE-004 (active): first superlinear unrestricted SAT circuit lower bound
   <- GATE-004B (active): SAT-specific amortized block restriction
-  <- GATE-004C (active smallest brick): semantic loss under exact formula contexts
+  <- GATE-004C (active): semantic loss under exact prefix contexts
+  <- GATE-004D (active smallest brick): SAT internal residual-function collisions
      + LEMMA-002 (proved recurrence)
 ```
 
@@ -90,7 +91,7 @@ recurrence yields the GATE-004 lower bound. ENC-002 supplies exact
 double-negation projections; generic fanout counting does not supply the needed
 gate loss.
 
-## Smallest active brick: GATE-004C
+## Active semantic-loss gate: GATE-004C
 
 ENC-003 enlarges the proved prefix projection family: fixed tautologies can be
 conjoined before the embedded formula while preserving exact validity and
@@ -105,6 +106,20 @@ weight. This is recorded as
 `GATE-004B-CONTEXT-AVERAGING — NO-GO`. GATE-004C remains open because a proof
 could use semantic structure unique to minimum SAT circuits or propagation
 beyond the input boundary.
+
+## Smallest active brick: GATE-004D
+
+LEMMA-005 defines the exact semantic quotient of a restricted circuit: merge
+internal gates with identical residual functions, replace constant/input
+residuals, and delete dead gates. GATE-004D asks for a nearby exact SAT prefix
+restriction whose quotient loses `B n^(beta+delta)` gates.
+
+LEMMA-004 shows why this must concern *internal SAT gate functions*. Even a
+minimum circuit can have all `p` restricted inputs essential and the maximum
+`2^p` distinct output residuals while every residual remains within `O(p)`
+gates of the original function. A large core can be shared by all branches.
+This defeats the generic semantic route but leaves the SAT-specific collision
+theorem falsifiable and open.
 
 ## Downstream amplification obligation: GATE-005
 
