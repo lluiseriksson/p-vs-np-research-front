@@ -92,6 +92,8 @@ truth. Each row has exactly one label.
 | BR-GKW20 | PROVED | Every size-`s` unrestricted circuit is an OR of `2^(s/3.9)` width-16 CNFs | GKW20 primary-source note | Structural theorem only |
 | LEMMA-019 | PROVED | Every `n`-bit function is an OR of at most `2^n` width-one CNFs, capping top-component-count bounds at linear size | `proofs/LEMMA-019-depth-reduction-cover-ceiling.md` | Exact method ceiling |
 | GATE-004-DEPTH-COUNT | NO-GO | GKW20 plus only a lower bound on the number of CNF components cannot prove superlinear size | LEMMA-019; NG-023 | Richer component structure would need a new bridge |
+| LEMMA-020 | PROVED | Aggregate pairwise quotient improvement equals duplicated parent size minus global classes and cross-pair overlap | `proofs/LEMMA-020-global-versus-pairwise-quotients.md` | Exact multi-pair accounting |
+| GATE-004I-GLOBAL-POOLING | NO-GO | A small quotient pooled across all identifiers cannot be credited to any pair without subtracting cross-pair overlap | LEMMA-020; NG-024 | Must bound the sum of pairwise quotients directly |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

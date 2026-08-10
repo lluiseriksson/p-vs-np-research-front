@@ -173,13 +173,20 @@ an OR of `2^(s/3.9)` width-16 CNFs, but LEMMA-019 proves that top-component
 counting has a universal `3.9n` ceiling. Neither result is promoted to a
 superlinear SAT lower bound.
 
+The twentieth cycle rules out another accounting shortcut. LEMMA-020 separates
+the global quotient of all conditioned copies from the sum of the pairwise
+quotients by an exact cross-pair overlap term. A shared core can make the
+global quotient look dramatically compressed while every identifier pair has
+zero improvement. Global pooling is therefore `NO-GO`; GATE-004I still
+requires a direct bound on the actual pairwise sum.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 58% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact quotient, per-parent and cross-identifier incidence accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 59% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent and cross-identifier incidence accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The closest generic restriction and depth-reduction promotions are explicitly blocked; no SAT-specific aggregate quotient loss, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | Global pooling is separated from the required pairwise loss, but no SAT-specific aggregate quotient bound, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

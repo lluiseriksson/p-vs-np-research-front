@@ -1292,6 +1292,40 @@
       "asymptotic_quantifiers": "Every nonzero n-bit Boolean function and all n",
       "case_regime": "Worst-case method-specific obstruction; not a SAT lower bound",
       "evidence": "proofs/LEMMA-019-depth-reduction-cover-ceiling.md; docs/no-go-ledger.md NG-023"
+    },
+    {
+      "id": "LEMMA-020",
+      "label": "PROVED",
+      "statement": "The aggregate parent-to-pairwise quotient improvement equals duplicated parent size minus the global residual-class count and the cross-pair overlap multiplicity.",
+      "computational_model": "One acyclic parent circuit, finitely many paired restrictions, and exact pairwise and globally pooled semantic quotients",
+      "uniformity": "Fully non-uniform semantic classification",
+      "circuit_size": "Exact identity sum_j(S-q_j)=|J|S-Q-X",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one in the intended application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite set and integer multiplicity counting only",
+      "asymptotic_quantifiers": "Every finite parent circuit and every finite nonempty family of restriction pairs",
+      "case_regime": "Worst-case exact multi-output circuit computation",
+      "evidence": "proofs/LEMMA-020-global-versus-pairwise-quotients.md"
+    },
+    {
+      "id": "GATE-004I-GLOBAL-POOLING",
+      "label": "NO-GO",
+      "statement": "A small semantic quotient pooled across all conditioned identifiers cannot be promoted to average pairwise improvement without subtracting cross-pair overlap.",
+      "computational_model": "Unrestricted non-uniform multi-output circuits with pairwise and globally pooled semantic quotients",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Unchanged-core example has Q=S and X=(|J|-1)S while every pairwise gap is zero",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Arbitrarily many restriction pairs around every nonconstant shared core",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-020-global-versus-pairwise-quotients.md; docs/no-go-ledger.md NG-024"
     }
   ]
 }

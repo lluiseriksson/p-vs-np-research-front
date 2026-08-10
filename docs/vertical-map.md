@@ -274,6 +274,14 @@ representation, but LEMMA-019 shows that top-component counting alone has a
 linear ceiling. `GATE-004-DEPTH-COUNT — NO-GO` prevents promotion of that
 structural result to GATE-004 without a richer SAT-specific lower bound.
 
+Pooling every conditioned copy also does not bypass the pairwise obligation.
+LEMMA-020 writes the aggregate improvement as `|J|S-Q-X`, where `Q` is the
+global quotient and `X` is cross-pair overlap. An unchanged core makes `Q`
+tiny relative to duplicated copies but makes `X` cancel the entire apparent
+saving. `GATE-004I-GLOBAL-POOLING — NO-GO` therefore requires any successful
+trace argument to bound the actual sum of pairwise quotients, not a globally
+shared multi-output circuit.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

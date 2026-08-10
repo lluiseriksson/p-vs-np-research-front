@@ -112,7 +112,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "910465f254d16a7d534e184b39111ccd8604afa3d2fa5adf86ec09b1cfde5eaa"
+      "sha256": "7df27c0777ec9145ddb607dea023a3da9e144013701eb9cb3f133458878a4557"
     },
     {
       "path": "docs/problem-statement.md",
@@ -120,7 +120,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "acd0df92ffe05cd2436a651bea85800a1ab8575be0e32380fcf223185eaaf22d"
+      "sha256": "d1a8015cf4e3c28904dce592922ffe2187b796d9895fd0c46d06cde6feb801f7"
     },
     {
       "path": "docs/result-labels.md",
@@ -208,11 +208,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "adf4b8705be02b7986e503d854b312c2d7ee12da52574046f1d38d42d39e74b7"
+      "sha256": "67dc9537eb1a1a8e9929871142fac12e62882d0881cf1a02c500c19938971709"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "a301347a749a853713d9997859b2b755fefe049673127ede35b948e10a23d4aa"
+      "sha256": "3ce83bb4806f819e982464a450bd77ebbcd0f221d32685730b9552be22b58e24"
     },
     {
       "path": "experiments/README.md",
@@ -351,8 +351,12 @@
       "sha256": "234105972f54d376f3dc707342219e018e7f5c155476d89554d616caf9f6b5e4"
     },
     {
+      "path": "proofs/LEMMA-020-global-versus-pairwise-quotients.md",
+      "sha256": "3ffe354e58feaa7e1d1c317f1fe3e5d9041a92c7dcf5c4b3fdfcebc49822d1b8"
+    },
+    {
       "path": "README.md",
-      "sha256": "ed78fcded505cc20b16497ef9118d7bd9b377abea8fcbecbe3c3e43f8990e531"
+      "sha256": "91a5d0e53cb8aa7ae03373b83aae417cc78cefdb241f0f97781aff61d5d49bfb"
     },
     {
       "path": "verification/audit.py",
@@ -360,7 +364,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "78e052f0cffbdd546f1aad3401313c7999ed1cef73c6d758d6655e75bbdbc439"
+      "sha256": "80961d6b2ae64bbdb64529fd633e57f9daee4c9b374ad3568ba797e11b4078eb"
     },
     {
       "path": "verification/generate_manifest.py",

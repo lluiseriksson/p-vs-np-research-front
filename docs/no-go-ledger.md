@@ -461,3 +461,26 @@ Model: exact unrestricted non-uniform Boolean circuits and exact ORs of
 bounded-width CNFs; unbounded parent depth; no randomness, advice, oracle,
 field, promise, or distribution. The no-go leaves open methods using richer
 component structure or a separately proved SAT-specific quotient theorem.
+
+## NG-024 — globally pooling all conditioned copies
+
+**Label: NO-GO**
+
+Scope: quotient all `2|J|` conditioned copies at once, observe extensive
+cross-identifier sharing, and promote the small global class count to an
+average improvement for one identifier pair.
+
+Failure: LEMMA-020 gives the exact identity
+
+`sum_j(S-q_j)=|J|S-Q-X`,
+
+where `Q` is the global quotient size and `X` counts repeat appearances of a
+global class in different pairwise quotients. The unchanged-core example has
+`Q=S`, an apparent saving of `(|J|-1)S` against duplicated copies, but
+`X=(|J|-1)S` and every `q_j=S`. All global sharing is cross-candidate reuse and
+produces zero pairwise improvement.
+
+Model: exact unrestricted non-uniform multi-output acyclic circuits; unbounded
+depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle,
+field, promise, or distribution. The no-go does not exclude a SAT-specific
+upper bound on the full quantity `Q+X=sum_j q_j`.
