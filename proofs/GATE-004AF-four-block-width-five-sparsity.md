@@ -52,6 +52,19 @@ alphabet, and LEMMA-088 turns one into a translated packing. Every
 length-at-most-76 specialization is therefore `NO-GO`; the next repair must
 use block length at least 80.
 
+LEMMA-089 extends the complete obstruction through length 80. LEMMA-090 gives
+an explicit length-84 repair using identifier 278,594, so the next exact gate
+is the complete length-84 local type audit. A repaired representative is not
+being promoted to global width-five universality.
+
+LEMMA-091 completes that audit and finds 122 failures. One mask-8 failure
+translates to an `N/24-O(1)` common packing, so every length-at-most-84
+specialization is `NO-GO`. The next repair must use block length at least 88.
+
+LEMMA-092 supplies that first local repair explicitly with identifier 526,344.
+The complete length-88 type audit is the next operational gate; no global
+coverage is inferred from the repaired representative.
+
 ## Model card
 
 | Field | Value |

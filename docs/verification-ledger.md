@@ -304,6 +304,12 @@ truth. Each row has exactly one label.
 | LEMMA-087 | PROVED | Symbolic templates and earliest-end DP exactly equal literal complete-identifier enumeration | `proofs/LEMMA-087-symbolic-complete-identifier-oracle.md`; regression comparisons | Exact verifier optimization |
 | LEMMA-088 | PROVED | The complete length-at-most-76 alphabet omits `11110` and retains `N/20-O(1)` common width-five clauses | `proofs/LEMMA-088-complete-length76-four-block-obstruction.md`; two DPs; local audit | Complete bounded-length obstruction |
 | GATE-004AF-LENGTH76-ONLY | NO-GO | Every standard neutral block through length 76 retains the linear width-five packing | `proofs/GATE-004AF-length76-only.md`; LEMMA-088; NG-072 | Length at least 80 required |
+| LEMMA-089 | PROVED | The complete length-at-most-80 alphabet omits `11110` and retains `N/20-O(1)` common width-five clauses | `proofs/LEMMA-089-complete-length80-four-block-obstruction.md`; symbolic and literal DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH80-ONLY | NO-GO | Every standard neutral block through length 80 retains the linear width-five packing | `proofs/GATE-004AF-length80-only.md`; LEMMA-089; NG-073 | Length at least 84 required |
+| LEMMA-090 | PROVED | Identifier 278,594 gives a length-84 block realizing mask 16 on the shifted boundary quintuple | `proofs/LEMMA-090-first-length84-quintet-repair.md`; regression test | Local repair only; complete length-84 audit open |
+| LEMMA-091 | PROVED | The complete length-at-most-84 alphabet omits `11101` and retains `N/24-O(1)` common width-five clauses | `proofs/LEMMA-091-complete-length84-four-block-obstruction.md`; two DPs; exhaustive local audit | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH84-ONLY | NO-GO | Every standard neutral block through length 84 retains the linear width-five packing | `proofs/GATE-004AF-length84-only.md`; LEMMA-091; NG-074 | Length at least 88 required |
+| LEMMA-092 | PROVED | Identifier 526,344 gives a length-88 block realizing mask 8 on the shifted boundary quintuple | `proofs/LEMMA-092-first-length88-quintet-repair.md`; regression test | Local repair only; complete length-88 audit open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

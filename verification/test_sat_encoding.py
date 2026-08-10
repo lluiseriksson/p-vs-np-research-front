@@ -1012,6 +1012,67 @@ class FormulaEncodingTests(unittest.TestCase):
         self.assertEqual(symbolic & relevant, direct & relevant)
         self.assertFalse((symbolic >> 16) & 1)
 
+    def test_complete_length_80_boundary_and_length_84_repair(self) -> None:
+        positions_80 = (80, 84, 92, 97, 98)
+        symbolic = CompleteIdentifierAuditor(17, 540).reached_masks_positions(
+            positions_80, 4
+        )
+        direct = reached_masks_direct_positions(
+            positions_80, 4, tuple(range(1, 262144)), 540
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(symbolic & relevant, direct & relevant)
+        self.assertFalse((symbolic >> 16) & 1)
+
+        identifier = 278594
+        positions_84 = (84, 88, 96, 101, 102)
+        start = 60
+        self.assertEqual(len("01" + tautology(identifier)), 84)
+        for block in (
+            "01" + tautology(identifier),
+            "10" + contradiction(identifier),
+        ):
+            self.assertEqual(
+                "".join(block[position - start] for position in positions_84),
+                "11110",
+            )
+        repaired = CompleteIdentifierAuditor(18, 540).reached_masks_positions(
+            positions_84, 4
+        )
+        self.assertTrue((repaired >> 16) & 1)
+
+    def test_complete_length_84_alphabet_retains_mask_8(self) -> None:
+        positions = (84, 92, 100, 103, 104)
+        symbolic = CompleteIdentifierAuditor(18, 540).reached_masks_positions(
+            positions, 4
+        )
+        direct = reached_masks_direct_positions(
+            positions, 4, tuple(range(1, 524288)), 540
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(symbolic & relevant, direct & relevant)
+        self.assertFalse((symbolic >> 8) & 1)
+
+    def test_first_length_88_repair_of_mask_8(self) -> None:
+        identifier = 526344
+        block = "01" + tautology(identifier)
+        positions = (88, 96, 104, 107, 108)
+        start = 20
+        self.assertEqual(len(block), 88)
+        self.assertEqual(
+            "".join(
+                block[position - start]
+                if start <= position < start + len(block)
+                else "1"
+                for position in positions
+            ),
+            "11101",
+        )
+        repaired = CompleteIdentifierAuditor(19, 580).reached_masks_positions(
+            positions, 4
+        )
+        self.assertTrue((repaired >> 8) & 1)
+
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
         for block_count in range(1, 6):

@@ -1460,3 +1460,35 @@ one six-one long option; signed width-five matching; unrestricted later
 non-uniform circuits; no randomness, advice, oracle, promise, distribution,
 or algebraic computation. Any repair must use length at least 80. GATE-004AF
 and P versus NP remain open.
+
+## NG-073 — some length-at-most-80 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+LEMMA-089 audits the literal identifier range 1 through 262,143 and the exact
+LEMMA-087 symbolic oracle. Both omit only mask 16 on offsets
+`{0,4,12,17,18}` under four nonoverlapping aligned blocks. Twenty-spaced
+translations leave a linear common signed width-five packing after at most one
+long-option repair.
+
+Model: every standard neutral block of length at most 80; four-block options;
+one six-one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness, advice, oracle, promise, distribution,
+or algebraic computation. Identifier 278,594 repairs this representative at
+length 84, so the full gate remains open. P versus NP is unaffected.
+
+## NG-074 — some length-at-most-84 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+The complete symbolic gap-at-most-20 audit finds 122 failures across 640,000
+types. LEMMA-091 checks one representative independently by literal
+enumeration of identifiers 1 through 524,287: mask 8 is absent on offsets
+`{0,8,16,19,20}` under four blocks. Twenty-four-spaced translations leave a
+linear common signed width-five packing.
+
+Model: every standard neutral block of length at most 84; four-block options;
+one six-one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness, advice, oracle, promise, distribution,
+or algebraic computation. Any repair must use length at least 88. GATE-004AF
+and P versus NP remain open.

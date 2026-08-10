@@ -669,6 +669,27 @@ LEMMA-088 and the direct full-range DP agree that mask 16 is absent on offsets
 `{0,4,12,17,18}`, leaving an `N/20-O(1)` packing. Every length-at-most-76
 specialization is `NO-GO`; GATE-004AF now requires block length at least 80.
 
+The eightieth cycle closes the next exact boundary. The symbolic oracle and
+literal enumeration of all 262,143 identifiers agree that length at most 80
+still omits only mask 16 on the shifted offsets `{0,4,12,17,18}`. LEMMA-089
+therefore retains the `N/20-O(1)` packing and makes the complete length-80
+specialization `NO-GO`. LEMMA-090 sharply repairs that representative at
+length 84 with identifier 278,594 placed at offset 60. This is a local repair,
+not width-five universality; the complete length-84 type audit is next.
+
+The eighty-first cycle executes that full local audit. Across all 640,000
+gap-at-most-20 types, the complete length-84 alphabet leaves 122 failures,
+partitioned `30,31,31,30` by residue. The symbolic oracle and a literal scan of
+all 524,287 identifiers independently agree that `(84,92,100,103,104)` omits
+only mask 8. LEMMA-091 translates it to an `N/24-O(1)` packing, so the complete
+length-84 specialization is `NO-GO`; length at least 88 is now required.
+
+The eighty-second cycle locates the next sharp local repair. Identifier
+526,344 gives a length-88 block which, at offset 20 with all-one surrounding
+padding, realizes the missing mask 8 on the shifted LEMMA-091 representative.
+LEMMA-092 records the exact bit-string witness. The complete length-88 audit,
+not this single repaired type, is the next operational gate.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

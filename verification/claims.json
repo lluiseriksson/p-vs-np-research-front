@@ -3758,6 +3758,56 @@
       "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AF and P versus NP remain open",
       "evidence": "proofs/GATE-004AF-length76-only.md; proofs/LEMMA-088-complete-length76-four-block-obstruction.md; docs/no-go-ledger.md NG-072"
+    },
+    {
+      "id": "LEMMA089", "label": "PROVED",
+      "statement": "The complete identifier-1-through-262143 alphabet omits 11110 on a stable quintuple under four-block unions, leaving N/20-O(1) common signed width-five clauses.",
+      "computational_model": "Complete four-block neutral alphabet, symbolic and literal interval DPs, one long option, signed width-five clauses, and matching",
+      "uniformity": "Uniform complete identifier-1-through-262143 alphabet and translations; no circuit selected", "circuit_size": "No lower bound; common signed width-five packing N/20-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Complete bounded-length witness obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-089-complete-length80-four-block-obstruction.md; verification/symbolic_identifier_audit.py; verification/quartet_type_audit.py; verification/test_sat_encoding.py; artifacts/cycle-080-length80-boundary-audit.md"
+    },
+    {
+      "id": "GATE004AF-LENGTH80-ONLY", "label": "NO-GO",
+      "statement": "Even the complete identifier-1-through-262143 alphabet cannot yield four-block width-five sparsity because it retains a linear packing.",
+      "computational_model": "Complete four-block neutral contexts and signed width-five matching", "uniformity": "Uniform complete length-at-most-80 alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-length80-only.md; proofs/LEMMA-089-complete-length80-four-block-obstruction.md; docs/no-go-ledger.md NG-073"
+    },
+    {
+      "id": "LEMMA090", "label": "PROVED",
+      "statement": "The length-84 neutral blocks for identifier 278594 aligned at start 60 realize mask 16 on the shifted boundary quintuple.",
+      "computational_model": "Exact SAT-gamma neutral block and five-coordinate incidence", "uniformity": "One explicit uniform identifier and aligned placement; no circuit selected",
+      "circuit_size": "No lower bound; one missing mask repaired", "circuit_depth": "Fixed finite encoding depth; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Exact finite witness, reusable by four-aligned translation", "case_regime": "Local repair lemma; not universality, circuit, or terminal progress",
+      "evidence": "proofs/LEMMA-090-first-length84-quintet-repair.md; verification/test_sat_encoding.py; artifacts/cycle-080-length80-boundary-audit.md"
+    },
+    {
+      "id": "LEMMA091", "label": "PROVED",
+      "statement": "The complete identifier-1-through-524287 alphabet omits 11101 on a stable quintuple under four-block unions, leaving N/24-O(1) common signed width-five clauses.",
+      "computational_model": "Complete four-block neutral alphabet, symbolic and literal interval DPs, one long option, signed width-five clauses, and matching",
+      "uniformity": "Uniform complete identifier-1-through-524287 alphabet and translations; no circuit selected", "circuit_size": "No lower bound; common signed width-five packing N/24-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Complete bounded-length witness obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-091-complete-length84-four-block-obstruction.md; verification/quintet_type_audit.py; verification/symbolic_identifier_audit.py; verification/quartet_type_audit.py; verification/test_sat_encoding.py; artifacts/cycle-081-symbolic-length84-audit.md"
+    },
+    {
+      "id": "GATE004AF-LENGTH84-ONLY", "label": "NO-GO",
+      "statement": "Even the complete identifier-1-through-524287 alphabet cannot yield four-block width-five sparsity because it retains a linear packing.",
+      "computational_model": "Complete four-block neutral contexts and signed width-five matching", "uniformity": "Uniform complete length-at-most-84 alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-length84-only.md; proofs/LEMMA-091-complete-length84-four-block-obstruction.md; docs/no-go-ledger.md NG-074"
+    },
+    {
+      "id": "LEMMA092", "label": "PROVED",
+      "statement": "The length-88 neutral block 01 T_526344 aligned at start 20 realizes mask 8 on the shifted boundary quintuple.",
+      "computational_model": "Exact SAT-gamma neutral block, all-one surrounding padding, and five-coordinate incidence", "uniformity": "One explicit uniform identifier and aligned placement; no circuit selected",
+      "circuit_size": "No lower bound; one missing mask repaired", "circuit_depth": "Fixed finite encoding depth; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Exact finite witness, reusable by four-aligned translation", "case_regime": "Local repair lemma; not universality, circuit, or terminal progress",
+      "evidence": "proofs/LEMMA-092-first-length88-quintet-repair.md; verification/test_sat_encoding.py; artifacts/cycle-082-length88-local-repair.md"
     }
   ]
 }

@@ -24,16 +24,36 @@ def audit_residue(
     covering: bool = False,
     length76_repair: bool = False,
     symbolic76: bool = False,
+    symbolic80: bool = False,
+    symbolic84: bool = False,
+    symbolic88: bool = False,
 ) -> dict[str, object]:
     if residue not in range(4):
         raise ValueError("residue must be 0, 1, 2, or 3")
-    bound = 76 if length76_repair or symbolic76 else LENGTH68_BOUND
+    bound = (
+        88 if symbolic88 else
+        84 if symbolic84 else
+        80 if symbolic80 else
+        76 if length76_repair or symbolic76 else
+        LENGTH68_BOUND
+    )
     if gap_cap < 1 or gap_cap > bound + 3:
         raise ValueError(f"gap cap must lie between 1 and {bound + 3}")
-    if sum((initial, covering, length76_repair, symbolic76)) > 1:
+    if sum(
+        (
+            initial, covering, length76_repair, symbolic76,
+            symbolic80, symbolic84, symbolic88,
+        )
+    ) > 1:
         raise ValueError("choose at most one alphabet mode")
-    if symbolic76:
-        identifiers: tuple[int, ...] | str = "all identifiers 1 through 131071"
+    if symbolic88:
+        identifiers: tuple[int, ...] | str = "all identifiers 1 through 1048575"
+    elif symbolic84:
+        identifiers: tuple[int, ...] | str = "all identifiers 1 through 524287"
+    elif symbolic80:
+        identifiers = "all identifiers 1 through 262143"
+    elif symbolic76:
+        identifiers = "all identifiers 1 through 131071"
     elif covering or length76_repair:
         identifiers = tuple(
             dict.fromkeys(
@@ -46,11 +66,18 @@ def audit_residue(
             WIDTH5_INITIAL_IDENTIFIERS if initial else WIDTH5_REPAIR_IDENTIFIERS
         )
     representative_length = (
-        500 if symbolic76 else 460 if length76_repair else WIDTH5_REPRESENTATIVE_LENGTH
+        580 if symbolic88 else
+        540 if symbolic80 or symbolic84 else
+        500 if symbolic76 else
+        460 if length76_repair else
+        WIDTH5_REPRESENTATIVE_LENGTH
     )
     auditor = (
-        CompleteIdentifierAuditor(16, representative_length)
-        if symbolic76
+        CompleteIdentifierAuditor(
+            19 if symbolic88 else 18 if symbolic84 else 17 if symbolic80 else 16,
+            representative_length,
+        )
+        if symbolic76 or symbolic80 or symbolic84 or symbolic88
         else QuartetAuditor(identifiers, representative_length)
     )
     first = bound + residue
@@ -95,6 +122,9 @@ if __name__ == "__main__":
     parser.add_argument("--covering", action="store_true")
     parser.add_argument("--length76-repair", action="store_true")
     parser.add_argument("--symbolic76", action="store_true")
+    parser.add_argument("--symbolic80", action="store_true")
+    parser.add_argument("--symbolic84", action="store_true")
+    parser.add_argument("--symbolic88", action="store_true")
     arguments = parser.parse_args()
     print(
         json.dumps(
@@ -105,6 +135,9 @@ if __name__ == "__main__":
                 covering=arguments.covering,
                 length76_repair=arguments.length76_repair,
                 symbolic76=arguments.symbolic76,
+                symbolic80=arguments.symbolic80,
+                symbolic84=arguments.symbolic84,
+                symbolic88=arguments.symbolic88,
             ),
             sort_keys=True,
         )
