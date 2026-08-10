@@ -1029,3 +1029,23 @@ exact disjoint positive two-clauses; unrestricted depth, fan-in-two AND/OR and
 fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
 algebraic computation. Long runs remain necessary against NG-047, but must be
 combined with sufficiently dense independent placements to escape NG-046.
+
+## NG-049 — disjoint positive clauses falsify GATE-004V
+
+**Label: NO-GO**
+
+Scope: falsify balanced long-run product rigidity by finding `m>K` disjoint
+positive clauses common to every slot-product witness and applying the exact
+LEMMA-048 extension.
+
+Failure: ENC-028/LEMMA-053 evaluate every clause on the all-long member. It
+has exactly `6s` one bits, and disjoint clauses must hit distinct ones, so
+`m<=6s`. With `s=floor((R-1)/8)` and the eligible base floor `K>=R-1`, one
+has `m<=3(R-1)/4<=K`. The certified bound `K-m` cannot be negative.
+
+Model: exact balanced product witnesses; arbitrary-width pairwise variable-
+disjoint positive clauses; globally minimum non-uniform AND/OR/NOT circuits
+only through the already proved LEMMA-048 identity; no randomness, advice,
+oracle, promise, distribution, or algebraic computation. This no-go does not
+prove actual loss nonnegative and does not cover signed, overlapping, or
+non-clausal common predicates.

@@ -62,6 +62,7 @@ Adjacent collision-aware active branch:
      + ENC-025 (proved general bounded-zero-run windows)
      + ENC-026 (proved tunable long-zero neutral block)
      + ENC-027 (proved balanced long-run slot product)
+     + ENC-028 (proved disjoint positive-clause packing bound)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -79,6 +80,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-BOUNDED-ZERO-RUN-CONTEXTS (no-go by LEMMA-050)
      - GATE-004U-SINGLE-LONG-BLOCK-CONTEXTS (no-go by LEMMA-051/049)
   <- GATE-004V (active smallest brick): balanced long-run product rigidity
+     - GATE-004V-DISJOINT-POSITIVE-CLAUSES (no-go by LEMMA-053)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -648,6 +650,12 @@ tail to at most `6s` clauses and the LEMMA-050 tail below `4s`. With
 floor. GATE-004V is the new smallest sufficient brick: exact agreement on this
 explicit product family must now be proved or falsified to force polynomial
 diagonal loss.
+
+ENC-028 and LEMMA-053 close GATE-004V's first counterexample class. The
+all-long member has only `6s` one bits, so every disjoint common positive-
+clause family has at most `6s<K` clauses and cannot make the established
+`K-m` certificate negative. The next audit concerns signed clauses,
+overlapping clauses, and non-clausal slot predicates.
 
 ### Smallest active brick: GATE-004U
 

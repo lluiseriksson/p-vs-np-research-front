@@ -2788,6 +2788,57 @@
       "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all expanded rows and balanced witnesses",
       "case_regime": "Worst-case exact agreement on an explicit total-language subset; no promise, distributional, or surrogate terminal claim",
       "evidence": "proofs/GATE-004V-balanced-long-run-rigidity.md; proofs/LEMMA-052-balanced-long-run-slot-product.md"
+    },
+    {
+      "id": "ENC028",
+      "label": "PROVED",
+      "statement": "The all-long member of the balanced slot product has exactly 6s one positions, so every pairwise variable-disjoint family of positive clauses common to the full product has size at most 6s.",
+      "computational_model": "Exact balanced Boolean slot products and pairwise variable-disjoint positive clauses on raw suffix coordinates",
+      "uniformity": "Uniform explicit witness product; arbitrary non-uniform choice of clauses",
+      "circuit_size": "Common disjoint positive-clause packing number at most 6s, and 6s<=3(R-1)/4<K for the chosen sufficiently large parameters with K>=R-1",
+      "circuit_depth": "Irrelevant to the packing theorem; unrestricted in the later minimum-circuit application",
+      "fan_in": "Clause OR gates have fan-in two; later circuits use AND/OR fan-in two and NOT fan-in one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite-set hitting and packing on Boolean coordinates; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every rho at least seven, every s at least one, and every pairwise variable-disjoint common positive-clause family; explicit comparison for sufficiently large R with s=floor((R-1)/8)",
+      "case_regime": "Worst-case exact witness-product theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md ENC-028; proofs/LEMMA-053-positive-clause-packing-bound.md"
+    },
+    {
+      "id": "LEMMA053",
+      "label": "PROVED",
+      "statement": "Every pairwise variable-disjoint positive-clause family satisfied by every member of the balanced product has at most 6s clauses, by injecting the clauses into the six one positions per slot of the all-long member.",
+      "computational_model": "Exact balanced Boolean slot products, positive raw-coordinate clauses, and the exact fresh-clause quotient accounting of LEMMA-048",
+      "uniformity": "Uniform explicit product and hitting witness; fully non-uniform clause family and base circuit in the application",
+      "circuit_size": "Packing m<=6s<=3(R-1)/4<K when s=floor((R-1)/8) and K>=R-1; hence the LEMMA-048 certificate K-m is nonnegative",
+      "circuit_depth": "Unrestricted in the base and target circuits; the packing proof itself is depth-free",
+      "fan_in": "Positive clauses are binary OR trees; ambient circuits use AND/OR fan-in two and NOT fan-in one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite-set injection on Boolean coordinates; no field assumption",
+      "asymptotic_quantifiers": "For every rho at least seven and s at least one; for every pairwise variable-disjoint family of common positive clauses; sufficiently large R for the displayed GATE-004V parameter comparison",
+      "case_regime": "Worst-case exact method-boundary lemma; it proves no nonnegative actual loss and no SAT lower bound",
+      "evidence": "proofs/LEMMA-053-positive-clause-packing-bound.md; docs/verification-ledger.md LEMMA-053"
+    },
+    {
+      "id": "GATE004V-DISJOINT-POSITIVE-CLAUSES",
+      "label": "NO-GO",
+      "statement": "The LEMMA-048 disjoint positive-clause tail route cannot certify negative loss against GATE-004V, because every such common family has m<=6s<K at the selected parameters.",
+      "computational_model": "Minimum unrestricted Boolean base circuits conjoined with pairwise variable-disjoint positive raw-coordinate clauses, evaluated by exact diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform clause family and base circuit; uniform explicit balanced witness product and parameters",
+      "circuit_size": "The established negative-loss certificate K-m is nonnegative since m<=6s<=3(R-1)/4<K with K>=R-1; no claim is made that the actual loss is nonnegative",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR fan-in two; NOT fan-in one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean circuits and finite-set clause packing; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every sufficiently large eligible R, s=floor((R-1)/8), every rho at least seven, every clause width, and every pairwise variable-disjoint common positive-clause family",
+      "case_regime": "Scoped method no-go only; signed clauses, overlapping clauses, nonclausal predicates, GATE-004V, and the terminal problem remain open",
+      "evidence": "proofs/GATE-004V-disjoint-positive-clauses.md; proofs/LEMMA-053-positive-clause-packing-bound.md; docs/no-go-ledger.md NG-049"
     }
   ]
 }

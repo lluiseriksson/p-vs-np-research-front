@@ -61,6 +61,12 @@ The first attack must classify low-complexity predicates common to the full
 slot product and determine whether any admits an exact additive extension with
 more quotient classes than parent gates.
 
+ENC-028 and LEMMA-053 complete the first class: every disjoint common positive-
+clause family has size at most `6s<K`, so LEMMA-048 cannot certify a negative
+tail. The next attack is signed disjoint clauses, where NOT-gate cost and
+possible complement sharing prevent an automatic additive identity, followed
+by overlapping and non-clausal predicates.
+
 ## Model card
 
 | Field | Value |

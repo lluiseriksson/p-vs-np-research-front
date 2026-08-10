@@ -244,7 +244,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "e18f389a4904f989f6bb17ec241d00607b1ea460c0bd952031281fa0d7c535f5"
+      "sha256": "44ba37b07e906c038200b53bb82fa15d87a561f02f6a53732064939834b73840"
     },
     {
       "path": "docs/problem-statement.md",
@@ -252,7 +252,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "bab6be2fcade2162eea0dc474c5541e7c5ca55fdd307a593fd5cd91a15743013"
+      "sha256": "26009f12bce0e70222cdaab4180a180f191af20fb7ce5be8ad8692e5b33d7907"
     },
     {
       "path": "docs/result-labels.md",
@@ -260,7 +260,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "f108ae8de462bf6986c0a535c841acdb987219285e5e8471e681d89386064ef1"
+      "sha256": "99e071b1142a29dc4851641c206f8ae9459b6828aeeeb8da7a97efbbe0f7498f"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -340,11 +340,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "bec1ca5e5192a5a83a6293846db5c72801feeb6c8a898c7af9b0280a29f0ecc2"
+      "sha256": "5b45f759964b8ca7c5672d6cad089cbd8e0bf4ee02280106e42fc1598dba861e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f0823d3e3a0190844b626c3b2d033481c81b6f91bc14e69ea8a01c1fc5c79134"
+      "sha256": "8585be19611603e75d5fba326b6afbbc817c2f769c7a37c63dcc0fd88f936e60"
     },
     {
       "path": "experiments/README.md",
@@ -476,7 +476,11 @@
     },
     {
       "path": "proofs/GATE-004V-balanced-long-run-rigidity.md",
-      "sha256": "0eceed1ee3e231fe0520dde81e6f5e87f2d34cd2cdb6f9dea036f1af7d01f99a"
+      "sha256": "a93c2989dbf0a1ccef1476d078c05d2db5994e0a6ed9c1a5e2da23ab66945219"
+    },
+    {
+      "path": "proofs/GATE-004V-disjoint-positive-clauses.md",
+      "sha256": "464135ead445ea6cd71783695bc631fda953c12b1edc30d7ad9e690563b2c4d3"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -691,8 +695,12 @@
       "sha256": "fcbcf3bc53b3955de86ed24749e080bbba2c15cdb9931b9297c1956365a50600"
     },
     {
+      "path": "proofs/LEMMA-053-positive-clause-packing-bound.md",
+      "sha256": "d8a9c45b0ff178ceab553e91029177b90e2cdedec589a5558a128d447e16fc96"
+    },
+    {
       "path": "README.md",
-      "sha256": "d9f718cc30b5d356dc4f950fb0854b17aa9fc662c48321be3956e26294a01213"
+      "sha256": "c62aba3b5350394e70e5d8c8d1bed7de33cabc5352c2bcbf2c62a937f5b0bed9"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -704,7 +712,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "d53320fc694726398fd0d32578b19799c1ceba7726d3e95f87ff31b79de087db"
+      "sha256": "71e1cd2a87f3f64894028b49351bf959bc5bda5361b14ceaf66654196d8fcf65"
     },
     {
       "path": "verification/generate_manifest.py",

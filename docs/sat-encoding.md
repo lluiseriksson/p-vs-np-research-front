@@ -1244,6 +1244,37 @@ rigidity.
 | Asymptotic quantifiers | Every `rho>=7,s>=1`; explicit application for all sufficiently large `R` with `s=floor((R-1)/8)` |
 | Regime | Worst-case exact total-language construction and method-boundary theorem; not a circuit lower bound |
 
+## ENC-028 — the all-long product bounds positive-clause packing
+
+**Label: PROVED**
+
+The balanced family contains the member with `A_rho` in every slot. Each
+long block has exactly six one bits, so this member has exactly `6s` one
+positions. LEMMA-053 proves that every pairwise variable-disjoint family of
+positive clauses common to the complete slot product has at most `6s`
+members, regardless of clause width or geometry.
+
+For `s=floor((R-1)/8)`, this count is below the eligible base floor
+`K>=R-1`. The established LEMMA-048 negativity certificate therefore cannot
+falsify GATE-004V using any disjoint positive-clause family. This is a method
+boundary, not positive rigidity.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact balanced slot products and pairwise disjoint positive raw-coordinate clauses |
+| Uniform/non-uniform | Uniform all-long witness; arbitrary clause widths and non-uniform placements |
+| Circuit size | Common disjoint positive-clause packing number at most `6s`, below `K>=R-1` at the chosen parameters |
+| Circuit depth | Irrelevant to the packing proof; later circuits unrestricted |
+| Fan-in | Clause OR two after binarization; later AND/OR two and NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Finite set packing only |
+| Asymptotic quantifiers | Every `rho>=7,s>=1` and every disjoint common positive-clause family; explicit comparison for sufficiently large `R` |
+| Regime | Worst-case exact witness-family theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,
