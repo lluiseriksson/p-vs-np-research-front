@@ -58,6 +58,7 @@ truth. Each row has exactly one label.
 | INFRA-051 | PROVED | Cycle-051 balanced coordinate-dense long-run slots and GATE-004V reproduce from a cold clone | `artifacts/cold-clone-e1645f6.md` | None |
 | INFRA-052 | PROVED | Cycle-052 positive-clause packing and the scoped GATE-004V method no-go reproduce from a cold clone | `artifacts/cold-clone-131e144.md` | None |
 | INFRA-053 | PROVED | Cycle-053 signed-literal polarity sharing and naive-additivity no-go reproduce from a cold clone | `artifacts/cold-clone-01d5a8b.md` | None |
+| INFRA-054 | PROVED | Cycle-054 complement-exposed negative tails and unit-tail exclusion reproduce from a cold clone | `artifacts/cold-clone-4a78455.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
