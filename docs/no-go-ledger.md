@@ -1835,3 +1835,24 @@ two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Path-counting alone is closed, while GATE-004AN/AL/AK/AJ/AI/AH/AG/AE
 remain open.
+
+## NG-092 — one-bit articulation factorization excludes the theta core
+
+**Label: NO-GO**
+
+Scope: repeat LEMMA-126 by removing one cut vertex, factor the upstream
+variables through one bit, and apply the one-bit cofactor dichotomy to the
+remaining theta-core candidate.
+
+Failure: the suppressed theta kernel has two branch vertices joined by three
+internally disjoint paths. Removing either branch vertex leaves the core
+connected, so neither is a cycle-separating articulation. Declaring one to be
+a one-bit interface without proving that all relevant variable-output paths
+pass through it would discard theta branches and invalidate the factorization.
+
+Model: every pruned non-uniform theta-core candidate for fixed `W_6` with 31
+binary gates and three NOT gates; unrestricted depth; AND/OR fan-in two and
+NOT fan-in one; undirected vertex connectivity and Boolean cofactors; no
+randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. Articulation-only reuse is closed, while two-vertex GATE-004AO and
+GATE-004AN/AL/AK/AJ/AI/AH/AG/AE remain open.

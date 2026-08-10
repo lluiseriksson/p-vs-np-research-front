@@ -4270,8 +4270,8 @@
     },
     {
       "id": "LEMMA121", "label": "PROVED",
-      "statement": "A one-bit variable factorization of W_m either cuts no clause or cuts exactly one with no X-whole clause; the two cases force the recorded formula-NOT lower bounds.",
-      "computational_model": "One-bit functional factorizations and formula realizations of disjoint fixed-sign clause products", "uniformity": "Every variable partition and every nonconstant intermediary bit",
+      "statement": "A one-bit variable factorization of either output polarity of W_m either cuts no clause or cuts exactly one with no X-whole clause; the two cases force the recorded formula-NOT lower bounds.",
+      "computational_model": "One-bit functional factorizations and formula realizations of either output polarity of disjoint fixed-sign clause products", "uniformity": "Every variable partition and every nonconstant intermediary bit",
       "circuit_size": "Formula NOT lower a+b=m in the uncut case; downstream lower m-1 in the sole-cut case", "circuit_depth": "Unrestricted formula depth", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and disjoint clause incidence only",
       "asymptotic_quantifiers": "Every fixed p at least one, every m at least two, and every partition of the (p+1)m variables", "case_regime": "Exact worst-case factorization dichotomy; not a general circuit lower bound or terminal result",
       "evidence": "proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-119-bipolar-formula-inversion.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
@@ -4286,8 +4286,8 @@
     },
     {
       "id": "LEMMA123", "label": "PROVED",
-      "statement": "For every block count, a pruned cycle-rank-one circuit computing W_m contains at least m NOT gates.",
-      "computational_model": "Pruned unicyclic AND/OR/NOT circuits for disjoint fixed-sign clause products", "uniformity": "Every individual non-uniform circuit; uniform function family",
+      "statement": "For every block count, a pruned cycle-rank-one circuit computing either W_m or its complement contains at least m NOT gates.",
+      "computational_model": "Pruned unicyclic AND/OR/NOT circuits for either output polarity of disjoint fixed-sign clause products", "uniformity": "Every individual non-uniform circuit; uniform function family",
       "circuit_size": "NOT count at least m; binary gate count unrestricted beyond cycle rank one", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank, one-bit cofactors, and Boolean-lattice inversion",
       "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, and every pruned circuit with cycle rank one", "case_regime": "Exact worst-case unicyclic NOT lower bound; not a general circuit-size or terminal result",
       "evidence": "proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-120-unicyclic-one-bit-factorization.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; artifacts/cycle-106-deficient-sextet-stratum.md"
@@ -4315,6 +4315,38 @@
       "circuit_size": "Three parent NOT gates; unfolded requirement only six total occurrences with multiplicity at most four each", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
       "asymptotic_quantifiers": "Every candidate bicyclic three-NOT circuit for fixed W_6", "case_regime": "Quantitative no-go for path-counting alone; GATE004AN and larger gates remain open",
       "evidence": "proofs/GATE-004AN-path-multiplicity-only.md; docs/no-go-ledger.md NG-091; artifacts/cycle-106-deficient-sextet-stratum.md"
+    },
+    {
+      "id": "LEMMA125", "label": "PROVED",
+      "statement": "Every connected cycle-rank-two multigraph core suppresses to exactly one of theta, figure-eight, or dumbbell, with the latter two having a cycle-separating articulation.",
+      "computational_model": "Connected undirected cycle-rank-two multigraph cores obtained from Boolean output cones", "uniformity": "Every individual finite graph; no circuit family assumption",
+      "circuit_size": "No gate lower bound; exact three-type topological classification", "circuit_depth": "Not applicable to the undirected core; original circuit remains a finite DAG", "fan_in": "Original circuit AND/OR two and NOT one; graph statement uses undirected degrees", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Cycle rank over F_2; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every finite connected loopless multigraph with cycle rank exactly two", "case_regime": "Exact structural graph theorem; not a Boolean lower bound or terminal result",
+      "evidence": "proofs/LEMMA-125-bicyclic-core-trichotomy.md; artifacts/cycle-107-bicyclic-core-audit.md"
+    },
+    {
+      "id": "LEMMA126", "label": "PROVED",
+      "statement": "No cycle-rank-two three-NOT circuit for W_6 has figure-eight or dumbbell core; every remaining candidate has theta core.",
+      "computational_model": "Pruned bicyclic AND/OR/NOT circuits for fixed W_6, block-cut cores, and one-bit articulation factors", "uniformity": "Every individual non-uniform candidate with figure-eight or dumbbell core",
+      "circuit_size": "Excludes c=2,q=3 on both cactus core types; binary count would be 31", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected block-cut topology, one-bit cofactors, and Boolean-lattice inversion",
+      "asymptotic_quantifiers": "Every pruned circuit computing fixed W_6 with cycle rank two, three NOTs, and non-theta core", "case_regime": "Exact structural exclusion of cactus cases; theta core and larger gates remain open",
+      "evidence": "proofs/LEMMA-126-bicyclic-cactus-exclusion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-125-bicyclic-core-trichotomy.md; artifacts/cycle-107-bicyclic-core-audit.md"
+    },
+    {
+      "id": "GATE004AO", "label": "EXPLORATORY",
+      "statement": "No theta-core cycle-rank-two circuit with exactly three NOT gates computes W_6.",
+      "computational_model": "Pruned theta-core bicyclic Boolean circuits for fixed W_6 with exact NOT count", "uniformity": "Every individual non-uniform theta-core candidate",
+      "circuit_size": "Target exclusion of the remaining c=2,q=3, 31-binary-gate stratum", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Theta multigraph topology and Boolean separator cofactors",
+      "asymptotic_quantifiers": "Fixed W_6 and every pruned theta-core circuit with three NOT gates", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AO-theta-three-NOT-exclusion.md; proofs/LEMMA-126-bicyclic-cactus-exclusion.md"
+    },
+    {
+      "id": "GATE004AO-ARTICULATION-ONLY", "label": "NO-GO",
+      "statement": "One-bit articulation factorization cannot address the theta core because neither branch vertex separates a leaf cycle block.",
+      "computational_model": "Theta 2-cores of pruned bicyclic Boolean circuits and articulation-based factorizations", "uniformity": "Every individual non-uniform theta-core candidate",
+      "circuit_size": "No additional lower bound; one-vertex factorization does not apply", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected vertex connectivity only",
+      "asymptotic_quantifiers": "Every theta-core candidate in GATE004AO", "case_regime": "Structural no-go for articulation-only reuse; GATE004AO and larger gates remain open",
+      "evidence": "proofs/GATE-004AO-articulation-only.md; docs/no-go-ledger.md NG-092; artifacts/cycle-107-bicyclic-core-audit.md"
     }
   ]
 }

@@ -19,6 +19,10 @@ The active structural task is to generalize LEMMA-120's one-bit articulation
 to the possible cycle-rank-two block-cut topologies and combine the resulting
 one- or two-bit interfaces with clause cofactor counts.
 
+LEMMA-125 classifies all bicyclic cores, and LEMMA-126 excludes the
+figure-eight and dumbbell cases. GATE-004AO is the exact remaining theta-core
+subgate.
+
 ## Model card
 
 | Field | Value |

@@ -2,9 +2,10 @@
 
 **Label: PROVED**
 
-Partition the variables of `W_m` into `X` and `Y`, and suppose
+Partition the variables of `W_m` into `X` and `Y`, choose either output
+polarity `sigma W_m` with `sigma` equal to identity or complement, and suppose
 
-`W_m(X,Y)=F(z(X),Y)`
+`sigma W_m(X,Y)=F(z(X),Y)`
 
 for a nonconstant Boolean bit `z`. Classify a clause as `X`-whole,
 `Y`-whole, or cut according to where its variables lie. Exactly one of the
@@ -22,7 +23,9 @@ least `m-1` NOT occurrences.
 ## Cofactor classification
 
 Because `z` is one bit, varying `X` produces at most two distinct residual
-functions of `Y`.
+functions of `Y`. Complementing the output preserves equality and
+distinctness of residual functions, so it suffices to classify the positive
+polarity.
 
 For a cut clause, one assignment to its nonempty `X` part forces the clause
 to one, while another leaves a nonconstant clause on its nonempty `Y` part.
@@ -34,14 +37,14 @@ residuals. Both contradict the two-residual limit. This proves the dichotomy.
 ## Formula costs
 
 In case 2, choose the `X` assignment that forces the cut clause to one. The
-remaining `m-1` whole `Y` clauses give exactly `W_{m-1}`. Its associated
+remaining `m-1` whole `Y` clauses give exactly `sigma W_{m-1}`. Its associated
 value of `z` is attained, so fixing that value in a formula for `F` proves the
 `m-1` lower bound by LEMMA-119.
 
 In case 1, varying `X` gives exactly the residuals zero and `W_b`. Therefore
 `z` must distinguish precisely whether all `a` `X`-whole clauses are true;
 it is `W_a` or `NOT W_a`. LEMMA-119 gives the upstream lower bound `a`.
-Fixing `z` to the code for satisfied `X` clauses leaves `W_b`, giving the
+Fixing `z` to the code for satisfied `X` clauses leaves `sigma W_b`, giving the
 downstream lower bound `b`. The conventions `W_0=1` and zero required NOTs
 cover empty sides.
 
@@ -49,7 +52,7 @@ cover empty sides.
 
 | Field | Value |
 |---|---|
-| Computational model | One-bit functional factorizations and formula realizations of disjoint fixed-sign clause products |
+| Computational model | One-bit functional factorizations and formula realizations of either output polarity of disjoint fixed-sign clause products |
 | Uniform/non-uniform | Every variable partition and every nonconstant intermediary bit |
 | Circuit size | Formula NOT lower `a+b=m` in the uncut case; downstream lower `m-1` in the sole-cut case |
 | Circuit depth | Unrestricted formula depth |

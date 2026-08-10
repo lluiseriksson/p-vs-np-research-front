@@ -868,11 +868,20 @@ path-multiplicity unfolding is `NO-GO`: three NOT gates can supply the six
 required formula occurrences in several ways. GATE-004AN isolates the next
 brick as a two-cycle interface/cofactor exclusion.
 
+The one-hundred-and-seventh cycle classifies that topology. LEMMA-125 proves
+the exact bicyclic core trichotomy: theta, figure-eight, or dumbbell.
+LEMMA-126 excludes the two cactus types by factoring a leaf unicyclic block
+at its articulation and applying the bipolar versions of LEMMA-121/123.
+Therefore every surviving `c=2,q=3` candidate must have theta core.
+Articulation-only reuse is `NO-GO` there because the theta core has no
+cycle-separating cut vertex; GATE-004AO isolates a two-vertex/three-branch
+interface theorem as the next brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–106 prove dependency-cone Hall through five indices and reduce the first open sextet to a unique bicyclic stratum. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–107 prove dependency-cone Hall through five indices and reduce the first open sextet to the theta-core bicyclic stratum. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

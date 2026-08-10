@@ -483,6 +483,10 @@
       "sha256": "f654f59d3828a069c9e149a5a59be775e285408a87c5fe612af325583653e14d"
     },
     {
+      "path": "artifacts/cycle-107-bicyclic-core-audit.md",
+      "sha256": "0e7e36280492da743fb35e445e5911835b1f16bf734883a1f509efaca44e7e6b"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -508,7 +512,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2e5414291f98306c3733d9352a7a2df91acf2a45c15de90eca60b45fd6629d36"
+      "sha256": "bfc47f222e005d03a2db20bb83b8547d40ce29bfa15311604e1cd3a6933647af"
     },
     {
       "path": "docs/problem-statement.md",
@@ -516,7 +520,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "6ff6726b5f4cb16a33ee17b311e2f39c0b3bb3af5d4c41ebffbf3960376d58cd"
+      "sha256": "8e3a7531867e9a6b4cad0d26f1577e25ff0661469c7b9affc41c09919188ad45"
     },
     {
       "path": "docs/result-labels.md",
@@ -620,11 +624,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "802f18159261b975e844d40d415ac85193f1dbb8ae1661e923cdc184481eda33"
+      "sha256": "c39b70b3fbdfddef91a289cc5a897e20f265bc25ed88371e4e518563794e7de3"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "9ad7eb44d1030e49bb824759c5bd8ad4d831b45bd5d971290e80edd8569d522e"
+      "sha256": "5275bdb4ad8e2ccd4f4753fc082846007889f16bc67a0b41906c759cfb58f255"
     },
     {
       "path": "experiments/README.md",
@@ -836,11 +840,19 @@
     },
     {
       "path": "proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md",
-      "sha256": "38251c405ddd1c67490d6bdbe262af7e605e564ad53c1fc5bb58911d1be23738"
+      "sha256": "fbf33fdc01fcbdc3b4d49046f733a63c86188594ee0039fe6392859d7d4b6389"
     },
     {
       "path": "proofs/GATE-004AN-path-multiplicity-only.md",
       "sha256": "c70066d4f77f635fb9bee5eae4484edea6ec0cb0e6dcf05be0fcebd81aca50b7"
+    },
+    {
+      "path": "proofs/GATE-004AO-articulation-only.md",
+      "sha256": "e2ce158cc88ce6c089dea8e4bc07fd4ef74621280d2bf21055e3148deede31c3"
+    },
+    {
+      "path": "proofs/GATE-004AO-theta-three-NOT-exclusion.md",
+      "sha256": "3bd6a2bb9e09c49674b6e9bacdbaea5c25502a0f99db2d8d86dd9a19d593085a"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1488,7 +1500,7 @@
     },
     {
       "path": "proofs/LEMMA-121-one-bit-cofactor-dichotomy.md",
-      "sha256": "5fe02cf12681c9ef88eab98560a931ebf5c087c906288af29384a5f7e08a8c04"
+      "sha256": "25157ec591f9d173e44886efcf1c06c2f0418deb4ea17eca1d97ca09f751ef53"
     },
     {
       "path": "proofs/LEMMA-122-dependency-cone-Hall-through-five.md",
@@ -1496,15 +1508,23 @@
     },
     {
       "path": "proofs/LEMMA-123-unicyclic-no-negation-saving.md",
-      "sha256": "843a37c977f6925e0d1cfd97717bf9f1bd55774985b8c3cd41dc94bd45f1da18"
+      "sha256": "48e40e1b55eb522fe2682498e899fd7f3ae215c4e9d2df2f532145cdfbc6cada"
     },
     {
       "path": "proofs/LEMMA-124-deficient-sextet-exact-stratum.md",
       "sha256": "c9051e19a101c3dc8103dda26f5f2627d2f29e78aa9c455c16a1c7d89fc04fe1"
     },
     {
+      "path": "proofs/LEMMA-125-bicyclic-core-trichotomy.md",
+      "sha256": "838630c733cbb1f6f7fe76d46f0f9b7c46deeb7cf33597b645ea89972a0f7cdb"
+    },
+    {
+      "path": "proofs/LEMMA-126-bicyclic-cactus-exclusion.md",
+      "sha256": "cb0873a9153e3ea7c0863ec419674b39073c2bc08a1e9e102e02689d12bd55e3"
+    },
+    {
       "path": "README.md",
-      "sha256": "8bb815033b61f296b41532e8a613d387ba2e68c2a3ebc0d531e9298f9699e4e8"
+      "sha256": "65f7c0ffa89c22b3b8f781390e0f6f471d1ff40355e292d32afea339ae6a0260"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1516,7 +1536,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "9b27c19b029c4da53271139375a3927c33b232904726f85b976a5639f063805b"
+      "sha256": "5eb779c42c320f504561a8bf73019d38fc677bf0148c545ca273d213d23e5c01"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

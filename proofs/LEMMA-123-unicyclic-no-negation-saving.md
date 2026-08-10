@@ -3,18 +3,20 @@
 **Label: PROVED**
 
 For every fixed `p>=1` and every `m>=1`, any pruned cycle-rank-one circuit
-computing `W_m` contains at least `m` NOT gates.
+computing either `W_m` or `NOT W_m` contains at least `m` NOT gates.
 
 ## Proof
 
 For `m=1`, Markov's circuit inversion theorem already gives one NOT. Assume
 `m>=2` below.
 
-Apply the one-bit factorization of LEMMA-120. Let `h` be the number of NOT
+Fix either output polarity and apply the one-bit factorization of LEMMA-120.
+Let `h` be the number of NOT
 gates in the upstream formula `A(X)` and `q` the total circuit NOT count. The
 downstream factor `F(z,Y)` has a formula with `q-h` NOT occurrences. Unfolding
 the unique cycle duplicates precisely the `h` upstream NOT gates, so it also
-gives a formula for `W_m` with `q+h` NOT occurrences. LEMMA-119 implies
+gives a formula for the selected polarity with `q+h` NOT occurrences.
+LEMMA-119 implies
 
 `q+h>=m`.                                                     (1)
 
@@ -33,7 +35,7 @@ NOT-count saving for this function family.
 
 | Field | Value |
 |---|---|
-| Computational model | Pruned unicyclic AND/OR/NOT circuits for disjoint fixed-sign clause products |
+| Computational model | Pruned unicyclic AND/OR/NOT circuits for either output polarity of disjoint fixed-sign clause products |
 | Uniform/non-uniform | Every individual non-uniform circuit; uniform function family |
 | Circuit size | NOT count at least `m`; binary gate count unrestricted beyond cycle rank one |
 | Circuit depth | Unrestricted |

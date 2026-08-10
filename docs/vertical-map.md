@@ -165,7 +165,11 @@ Adjacent collision-aware active branch:
                        + LEMMA-124 (a deficient sextet is exactly bicyclic with three NOTs)
                        <- GATE-004AN (active sextet brick): exclude bicyclic three-NOT `W_6`
                           - GATE-004AN-PATH-MULTIPLICITY-ONLY (no-go: six unfolded occurrences are feasible)
-                          <- two-cycle interface/cofactor classification (next attackable brick)
+                          + LEMMA-125 (bicyclic cores are theta, figure-eight, or dumbbell)
+                          + LEMMA-126 (figure-eight and dumbbell candidates are impossible)
+                          <- GATE-004AO (active theta brick): exclude theta-core three-NOT `W_6`
+                             - GATE-004AO-ARTICULATION-ONLY (no-go: theta has no cycle-separating cut vertex)
+                             <- two-vertex/three-branch cofactor interface (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
