@@ -87,13 +87,19 @@ even with every prefix bit essential, can retain an arbitrary shared core
 behind an `O(k^2)` shell. GATE-004E isolates the still-open requirement inside
 the cross-restriction table of internal SAT gate functions.
 
+The seventh cycle exploits the neutral family’s exact block form `X*W*` and
+reduces that shell to `3p+5` gates. This closes the generic cross-table route:
+even all audited parser geometry can coexist with only linear prefix overhead.
+GATE-004F now asks directly for a SAT-specific surplus of same-column internal
+residual-function collisions.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 42% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context-family tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 43% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context-family recognizer tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, shared-core, and parser-state lifting failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, shared-core, parser lifting, and cross-table failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

@@ -56,10 +56,17 @@ parser-state multiplicity and input essentiality have no generic bridge to a
 loss depending on core complexity. This failed lifting is
 `GATE-004D-PARSER-LIFT — NO-GO`.
 
+LEMMA-008 sharpens the obstruction for this exact family: its block pattern is
+`X*W*`, so a linear-size decoder recognizes all neutral prefixes. The full
+Hamming geometry, regular parser-state pattern, identical residual outputs,
+prefix essentiality, and minimality can therefore coexist with only an `O(p)`
+shell around an arbitrary core. The generic cross-table inference is
+`GATE-004E-CROSS-TABLE — NO-GO`.
+
 GATE-004E remains open only as a SAT-specific internal-gate statement. The
-next attack is to analyze the cross-restriction table
+active subgate GATE-004F asks directly for many same-column constants or
+residual-function collisions in the cross-restriction table
 
 `( residual function of gate v under P_{k,l} )_{v,l}`
 
-and identify a property forced by exact SAT semantics but violated by the
-LEMMA-007 shared-core construction. No such property is currently claimed.
+and excludes output-only statistics already reproduced by LEMMA-008.

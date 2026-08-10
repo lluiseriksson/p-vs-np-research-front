@@ -225,3 +225,26 @@ unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, oracle,
 field, promise, or distribution. The neutral set is part of the counterexample
 function definition. The no-go concerns the generic lifting inference, not the
 SAT-specific GATE-004D or GATE-004E statements.
+
+## NG-013 — neutral-family cross-table statistics
+
+**Label: NO-GO**
+
+Scope: infer GATE-004E from the exact neutral family’s output equality,
+pairwise Hamming geometry, regular parser-state description, essentiality of
+every prefix coordinate, and circuit minimality.
+
+Failure: the ENC-004 prefixes, grouped into twelve-bit blocks, form exactly the
+regular set `X*W*`. LEMMA-008 recognizes this set with at most `3p` gates and
+uses the recognizer to place the whole family in front of an arbitrary shared
+core `G`. Every neutral restriction is exactly `G`, every prefix coordinate is
+essential, and a minimum circuit can differ from `G` by at most `3p+5` gates.
+Thus these complete output-level cross-table statistics do not force
+same-column collisions among core gates or any loss depending on core
+complexity.
+
+Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, oracle,
+field, promise, or distribution. The no-go is generic and method-specific; it
+does not refute an additional internal property special to minimum SAT-gamma
+circuits.

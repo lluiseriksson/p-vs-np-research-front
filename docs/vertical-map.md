@@ -17,7 +17,8 @@ P != NP
   <- GATE-004B (active): SAT-specific amortized block restriction
   <- GATE-004C (active): semantic loss under exact prefix contexts
   <- GATE-004D (active): SAT internal residual-function collisions
-  <- GATE-004E (active smallest brick): collisions in one neutral-prefix family
+  <- GATE-004E (active): collisions in one neutral-prefix family
+  <- GATE-004F (active smallest brick): same-column residual-function collisions
      + LEMMA-002 (proved recurrence)
 ```
 
@@ -122,7 +123,7 @@ gates of the original function. A large core can be shared by all branches.
 This defeats the generic semantic route but leaves the SAT-specific collision
 theorem falsifiable and open.
 
-## Smallest active brick: GATE-004E
+## Active neutral-family gate: GATE-004E
 
 ENC-004 and LEMMA-006 give an explicit family: for padding `12k`, there are
 `k+1` separated prefix assignments, every one leaving the exact same
@@ -135,6 +136,18 @@ generically. Any separated neutral set can sit in front of an arbitrary shared
 core with every prefix bit essential and only an `O(pr)` decoder shell. This is
 `GATE-004D-PARSER-LIFT — NO-GO`; the open gate must use an internal property
 specific to SAT circuits, not only the output parser states.
+
+## Smallest active brick: GATE-004F
+
+LEMMA-008 sharpens the generic obstruction: the exact ENC-004 family is the
+block language `X*W*`, so a linear-size decoder reproduces its complete output
+geometry around an arbitrary core while every prefix bit remains essential.
+Consequently cross-column output statistics cannot force restriction loss.
+
+GATE-004F asks for a directly auditable internal event: in some single neutral
+restriction column, at least `B n^(beta+delta)+3` gates become constant,
+input-equivalent, or semantically equal to an earlier gate. LEMMA-005 converts
+that count into the net gate loss required upstream.
 
 ## Downstream amplification obligation: GATE-005
 

@@ -198,3 +198,27 @@ def neutral_prefix_family(k: int) -> tuple[str, ...]:
         context_prefix(left_tautologies=l, double_nots=3 * (k - l))
         for l in range(k + 1)
     )
+
+
+def neutral_prefix_index(bits: str) -> int | None:
+    """Return the family index of a neutral prefix, or ``None``.
+
+    The input is split into twelve-bit blocks.  Neutral prefixes are exactly a
+    run of all-one blocks followed by a run of ``01T`` blocks.
+    """
+    if len(bits) % 12 != 0 or any(bit not in "01" for bit in bits):
+        return None
+    all_one = "1" * 12
+    context_block = context_prefix(left_tautologies=1)
+    seen_context = False
+    index = 0
+    for start in range(0, len(bits), 12):
+        block = bits[start : start + 12]
+        if block == context_block:
+            seen_context = True
+            index += 1
+        elif block == all_one and not seen_context:
+            continue
+        else:
+            return None
+    return index

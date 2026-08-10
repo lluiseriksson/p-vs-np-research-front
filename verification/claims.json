@@ -680,6 +680,57 @@
       "asymptotic_quantifiers": "Exists fixed A,B,beta,delta; every sufficiently large n; every minimum circuit; exists k>=1 and 0<=l<=k",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004E-neutral-family-collisions.md"
+    },
+    {
+      "id": "LEMMA-008",
+      "label": "PROVED",
+      "statement": "The exact neutral-prefix family is recognized by a linear-size circuit and can surround an arbitrary shared core while retaining essentiality of every prefix bit with total shell overhead at most 3p+5.",
+      "computational_model": "General acyclic Boolean circuits and the explicit ENC-004 prefix set",
+      "uniformity": "Fully non-uniform circuit complexity; family parameter fixed per function",
+      "circuit_size": "Minimum gate count; shared-core shell overhead at most 3p+5",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "Explicit prefix family is part of the function definition",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; XOR is expanded into the Boolean basis",
+      "asymptotic_quantifiers": "Every k>=1 and every positive-arity Boolean core G, with p=12k",
+      "case_regime": "Worst-case exact total Boolean functions; no promise or distribution",
+      "evidence": "proofs/LEMMA-008-regular-neutral-shared-core.md"
+    },
+    {
+      "id": "GATE-004E-CROSS-TABLE",
+      "label": "NO-GO",
+      "statement": "The exact neutral-prefix Hamming geometry, regular parser-state language, identical output residuals, prefix essentiality, and minimality do not generically imply same-column internal gate collisions or superlinear restriction loss.",
+      "computational_model": "Minimum unrestricted circuits and the explicit neutral-prefix restriction family",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Generic shared-core construction has shell overhead at most 3p+5",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "Explicit neutral set is part of the counterexample function",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every k>=1 and arbitrary positive-arity shared core G",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-008-regular-neutral-shared-core.md; docs/no-go-ledger.md NG-013"
+    },
+    {
+      "id": "GATE-004F",
+      "label": "EXPLORATORY",
+      "statement": "Some neutral-prefix restriction of every minimum SAT-gamma circuit makes B n^(beta+delta)+3 internal gates constant, equal to an input, or semantically equal to an earlier gate in the same restriction column.",
+      "computational_model": "Minimum unrestricted circuits for exact SAT-gamma slices, ENC-004 restrictions, and exact internal residual functions",
+      "uniformity": "Fully non-uniform circuit adversary, ordering, and prefix choice",
+      "circuit_size": "At least B n^(beta+delta)+3 directly replaceable or mergeable gates",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "No verifier advice; restriction may depend non-uniformly on the circuit",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Exists fixed A,B,beta,delta; every sufficiently large n; every minimum circuit; exists k,l in range",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/GATE-004F-same-column-collisions.md"
     }
   ]
 }

@@ -15,6 +15,7 @@ from sat_encoding import (
     encode_variable,
     parse_formula,
     neutral_prefix_family,
+    neutral_prefix_index,
     tautology,
     verify_assignment,
 )
@@ -142,6 +143,17 @@ class FormulaEncodingTests(unittest.TestCase):
     def test_neutral_prefix_family_rejects_negative_index(self) -> None:
         with self.assertRaises(ValueError):
             neutral_prefix_family(-1)
+
+    def test_neutral_prefix_regular_recognizer(self) -> None:
+        for k in range(8):
+            prefixes = neutral_prefix_family(k)
+            for index, prefix in enumerate(prefixes):
+                self.assertEqual(neutral_prefix_index(prefix), index)
+                if prefix:
+                    flipped = ("1" if prefix[0] == "0" else "0") + prefix[1:]
+                    self.assertIsNone(neutral_prefix_index(flipped))
+        self.assertIsNone(neutral_prefix_index("1"))
+        self.assertIsNone(neutral_prefix_index("x" * 12))
 
 
 if __name__ == "__main__":

@@ -60,7 +60,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "9d8028199f1a5a2ae1e0148763d163d001cca1d7d0fd2c31e4d6bb56f8b7b420"
+      "sha256": "ea2a2bf14860f1f676c114ce260a3949e7a3740aedd8043042be5c8a6c016856"
     },
     {
       "path": "docs/problem-statement.md",
@@ -68,7 +68,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "c06947294ce55cf05c8f28c7df53d82a10578fdb5a2ac59ca0e3d96374963b51"
+      "sha256": "8471300afa720ec049ee7cc1a3bd39f837a787d7c0d8ee71b863397ad8fac6a8"
     },
     {
       "path": "docs/result-labels.md",
@@ -140,11 +140,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3707b4e3fd530c4cf4993aad3c1a7c73d0ddccd5d15b9939f8cc30fa1820aebd"
+      "sha256": "78f6268c949aed9953c87ebd84941d9902bf2890770c2089fa2e8c2917838a6b"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "e50fcd429462337fbc70ced9c6944e64b63d786addc25eb49c5cc7715990b03d"
+      "sha256": "2d17f959347ff48d01355a65a762282d2fcd3fc8749120d7062f533ad086907a"
     },
     {
       "path": "experiments/README.md",
@@ -184,7 +184,11 @@
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
-      "sha256": "58bb91ccd40705c240264710920b51f03037cba2d6e1149c7e67630cf2eb99c8"
+      "sha256": "e8c739153a3c5ad420c9f4e74f4576326b94ca32ee2a82f0c71527e99b68f8cb"
+    },
+    {
+      "path": "proofs/GATE-004F-same-column-collisions.md",
+      "sha256": "4f7afcfd10285198ab11451fc10fb3a9ce5dd60fdfdc009ec9e380a3fbe6af70"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -219,8 +223,12 @@
       "sha256": "69777bc101bb6cea6bb4be7dde4e1a81a85328bb3d679120d2535c4aeb7ab8b7"
     },
     {
+      "path": "proofs/LEMMA-008-regular-neutral-shared-core.md",
+      "sha256": "50ce0156bd5e3a6607faa7fe91140a5fb54dd348f642923f25c29a8674fc27dc"
+    },
+    {
       "path": "README.md",
-      "sha256": "6388ca6819da50c97ae6b22840e0310801f5cbd194906fdcbbf7ae0878f1a121"
+      "sha256": "3f323633dae7166aeb203f3d731a8fc998be298e63207ee2be90df6b4720d286"
     },
     {
       "path": "verification/audit.py",
@@ -228,7 +236,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "41388b44da6c5bb1e21baecacc7350f829c33d74c08afdedde3f3b1e8c362b76"
+      "sha256": "9a166058b3d8559c4e6a7fa845a93e374aaf989787fe904c0d05ded4f63a11b0"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -236,11 +244,11 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "02cae58388b92ff91ea5797aa791129c99d56688a34a071c869e61219339b961"
+      "sha256": "66f190e1a3a504be69602ea61a325fa572df5a98e752786175a35ff3560578cf"
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "249bc83aab9b709dfeb53d13c3d30a285b5775471b5cb1c878478a3daf39888c"
+      "sha256": "25d3ad65f36f16450eeca126aad6ded770ffa5eab3d13ed273b52cfced5b768f"
     }
   ]
 }
