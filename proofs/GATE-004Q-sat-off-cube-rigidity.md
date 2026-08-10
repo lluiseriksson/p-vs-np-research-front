@@ -49,8 +49,14 @@ union `H_{j,0} OR H_{j',0}`, and two are unions involving a positive
 condition and an auxiliary negative condition.
 
 LEMMA-039 and NG-037 show that the neutral duplicates alone force no circuit
-structure, even under global minimality. The next attack is therefore the
-simultaneous mixed-halo network, beginning with whether the exact negative
-union relations over every context-cube edge rule out the fresh-tail quotient
-expansion in LEMMA-038. Any such inference must use all relevant ambient SAT
-rows; equality of one pair receives no credit.
+structure, even under global minimality. LEMMA-040 then realizes all six
+pointwise ENC-015 relations simultaneously in one total function while
+retaining the fresh-tail quotient expansion. Thus the complete radius-one
+relation schema is also `NO-GO` as a generic forcing principle.
+
+GATE-004R is the next attack. It requires exact agreement with SAT-gamma on
+the entire radius-two prefix cylinder, rather than a lookup function copying
+only the simplified pointwise halo table. The first task is to classify all
+two-flip rows, their cross-context collisions, and their exact total-language
+semantics. Any forcing inference must identify a proved compatibility absent
+from LEMMA-040.

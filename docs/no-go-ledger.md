@@ -764,3 +764,28 @@ oracle, field, promise, or distribution. This obstruction applies only to the
 two neutral cases in ENC-015. It does not address the four mixed SAT-specific
 halo relations, especially the exact union
 `H_{j,0} OR H_{j',0}`.
+
+## NG-038 — the complete radius-one halo schema forces quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive parent-to-joint-quotient loss from ambient minimality,
+the full compressed affine cube, common branch union, exact shattering, a
+large context-dependent trace region, and all six pointwise ENC-015 relations
+on every single-occurrence off-cube neighbor.
+
+Failure: LEMMA-040 constructs one total lookup function on a triplicated
+context block that realizes all designated cube and halo rows simultaneously.
+The two equal context copies uniquely identify the base row, so the halo
+requirements do not conflict. Conjoining `m` fresh inputs raises the exact
+minimum parent size from `K_d` to `K_d+m`, while every cube-pair quotient
+retains at least `2m` distinct tail classes. Its signed loss is therefore at
+most `K_d-m`, negative for `m>K_d`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; a full
+`d`-bit context cube with three disjoint copies and its complete radius-one
+halo; base depth unrestricted and a fresh AND tail; fan-in-two AND/OR and
+fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
+algebraic computation. The construction matches the pointwise six-case
+relation schema but is not SAT-gamma. It does not match SAT's exact residual
+functions on all suffix strings or impose radius-two compatibility.

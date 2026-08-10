@@ -48,9 +48,11 @@ Adjacent collision-aware active branch:
      + LEMMA-034 (proved context-dependent region)
   <- GATE-004P (no-go): compressed full-context shattering
      - LEMMA-038 (fresh-tail counterexample)
-  <- GATE-004Q (active smallest brick): SAT off-cube rigidity
+  <- GATE-004Q (active parent): SAT off-cube rigidity
      + ENC-015 (proved six-case one-bit halo semantics)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
+     - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
+  <- GATE-004R (active smallest brick): radius-two SAT neighborhood rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -520,7 +522,7 @@ conjunctive input. LEMMA-038 appends a long fresh conjunction to
 satisfies the full compressed cube, common union, exact shattering, and
 `U>=R`, yet every pair has loss at most `K-m`, negative for `m>K`.
 
-## Smallest active brick: GATE-004Q
+## Active off-cube parent: GATE-004Q
 
 GATE-004Q stops abstracting away the ambient language. It asks for the same
 polynomial average loss only for minimum circuits computing the full total
@@ -535,11 +537,21 @@ one is the exact union `H_{j,0} OR H_{j',0}`, and two are positive/auxiliary
 mixed unions. LEMMA-039 proves that neutral duplication alone has no generic
 forcing power.
 
-The next concrete attack is the simultaneous mixed-halo network. In
-particular, it asks whether the exact negative union relations on every edge
-of the compressed context cube obstruct LEMMA-038's fresh-tail quotient
-expansion. This remains an SAT-specific, unrestricted-circuit question; no
-loss theorem is presently proved.
+LEMMA-040 reproduces the entire six-case pointwise halo table simultaneously
+in one arbitrary total function and retains LEMMA-038's fresh-tail quotient
+expansion. Consequently neither neutral nor mixed radius-one relations, when
+treated only as the ENC-015 schema, force positive loss.
+
+GATE-004R is now the smallest attackable brick. It strengthens the premise to
+exact agreement with SAT-gamma on the full Hamming-radius-two prefix cylinder.
+The next audit classifies two independently flipped occurrences, including
+collisions between descriptions based at neighboring contexts. This remains
+an unrestricted-circuit theorem and no loss bound is presently proved.
+
+### Smallest active brick: GATE-004R
+
+The exact falsifiable statement, model card, and SAT bridge are in
+`proofs/GATE-004R-radius-two-sat-rigidity.md`.
 
 ## Downstream amplification obligation: GATE-005
 

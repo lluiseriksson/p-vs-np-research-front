@@ -185,6 +185,201 @@ class FullTraceAccountingTests(unittest.TestCase):
                     observed_columns.add(column)
                 self.assertEqual(len(observed_columns), 2**context_count)
 
+    def test_radius_one_halo_schema_fresh_tail_counterexample(self) -> None:
+        def bits(value: int, width: int) -> tuple[bool, ...]:
+            return tuple(
+                bool(value & (1 << (width - index - 1)))
+                for index in range(width)
+            )
+
+        def row(
+            edge: bool,
+            context: int,
+            width: int,
+            position: int | None = None,
+            coordinate: int | None = None,
+        ) -> tuple[bool, ...]:
+            blocks = [list(bits(context, width)) for _ in range(3)]
+            if position is not None and coordinate is not None:
+                blocks[position][coordinate] = not blocks[position][coordinate]
+            return (edge, *(bit for block in blocks for bit in block))
+
+        def ambient_base(
+            prefix: tuple[bool, ...],
+            y: tuple[bool, ...],
+            auxiliary: tuple[bool, ...],
+            witness: bool,
+        ) -> bool:
+            width = (len(prefix) - 1) // 3
+            edge = prefix[0]
+            blocks = tuple(
+                prefix[1 + index * width:1 + (index + 1) * width]
+                for index in range(3)
+            )
+            if blocks[0] == blocks[1] == blocks[2]:
+                base_bits = blocks[0]
+                position = None
+            elif blocks[1] == blocks[2]:
+                base_bits = blocks[1]
+                position = 0
+            elif blocks[0] == blocks[2]:
+                base_bits = blocks[0]
+                position = 1
+            elif blocks[0] == blocks[1]:
+                base_bits = blocks[0]
+                position = 2
+            else:
+                return False
+
+            context = sum(
+                bit << (width - index - 1)
+                for index, bit in enumerate(base_bits)
+            )
+            if position is None:
+                return witness and (edge == y[context])
+
+            outlier = blocks[position]
+            differences = [
+                index
+                for index, pair in enumerate(zip(base_bits, outlier))
+                if pair[0] != pair[1]
+            ]
+            if len(differences) != 1:
+                return False
+            coordinate = differences[0]
+            neighbor = context ^ (1 << (width - coordinate - 1))
+            table = {
+                (True, 0): y[context]
+                or (y[neighbor] and not auxiliary[context]),
+                (True, 1): y[context],
+                (True, 2): y[neighbor]
+                or (y[context] and not auxiliary[context]),
+                (False, 0): not y[context],
+                (False, 1): (not y[context]) or (not y[neighbor]),
+                (False, 2): not y[neighbor],
+            }
+            return witness and table[(edge, position)]
+
+        for context_width in range(1, 5):
+            context_count = 2**context_width
+            seen = set()
+            for context in range(context_count):
+                for edge in (False, True):
+                    cube_row = row(edge, context, context_width)
+                    self.assertNotIn(cube_row, seen)
+                    seen.add(cube_row)
+                    for coordinate in range(context_width):
+                        for position in range(3):
+                            halo_row = row(
+                                edge,
+                                context,
+                                context_width,
+                                position,
+                                coordinate,
+                            )
+                            self.assertNotIn(halo_row, seen)
+                            seen.add(halo_row)
+
+            expected_count = 2 * context_count * (1 + 3 * context_width)
+            self.assertEqual(len(seen), expected_count)
+
+        for context_width in (1, 2):
+            context_count = 2**context_width
+            suffixes = itertools.product(
+                (False, True), repeat=2 * context_count + 1
+            )
+            for suffix in suffixes:
+                y = suffix[:context_count]
+                auxiliary = suffix[context_count:2 * context_count]
+                witness = suffix[-1]
+                for context in range(context_count):
+                    for edge in (False, True):
+                        self.assertEqual(
+                            ambient_base(
+                                row(edge, context, context_width),
+                                y,
+                                auxiliary,
+                                witness,
+                            ),
+                            witness and (edge == y[context]),
+                        )
+                    for coordinate in range(context_width):
+                        neighbor = context ^ (
+                            1 << (context_width - coordinate - 1)
+                        )
+                        expected = {
+                            (True, 0): witness
+                            and (y[context] or (y[neighbor] and not auxiliary[context])),
+                            (True, 1): witness and y[context],
+                            (True, 2): witness
+                            and (y[neighbor] or (y[context] and not auxiliary[context])),
+                            (False, 0): witness and not y[context],
+                            (False, 1): witness
+                            and ((not y[context]) or (not y[neighbor])),
+                            (False, 2): witness and not y[neighbor],
+                        }
+                        for edge in (False, True):
+                            for position in range(3):
+                                self.assertEqual(
+                                    ambient_base(
+                                        row(
+                                            edge,
+                                            context,
+                                            context_width,
+                                            position,
+                                            coordinate,
+                                        ),
+                                        y,
+                                        auxiliary,
+                                        witness,
+                                    ),
+                                    expected[(edge, position)],
+                                )
+                        self.assertEqual(
+                            expected[(False, 1)],
+                            (witness and not y[context])
+                            or (witness and not y[neighbor]),
+                        )
+                        self.assertEqual(
+                            expected[(True, 0)],
+                            (witness and y[context])
+                            or (
+                                witness
+                                and y[neighbor]
+                                and not auxiliary[context]
+                            ),
+                        )
+                        self.assertEqual(
+                            expected[(True, 2)],
+                            (witness and y[neighbor])
+                            or (
+                                witness
+                                and y[context]
+                                and not auxiliary[context]
+                            ),
+                        )
+
+            for tail_count in range(2, 5):
+                reduced_suffixes = tuple(
+                    itertools.product(
+                        (False, True), repeat=context_count + 1 + tail_count
+                    )
+                )
+                for context in range(context_count):
+                    traces = set()
+                    for edge in (False, True):
+                        branch_traces = [[] for _ in range(tail_count)]
+                        for suffix in reduced_suffixes:
+                            y = suffix[:context_count]
+                            witness = suffix[context_count]
+                            tail = suffix[context_count + 1:]
+                            value = witness and (edge == y[context])
+                            for index, tail_bit in enumerate(tail):
+                                value = value and tail_bit
+                                branch_traces[index].append(value)
+                        traces.update(map(tuple, branch_traces))
+                    self.assertEqual(len(traces), 2 * tail_count)
+
 
 if __name__ == "__main__":
     unittest.main()

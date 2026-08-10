@@ -2093,6 +2093,40 @@
       "evidence": "proofs/LEMMA-039-neutral-halo-duplication-no-go.md; docs/no-go-ledger.md NG-037"
     },
     {
+      "id": "LEMMA-040",
+      "label": "PROVED",
+      "statement": "An explicit total function simultaneously realizes the full six-case pointwise radius-one halo schema and every compressed-cube hypothesis, yet after a fresh conjunction tail every joint quotient has signed loss at most K_d-m.",
+      "computational_model": "Globally minimum unrestricted circuits for an explicit total Boolean function, an affine triplicated context cube, its complete radius-one halo, and exact semantic joint quotients",
+      "uniformity": "Explicit uniformly described function family; K_d is the non-uniform minimum size of each finite base",
+      "circuit_size": "Exact parent size K_d+m; quotient at least 2m; signed loss at most K_d-m",
+      "circuit_depth": "Base unrestricted; displayed fresh tail adds m layers, with depth unrestricted in the minimum-size identity",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Context and halo geometry over F_2; computation is Boolean",
+      "asymptotic_quantifiers": "Every d at least one and m at least one; negative loss for m greater than K_d and all inherited trace hypotheses for m at least max(K_d+1,2^d)",
+      "case_regime": "Worst-case exact total-function computation; method obstruction matching the ENC-015 pointwise schema, not SAT-gamma",
+      "evidence": "proofs/LEMMA-040-radius-one-halo-tail-counterexample.md; verification/test_trace_accounting.py"
+    },
+    {
+      "id": "GATE-004Q-RADIUS1-SCHEMA",
+      "label": "NO-GO",
+      "statement": "The full compressed cube, ambient minimality, shattering, common union, context-dependent traces, and all six pointwise ENC-015 relations on every radius-one halo row do not force positive quotient loss for arbitrary total functions.",
+      "computational_model": "Globally minimum unrestricted non-uniform Boolean circuits on a triplicated affine context block and its complete radius-one halo",
+      "uniformity": "Explicit uniformly described counterexample family with non-uniform minimum base size K_d",
+      "circuit_size": "Signed loss at most K_d-m and therefore arbitrarily negative",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine context and halo geometry over F_2; computation is Boolean",
+      "asymptotic_quantifiers": "Every d at least one and every m greater than K_d",
+      "case_regime": "Worst-case method-specific obstruction; does not impose exact SAT residual functions or radius-two compatibility",
+      "evidence": "proofs/LEMMA-040-radius-one-halo-tail-counterexample.md; docs/no-go-ledger.md NG-038"
+    },
+    {
       "id": "GATE-004Q",
       "label": "EXPLORATORY",
       "statement": "The exact ambient SAT-gamma function has polynomial positive average parent-to-joint-quotient loss across the ENC-014 adjacent family because of SAT-specific behavior outside the affine row cube.",
@@ -2108,6 +2142,23 @@
       "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum SAT-gamma circuit; all contexts",
       "case_regime": "Worst-case exact total-language computation; malformed strings reject; no promise or distribution",
       "evidence": "proofs/GATE-004Q-sat-off-cube-rigidity.md"
+    },
+    {
+      "id": "GATE-004R",
+      "label": "EXPLORATORY",
+      "statement": "Every total function agreeing exactly with SAT-gamma on the full Hamming-radius-two ENC-014 prefix cylinder has polynomial positive average parent-to-joint-quotient loss across the base adjacent family.",
+      "computational_model": "Minimum unrestricted circuits for total functions agreeing exactly with SAT-gamma on the radius-two ENC-014 prefix cylinder and exact semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary; uniform explicit neighborhood and restriction family",
+      "circuit_size": "Average parent-to-joint-quotient loss at least B R^eta+1, with R=2^(L-2)",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Hamming neighborhoods and affine prefix geometry over F_2; computation remains Boolean",
+      "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all contexts and suffixes in the local-agreement premise",
+      "case_regime": "Worst-case exact total-function agreement with total SAT-gamma; no promise or distribution",
+      "evidence": "proofs/GATE-004R-radius-two-sat-rigidity.md"
     }
   ]
 }
