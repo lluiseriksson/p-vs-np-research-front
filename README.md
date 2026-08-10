@@ -118,13 +118,19 @@ cross-copy sharing must exceed the entire `S` duplication term before any
 lower-bound surplus exists. Separately simplifying and ORing the branches is
 therefore recorded as a no-go rather than a recurrence.
 
+The twelfth cycle compares this obligation with primary multi-output
+literature. Identical-copy amortized complexity is trivialized by arbitrary
+fanout in general circuits, while NP-hardness of multi-output minimization is
+not an explicit-function size lower bound. Neither result is promoted to the
+conditioned-SAT gap.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 48% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context/conditioned-residual tests, exact single/multi-output quotient accounting, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 49% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context/conditioned-residual tests, exact quotient accounting, expanded primary multi-output source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, shared-core, parser lifting, local-cofactor, conditioned-union, and duplicated-branch failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, shared-core, parser lifting, conditioned-union, duplicated-branch, and literature-promotion failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

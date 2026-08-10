@@ -335,3 +335,26 @@ Model: exact gate accounting for unrestricted non-uniform acyclic circuits;
 unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
 oracle, field, promise, or distribution. The no-go does not refute a
 SAT-specific proof of the full joint surplus required by GATE-004G.
+
+## NG-018 — promote multi-output literature to the conditioned-SAT gap
+
+**Label: NO-GO**
+
+Scope: cite amortized circuit-complexity duality or NP-hardness of multi-output
+circuit minimization as if either established GATE-004G.
+
+Failure: RZ21 studies asymptotically many *identical* outputs on the same input;
+in general circuits, arbitrary fanout makes the amortized cost per identical
+copy `O(1)`. GATE-004G instead asks for a quantitative gap for two different
+conditioned functions. ILO20 proves that finding a minimum circuit for an
+arbitrary truth-table-given multi-output function is NP-hard under a randomized
+reduction. Hardness of the minimization problem is not a circuit-size lower
+bound for the explicit pair `(CSAT_0,CSAT_1)`. Neither result supplies the
+required `B n^delta` surplus.
+
+Model: general unrestricted finite-gate Boolean circuits with arbitrary
+fanout; exact multi-output computation; RZ21's identical-copy amortized limit
+and ILO20's randomized truth-table minimization reduction. No randomness,
+advice, oracle, field, promise, or distribution is allowed in the desired
+GATE-004G lower bound. This no-go is a scope audit, not a criticism of either
+source theorem.

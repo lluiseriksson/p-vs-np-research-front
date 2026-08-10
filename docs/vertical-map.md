@@ -196,6 +196,12 @@ separate branch simplifications cannot be added and promoted to GATE-004G
 without a proved sharing surplus; that route is
 `GATE-004G-SEPARATE-LOSSES — NO-GO`.
 
+The primary multi-output literature does not close the gap. RZ21 concerns
+identical-copy amortization, which arbitrary fanout trivializes for general
+circuits, while ILO20 proves hardness of the minimization problem rather than a
+lower bound for this explicit pair. `GATE-004G-LITERATURE — NO-GO` records the
+scope boundary.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

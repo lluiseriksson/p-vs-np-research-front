@@ -75,3 +75,13 @@ promotion is `GATE-004G-SEPARATE-LOSSES — NO-GO`.
 The next attack will classify which parent-gate pairs pay the baseline one
 merge and which can pay a second, surplus deletion. Any claimed averaging must
 account for the full `|C_n|` duplication term.
+
+## Primary-literature boundary
+
+RZ21 studies amortized complexity of identical copies and observes that
+arbitrary fanout makes the general-circuit per-copy cost constant. ILO20 proves
+NP-hardness of minimizing truth-table-given multi-output functions. Neither is
+the explicit lower bound required here: the first has a different output task,
+and the second is minimization-problem hardness rather than a lower bound for
+`(CSAT_0,CSAT_1)`. Treating either as the missing surplus is
+`GATE-004G-LITERATURE — NO-GO`.

@@ -935,6 +935,57 @@
       "asymptotic_quantifiers": "Every parent size S and every two-restriction quotient; quantitative failure whenever total savings are at most S",
       "case_regime": "Worst-case method-specific accounting obstruction; not a SAT lower bound",
       "evidence": "proofs/LEMMA-012-joint-quotient-accounting.md; docs/no-go-ledger.md NG-017"
+    },
+    {
+      "id": "BR-RZ21",
+      "label": "PROVED",
+      "statement": "Amortized circuit complexity concerns many identical copies on the same input and is characterized by formal complexity measures; for general circuits arbitrary fanout makes identical-copy amortized cost O(1).",
+      "computational_model": "Circuit models over finite gate sets, including general Boolean circuits",
+      "uniformity": "Non-uniform circuit-size measure and mathematical duality theorem",
+      "circuit_size": "Limit of minimum size for m identical outputs divided by m",
+      "circuit_depth": "Model-dependent; unrestricted in the consumed general-circuit observation",
+      "fan_in": "Fixed finite gate set; arbitrary fanout in the general-circuit observation",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Abstract circuit pre-order; no field in the consumed Boolean claim",
+      "asymptotic_quantifiers": "For each fixed function, limit as identical copy count m tends to infinity",
+      "case_regime": "Exact same-input multi-output computation",
+      "evidence": "docs/source-citations/robere-zuiddam-2021.md"
+    },
+    {
+      "id": "BR-ILO20",
+      "label": "PROVED",
+      "statement": "Minimum circuit size for truth-table-given total multi-output Boolean functions is NP-hard under polynomial-time randomized many-one reductions.",
+      "computational_model": "General multi-output Boolean circuits and truth-table input to a minimization decision problem",
+      "uniformity": "Uniform randomized reduction; non-uniform circuits are minimized",
+      "circuit_size": "Gate count compared with an input size threshold",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR/NOT basis as defined in the report; no fan-in-sensitive conclusion is consumed",
+      "randomness": "Polynomial-time randomized many-one reduction",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Worst-case truth-table instances over input/output arities and thresholds",
+      "case_regime": "Exact total multi-output functions; minimization complexity, not explicit-function lower bounds",
+      "evidence": "docs/source-citations/ilango-loff-oliveira-2020.md"
+    },
+    {
+      "id": "GATE-004G-LITERATURE",
+      "label": "NO-GO",
+      "statement": "Neither identical-copy amortized-complexity duality nor NP-hardness of multi-output circuit minimization proves the explicit conditioned-SAT joint quotient surplus.",
+      "computational_model": "General unrestricted Boolean circuits, identical-copy amortized tasks, truth-table minimization, and the distinct conditioned-SAT pair",
+      "uniformity": "Non-uniform circuit measures; uniform randomized minimization reduction; desired non-uniform explicit lower bound",
+      "circuit_size": "No B n^delta lower bound follows from either cited theorem",
+      "circuit_depth": "Unrestricted in the desired and compared general-circuit settings",
+      "fan_in": "Standard finite Boolean gate bases with arbitrary fanout",
+      "randomness": "Present only in the ILO20 reduction; absent from desired lower bound",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Scope mismatch between identical-copy limits or worst-case minimization instances and one explicit conditioned pair at every large length",
+      "case_regime": "Method-promotion no-go; worst-case exact functions",
+      "evidence": "docs/bridge-audit.md; docs/no-go-ledger.md NG-018"
     }
   ]
 }

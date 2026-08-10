@@ -63,6 +63,9 @@ truth. Each row has exactly one label.
 | GATE-004G | EXPLORATORY | Jointly quotient both conditioned SAT residuals below the parent circuit by `B n^delta+1` gates | `proofs/GATE-004G-joint-conditioned-quotient.md` | Active smallest brick; directly sufficient for GATE-004 |
 | LEMMA-012 | PROVED | Exact joint-quotient accounting requires within-branch loss plus cross-sharing to exceed the full duplicated parent size | `proofs/LEMMA-012-joint-quotient-accounting.md` | Quantifies the missing surplus |
 | GATE-004G-SEPARATE-LOSSES | NO-GO | Separately simplifying and ORing two copies fails unless the entire parent-size duplication term is paid | LEMMA-012; NG-017 | Joint SAT-specific sharing remains open |
+| BR-RZ21 | PROVED | Formal measures characterize identical-copy amortized complexity; arbitrary fanout trivializes it for general circuits | RZ21 primary-source note | Literature boundary only |
+| BR-ILO20 | PROVED | Minimizing truth-table-given total multi-output functions is NP-hard under randomized reductions | ILO20 primary-source note | No explicit-function lower bound |
+| GATE-004G-LITERATURE | NO-GO | Neither amortized-copy duality nor multi-output minimization hardness proves the conditioned-SAT joint gap | Bridge audit; NG-018 | Explicit SAT-specific surplus remains open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

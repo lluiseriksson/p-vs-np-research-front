@@ -76,11 +76,11 @@
     },
     {
       "path": "docs/bridge-audit.md",
-      "sha256": "6d0518c9d799623c1329c95cc07d9533d7b3646e8db0633fd34956c2839a7eed"
+      "sha256": "5092215fefd9eb78d06e9148a3c6f3b2747d40472e1157f6dede5671a8df5d0f"
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "31fead6e0ae781e532e712c2d868c89cd33a60b056ab398f000bc1166897afe4"
+      "sha256": "98b668a191555d8ae02d4401c12d056b6d306a294c8774ba23db3160bc0a8ac7"
     },
     {
       "path": "docs/problem-statement.md",
@@ -88,7 +88,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "6e8487b4e57dc4bfe764e7b4c504058900cb330da82a01459b4d63d3883945d8"
+      "sha256": "78d6a616c2d13693aee0b7c599c0edb3f3b53919a12b263c1c984b0fb5fbf511"
     },
     {
       "path": "docs/result-labels.md",
@@ -123,6 +123,10 @@
       "sha256": "a1a56931866bff2ea3e3531e06eafbf2e43badbd27d8d9ae5d002a36ba4f5d0d"
     },
     {
+      "path": "docs/source-citations/ilango-loff-oliveira-2020.md",
+      "sha256": "d6126e4f273a1b1ea816fa3d940da564f147a2cde588cfd02bf47ce2058086fc"
+    },
+    {
       "path": "docs/source-citations/karp-lipton.md",
       "sha256": "c0951947c984eb2479d77215ffb6c2103f43753d24952bc9a747bf391e5d81ba"
     },
@@ -143,6 +147,10 @@
       "sha256": "1c5b07a2b9cc340c345f5d86519320978db56badd52192cd890d5c2760d860a0"
     },
     {
+      "path": "docs/source-citations/robere-zuiddam-2021.md",
+      "sha256": "2fae9ddc61e90249aeccf77a1802da3d3316fa6eac85891b4aea6885595edc55"
+    },
+    {
       "path": "docs/source-citations/santhanam-williams-2013.md",
       "sha256": "6d280dc22893dc8852f182f8bba1c273bf046d142e9c2e97f645e019be417fc4"
     },
@@ -160,11 +168,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "1bf572094b961192696181b0b0673a6f1a23119cdb476ea2eb6a49226e23c6e1"
+      "sha256": "1033f462e7fa0da091fa51a48c1b0bb5a8f8e8006d031b1d4ad7d96b6e4b19a1"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "74d7a5b482df95f87ef334e085d735f3db64155c1e94e33abff1d08295f8a673"
+      "sha256": "0f6597b19b334c3c245b86300b4405572e9c8c7ad8474eaac64b05c114974c38"
     },
     {
       "path": "experiments/README.md",
@@ -212,7 +220,7 @@
     },
     {
       "path": "proofs/GATE-004G-joint-conditioned-quotient.md",
-      "sha256": "e68a44feee0647b77dc9080e430f4da1e238dde9ca296bb27d11eaafedf70d95"
+      "sha256": "5473ec40496104622315974b69aa07565f2df991c4b4bd65d10c995375d0921b"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -268,7 +276,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "cd9a6ca3fba1ceb8398cd50f13d94232fe584130f2deeaa56b29e54aec23a9b1"
+      "sha256": "31e1b67a1db9187fb70f0822f93bb7b3f7361a86a68b40bb33f69c9d59e6bd6a"
     },
     {
       "path": "verification/audit.py",
@@ -276,7 +284,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3bce3f26afaf78ec3647c880f6a0a9ad1c2602b1350be7fe276e2223f5d473eb"
+      "sha256": "ace360264bc5ac4f48c2e3be1870ce5c97f7e80d82fc3295caaa1dd7929c5734"
     },
     {
       "path": "verification/generate_manifest.py",

@@ -113,3 +113,22 @@ quantifier-stable, unrestricted, non-uniform lower bound needed for
 bridge as terminal; GATE-002 isolates the exponent-ratio requirement; GATE-003
 is now rejected because satisfying that requirement is equivalent to the
 terminal-sufficient non-uniform separation rather than a smaller milestone.
+
+## Multi-output and direct-sum literature boundary
+
+Robere and Zuiddam (2021) characterize amortized circuit complexity via formal
+complexity measures for broad finite-gate models. Their amortized task computes
+many identical copies of one function on the same input. For general Boolean
+circuits, arbitrary fanout lets a single computed output serve all copies, so
+the per-copy amortized complexity is `O(1)`. This warns directly against an
+additive formal-measure argument for unrestricted circuits, but it does not
+analyze the distinct conditioned pair in GATE-004G.
+
+Ilango, Loff, and Oliveira (2020) prove NP-hardness of minimizing total
+multi-output functions represented by truth tables under randomized
+polynomial-time reductions. Computational hardness of finding a minimum
+circuit is not a size lower bound for a fixed explicit function. It supplies
+neither the `B n^delta` joint quotient gap nor a terminal bridge.
+
+Therefore neither theorem may be promoted to GATE-004G. The active obligation
+remains an explicit SAT-specific structural lower bound on sharing.
