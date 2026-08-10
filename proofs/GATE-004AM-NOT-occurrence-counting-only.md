@@ -17,8 +17,9 @@ inversion complexity. Repeating it cannot produce a contradiction. The next
 argument must use which clause-indexed cofactor changes each duplicated NOT
 can support, or another function-specific placement invariant.
 
-This no-go does not exhibit a circuit and does not refute GATE-004AM,
-GATE-004AL, or any larger gate.
+This no-go does not exhibit a circuit. GATE-004AM was subsequently proved by
+the one-bit factorization and cofactor-partition argument; occurrence counting
+itself remains insufficient. GATE-004AL beyond size five remains open.
 
 ## Model card
 

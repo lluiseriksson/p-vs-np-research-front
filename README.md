@@ -851,11 +851,20 @@ formula lower bound—five occurrences—and is `NO-GO` as an exclusion. The
 active GATE-004AM is now the function-specific impossibility of that finite
 unicyclic three-NOT stratum.
 
+The one-hundred-and-fifth cycle proves that impossibility. LEMMA-119 closes
+formula inversion for both polarities of the fixed-sign product. LEMMA-120
+factorizes any unicyclic output cone into an upstream formula bit and a
+downstream formula; LEMMA-121 classifies the only possible one-bit clause
+partitions. The cut case would require four downstream NOTs where at most one
+exists; the uncut case requires five total where only three exist. Thus
+GATE-004AM is `PROVED`, and LEMMA-122 extends dependency-cone Hall expansion
+through subset size five. Size six is now the smallest open Hall brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–104 isolate the fixed-sign tail, prove dependency-cone Hall through four indices, and reduce the first open quintet to one exact unicyclic stratum. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–105 isolate the fixed-sign tail, prove dependency-cone Hall through five indices, and expose size six as the first open local matching case. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

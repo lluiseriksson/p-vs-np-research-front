@@ -4209,7 +4209,7 @@
       "statement": "For every parent circuit, every spanning tree, and every clause-index subset of size one through four, the union of full dependency-cone NOT and non-tree-edge resources has size at least the subset.",
       "computational_model": "Full block restrictions of unrestricted AND/OR/NOT circuits, dependency cones, and output-cone cycle rank", "uniformity": "Every individual non-uniform parent circuit; every selected block set of size at most four",
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=4", "circuit_depth": "Unrestricted; restriction and pruning preserve a finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restrictions",
-      "asymptotic_quantifiers": "Every m at least one, every circuit for W_m, every spanning tree, and every I with 1<=|I|<=min(4,m)", "case_regime": "Exact worst-case local Hall theorem; quintets, full matching, SAT lower bounds, and the terminal problem remain open",
+      "asymptotic_quantifiers": "Every m at least one, every circuit for W_m, every spanning tree, and every I with 1<=|I|<=min(4,m)", "case_regime": "Exact worst-case local Hall theorem, extended through five by LEMMA122; full matching and terminal bounds remain open",
       "evidence": "proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; artifacts/cycle-103-dependency-Hall-through-four.md"
     },
     {
@@ -4237,20 +4237,52 @@
       "evidence": "proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; artifacts/cycle-104-deficient-quintet-stratum.md"
     },
     {
-      "id": "GATE004AM", "label": "EXPLORATORY",
+      "id": "GATE004AM", "label": "PROVED",
       "statement": "No pruned AND/OR/NOT circuit computing W_5 has output-cone cycle rank one and exactly three NOT gates.",
       "computational_model": "Pruned unrestricted Boolean circuits for W_5 with exact output-cone cycle rank and NOT count", "uniformity": "Every individual non-uniform five-block circuit",
       "circuit_size": "Target exclusion of c=1,q=3; binary count exactly 25", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean cofactor/inversion structure",
-      "asymptotic_quantifiers": "The fixed five-block function and every pruned circuit with c=1,q=3", "case_regime": "Exact finite structural gate for quintet Hall; not a full family lower bound or terminal result",
-      "evidence": "proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md"
+      "asymptotic_quantifiers": "The fixed five-block function and every pruned circuit with c=1,q=3", "case_regime": "Exact finite structural exclusion closing quintet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md; proofs/LEMMA-120-unicyclic-one-bit-factorization.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md"
     },
     {
       "id": "GATE004AM-NOT-OCCURRENCE-COUNTING-ONLY", "label": "NO-GO",
       "statement": "Formula-unfolding NOT-occurrence counting cannot exclude c=1,q=3 because two duplicated NOTs give exactly the required five occurrences and three give six.",
       "computational_model": "Unicyclic formula unfolding and formula inversion complexity for W_5", "uniformity": "Every individual non-uniform circuit in the exact c=1,q=3 stratum",
       "circuit_size": "Parent NOT count three; unfolded count five or six after necessary duplication", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
-      "asymptotic_quantifiers": "Every candidate unicyclic three-NOT circuit for fixed W_5", "case_regime": "Quantitative no-go for occurrence counting; GATE004AM, GATE004AL, and larger gates remain open",
+      "asymptotic_quantifiers": "Every candidate unicyclic three-NOT circuit for fixed W_5", "case_regime": "Quantitative no-go for occurrence counting; GATE004AM was proved by another route, while GATE004AL beyond size five remains open",
       "evidence": "proofs/GATE-004AM-NOT-occurrence-counting-only.md; proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md; docs/no-go-ledger.md NG-090; artifacts/cycle-104-deficient-quintet-stratum.md"
+    },
+    {
+      "id": "LEMMA119", "label": "PROVED",
+      "statement": "Both W_m and its complement have formula inversion complexity exactly m for every fixed positive width.",
+      "computational_model": "Fan-out-one AND/OR/NOT formulas for both output polarities of the fixed-sign clause product", "uniformity": "Uniform function family; exact non-uniform formula inversion count",
+      "circuit_size": "Exactly m NOT occurrences for either polarity; binary size unrestricted", "circuit_depth": "Unrestricted formula depth", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean-lattice increasing chains only",
+      "asymptotic_quantifiers": "Every fixed p at least one and every m at least one", "case_regime": "Exact worst-case formula inversion theorem; not an unrestricted circuit-size or terminal result",
+      "evidence": "proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; docs/source-citations/morizumi-2008.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
+    },
+    {
+      "id": "LEMMA120", "label": "PROVED",
+      "statement": "Every pruned unicyclic Boolean output cone factorizes through one upstream formula bit; exactly the upstream gates have two output paths, and the downstream factor has a formula containing all remaining NOT gates once.",
+      "computational_model": "Pruned unicyclic Boolean DAG output cones and fan-out-one factorization", "uniformity": "Every individual non-uniform unicyclic circuit",
+      "circuit_size": "Splits q NOT gates into h upstream formula NOTs and exactly q-h downstream formula NOTs", "circuit_depth": "Unrestricted finite DAG", "fan_in": "AND/OR two; NOT one; parallel repeated wires allowed as a multigraph", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected graph cycle rank only",
+      "asymptotic_quantifiers": "Every pruned connected output cone with cycle rank exactly one", "case_regime": "Exact structural factorization; not a function-specific lower bound or terminal result",
+      "evidence": "proofs/LEMMA-120-unicyclic-one-bit-factorization.md; proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
+    },
+    {
+      "id": "LEMMA121", "label": "PROVED",
+      "statement": "A one-bit variable factorization of W_m either cuts no clause or cuts exactly one with no X-whole clause; the two cases force the recorded formula-NOT lower bounds.",
+      "computational_model": "One-bit functional factorizations and formula realizations of disjoint fixed-sign clause products", "uniformity": "Every variable partition and every nonconstant intermediary bit",
+      "circuit_size": "Formula NOT lower a+b=m in the uncut case; downstream lower m-1 in the sole-cut case", "circuit_depth": "Unrestricted formula depth", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and disjoint clause incidence only",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least two, and every partition of the (p+1)m variables", "case_regime": "Exact worst-case factorization dichotomy; not a general circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-119-bipolar-formula-inversion.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
+    },
+    {
+      "id": "LEMMA122", "label": "PROVED",
+      "statement": "For every parent circuit and spanning tree, dependency-cone Hall expansion holds for every clause-index subset of size one through five.",
+      "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most five",
+      "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=5", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(5,m)", "case_regime": "Exact worst-case local Hall theorem; size six, full matching, SAT lower bounds, and P versus NP remain open",
+      "evidence": "proofs/LEMMA-122-dependency-cone-Hall-through-five.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
     }
   ]
 }

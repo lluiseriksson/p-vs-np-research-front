@@ -1811,4 +1811,5 @@ exactly 25 binary gates and three NOT gates; unrestricted depth; AND/OR fan-in
 two and NOT fan-in one; directed path multiplicity, formula unfolding, and
 Boolean-lattice inversion; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Occurrence counting is closed,
-while GATE-004AM/AL/AK/AJ/AI/AH/AG/AE remain open.
+while GATE-004AM was later proved by a different factorization argument;
+GATE-004AL beyond size five and GATE-004AK/AJ/AI/AH/AG/AE remain open.

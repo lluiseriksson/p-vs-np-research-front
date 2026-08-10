@@ -475,6 +475,10 @@
       "sha256": "16243b95d830b657270fbc8b6e4e52162b19e46157a62cefca738a2c666bb2dd"
     },
     {
+      "path": "artifacts/cycle-105-unicyclic-quintet-exclusion.md",
+      "sha256": "cf24a75418c229f6b71ccb14347c83e13b0d3a2785c42ea0cc3caf45a8964c4e"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -500,7 +504,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "4b5044f0519aafa21bbf09cd02e6f98c00eccfff733e5db9461f2dee276debe0"
+      "sha256": "7a591d015aba8254f6a96acd97d86928610fb2ca18867d45bf870b669dc0abac"
     },
     {
       "path": "docs/problem-statement.md",
@@ -508,7 +512,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "10ef48a8b2fad6f7c3a317c9039f9a4eb99a2f210770aa2a4842b0f4cbb71b0c"
+      "sha256": "a5112c9b7ba48613e42ea7f406e60543779af3100180dfbb71a59344a118c8d7"
     },
     {
       "path": "docs/result-labels.md",
@@ -612,11 +616,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "47dbec3cd79de391dcdcfadd2db66b366d0f80faeabebc8709757cdc186dbe45"
+      "sha256": "391d4d778735404f025758d8ba3830182abe611ec6808d172b05ba0593d8a01e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2e76cd5b0aeb2abcf07809fe62fb375dc3a4abcf9b98d6238f24ee4e209b06eb"
+      "sha256": "29a1d446768c4ec365e8c25c78f0d148175a4b15b5dfad527fad371f0ff26e95"
     },
     {
       "path": "experiments/README.md",
@@ -812,19 +816,19 @@
     },
     {
       "path": "proofs/GATE-004AL-dependency-cone-Hall.md",
-      "sha256": "f2c2823cc19e06ec90619db9e593843a636b66fa2817682a581091f6c9e30d80"
+      "sha256": "5bb41a4c319dccf7c5166dbd346677983f68fd3a3510cbfeffb3dc537bac7d8f"
     },
     {
       "path": "proofs/GATE-004AL-LEMMA111-only.md",
-      "sha256": "542bed9dde0f7e3132f20e769ccdd2f01d1e733ed36328aa229d848e9410fbae"
+      "sha256": "95511bd6388aba8986058f160c2755bcd22760f44208d73284676afdb11af5e9"
     },
     {
       "path": "proofs/GATE-004AM-NOT-occurrence-counting-only.md",
-      "sha256": "361d406798a02c2a758eb115a88192f4a87851bf59274916d13b66c47cfce9cb"
+      "sha256": "5db4190e0a3d41e9d3d470f851b604085604b101e317770c03b933c7e312d130"
     },
     {
       "path": "proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md",
-      "sha256": "d50b96656b24fd6bca8d8b9a845b156ca17e72f1b5494abf5edd1b768591ee53"
+      "sha256": "8faee4ee09850961bbc0d3cea9fc7202b7632baa475102040f9e0a43d5091672"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1463,8 +1467,24 @@
       "sha256": "bddfd2bfd1d1ff569ff24465747d0f615a0ee3cb564f41eeaf6a92862832c542"
     },
     {
+      "path": "proofs/LEMMA-119-bipolar-formula-inversion.md",
+      "sha256": "481a7313daa1713a79da1488437c70aa8cdb700db87bec71cfd48c667d41302a"
+    },
+    {
+      "path": "proofs/LEMMA-120-unicyclic-one-bit-factorization.md",
+      "sha256": "34d04709aca13208133558313ed482c83cb37cc70166e6d9c11b102a83fa49b5"
+    },
+    {
+      "path": "proofs/LEMMA-121-one-bit-cofactor-dichotomy.md",
+      "sha256": "5fe02cf12681c9ef88eab98560a931ebf5c087c906288af29384a5f7e08a8c04"
+    },
+    {
+      "path": "proofs/LEMMA-122-dependency-cone-Hall-through-five.md",
+      "sha256": "4f50818fc2e23356264e83662f3701f73816a1142e64b81e290b40a9d983131e"
+    },
+    {
       "path": "README.md",
-      "sha256": "034987549c41e56b3eb5dfc969f2c09435a4ebd4b411e0e862de477604cb8954"
+      "sha256": "9de53f512dc39ca788179e0e5820714cf63afdd538aa0c659b6b9db7fc53bce3"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1476,7 +1496,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "25cb40e35bc4f5db1f005f2940a7055b5ccbaadd2a5d448f7e7a98c32eec8ce0"
+      "sha256": "fa79a47477f00d489f2b5c7e0267993d2d74f4c39612a14e9ac9e61baf0164a1"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

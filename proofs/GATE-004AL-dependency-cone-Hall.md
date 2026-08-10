@@ -32,8 +32,10 @@ LEMMA-116 proves every Hall inequality with `|I|<=4`. The smallest unresolved
 subset has size five.
 
 LEMMA-117 reduces any deficient quintet to a residual circuit with exactly one
-cycle and three NOT gates; LEMMA-118 forces at least two of those NOTs to be
-duplicated by unfolding. GATE-004AM is the exact active exclusion.
+cycle and three NOT gates; GATE-004AM excludes that stratum using the
+one-bit-factorization LEMMA-120 and cofactor dichotomy LEMMA-121. LEMMA-122
+therefore closes Hall through subset size five. Size six is the first open
+case of this gate.
 
 ## Model card
 
