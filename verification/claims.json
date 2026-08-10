@@ -3026,6 +3026,40 @@
       "asymptotic_quantifiers": "Every m at least one; the specified method is quantitatively incomplete for every m at least three and has a linear asymptotic gap",
       "case_regime": "Quantitative method no-go only; exact growing predicate size, GATE-004W, GATE-004V, and P versus NP remain open",
       "evidence": "proofs/GATE-004W-connectivity-inversion-only.md; proofs/LEMMA-058-standalone-implication-complexity.md; docs/no-go-ledger.md NG-053"
+    },
+    {
+      "id": "LEMMA059",
+      "label": "PROVED",
+      "statement": "Equality in the 2m-1 binary connectivity bound forces an implication circuit output cone to be a formula, yielding C(W_m)>=min(3m-1,2m+ceil(log_2(m+1))) and exact C(W_m)=3m-1 for m=1,2,3,4.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits; equality case of fan-in-two connectivity; Markov circuit and Morizumi formula inversion complexity",
+      "uniformity": "Fully non-uniform finite circuits; uniform implication family and increasing-chain witness",
+      "circuit_size": "Lower min(3m-1,2m+ceil(log_2(m+1))), upper 3m-1; exact for 1<=m<=4",
+      "circuit_depth": "Unrestricted; formula conclusion only in the minimum-binary-gate case",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice and graph connectivity only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every m at least one; exact finite cases m=1,2,3,4; explicit remaining gap for every m at least five",
+      "case_regime": "Worst-case exact standalone-function bound; not a base direct sum, quotient theorem, or SAT lower bound",
+      "evidence": "proofs/LEMMA-059-formula-boundary-implication-lower-bound.md; docs/source-citations/markov-1958.md; docs/source-citations/morizumi-2008.md"
+    },
+    {
+      "id": "GATE004W-FORMULA-BOUNDARY-ONLY",
+      "label": "NO-GO",
+      "statement": "The minimum-binary formula-boundary dichotomy cannot settle growing implication size because from m=5 onward it leaves gap m-1-ceil(log_2(m+1)) below the displayed circuit.",
+      "computational_model": "Unrestricted Boolean circuits, binary connectivity equality, and formula and circuit inversion complexity",
+      "uniformity": "Fully non-uniform circuits; uniform implication family",
+      "circuit_size": "Exact through m=4; lower 2m+ceil(log_2(m+1)) versus upper 3m-1 from m=5 onward, with stated gap",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice and graph connectivity only",
+      "asymptotic_quantifiers": "Every m at least one; method insufficient for every m at least five and linearly short asymptotically",
+      "case_regime": "Quantitative method no-go only; exact growing size, GATE-004W, GATE-004V, and P versus NP remain open",
+      "evidence": "proofs/GATE-004W-formula-boundary-only.md; proofs/LEMMA-059-formula-boundary-implication-lower-bound.md; docs/no-go-ledger.md NG-054"
     }
   ]
 }

@@ -231,6 +231,8 @@ truth. Each row has exactly one label.
 | GATE-004W-ESSENTIAL-RESTRICTION-ONLY | NO-GO | One essential restriction per negative variable certifies only `K+2m`, short of the displayed `K+3m` by exactly `m` | `proofs/GATE-004W-essential-restriction-only.md`; LEMMA-057; NG-052 | Requires a new direct-sum or quotient-survival theorem |
 | LEMMA-058 | PROVED | The standalone `m`-implication conjunction has size between `2m-1+ceil(log_2(m+1))` and `3m-1`, with exact sizes 2 and 5 for `m=1,2` | `proofs/LEMMA-058-standalone-implication-complexity.md`; MAR58 | Growing exact size remains open |
 | GATE-004W-CONNECTIVITY-INVERSION-ONLY | NO-GO | Support connectivity plus inversion complexity leaves gap `m-ceil(log_2(m+1))` below the displayed standalone circuit | `proofs/GATE-004W-connectivity-inversion-only.md`; LEMMA-058; NG-053 | Must use full cofactor/direct-sum structure or exhibit compression |
+| LEMMA-059 | PROVED | Minimum binary-gate count forces a formula, improving the implication lower bound and proving exact size `3m-1` for `m=1,2,3,4` | `proofs/LEMMA-059-formula-boundary-implication-lower-bound.md`; MAR58; MOR08 | First two growing cases closed; asymptotic gap remains |
+| GATE-004W-FORMULA-BOUNDARY-ONLY | NO-GO | The formula-boundary dichotomy leaves gap `m-1-ceil(log_2(m+1))` for every `m>=5` | `proofs/GATE-004W-formula-boundary-only.md`; LEMMA-059; NG-054 | Must control binary/NOT tradeoff beyond equality |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

@@ -52,6 +52,13 @@ connectivity nor Markov NOT-counting supplies the required direct sum. The
 next attack must exploit the full cofactor table beyond those two measures or
 find an explicit shared-polarity compression.
 
+LEMMA-059 sharpens the equality boundary. A circuit using exactly the minimum
+`2m-1` binary gates is necessarily a formula, so formula inversion complexity
+forces `m` NOT gates. This proves the displayed standalone size through
+`m=4`. From `m=5` onward, one extra binary gate escapes that formula argument
+and the remaining lower bound again has a linear gap. The next attack must
+control this binary-for-NOT tradeoff away from equality.
+
 ## Model card
 
 | Field | Value |

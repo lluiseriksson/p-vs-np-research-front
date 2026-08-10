@@ -1131,3 +1131,23 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This closes only the combined
 support/NOT-count certificate, not the exact growing predicate size or
 GATE-004W.
+
+## NG-054 — the minimum-binary formula boundary closes the growing implication size
+
+**Label: NO-GO**
+
+Scope: strengthen NG-053 by proving that equality in the `2m-1` binary-gate
+connectivity floor forces a formula, then apply formula inversion complexity
+to obtain `m` NOT gates.
+
+Failure: LEMMA-059 closes the displayed size only for `m<=4`. For `m>=5`, a
+circuit with at least `2m` binary gates is outside the formula case and
+Markov's general-circuit theorem requires only `ceil(log_2(m+1))` NOT gates.
+The resulting gap from `3m-1` is `m-1-ceil(log_2(m+1))`, linear
+asymptotically.
+
+Model: exact non-uniform unrestricted circuits; equality-case output-cone
+graph; formula and circuit inversion complexity; unrestricted depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This is a method no-go only; it does
+not exhibit compression or refute the growing exact-size conjecture.
