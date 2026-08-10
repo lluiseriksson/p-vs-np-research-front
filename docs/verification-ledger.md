@@ -5,7 +5,7 @@ truth. Each row has exactly one label.
 
 | ID | Label | Result | Evidence | Terminal effect |
 |---|---|---|---|---|
-| INFRA-001 | PROVED | Required repository tree and policies exist | `verification/audit.py` | None |
+| INFRA-001 | PROVED | Required repository tree, policies, manifest, and cold-clone reproduction exist | `verification/audit.py`; `artifacts/cold-clone-a9865ce.md` | None |
 | T-UNIFORM | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines target only |
 | T-NONUNIFORM | PROVED | `SAT notin P/poly` implies `P != NP` | Circuit unrolling plus T-UNIFORM | Terminal-sufficient, not established |
 | BARRIER-001 | PROVED | Major barrier/failure-mode audit | `docs/barrier-audit.md` and primary-source notes | Design constraints only |
