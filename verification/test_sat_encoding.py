@@ -9,6 +9,7 @@ from sat_encoding import (
     annihilating_prefix,
     bounded_block_distant_groups,
     bounded_zero_run_windows,
+    balanced_common_implication_pairs,
     balanced_long_run_slot_options,
     context_wrap,
     conditioned_prefix,
@@ -834,6 +835,22 @@ class FormulaEncodingTests(unittest.TestCase):
                     group_count = outer_length // (interval_count + 1)
                     if group_count >= minimum_length:
                         self.assertLessEqual(group_count, 6 * slot_count)
+
+    def test_balanced_slots_have_many_common_mixed_implications(self) -> None:
+        for zero_run in range(7, 65):
+            options = balanced_long_run_slot_options(zero_run)
+            pairs = balanced_common_implication_pairs(zero_run)
+            used = [coordinate for pair in pairs for coordinate in pair]
+            self.assertEqual(len(used), len(set(used)))
+            self.assertGreaterEqual(len(pairs), 2 * zero_run - 4)
+            for positive, negative in pairs:
+                self.assertTrue(
+                    all(
+                        option[positive] == "1"
+                        or option[negative] == "0"
+                        for option in options
+                    )
+                )
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

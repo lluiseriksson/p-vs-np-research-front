@@ -256,7 +256,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2baa5cc6f007d57b032d07e6de11c5b7dea68f590d7ca4c538a14874d507164d"
+      "sha256": "76816f8a5cc0b1c6b1b635f14f947dedfedae61c9f6abad1460695c6f7d414e6"
     },
     {
       "path": "docs/problem-statement.md",
@@ -264,7 +264,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "650ad64f695aa4ea9f166046ad5225ea443e5d1a720364c1713c7206ec09995c"
+      "sha256": "4bd8a7ca4d3a02d6c0a8d291e74910c0af4f746f8a1612cac2875c3ede3d50f0"
     },
     {
       "path": "docs/result-labels.md",
@@ -272,7 +272,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "99e071b1142a29dc4851641c206f8ae9459b6828aeeeb8da7a97efbbe0f7498f"
+      "sha256": "7855b0a04f1e7f4a3a1894fc6b7e233c98663cad82ba9f8246c640d0b87fc6c5"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -352,11 +352,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a81ca097d613cfa700f6b3cae372fb89f2ba17ca05a4ed29d9d8c85c3ae20adc"
+      "sha256": "533c033acccfba75dba334c7009e0ede646c64623d818eedfeee4fbcb3f7b479"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2ee76085a6dc9c34960e2a1c187f467d935624434ac2358758710fccf1b3da23"
+      "sha256": "04dc6d059d4ce7f795db38d48ed8d5270ec3fa70c65d4ecded9976679abb9819"
     },
     {
       "path": "experiments/README.md",
@@ -488,7 +488,7 @@
     },
     {
       "path": "proofs/GATE-004V-balanced-long-run-rigidity.md",
-      "sha256": "02fd5e6a3f6a8690bd804ec58ba9f9a77936ca7f763a2d8b3ce5c60b4ed96175"
+      "sha256": "66ec5c516f85613ae9c77474687692bf959807cdd9e0b292a2e81b7188479b6e"
     },
     {
       "path": "proofs/GATE-004V-disjoint-positive-clauses.md",
@@ -501,6 +501,14 @@
     {
       "path": "proofs/GATE-004V-negative-unit-tail.md",
       "sha256": "b8a50f9fbb4bb99f6e22a1e18bed38cbc8e7742488f9bf547dc14012dd2873d0"
+    },
+    {
+      "path": "proofs/GATE-004W-essential-restriction-only.md",
+      "sha256": "d73bf7c56c586f79a735f26a92589c780cafbce7a03c22f43e5c9f116a92a0dc"
+    },
+    {
+      "path": "proofs/GATE-004W-implication-tail-minimality.md",
+      "sha256": "f29ac3ebf42d12d4d1e8e236df073aac1df5afbfda2e0e6608fd29f0faab1ffa"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -727,8 +735,16 @@
       "sha256": "cb8ba071d21947915a489e8fb8592dc69d0fa0f200876f77ca7bd747b7898677"
     },
     {
+      "path": "proofs/LEMMA-056-balanced-common-implications.md",
+      "sha256": "f53cc85a7cf0ca226b90af0fc0106dd4526f4859de9280c29a0ba75f61b01855"
+    },
+    {
+      "path": "proofs/LEMMA-057-implication-tail-cost-bracket.md",
+      "sha256": "3c39e889fb43ce57d0ff7c47f3f8076b13e4a336ad2bd80503cfb410c4e68769"
+    },
+    {
       "path": "README.md",
-      "sha256": "d4e5229178031db9043bf0d1c304c6279cec8c32809aaa6f07dc230fedff8fcc"
+      "sha256": "08a5ed8730b7c48020081d7068492df55e4ea374720efecbe71691fd41d30a5d"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -740,7 +756,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "fc5e1b0b6d7f8515fa1cd3a1899ffd79d5d89f637c7857c4e08a4c57fa75c2e0"
+      "sha256": "91e9960948b979405eaf7b2a699535e9f4523eee1b616f19a8825c0afbe8dbe8"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -748,7 +764,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "478e06f11dad8fd16176cb0db48b52c95ef946cba2be97c42dd28561d1f26c6f"
+      "sha256": "c0a54249ffb6219df03152678597817b53517decfe1d81a94b92d7afce71a1d7"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -764,7 +780,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "f342a18a47175aa4eaef487058fb3a26c93fd91803ae04359957f8ae004beec2"
+      "sha256": "8d536ee28f91a6acd9e0c6db9cfda13e1fcb69a18e25449147bc14f3ef03086e"
     },
     {
       "path": "verification/test_trace_accounting.py",

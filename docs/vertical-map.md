@@ -63,6 +63,7 @@ Adjacent collision-aware active branch:
      + ENC-026 (proved tunable long-zero neutral block)
      + ENC-027 (proved balanced long-run slot product)
      + ENC-028 (proved disjoint positive-clause packing bound)
+     + ENC-029 (proved linear common mixed-implication packing)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -83,6 +84,8 @@ Adjacent collision-aware active branch:
      - GATE-004V-DISJOINT-POSITIVE-CLAUSES (no-go by LEMMA-053)
      - GATE-004V-NAIVE-SIGNED-ADDITIVITY (no-go by LEMMA-054)
      - GATE-004V-NEGATIVE-UNIT-TAIL (no-go by LEMMA-055 and coordinate density)
+     ! GATE-004W (active falsification audit): implication-tail minimality
+       - GATE-004W-ESSENTIAL-RESTRICTION-ONLY (no-go by LEMMA-057)
 
 Stronger dependent-region branch:
   GATE-004I

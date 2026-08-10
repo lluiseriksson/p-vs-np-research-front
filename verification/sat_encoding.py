@@ -635,6 +635,32 @@ def balanced_long_run_slot_options(zero_run: int) -> tuple[str, ...]:
     return tuple(sorted(options))
 
 
+def balanced_common_implication_pairs(
+    zero_run: int,
+) -> tuple[tuple[int, int], ...]:
+    """Return a large disjoint family of common mixed two-clauses.
+
+    A pair ``(positive, negative)`` denotes the clause
+    ``z_positive OR NOT z_negative``.  The two candidate pairs in each
+    aligned four-bit chunk partition the slot coordinates; candidates
+    falsified by the tunable long block are omitted.
+    """
+    options = balanced_long_run_slot_options(zero_run)
+    pairs = []
+    for chunk in range(zero_run):
+        start = 4 * chunk
+        for positive, negative in (
+            (start + 3, start),
+            (start + 2, start + 1),
+        ):
+            if all(
+                option[positive] == "1" or option[negative] == "0"
+                for option in options
+            ):
+                pairs.append((positive, negative))
+    return tuple(pairs)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

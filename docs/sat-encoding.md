@@ -1275,6 +1275,47 @@ boundary, not positive rigidity.
 | Asymptotic quantifiers | Every `rho>=7,s>=1` and every disjoint common positive-clause family; explicit comparison for sufficiently large `R` |
 | Regime | Worst-case exact witness-family theorem; not a circuit lower bound |
 
+## ENC-029 — balanced slots retain a linear common implication packing
+
+**Label: PROVED**
+
+Partition each length-`4rho` slot into aligned four-bit chunks. In every chunk
+consider
+
+`z_{4k+3} OR NOT z_{4k}`
+
+and
+
+`z_{4k+2} OR NOT z_{4k+1}`.
+
+LEMMA-056 proves that every ENC-020 short option satisfies all `2rho`
+candidates, while the six-one long option can invalidate at most four. Thus
+each slot retains at least `2rho-4` pairwise coordinate-disjoint common mixed
+clauses, and the product retains at least
+
+`(2rho-4)s=P/2-4s`.
+
+Product independence also excludes every cross-slot mixed two-clause, and the
+all-one member excludes every negative-negative two-clause. The remaining
+within-slot implications are abundant enough to threaten GATE-004V, but their
+minimum-circuit cost is not inferred from their count.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact balanced slot products and signed width-two raw-coordinate clauses |
+| Uniform/non-uniform | Uniform explicit clause packing and witness family; no circuit selected |
+| Circuit size | No lower bound; common disjoint implication count at least `(2rho-4)s=P/2-4s` |
+| Circuit depth | Irrelevant to the packing theorem; later circuits unrestricted |
+| Fan-in | Clause OR two; one literal uses fan-in-one NOT |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Finite Boolean incidence only |
+| Asymptotic quantifiers | Every `rho>=7,s>=1`; exact GATE-004V comparison under its stated parameter choice |
+| Regime | Worst-case exact witness-family theorem; not a circuit lower bound or counterexample |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

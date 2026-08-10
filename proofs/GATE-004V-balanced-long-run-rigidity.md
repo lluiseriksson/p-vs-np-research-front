@@ -80,6 +80,12 @@ density then blocks every positive and negative common unit literal, so this
 cannot falsify GATE-004V. The active signed audit now starts at mixed clauses
 of width at least two.
 
+ENC-029 and LEMMA-056 find at least `(2rho-4)s=P/2-4s` disjoint common mixed
+implications, so the balanced product has not escaped signed clause tails.
+LEMMA-057 brackets the corresponding extension between `K+2m` and `K+3m`;
+the displayed upper circuit has `4m` quotient classes, but minimality and
+class survival are unproved. GATE-004W is the active falsification audit.
+
 ## Model card
 
 | Field | Value |

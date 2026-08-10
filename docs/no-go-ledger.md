@@ -1089,3 +1089,24 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This excludes only unit signed tails.
 Mixed width-at-least-two clauses and overlapping/nonclausal predicates remain
 open.
+
+## NG-052 — one essential restriction per implication certifies its displayed circuit
+
+**Label: NO-GO**
+
+Scope: prove the `K+3m` displayed circuit for `m` disjoint implication clauses
+minimum by setting each negative variable to one, charging the generic one-
+gate essential-variable deletion, and applying the exact fresh-conjunction
+identity to the residual.
+
+Failure: LEMMA-057 gives only `m` deleted gates plus residual size `K+m`, for
+the lower bound `K+2m`. The displayed circuit costs `K+3m`; the shortfall is
+exactly `m`, equal to its prospective quotient surplus because it exposes
+`4m` tail classes. The certificate cannot establish minimality or preserve
+those classes through global minimization.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; disjoint fresh
+mixed implication clauses; unrestricted depth; fan-in-two AND/OR and fan-in-
+one NOT; no randomness, advice, oracle, promise, distribution, or algebraic
+computation. This is only a no-go for the specified restriction certificate.
+GATE-004W, GATE-004V, and the terminal problem remain open.
