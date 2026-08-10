@@ -541,13 +541,22 @@ not an independent route. GATE-004AA is the new constructive brick: seek a
 fixed exact neutral-block alphabet whose translations make every disjoint
 common signed clause family through width three constant per slot.
 
+The sixty-fourth cycle refutes that one-block repair without enumerating the
+alphabet. LEMMA-067 uses `floor(4rho/3)` distant disjoint triples. Any bounded
+block changes at most one coordinate of such a triple, so four patterns with
+at least two zeros are absent from all bounded options; the sole `A_rho`
+option can add only one. A common signed triple therefore survives on every
+group for every fixed alphabet. GATE-004AA is `NO-GO`. GATE-004AB is the new
+constructive brick and permits two independently translated neutral blocks
+per option, the first geometry not covered by this counting obstruction.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
 | Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Signed-triple minimality reduces exactly to the unresolved implication tail; GATE-004AA now seeks a width-three-sparse witness repair, while GATE-004X and every terminal lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | One-block width-three repair is impossible; GATE-004AB tests two-block contexts, while GATE-004X and every terminal lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

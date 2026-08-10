@@ -104,7 +104,9 @@ Adjacent collision-aware active branch:
          - GATE-004Z-FORMULA-BOUNDARY-ONLY (no-go by LEMMA-065)
          + LEMMA-066 (proved exact reduction to implication tails plus `m` gates)
          - GATE-004Z-STANDALONE-SEPARATE (no-go by LEMMA-066)
-  <- GATE-004AA (active smallest constructive brick): finite-neutral-alphabet
+  <- GATE-004AA (no-go): one translated bounded block per option
+     - LEMMA-067 (linear distant signed-triple packing)
+  <- GATE-004AB (active smallest constructive brick): two-block neutral-alphabet
      sparsity for every disjoint common signed clause of width at most three
 
 Stronger dependent-region branch:

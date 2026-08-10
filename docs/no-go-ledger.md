@@ -1237,3 +1237,25 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This rejects only an independent-
 route interpretation. GATE-004W/Z quotient survival, GATE-004X, and P versus
 NP remain open.
+
+## NG-059 — a fixed alphabet with one translated block suppresses width three
+
+**Label: NO-GO**
+
+Scope: add every aligned placement of every universally neutral block up to a
+fixed length, one block per option, plus the sole tunable `A_rho`, and bound
+all disjoint common signed width-three clauses by a constant per slot.
+
+Failure: LEMMA-067 partitions a length-`4rho` slot into three distant regions
+and obtains `floor(4rho/3)` disjoint triples. A bounded block can put zeros on
+at most one coordinate of each triple and therefore misses all four patterns
+with at least two zeros. The one exceptional long option supplies at most one
+of them, leaving at least three common signed clauses per triple. The packing
+is linear for every fixed alphabet bound.
+
+Model: exact neutral SAT-gamma contexts; arbitrary fixed bounded-block
+alphabet; one translated block per option and one arbitrary exceptional
+option; signed width-three matching; later unrestricted non-uniform circuits;
+no randomness, advice, oracle, promise, distribution, or algebraic
+computation. This is a witness-geometry no-go. Two-block options, GATE-004AB,
+GATE-004X, and P versus NP remain open.

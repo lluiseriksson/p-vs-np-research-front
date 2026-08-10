@@ -292,7 +292,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "dc198351f3c7f8c1f40c81726e0bfd1862d0c78e465ea7466720e5422d451e8f"
+      "sha256": "902d6bcd8af76b5f61152f5c315cd44ceb0ab8acbd912690e558a0def76bbd34"
     },
     {
       "path": "docs/problem-statement.md",
@@ -300,7 +300,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4562c379b3bc1233d9a5b99bc4c69fb87bab1847ba29a52072a1ecbe00bf9947"
+      "sha256": "e8a3edfae1600634ccc13e8b3b8fd4686d1b00cb7e13e6b0558e04a04d162067"
     },
     {
       "path": "docs/result-labels.md",
@@ -396,11 +396,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "bec8b09c508d227c5c663b5ed0e402fa016e04ff4e94e3c11ef7afc7c30ad3a2"
+      "sha256": "a602e1f6f14469238b9f9b6c9d479461a9156c9ad2d1acee3408543e374e5c83"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "24105bcff587dcc34172cd2a7be8982d70fd51aa92f6b4ade9ba526eb66a0bdb"
+      "sha256": "fc1f40f4828dacad6ab382300d69c7ef60aba0262303cdf2a96a4dc5aad845db"
     },
     {
       "path": "experiments/README.md",
@@ -432,7 +432,11 @@
     },
     {
       "path": "proofs/GATE-004AA-finite-neutral-alphabet-three-sparsity.md",
-      "sha256": "5f7de7290536e135a8479852f7d8be596b326ef4a4d6478f71da49f8c66eb2db"
+      "sha256": "efab14905d9ea33807651d940a2da4bbe9677ecd9d5ee424fe850449a8475c66"
+    },
+    {
+      "path": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md",
+      "sha256": "dcb665d94efae826a9db239ba2ff847f68f47358b59e063f983578e497f5d5f2"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -863,8 +867,12 @@
       "sha256": "1bc220412d466ff76886f789c7e8e1c43ef51b93d8897f00eb33861b42eac4ea"
     },
     {
+      "path": "proofs/LEMMA-067-one-bounded-block-plus-one-exception-retains-triples.md",
+      "sha256": "09a085cd56224fd05b3b12497e4d34672c8c3dfa808e22fc1070a80b72497c03"
+    },
+    {
       "path": "README.md",
-      "sha256": "0fc32244d74166912c2aa1beea32f9c9b653ffc4c365f918a93a1236424419ef"
+      "sha256": "94933e6dc6dcb112d621bdd537679de85fdc55e5e3436e0de70021d299725e4b"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -876,7 +884,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "dd37480d3de8eddb747a8629d37da05d9928b6ddf177b94e06abd76b9b89fef5"
+      "sha256": "36a5deed595c1ca4a91b018f6a763c1eccfa6f7657f1296340f563492bc79574"
     },
     {
       "path": "verification/generate_manifest.py",
