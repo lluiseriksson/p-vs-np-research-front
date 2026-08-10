@@ -73,6 +73,13 @@ Therefore signed clauses require complement-sensitive base data and a new
 quotient proof. That refined audit, overlapping clauses, and non-clausal
 predicates remain active.
 
+LEMMA-055 supplies the exact complement-sensitive theorem for negative unit
+tails: an exposed output complement makes `m` fresh negative conjuncts cost
+exactly `m` gates and exposes at least `2m+2` paired-row classes. Coordinate
+density then blocks every positive and negative common unit literal, so this
+cannot falsify GATE-004V. The active signed audit now starts at mixed clauses
+of width at least two.
+
 ## Model card
 
 | Field | Value |

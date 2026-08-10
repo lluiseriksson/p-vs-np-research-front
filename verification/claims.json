@@ -2873,6 +2873,40 @@
       "asymptotic_quantifiers": "The proposed identity quantifies over every nonconstant base on variables disjoint from the signed literal and is falsified on two variables; no asymptotic circuit statement is made",
       "case_regime": "Scoped method no-go only; complement-sensitive signed predicates, overlapping predicates, GATE-004V, and P versus NP remain open",
       "evidence": "proofs/GATE-004V-naive-signed-additivity.md; proofs/LEMMA-054-signed-literal-polarity-sharing.md; docs/no-go-ledger.md NG-050"
+    },
+    {
+      "id": "LEMMA055",
+      "label": "PROVED",
+      "statement": "If nonconstant H has size K and its complement has size K-1, then conjoining m fresh negative literals has exact size K+m; the displayed minimum circuit supplies at least 2m+2 paired-row tail classes for distinct nonconstant residuals.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, fresh negative raw literals, restrictions, and exact semantic joint quotients",
+      "uniformity": "Fully non-uniform base and minimum complement circuit; uniform fresh-tail construction",
+      "circuit_size": "Exact K+m under C(NOT H)=K-1; displayed paired-row quotient has at least 2m+2 tail classes and loss at most K-m-2",
+      "circuit_depth": "Base unrestricted; displayed OR chain may have linear depth and ends in one NOT",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Every finite nonconstant H with C(NOT H)=C(H)-1, every m at least one, and every pair of distinct nonconstant designated row residuals; balanced-product unit exclusion for every rho at least seven and s at least one",
+      "case_regime": "Worst-case exact total-function theorem with an explicit polarity hypothesis; not a SAT circuit lower bound",
+      "evidence": "proofs/LEMMA-055-complement-exposed-negative-tail.md; docs/verification-ledger.md LEMMA-055"
+    },
+    {
+      "id": "GATE004V-NEGATIVE-UNIT-TAIL",
+      "label": "NO-GO",
+      "statement": "The complement-exposed negative-unit tail cannot be common to the balanced slot product because coordinate density makes the common positive- and negative-unit counts zero.",
+      "computational_model": "Exact balanced slot-product witnesses and globally minimum unrestricted circuits with a complement-exposed base and fresh negative-unit conjunction tail",
+      "uniformity": "Uniform witness product; fully non-uniform eligible base and attempted coordinate selection",
+      "circuit_size": "LEMMA-055 would give exact K+m and loss at most K-m-2, but coordinate density forces the common-tail count m=0",
+      "circuit_depth": "Unrestricted; the candidate exact tail may use a linear OR chain and final NOT",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits and finite coordinate incidence only",
+      "asymptotic_quantifiers": "Every rho at least seven, s at least one, every outer coordinate, and every complement-exposed nonconstant base; the common negative-unit count is exactly zero",
+      "case_regime": "Worst-case exact method no-go for unit signed predicates; mixed signed clauses, GATE-004V, and P versus NP remain open",
+      "evidence": "proofs/GATE-004V-negative-unit-tail.md; proofs/LEMMA-052-balanced-long-run-slot-product.md; proofs/LEMMA-055-complement-exposed-negative-tail.md; docs/no-go-ledger.md NG-051"
     }
   ]
 }

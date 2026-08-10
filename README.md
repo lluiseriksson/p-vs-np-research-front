@@ -457,13 +457,21 @@ polarity. Therefore a fixed NOT charge cannot extend LEMMA-048 to signed
 clauses. This is a scoped `NO-GO` for naive additive accounting; complement-
 sensitive signed predicates, overlap, and GATE-004V remain open.
 
+The fifty-fourth cycle proves the first complement-sensitive exact theorem.
+LEMMA-055 shows that if `C(NOT H)=C(H)-1`, then conjoining `m` fresh negative
+literals has exact cost `C(H)+m` and its displayed minimum circuit supplies at
+least `2m+2` paired-row tail classes. LEMMA-052 coordinate density, however,
+makes the number of common positive or negative unit literals exactly zero.
+This closes only the unit signed route; mixed clauses of width at least two
+are now active.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable and balanced long-run slot products, positive-clause packing classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable and balanced long-run slot products, positive-clause packing and complement-sensitive negative-tail classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Disjoint positive clauses are bounded and naive signed accounting is invalid; complement-sensitive signed/overlapping predicates and positive GATE-004V rigidity remain open, with no SAT lower bound or terminal chain. |
+| Real progress toward P vs NP | 0.00% | Positive clauses and signed units are classified, but mixed signed/overlapping predicates and positive GATE-004V rigidity remain open; no SAT lower bound or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

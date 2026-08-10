@@ -252,7 +252,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "0254193b08e75bd305c9b4e3148a8486c42c3b873c5e6c4fcdde51092aa79565"
+      "sha256": "2baa5cc6f007d57b032d07e6de11c5b7dea68f590d7ca4c538a14874d507164d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -260,7 +260,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "89b34da6e0f2f369c4023785dac180be0dfa2260de2b63ad35f86af3ab615c6d"
+      "sha256": "650ad64f695aa4ea9f166046ad5225ea443e5d1a720364c1713c7206ec09995c"
     },
     {
       "path": "docs/result-labels.md",
@@ -348,11 +348,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c8fc0fac01bf1303258d9bd38cd59fb876ad404fb0cb71e9f80931bd8b81ec52"
+      "sha256": "0b4a41f09c395ed8ed81e2e16c1004b498ed953860989de48db307d686ce0334"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "85d37e59fdffa5bc1551b06003a8f04688e15229a5e24c293ac6b64ef9c4225a"
+      "sha256": "2ee76085a6dc9c34960e2a1c187f467d935624434ac2358758710fccf1b3da23"
     },
     {
       "path": "experiments/README.md",
@@ -484,7 +484,7 @@
     },
     {
       "path": "proofs/GATE-004V-balanced-long-run-rigidity.md",
-      "sha256": "923ce80b601681303ea8c3ba72a0ded049b31b1d0fdbf24836a3d740ff896ab7"
+      "sha256": "02fd5e6a3f6a8690bd804ec58ba9f9a77936ca7f763a2d8b3ce5c60b4ed96175"
     },
     {
       "path": "proofs/GATE-004V-disjoint-positive-clauses.md",
@@ -493,6 +493,10 @@
     {
       "path": "proofs/GATE-004V-naive-signed-additivity.md",
       "sha256": "7f5c27bdfd4cd8627d9d9ea2349533f7cbf4e9b13398e0519e9e81d02d16952b"
+    },
+    {
+      "path": "proofs/GATE-004V-negative-unit-tail.md",
+      "sha256": "b8a50f9fbb4bb99f6e22a1e18bed38cbc8e7742488f9bf547dc14012dd2873d0"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -715,8 +719,12 @@
       "sha256": "3b0a94facb91d119e2ba56d70a178764fd3ef880cfa22d2205a89dc415d159b1"
     },
     {
+      "path": "proofs/LEMMA-055-complement-exposed-negative-tail.md",
+      "sha256": "cb8ba071d21947915a489e8fb8592dc69d0fa0f200876f77ca7bd747b7898677"
+    },
+    {
       "path": "README.md",
-      "sha256": "058a0c175f7fb8aebef639d808aa523d91452c03a44478f31092ffd22166a587"
+      "sha256": "d4e5229178031db9043bf0d1c304c6279cec8c32809aaa6f07dc230fedff8fcc"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -728,7 +736,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "d6f2c6b79487ed0a02c87aadbe11668ee79fa576c47a031ac99aa9c5021ea73d"
+      "sha256": "fc5e1b0b6d7f8515fa1cd3a1899ffd79d5d89f637c7857c4e08a4c57fa75c2e0"
     },
     {
       "path": "verification/generate_manifest.py",

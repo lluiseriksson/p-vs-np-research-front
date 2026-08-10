@@ -1070,3 +1070,22 @@ advice, oracle, promise, distribution, or algebraic computation. This closes
 only naive signed-clause accounting. Complement-sensitive signed extensions,
 overlap, nonclausal predicates, GATE-004V, and the terminal problem remain
 open.
+
+## NG-051 — complement-exposed negative unit tails defeat GATE-004V
+
+**Label: NO-GO**
+
+Scope: use an eligible base whose complement is exactly one gate cheaper and
+attach common fresh negative unit literals. LEMMA-055 proves exact size
+`K+m`, at least `2m+2` paired-row tail classes, and loss at most `K-m-2`.
+
+Failure: LEMMA-052's balanced product is coordinate-dense. Every outer raw
+coordinate is zero on one member and one on another, so neither polarity of
+any unit literal is common. The candidate tail count is forced to `m=0`.
+
+Model: exact balanced Boolean slot products; globally minimum non-uniform
+AND/OR/NOT circuits; complement-exposed nonconstant base; unrestricted depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This excludes only unit signed tails.
+Mixed width-at-least-two clauses and overlapping/nonclausal predicates remain
+open.
