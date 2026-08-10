@@ -213,6 +213,41 @@ def conditioned_prefix(value: bool, identifier: int = 1) -> str:
     return "01" + conditioned_formula(value, identifier)
 
 
+def one_bit_literal_gadgets(identifier: int) -> dict[bool, str]:
+    """Return exact positive/negative literal formulas at Hamming distance one.
+
+    The general construction applies when the identifier's binary expansion
+    begins with ``11``.  Identifier 1 has the separate base construction with
+    auxiliary identifier 3.
+    """
+    if identifier < 1:
+        raise ValueError("identifier must be positive")
+    binary = format(identifier, "b")
+    if identifier == 1:
+        auxiliary = 3
+    elif binary.startswith("11"):
+        auxiliary = int("1" + binary[2:] + "11", 2)
+    else:
+        raise ValueError("identifier must be 1 or have a binary code beginning 11")
+
+    variable = encode_variable(identifier)
+    auxiliary_variable = encode_variable(auxiliary)
+    positive = encode_or(
+        encode_and(variable, encode_not(auxiliary_variable)),
+        variable,
+    )
+    negative = encode_or(
+        encode_and(variable, encode_not(variable)),
+        encode_not(variable),
+    )
+    return {True: positive, False: negative}
+
+
+def one_bit_conditioned_prefix(value: bool, identifier: int) -> str:
+    """Prefix for AND(one-bit literal gadget, hole)."""
+    return "01" + one_bit_literal_gadgets(identifier)[value]
+
+
 def assignment_conjunction(assignment: Mapping[int, bool]) -> str:
     """Encode an equal-polarity-length conjunction fixing every identifier.
 

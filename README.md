@@ -269,13 +269,24 @@ Boundary-signal abundance alone is `NO-GO`; the surviving GATE-004M attack must
 use minimum SAT factorization tied to off-table values or the other exact
 surplus terms.
 
+The thirty-third cycle resolves the auxiliary-leaf one-bit loophole
+constructively. ENC-013 gives exact `x_j`/`NOT x_j` formulas whose encodings
+differ in one bit for half of every identifier bit-length block. The
+equivalence is pointwise, so the auxiliary identifier may occur in the suffix;
+the resulting conditioned-SAT prefixes are genuinely adjacent and retain an
+`Omega(n^c)` family. GATE-004N is now the smallest active brick. Its first
+generic attack is `NO-GO`: LEMMA-032 proves that a minimum circuit for
+`s XOR G` loses at most four gates under adjacent complementary cofactors,
+independent of the shared hard-core complexity. The next proof must use the
+whole SAT-specific edge family and off-edge semantics.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 71% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length affine complementary-INDEX tests, exact table-only and raw-boundary/no-stable-core constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 72% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, all-large-length affine complementary-INDEX tests, exact table-only and raw-boundary/no-stable-core constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | GATE-004M is exact, but affine witnesses and boundary abundance do not force its stable-core term; no positive average surplus, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | Exact adjacent SAT conditioning is now available, but adjacency alone retains arbitrary hard cores and no multi-edge surplus, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

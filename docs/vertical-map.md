@@ -35,7 +35,13 @@ Alternative active route:
 
 Collision-aware active branch:
   GATE-004I
-  <- GATE-004M (active smallest brick): stable-core collision surplus
+  <- GATE-004M (open collision-aware route): stable-core collision surplus
+     + LEMMA-029 (proved exact full quotient accounting)
+
+Adjacent collision-aware active branch:
+  GATE-004I
+  <- GATE-004N (active smallest brick): one-bit conditioned-SAT surplus
+     + ENC-013 (proved exact adjacent conditioning)
      + LEMMA-029 (proved exact full quotient accounting)
 
 Stronger dependent-region branch:
@@ -394,7 +400,7 @@ the selected affine table. GATE-004L remains a valid stronger sufficient
 theorem, but repeated audits show that discarding all collision terms is an
 unnecessarily restrictive active strategy.
 
-## Smallest active brick: GATE-004M
+## Collision-aware route: GATE-004M
 
 LEMMA-029 sharpens the earlier one-sided accounting. Let `A_j` be the active
 residual functions from prefix-independent labels, `T_j` those from dependent
@@ -429,6 +435,28 @@ prefix-dependent. Hence `I=0` and `lambda_j=0` for all pairs.
 remains active, but its next viable proof must use global minimum-circuit
 factorization forced by SAT's off-table values, or extract the reserve from
 `z`, `kappa`, and `alpha` rather than assuming a stable gate boundary.
+
+## Smallest active brick: GATE-004N
+
+ENC-013 closes the auxiliary-leaf loophole left by NG-028. For every
+bit-length-`L` identifier whose binary representation begins `11`, it gives
+pointwise exact positive and negative literal formulas of length `6L+11`
+whose encodings differ in exactly one bit. Their `AND(gadget,hole)` prefixes
+have common length `6L+13`, remain exact even when the auxiliary identifier
+occurs in the suffix, and form `2^(L-2)` adjacent conditioned-SAT pairs.
+
+GATE-004N applies the full LEMMA-029 surplus to this adjacent family. The
+assignment witnesses and LEMMA-021 still force a polynomial prefix-dependent
+region, while the logarithmic restriction length preserves the GATE-004
+recurrence. This makes adjacency a genuine added design constraint, not a
+surrogate conclusion.
+
+The first generic transfer nevertheless fails. LEMMA-032 proves that a minimum
+circuit for `s XOR G` loses at most four gates under the adjacent cofactors
+`G,NOT G`, regardless of the hard core's complexity.
+`GATE-004N-ADJACENCY-ONLY — NO-GO` therefore requires the next attack to use
+the simultaneous SAT-specific edge family and behavior on prefix rows outside
+each edge.
 
 ## Downstream amplification obligation: GATE-005
 

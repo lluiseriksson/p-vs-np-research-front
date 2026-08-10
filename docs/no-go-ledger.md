@@ -632,3 +632,23 @@ Model: an explicit total non-uniform AND/OR/NOT circuit family of size
 randomness, advice, oracle, promise, distribution, or algebraic computation.
 The circuit is not claimed minimum and is not SAT-gamma. The no-go therefore
 blocks the boundary-only inference, not GATE-004M's minimum-SAT theorem.
+
+## NG-032 — adjacency plus minimum size forces growing loss
+
+**Label: NO-GO**
+
+Scope: infer superconstant parent-to-joint-quotient loss from one-bit adjacency,
+two complementary active cofactors, and global minimum circuit size, without
+using relations across many SAT-specific edges.
+
+Failure: LEMMA-032 takes an arbitrary hard function `G` and defines
+`F(s,y)=s XOR G(y)`. A minimum circuit for `F` has size at most `C(G)+4`, while
+the joint quotient under `s=0,1` has size at least `C(G)` because one output is
+`G`. Thus the loss is at most four even as the shared core complexity grows
+without bound.
+
+Model: exact minimum unrestricted non-uniform AND/OR/NOT circuits; one prefix
+bit; unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness,
+advice, oracle, field, promise, or distribution. The no-go is not SAT-gamma and
+has only one edge, so GATE-004N remains open for the simultaneous polynomial
+family of adjacent SAT conditioning pairs.

@@ -501,6 +501,92 @@ argument must also use SAT's behavior away from this affine table.
 | Asymptotic quantifiers | Every finite same-bit-length identifier block, every assignment vector, and every common ENC-010 padding length |
 | Regime | Worst-case exact total-language evaluation on an affine witness subspace |
 
+## ENC-013 — exact one-bit conditioning gadgets
+
+**Label: PROVED**
+
+Let `V_j=00 gamma(j)` be the variable formula for identifier `j`. For `j=1`,
+put `k=3`. More generally, let `j` have bit length `L>=2` and binary form
+`11s`, where `|s|=L-2`, and let `k` have binary form `1s11`. Define
+
+`B_{j,1}=OR(AND(V_j,NOT(V_k)),V_j)`
+
+and
+
+`B_{j,0}=OR(AND(V_j,NOT(V_j)),NOT(V_j))`.
+
+These formulas are pointwise equivalent to `V_j` and `NOT(V_j)`, respectively,
+for every assignment of every variable, including `k`. This follows from
+absorption and contradiction:
+
+`(x_j AND NOT x_k) OR x_j = x_j`,
+
+`(x_j AND NOT x_j) OR NOT x_j = NOT x_j`.
+
+The two encodings have equal length and Hamming distance exactly one. For the
+general construction,
+
+`V_j=0^(L+1) 11s`
+
+and
+
+`V_k=0^(L+2) 1s11`.
+
+The gadget codes have the common initial string `10 01 V_j 11` and then
+contain, respectively,
+
+`V_k V_j`
+
+and
+
+`V_j 11 V_j`.
+
+The suffix `V_j` is common. The strings
+`V_k=0^(L+2)1s11` and `V_j 11=0^(L+1)11s11` differ only in the first `1`
+after the common `L+1` zeros. The special pair `j=1,k=3` has the same direct
+identity: `V_3=00011` and `V_1 11=00111`.
+
+Since `|V_j|=2L+1` and `|V_k|=|V_j|+2`, each gadget has length
+
+`3|V_j|+8=6L+11`.
+
+Therefore the prefixes
+
+`Q_{j,b}=01 B_{j,b}`
+
+have common length `6L+13`, differ in exactly one bit, and satisfy for every
+suffix string `y`
+
+`SAT-gamma(Q_{j,b} y)=SAT-gamma(y with x_j forced to b)`.
+
+The equivalence is pointwise, so this remains exact even if identifier `k`
+occurs in `y`; no freshness assumption is hidden. Their OR is exact
+`SAT-gamma(y)`.
+
+For each `L>=2`, the supported identifier set
+
+`J_L^*={j in [2^(L-1),2^L): the binary code of j begins 11}`
+
+has size `2^(L-2)`. Thus a polynomial-size identifier block survives, every
+pair has the same `O(log n)` prefix length, and each pair is an edge of the
+Boolean prefix cube.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formulas, pointwise Boolean equivalence, and complete prefix restrictions |
+| Uniform/non-uniform | Uniform explicit gadget construction and identifier map `j -> k` |
+| Circuit size | No lower bound; exact prefix length `6L+13` and Hamming distance one |
+| Circuit depth | Formula depth three inside each literal gadget; later circuits unrestricted |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every `L>=2`, every bit-length-`L` identifier beginning `11`, both polarities, and every suffix string; plus the explicit `j=1` base case |
+| Regime | Worst-case exact total-language conditioning; malformed suffixes reject and auxiliary identifiers may occur in the suffix |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

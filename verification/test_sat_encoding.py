@@ -22,6 +22,8 @@ from sat_encoding import (
     satisfiability_padding_wrap,
     neutral_prefix_family,
     neutral_prefix_index,
+    one_bit_conditioned_prefix,
+    one_bit_literal_gadgets,
     operator_square_prefix,
     tautology,
     verify_assignment,
@@ -223,6 +225,72 @@ class FormulaEncodingTests(unittest.TestCase):
                 self.assertEqual(branch, expected)
                 branches.append(branch)
             self.assertEqual(any(branches), self.brute_sat(suffix))
+
+    def test_one_bit_exact_literal_gadgets(self) -> None:
+        identifiers = (1, 3, 6, 7, 12, 13, 14, 15, 24, 31)
+        for identifier in identifiers:
+            binary = format(identifier, "b")
+            auxiliary = (
+                3
+                if identifier == 1
+                else int("1" + binary[2:] + "11", 2)
+            )
+            gadgets = one_bit_literal_gadgets(identifier)
+            self.assertEqual(len(gadgets[False]), len(gadgets[True]))
+            self.assertEqual(
+                sum(a != b for a, b in zip(gadgets[False], gadgets[True])),
+                1,
+            )
+            bit_length = identifier.bit_length()
+            self.assertEqual(len(gadgets[True]), 6 * bit_length + 11)
+            self.assertEqual(
+                len(one_bit_conditioned_prefix(True, identifier)),
+                6 * bit_length + 13,
+            )
+            for target_value in (False, True):
+                for auxiliary_value in (False, True):
+                    assignment = {
+                        identifier: target_value,
+                        auxiliary: auxiliary_value,
+                    }
+                    self.assertEqual(
+                        verify_assignment(gadgets[True], assignment), target_value
+                    )
+                    self.assertEqual(
+                        verify_assignment(gadgets[False], assignment), not target_value
+                    )
+
+            auxiliary_variable = encode_variable(auxiliary)
+            target_variable = encode_variable(identifier)
+            suffixes = (
+                auxiliary_variable,
+                encode_not(auxiliary_variable),
+                encode_or(target_variable, auxiliary_variable),
+                encode_and(target_variable, encode_not(auxiliary_variable)),
+            )
+            prefixes = {
+                value: one_bit_conditioned_prefix(value, identifier)
+                for value in (False, True)
+            }
+            self.assertEqual(
+                sum(a != b for a, b in zip(prefixes[False], prefixes[True])),
+                1,
+            )
+            for suffix in suffixes:
+                branches = []
+                for value in (False, True):
+                    branch = self.brute_sat(prefixes[value] + suffix)
+                    self.assertEqual(
+                        branch,
+                        self.brute_sat(suffix, {identifier: value}),
+                    )
+                    branches.append(branch)
+                self.assertEqual(any(branches), self.brute_sat(suffix))
+
+    def test_one_bit_literal_gadget_rejects_unsupported_identifier(self) -> None:
+        for identifier in (0, 2, 4, 5, 8):
+            with self.assertRaises(ValueError):
+                one_bit_literal_gadgets(identifier)
 
     def test_conditioned_prefix_length_by_identifier_bit_length(self) -> None:
         for bit_length in range(1, 7):

@@ -133,6 +133,10 @@ truth. Each row has exactly one label.
 | GATE-004M-OUTPUT-ONLY | NO-GO | The mandatory conditioned output split alone cannot force `lambda_j>0` | LEMMA-030; NG-030 | Must use minimum SAT structure across identifiers |
 | LEMMA-031 | PROVED | Affine complementary INDEX and `4R` raw suffix-boundary inputs coexist with distinct active cofactors and no prefix-independent gate | `proofs/LEMMA-031-raw-boundary-affine-index.md`; reference test | Separates raw boundary signals from stable gate functions |
 | GATE-004M-BOUNDARY-CORE | NO-GO | LEMMA-021's boundary count plus affine INDEX does not force any stable gate or positive `lambda_j` | LEMMA-031; NG-031 | Must use minimum SAT and off-table semantics |
+| ENC-013 | PROVED | A half-block of identifiers has exact positive/negative literal gadgets and conditioned prefixes at Hamming distance one | `docs/sat-encoding.md`; reference test | Pointwise equivalence; auxiliary identifier need not be fresh |
+| GATE-004N | EXPLORATORY | Prove polynomial collision-aware loss across the exact adjacent conditioned-SAT pairs | `proofs/GATE-004N-adjacent-conditioned-surplus.md` | Active smallest brick; sufficient for GATE-004 |
+| LEMMA-032 | PROVED | A minimum circuit for `s XOR G` loses at most four gates under its adjacent complementary cofactor pair | `proofs/LEMMA-032-adjacent-complementary-hard-core.md` | Arbitrary shared hard core survives adjacency |
+| GATE-004N-ADJACENCY-ONLY | NO-GO | Adjacency, complementary active cofactors, and minimum size alone cannot force growing quotient loss | LEMMA-032; NG-032 | Must use the multi-edge SAT family and off-edge semantics |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
