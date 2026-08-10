@@ -902,11 +902,21 @@ by the audited orientation/core cascade, GATE-004AP, GATE-004AO, and
 GATE-004AN. LEMMA-132 extends dependency-cone Hall expansion through subset
 size six. Size seven is now the smallest open local Hall brick.
 
+The one-hundred-and-eleventh cycle generalizes the source restriction.
+LEMMA-133 proves that any bicyclic circuit for either polarity of `W_m` needs
+at least `m-1` NOT gates: cactus cores split at a leaf-cycle articulation,
+while every acyclic theta orientation has a source whose restriction leaves
+at most one cycle. LEMMA-134 consequently reduces any deficient septet to the
+exact `c=3,q=3` stratum. GATE-004AR formulates its exclusion as the active
+falsifiable gate. Generic path multiplicity is `NO-GO`: three NOT gates may
+unfold to the seven occurrences required by formula inversion, so the next
+brick must classify tricyclic kernels.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–110 prove dependency-cone Hall through six indices and expose size seven as the first open local case. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–110 prove dependency-cone Hall through six indices; Cycle 111 isolates the exact tricyclic obstruction at size seven. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

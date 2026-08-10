@@ -1903,3 +1903,23 @@ no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Independent-two-bit reuse is closed, while sequential GATE-004AQ and
 GATE-004AP/AO/AN were later proved by first-source restriction; GATE-004AL
 beyond size six and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+
+## NG-095 — total path multiplicity for the tricyclic septet stratum
+
+**Label: NO-GO**
+
+Scope: unfold a fixed `W_7` circuit with cycle rank three and exactly three
+NOT gates, then combine the generic at-most-eight path multiplicity per gate
+with the seven-NOT formula inversion lower bound.
+
+Failure: the resulting constraints are only `1<=r_j<=8` and
+`r_1+r_2+r_3>=7`. Compatible integer patterns such as `(1,1,5)` and
+`(2,2,3)` remain. The inequalities do not encode which cycles share a source,
+separator, or NOT gate, so they cannot exclude the exact residual stratum.
+
+Model: every pruned non-uniform candidate for fixed `W_7` with 37 binary
+gates, three NOT gates, and cycle rank three; unrestricted depth; AND/OR
+fan-in two and NOT fan-in one; formula unfolding and Boolean-lattice
+inversion; no randomness, advice, oracle, promise, distribution, or algebraic
+circuit model. Path multiplicity alone is closed, while GATE-004AR and Hall
+beyond size six remain open.

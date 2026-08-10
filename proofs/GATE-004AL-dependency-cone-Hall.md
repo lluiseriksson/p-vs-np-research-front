@@ -43,6 +43,11 @@ three-NOT stratum. GATE-004AN excludes that stratum after the core/orientation
 analysis through LEMMA-131. LEMMA-132 therefore closes size six; size seven is
 the first open case of this gate.
 
+LEMMA-133 proves the general bicyclic NOT lower bound `q>=m-1`. LEMMA-134
+therefore forces any deficient septet into the exact tricyclic three-NOT
+stratum. GATE-004AR is the active size-seven exclusion; path multiplicity
+alone is recorded as a no-go.
+
 ## Model card
 
 | Field | Value |
