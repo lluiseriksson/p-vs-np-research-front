@@ -29,6 +29,7 @@ truth. Each row has exactly one label.
 | INFRA-022 | PROVED | Cycle-022 boundary-function-capacity audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-704e227.md` | None |
 | INFRA-023 | PROVED | Cycle-023 dependent-residual-trace accounting audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-7004866.md` | None |
 | INFRA-024 | PROVED | Cycle-024 representative-free labelwise-survival audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-c0251de.md` | None |
+| INFRA-025 | PROVED | Cycle-025 label-score implementation-instability audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-c1ff7cd.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
