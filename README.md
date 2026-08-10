@@ -505,13 +505,22 @@ obstruction is genuinely within-slot. LEMMA-062 gives
 lower certificate is short by `2m`. GATE-004Y is the active falsification
 audit. No GATE-004X counterexample or positive circuit loss is proved.
 
+The sixtieth cycle immediately rejects the clausewise minimality route.
+LEMMA-063 writes each surviving clause as the complement of a three-literal
+violation term and shares one outer NOT across their DNF. This computes the
+standalone conjunction in `4m` gates and the base extension in at most
+`K+4m+1`, strictly below `K+5m` for `m>=2`. The compressed displayed circuit
+has only `4m+2` tail/output quotient classes and loss `K-1`.
+GATE-004Y-CLAUSEWISE-MINIMALITY is therefore `NO-GO`; the surviving gate asks
+for a representation-independent minimum-circuit quotient surplus.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
 | Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Enhanced witnesses retain a linear common signed-triple tail whose exact unrestricted-circuit effect is open; GATE-004Y, GATE-004X rigidity, and every terminal lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | The linear signed-triple tail admits global De Morgan compression; its minimum-circuit quotient remains open, and GATE-004Y, GATE-004X, and every terminal lower bound are unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

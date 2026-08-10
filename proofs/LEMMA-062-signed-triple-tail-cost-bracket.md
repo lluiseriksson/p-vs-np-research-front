@@ -16,19 +16,28 @@ or
 
 Put `F=H AND Q_1 AND ... AND Q_m`. Then
 
-`K+3m <= C(F) <= K+5m`.
+`K+3m <= C(F) <= K+4m+1`.
 
 For any two restrictions giving distinct nonconstant base residuals, the
-displayed `K+5m` circuit has at least `6m` active semantic joint-quotient
-classes in its signed tail. If that circuit were proved minimum, its loss
-would be at most `K-m`. The proved lower bound is short of this minimality
-certificate by exactly `2m` gates.
+clausewise `K+5m` circuit has at least `6m` active semantic joint-quotient
+classes in its signed tail. But LEMMA-063 gives the stronger upper bound and
+proves that the clausewise circuit is not minimum for `m>=2`. Its quotient
+surplus therefore cannot be transferred by asserting displayed minimality.
 
 ## Upper bound
 
-Each clause uses two NOT gates and two binary OR gates. Conjoining the `m`
-clauses above a minimum circuit for `H` uses another `m` AND gates. This gives
-`K+5m`.
+Each clause has one positive literal `p_i` and two negatively occurring
+variables `u_i,v_i`. Its violation term is
+
+`V_i=u_i AND NOT p_i AND v_i`.
+
+Build every `V_i` with one NOT and two AND gates, OR the violation terms,
+negate once to obtain `W=AND_i Q_i`, and conjoin `W` to `H`. This costs
+
+`K + 3m + (m-1) + 1 + 1 = K+4m+1`.
+
+The older clausewise construction costs `K+5m` and remains useful only as a
+quotient comparison.
 
 ## Lower bound
 
@@ -61,10 +70,11 @@ tail therefore supplies at least `6m` classes.
 
 ## Exact unresolved gap
 
-Restriction proves only `K+3m`, while the representation carrying `6m`
-classes costs `K+5m`. Global minimization may remove up to `2m` gates and may
-merge the displayed semantic classes. Neither exact size nor quotient
-survival is asserted.
+Restriction proves only `K+3m`, while the best recorded construction costs
+`K+4m+1`, leaving at most `m+1` gates of size uncertainty. More importantly,
+the representation carrying `6m` classes is provably nonminimum for `m>=2`.
+Global minimization may merge its semantic classes. Neither exact size nor
+representation-independent quotient survival is asserted.
 
 ## Model card
 
@@ -72,7 +82,7 @@ survival is asserted.
 |---|---|
 | Computational model | Globally minimum unrestricted Boolean circuits, pairwise-disjoint fresh signed width-three clauses, restrictions, and exact semantic joint quotients |
 | Uniform/non-uniform | Fully non-uniform base and minimizing circuit; uniform displayed extension and restriction sequence |
-| Circuit size | `K+3m<=C(F)<=K+5m`; displayed quotient at least `6m`; conditional displayed loss at most `K-m` |
+| Circuit size | `K+3m<=C(F)<=K+4m+1`; nonminimum clausewise circuit costs `K+5m` and has quotient at least `6m` |
 | Circuit depth | Base unrestricted; displayed clause and conjunction chains unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |

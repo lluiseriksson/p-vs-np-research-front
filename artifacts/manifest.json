@@ -276,7 +276,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "5e17f9a95af22f93259c91ba107adff963a532871030783118aaf048c7709ed7"
+      "sha256": "fc9c37c82f99fe40d548642a324bfb216233ae4b224b8208ed42c7283fc8b331"
     },
     {
       "path": "docs/problem-statement.md",
@@ -284,7 +284,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "d2e0644f805c4f50389b4720f2fcd262dd39771e46cfc0d68a64fdfb5285ce55"
+      "sha256": "875571d472d473e8ffd5b3539f5d62be65863b85be601fc7c802dfa750afa548"
     },
     {
       "path": "docs/result-labels.md",
@@ -380,11 +380,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "1b8348516ae896e33e502f1f7bda66e82043102b2b89e1c5c924c7c6fdd28c7d"
+      "sha256": "7e38dfcb1c788c59e0334cbf88a63b06a6875bbd1d29c79cd3d3bf78e64025b2"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "49ce77582b1d5f0d6ec6e47e6763f6e72cd9f8a8005c4746949a260f7e739a62"
+      "sha256": "15f1b81b6a67171d493b43a562f361367e84458c6a52e00cd3afe615e3c0e1c9"
     },
     {
       "path": "experiments/README.md",
@@ -555,8 +555,12 @@
       "sha256": "8199531a626e1ad665ddb4f7ed65814208db80f0ebc133fc8a373a18556f6ae1"
     },
     {
+      "path": "proofs/GATE-004Y-clausewise-minimality.md",
+      "sha256": "d6d89942e02960b9b955be587839adbd08d0eb5781d093653195c7552290bf9f"
+    },
+    {
       "path": "proofs/GATE-004Y-signed-triple-tail-minimality.md",
-      "sha256": "2b22c9cd7ccd5be57669f6503354aae9729854230c25476c54bea336b39855ef"
+      "sha256": "bd7d37d135bd6fd5674e64da948efab7ce5bb0aa7a3ff7eb967977f5eca0baf9"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -808,11 +812,15 @@
     },
     {
       "path": "proofs/LEMMA-062-signed-triple-tail-cost-bracket.md",
-      "sha256": "03c9275440fcb43f873d0487b5ded4f38662ae933865736151064c42e103b632"
+      "sha256": "f9b92241574639b173634dd5ebe7722b4bb910d7e1acef812f242fd42f9d9bad"
+    },
+    {
+      "path": "proofs/LEMMA-063-global-demorgan-signed-triple-compression.md",
+      "sha256": "63bb87763b655df439cbe81e01f2c68c08e62d846880042a54318519ef202dfc"
     },
     {
       "path": "README.md",
-      "sha256": "566471c8c4a8bdf160a9289fe7632a57be93f1f8d0f13626342f2bfb4a0be5d5"
+      "sha256": "480098ec6e942e6782e7fd04d8673629f7794073545cc72097486df8bb497cf8"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -824,7 +832,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "1c41f61d9b8a45d44d803bc903a8df3617869d21796cd16181ecb2beaeb4a99b"
+      "sha256": "8c00ce7ddb1ea64ce1fdab50148284f4f27174cea8557d5d48c86449f4af0835"
     },
     {
       "path": "verification/generate_manifest.py",

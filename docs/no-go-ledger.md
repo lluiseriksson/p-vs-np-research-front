@@ -1172,3 +1172,24 @@ AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This rejects only the inference from
 signed-binary sparsity. LEMMA-062 does not yet convert the triples into a
 minimum-circuit counterexample, so GATE-004X and P versus NP remain open.
+
+## NG-056 — the clausewise signed-triple circuit is minimum
+
+**Label: NO-GO**
+
+Scope: prove the `K+5m` clausewise circuit minimum and transfer its `6m`
+paired-row quotient classes to a GATE-004X counterexample.
+
+Failure: LEMMA-063 complements the OR of the clauses' violation terms and
+shares one outer NOT. The resulting circuit costs at most `K+4m+1`, strictly
+less than `K+5m` for every `m>=2`. Thus the clausewise representation is not
+minimum in the asymptotic regime. Its quotient richness is implementation-
+specific and cannot be promoted by minimality.
+
+Model: exact globally minimum non-uniform unrestricted AND/OR/NOT circuits;
+pairwise-disjoint signed width-three clauses with one positive and two
+negative literals; exact paired-row semantic quotients; unrestricted depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This closes only clausewise
+minimality. Representation-independent quotient survival, GATE-004Y,
+GATE-004X, and P versus NP remain open.

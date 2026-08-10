@@ -3166,10 +3166,10 @@
     {
       "id": "LEMMA062",
       "label": "PROVED",
-      "statement": "Conjoining m disjoint signed width-three clauses of the two specified types to a nonconstant base of size K gives circuit size between K+3m and K+5m; the displayed upper circuit has at least 6m paired-row quotient classes.",
+      "statement": "Conjoining m disjoint signed width-three clauses of the two specified types to a nonconstant base of size K gives circuit size between K+3m and K+4m+1; the clausewise circuit has at least 6m paired-row quotient classes but is nonminimum for m at least two.",
       "computational_model": "Globally minimum unrestricted Boolean circuits, disjoint fresh signed width-three clauses, restrictions, and exact semantic joint quotients",
       "uniformity": "Fully non-uniform base and minimizing circuit; uniform displayed extension and restriction sequence",
-      "circuit_size": "K+3m at most C(F) at most K+5m; displayed quotient at least 6m; conditional displayed loss at most K-m",
+      "circuit_size": "K+3m at most C(F) at most K+4m+1; nonminimum clausewise circuit costs K+5m and has quotient at least 6m",
       "circuit_depth": "Base unrestricted; displayed clause and conjunction chains unrestricted",
       "fan_in": "AND/OR two; NOT one",
       "randomness": "None",
@@ -3183,10 +3183,10 @@
     {
       "id": "GATE004Y",
       "label": "EXPLORATORY",
-      "statement": "For the canonical GATE-004X base and its P/4 disjoint common signed triples, prove exact tail minimality or representation-independent quotient survival sufficient for loss at most K-m.",
+      "statement": "For the canonical GATE-004X base and its P/4 disjoint common signed triples, prove representation-independent minimum-circuit quotient survival sufficient for loss at most K-m.",
       "computational_model": "Minimum unrestricted circuits for the canonical GATE-004X base conjoined with explicit disjoint common signed triples; exact diagonal semantic joint quotients",
       "uniformity": "Uniform canonical base, witness family, clause selection, and parameters; fully non-uniform minimizing circuits",
-      "circuit_size": "Target loss at most K-m; current bracket K+3m at most C(F) at most K+5m, with displayed quotient at least 6m only before minimality is established",
+      "circuit_size": "Target loss at most K-m; current bracket K+3m at most C(F) at most K+4m+1; compressed displayed quotient has only 4m+2 tail and output classes",
       "circuit_depth": "Unrestricted",
       "fan_in": "AND/OR two; NOT one",
       "randomness": "None",
@@ -3195,7 +3195,41 @@
       "field_or_algebraic_model": "Boolean syntax and circuits; affine prefix geometry over F_2 only in inherited base rows",
       "asymptotic_quantifiers": "Fixed sufficiently small c; every sufficiently large compatible length; rho, s, and m as in GATE-004X and LEMMA-061; exact statement for the canonical base family",
       "case_regime": "Worst-case exact falsification gate for GATE-004X; not a SAT lower bound and not a terminal result",
-      "evidence": "proofs/GATE-004Y-signed-triple-tail-minimality.md; proofs/LEMMA-062-signed-triple-tail-cost-bracket.md"
+      "evidence": "proofs/GATE-004Y-signed-triple-tail-minimality.md; proofs/LEMMA-062-signed-triple-tail-cost-bracket.md; proofs/LEMMA-063-global-demorgan-signed-triple-compression.md"
+    },
+    {
+      "id": "LEMMA063",
+      "label": "PROVED",
+      "statement": "Global De Morgan sharing computes a conjunction of m disjoint signed three-clauses with one positive and two negative literals in at most 4m gates, and its extension over a size-K base in at most K+4m+1 gates.",
+      "computational_model": "Unrestricted Boolean circuits, disjoint signed three-clauses, global De Morgan sharing, and exact semantic joint quotients",
+      "uniformity": "Uniform tail construction; fully non-uniform base circuit and later minimization",
+      "circuit_size": "C(W) at most 4m; C(H AND W) at most K+4m+1; clausewise K+5m circuit nonminimum for m at least two; compressed displayed quotient at least 4m+2",
+      "circuit_depth": "Unrestricted; displayed OR aggregation may be a chain or tree",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Every m at least one, every pairwise-disjoint family of the stated sign type, every nonconstant disjoint base, and every pair of distinct nonconstant base residuals for quotient counting",
+      "case_regime": "Worst-case exact upper bound and representation audit; not an exact circuit lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-063-global-demorgan-signed-triple-compression.md"
+    },
+    {
+      "id": "GATE004Y-CLAUSEWISE-MINIMALITY",
+      "label": "NO-GO",
+      "statement": "The clausewise K+5m six-class-per-clause signed-triple circuit is not minimum for m at least two because global De Morgan sharing costs at most K+4m+1.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, disjoint signed three-clause tails, global De Morgan sharing, and exact semantic joint quotients",
+      "uniformity": "Uniform clause and compression family; fully non-uniform base and minimizing circuits",
+      "circuit_size": "Clausewise cost K+5m; compressed upper bound K+4m+1; strict separation for every m at least two",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Every nonconstant disjoint base and every m at least two for the stated signed-clause family",
+      "case_regime": "Structural no-go for clausewise minimality only; representation-independent GATE-004Y, GATE-004X, and P versus NP remain open",
+      "evidence": "proofs/GATE-004Y-clausewise-minimality.md; proofs/LEMMA-063-global-demorgan-signed-triple-compression.md; docs/no-go-ledger.md NG-056"
     }
   ]
 }
