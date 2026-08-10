@@ -334,13 +334,24 @@ theorem under exact SAT-gamma agreement on the full radius-two prefix
 cylinder, beginning with a collision-aware classification of all two-bit
 mutations.
 
+The fortieth cycle discovers that the radius-two context analysis closes into
+a much larger exact object. ENC-016 independently varies all three repeated
+context blocks and polarity, producing a full affine cube of valid prefixes
+with two closed-form SAT conditions. LEMMA-041 reproduces this entire
+pointwise schema in an arbitrary total function; the exact-minimum fresh tail
+still yields loss at most `K_d-m`. Thus every-radius context-coordinate
+semantics are `NO-GO` when used only pointwise. GATE-004S is the new smallest
+brick and requires exact SAT-gamma residual agreement across the whole
+expanded cube and every suffix formula. GATE-004R remains open for
+non-context radius-two mutations.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 78% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, a full radius-one schema countermodel, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 79% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube and matching fresh-tail countermodel, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The complete radius-one pointwise halo schema is generically insufficient; radius-two exact SAT agreement is only an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Even the full expanded pointwise context cube is generically insufficient; exact suffix-wide SAT agreement remains an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

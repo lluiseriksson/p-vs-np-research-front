@@ -789,3 +789,27 @@ fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
 algebraic computation. The construction matches the pointwise six-case
 relation schema but is not SAT-gamma. It does not match SAT's exact residual
 functions on all suffix strings or impose radius-two compatibility.
+
+## NG-039 — the full expanded context-cube schema forces quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal parent-to-joint-quotient loss from ambient
+minimality, every GATE-004P diagonal property, and the complete pointwise
+ENC-016 semantic schema across all independent settings of the three repeated
+context blocks and polarity.
+
+Failure: LEMMA-041 defines one total function directly by the two ENC-016
+Boolean conditions on the entire `(3d+1)`-dimensional expanded cube. On its
+diagonal it reduces to `w AND XNOR(q,y_s)`. Appending `m` fresh conjuncts
+raises exact minimum size from `K_d` to `K_d+m` but leaves `2m` distinct tail
+classes in every diagonal quotient. Loss is at most `K_d-m`, negative for
+`m>K_d`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; a full affine
+expanded context cube with `3d+1` independent coordinates; unrestricted base
+depth and a fresh AND tail; fan-in-two AND/OR and fan-in-one NOT; no
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+The counterexample matches every pointwise formula condition but is not
+SAT-gamma. It does not reproduce existential satisfiability of those
+conditions conjoined with every possible encoded suffix formula.

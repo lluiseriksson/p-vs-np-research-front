@@ -50,9 +50,12 @@ Adjacent collision-aware active branch:
      - LEMMA-038 (fresh-tail counterexample)
   <- GATE-004Q (active parent): SAT off-cube rigidity
      + ENC-015 (proved six-case one-bit halo semantics)
+     + ENC-016 (proved full expanded context formula cube)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
-  <- GATE-004R (active smallest brick): radius-two SAT neighborhood rigidity
+     - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
+  <- GATE-004R (open alternative): radius-two SAT neighborhood rigidity
+  <- GATE-004S (active smallest brick): exact SAT expanded-cube rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -537,21 +540,24 @@ one is the exact union `H_{j,0} OR H_{j',0}`, and two are positive/auxiliary
 mixed unions. LEMMA-039 proves that neutral duplication alone has no generic
 forcing power.
 
-LEMMA-040 reproduces the entire six-case pointwise halo table simultaneously
-in one arbitrary total function and retains LEMMA-038's fresh-tail quotient
-expansion. Consequently neither neutral nor mixed radius-one relations, when
-treated only as the ENC-015 schema, force positive loss.
+LEMMA-040 reproduces the radius-one table in an arbitrary total function.
+ENC-016 then proves that all three repeated context blocks vary independently
+to form a full affine formula cube, with exact closed-form SAT conditions.
+LEMMA-041 reproduces that entire pointwise cube schema while retaining the
+fresh-tail quotient expansion. Thus every-radius context-coordinate semantics
+remain insufficient when treated only pointwise.
 
-GATE-004R is now the smallest attackable brick. It strengthens the premise to
-exact agreement with SAT-gamma on the full Hamming-radius-two prefix cylinder.
-The next audit classifies two independently flipped occurrences, including
-collisions between descriptions based at neighboring contexts. This remains
-an unrestricted-circuit theorem and no loss bound is presently proved.
+GATE-004S is now the smallest attackable brick. It requires exact agreement
+with SAT-gamma on the full expanded-cube cylinder for every encoded suffix.
+Its first audit expands the residuals into conditioned-SAT unions and studies
+their incidence across all context triples. GATE-004R remains an open
+alternative using non-context mutations in the full radius-two neighborhood.
+No unrestricted loss bound is presently proved.
 
-### Smallest active brick: GATE-004R
+### Smallest active brick: GATE-004S
 
 The exact falsifiable statement, model card, and SAT bridge are in
-`proofs/GATE-004R-radius-two-sat-rigidity.md`.
+`proofs/GATE-004S-exact-sat-expanded-context-cube.md`.
 
 ## Downstream amplification obligation: GATE-005
 

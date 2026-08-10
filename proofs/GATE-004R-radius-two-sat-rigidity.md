@@ -33,15 +33,15 @@ same first superlinear unrestricted SAT circuit lower bound GATE-004.
 ## Attack plan
 
 LEMMA-040 proves that merely copying the simplified ENC-015 radius-one
-relation schema is insufficient. GATE-004R instead requires exact equality of
-the residual functions on every suffix, including all malformed suffixes and
-all overlaps among distance-two prefix mutations.
+relation schema is insufficient. ENC-016 and LEMMA-041 strengthen that no-go
+to every mutation radius inside the repeated context coordinates. GATE-004R
+instead requires exact equality of the residual functions on every suffix and
+also retains radius-two mutations of operator, delimiter, and gamma-code
+coordinates outside the expanded context cube.
 
-The first audit is syntactic: classify pairs of independently flipped
-occurrences, determine which rows collide between neighboring base contexts,
-and record their exact parser/formula semantics. Any claimed forcing step must
-survive the LEMMA-040 fresh-tail construction and use a proved radius-two
-compatibility not already present in the radius-one lookup table.
+This remains an open alternative to GATE-004S. Any attack must classify the
+non-context prefix mutations and use an exact suffix-wide SAT compatibility
+absent from both fresh-tail counterexamples.
 
 ## Model card
 
@@ -58,4 +58,3 @@ compatibility not already present in the radius-one lookup table.
 | Field/algebraic model | Hamming neighborhoods and affine prefix geometry over `F_2`; computation remains Boolean |
 | Asymptotic quantifiers | Exists fixed `0<c<1` and `B,eta>0`; every sufficiently large `n`; every eligible total `G`; every minimum circuit; all contexts and all suffixes in the local-agreement premise |
 | Regime | Worst-case exact total-function agreement with total SAT-gamma; no promise or distribution |
-

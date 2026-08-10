@@ -196,7 +196,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "40b0bfc55ad557d13375e04db2828794d2e6513ccc2638aea8082931317a9880"
+      "sha256": "0a38a92887d9ffa0d3dfd91d4d59b86da2c8af9896fc0bbbbe2aa667d60c1b3a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -204,7 +204,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "e8557fe4db57219f51d1077cdb671ffe949c60c92cc7e8de196431bbc554c788"
+      "sha256": "f15205bc1730521c3dfad9dfe0822fbe66b27654d5c6947f870079ad1d19b21a"
     },
     {
       "path": "docs/result-labels.md",
@@ -212,7 +212,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "3f011f7fe3cd54182ccaf1b9b9703a0c922457f519c420d87c4137fbc092d042"
+      "sha256": "b706863bd6e192f664bab5de913c68ec84733e12e6933cacebbf7f197a856ffc"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -292,11 +292,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "70e1f3da0e4d5a1367d5649339bc82ac6f1c00f148ba291991fc8b3e2aacabd0"
+      "sha256": "f25ec1d8f7e073180904186eca48946fb95e2ca6195d7f6f59120e9050868c5c"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ab632fac746c335ca10e4e5160c8731ded51581f553bf0ba0c45c0c0966aae5c"
+      "sha256": "54b769960428740e06ecadcd839aacb466ae1c9d39864ca329d29f96166512e9"
     },
     {
       "path": "experiments/README.md",
@@ -388,11 +388,15 @@
     },
     {
       "path": "proofs/GATE-004Q-sat-off-cube-rigidity.md",
-      "sha256": "f783286ea295c2588df6cb2ad805ac7ecf07d0f3a19e6ff1bee95c3c95e82c60"
+      "sha256": "56843e61a3665c4c12965d4db73e24c2bf803fb58c0d780518364d794e03557d"
     },
     {
       "path": "proofs/GATE-004R-radius-two-sat-rigidity.md",
-      "sha256": "f1293a52e23dedfcf084617df2a0f2613075506e9d418c35e5f431ea09534329"
+      "sha256": "cb2d5788bc9360bec922bdf6f8c6f8e7b74938ddbd23ee18c89b5ed72b06a265"
+    },
+    {
+      "path": "proofs/GATE-004S-exact-sat-expanded-context-cube.md",
+      "sha256": "903f214eab1c1f91e716e5fdc0cd89e9b56129974e8a60abd052847b62492db8"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -559,8 +563,12 @@
       "sha256": "7bcddcdf072bf7a66da55c882873e5d5160ebfd8c8367f59579bd9792a4302eb"
     },
     {
+      "path": "proofs/LEMMA-041-expanded-context-cube-tail-counterexample.md",
+      "sha256": "ec2ead35449bfc5693db052e329989b1a9738e55d069126c84ba9274c5d909ab"
+    },
+    {
       "path": "README.md",
-      "sha256": "a40c4c100433de8adfcde16ca65279bed2dec4dec759e2f0642f04b847e60949"
+      "sha256": "333957e846dd6fce92562d7f9f72b1c5cbd92c94d2c3691e35c227c243f09b6b"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -572,7 +580,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "a4d8f0933498fb47e9bc914bbbf5ce39bc26ca698881c04920b7898f51eca034"
+      "sha256": "ba4202b327c78c1b0950f93d18de4c95ecd01898c7ffadef6f73206740e443ba"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -580,7 +588,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "95bf8ad72bfadf24629d0e8331a2017e63e7a6bdae4140d530e3c9e8560474e6"
+      "sha256": "9288b84a581278960bdd29f73e0e7a2fe8198b32a23f642728bf76fbbe97e41f"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -592,7 +600,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "37836ffef42d8081291cb4dd7ac24100a8c624269c7cc1dff3bd67038878dac3"
+      "sha256": "be497e773c2579015647adb2121d5bc3c619c32960374a8c125cd4597a5a65ef"
     },
     {
       "path": "verification/test_trace_accounting.py",

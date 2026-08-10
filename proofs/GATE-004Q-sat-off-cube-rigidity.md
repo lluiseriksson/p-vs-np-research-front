@@ -54,9 +54,12 @@ pointwise ENC-015 relations simultaneously in one total function while
 retaining the fresh-tail quotient expansion. Thus the complete radius-one
 relation schema is also `NO-GO` as a generic forcing principle.
 
-GATE-004R is the next attack. It requires exact agreement with SAT-gamma on
-the entire radius-two prefix cylinder, rather than a lookup function copying
-only the simplified pointwise halo table. The first task is to classify all
-two-flip rows, their cross-context collisions, and their exact total-language
-semantics. Any forcing inference must identify a proved compatibility absent
-from LEMMA-040.
+ENC-016 exposes the full affine cube obtained by varying all three context
+occurrences independently. LEMMA-041 extends the fresh-tail obstruction to
+that entire cube, closing every-radius pointwise context-schema reasoning.
+
+GATE-004S is now the next attack: require exact agreement with SAT-gamma on
+every expanded-cube row and every suffix, rather than merely copying the
+displayed Boolean conditions. GATE-004R remains an alternative using the full
+radius-two neighborhood, including operator and code mutations. Either route
+must identify suffix-wide SAT compatibility absent from LEMMA-041.

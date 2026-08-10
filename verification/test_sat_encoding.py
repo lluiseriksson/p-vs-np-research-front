@@ -24,6 +24,7 @@ from sat_encoding import (
     neutral_prefix_index,
     one_bit_auxiliary_identifier,
     one_bit_conditioned_prefix,
+    one_bit_context_cube_prefix,
     one_bit_halo_prefixes,
     one_bit_literal_gadgets,
     operator_square_prefix,
@@ -421,6 +422,115 @@ class FormulaEncodingTests(unittest.TestCase):
                                 self.assertEqual(
                                     verify_assignment(prefix[2:], assignment),
                                     expected[position],
+                                )
+
+    def test_three_copy_context_cube_has_exact_affine_semantics(self) -> None:
+        def xor_support(left: str, right: str) -> set[int]:
+            self.assertEqual(len(left), len(right))
+            return {
+                index
+                for index, bits in enumerate(zip(left, right))
+                if bits[0] != bits[1]
+            }
+
+        for bit_length in range(3, 6):
+            context_width = bit_length - 2
+
+            def identifier(context: int) -> int:
+                suffix = format(context, f"0{context_width}b")
+                return int("11" + suffix, 2)
+
+            contexts = range(2**context_width)
+            base_identifier = identifier(0)
+            base = one_bit_context_cube_prefix(
+                True, base_identifier, base_identifier, base_identifier
+            )
+            polarity_support = xor_support(
+                base,
+                one_bit_context_cube_prefix(
+                    False, base_identifier, base_identifier, base_identifier
+                ),
+            )
+            self.assertEqual(polarity_support, {3 * bit_length + 10})
+
+            directions: dict[tuple[int, int], str] = {}
+            occupied = set(polarity_support)
+            for position in range(3):
+                for context_bit in range(context_width):
+                    unit = 1 << (context_width - context_bit - 1)
+                    triple = [base_identifier] * 3
+                    triple[position] = identifier(unit)
+                    changed = one_bit_context_cube_prefix(True, *triple)
+                    support = xor_support(base, changed)
+                    self.assertEqual(len(support), 1)
+                    self.assertTrue(occupied.isdisjoint(support))
+                    occupied.update(support)
+                    directions[(position, context_bit)] = changed
+
+            for first_context in contexts:
+                for middle_context in contexts:
+                    for final_context in contexts:
+                        triple = (
+                            identifier(first_context),
+                            identifier(middle_context),
+                            identifier(final_context),
+                        )
+                        variables = sorted(
+                            {
+                                triple[0],
+                                triple[1],
+                                triple[2],
+                                one_bit_auxiliary_identifier(triple[1]),
+                            }
+                        )
+                        for polarity in (False, True):
+                            prefix = one_bit_context_cube_prefix(
+                                polarity, *triple
+                            )
+                            self.assertEqual(len(prefix), 6 * bit_length + 13)
+                            self.assertIsNotNone(parse_formula(prefix[2:]))
+
+                            reconstructed = list(base)
+                            if not polarity:
+                                for index in polarity_support:
+                                    reconstructed[index] = (
+                                        "1" if reconstructed[index] == "0" else "0"
+                                    )
+                            for position, context in enumerate(
+                                (first_context, middle_context, final_context)
+                            ):
+                                for context_bit in range(context_width):
+                                    if context & (
+                                        1 << (context_width - context_bit - 1)
+                                    ):
+                                        changed = directions[(position, context_bit)]
+                                        for index in xor_support(base, changed):
+                                            reconstructed[index] = (
+                                                "1"
+                                                if reconstructed[index] == "0"
+                                                else "0"
+                                            )
+                            self.assertEqual("".join(reconstructed), prefix)
+
+                            for values in itertools.product(
+                                (False, True), repeat=len(variables)
+                            ):
+                                assignment = dict(zip(variables, values))
+                                if polarity:
+                                    expected = (
+                                        assignment[triple[0]]
+                                        and not assignment[
+                                            one_bit_auxiliary_identifier(triple[1])
+                                        ]
+                                    ) or assignment[triple[2]]
+                                else:
+                                    expected = (
+                                        assignment[triple[0]]
+                                        and not assignment[triple[1]]
+                                    ) or not assignment[triple[2]]
+                                self.assertEqual(
+                                    verify_assignment(prefix[2:], assignment),
+                                    expected,
                                 )
 
     def test_conditioned_prefix_length_by_identifier_bit_length(self) -> None:

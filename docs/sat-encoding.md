@@ -709,6 +709,63 @@ auxiliary identifiers. No freshness, promise, or distribution is assumed.
 | Asymptotic quantifiers | Every `L>=3`, every `j=(11s)_2`, every context coordinate, both polarities, every suffix formula and assignment |
 | Regime | Worst-case exact total-language behavior; all six halo rows are valid rather than malformed or promise inputs |
 
+## ENC-016 — the three context occurrences form one full affine formula cube
+
+**Label: PROVED**
+
+Fix `L>=3`, put `d=L-2`, and for `a,b,c in {0,1}^d` define
+
+`j(a)=(11a)_2` and `k(b)=(1b11)_2`.
+
+Vary the three context occurrences in ENC-013 independently and define
+
+`P^+_{a,b,c}=01 OR(AND(V_{j(a)},NOT(V_{k(b)})),V_{j(c)})`,
+
+`P^-_{a,b,c}=01 OR(AND(V_{j(a)},NOT(V_{j(b)})),NOT(V_{j(c)}))`.
+
+Every one of these strings is a valid one-hole formula prefix of length
+`p=6L+13`. For every suffix formula `phi`, its exact SAT residual is
+
+`SAT(phi AND ((x_{j(a)} AND NOT x_{k(b)}) OR x_{j(c)}))`
+
+for the positive row and
+
+`SAT(phi AND ((x_{j(a)} AND NOT x_{j(b)}) OR NOT x_{j(c)}))`
+
+for the negative row. No involved identifier is assumed fresh in `phi`.
+
+The `2^(3d+1)` strings form an affine subspace of `{0,1}^p`. Starting from
+`P^+_{0,0,0}`, each bit of `a`, `b`, or `c` toggles one distinct prefix
+coordinate, and polarity toggles the same coordinate `q_L=3L+10` as in
+ENC-014. These `3d+1` unit directions have disjoint supports, so the map
+
+`(polarity,a,b,c) -> P^{polarity}_{a,b,c}`
+
+is an injective affine embedding.
+
+ENC-014 is its diagonal subspace `a=b=c`. ENC-015 is exactly the set of rows
+obtained from that diagonal by changing one of the three blocks in one
+coordinate. Double flips of two copies of the same context bit are therefore
+not new lookup locations: they are single-flip halo rows based at the
+neighboring diagonal context. The full cube resolves all such collision
+descriptions automatically.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formula prefixes, complete suffix restrictions, and syntax-level affine geometry |
+| Uniform/non-uniform | Uniform explicit construction for all three independent context blocks and both polarities |
+| Circuit size | No lower bound; `2^(3L-5)` distinct rows, each of length `6L+13` |
+| Circuit depth | Encoded condition formulas have constant depth; later computing circuits unrestricted |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Affine prefix geometry over `F_2`; SAT semantics remain Boolean |
+| Asymptotic quantifiers | Every `L>=3`, every `a,b,c in {0,1}^{L-2}`, both polarities, and every suffix formula |
+| Regime | Worst-case exact total-language behavior; every expanded-cube row is a valid formula prefix |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

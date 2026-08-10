@@ -256,6 +256,38 @@ def one_bit_conditioned_prefix(value: bool, identifier: int) -> str:
     return "01" + one_bit_literal_gadgets(identifier)[value]
 
 
+def one_bit_context_cube_prefix(
+    value: bool,
+    first_identifier: int,
+    middle_identifier: int,
+    final_identifier: int,
+) -> str:
+    """Vary the three repeated ENC-014 context blocks independently."""
+    identifiers = (first_identifier, middle_identifier, final_identifier)
+    binaries = tuple(format(identifier, "b") for identifier in identifiers)
+    if len({len(binary) for binary in binaries}) != 1 or any(
+        len(binary) < 2 or not binary.startswith("11") for binary in binaries
+    ):
+        raise ValueError(
+            "identifiers must have one common bit length and binary form 11s"
+        )
+
+    first = encode_variable(first_identifier)
+    final = encode_variable(final_identifier)
+    if value:
+        middle = encode_variable(
+            one_bit_auxiliary_identifier(middle_identifier)
+        )
+        gadget = encode_or(encode_and(first, encode_not(middle)), final)
+    else:
+        middle = encode_variable(middle_identifier)
+        gadget = encode_or(
+            encode_and(first, encode_not(middle)),
+            encode_not(final),
+        )
+    return "01" + gadget
+
+
 def one_bit_halo_prefixes(
     value: bool,
     identifier: int,
@@ -278,45 +310,17 @@ def one_bit_halo_prefixes(
     toggled_identifier = identifier ^ (
         1 << (context_width - context_bit_index - 1)
     )
-    auxiliary = one_bit_auxiliary_identifier(identifier)
-    toggled_auxiliary = one_bit_auxiliary_identifier(toggled_identifier)
-
-    variable = encode_variable(identifier)
-    toggled_variable = encode_variable(toggled_identifier)
-    auxiliary_variable = encode_variable(auxiliary)
-    toggled_auxiliary_variable = encode_variable(toggled_auxiliary)
-
-    if value:
-        gadgets = {
-            "first": encode_or(
-                encode_and(toggled_variable, encode_not(auxiliary_variable)),
-                variable,
-            ),
-            "middle": encode_or(
-                encode_and(variable, encode_not(toggled_auxiliary_variable)),
-                variable,
-            ),
-            "final": encode_or(
-                encode_and(variable, encode_not(auxiliary_variable)),
-                toggled_variable,
-            ),
-        }
-    else:
-        gadgets = {
-            "first": encode_or(
-                encode_and(toggled_variable, encode_not(variable)),
-                encode_not(variable),
-            ),
-            "middle": encode_or(
-                encode_and(variable, encode_not(toggled_variable)),
-                encode_not(variable),
-            ),
-            "final": encode_or(
-                encode_and(variable, encode_not(variable)),
-                encode_not(toggled_variable),
-            ),
-        }
-    return {position: "01" + gadget for position, gadget in gadgets.items()}
+    return {
+        "first": one_bit_context_cube_prefix(
+            value, toggled_identifier, identifier, identifier
+        ),
+        "middle": one_bit_context_cube_prefix(
+            value, identifier, toggled_identifier, identifier
+        ),
+        "final": one_bit_context_cube_prefix(
+            value, identifier, identifier, toggled_identifier
+        ),
+    }
 
 
 def assignment_conjunction(assignment: Mapping[int, bool]) -> str:
