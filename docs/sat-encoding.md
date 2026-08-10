@@ -1140,6 +1140,40 @@ circuit and quotient consequence.
 | Asymptotic quantifiers | Every finite `P,b,D` with `floor(P/(b+1))>=D`, every qualifying context, and all `m` distant groups |
 | Regime | Worst-case exact syntax-location theorem; not a circuit lower bound |
 
+## ENC-025 — bounded zero runs leave common window clauses
+
+**Label: PROVED**
+
+If every outer context of length `P` has maximum zero-run length at most
+`rho`, partition the first
+
+`(rho+1) floor(P/(rho+1))`
+
+coordinates into consecutive windows of width `rho+1`. No window is all zero,
+so its positive OR clause is one on every context. The windows are disjoint.
+
+For arbitrary concatenations of the ten ENC-022 blocks, including a linear
+number of blocks, `rho=7`: the largest internal run is seven, block-boundary
+runs have length at most five, and all-one gaps break runs. Thus
+`floor(P/8)` disjoint width-eight clauses remain common. LEMMA-050 gives the
+exact circuit consequence.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Raw-coordinate zero-run bounds and disjoint positive consecutive-window clauses |
+| Uniform/non-uniform | Arbitrary context family; uniform window partition; explicit finite neutral alphabet in the application |
+| Circuit size | `floor(P/(rho+1))` common width-`rho+1` clauses; exact consequence deferred to LEMMA-050 |
+| Circuit depth | Contexts and later circuits unrestricted |
+| Fan-in | AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Integer run-length geometry only |
+| Asymptotic quantifiers | Every finite `P,rho`, every qualifying context, and every complete width-`rho+1` window |
+| Regime | Worst-case exact syntax-location theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

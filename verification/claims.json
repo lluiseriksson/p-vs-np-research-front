@@ -2635,6 +2635,57 @@
       "asymptotic_quantifiers": "Every parameter sequence with m=floor(P/(b+1)) at least D and strictly greater than K; all compact DNF cores and qualifying sparse-block contexts",
       "case_regime": "Worst-case exact counterexample to sparse-block context forcing; full GATE-004U remains open",
       "evidence": "proofs/GATE-004U-bounded-block-contexts.md; docs/sat-encoding.md ENC-024; proofs/LEMMA-049-bounded-block-width-obstruction.md; docs/no-go-ledger.md NG-046"
+    },
+    {
+      "id": "ENC-025",
+      "label": "PROVED",
+      "statement": "If every length-P outer context has maximum zero run rho, then floor(P/(rho+1)) disjoint positive width-(rho+1) window clauses are one on every context; the dense ten-block neutral alphabet has rho=7.",
+      "computational_model": "Raw-coordinate zero-run bounds and disjoint positive consecutive-window clauses",
+      "uniformity": "Arbitrary context family with uniform window partition; explicit finite block alphabet in the application",
+      "circuit_size": "m common clauses of width rho+1 for m=floor(P/(rho+1)); exact circuit consequence supplied by LEMMA-050",
+      "circuit_depth": "Contexts and later circuits unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer run-length geometry only",
+      "asymptotic_quantifiers": "Every finite P,rho, every qualifying context, and every complete width-(rho+1) window; arbitrary concatenations of the ten explicit blocks in the application",
+      "case_regime": "Worst-case exact syntax-location theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-050",
+      "label": "PROVED",
+      "statement": "A maximum zero-run bound rho admits an exact width-(rho+1) window-clause tail of size K+(rho+1)m, quotient at least (rho+2)m, and loss at most K-m for m=floor(P/(rho+1)).",
+      "computational_model": "Exact total Boolean functions, bounded raw-coordinate zero runs, disjoint positive window clauses, globally minimum unrestricted circuits, and semantic joint quotients",
+      "uniformity": "Arbitrary witness family and fully non-uniform base/minimum circuit; uniform consecutive-window construction",
+      "circuit_size": "Exact K+(rho+1)m; quotient at least (rho+2)m; signed loss at most K-m",
+      "circuit_depth": "Unrestricted; displayed OR and AND chains may be sequential",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer run-length geometry only",
+      "asymptotic_quantifiers": "Every finite P,rho, every qualifying string family and nonconstant base, and every distinct nonconstant row pair",
+      "case_regime": "Worst-case exact total-function method obstruction; not a SAT circuit lower bound",
+      "evidence": "proofs/LEMMA-050-bounded-zero-run-obstruction.md; verification/test_sat_encoding.py; proofs/LEMMA-048-width-w-clause-exact-tail.md"
+    },
+    {
+      "id": "GATE-004U-BOUNDED-ZERO-RUN-CONTEXTS",
+      "label": "NO-GO",
+      "statement": "Exact agreement on common-inner-length DNF cores under arbitrary-count neutral contexts does not force positive loss while their maximum zero run leaves more disjoint windows than the base circuit size.",
+      "computational_model": "Globally minimum unrestricted circuits, exact bounded-zero-run syntax agreement, canonical DNF core evaluation, and diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary/base minimum circuit; uniform DNF maps and window clauses",
+      "circuit_size": "Counterexample exact size K+(rho+1)m; quotient at least (rho+2)m; loss at most K-m<0",
+      "circuit_depth": "Unrestricted base with width-(rho+1) OR chains and a sequential AND tail",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer run-length geometry only",
+      "asymptotic_quantifiers": "Every parameter sequence with m=floor(P/(rho+1)) strictly greater than K; all compact DNF cores and qualifying bounded-zero-run contexts",
+      "case_regime": "Worst-case exact counterexample to bounded-zero-run context forcing; full GATE-004U remains open",
+      "evidence": "proofs/GATE-004U-bounded-zero-run-contexts.md; docs/sat-encoding.md ENC-025; proofs/LEMMA-050-bounded-zero-run-obstruction.md; docs/no-go-ledger.md NG-047"
     }
   ]
 }

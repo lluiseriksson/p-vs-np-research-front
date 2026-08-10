@@ -985,3 +985,27 @@ distribution, or algebraic computation. This closes every fixed-block-count
 repair and every growing regime satisfying `m>=D` and `m>K`. It does not
 cover dense block counts, long blocks, or full GATE-004U's broader syntax
 interactions.
+
+## NG-047 — dense finite neutral blocks force quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal loss from agreement on common-inner-length DNF
+cores under arbitrary, even linear-count, concatenations of a fixed finite
+neutral-block alphabet, or more generally under contexts with maximum zero
+run `rho(P)`.
+
+Failure: ENC-025 and LEMMA-050 partition the outer region into
+`m=floor(P/(rho+1))` disjoint width-`rho+1` windows. Every window OR is common.
+The exact extension has size `K+(rho+1)m`, quotient at least `(rho+2)m`, and
+loss at most `K-m`, negative whenever `m>K`. The ten ENC-022 blocks have
+`rho=7` under arbitrary concatenation, so dense block count still leaves a
+linear tail.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; arbitrary
+bounded-zero-run outer context families; common-inner-length canonical DNF
+base; exact disjoint positive window clauses; unrestricted depth, fan-in-two
+AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This does not cover long zero runs or
+full GATE-004U's variable-core syntax. Escaping the method requires roughly
+`rho(P)>=P/(K(P)+1)-1`, but that condition is not asserted sufficient.

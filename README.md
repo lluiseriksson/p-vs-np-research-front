@@ -419,13 +419,20 @@ The extension has exact loss at most `K-m`, so every regime with `m>K` is
 sufficiently dense unbounded-block family or the broader variation of full
 DNF syntax.
 
+The forty-ninth cycle closes dense use of a finite neutral alphabet. ENC-025
+and LEMMA-050 show that maximum zero-run length `rho` leaves
+`floor(P/(rho+1))` disjoint common window clauses and exact loss at most
+`K-floor(P/(rho+1))`. The ten-block alphabet has `rho=7` even with a linear
+number of blocks, so dense block count alone is `NO-GO`. The next audit must
+permit zero runs on the `P/K` scale or use the full variable-core DNF syntax.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 87% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block common-clause geometry, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 88% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block and bounded-zero-run common-clause geometry, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Every sparse-block syntax family admits an exact growing-width tail; dense unbounded blocks and full GATE-004U remain open, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Bounded-zero-run syntax families admit an exact local-clause tail even at dense block count; long-run/variable-core syntax and full GATE-004U remain open, with no loss theorem or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

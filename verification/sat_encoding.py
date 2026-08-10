@@ -566,6 +566,28 @@ def bounded_block_distant_groups(
     )
 
 
+def maximum_zero_run(bits: str) -> int:
+    """Return the maximum number of consecutive zero bits."""
+    if any(bit not in "01" for bit in bits):
+        raise ValueError("bits must be binary")
+    return max((len(run) for run in bits.split("1")), default=0)
+
+
+def bounded_zero_run_windows(
+    extra_length: int,
+    max_zero_run: int,
+) -> tuple[tuple[int, ...], ...]:
+    """Partition the usable prefix into OR windows longer than every zero run."""
+    if max_zero_run < 0:
+        raise ValueError("max_zero_run must be nonnegative")
+    width = max_zero_run + 1
+    window_count = extra_length // width
+    return tuple(
+        tuple(range(index * width, (index + 1) * width))
+        for index in range(window_count)
+    )
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

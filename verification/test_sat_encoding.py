@@ -8,6 +8,7 @@ from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
     bounded_block_distant_groups,
+    bounded_zero_run_windows,
     context_wrap,
     conditioned_prefix,
     common_outer_double_not_pad,
@@ -36,6 +37,7 @@ from sat_encoding import (
     one_bit_halo_prefixes,
     one_bit_literal_gadgets,
     operator_square_prefix,
+    maximum_zero_run,
     tautology,
     verify_assignment,
 )
@@ -743,6 +745,24 @@ class FormulaEncodingTests(unittest.TestCase):
                 self.assertEqual(len(group), block_count + 1)
                 for _, _, zeros in placements:
                     self.assertLessEqual(len(set(group) & zeros), 1)
+
+    def test_dense_neutral_alphabet_has_zero_run_at_most_seven(self) -> None:
+        blocks = tuple(
+            block
+            for identifier in (1, 2, 4, 8, 16)
+            for block in (
+                "01" + tautology(identifier),
+                "10" + contradiction(identifier),
+            )
+        )
+        separators = blocks + ("1" * 4, "1" * 8)
+        self.assertEqual(max(maximum_zero_run(block) for block in blocks), 7)
+        for left in separators:
+            for right in separators:
+                self.assertLessEqual(maximum_zero_run(left + right), 7)
+        windows = bounded_zero_run_windows(131, 7)
+        self.assertEqual(len(windows), 16)
+        self.assertTrue(all(len(window) == 8 for window in windows))
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

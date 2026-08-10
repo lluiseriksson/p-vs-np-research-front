@@ -59,6 +59,7 @@ Adjacent collision-aware active branch:
      + ENC-022 (proved almost pairwise-zero neutral padding)
      + ENC-023 (proved distant common triples on ENC-022)
      + ENC-024 (proved general bounded-block distant groups)
+     + ENC-025 (proved general bounded-zero-run windows)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -73,6 +74,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-NEUTRAL-CONTEXT-ONLY (no-go by LEMMA-046)
      - GATE-004U-TWO-BLOCK-CONTEXT-ONLY (no-go by LEMMA-048)
      - GATE-004U-BOUNDED-BLOCK-CONTEXTS (no-go by LEMMA-049)
+     - GATE-004U-BOUNDED-ZERO-RUN-CONTEXTS (no-go by LEMMA-050)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -620,6 +622,13 @@ tail and loss at most `K-m` whenever `m` exceeds block length. Thus every
 fixed block count, and every growing count with `m>K,D`, is `NO-GO`. The next
 active audit must use unbounded sufficiently dense block count or exploit the
 complete DNF syntax beyond an isolated outer-context family.
+
+ENC-025 and LEMMA-050 close dense use of any bounded-zero-run alphabet as
+well. Maximum zero run `rho` leaves `floor(P/(rho+1))` disjoint common window
+clauses and loss at most `K-floor(P/(rho+1))`. The fixed ten-block alphabet
+has `rho=7` even under linear block count. The next active audit must permit
+zero runs on the `P/K` scale or exploit variable DNF core placement so that an
+isolated outer predicate is unavailable.
 
 ### Smallest active brick: GATE-004U
 

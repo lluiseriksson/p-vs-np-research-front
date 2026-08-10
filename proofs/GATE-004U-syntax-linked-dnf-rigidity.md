@@ -96,6 +96,13 @@ sufficiently dense unbounded-block family or use the full variation of DNF
 core lengths and syntax so that no common outer predicate remains. Full
 GATE-004U remains open.
 
+ENC-025 and LEMMA-050 show that dense block count alone also fails for a fixed
+finite alphabet. A maximum zero run `rho(P)` leaves a width-`rho+1` window
+tail with loss at most `K-floor(P/(rho+1))`. The ten-block alphabet has
+`rho=7` under arbitrary concatenation. The next construction must permit zero
+runs of order at least `P/K`, or abandon the common outer/core split by using
+the full variation of DNF syntax. Neither escape is assumed sufficient.
+
 ## Model card
 
 | Field | Value |
