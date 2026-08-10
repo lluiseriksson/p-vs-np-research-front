@@ -459,6 +459,10 @@
       "sha256": "d741c7c06d56fe514dc14c643b3d3d5772d89c137247ab3a555541f17e916a30"
     },
     {
+      "path": "artifacts/cycle-101-first-birth-audit.md",
+      "sha256": "5eb936c34f7ba911056188ef06c033baac5118893af668cbe7ee61398f8c5dc8"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -484,7 +488,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "e58fdbecb69e6eb70ab3a769cdd2f23097b10d98835f9fd38e07a70568747073"
+      "sha256": "6c518b9c6adc82ab046a9e229e88513fa69e66e2f18985026a42b6c38f41e43a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -492,7 +496,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "6a2330fdbc14f8cbea4f55e7452d5420d7c259e6c4f015af14397d05ce65a54d"
+      "sha256": "9d3eab52aaec65f13f3aa878e55a6eb8ec6c9cdee4ad2a72feca6b9b3c0e69c9"
     },
     {
       "path": "docs/result-labels.md",
@@ -596,11 +600,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "b9486e173e9255e405ebeb2891d84c88ee51ac9a81b88089fb5375f994c35bb6"
+      "sha256": "a172e89def2a17a016c19a57c59e962086aee756d3da4b458f66d0088e21ae54"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "a9e7709750a26f5802d94b31edd7fe8978c4c7d33374c312c69743c9a73ce9a8"
+      "sha256": "ae2c4611a982af09c263ddead13b73cd6d7977ebe93b20eeae3470618a108e97"
     },
     {
       "path": "experiments/README.md",
@@ -764,7 +768,7 @@
     },
     {
       "path": "proofs/GATE-004AH-function-specific-negation-tradeoff.md",
-      "sha256": "69443e1137ab3a14d2199e2f495ce49decdcbb282e15ffc5866e1be7c59e40c4"
+      "sha256": "3f438b33461f5e5bd2afce762b124ebf28d41f2447cb75f7b3fec823132e267b"
     },
     {
       "path": "proofs/GATE-004AH-single-cofactor-only.md",
@@ -772,11 +776,19 @@
     },
     {
       "path": "proofs/GATE-004AI-clause-cover-injection.md",
-      "sha256": "1bba66254653179f18e4acd13adb31ee1f9490ba0e6f103589f1b31461d45115"
+      "sha256": "8161a968785a7cd929c613d27e3bddd88c277339b2312e4f655d7d7cc563d41a"
     },
     {
       "path": "proofs/GATE-004AI-output-transition-counting-only.md",
       "sha256": "9675211322589a27b44b2e2fd507546d8efd4634565641b44c090265ad2ef1ee"
+    },
+    {
+      "path": "proofs/GATE-004AJ-birth-resource-matching.md",
+      "sha256": "d156ed35b387fb61124f68e0fef23319ea0174a7361b12a47f47d69ceceafa1c"
+    },
+    {
+      "path": "proofs/GATE-004AJ-direct-birth-to-NOT.md",
+      "sha256": "4558b3bef9024f6e34c7a53e256ebc6f11f714dcf6df8a36a4ff0ff2ba096a16"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1395,8 +1407,12 @@
       "sha256": "30ecc2989833580cd89e6fa568f772c77113f6ae87f9db3c7572773973d98a37"
     },
     {
+      "path": "proofs/LEMMA-114-first-cofactor-difference-birth.md",
+      "sha256": "94d9ae04678c3ad5d7260fa3d932fde0b2ca85edf140137fd0b4798a9c4cb754"
+    },
+    {
       "path": "README.md",
-      "sha256": "5e3821cb658ace9897789da9d41fd59ec1e151f6d64a2928172500b984fde9cd"
+      "sha256": "d2ed9b96a349bebb529c1490c8f33005c2fcc581d5dfd68791bf46f99971e681"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1408,7 +1424,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "601d9cada52505aa738c8b821b2269883ec087cad9058d1d29e7c4aa8069f990"
+      "sha256": "830c38f486c52fb525fd1a449beff263235f289f27786fa2ab4329fee4df2dd0"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

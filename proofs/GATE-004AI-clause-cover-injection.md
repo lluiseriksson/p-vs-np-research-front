@@ -44,6 +44,11 @@ independent rule proving that different clause indices receive different
 charges. Raw output transitions do not supply it, because the same output
 node witnesses every edge of the restriction cube.
 
+LEMMA-114 now supplies a first internal binary birth event for every clause
+index. GATE-004AJ asks to trace those events nonlocally to NOT gates or cycle
+coordinates with no collisions. The birth node itself cannot be the NOT
+witness.
+
 ## Model card
 
 | Field | Value |

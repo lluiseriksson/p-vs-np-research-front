@@ -144,7 +144,10 @@ Adjacent collision-aware active branch:
            + LEMMA-113 (full output cofactor lattice and edge transitions)
            <- GATE-004AI (active witness brick): inject clauses into NOTs or cycles
               - GATE-004AI-OUTPUT-TRANSITION-COUNTING-ONLY (no-go: one output witnesses all edges)
-              <- internal first-divergence with bounded witness reuse (next attackable brick)
+              + LEMMA-114 (first `u_i`-dependent cofactor difference is born at a binary gate)
+              <- GATE-004AJ (active internal brick): match birth events to NOTs or cycles
+                 - GATE-004AJ-DIRECT-BIRTH-TO-NOT (no-go: NOT preserves paired XOR)
+                 <- nonlocal trace plus collision bound (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

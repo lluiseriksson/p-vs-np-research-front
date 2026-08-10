@@ -1725,3 +1725,24 @@ positive restriction cube; exact output cofactor profiles; unrestricted
 depth; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
 promise, distribution, or algebraic circuit model. Raw output-transition
 counting is closed, while GATE-004AI/AH/AG/AE and P versus NP remain open.
+
+## NG-087 — first cofactor-difference birth nodes are NOT gates
+
+**Label: NO-GO**
+
+Scope: for each clause index, find the first circuit node where the XOR of the
+`alpha_empty` and `alpha_{ {i} }` cofactor functions becomes dependent on
+`u_i`, then charge that node directly as a NOT resource.
+
+Failure: LEMMA-114 proves that complementing both cofactor functions preserves
+their XOR exactly. A NOT gate therefore cannot be the first node where the
+difference acquires `u_i`-dependence; every first birth node is binary. The
+zero-length birth-to-NOT trace is categorically unavailable. A valid proof
+must trace to a nonlocal NOT or independent reconvergence and prove that the
+resource cannot be reused across clause indices.
+
+Model: every unrestricted non-uniform AND/OR/NOT circuit for the fixed-sign
+tail; paired canonical cofactor functions at every node; unrestricted depth;
+AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle, promise,
+distribution, or algebraic circuit model. Direct birth-to-NOT charging is
+closed, while GATE-004AJ/AI/AH/AG/AE and P versus NP remain open.

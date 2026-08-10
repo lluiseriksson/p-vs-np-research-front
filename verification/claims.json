@@ -4147,6 +4147,30 @@
       "circuit_size": "No lower bound from 2^m profiles or m*2^(m-1) changing output edges alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction cube; no algebraic circuit model",
       "asymptotic_quantifiers": "Every m at least one, every canonical cube edge, and every circuit computing W_m", "case_regime": "Structural no-go for raw output-transition counting; GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AI-output-transition-counting-only.md; proofs/LEMMA-113-canonical-cofactor-lattice.md; docs/no-go-ledger.md NG-086; artifacts/cycle-100-cofactor-transition-audit.md"
+    },
+    {
+      "id": "LEMMA114", "label": "PROVED",
+      "statement": "For each clause index, the XOR difference between the alpha-empty and singleton canonical cofactors first becomes dependent on u_i at an internal binary gate; a NOT gate cannot be first.",
+      "computational_model": "Node cofactor profiles in unrestricted AND/OR/NOT circuits for the fixed-sign clause product", "uniformity": "Every individual non-uniform circuit; uniform pair of canonical restrictions per clause index",
+      "circuit_size": "No size lower bound; existence and gate type of a first dependence-birth node", "circuit_depth": "Unrestricted finite DAG; firstness relative to any topological order", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean functions with XOR used only to compare two cofactors",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, every clause index i, and every circuit computing W_m", "case_regime": "Exact worst-case structural localization; not an additive charge, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-114-first-cofactor-difference-birth.md; proofs/LEMMA-112-canonical-positive-cofactors.md; artifacts/cycle-101-first-birth-audit.md"
+    },
+    {
+      "id": "GATE004AJ", "label": "EXPLORATORY",
+      "statement": "The m indexed first binary cofactor-difference birth events can be matched injectively to the circuit's N NOT gates or t independent output-cone cycle coordinates.",
+      "computational_model": "Pruned unrestricted Boolean circuits, node cofactor differences, and output-cone cycle-space coordinates", "uniformity": "Every individual non-uniform circuit; uniform clause-indexed witness rule",
+      "circuit_size": "Target injection implies N+t>=m, exactly equivalent to B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor comparison and undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every m at least five, every pruned circuit in the unresolved inversion range, and every clause index", "case_regime": "Exact worst-case internal-witness gate; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AJ-birth-resource-matching.md; proofs/LEMMA-114-first-cofactor-difference-birth.md; proofs/GATE-004AI-clause-cover-injection.md"
+    },
+    {
+      "id": "GATE004AJ-DIRECT-BIRTH-TO-NOT", "label": "NO-GO",
+      "statement": "A first cofactor-difference birth node cannot itself be charged as a NOT because complementing both compared cofactors preserves their XOR difference exactly.",
+      "computational_model": "Paired canonical cofactor profiles at nodes of unrestricted AND/OR/NOT circuits", "uniformity": "Every individual non-uniform parent circuit; uniform clause-indexed comparison",
+      "circuit_size": "No lower bound; direct identification of each first birth node with a NOT is impossible", "circuit_depth": "Unrestricted finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean XOR comparison only",
+      "asymptotic_quantifiers": "Every m at least one, every clause index, and every first birth node from LEMMA114", "case_regime": "Structural no-go for direct birth-to-NOT charging; GATE004AJ, GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AJ-direct-birth-to-NOT.md; proofs/LEMMA-114-first-cofactor-difference-birth.md; docs/no-go-ledger.md NG-087; artifacts/cycle-101-first-birth-audit.md"
     }
   ]
 }

@@ -38,6 +38,11 @@ independent cycle coordinates. LEMMA-113 shows that raw output cofactor
 transitions cannot supply distinct witnesses; an internal bounded-reuse
 theorem remains missing.
 
+LEMMA-114 localizes every clause-index transition to a first binary birth
+node. GATE-004AJ is the active refinement: trace those birth events to
+distinct nonlocal NOT or cycle resources. Direct birth-to-NOT charging is
+impossible because NOT preserves the paired-cofactor XOR.
+
 ## Model card
 
 | Field | Value |
