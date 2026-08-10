@@ -312,3 +312,26 @@ two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
 NOT; no randomness, advice, oracle, field, promise, or distribution. This
 no-go does not refute a SAT-specific constraint on internal sharing between
 `CSAT_0` and `CSAT_1`.
+
+## NG-017 — OR two separately simplified conditioned copies
+
+**Label: NO-GO**
+
+Scope: prove modest savings in each conditioned restriction separately, add
+the two resulting circuits, and infer a smaller circuit for their OR.
+
+Failure: the construction starts from two copies of an `S`-gate parent.
+LEMMA-012 proves the exact identity
+
+`q_J=2S-ell_0-ell_1-x`,
+
+where `ell_b` is the individual loss and `x` is cross-copy sharing. To beat the
+single parent by `L`, the total `ell_0+ell_1+x` must be at least `S+L`.
+Separate `L`-scale branch savings do not even cancel the extra copy when
+`S>>L`. ORing the branches without paying this duplication term silently
+introduces a factor two and destroys the recurrence.
+
+Model: exact gate accounting for unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. The no-go does not refute a
+SAT-specific proof of the full joint surplus required by GATE-004G.

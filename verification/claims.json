@@ -901,6 +901,40 @@
       "asymptotic_quantifiers": "Exists fixed B,delta>0; every sufficiently large n; every minimum length-n SAT-gamma circuit",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004G-joint-conditioned-quotient.md"
+    },
+    {
+      "id": "LEMMA-012",
+      "label": "PROVED",
+      "statement": "A joint quotient of two restricted copies is below the single parent by L gates exactly when the two within-branch losses plus cross-branch sharing total at least the full parent size plus L.",
+      "computational_model": "Two restricted copies of one acyclic Boolean circuit, normalized semantic quotients, and cross-copy merging",
+      "uniformity": "Fully non-uniform exact semantic accounting",
+      "circuit_size": "Exact identity q_J=2S-ell_0-ell_1-x",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one in the intended application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer accounting only; no algebraic computation model",
+      "asymptotic_quantifiers": "Every finite circuit, every pair of restrictions, and every target loss L>=0",
+      "case_regime": "Worst-case exact circuit computation; multi-output quotient",
+      "evidence": "proofs/LEMMA-012-joint-quotient-accounting.md"
+    },
+    {
+      "id": "GATE-004G-SEPARATE-LOSSES",
+      "label": "NO-GO",
+      "statement": "Separate savings in the two conditioned quotients cannot be ORed into a smaller-than-parent SAT circuit unless they and cross-copy sharing first pay the entire parent-size duplication term.",
+      "computational_model": "Minimum unrestricted SAT circuits, two restricted copies, and shared two-output quotient accounting",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Required surplus is ell_0+ell_1+x-S; separate branch losses alone need not make it positive",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every parent size S and every two-restriction quotient; quantitative failure whenever total savings are at most S",
+      "case_regime": "Worst-case method-specific accounting obstruction; not a SAT lower bound",
+      "evidence": "proofs/LEMMA-012-joint-quotient-accounting.md; docs/no-go-ledger.md NG-017"
     }
   ]
 }

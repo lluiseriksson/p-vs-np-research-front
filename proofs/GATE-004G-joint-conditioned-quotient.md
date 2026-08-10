@@ -58,3 +58,20 @@ The open theorem must therefore prove a SAT-specific restriction on internal
 sharing between `CSAT_0` and `CSAT_1`, strong enough to compress both outputs
 jointly below the single parent circuit by `Omega(n^delta)`. No such restriction
 is assumed here.
+
+## Duplication accounting
+
+LEMMA-012 gives an exact normal form. If `ell_0,ell_1` are the losses in the
+individual conditioned quotients and `x` is the additional saving from merging
+the two quotients, then GATE-004G is equivalent to
+
+`ell_0+ell_1+x >= |C_n|+B n^delta+1`.
+
+The `|C_n|` term merely cancels the fact that the construction began with two
+copies. Therefore proving separate `Omega(n^delta)` losses in the branches and
+then ORing them is quantitatively invalid when `|C_n|` is larger. This failed
+promotion is `GATE-004G-SEPARATE-LOSSES — NO-GO`.
+
+The next attack will classify which parent-gate pairs pay the baseline one
+merge and which can pay a second, surplus deletion. Any claimed averaging must
+account for the full `|C_n|` duplication term.

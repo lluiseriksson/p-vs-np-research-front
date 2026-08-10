@@ -185,6 +185,17 @@ is hard can share an arbitrary core with constant overhead. The open content
 is therefore a SAT-specific constraint on internal sharing, not the output
 union identity alone.
 
+LEMMA-012 records the factor-two accounting exactly. If `ell_0,ell_1` are
+individual conditioned-branch losses and `x` is additional cross-copy sharing,
+then a joint improvement `L` requires
+
+`ell_0+ell_1+x >= S(n)+L`.
+
+The full `S(n)` term only cancels duplication of the parent circuit. Therefore
+separate branch simplifications cannot be added and promoted to GATE-004G
+without a proved sharing surplus; that route is
+`GATE-004G-SEPARATE-LOSSES — NO-GO`.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

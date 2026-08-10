@@ -76,7 +76,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2320e0b9cfbf966809741a1a9003540570ccc3caa6943fe703c6a584a6495443"
+      "sha256": "31fead6e0ae781e532e712c2d868c89cd33a60b056ab398f000bc1166897afe4"
     },
     {
       "path": "docs/problem-statement.md",
@@ -84,7 +84,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "bcb8dee807d6b8ba6a1ad7c9db4a25665e12a79508a38e6116fed5a1bc785c82"
+      "sha256": "6e8487b4e57dc4bfe764e7b4c504058900cb330da82a01459b4d63d3883945d8"
     },
     {
       "path": "docs/result-labels.md",
@@ -156,11 +156,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "89bdfe2f21d705b946a5b64961cf59b46962a553203e6c4c9470a4e01acf316e"
+      "sha256": "2185555a5d0a792e018738ef096232a532e6b7b815349f08a43ada0d1d07961c"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "4043bd896b168a63333cb74269c9976eee403eeec81dea51c7edb95f4e561cdc"
+      "sha256": "74d7a5b482df95f87ef334e085d735f3db64155c1e94e33abff1d08295f8a673"
     },
     {
       "path": "experiments/README.md",
@@ -208,7 +208,7 @@
     },
     {
       "path": "proofs/GATE-004G-joint-conditioned-quotient.md",
-      "sha256": "e1f17e2f4864a71591ae961581e39e8f5bdbc721a8a9ec73df3a2f113956b42b"
+      "sha256": "e68a44feee0647b77dc9080e430f4da1e238dde9ca296bb27d11eaafedf70d95"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -259,8 +259,12 @@
       "sha256": "c1a329765c455f40e7382ed25cd8f79394418bf2f47e9ff34dce123a13c143b1"
     },
     {
+      "path": "proofs/LEMMA-012-joint-quotient-accounting.md",
+      "sha256": "acdca302c32c209c0c9d0ffd7cda1960002ba1968a7800bf971960e0eccbe60e"
+    },
+    {
       "path": "README.md",
-      "sha256": "2a166777c188766969a41a49d0278815ebbf19b0b2d15049f2084f4b2716648d"
+      "sha256": "cd9a6ca3fba1ceb8398cd50f13d94232fe584130f2deeaa56b29e54aec23a9b1"
     },
     {
       "path": "verification/audit.py",
@@ -268,7 +272,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "aac9d6c6dd48be5f2104cd6dbc78d7fe9e9aaa5426437f00e96f1b01ee95510a"
+      "sha256": "3bce3f26afaf78ec3647c880f6a0a9ad1c2602b1350be7fe276e2223f5d473eb"
     },
     {
       "path": "verification/generate_manifest.py",
