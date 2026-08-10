@@ -86,6 +86,7 @@ Adjacent collision-aware active branch:
      - GATE-004V-NEGATIVE-UNIT-TAIL (no-go by LEMMA-055 and coordinate density)
      ! GATE-004W (active falsification audit): implication-tail minimality
        - GATE-004W-ESSENTIAL-RESTRICTION-ONLY (no-go by LEMMA-057)
+       - GATE-004W-CONNECTIVITY-INVERSION-ONLY (no-go by LEMMA-058)
 
 Stronger dependent-region branch:
   GATE-004I

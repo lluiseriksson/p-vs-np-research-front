@@ -2992,6 +2992,40 @@
       "asymptotic_quantifiers": "Every finite nonconstant base and every m at least one; method statement for the specified one-restriction-per-negative-variable certificate",
       "case_regime": "Quantitative method no-go only; GATE-004W, GATE-004V, and P versus NP remain open",
       "evidence": "proofs/GATE-004W-essential-restriction-only.md; proofs/LEMMA-057-implication-tail-cost-bracket.md; docs/no-go-ledger.md NG-052"
+    },
+    {
+      "id": "LEMMA058",
+      "label": "PROVED",
+      "statement": "The standalone conjunction of m disjoint implications has circuit size between 2m-1+ceil(log_2(m+1)) and 3m-1, giving exact sizes two for m=1 and five for m=2.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, essential-input connectivity, and Markov inversion complexity",
+      "uniformity": "Fully non-uniform finite circuit size; uniform implication family and increasing-chain witness",
+      "circuit_size": "Lower bound 2m-1+ceil(log_2(m+1)); upper bound 3m-1; exact C(W_1)=2 and C(W_2)=5",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice chains only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every integer m at least one; exact specializations at m=1 and m=2",
+      "case_regime": "Worst-case exact total-function bounds; not an additive base theorem or SAT lower bound",
+      "evidence": "proofs/LEMMA-058-standalone-implication-complexity.md; docs/source-citations/markov-1958.md"
+    },
+    {
+      "id": "GATE004W-CONNECTIVITY-INVERSION-ONLY",
+      "label": "NO-GO",
+      "statement": "Essential-input connectivity plus Markov inversion complexity cannot certify the displayed 3m-1 implication circuit for growing m because their combined lower bound has gap m-ceil(log_2(m+1)).",
+      "computational_model": "Unrestricted Boolean circuits, output-cone connectivity, and Markov NOT-gate inversion complexity",
+      "uniformity": "Fully non-uniform circuits; uniform implication family and increasing-chain witness",
+      "circuit_size": "Combined lower bound 2m-1+ceil(log_2(m+1)), upper bound 3m-1, asymptotic gap m-ceil(log_2(m+1))",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Boolean lattice chain; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every m at least one; the specified method is quantitatively incomplete for every m at least three and has a linear asymptotic gap",
+      "case_regime": "Quantitative method no-go only; exact growing predicate size, GATE-004W, GATE-004V, and P versus NP remain open",
+      "evidence": "proofs/GATE-004W-connectivity-inversion-only.md; proofs/LEMMA-058-standalone-implication-complexity.md; docs/no-go-ledger.md NG-053"
     }
   ]
 }

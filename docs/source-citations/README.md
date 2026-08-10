@@ -18,6 +18,7 @@ Access audit date: 2026-08-10.
 | GHKK16 | [Limits of gate elimination](golovnev-et-al-gate-elimination.md) | Linear ceiling for local substitution schemes |
 | LY22 | [Li-Yang 3.1n lower bound](li-yang-2022.md) | Current explicit unrestricted-circuit record |
 | CDJ26 | [Constructive gate elimination](carmosino-dang-jackman-2026.md) | 2026 confirmation of linear gate-elimination frontier |
+| MAR58 | [Markov inversion complexity](markov-1958.md) | NOT-gate lower bounds from decreases on increasing chains |
 
 Each note records only the claim consumed by this repository. Secondary-source
 summaries are not authoritative when the primary statement is available.

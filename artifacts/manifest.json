@@ -260,7 +260,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "76816f8a5cc0b1c6b1b635f14f947dedfedae61c9f6abad1460695c6f7d414e6"
+      "sha256": "e5fa9b8ca95ab24a0d5ba39ff95de8626d70d1a3922d721f5c904864d7b7d4e5"
     },
     {
       "path": "docs/problem-statement.md",
@@ -268,7 +268,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4bd8a7ca4d3a02d6c0a8d291e74910c0af4f746f8a1612cac2875c3ede3d50f0"
+      "sha256": "7759a437ae6055f297f19b42811b7a35467d429f642de037f5328621501ed57a"
     },
     {
       "path": "docs/result-labels.md",
@@ -323,6 +323,10 @@
       "sha256": "c3a1b600eaabd085fec9a887495b8a450766e00fe7e0858336e0805251f1200c"
     },
     {
+      "path": "docs/source-citations/markov-1958.md",
+      "sha256": "96ffdc39fd6b33521e75be5fea631fb11d4497ccb452908bdf606ce2a5246a63"
+    },
+    {
       "path": "docs/source-citations/murray-williams-2018.md",
       "sha256": "a66ab381ed827fbc2bcca766ba06fccdffe604b6ffe46cd79b3385a1506f6018"
     },
@@ -332,7 +336,7 @@
     },
     {
       "path": "docs/source-citations/README.md",
-      "sha256": "1c5b07a2b9cc340c345f5d86519320978db56badd52192cd890d5c2760d860a0"
+      "sha256": "5349d3bc9fe3246fdf8346b7e86edcb125317798227bd380d15eca02930cb1a2"
     },
     {
       "path": "docs/source-citations/robere-zuiddam-2021.md",
@@ -356,11 +360,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "de0f595024e4383edb89960ca032f012050f5f6968d3fc2624cb8887256e9f1f"
+      "sha256": "a23c09a749378661377c0bbce703659cee7229291cb92279d63a124275e89c0f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "04dc6d059d4ce7f795db38d48ed8d5270ec3fa70c65d4ecded9976679abb9819"
+      "sha256": "50c24b7acd800f10b340bb81c889547a497d544f4a7af4892c6eb6721e2de0d2"
     },
     {
       "path": "experiments/README.md",
@@ -507,12 +511,16 @@
       "sha256": "b8a50f9fbb4bb99f6e22a1e18bed38cbc8e7742488f9bf547dc14012dd2873d0"
     },
     {
+      "path": "proofs/GATE-004W-connectivity-inversion-only.md",
+      "sha256": "3ef77398a6973c169db391b180a6da56cf3f0013b964839613684a1422bce20b"
+    },
+    {
       "path": "proofs/GATE-004W-essential-restriction-only.md",
       "sha256": "d73bf7c56c586f79a735f26a92589c780cafbce7a03c22f43e5c9f116a92a0dc"
     },
     {
       "path": "proofs/GATE-004W-implication-tail-minimality.md",
-      "sha256": "f29ac3ebf42d12d4d1e8e236df073aac1df5afbfda2e0e6608fd29f0faab1ffa"
+      "sha256": "0528978520c276e70f8048d199e0f838a0ed23f506cc9afbaa511f307508d58d"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -747,8 +755,12 @@
       "sha256": "3c39e889fb43ce57d0ff7c47f3f8076b13e4a336ad2bd80503cfb410c4e68769"
     },
     {
+      "path": "proofs/LEMMA-058-standalone-implication-complexity.md",
+      "sha256": "cc881d27c5e0336aa67329845ec9baf506567b34a534b144d7fc6ca15623ab34"
+    },
+    {
       "path": "README.md",
-      "sha256": "08a5ed8730b7c48020081d7068492df55e4ea374720efecbe71691fd41d30a5d"
+      "sha256": "f5618561afd126604c2bd4a912a394eed0707ec987b44fb9a2524b15ba11a1cd"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -760,7 +772,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "91e9960948b979405eaf7b2a699535e9f4523eee1b616f19a8825c0afbe8dbe8"
+      "sha256": "135433561d53ccb73075b6ebcb0d817d52e8c5b1148dd0fe7e6330d184ea1876"
     },
     {
       "path": "verification/generate_manifest.py",

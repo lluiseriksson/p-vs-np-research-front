@@ -45,6 +45,13 @@ construction compresses multiple implications. Any claimed direct-sum step
 must be proved for unrestricted DAG circuits and cannot treat the clauses as
 black-box gates.
 
+LEMMA-058 completes the support-plus-inversion audit for the standalone
+predicate. It proves `2m-1+ceil(log_2(m+1))<=C(W_m)<=3m-1`, with equality at
+`m=1,2`, but leaves a linear gap for growing `m`. Thus neither essential-input
+connectivity nor Markov NOT-counting supplies the required direct sum. The
+next attack must exploit the full cofactor table beyond those two measures or
+find an explicit shared-polarity compression.
+
 ## Model card
 
 | Field | Value |

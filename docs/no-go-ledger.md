@@ -1110,3 +1110,24 @@ mixed implication clauses; unrestricted depth; fan-in-two AND/OR and fan-in-
 one NOT; no randomness, advice, oracle, promise, distribution, or algebraic
 computation. This is only a no-go for the specified restriction certificate.
 GATE-004W, GATE-004V, and the terminal problem remain open.
+
+## NG-053 — support connectivity plus inversion complexity closes the implication direct sum
+
+**Label: NO-GO**
+
+Scope: certify the displayed `3m-1` size of the standalone conjunction of
+`m` disjoint implications using essential-input connectivity for binary gates
+and Markov's inversion-complexity theorem for NOT gates.
+
+Failure: LEMMA-058 proves the complete combined bound
+`2m-1+ceil(log_2(m+1))`. It is exact for `m=1,2`, but its gap from the
+displayed upper bound is `m-ceil(log_2(m+1))`, linear asymptotically. Neither
+measure is additive relative to the canonical base or controls semantic
+quotient classes.
+
+Model: exact non-uniform unrestricted circuits; standalone disjoint
+implications; Boolean-lattice increasing chains; unrestricted depth;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This closes only the combined
+support/NOT-count certificate, not the exact growing predicate size or
+GATE-004W.
