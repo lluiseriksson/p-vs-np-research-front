@@ -3,6 +3,8 @@
 Date: 2026-08-10
 
 No arrow is accepted unless it has its own proved implication and model card.
+Every `SAT` occurrence means the exact total `SAT-gamma` language in
+`docs/sat-encoding.md`.
 
 ```text
 P != NP
@@ -12,6 +14,8 @@ P != NP
   <- all same-language rungs: for every k, SAT notin SIZE(n^k)
   <- GATE-005 (downstream, open): same-language exponent amplification
   <- GATE-004 (active): first superlinear unrestricted SAT circuit lower bound
+  <- GATE-004B (active smallest brick): SAT-specific amortized block restriction
+     + LEMMA-002 (proved recurrence)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -52,7 +56,7 @@ LEMMA-001 also proves that reindexing and polynomial padding preserve or reduce
 the exponent ratio, so those operations cannot repair the Murray-Williams
 profile.
 
-## Smallest active brick: GATE-004
+## Active lower-bound target: GATE-004
 
 Prove that for one explicit constant `delta>0`, the fixed SAT language requires
 more than `n^{1+delta}` gates in unrestricted non-uniform fan-in-two Boolean
@@ -64,7 +68,7 @@ circuit families.
 
 | Field | Value |
 |---|---|
-| Computational model | General acyclic Boolean circuits computing the fixed binary SAT language slice |
+| Computational model | General acyclic Boolean circuits computing exact `SAT-gamma` language slices |
 | Uniform/non-uniform | Fully non-uniform circuit adversary |
 | Circuit size | Exclude `O(n^{1+delta})` for one fixed explicit `delta>0` |
 | Circuit depth | Unrestricted |
@@ -75,6 +79,15 @@ circuit families.
 | Field/algebraic model | None |
 | Asymptotic quantifiers | Exists fixed `delta>0`; infinitely many lengths; every circuit within the size bound fails on some input |
 | Regime | Worst-case exact total-language decision; malformed encodings reject |
+
+## Smallest active brick: GATE-004B
+
+For every minimum circuit computing `SAT-gamma_n`, find a coordinate projection
+to `SAT-gamma_m`, losing at most `A n^beta` input length but forcing at least
+`B n^(beta+delta)` gates to disappear. LEMMA-002 proves that iterating this
+recurrence yields the GATE-004 lower bound. ENC-002 supplies exact
+double-negation projections; generic fanout counting does not supply the needed
+gate loss.
 
 ## Downstream amplification obligation: GATE-005
 

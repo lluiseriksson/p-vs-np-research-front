@@ -27,6 +27,7 @@ ALLOWED_LABELS = {
 REQUIRED_PATHS = [
     "README.md",
     "docs/problem-statement.md",
+    "docs/sat-encoding.md",
     "docs/vertical-map.md",
     "docs/verification-ledger.md",
     "docs/no-go-ledger.md",
@@ -35,6 +36,8 @@ REQUIRED_PATHS = [
     "proofs",
     "formal",
     "verification",
+    "verification/sat_encoding.py",
+    "verification/test_sat_encoding.py",
     "artifacts",
 ]
 
@@ -116,6 +119,8 @@ def main() -> int:
     ):
         if phrase not in readme:
             fail(errors, f"README missing progress estimate: {phrase}")
+    if "SAT-gamma" not in readme:
+        fail(errors, "README does not name the exact SAT-gamma encoding")
 
     source_dir = ROOT / "docs" / "source-citations"
     if source_dir.exists():

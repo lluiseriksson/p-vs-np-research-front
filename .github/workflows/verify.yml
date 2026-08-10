@@ -16,3 +16,4 @@ jobs:
         with:
           python-version: "3.12"
       - run: python verification/audit.py
+      - run: python -m unittest discover -s verification -p 'test_*.py' -v

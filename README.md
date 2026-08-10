@@ -18,6 +18,9 @@ The active branch is `P != NP`. Its exact terminal formulation is:
 > that `M` decides the fixed binary encoding of `SAT` on every input of length
 > `n` in at most `n^c + c` steps.
 
+Here `SAT` is the exact prefix language `SAT-gamma` specified in
+[`docs/sat-encoding.md`](docs/sat-encoding.md); malformed strings reject.
+
 By Cook-Levin NP-completeness, this is equivalent to `P != NP`. The stronger
 terminal-sufficient theorem currently used in the vertical map is
 `SAT notin P/poly`; the map records the explicit implication to the standard
@@ -61,13 +64,20 @@ non-terminal. See
 [`docs/vertical-map.md`](docs/vertical-map.md) and
 [`docs/no-go-ledger.md`](docs/no-go-ledger.md).
 
+The third cycle fixes the exact `SAT-gamma` representation and reduces
+GATE-004 to GATE-004B: a SAT-specific block projection must lose
+`n^(beta+delta)` gates while shortening the encoding by only `O(n^beta)` bits.
+LEMMA-002 proves that this recurrence is sufficient. Double negation supplies
+exact slice projections, but generic fanout counting does not prove the gate
+loss.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 32% | Repository, corrected target/bridge labels, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and hosted CI evidence remain immature. |
+| Infrastructure maturity | 36% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/tests, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and hosted CI evidence remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | A known quantifier/padding failure has been made explicit; no new terminal lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, and fanout-only failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
@@ -77,6 +87,7 @@ or special cases.
 | Path | Purpose |
 |---|---|
 | `docs/problem-statement.md` | Exact standard target and encodings |
+| `docs/sat-encoding.md` | Bit-level total SAT language used by every fine-grained claim |
 | `docs/vertical-map.md` | Terminal-to-brick dependency map |
 | `docs/barrier-audit.md` | Relativization, natural proofs, algebrization, diagonalization, circuit, uniformity, and reduction constraints |
 | `docs/bridge-audit.md` | SAT/Circuit-SAT algorithm-to-lower-bound bridges and their terminal gaps |
@@ -93,6 +104,7 @@ Run the read-only audit with:
 
 ```powershell
 python verification/audit.py
+python -m unittest discover -s verification -p 'test_*.py' -v
 ```
 
 ## Adversarial stop condition

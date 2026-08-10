@@ -21,8 +21,11 @@ deterministic verifier `V` satisfies
 
 and `V` halts within `(|x|+|y|)^c + c` steps on every pair.
 
-`SAT` uses a fixed, polynomial-time parsable binary encoding of propositional
-formulas over `AND`, `OR`, and `NOT`. Malformed encodings are rejected.
+`SAT` means the exact total binary language `SAT-gamma` in
+[`docs/sat-encoding.md`](sat-encoding.md): prefix formulas over two-input
+`AND/OR`, one-input `NOT`, and Elias-gamma-coded positive variable identifiers.
+Malformed encodings are rejected. The language is NP-complete under uniform
+deterministic polynomial-time many-one reductions.
 
 ## Terminal statement T-UNIFORM — EXPLORATORY
 

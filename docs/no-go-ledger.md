@@ -113,3 +113,26 @@ functions reached from SAT by the chosen substitutions.
 Model: unrestricted acyclic Boolean circuits, non-uniform, unbounded depth,
 bounded fan-in gate basis as instantiated, no randomness/advice/oracle/field,
 worst-case exact Boolean function computation. The no-go is method-specific.
+
+## NG-008 — double-NOT projection plus boundary fanout
+
+**Label: NO-GO**
+
+Scope: derive the GATE-004B gate-loss inequality solely by fixing the
+`Theta(n^beta)` prefix bits supplied by ENC-002 and averaging their direct
+fanout in an arbitrary size-`n^(1+delta)` circuit.
+
+Failure: circuit size measures gates, not input-edge incidence. A large
+downstream subcircuit can be reached through low-fanout buffers, so the specified
+prefix coordinates can touch only `O(n^beta)` immediately removable gates even
+when the total circuit is much larger. Boundary fanout does not certify
+propagation through the downstream DAG. Concretely, a circuit for
+`G(z) OR (AND_i x_i)` can have an arbitrarily large `G` subcircuit while every
+`x_i` has fanout one; setting all `x_i=0` removes only the `O(t)`-gate AND branch.
+No semantic property of a *minimum SAT circuit* was used, so the desired
+`n^(beta+delta)` loss does not follow.
+
+Model: exact `SAT-gamma` slices; unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. The no-go concerns the generic
+fanout-only inference, not GATE-004B itself.

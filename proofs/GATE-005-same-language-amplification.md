@@ -7,20 +7,20 @@
 There exist explicit constants `r0>1` and `eta>0` such that for every integer
 `m>=0`,
 
-`SAT notin SIZE(n^(r0+m eta))`
+`SAT-gamma notin SIZE(n^(r0+m eta))`
 
 implies
 
-`SAT notin SIZE(n^(r0+(m+1) eta))`,
+`SAT-gamma notin SIZE(n^(r0+(m+1) eta))`,
 
-with the same fixed SAT encoding and the same unrestricted Boolean circuit
+with the exact `SAT-gamma` encoding and the same unrestricted Boolean circuit
 model.
 
 ### Model card
 
 | Field | Value |
 |---|---|
-| Computational model | General acyclic Boolean circuits computing the fixed binary SAT language slice |
+| Computational model | General acyclic Boolean circuits computing exact `SAT-gamma` language slices |
 | Uniform/non-uniform | Fully non-uniform circuit adversary |
 | Circuit size | Consecutive exponents `r0+m eta` and `r0+(m+1)eta` |
 | Circuit depth | Unrestricted |

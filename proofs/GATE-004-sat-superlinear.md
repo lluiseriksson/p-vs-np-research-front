@@ -6,14 +6,14 @@
 
 There is an explicit constant `delta>0` such that, for infinitely many input
 lengths `n`, every acyclic Boolean circuit over fan-in-two `AND/OR` and
-fan-in-one `NOT` that computes the fixed `n`-bit SAT encoding on all inputs has
+fan-in-one `NOT` that computes the exact `n`-bit `SAT-gamma` slice on all inputs has
 more than `n^{1+delta}` gates.
 
 ### Model card
 
 | Field | Value |
 |---|---|
-| Computational model | General acyclic Boolean circuits computing the fixed binary SAT language slice |
+| Computational model | General acyclic Boolean circuits computing exact `SAT-gamma` language slices |
 | Uniform/non-uniform | Fully non-uniform circuit adversary |
 | Circuit size | More than `n^{1+delta}` for one explicit fixed `delta>0` on infinitely many lengths |
 | Circuit depth | Unrestricted |
@@ -54,3 +54,9 @@ per restriction grows with `n`, or a non-gate-elimination reduction that retains
 unrestricted depth and fan-in-two gates. The next brick is to formulate such a
 mechanism with an amortized potential inequality strong enough to sum to
 `n^{1+delta}` while explicitly testing naturalness and algebrization.
+
+That mechanism is now isolated as GATE-004B. LEMMA-002 proves that a block
+restriction losing at most `A n^beta` input length while certifying
+`B n^(beta+delta)` gate loss per step is sufficient. ENC-002 supplies exact
+double-negation projections between `SAT-gamma` slices; the open part is the
+gate-loss inequality for minimum SAT circuits.
