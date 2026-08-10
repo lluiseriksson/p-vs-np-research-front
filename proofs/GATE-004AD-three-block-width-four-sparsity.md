@@ -1,6 +1,6 @@
 # GATE-004AD — three-block sparsity through signed width four
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 There is a fixed alphabet of universally neutral blocks of maximum length 68
 such that, after allowing up to three nonoverlapping translated blocks per
@@ -20,14 +20,14 @@ in LEMMA-073. A targeted length-48 enrichment still has 35 failures among
 all identifiers 1 through 1,023: pattern `1110` remains absent on offsets
 `{0,5,9,10}`. The next attack must use length at least 52; explicit longer
 identifiers repair the returned representatives, so the full gate remains
-falsifiable rather than rejected.
+falsifiable rather than rejected at that stage.
 
-LEMMA-075's `4*71^3` certificate realizes all fourteen ordinary nonzero masks
-on its audited subdomain. LEMMA-101 invalidates the geometry-only reduction
-used to extend that certificate to every quartet. LEMMA-102 expands the safe
-domain to gaps through 139. Until that corrected audit or a stronger normal-
-form proof closes, the 142-coordinate hitting set and this gate remain
-exploratory. GATE-004AE is therefore contingent on this open premise.
+LEMMA-101 invalidates the original gap reduction, but LEMMA-104/105/106 repair
+the proof without a large sweep. Any quartet with a gap at least 72 is covered
+by component witnesses from identifiers 1 through 68 within the three-block
+budget. The existing `4*71^3` certificate covers every remaining quartet.
+LEMMA-075 therefore proves the 142-coordinate hitting set and this gate as a
+witness construction. GATE-004AE is the next positive rigidity question.
 
 ## Model card
 
@@ -35,7 +35,7 @@ exploratory. GATE-004AE is therefore contingent on this open premise.
 |---|---|
 | Computational model | Exact three-block neutral contexts, one long option, signed clauses through width four, and matching |
 | Uniform/non-uniform | Uniform finite alphabet/placements; later circuits fully non-uniform |
-| Circuit size | No lower bound; target matching bound `142s` across `s` slots |
+| Circuit size | No lower bound; proved matching bound `142s` across `s` slots |
 | Circuit depth | Fixed blocks bounded; long option may have linear depth; later circuits unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |
@@ -43,4 +43,4 @@ exploratory. GATE-004AE is therefore contingent on this open premise.
 | Oracle access | None |
 | Field/algebraic model | Finite Boolean incidence and translation |
 | Asymptotic quantifiers | Fixed `L=68,c_4=142`; every sufficiently large `rho`; every disjoint width-at-most-four common family |
-| Regime | Open witness-construction gate with a finite subdomain certificate; not a circuit lower bound or terminal result |
+| Regime | Exact witness-construction theorem; not a circuit lower bound or terminal result |

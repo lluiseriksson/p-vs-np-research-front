@@ -63,7 +63,11 @@ class QuartetAuditor:
         self.start_ge = tuple(start_ge)
 
     def reached_masks_positions(
-        self, positions: tuple[int, ...], max_blocks: int
+        self,
+        positions: tuple[int, ...],
+        max_blocks: int,
+        *,
+        include_full_mask: bool = False,
     ) -> int:
         if (
             not positions
@@ -76,7 +80,8 @@ class QuartetAuditor:
         full_mask = (1 << len(positions)) - 1
         coordinate_sets = tuple(self.zero_at[position] for position in positions)
         exact: dict[int, int] = {}
-        for mask in range(1, full_mask):
+        mask_stop = full_mask + 1 if include_full_mask else full_mask
+        for mask in range(1, mask_stop):
             placements = self.universe
             for bit, zero_set in enumerate(coordinate_sets):
                 placements &= (
@@ -87,14 +92,14 @@ class QuartetAuditor:
 
         reached = 1
         frontier = {0: 0}
-        target = (1 << full_mask) - 2
+        target = (1 << mask_stop) - 2
         for _ in range(max_blocks):
             following: dict[int, int] = {}
             for accumulated, previous_end in frontier.items():
                 eligible = self.start_ge[previous_end]
                 for mask, placement_set in exact.items():
                     combined = accumulated | mask
-                    if combined == full_mask:
+                    if combined == full_mask and not include_full_mask:
                         continue
                     feasible = placement_set & eligible
                     if not feasible:

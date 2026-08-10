@@ -115,16 +115,18 @@ Adjacent collision-aware active branch:
      + LEMMA-071 (proved seven-pattern universality and `78s` matching bound)
   <- GATE-004AC (active smallest positive brick): width-three-sparse rigidity
      - GATE-004AC-WIDTH3-ONLY (no-go by LEMMA-072)
-  <- GATE-004AD (reopened constructive brick): three-block sparsity through width four
+  <- GATE-004AD (proved constructive brick): three-block sparsity through width four
      - GATE-004AD-IDENTIFIER68-ONLY (no-go by LEMMA-073)
      - GATE-004AD-LENGTH48-ONLY (no-go by LEMMA-074)
      - GATE-004AD-INITIAL-LENGTH68-REPAIR-ONLY (no-go by six finite failures)
-     ! LEMMA-075 (exploratory: old reduced-domain certificate only)
+     + LEMMA-075 (proved by the small-gap certificate plus LEMMA-106)
      - GATE-004AD-BOUND-GAP-REDUCTION-ONLY (no-go by LEMMA-101)
      + LEMMA-102 (safe `2B..2B+3` finite reduction)
      + LEMMA-103 (phase-sensitive reduction to 9,515,749 quartet types)
-     ! GATE-004AD-CORRECTED-FULL-AUDIT (active 9,515,749-type external gate)
-  <- GATE-004AE (contingent positive brick): width-four-sparse rigidity
+     + LEMMA-104/105 (pair singleton and full-zero triple budgets)
+     + LEMMA-106 (all gaps at least 72 covered analytically)
+     + GATE-004AD-CORRECTED-FULL-AUDIT (proved; large sweep retired)
+  <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
      - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)

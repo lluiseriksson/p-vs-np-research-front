@@ -3491,14 +3491,14 @@
       "evidence": "proofs/GATE-004AC-width-three-only.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md; docs/no-go-ledger.md NG-061"
     },
     {
-      "id": "GATE004AD", "label": "EXPLORATORY",
-      "statement": "A fixed three-block neutral slot family is conjectured to bound every disjoint family of non-tautological common signed clauses through width four by a constant per slot.",
+      "id": "GATE004AD", "label": "PROVED",
+      "statement": "A fixed three-block neutral slot family bounds every disjoint family of non-tautological common signed clauses through width four by a constant per slot.",
       "computational_model": "Exact three-block neutral contexts, one long option, signed clauses through width four, and matching",
-      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; target matching bound 142s across s slots",
+      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; proved matching bound 142s across s slots",
       "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation",
-      "asymptotic_quantifiers": "Target: fixed L=68 and c_4=142; every sufficiently large rho; every disjoint width-at-most-four common family",
-      "case_regime": "Open witness-construction gate with a finite subdomain certificate; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
+      "asymptotic_quantifiers": "Fixed L=68 and c_4=142; every sufficiently large rho; every disjoint width-at-most-four common family",
+      "case_regime": "Exact witness-construction theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; proofs/LEMMA-106-large-gap-quartet-coverage.md"
     },
     {
       "id": "LEMMA073", "label": "PROVED",
@@ -3546,25 +3546,25 @@
       "computational_model": "Exact three-block neutral contexts and four-coordinate pattern incidence", "uniformity": "Uniform fixed 86-identifier alphabet; no circuit selected",
       "circuit_size": "No lower bound; six finite missing-pattern types", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
-      "asymptotic_quantifiers": "Exhaustive over the audited 4*71^3 quartet subdomain", "case_regime": "Subset-specific construction no-go; the repaired alphabet remains exploratory globally, with P versus NP open",
+      "asymptotic_quantifiers": "Exhaustive over the audited 4*71^3 quartet subdomain", "case_regime": "Subset-specific 86-identifier construction no-go; the completed 92-identifier alphabet is later proved quartet-universal by LEMMA075/LEMMA106, with P versus NP open",
       "evidence": "proofs/GATE-004AD-initial-length68-repair-only.md; verification/quartet_type_audit_fast.py; docs/no-go-ledger.md NG-064"
     },
     {
-      "id": "LEMMA075", "label": "EXPLORATORY",
-      "statement": "A fixed 92-identifier three-block alphabet realizes every nonzero ordinary mask on the audited gap-at-most-71 subdomain; extension to every quartet and the proposed 142-coordinate hitting set remain open.",
+      "id": "LEMMA075", "label": "PROVED",
+      "statement": "A fixed 92-identifier three-block alphabet realizes every nonzero ordinary quartet mask and yields a 142-coordinate hitting set per slot.",
       "computational_model": "Exact three-block SAT-gamma neutral contexts, finite pattern certificate, signed clauses through width four, hitting sets, and slot products",
       "uniformity": "Uniform fixed 92-identifier alphabet, placements, reduction, and parameters; later circuits fully non-uniform",
-      "circuit_size": "No lower bound; candidate disjoint common signed width-at-most-four packing bound 142s", "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "circuit_size": "No lower bound; disjoint common signed width-at-most-four packing at most 142s", "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
-      "asymptotic_quantifiers": "Target: every sufficiently large compatible slot, every interior type, every disjoint common width-at-most-four family, and every s at least one",
-      "case_regime": "Incomplete worst-case witness-family candidate with an exact finite subdomain certificate; not a circuit lower bound, average-case claim, promise claim, or terminal result",
-      "evidence": "proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; verification/quartet_type_audit_fast.py; verification/test_sat_encoding.py"
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot, every interior type, every disjoint common width-at-most-four family, and every s at least one",
+      "case_regime": "Exact worst-case witness-family theorem; not a circuit lower bound, average-case claim, promise claim, or terminal result",
+      "evidence": "proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; proofs/LEMMA-106-large-gap-quartet-coverage.md; verification/quartet_type_audit_fast.py; verification/test_sat_encoding.py"
     },
     {
       "id": "GATE004AE", "label": "EXPLORATORY",
       "statement": "Width-four-sparse three-block slot products force polynomial positive diagonal quotient loss for every minimum circuit agreeing with SAT-gamma on the canonical witnesses.",
       "computational_model": "Minimum unrestricted Boolean circuits agreeing with SAT-gamma on expanded rows and width-four-sparse slot products; exact diagonal quotients",
-      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary", "circuit_size": "Polynomial average-loss target; required width-four packing premise is currently open",
+      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary", "circuit_size": "Polynomial average-loss target; proved disjoint signed width-at-most-four packing below K",
       "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with affine prefix geometry over F_2",
       "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
       "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
@@ -3965,12 +3965,12 @@
       "evidence": "artifacts/cycle-092-corrected-quartet-shards.md; verification/test_corrected_quartet_shards.py"
     },
     {
-      "id": "GATE004AD-CORRECTED-FULL-AUDIT", "label": "EXPLORATORY",
-      "statement": "The 92-identifier alphabet realizes every ordinary nonzero quartet mask on all 9,515,749 phase-reduced types.",
+      "id": "GATE004AD-CORRECTED-FULL-AUDIT", "label": "PROVED",
+      "statement": "The 92-identifier alphabet realizes every ordinary nonzero quartet mask on every safely reduced type, by the small-gap certificate and analytic large-gap decomposition.",
       "computational_model": "Exact three-block SAT-gamma neutral contexts and four-coordinate zero-mask incidence", "uniformity": "Uniform fixed 92-identifier alphabet, placements, shard partition, and parameters; no circuit selected",
-      "circuit_size": "No lower bound; target 142s common-clause packing bound downstream", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
-      "asymptotic_quantifiers": "Exactly four residues and three phase-capped gaps; LEMMA-103 supplies the all-interior reduction if zero failures are established", "case_regime": "Falsifiable finite witness-construction gate; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AD-corrected-full-audit.md; verification/corrected_quartet_shards.py; artifacts/cycle-093-phase-sensitive-gap-reduction.md"
+      "circuit_size": "No lower bound; 142s common-clause packing consequence in LEMMA075", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every safely reduced quartet type; large gaps by LEMMA-106 and all remaining 4*71^3 types by the exact certificate", "case_regime": "Exact witness-construction theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-corrected-full-audit.md; proofs/LEMMA-106-large-gap-quartet-coverage.md; artifacts/cycle-094-large-gap-quartet-closure.md"
     },
     {
       "id": "LEMMA103", "label": "PROVED",
@@ -3987,6 +3987,30 @@
       "circuit_size": "No lower bound; verification infrastructure only", "circuit_depth": "Irrelevant to the shard contract", "fan_in": "Underlying encoded contexts use AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and SHA-256 artifact sealing",
       "asymptotic_quantifiers": "Exact 9,515,749-type phase-reduced domain and every shard interval in its 534-shard one-gap partition", "case_regime": "Verification infrastructure; production mathematical result not executed or inferred",
       "evidence": "verification/phase_gap_reduction.py; verification/corrected_quartet_shards.py; verification/test_phase_gap_reduction.py; verification/test_corrected_quartet_shards.py; artifacts/cycle-093-phase-sensitive-gap-reduction.md"
+    },
+    {
+      "id": "LEMMA104", "label": "PROVED",
+      "statement": "Identifiers 1 through 68 realize either singleton zero pattern on every sufficiently interior coordinate pair with one aligned block.",
+      "computational_model": "Exact one-block SAT-gamma neutral contexts and two-coordinate zero masks", "uniformity": "Uniform identifiers 1 through 68 and aligned placements; no circuit selected",
+      "circuit_size": "No lower bound; one local block witness", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently interior ordered coordinate pair", "case_regime": "Exact local witness theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-104-one-block-singleton-pair-patterns.md; verification/triple_component_audit.py; verification/test_triple_component_audit.py; artifacts/cycle-094-large-gap-quartet-closure.md"
+    },
+    {
+      "id": "LEMMA105", "label": "PROVED",
+      "statement": "Identifiers 1 through 68 realize the full-zero pattern on every sufficiently interior coordinate triple with at most three nonoverlapping blocks.",
+      "computational_model": "Exact three-block SAT-gamma neutral contexts and full-zero triple incidence", "uniformity": "Uniform identifiers 1 through 68, placements, and safe finite reduction; no circuit selected",
+      "circuit_size": "No lower bound; at most three local blocks", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently interior ordered coordinate triple", "case_regime": "Exact local witness theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-105-three-block-full-zero-triples.md; verification/triple_component_audit.py; verification/test_triple_component_audit.py; artifacts/cycle-094-large-gap-quartet-closure.md"
+    },
+    {
+      "id": "LEMMA106", "label": "PROVED",
+      "statement": "Every sufficiently interior quartet with a consecutive gap at least 72 realizes every ordinary zero mask with at most three nonoverlapping identifier-1-through-68 blocks.",
+      "computational_model": "Exact length-at-most-36 neutral blocks, quartet zero masks, component decomposition, and nonoverlap", "uniformity": "Uniform identifiers 1 through 68 and deterministic cut; no circuit selected",
+      "circuit_size": "No lower bound; at most three local witness blocks", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and interval geometry",
+      "asymptotic_quantifiers": "Every sufficiently interior quartet with at least one consecutive gap at least 72 and every ordinary zero mask 1 through 14", "case_regime": "Exact worst-case witness theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-106-large-gap-quartet-coverage.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md; proofs/LEMMA-104-one-block-singleton-pair-patterns.md; proofs/LEMMA-105-three-block-full-zero-triples.md; artifacts/cycle-094-large-gap-quartet-closure.md"
     }
   ]
 }

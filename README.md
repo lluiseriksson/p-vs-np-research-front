@@ -753,13 +753,22 @@ external domain to 9,515,749 types. The updated fail-closed contract has 534
 shards of 17,622–18,021 types; no production shard is run on Windows and the
 mathematical gate remains `EXPLORATORY`.
 
+The ninety-fourth cycle closes the reopened width-four theorem analytically.
+LEMMA-104 proves every singleton-zero pair pattern needs one block; LEMMA-105
+proves every full-zero triple needs at most three. LEMMA-106 then covers every
+quartet with a gap at least 72 by independent `1+3` or `2+2` components within
+the same three-block budget. All remaining types are exactly the historical
+`4*71^3=1,431,644` zero-failure certificate. LEMMA-075, GATE-004AD, and the
+corrected full-audit gate return explicitly to `PROVED`; the 9,515,749-type
+production sweep is retired, not silently assumed.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 91% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 corrected an unsafe gap reduction; Cycles 092–093 add a sealed fail-closed external contract and a proved phase-sensitive 9,515,749-type domain. The production result, formal foundations, and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 exposed an unsafe reduction; Cycles 092–094 replace it with safe geometry, a phase audit, and an analytic large-gap closure that restores the width-four theorem. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Two-block contexts have a corrected width-three sparsity proof. Width-four sparsity has reopened, width-five/overlapping/nonclausal predicates remain unresolved, and no unrestricted SAT circuit lower bound is proved. |
+| Real progress toward P vs NP | 0.00% | Three-block contexts again have an audited width-four sparsity proof, but GATE-004AE rigidity, width-five/overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

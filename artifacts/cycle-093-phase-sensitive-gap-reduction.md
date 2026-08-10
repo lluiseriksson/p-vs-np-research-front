@@ -27,3 +27,12 @@ production sweep is not executed on Windows.
 
 GATE-004AD-CORRECTED-FULL-AUDIT remains open on all 9,515,749 types. No zero-
 failure certificate or counterexample is claimed.
+
+## Supersession note
+
+**Label: PROVED**
+
+Cycle 094 closes this gate analytically through LEMMA-104/105/106. The
+9,515,749-type production sweep is therefore retired rather than treated as
+executed evidence; the Cycle-093 status above remains the historical status at
+the end of that cycle.

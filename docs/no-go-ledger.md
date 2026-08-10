@@ -1323,13 +1323,14 @@ zero mask 8: `(69,72,77,78)`, `(69,73,77,78)`, `(69,74,77,78)`,
 `(69,75,77,78)`, `(69,76,81,82)`, and `(69,77,81,82)`. The sampling inference
 is therefore false. This is not a structural length-68 obstruction: identifiers
 `1044,1060,1092,1156,16452,16516` repair the six types. The completed alphabet
-passes the same subdomain audit, while its corrected all-quartet audit is open.
+passes the same subdomain audit. LEMMA-104/105/106 later prove its corrected
+all-quartet coverage; they do not validate the failed 86-identifier claim.
 
 Model: exact three-block neutral contexts; fixed 86-identifier alphabet;
 four-coordinate finite incidence; unrestricted later non-uniform circuits;
 no randomness in the exhaustive result, advice, oracle, promise,
-distribution, or algebraic computation. GATE-004AD is `EXPLORATORY`; P versus
-NP remains open.
+distribution, or algebraic computation. GATE-004AD is later restored to
+`PROVED` for the completed alphabet; P versus NP remains open.
 
 ## NG-065 — width-four sparsity controls all disjoint signed tails
 
@@ -1584,6 +1585,7 @@ LEMMA-102 proves the safe geometry-only threshold `2B`; LEMMA-103 then derives
 the smaller exact 9,515,749-type phase domain for the literal alphabet. Thus
 the prior `4*71^3` LEMMA-075 audit covers a strict subdomain. LEMMA-075 and
 GATE-004AD are `EXPLORATORY` pending that extension. The corrected LEMMA-071
-domain is small enough to audit and passes
-all 22,500 types, so GATE-004AB remains `PROVED`. No circuit or terminal claim
-is affected positively; P versus NP remains open.
+domain is small enough to audit and passes all 22,500 types. LEMMA-104/105/106
+later bypass the large corrected quartet domain and restore GATE-004AD without
+reviving the unsafe reduction. No circuit or terminal claim is affected
+positively; P versus NP remains open.
