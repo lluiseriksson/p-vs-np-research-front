@@ -796,11 +796,21 @@ linear deficit `m-g(m)` from `m=5`. Cycle-rank unfolding is therefore
 `NO-GO` as a complete method; GATE-004AG remains open and now requires
 function-specific sharing control or a direct minimum-quotient theorem.
 
+The ninety-ninth cycle performs that first function-specific audit. Primary
+sources on negation normalization and bounded-treewidth circuits rule out any
+coarse inference from few NOT gates to large unrestricted size. LEMMA-112
+then determines all canonical positive cofactors: residual `S` is exactly a
+negative conjunction of size `|S|`, with maximum `m` and average `m/2`.
+GATE-004AH isolates the exact middle-range tradeoff `B+N>=6m-1`.
+Independent cofactor charging is `NO-GO` because summing mutually exclusive
+residuals would double count parent gates; a coupled multi-cofactor theorem is
+the next brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–098 isolate the fixed-sign tail and exhaust restriction/inversion/unfolding lower-bound routes quantitatively. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–099 isolate the fixed-sign tail, exhaust generic unfolding, and begin function-specific multi-cofactor analysis. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -57,6 +57,12 @@ must exploit the particular distribution of the `u_i` negative variables
 through reconvergent subgraphs or bypass size minimality with a direct
 semantic quotient theorem.
 
+LEMMA-112 starts the function-specific branch by computing every canonical
+positive cofactor exactly. GATE-004AH now isolates the missing binary/NOT
+tradeoff; its single-cofactor attack fails because no individual residual has
+size above `m`. The next proof must couple multiple cofactors within the same
+parent DAG without double counting shared gates.
+
 ## Model card
 
 | Field | Value |

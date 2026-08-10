@@ -4091,6 +4091,38 @@
       "circuit_size": "Lower 5m-1+g(m) versus target 6m-1, with deficit m-g(m)=m-Theta(log m)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected binary cycle space over F_2 and Boolean-lattice inversion",
       "asymptotic_quantifiers": "Every m at least one, every cycle rank t at least zero, and every pruned circuit in the corresponding binary-gate stratum", "case_regime": "Structural no-go for cycle-rank unfolding as a complete method; GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AG-CYCLE-RANK-UNFOLDING-ONLY.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; docs/no-go-ledger.md NG-084; artifacts/cycle-098-cycle-rank-inversion-tradeoff.md"
+    },
+    {
+      "id": "INFRA099", "label": "PROVED",
+      "statement": "Primary Fischer and He-Liang-Sarma records delimit the negation-normalization and bounded-topology results relevant to the fixed-sign tail without importing an exact unrestricted-size theorem.",
+      "computational_model": "Primary-source audit of AND/OR/NOT circuit inversion complexity and bounded-treewidth transformations", "uniformity": "Literature scope only; no circuit family selected",
+      "circuit_size": "No new lower bound; explicit separation of polynomial-overhead transformations from exact linear size", "circuit_depth": "Sources include unrestricted and topology-restricted settings", "fan_in": "Sources use standard Boolean circuits; repository target remains AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Published source statements and their explicitly recorded scopes", "case_regime": "Audited infrastructure result; not mathematical progress toward a terminal separation",
+      "evidence": "docs/source-citations/fischer-1975.md; docs/source-citations/he-liang-sarma-2010.md; docs/source-citations/README.md; artifacts/cycle-099-canonical-cofactor-audit.md"
+    },
+    {
+      "id": "LEMMA112", "label": "PROVED",
+      "statement": "Every canonical full assignment of the positive variables reduces the one-negative clause product to a negative conjunction of exact size |S|; the maximum residual size is m and the average is m/2.",
+      "computational_model": "Exact positive-variable restrictions of an unrestricted AND/OR/NOT read-once clause product", "uniformity": "Uniform canonical assignments; exact non-uniform residual circuit size",
+      "circuit_size": "Residual size exactly |S|; average m/2; maximum m", "circuit_depth": "Unrestricted; displayed OR chain may be linear depth", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and subset incidence only",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, and every subset S of [m]", "case_regime": "Exact worst-case cofactor theorem; not a parent direct sum, quotient theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-112-canonical-positive-cofactors.md; docs/source-citations/markov-1958.md; artifacts/cycle-099-canonical-cofactor-audit.md"
+    },
+    {
+      "id": "GATE004AH", "label": "EXPLORATORY",
+      "statement": "Every circuit for the four-positive one-negative product in the unresolved intermediate-NOT range satisfies B+N at least 6m-1.",
+      "computational_model": "Pruned unrestricted Boolean circuits for the fixed four-positive one-negative read-once clause product with exact binary and NOT counts", "uniformity": "Every individual non-uniform circuit; uniform function family",
+      "circuit_size": "Target tradeoff B+N>=6m-1 in the unresolved NOT range; current cycle-rank lower is weaker", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits and restrictions only",
+      "asymptotic_quantifiers": "Every m at least five and every pruned circuit with ceil(log2(m+1))<=N<=m-1", "case_regime": "Exact worst-case standalone-size gate; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AH-function-specific-negation-tradeoff.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-112-canonical-positive-cofactors.md"
+    },
+    {
+      "id": "GATE004AH-SINGLE-COFACTOR-ONLY", "label": "NO-GO",
+      "statement": "Independent canonical cofactor size bounds cannot prove GATE004AH because their maximum is m and average is m/2, and summing mutually exclusive restrictions double counts parent gates.",
+      "computational_model": "Full positive-variable cofactors of unrestricted circuits and exact residual circuit size", "uniformity": "Uniform canonical restrictions; fully non-uniform parent circuit",
+      "circuit_size": "Individual residual at most m and average exactly m/2 versus parent target 6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and subset incidence only",
+      "asymptotic_quantifiers": "Every m at least one and all 2^m canonical positive cofactors", "case_regime": "Structural no-go for independent single-cofactor charging; GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AH-single-cofactor-only.md; proofs/LEMMA-112-canonical-positive-cofactors.md; docs/no-go-ledger.md NG-085; artifacts/cycle-099-canonical-cofactor-audit.md"
     }
   ]
 }

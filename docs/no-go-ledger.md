@@ -1682,3 +1682,24 @@ cycle spaces over `F_2` and Boolean-lattice inversion; exact worst-case
 quantifiers; no randomness, advice, oracle, promise, distribution, or
 algebraic circuit model. The method is closed, while GATE-004AG, GATE-004AE,
 and P versus NP remain open.
+
+## NG-085 — independent canonical cofactors prove the binary/NOT tradeoff
+
+**Label: NO-GO**
+
+Scope: fully assign the positive variables of the fixed-sign tail, lower-bound
+the resulting negative-literal residuals exactly, and aggregate those bounds
+to prove GATE-004AH.
+
+Failure: LEMMA-112 gives residual size exactly `|S|`. The maximum over all
+canonical cofactors is only `m` and the average is `m/2`, versus parent target
+`6m-1`. Summing the `2^m` residual complexities is invalid: the restrictions
+are mutually exclusive, and one parent gate may survive or normalize into
+classes under many assignments. Distinct residual functions do not provide
+an additive gate charge without a multi-cofactor survival theorem.
+
+Model: every unrestricted non-uniform AND/OR/NOT parent circuit; all canonical
+full assignments of positive tail variables; exact residual circuit size;
+worst-case and uniform average over subsets; no randomness, advice, oracle,
+promise, distribution, or algebraic model. Independent cofactor charging is
+closed, while GATE-004AH, GATE-004AG, GATE-004AE, and P versus NP remain open.

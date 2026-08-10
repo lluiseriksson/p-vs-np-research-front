@@ -138,7 +138,10 @@ Adjacent collision-aware active branch:
         - GATE-004AG-ONE-CYCLE-UNFOLDING-ONLY (no-go: factor-two loss)
         + LEMMA-111 (all-DAG cycle-rank/inversion tradeoff)
         - GATE-004AG-CYCLE-RANK-UNFOLDING-ONLY (no-go: `m-Theta(log m)` gap)
-        <- function-specific reconvergence sharing (next attackable brick)
+        + LEMMA-112 (all canonical positive cofactors have exact size `|S|`)
+        <- GATE-004AH (active smallest structural brick): exact binary/NOT tradeoff
+           - GATE-004AH-SINGLE-COFACTOR-ONLY (no-go: maximum `m`, average `m/2`)
+           <- coupled multi-cofactor survival (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
