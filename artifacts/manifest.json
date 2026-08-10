@@ -299,6 +299,10 @@
       "sha256": "9eb8ea0de4e0a90cb8f487ef4560d26073ef541fceb9995354fee4bd71d96e2f"
     },
     {
+      "path": "artifacts/cold-clone-ff4276f.md",
+      "sha256": "b5020ee313c5c4b821cccb99fbbd4389aee438704eadf5cf45b3ba214328c36a"
+    },
+    {
       "path": "artifacts/cycle-071-quartet-audit.md",
       "sha256": "c7e0ee0af162b01bd596119bd62da933477d9b9463643b1fd6a511cb92c0a61b"
     },
