@@ -60,6 +60,7 @@ truth. Each row has exactly one label.
 | INFRA-053 | PROVED | Cycle-053 signed-literal polarity sharing and naive-additivity no-go reproduce from a cold clone | `artifacts/cold-clone-01d5a8b.md` | None |
 | INFRA-054 | PROVED | Cycle-054 complement-exposed negative tails and unit-tail exclusion reproduce from a cold clone | `artifacts/cold-clone-4a78455.md` | None |
 | INFRA-055 | PROVED | Cycle-055 common implication packing, cost bracket, and GATE-004W reproduce from a cold clone | `artifacts/cold-clone-f822036.md` | None |
+| INFRA-056 | PROVED | Cycle-056 standalone implication and inversion-complexity audit reproduces from a cold clone | `artifacts/cold-clone-f66d3d6.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
