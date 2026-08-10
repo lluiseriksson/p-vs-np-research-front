@@ -1049,3 +1049,24 @@ only through the already proved LEMMA-048 identity; no randomness, advice,
 oracle, promise, distribution, or algebraic computation. This no-go does not
 prove actual loss nonnegative and does not cover signed, overlapping, or
 non-clausal common predicates.
+
+## NG-050 — signed clauses inherit a fixed additive NOT cost
+
+**Label: NO-GO**
+
+Scope: extend the exact LEMMA-048 positive-clause identity to signed clauses
+by charging a fixed extra cost for each negated literal, independently of the
+nonconstant base circuit.
+
+Failure: LEMMA-054 proves exact sizes on two raw variables. Conjoining the
+same fresh literal `NOT z` to base `x` increases size from zero to two, while
+conjoining it to base `NOT x` increases size from one to two because
+`NOT x AND NOT z=NOT(x OR z)`. Thus output polarity can share the NOT gate,
+and base size plus signed clause data do not determine an additive cost.
+
+Model: exact globally minimum non-uniform Boolean circuits; unrestricted
+depth; fan-in-two AND/OR and fan-in-one NOT; raw inputs free; no randomness,
+advice, oracle, promise, distribution, or algebraic computation. This closes
+only naive signed-clause accounting. Complement-sensitive signed extensions,
+overlap, nonclausal predicates, GATE-004V, and the terminal problem remain
+open.

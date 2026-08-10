@@ -248,7 +248,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "44ba37b07e906c038200b53bb82fa15d87a561f02f6a53732064939834b73840"
+      "sha256": "0254193b08e75bd305c9b4e3148a8486c42c3b873c5e6c4fcdde51092aa79565"
     },
     {
       "path": "docs/problem-statement.md",
@@ -256,7 +256,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "26009f12bce0e70222cdaab4180a180f191af20fb7ce5be8ad8692e5b33d7907"
+      "sha256": "89b34da6e0f2f369c4023785dac180be0dfa2260de2b63ad35f86af3ab615c6d"
     },
     {
       "path": "docs/result-labels.md",
@@ -344,11 +344,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a779cdd64b4a3c4140cc171feb7fbc29d22d7086f6d2e7215e2a03ecf386acfe"
+      "sha256": "ea54748d9ec243cd95be17ec81a8bec34ecd81181d0567f9a026b27a1abfcaca"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "8585be19611603e75d5fba326b6afbbc817c2f769c7a37c63dcc0fd88f936e60"
+      "sha256": "85d37e59fdffa5bc1551b06003a8f04688e15229a5e24c293ac6b64ef9c4225a"
     },
     {
       "path": "experiments/README.md",
@@ -480,11 +480,15 @@
     },
     {
       "path": "proofs/GATE-004V-balanced-long-run-rigidity.md",
-      "sha256": "a93c2989dbf0a1ccef1476d078c05d2db5994e0a6ed9c1a5e2da23ab66945219"
+      "sha256": "923ce80b601681303ea8c3ba72a0ded049b31b1d0fdbf24836a3d740ff896ab7"
     },
     {
       "path": "proofs/GATE-004V-disjoint-positive-clauses.md",
       "sha256": "464135ead445ea6cd71783695bc631fda953c12b1edc30d7ad9e690563b2c4d3"
+    },
+    {
+      "path": "proofs/GATE-004V-naive-signed-additivity.md",
+      "sha256": "7f5c27bdfd4cd8627d9d9ea2349533f7cbf4e9b13398e0519e9e81d02d16952b"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -703,8 +707,12 @@
       "sha256": "d8a9c45b0ff178ceab553e91029177b90e2cdedec589a5558a128d447e16fc96"
     },
     {
+      "path": "proofs/LEMMA-054-signed-literal-polarity-sharing.md",
+      "sha256": "3b0a94facb91d119e2ba56d70a178764fd3ef880cfa22d2205a89dc415d159b1"
+    },
+    {
       "path": "README.md",
-      "sha256": "c62aba3b5350394e70e5d8c8d1bed7de33cabc5352c2bcbf2c62a937f5b0bed9"
+      "sha256": "058a0c175f7fb8aebef639d808aa523d91452c03a44478f31092ffd22166a587"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -716,7 +724,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "71e1cd2a87f3f64894028b49351bf959bc5bda5361b14ceaf66654196d8fcf65"
+      "sha256": "d6f2c6b79487ed0a02c87aadbe11668ee79fa576c47a031ac99aa9c5021ea73d"
     },
     {
       "path": "verification/generate_manifest.py",

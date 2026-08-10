@@ -81,6 +81,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-SINGLE-LONG-BLOCK-CONTEXTS (no-go by LEMMA-051/049)
   <- GATE-004V (active smallest brick): balanced long-run product rigidity
      - GATE-004V-DISJOINT-POSITIVE-CLAUSES (no-go by LEMMA-053)
+     - GATE-004V-NAIVE-SIGNED-ADDITIVITY (no-go by LEMMA-054)
 
 Stronger dependent-region branch:
   GATE-004I

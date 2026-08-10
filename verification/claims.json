@@ -2839,6 +2839,40 @@
       "asymptotic_quantifiers": "Every sufficiently large eligible R, s=floor((R-1)/8), every rho at least seven, every clause width, and every pairwise variable-disjoint common positive-clause family",
       "case_regime": "Scoped method no-go only; signed clauses, overlapping clauses, nonclausal predicates, GATE-004V, and the terminal problem remain open",
       "evidence": "proofs/GATE-004V-disjoint-positive-clauses.md; proofs/LEMMA-053-positive-clause-packing-bound.md; docs/no-go-ledger.md NG-049"
+    },
+    {
+      "id": "LEMMA054",
+      "label": "PROVED",
+      "statement": "For distinct raw inputs x,z, conjoining the fresh literal NOT z adds two gates over base x but only one gate over base NOT x, so its exact additive cost is base-dependent.",
+      "computational_model": "Exact minimum unrestricted Boolean circuits over free raw inputs",
+      "uniformity": "Finite exact non-uniform circuit complexity; both witness bases and extensions are explicit",
+      "circuit_size": "C(x)=0, C(NOT x)=1, C(x AND NOT z)=2, and C(NOT x AND NOT z)=2; increments two and one",
+      "circuit_depth": "Displayed implementations have depth at most two; the lower bound exhausts all circuits of size at most one regardless of depth convention",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Exact finite statement for every pair of distinct raw inputs x,z; the universal base-independent identity is falsified by the two specified nonconstant bases",
+      "case_regime": "Worst-case exact total-function complexity and method audit; not a SAT lower bound",
+      "evidence": "proofs/LEMMA-054-signed-literal-polarity-sharing.md; docs/verification-ledger.md LEMMA-054"
+    },
+    {
+      "id": "GATE004V-NAIVE-SIGNED-ADDITIVITY",
+      "label": "NO-GO",
+      "statement": "LEMMA-048 cannot be extended to signed clauses by assigning a fixed extra gate cost to each negated literal independently of the base.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits for a nonconstant base conjoined with a fresh negated literal, with an intended exact semantic joint-quotient application",
+      "uniformity": "Fully non-uniform base; explicit finite counterexamples to the proposed universal accounting identity",
+      "circuit_size": "The same fresh signed unit tail has exact increments two over x and one over NOT x",
+      "circuit_depth": "Unrestricted; exact size-two witnesses and exhaustive size-at-most-one lower bounds",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "The proposed identity quantifies over every nonconstant base on variables disjoint from the signed literal and is falsified on two variables; no asymptotic circuit statement is made",
+      "case_regime": "Scoped method no-go only; complement-sensitive signed predicates, overlapping predicates, GATE-004V, and P versus NP remain open",
+      "evidence": "proofs/GATE-004V-naive-signed-additivity.md; proofs/LEMMA-054-signed-literal-polarity-sharing.md; docs/no-go-ledger.md NG-050"
     }
   ]
 }

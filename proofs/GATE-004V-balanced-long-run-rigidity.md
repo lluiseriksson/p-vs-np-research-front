@@ -67,6 +67,12 @@ tail. The next attack is signed disjoint clauses, where NOT-gate cost and
 possible complement sharing prevent an automatic additive identity, followed
 by overlapping and non-clausal predicates.
 
+LEMMA-054 closes the naive signed-cost transfer: even one fresh negated
+literal has additive cost two over base `x` but one over base `NOT x`.
+Therefore signed clauses require complement-sensitive base data and a new
+quotient proof. That refined audit, overlapping clauses, and non-clausal
+predicates remain active.
+
 ## Model card
 
 | Field | Value |

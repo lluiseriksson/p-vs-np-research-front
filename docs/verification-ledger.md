@@ -216,6 +216,8 @@ truth. Each row has exactly one label.
 | GATE-004V | EXPLORATORY | Prove polynomial diagonal quotient loss from exact SAT agreement on the balanced long-run slot-product DNF witnesses | `proofs/GATE-004V-balanced-long-run-rigidity.md` | New smallest sufficient brick; first attack classifies common predicates |
 | LEMMA-053 | PROVED | Every disjoint positive-clause family common to the balanced product has size at most `6s`, below the base floor at the chosen parameters | `proofs/LEMMA-053-positive-clause-packing-bound.md` | Closes all widths of the LEMMA-048 positive-clause route |
 | GATE-004V-DISJOINT-POSITIVE-CLAUSES | NO-GO | The exact disjoint positive-clause tail cannot certify negative loss against GATE-004V | `proofs/GATE-004V-disjoint-positive-clauses.md`; LEMMA-053; NG-049 | Next audit: signed and overlapping predicates |
+| LEMMA-054 | PROVED | A fresh negated literal has additive cost two over base `x` but one over base `NOT x` | `proofs/LEMMA-054-signed-literal-polarity-sharing.md` | Signed-tail cost is complement-sensitive |
+| GATE-004V-NAIVE-SIGNED-ADDITIVITY | NO-GO | Counting a fixed NOT cost per signed literal does not extend LEMMA-048's exact additive identity | `proofs/GATE-004V-naive-signed-additivity.md`; LEMMA-054; NG-050 | Refined signed and overlapping audits remain open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
