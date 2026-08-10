@@ -3417,6 +3417,37 @@
       "asymptotic_quantifiers": "Every rho at least twenty-four; every triple in the explicit partition except at most six meeting an A_rho one bit",
       "case_regime": "Worst-case exact witness-family theorem for one packing geometry; not a general matching bound, circuit lower bound, or terminal result",
       "evidence": "proofs/LEMMA-068-two-block-long-run-distant-completeness.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA069", "label": "PROVED",
+      "statement": "The ten ENC-022 blocks omit 101 and 110 on every aligned chunk, leaving rho disjoint common signed triples even with two blocks and A_rho.",
+      "computational_model": "Exact ENC-022 contexts, one long option, aligned signed triples, and pattern incidence",
+      "uniformity": "Uniform ten-block alphabet and placements; no circuit selected",
+      "circuit_size": "No lower bound; common packing at least rho per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Every rho at least eight and every aligned chunk",
+      "case_regime": "Exact witness-family obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-069-enc022-aligned-triple-defect.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE004AB-ENC022-ALPHABET-ONLY", "label": "NO-GO",
+      "statement": "The ten-block ENC-022 alphabet cannot yield two-block width-three sparsity because it retains rho aligned common signed triples.",
+      "computational_model": "Exact two-block neutral contexts and signed-triple incidence",
+      "uniformity": "Uniform ten-block alphabet; no circuit selected", "circuit_size": "No lower bound; surviving packing rho per slot",
+      "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every rho at least eight", "case_regime": "Alphabet-specific witness no-go; GATE-004AB and P versus NP remain open",
+      "evidence": "proofs/GATE-004AB-enc022-alphabet-only.md; proofs/LEMMA-069-enc022-aligned-triple-defect.md; docs/no-go-ledger.md NG-060"
+    },
+    {
+      "id": "LEMMA070", "label": "PROVED",
+      "statement": "Identifier-10 and identifier-12 neutral contexts supply 101 and 110, completing all eight patterns on every aligned slot triple after the first five.",
+      "computational_model": "Exact neutral contexts, aligned translations, and three-bit pattern incidence",
+      "uniformity": "Uniform finite enriched alphabet; no circuit selected", "circuit_size": "No lower bound; full patterns on rho-5 aligned triples",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Every rho at least six and aligned chunk indices five through rho minus one",
+      "case_regime": "Exact partial witness repair; not a general matching or circuit result",
+      "evidence": "proofs/LEMMA-070-identifier-enriched-aligned-completeness.md; verification/test_sat_encoding.py"
     }
   ]
 }

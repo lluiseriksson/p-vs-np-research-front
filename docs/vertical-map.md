@@ -110,6 +110,8 @@ Adjacent collision-aware active branch:
   <- GATE-004AB (active smallest constructive brick): two-block neutral-alphabet
      sparsity for every disjoint common signed clause of width at most three
      + LEMMA-068 (proved distant partition complete except at most six triples)
+     - GATE-004AB-ENC022-ALPHABET-ONLY (no-go by LEMMA-069)
+     + LEMMA-070 (identifier-10/12 contexts repair interior aligned triples)
 
 Stronger dependent-region branch:
   GATE-004I

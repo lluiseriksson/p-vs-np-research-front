@@ -20,6 +20,8 @@ from sat_encoding import (
     contradiction,
     decode_gamma,
     distant_outer_triples,
+    enc022_common_aligned_signed_triples,
+    identifier_enriched_complete_aligned_triples,
     two_block_long_run_complete_distant_triples,
     double_not_wrap,
     encode_and,
@@ -745,6 +747,66 @@ class FormulaEncodingTests(unittest.TestCase):
             self.assertGreaterEqual(len(triples), third - 6)
             used = [position for triple in triples for position in triple]
             self.assertEqual(len(used), len(set(used)))
+
+    def test_enc022_two_block_alphabet_retains_aligned_signed_triples(self) -> None:
+        for zero_run in (12, 16, 20):
+            slot_length = 4 * zero_run
+            options = set(one_two_block_neutral_paddings("", slot_length))
+            options.add("1" * slot_length)
+            options.add(power_two_long_zero_neutral_block(zero_run))
+            triples = enc022_common_aligned_signed_triples(zero_run)
+            self.assertEqual(len(triples), zero_run)
+            used = [coordinate for triple, _ in triples for coordinate in triple]
+            self.assertEqual(len(used), len(set(used)))
+            for triple, missing in triples:
+                self.assertIn(missing, {"101", "110"})
+                self.assertTrue(
+                    all(
+                        "".join(option[position] for position in triple)
+                        != missing
+                        for option in options
+                    )
+                )
+
+    def test_identifier_enrichment_completes_interior_aligned_triples(self) -> None:
+        base_blocks = tuple(
+            block
+            for identifier in (1, 2, 4, 8, 16)
+            for block in (
+                "01" + tautology(identifier),
+                "10" + contradiction(identifier),
+            )
+        )
+        base_patterns = {"111"}
+        for block in base_blocks:
+            base_patterns.update(
+                block[start : start + 3]
+                for start in range(0, len(block), 4)
+            )
+        self.assertEqual(
+            base_patterns, {"000", "001", "010", "011", "100", "111"}
+        )
+        for zero_run in (13, 24, 40):
+            slot_length = 4 * zero_run
+            triples = identifier_enriched_complete_aligned_triples(zero_run)
+            self.assertEqual(len(triples), zero_run - 5)
+            for triple in triples:
+                chunk_start = triple[0]
+                patterns = set(base_patterns)
+                for identifier in (10, 12):
+                    block = "01" + tautology(identifier)
+                    start = chunk_start - (len(block) - 4)
+                    option = (
+                        "1" * start
+                        + block
+                        + "1" * (slot_length - start - len(block))
+                    )
+                    patterns.add(
+                        "".join(option[position] for position in triple)
+                    )
+                self.assertEqual(
+                    patterns, {format(pattern, "03b") for pattern in range(8)}
+                )
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

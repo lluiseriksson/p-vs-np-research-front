@@ -1259,3 +1259,13 @@ option; signed width-three matching; later unrestricted non-uniform circuits;
 no randomness, advice, oracle, promise, distribution, or algebraic
 computation. This is a witness-geometry no-go. Two-block options, GATE-004AB,
 GATE-004X, and P versus NP remain open.
+
+## NG-060 — the ten ENC-022 blocks suffice for two-block width-three sparsity
+
+**Label: NO-GO**
+
+LEMMA-069 shows that their aligned three-bit alphabet omits `101` and `110`.
+Two nonoverlapping blocks cannot jointly alter one aligned chunk, and the one
+long option adds at most one missing pattern. Hence `rho` disjoint common
+signed triples remain per slot. Identifier-10/12 enrichment repairs this
+specific defect, but GATE-004AB and P versus NP remain open.

@@ -559,6 +559,13 @@ eight patterns and support no common signed clause. GATE-004AB remains open
 because arbitrary local and intermediate-span triple matchings are not yet
 bounded.
 
+The sixty-sixth cycle isolates and repairs the aligned local defect. The ten
+ENC-022 blocks omit `101` and `110` on every aligned chunk, so LEMMA-069 gives
+`rho` common triples and closes that alphabet as `NO-GO`. LEMMA-070 adds exact
+identifier-10/12 contexts whose terminal chunks are `1010` and `1100`; their
+translations complete all eight patterns on every aligned chunk except the
+first five. Nonaligned local and intermediate-span triples remain active.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

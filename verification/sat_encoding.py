@@ -590,6 +590,70 @@ def two_block_long_run_complete_distant_triples(
     return tuple(complete)
 
 
+def enc022_common_aligned_signed_triples(
+    zero_run: int,
+) -> tuple[tuple[tuple[int, int, int], str], ...]:
+    """Return one common signed triple per aligned chunk for ENC-022 blocks.
+
+    The ten-block alphabet omits ``101`` and ``110`` on the first three bits
+    of every aligned chunk.  Nonoverlapping aligned blocks cannot jointly
+    alter one chunk, and the single long option adds at most one of the two
+    patterns.
+    """
+    if zero_run < 8:
+        raise ValueError("zero_run must be at least eight")
+    long_option = power_two_long_zero_neutral_block(zero_run)
+    blocks = tuple(
+        block
+        for identifier in (1, 2, 4, 8, 16)
+        for block in (
+            "01" + tautology(identifier),
+            "10" + contradiction(identifier),
+        )
+    )
+    fixed_patterns = {"111"}
+    for block in blocks:
+        fixed_patterns.update(
+            block[start : start + 3] for start in range(0, len(block), 4)
+        )
+    if not {"101", "110"}.isdisjoint(fixed_patterns):
+        raise AssertionError("ENC-022 alphabet contains a forbidden pattern")
+
+    triples = []
+    for chunk in range(zero_run):
+        coordinates = (4 * chunk, 4 * chunk + 1, 4 * chunk + 2)
+        observed = fixed_patterns | {long_option[4 * chunk : 4 * chunk + 3]}
+        for missing in ("101", "110"):
+            if missing not in observed:
+                triples.append((coordinates, missing))
+                break
+        else:
+            raise AssertionError("long option fills both missing patterns")
+    return tuple(triples)
+
+
+def identifier_enriched_complete_aligned_triples(
+    zero_run: int,
+) -> tuple[tuple[int, int, int], ...]:
+    """Return aligned triples completed by identifier-10/12 contexts.
+
+    Their final aligned chunks are respectively ``1010`` and ``1100``.
+    Translating either length-24 block puts that final chunk at every slot
+    chunk from index five onward; the ENC-022 alphabet supplies the other six
+    three-bit patterns.
+    """
+    if zero_run < 6:
+        raise ValueError("zero_run must be at least six")
+    block_101 = "01" + tautology(10)
+    block_110 = "01" + tautology(12)
+    if block_101[-4:-1] != "101" or block_110[-4:-1] != "110":
+        raise AssertionError("identifier contexts lost their terminal patterns")
+    return tuple(
+        (4 * chunk, 4 * chunk + 1, 4 * chunk + 2)
+        for chunk in range(5, zero_run)
+    )
+
+
 def bounded_block_distant_groups(
     extra_length: int,
     block_count: int,

@@ -300,7 +300,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "902d6bcd8af76b5f61152f5c315cd44ceb0ab8acbd912690e558a0def76bbd34"
+      "sha256": "12f99631bf1733354f4b2598718b5a063d8b9503e2c58e0b88ecdfa5a1c395a2"
     },
     {
       "path": "docs/problem-statement.md",
@@ -404,11 +404,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "33a922e98f3457ede3c03c31edf71d30d4e9db6d996c7513af3fc309b77525bd"
+      "sha256": "b68e611eef853a76897a342a4b0d9d41d928ca905340a0c8129837f33b932edb"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "fb3c83d36ebe2d501af3a38ce6d69b69124403d5696fb6ef082b7e165bafc0a3"
+      "sha256": "d8353d00ce6539dfcebc24a2ecb2bbe0517717b6bc541b2fe305960c36e57455"
     },
     {
       "path": "experiments/README.md",
@@ -441,6 +441,10 @@
     {
       "path": "proofs/GATE-004AA-finite-neutral-alphabet-three-sparsity.md",
       "sha256": "efab14905d9ea33807651d940a2da4bbe9677ecd9d5ee424fe850449a8475c66"
+    },
+    {
+      "path": "proofs/GATE-004AB-enc022-alphabet-only.md",
+      "sha256": "1e53929bf21343973f30b5601b733cc3a7330acee148fb5f34bc5f42d8c74a24"
     },
     {
       "path": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md",
@@ -883,8 +887,16 @@
       "sha256": "52dcb9127fccad90386de0be4bbc0ba273d1afb8845cee07f8f4d7945437281e"
     },
     {
+      "path": "proofs/LEMMA-069-enc022-aligned-triple-defect.md",
+      "sha256": "177883849d99dd3200097fca1fcb5edec2f896427be73c671f63e6014e7277dd"
+    },
+    {
+      "path": "proofs/LEMMA-070-identifier-enriched-aligned-completeness.md",
+      "sha256": "b27ed9c6afcd5440d6d1b69f5d6c00f9100f0dab8c3ad9d825ed65ae47d1081f"
+    },
+    {
       "path": "README.md",
-      "sha256": "f853cd85653fae780068db133ce769d4571346861a933dfb2f40e9b898927727"
+      "sha256": "c0b0502a8474cc42cccd91f208355d60c38ab8bef2445e72607ba2c92fd01465"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -896,7 +908,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "6d8941687fc3cda0808331782aa1a8a9dbeca8628a2b7eb2489d5a6721754513"
+      "sha256": "65558fa0b572aef03e51aa7cf2db9a47501341560e128a7ec19294783d696ad5"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -904,7 +916,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "1c4da9585ffd00c07a73f130b28f1b996241f4b5c538628e1ffd7bd248fc9203"
+      "sha256": "61404f0cfc4184865a793b176ab7595687a0d29af460e5f8cd1c53156eb927c2"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -920,7 +932,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "779848ccfd789192198cdcb243132354368d973644a570bc487165350807e6b4"
+      "sha256": "743c5dc0c08eb81ddabe92881983fb1b8477ca20990c172e42005cea5f17aca9"
     },
     {
       "path": "verification/test_trace_accounting.py",
