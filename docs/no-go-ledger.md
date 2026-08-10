@@ -1309,3 +1309,24 @@ unrestricted later non-uniform circuits; no randomness, advice, oracle,
 promise, distribution, or algebraic computation. Identifiers of length at
 least 52 repair individual failed types, so larger-alphabet GATE-004AD and P
 versus NP remain open.
+
+## NG-064 — the first length-68 repair set is quartet-universal
+
+**Label: NO-GO**
+
+Scope: use the first 86-identifier length-68 alphabet, selected to repair all
+Cycle-070 counterquartets, and infer four-coordinate universality from those
+repairs plus a 1,000-type random sample.
+
+Failure: the complete `4*71^3` audit returns six residue-1 types, all omitting
+zero mask 8: `(69,72,77,78)`, `(69,73,77,78)`, `(69,74,77,78)`,
+`(69,75,77,78)`, `(69,76,81,82)`, and `(69,77,81,82)`. The sampling inference
+is therefore false. This is not a structural length-68 obstruction: identifiers
+`1044,1060,1092,1156,16452,16516` repair the six types, and the completed
+alphabet passes the exhaustive audit in LEMMA-075.
+
+Model: exact three-block neutral contexts; fixed 86-identifier alphabet;
+four-coordinate finite incidence; unrestricted later non-uniform circuits;
+no randomness in the exhaustive result, advice, oracle, promise,
+distribution, or algebraic computation. GATE-004AD is separately proved by
+the repaired alphabet; P versus NP remains open.

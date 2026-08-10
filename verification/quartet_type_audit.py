@@ -16,6 +16,29 @@ BASE_IDENTIFIERS = tuple(range(1, 69))
 ENRICHED_IDENTIFIERS = BASE_IDENTIFIERS + (69, 80, 98, 130, 260, 324, 529)
 ENRICHED_BOUND = 48
 ENRICHED_REPRESENTATIVE_LENGTH = 256
+LENGTH68_INITIAL_IDENTIFIERS = ENRICHED_IDENTIFIERS + (
+    102,
+    1013,
+    1028,
+    1042,
+    1058,
+    1284,
+    4130,
+    4162,
+    4164,
+    4228,
+    16450,
+)
+LENGTH68_REPAIR_IDENTIFIERS = LENGTH68_INITIAL_IDENTIFIERS + (
+    1044,
+    1060,
+    1092,
+    1156,
+    16452,
+    16516,
+)
+LENGTH68_BOUND = 68
+LENGTH68_REPRESENTATIVE_LENGTH = 360
 
 
 @lru_cache(maxsize=None)
@@ -197,9 +220,19 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("residue", type=int)
     parser.add_argument("--enriched", action="store_true")
+    parser.add_argument("--length68", action="store_true")
     parser.add_argument("--summary", action="store_true")
     arguments = parser.parse_args()
-    if arguments.enriched:
+    if arguments.enriched and arguments.length68:
+        parser.error("choose at most one alphabet mode")
+    if arguments.length68:
+        result = audit_residue(
+            arguments.residue,
+            LENGTH68_REPAIR_IDENTIFIERS,
+            LENGTH68_BOUND,
+            LENGTH68_REPRESENTATIVE_LENGTH,
+        )
+    elif arguments.enriched:
         result = audit_residue(
             arguments.residue,
             ENRICHED_IDENTIFIERS,

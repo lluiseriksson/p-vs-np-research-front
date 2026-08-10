@@ -115,10 +115,12 @@ Adjacent collision-aware active branch:
      + LEMMA-071 (proved seven-pattern universality and `78s` matching bound)
   <- GATE-004AC (active smallest positive brick): width-three-sparse rigidity
      - GATE-004AC-WIDTH3-ONLY (no-go by LEMMA-072)
-  <- GATE-004AD (active constructive audit): three-block sparsity through width four
+  <- GATE-004AD (proved constructive brick): three-block sparsity through width four
      - GATE-004AD-IDENTIFIER68-ONLY (no-go by LEMMA-073)
      - GATE-004AD-LENGTH48-ONLY (no-go by LEMMA-074)
-     ! next falsifier: complete length-at-most-68 alphabet or a smaller explicit repair set
+     - GATE-004AD-INITIAL-LENGTH68-REPAIR-ONLY (no-go by six finite failures)
+     + LEMMA-075 (proved fourteen-pattern universality and `142s` matching bound)
+  <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -695,11 +697,11 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AD
+### Current operational brick: GATE-004AE
 
 The exact falsifiable statement and model card are in
-`proofs/GATE-004AD-three-block-width-four-sparsity.md`. This is a constructive
-witness-family gate beneath GATE-004AC; it is not itself a circuit lower bound.
+`proofs/GATE-004AE-width-four-sparse-rigidity.md`. LEMMA-075 supplies the
+width-four-sparse witness family, but no positive circuit loss is known.
 
 ## Downstream amplification obligation: GATE-005
 

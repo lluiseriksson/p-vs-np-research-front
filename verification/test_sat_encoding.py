@@ -5,6 +5,11 @@ import unittest
 
 import sat_encoding
 from quartet_type_audit import reached_masks, reached_masks_direct
+from quartet_type_audit import (
+    LENGTH68_REPAIR_IDENTIFIERS,
+    LENGTH68_REPRESENTATIVE_LENGTH,
+)
+from quartet_type_audit_fast import QuartetAuditor
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
@@ -822,6 +827,42 @@ class FormulaEncodingTests(unittest.TestCase):
             (48, 53, 57, 58), tuple(range(1, 1024)), 256
         )
         self.assertFalse((reached >> 8) & 1)
+
+    def test_length_68_repair_closes_previous_counterquartets(self) -> None:
+        self.assertEqual(len(set(LENGTH68_REPAIR_IDENTIFIERS)), 92)
+        self.assertEqual(
+            max(
+                len(block)
+                for identifier in LENGTH68_REPAIR_IDENTIFIERS
+                for block in (
+                    "01" + tautology(identifier),
+                    "10" + contradiction(identifier),
+                )
+            ),
+            68,
+        )
+        auditor = QuartetAuditor(
+            LENGTH68_REPAIR_IDENTIFIERS, LENGTH68_REPRESENTATIVE_LENGTH
+        )
+        previous_failures = (
+            (69, 72, 77, 78),
+            (69, 73, 77, 78),
+            (69, 74, 77, 78),
+            (69, 75, 77, 78),
+            (69, 76, 81, 82),
+            (69, 77, 81, 82),
+        )
+        for quartet in previous_failures:
+            self.assertEqual(auditor.reached_masks(quartet) & 0x7FFE, 0x7FFE)
+
+    def test_bitset_quartet_dp_matches_original_on_stable_types(self) -> None:
+        auditor = QuartetAuditor(tuple(range(1, 69)), 164)
+        for quartet in ((36, 57, 61, 62), (37, 39, 40, 41), (39, 44, 47, 48)):
+            self.assertEqual(
+                auditor.reached_masks(quartet) & 0x7FFE,
+                reached_masks_direct(quartet, tuple(range(1, 69)), 164)
+                & 0x7FFE,
+            )
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

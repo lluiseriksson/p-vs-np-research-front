@@ -1,11 +1,12 @@
 # GATE-004AD — three-block sparsity through signed width four
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
-Allow up to three nonoverlapping translated universally neutral blocks per
-slot option, retain the all-one and `A_rho` options, and seek fixed constants
-`L,c_4` such that every disjoint common signed clause family of width at most
-four has at most `c_4` members per slot.
+There is a fixed alphabet of universally neutral blocks of maximum length 68
+such that, after allowing up to three nonoverlapping translated blocks per
+slot option and retaining the all-one and `A_rho` options, every disjoint
+non-tautological common signed clause family of width at most four has at most
+142 members per slot.
 
 Three blocks can realize patterns with three prescribed zeros on distant
 quadruples, while `A_rho` supplies `0000` away from six positions. The first
@@ -21,18 +22,25 @@ all identifiers 1 through 1,023: pattern `1110` remains absent on offsets
 identifiers repair the returned representatives, so the full gate remains
 falsifiable rather than rejected.
 
+LEMMA-075 completes the repair with a fixed 92-identifier alphabet of maximum
+block length 68. Its exhaustive `4*71^3` certificate realizes all fourteen
+ordinary nonzero masks, while the all-one and `A_rho` options supply masks 0
+and 15. Every common signed clause through width four hits a 142-coordinate
+set per slot. This proves the gate as a witness construction only. The new
+positive rigidity question is GATE-004AE.
+
 ## Model card
 
 | Field | Value |
 |---|---|
 | Computational model | Exact three-block neutral contexts, one long option, signed clauses through width four, and matching |
 | Uniform/non-uniform | Uniform finite alphabet/placements; later circuits fully non-uniform |
-| Circuit size | No lower bound; target constant-per-slot matching through width four |
+| Circuit size | No lower bound; proved matching bound `142s` across `s` slots |
 | Circuit depth | Fixed blocks bounded; long option may have linear depth; later circuits unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
 | Field/algebraic model | Finite Boolean incidence and translation |
-| Asymptotic quantifiers | Exists fixed `L,c_4`; every sufficiently large `rho`; every disjoint width-at-most-four common family |
-| Regime | Exact witness-construction gate; not a circuit lower bound or terminal result |
+| Asymptotic quantifiers | Fixed `L=68,c_4=142`; every sufficiently large `rho`; every disjoint width-at-most-four common family |
+| Regime | Exact witness-construction theorem; not a circuit lower bound or terminal result |

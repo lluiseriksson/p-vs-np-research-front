@@ -596,13 +596,24 @@ specialization is `NO-GO`. Explicit length-52-or-longer identifiers repair
 the representatives; GATE-004AD therefore advances to a larger-bound audit
 without any circuit or terminal claim.
 
+The seventy-first cycle completes the width-four witness construction. A first
+86-identifier length-68 repair set passes sampling but fails on six of
+1,431,644 reduced types, recorded as a subset-specific `NO-GO`. Six explicit
+same-bound identifiers repair those types. LEMMA-075 exhaustively verifies
+that the resulting 92-identifier alphabet realizes all fourteen ordinary
+nonzero masks with at most three blocks. With the all-one and six-one long
+options, every common signed clause through width four hits at most 142
+coordinates per slot. GATE-004AD is deliberately `PROVED` as a witness theorem
+only. GATE-004AE is the new positive rigidity brick; no circuit lower bound or
+terminal progress is inferred.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, bitset-equivalent exhaustive quartet verification, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Two-block contexts now suppress every established disjoint signed tail through width three, but GATE-004AC rigidity, width-four/overlapping/nonclausal predicates, and every terminal lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | Three-block contexts now suppress every established disjoint signed tail through width four, but GATE-004AE rigidity, width-five/overlapping/nonclausal predicates, and every terminal lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

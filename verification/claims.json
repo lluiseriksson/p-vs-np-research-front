@@ -3491,14 +3491,14 @@
       "evidence": "proofs/GATE-004AC-width-three-only.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md; docs/no-go-ledger.md NG-061"
     },
     {
-      "id": "GATE004AD", "label": "EXPLORATORY",
-      "statement": "Three-block neutral slot families bound every disjoint common signed clause family through width four by a constant per slot.",
+      "id": "GATE004AD", "label": "PROVED",
+      "statement": "Three-block neutral slot families bound every disjoint family of non-tautological common signed clauses through width four by a constant per slot.",
       "computational_model": "Exact three-block neutral contexts, one long option, signed clauses through width four, and matching",
-      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; target constant-per-slot matching through width four",
+      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; proved matching bound 142s across s slots",
       "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation",
-      "asymptotic_quantifiers": "Exists fixed L,c_4; every sufficiently large rho; every disjoint width-at-most-four common family",
-      "case_regime": "Exact witness-construction gate; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md"
+      "asymptotic_quantifiers": "Fixed L=68 and c_4=142; every sufficiently large rho; every disjoint width-at-most-four common family",
+      "case_regime": "Exact witness-construction theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
     },
     {
       "id": "LEMMA073", "label": "PROVED",
@@ -3539,6 +3539,36 @@
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AD and P versus NP remain open",
       "evidence": "proofs/GATE-004AD-length48-only.md; proofs/LEMMA-074-length48-three-block-quartet-obstruction.md; docs/no-go-ledger.md NG-063"
+    },
+    {
+      "id": "GATE004AD-INITIAL-LENGTH68-REPAIR-ONLY", "label": "NO-GO",
+      "statement": "The first 86-identifier length-68 repair set retains six reduced quartet types omitting zero mask 8.",
+      "computational_model": "Exact three-block neutral contexts and four-coordinate pattern incidence", "uniformity": "Uniform fixed 86-identifier alphabet; no circuit selected",
+      "circuit_size": "No lower bound; six finite missing-pattern types", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Exhaustive over all 4*71^3 reduced quartet types", "case_regime": "Subset-specific construction no-go; superseded by LEMMA-075, with P versus NP open",
+      "evidence": "proofs/GATE-004AD-initial-length68-repair-only.md; verification/quartet_type_audit_fast.py; docs/no-go-ledger.md NG-064"
+    },
+    {
+      "id": "LEMMA075", "label": "PROVED",
+      "statement": "A fixed 92-identifier three-block alphabet realizes every nonzero ordinary mask through width four and yields a 142-coordinate hitting set per slot for non-tautological common clauses with the all-one and long options.",
+      "computational_model": "Exact three-block SAT-gamma neutral contexts, finite pattern certificate, signed clauses through width four, hitting sets, and slot products",
+      "uniformity": "Uniform fixed 92-identifier alphabet, placements, reduction, and parameters; later circuits fully non-uniform",
+      "circuit_size": "No lower bound; disjoint common signed width-at-most-four packing at most 142s", "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot, every interior type, every disjoint common width-at-most-four family, and every s at least one",
+      "case_regime": "Exact worst-case witness-family theorem; not a circuit lower bound, average-case claim, promise claim, or terminal result",
+      "evidence": "proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; verification/quartet_type_audit_fast.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE004AE", "label": "EXPLORATORY",
+      "statement": "Width-four-sparse three-block slot products force polynomial positive diagonal quotient loss for every minimum circuit agreeing with SAT-gamma on the canonical witnesses.",
+      "computational_model": "Minimum unrestricted Boolean circuits agreeing with SAT-gamma on expanded rows and width-four-sparse slot products; exact diagonal quotients",
+      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary", "circuit_size": "Polynomial average-loss target; known disjoint signed width-at-most-four packing below K",
+      "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with affine prefix geometry over F_2",
+      "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
+      "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AE-width-four-sparse-rigidity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
     }
   ]
 }
