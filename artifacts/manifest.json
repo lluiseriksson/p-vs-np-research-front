@@ -200,7 +200,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "0a38a92887d9ffa0d3dfd91d4d59b86da2c8af9896fc0bbbbe2aa667d60c1b3a"
+      "sha256": "ff8cf346a057fffd3e517d534a93c763f1cbafabaedabf3e07e199f0588e1d0d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -208,7 +208,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "f15205bc1730521c3dfad9dfe0822fbe66b27654d5c6947f870079ad1d19b21a"
+      "sha256": "be3a18f8bd103464887c04290f987df1f0379d0f076547afd1c10a879caad3e4"
     },
     {
       "path": "docs/result-labels.md",
@@ -216,7 +216,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "b706863bd6e192f664bab5de913c68ec84733e12e6933cacebbf7f197a856ffc"
+      "sha256": "d7e2ab09312f9e8ed94810db42e5140864cd7126d6c43e59e099930aaf791ef0"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -296,11 +296,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a652a3764fd2c42f5371f86fa1531e7b452505b10819f682b2336bf07fba1fe8"
+      "sha256": "1793e0f1aacea4b929abe34bd7b0c838848e1bec887cd27919d81d98dafe15dd"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "54b769960428740e06ecadcd839aacb466ae1c9d39864ca329d29f96166512e9"
+      "sha256": "400c4b5c13b4e244fdeb2fd52b94da22f5fcff3682c6bab45a480a5428c7f1ae"
     },
     {
       "path": "experiments/README.md",
@@ -400,7 +400,11 @@
     },
     {
       "path": "proofs/GATE-004S-exact-sat-expanded-context-cube.md",
-      "sha256": "903f214eab1c1f91e716e5fdc0cd89e9b56129974e8a60abd052847b62492db8"
+      "sha256": "558e230a82ea57ec5cfeb187c3d87ea865b2b63a69e508906fa978eb427c7703"
+    },
+    {
+      "path": "proofs/GATE-004T-multi-witness-column-rigidity.md",
+      "sha256": "a2f5dcaa18dcf1620edf3d90c991ad77f954477031307bd855a51036161e5990"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -571,8 +575,12 @@
       "sha256": "ec2ead35449bfc5693db052e329989b1a9738e55d069126c84ba9274c5d909ab"
     },
     {
+      "path": "proofs/LEMMA-042-output-incidence-tail-counterexample.md",
+      "sha256": "0efb95f57ae633928a43100d07cee919c01a8e5b4969897ee01ba97ea93c63b3"
+    },
+    {
       "path": "README.md",
-      "sha256": "333957e846dd6fce92562d7f9f72b1c5cbd92c94d2c3691e35c227c243f09b6b"
+      "sha256": "e7b2464ec81379c75d42d2f4ca967fc518f7f86cf97404707e319caec79c76f9"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -584,7 +592,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "ba4202b327c78c1b0950f93d18de4c95ecd01898c7ffadef6f73206740e443ba"
+      "sha256": "ae2b5350f8a3df5c0bafa999e4b884adb3608a35e8f044f218fa29582522826a"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -597,6 +605,10 @@
     {
       "path": "verification/test_affine_index_extension.py",
       "sha256": "cd4bc511a22b80600dab4bc6b198c3374803e0f7ee2d8b35c6f22c51b2cf6f67"
+    },
+    {
+      "path": "verification/test_expanded_context_incidence.py",
+      "sha256": "0515df28f13eac5df8e731f666abca9739993efa7bace933db77f1d455a540e5"
     },
     {
       "path": "verification/test_experiments.py",

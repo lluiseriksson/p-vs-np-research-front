@@ -766,6 +766,134 @@ descriptions automatically.
 | Asymptotic quantifiers | Every `L>=3`, every `a,b,c in {0,1}^{L-2}`, both polarities, and every suffix formula |
 | Regime | Worst-case exact total-language behavior; every expanded-cube row is a valid formula prefix |
 
+## ENC-017 — exact expanded-row equality classes and multiplicities
+
+**Label: PROVED**
+
+Write the ENC-016 conditions as
+
+`g^+_{a,b,c}=x_c OR (x_a AND NOT u_b)`
+
+and
+
+`g^-_{a,b,c}=NOT x_c OR (x_a AND NOT x_b)`,
+
+where `(x_s)_{s in [R]}` and `(u_s)_{s in [R]}` are disjoint variable
+families and `R=2^(L-2)`. The positive conditions have exactly
+
+`R^3-R^2+R`
+
+logical-equivalence classes:
+
+- `a=c` gives the `R` single literals `x_a`, each with multiplicity `R` as
+  `b` varies;
+- every ordered triple with `a!=c` gives a distinct function, each with
+  multiplicity one.
+
+The negative conditions have exactly
+
+`R + binom(R,2) + R(R-1)(R-2)`
+
+classes:
+
+- `a=b` or `b=c` gives a single literal `NOT x_t`; each of the `R` literal
+  classes has multiplicity `2R-1`;
+- `a=c!=b` gives `NOT x_a OR NOT x_b`; one class exists for every unordered
+  pair `{a,b}`, and each has multiplicity two;
+- every all-distinct ordered triple gives a distinct three-variable function
+  of multiplicity one.
+
+No positive condition is equivalent to a negative condition. Thus all
+`2R^3` expanded rows induce exactly
+
+`(4R^3-7R^2+7R)/2`
+
+logical classes.
+
+For every sufficiently large fixed suffix length, these are also the exact
+equality classes of the corresponding `SAT-gamma` residual functions. If two
+conditions are inequivalent, choose an assignment on their at most six
+involved identifiers where their values differ and encode the conjunction
+fixing that assignment. The resulting suffix distinguishes the two SAT
+residuals. Identifier 1 is fresh, so ENC-010 padding extends the witness to
+every sufficiently large suffix length. Logical equivalence gives the reverse
+implication immediately.
+
+For completeness, the uniqueness claims follow from essential-variable
+roles. In a nonsingle positive condition, `u_b` is the unique auxiliary
+variable; setting it to one identifies the positive disjunct `x_c`, and then
+`x_a` is determined. In an all-distinct negative condition, `c` is the unique
+variable whose value zero forces the function to one; setting `x_c=1` leaves
+the ordered term `x_a AND NOT x_b`. The remaining classes have different
+essential-variable counts, except that the two orientations of a NAND pair
+are deliberately equivalent.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact Boolean condition functions and their exact SAT-gamma residuals under complete expanded-cube prefix restrictions |
+| Uniform/non-uniform | Uniform classification and explicit distinguishing suffix witnesses |
+| Circuit size | No lower bound; exact distinct-output count `(4R^3-7R^2+7R)/2` among `2R^3` rows |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None; finite condition identities are Boolean |
+| Asymptotic quantifiers | Every `R=2^(L-2)` with `L>=3`; exact SAT-residual classification at every sufficiently large compatible suffix length |
+| Regime | Worst-case exact total-language residual functions; malformed suffixes reject |
+
+## ENC-018 — SAT residual columns are unions of assignment columns
+
+**Label: PROVED**
+
+Let `g_1,...,g_M` be any finite Boolean condition family on a variable set
+`V`, including the ENC-016 family. For an assignment `alpha in {0,1}^V`, let
+
+`v_alpha=(g_i(alpha))_{i=1}^M`.
+
+For every nonempty assignment set `A`, a DNF suffix formula whose satisfying
+assignments projected to `V` are exactly `A` realizes the SAT-residual column
+
+`OR_{alpha in A} v_alpha`.
+
+Conversely, every suffix formula `phi` has a projected satisfying-assignment
+set `A_phi`, and
+
+`(SAT(phi AND g_i))_i = OR_{alpha in A_phi} v_alpha`,
+
+with the empty OR giving the zero column. Thus, without a fixed-length bound,
+the exact residual-column set is the union closure of the assignment columns.
+Every individual finite witness can be padded to all sufficiently large
+lengths by ENC-010.
+
+There is a uniform fixed-length consequence with compact witnesses. On the
+`R` diagonal literal pairs, independently prescribe for each `x_s` whether a
+satisfying assignment may use only zero, only one, or both values. The
+conjunction fixing the singleton choices and leaving the other variables free
+has length `O(RL)` and realizes the corresponding pair of outputs. Therefore,
+whenever the suffix budget dominates `O(RL)`, the diagonal family realizes
+exactly `3^R` nonzero ternary patterns, plus the all-zero unsatisfiable or
+malformed pattern. ENC-009's `2^R` complete-assignment columns are the special
+case with no variable left free.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma residual outputs under a finite family of complete formula-prefix restrictions |
+| Uniform/non-uniform | Uniform DNF and partial-assignment witness construction |
+| Circuit size | No lower bound; `3^R` compact nonzero diagonal output patterns from suffixes of length `O(RL)` |
+| Circuit depth | Witness formulas unrestricted; later computing circuits unrestricted |
+| Fan-in | Encoded witness formulas use binary AND/OR and unary NOT |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None; output columns form a Boolean OR-closure |
+| Asymptotic quantifiers | Every finite condition family for unbounded witness length; every `R=2^(L-2)` and sufficiently large compatible suffix budget for the compact `3^R` diagonal family |
+| Regime | Worst-case exact total-language satisfiability; arbitrary formulas represent sets of witnesses, not a promise distribution |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

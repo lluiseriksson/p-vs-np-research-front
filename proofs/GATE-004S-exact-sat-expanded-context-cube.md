@@ -32,12 +32,16 @@ first superlinear unrestricted SAT circuit lower bound.
 
 ## First attack
 
-For fixed `(A,B,C)`, expand each ENC-016 residual into its at most two
-conditioned-SAT disjuncts. Audit the resulting global incidence system across
-all `R^3` triples: which exact conditioned residual functions repeat, which
-unions overlap, and whether any minimum parent circuit can retain a fresh-tail
-family while satisfying every suffix-wide identity. Pointwise truth-table
-agreement receives no credit after LEMMA-041.
+ENC-017 completes the static incidence audit: it classifies every equality and
+multiplicity among the `2R^3` output residuals. LEMMA-042 shows that this exact
+table alone still admits the fresh-tail counterexample.
+
+ENC-018 identifies the next genuinely SAT-specific layer. A suffix formula
+represents a set of satisfying assignments, so residual columns are Boolean
+unions of assignment columns; compact partial assignments already yield
+`3^R` diagonal patterns. GATE-004T tests that multi-witness layer. If it also
+fails generically, GATE-004S must use explicit suffix-formula composition or
+another property not closed under a common fresh factor.
 
 ## Model card
 
@@ -54,4 +58,3 @@ agreement receives no credit after LEMMA-041.
 | Field/algebraic model | Affine prefix geometry over `F_2`; computation and SAT residuals remain Boolean |
 | Asymptotic quantifiers | Exists fixed `0<c<1` and `B,eta>0`; every sufficiently large `n`; every eligible total `G`; every minimum circuit; all expanded rows and suffixes in the agreement premise |
 | Regime | Worst-case exact total-function agreement with total SAT-gamma; no promise or distribution |
-

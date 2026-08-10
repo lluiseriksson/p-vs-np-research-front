@@ -813,3 +813,25 @@ randomness, advice, oracle, promise, distribution, or algebraic computation.
 The counterexample matches every pointwise formula condition but is not
 SAT-gamma. It does not reproduce existential satisfiability of those
 conditions conjoined with every possible encoded suffix formula.
+
+## NG-040 — exact expanded output incidence forces quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal parent-to-joint-quotient loss from ambient
+minimality, every GATE-004P diagonal property, and the exact ENC-017 equality
+classes and multiplicities among all `2R^3` expanded-row output functions.
+
+Failure: LEMMA-042 observes that the LEMMA-041 counterexample multiplies each
+ENC-017 condition by a common input `w`. Equality of `w AND g` and `w AND h`
+is equivalent to equality of `g` and `h`, so the entire cubic incidence table
+is preserved exactly. A further fresh conjunction tail also preserves it,
+while exact minimum parent size is `K_d+m`, each diagonal quotient has at
+least `2m` tail classes, and loss is at most `K_d-m`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; full expanded
+affine context cube and exact static output-incidence table; unrestricted base
+depth and a fresh AND tail; fan-in-two AND/OR and fan-in-one NOT; no
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+The construction lacks SAT's compact multi-witness columns, including suffixes
+for which both polarities of many conditioned variables are satisfiable.

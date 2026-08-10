@@ -345,13 +345,23 @@ brick and requires exact SAT-gamma residual agreement across the whole
 expanded cube and every suffix formula. GATE-004R remains open for
 non-context radius-two mutations.
 
+The forty-first cycle completes the expanded output-incidence audit. ENC-017
+classifies every equality and multiplicity among the `2R^3` rows, yielding
+exactly `(4R^3-7R^2+7R)/2` distinct sufficiently-long SAT residuals.
+LEMMA-042 shows that this entire static table survives the fresh-tail
+counterexample, so output incidence alone is `NO-GO`. ENC-018 isolates the
+next stronger SAT feature: suffix formulas represent sets of assignments, and
+the diagonal conditioned pairs realize `3^R` compact ternary patterns where
+either or both polarities may be satisfiable. GATE-004T now asks whether this
+multi-witness column structure forces diagonal quotient loss.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 79% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube and matching fresh-tail countermodel, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 80% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, and matching fresh-tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Even the full expanded pointwise context cube is generically insufficient; exact suffix-wide SAT agreement remains an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Exact expanded output incidence is generically insufficient; multi-witness columns are only an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

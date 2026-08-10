@@ -51,11 +51,15 @@ Adjacent collision-aware active branch:
   <- GATE-004Q (active parent): SAT off-cube rigidity
      + ENC-015 (proved six-case one-bit halo semantics)
      + ENC-016 (proved full expanded context formula cube)
+     + ENC-017 (proved exact expanded output incidence)
+     + ENC-018 (proved multi-witness union columns)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
   <- GATE-004R (open alternative): radius-two SAT neighborhood rigidity
-  <- GATE-004S (active smallest brick): exact SAT expanded-cube rigidity
+  <- GATE-004S (active parent): exact SAT expanded-cube rigidity
+     - GATE-004S-OUTPUT-INCIDENCE-ONLY (no-go by LEMMA-042)
+  <- GATE-004T (active smallest brick): multi-witness column rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -547,17 +551,22 @@ LEMMA-041 reproduces that entire pointwise cube schema while retaining the
 fresh-tail quotient expansion. Thus every-radius context-coordinate semantics
 remain insufficient when treated only pointwise.
 
-GATE-004S is now the smallest attackable brick. It requires exact agreement
-with SAT-gamma on the full expanded-cube cylinder for every encoded suffix.
-Its first audit expands the residuals into conditioned-SAT unions and studies
-their incidence across all context triples. GATE-004R remains an open
-alternative using non-context mutations in the full radius-two neighborhood.
-No unrestricted loss bound is presently proved.
+ENC-017 classifies the resulting output incidence exactly, including all
+duplicate multiplicities. LEMMA-042 shows that the full static table still
+survives a common fresh tail. ENC-018 exposes the next layer: suffix formulas
+represent sets of assignments, so SAT residual columns are OR-closures of
+assignment columns, with `3^R` compact ternary patterns already on the
+diagonal.
 
-### Smallest active brick: GATE-004S
+GATE-004T is now the smallest attackable brick. It asks whether exact expanded
+incidence plus all compact multi-witness columns forces polynomial diagonal
+loss. GATE-004S remains the exact-SAT parent and GATE-004R the non-context
+radius-two alternative. No unrestricted loss bound is presently proved.
+
+### Smallest active brick: GATE-004T
 
 The exact falsifiable statement, model card, and SAT bridge are in
-`proofs/GATE-004S-exact-sat-expanded-context-cube.md`.
+`proofs/GATE-004T-multi-witness-column-rigidity.md`.
 
 ## Downstream amplification obligation: GATE-005
 
