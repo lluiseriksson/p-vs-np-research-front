@@ -1209,6 +1209,41 @@ premise locally but, with one block, remains subject to LEMMA-049.
 | Asymptotic quantifiers | Every `rho>=3`, every four-divisible `P>=4rho`, every source string, and every window in the stated swept band |
 | Regime | Worst-case exact total-language syntax theorem; not a circuit lower bound |
 
+## ENC-027 — balanced coordinate-dense long-run slot products
+
+**Label: PROVED**
+
+Fix `rho>=7` and split an outer region into `s` slots of length `4rho`. In
+each slot independently choose either an ENC-020 coordinate-dense short
+context or the ENC-026 long block `A_rho`. Concatenate the chosen identity
+contexts before the source.
+
+LEMMA-052 proves exact validity/satisfiability preservation, full raw-
+coordinate density, maximum zero run `rho`, and a simultaneous quantitative
+escape from every established raw-literal, sparse-block, and bounded-run
+negative-tail theorem when `s=floor((R-1)/8)` and the base matches the `R`
+disjoint assignment directions.
+
+The escape is not a loss theorem. It isolates GATE-004V: classify common
+predicates of the full slot product and prove or falsify positive diagonal
+rigidity.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact neutral formula contexts, independent slot products, raw-coordinate density, zero-run/interval covers, and assignment-direction essential-input bounds |
+| Uniform/non-uniform | Uniform slot construction and parameter choice from `R`; later circuit adversary fully non-uniform |
+| Circuit size | Eligible base `K>=R-1`; every applicable sparse-tail count at most `6s` and run-tail count below `4s` for `s=floor((R-1)/8)` |
+| Circuit depth | Contexts may have linear NOT depth; later circuits unrestricted |
+| Fan-in | Encoded and circuit AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Disjoint assignment directions over `F_2` only for the essential-input floor |
+| Asymptotic quantifiers | Every `rho>=7,s>=1`; explicit application for all sufficiently large `R` with `s=floor((R-1)/8)` |
+| Regime | Worst-case exact total-language construction and method-boundary theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

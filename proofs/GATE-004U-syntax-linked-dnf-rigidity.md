@@ -111,6 +111,13 @@ and sufficiently many independently placed blocks so that both
 `floor(P/(b+1))<D` and `floor(P/(rho+1))<=K` hold, without losing coordinate
 density or exact syntax agreement.
 
+ENC-027 and LEMMA-052 meet those simultaneous geometric constraints with an
+independent slot product. For `s=floor((R-1)/8)`, every established raw,
+sparse-cover, and run-window exact negative tail has too few clauses to exceed
+the required base-size floor `K>=R-1`. This proves no loss. It isolates the
+stronger sufficient subgate GATE-004V, whose first audit classifies predicates
+common to the full product family rather than adding more padding ad hoc.
+
 ## Model card
 
 | Field | Value |

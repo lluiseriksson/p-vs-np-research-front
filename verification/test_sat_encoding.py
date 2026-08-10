@@ -9,6 +9,7 @@ from sat_encoding import (
     annihilating_prefix,
     bounded_block_distant_groups,
     bounded_zero_run_windows,
+    balanced_long_run_slot_options,
     context_wrap,
     conditioned_prefix,
     common_outer_double_not_pad,
@@ -796,6 +797,43 @@ class FormulaEncodingTests(unittest.TestCase):
                 malformed, extra_length, zero_run, 3, window_length
             )
             self.assertIsNone(parse_formula(rejected))
+
+    def test_balanced_slots_cross_known_geometric_thresholds(self) -> None:
+        formula = assignment_conjunction({6: False, 7: True})
+        for zero_run in (7, 9, 13):
+            slot_length = 4 * zero_run
+            options = balanced_long_run_slot_options(zero_run)
+            self.assertTrue(options)
+            for position in range(slot_length):
+                self.assertEqual(
+                    {option[position] for option in options}, {"0", "1"}
+                )
+            for option in options:
+                self.assertEqual(len(option), slot_length)
+                self.assertLessEqual(maximum_zero_run(option), zero_run)
+                self.assertTrue(self.brute_sat(option + formula))
+            for left in options:
+                for right in options:
+                    self.assertLessEqual(
+                        maximum_zero_run(left + right), zero_run
+                    )
+
+            for slot_count in range(1, 11):
+                outer_length = slot_length * slot_count
+                sparse_group = outer_length // (slot_count + 1)
+                window_count = outer_length // (zero_run + 1)
+                self.assertLess(sparse_group, slot_length)
+                self.assertLess(window_count, 4 * slot_count)
+                long_block = power_two_long_zero_neutral_block(zero_run)
+                self.assertEqual(long_block.count("1"), 6)
+                zero_count = outer_length - 6 * slot_count
+                for interval_count in range(1, outer_length + 1):
+                    minimum_length = (
+                        zero_count + interval_count - 1
+                    ) // interval_count
+                    group_count = outer_length // (interval_count + 1)
+                    if group_count >= minimum_length:
+                        self.assertLessEqual(group_count, 6 * slot_count)
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

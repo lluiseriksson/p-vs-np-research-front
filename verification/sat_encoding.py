@@ -625,6 +625,16 @@ def long_zero_window_neutral_padding(
     )
 
 
+def balanced_long_run_slot_options(zero_run: int) -> tuple[str, ...]:
+    """Return coordinate-dense short contexts plus one tunable long block."""
+    if zero_run < 7:
+        raise ValueError("zero_run must be at least seven")
+    slot_length = 4 * zero_run
+    options = set(coordinate_dense_neutral_paddings("", slot_length))
+    options.add(power_two_long_zero_neutral_block(zero_run))
+    return tuple(sorted(options))
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

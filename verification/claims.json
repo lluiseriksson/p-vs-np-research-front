@@ -2737,6 +2737,57 @@
       "asymptotic_quantifiers": "Every rho at least three, every four-divisible P at least 8rho, all compact DNF cores and placements, and every regime with floor(P/2)>K",
       "case_regime": "Worst-case exact counterexample to single-long-block forcing; full GATE-004U remains open",
       "evidence": "proofs/GATE-004U-single-long-block-contexts.md; docs/sat-encoding.md ENC-026; proofs/LEMMA-051-tunable-long-zero-neutral-block.md; docs/no-go-ledger.md NG-048"
+    },
+    {
+      "id": "ENC-027",
+      "label": "PROVED",
+      "statement": "Independent length-4rho slots containing coordinate-dense short contexts and one tunable long block preserve exact SAT semantics, vary every raw coordinate, and cross every established raw/sparse/run negative-tail threshold at the stated parameters.",
+      "computational_model": "Exact neutral formula contexts, independent slot products, raw-coordinate density, interval/run covers, and assignment-direction essential-input bounds",
+      "uniformity": "Uniform slot construction and parameter choice from R; later circuit adversary fully non-uniform",
+      "circuit_size": "Eligible base K at least R-1; every applicable sparse tail has at most 6s clauses and the run tail fewer than 4s for s=floor((R-1)/8)",
+      "circuit_depth": "Contexts may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Disjoint assignment directions over F_2 only for the essential-input floor",
+      "asymptotic_quantifiers": "Every rho at least seven and s at least one; explicit application for every sufficiently large R with s=floor((R-1)/8)",
+      "case_regime": "Worst-case exact total-language construction and method-boundary theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; proofs/LEMMA-052-balanced-long-run-slot-product.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-052",
+      "label": "PROVED",
+      "statement": "The balanced long-run slot product is coordinate-dense, has maximum zero run rho, forces every applicable interval-cover tail to at most 6s clauses and the run-window tail below 4s, while every eligible assignment-direction base has exact size at least R-1.",
+      "computational_model": "Exact slot-product syntax families, interval/run geometry, disjoint assignment directions, essential raw inputs, and unrestricted fan-in-two Boolean circuits",
+      "uniformity": "Uniform witness construction; fully non-uniform eligible base circuits",
+      "circuit_size": "Base lower floor K>=R-1; known exact negative-tail clause counts below K for s=floor((R-1)/8)",
+      "circuit_depth": "Unrestricted in the base lower floor and later application",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Disjoint affine assignment directions over F_2; circuit computation is Boolean",
+      "asymptotic_quantifiers": "Every rho at least seven and s at least one; all sufficiently large R in the explicit parameter application",
+      "case_regime": "Worst-case exact method-boundary theorem; escaping known counterexamples is not positive loss",
+      "evidence": "proofs/LEMMA-052-balanced-long-run-slot-product.md; verification/test_sat_encoding.py; docs/sat-encoding.md ENC-012"
+    },
+    {
+      "id": "GATE-004V",
+      "label": "EXPLORATORY",
+      "statement": "Exact SAT-gamma agreement on the expanded prefix cube at all balanced long-run slot-product compact-DNF witnesses forces polynomial positive average diagonal joint-quotient loss.",
+      "computational_model": "Minimum unrestricted circuits for total functions agreeing with SAT-gamma on expanded rows and balanced slot-product DNF suffixes; exact diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary; uniform rows, core family, padding, slots, and parameters",
+      "circuit_size": "Average diagonal loss at least B R^eta+1",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine prefix and assignment geometry over F_2; suffix syntax and circuits Boolean",
+      "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all expanded rows and balanced witnesses",
+      "case_regime": "Worst-case exact agreement on an explicit total-language subset; no promise, distributional, or surrogate terminal claim",
+      "evidence": "proofs/GATE-004V-balanced-long-run-rigidity.md; proofs/LEMMA-052-balanced-long-run-slot-product.md"
     }
   ]
 }

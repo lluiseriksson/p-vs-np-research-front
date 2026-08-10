@@ -61,6 +61,7 @@ Adjacent collision-aware active branch:
      + ENC-024 (proved general bounded-block distant groups)
      + ENC-025 (proved general bounded-zero-run windows)
      + ENC-026 (proved tunable long-zero neutral block)
+     + ENC-027 (proved balanced long-run slot product)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -77,6 +78,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-BOUNDED-BLOCK-CONTEXTS (no-go by LEMMA-049)
      - GATE-004U-BOUNDED-ZERO-RUN-CONTEXTS (no-go by LEMMA-050)
      - GATE-004U-SINGLE-LONG-BLOCK-CONTEXTS (no-go by LEMMA-051/049)
+  <- GATE-004V (active smallest brick): balanced long-run product rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -638,6 +640,14 @@ audit shows that one such block re-enters the sparse-block obstruction:
 half-separated width-two clauses give loss at most `K-floor(P/2)`. The next
 construction must combine long runs with a dense enough independent block
 count to cross both quantitative thresholds at once.
+
+ENC-027 and LEMMA-052 build that combination. Independent slots preserve
+coordinate density, allow run length `rho`, and force every LEMMA-049 cover
+tail to at most `6s` clauses and the LEMMA-050 tail below `4s`. With
+`s=floor((R-1)/8)` both counts lie below the unavoidable `K>=R-1` base-size
+floor. GATE-004V is the new smallest sufficient brick: exact agreement on this
+explicit product family must now be proved or falsified to force polynomial
+diagonal loss.
 
 ### Smallest active brick: GATE-004U
 
