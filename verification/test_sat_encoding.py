@@ -18,6 +18,7 @@ from covering_basis import (
     all_length_identifier_projection_basis,
     all_length_projection_coverage_failures,
     identifier_projection_basis,
+    identifier_projection_basis_through,
     projection_coverage_failures,
     strength_five_coverage_failures,
     strength_five_identifier_basis,
@@ -957,6 +958,32 @@ class FormulaEncodingTests(unittest.TestCase):
             if block[position - start] == "0"
         )
         self.assertEqual(mask, 16)
+
+    def test_length_76_projection_basis_is_complete(self) -> None:
+        self.assertEqual(len(identifier_projection_basis(16)), 436)
+        self.assertEqual(projection_coverage_failures(16), ())
+        basis = identifier_projection_basis_through(16)
+        self.assertEqual(len(basis), 2873)
+        self.assertEqual(len(set(basis)), 2873)
+
+    def test_single_length_76_repair_retains_new_mask_16_obstruction(self) -> None:
+        from quartet_type_audit import WIDTH5_REPAIR_IDENTIFIERS
+
+        identifiers = tuple(
+            dict.fromkeys(
+                WIDTH5_REPAIR_IDENTIFIERS
+                + strength_five_identifier_basis()
+                + (98370,)
+            )
+        )
+        positions = (78, 80, 88, 93, 94)
+        fast = QuartetAuditor(identifiers, 460).reached_masks_positions(
+            positions, 4
+        )
+        direct = reached_masks_direct_positions(positions, 4, identifiers, 460)
+        relevant = (1 << 31) - 2
+        self.assertEqual(fast & relevant, direct & relevant)
+        self.assertFalse((fast >> 16) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

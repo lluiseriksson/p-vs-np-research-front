@@ -1429,3 +1429,18 @@ unrestricted later non-uniform circuits; no randomness, advice, oracle,
 promise, distribution, or algebraic computation. Identifier 98,370 repairs
 the representative at length 76, so the full gate remains open. P versus NP
 is unaffected.
+
+## NG-071 — the first length-76 repair suffices globally
+
+**Label: NO-GO**
+
+Identifier 98,370 repairs the LEMMA-083 representative but the exact
+gap-at-most-20 audit retains 494 failures. LEMMA-085 isolates mask 16 on
+offsets `{0,2,10,15,16}`. Twenty-spaced translations leave a linear common
+signed width-five packing after at most one `A_rho` repair.
+
+Model: fixed 413-identifier alphabet with one length-76 addition; four-block
+options; one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness in the exact audit, advice, oracle,
+promise, distribution, or algebraic computation. The projection-complete full
+length-76 alphabet remains open under LEMMA-086. P versus NP is unaffected.

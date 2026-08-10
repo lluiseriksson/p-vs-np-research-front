@@ -62,8 +62,8 @@ def strength_five_coverage_failures(
 @lru_cache(maxsize=None)
 def identifier_projection_basis(free_bit_count: int) -> tuple[int, ...]:
     """Cover every assignment on up to five free bits at one ID length."""
-    if not 0 <= free_bit_count <= 15:
-        raise ValueError("free bit count must lie between zero and fifteen")
+    if not 0 <= free_bit_count <= 16:
+        raise ValueError("free bit count must lie between zero and sixteen")
     if free_bit_count == 0:
         return (1,)
     strength = min(5, free_bit_count)
@@ -109,8 +109,8 @@ def all_length_identifier_projection_basis() -> tuple[int, ...]:
 def identifier_projection_basis_through(
     max_free_bit_count: int,
 ) -> tuple[int, ...]:
-    if not 0 <= max_free_bit_count <= 15:
-        raise ValueError("maximum free bit count must lie between zero and fifteen")
+    if not 0 <= max_free_bit_count <= 16:
+        raise ValueError("maximum free bit count must lie between zero and sixteen")
     return tuple(
         identifier
         for free_bit_count in range(max_free_bit_count + 1)

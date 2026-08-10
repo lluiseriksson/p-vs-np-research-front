@@ -654,6 +654,14 @@ every length-at-most-72 specialization is `NO-GO`. LEMMA-084 finds the first
 repair at length 76: `01 T_98370` aligned at start 48 realizes the missing
 mask. This repairs one type only; the bound-76 GATE-004AF audit remains open.
 
+The seventy-eighth cycle tests that single repair globally enough to falsify
+it. The exact gap-at-most-20 audit retains 494 failures; LEMMA-085 isolates a
+shifted mask-16 obstruction on offsets `{0,2,10,15,16}` and an `N/20-O(1)`
+packing. The one-identifier repair is `NO-GO`. LEMMA-086 constructs 2,873
+projection-complete representatives for every standard block through length
+76. A 5,000-type sample finds no failure for that complete basis, but this is
+only EXPLORATORY; the exhaustive or analytic bound-76 audit remains open.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

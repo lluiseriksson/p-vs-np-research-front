@@ -41,6 +41,11 @@ finds the first repair at length 76, using identifier 98,370. The next finite
 audit must use bound 76 and must not infer global universality from that one
 repaired quintuple.
 
+LEMMA-085 shows that the single repair retains a shifted mask-16 obstruction
+and 494 local failures. LEMMA-086 supplies 2,873 behaviorally complete
+representatives for the full length-76 alphabet; its complete audit is the
+next operational task.
+
 ## Model card
 
 | Field | Value |
