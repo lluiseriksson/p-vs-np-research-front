@@ -4123,6 +4123,30 @@
       "circuit_size": "Individual residual at most m and average exactly m/2 versus parent target 6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and subset incidence only",
       "asymptotic_quantifiers": "Every m at least one and all 2^m canonical positive cofactors", "case_regime": "Structural no-go for independent single-cofactor charging; GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AH-single-cofactor-only.md; proofs/LEMMA-112-canonical-positive-cofactors.md; docs/no-go-ledger.md NG-085; artifacts/cycle-099-canonical-cofactor-audit.md"
+    },
+    {
+      "id": "LEMMA113", "label": "PROVED",
+      "statement": "The canonical output cofactor profile contains all 2^m negative conjunctions and changes on every one of the m*2^(m-1) edges of the subset cube, while all of those changes occur at one output node.",
+      "computational_model": "Canonical positive-variable restrictions of unrestricted AND/OR/NOT circuits for the fixed-sign clause product", "uniformity": "Uniform restriction cube; every individual non-uniform parent circuit",
+      "circuit_size": "No size lower bound; 2^m output cofactors and m*2^(m-1) changing cube edges can occur at one output node", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and the subset lattice only",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, every subset S of [m], and every i outside S", "case_regime": "Exact worst-case cofactor-profile theorem and counting limitation; not a parent lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-113-canonical-cofactor-lattice.md; proofs/LEMMA-112-canonical-positive-cofactors.md; artifacts/cycle-100-cofactor-transition-audit.md"
+    },
+    {
+      "id": "GATE004AI", "label": "EXPLORATORY",
+      "statement": "Every pruned circuit for the four-positive one-negative product admits an injection of its m clause indices into its N NOT gates and t output-cone cycle coordinates, implying m<=N+t.",
+      "computational_model": "Pruned unrestricted Boolean circuits for the fixed four-positive one-negative read-once clause product and the output-cone cycle space", "uniformity": "Every individual non-uniform circuit; uniform function family",
+      "circuit_size": "Target witness inequality N+t>=m, exactly equivalent to B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restriction cube",
+      "asymptotic_quantifiers": "Every m at least five and every pruned circuit for W_m in the unresolved inversion range", "case_regime": "Exact worst-case witness gate for standalone size; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AI-clause-cover-injection.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-113-canonical-cofactor-lattice.md"
+    },
+    {
+      "id": "GATE004AI-OUTPUT-TRANSITION-COUNTING-ONLY", "label": "NO-GO",
+      "statement": "Counting distinct output cofactors or changing canonical cube edges cannot yield distinct internal gate charges because one fixed output node realizes the entire profile.",
+      "computational_model": "Canonical cofactor profiles of nodes in unrestricted AND/OR/NOT parent circuits", "uniformity": "Uniform restriction cube; every individual non-uniform parent circuit",
+      "circuit_size": "No lower bound from 2^m profiles or m*2^(m-1) changing output edges alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction cube; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every m at least one, every canonical cube edge, and every circuit computing W_m", "case_regime": "Structural no-go for raw output-transition counting; GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AI-output-transition-counting-only.md; proofs/LEMMA-113-canonical-cofactor-lattice.md; docs/no-go-ledger.md NG-086; artifacts/cycle-100-cofactor-transition-audit.md"
     }
   ]
 }

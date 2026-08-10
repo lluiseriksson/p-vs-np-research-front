@@ -1703,3 +1703,25 @@ full assignments of positive tail variables; exact residual circuit size;
 worst-case and uniform average over subsets; no randomness, advice, oracle,
 promise, distribution, or algebraic model. Independent cofactor charging is
 closed, while GATE-004AH, GATE-004AG, GATE-004AE, and P versus NP remain open.
+
+## NG-086 — output cofactor transitions yield distinct internal charges
+
+**Label: NO-GO**
+
+Scope: count every adjacent pair of canonical positive restrictions on which
+the output residual changes and use those transitions to inject clause
+indices into NOT gates or independent cycle coordinates.
+
+Failure: LEMMA-113 gives `2^m` distinct output cofactors and
+`m*2^(m-1)` changing cube edges, but all belong to the cofactor profile of
+one fixed output node. Therefore raw transition count has no additive
+relation to parent gate count. Any division by a supposed per-gate edge bound
+is invalid because the output itself witnesses every edge. A valid route must
+define internal first-divergence or survival witnesses and prove bounded reuse
+across clause indices.
+
+Model: every unrestricted non-uniform AND/OR/NOT parent circuit; canonical
+positive restriction cube; exact output cofactor profiles; unrestricted
+depth; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
+promise, distribution, or algebraic circuit model. Raw output-transition
+counting is closed, while GATE-004AI/AH/AG/AE and P versus NP remain open.

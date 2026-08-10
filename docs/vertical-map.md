@@ -141,7 +141,10 @@ Adjacent collision-aware active branch:
         + LEMMA-112 (all canonical positive cofactors have exact size `|S|`)
         <- GATE-004AH (active smallest structural brick): exact binary/NOT tradeoff
            - GATE-004AH-SINGLE-COFACTOR-ONLY (no-go: maximum `m`, average `m/2`)
-           <- coupled multi-cofactor survival (next attackable brick)
+           + LEMMA-113 (full output cofactor lattice and edge transitions)
+           <- GATE-004AI (active witness brick): inject clauses into NOTs or cycles
+              - GATE-004AI-OUTPUT-TRANSITION-COUNTING-ONLY (no-go: one output witnesses all edges)
+              <- internal first-divergence with bounded witness reuse (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

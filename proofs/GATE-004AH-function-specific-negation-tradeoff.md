@@ -32,6 +32,12 @@ which is far below `6m-1-N` across the middle range. A successful proof must
 use the clause-indexed distribution of the negative variables, not only total
 decrease or generic graph topology.
 
+GATE-004AI rewrites the target with output-cone cycle rank
+`t=B-5m+1`: prove `N+t>=m` by injecting clause indices into NOT gates or
+independent cycle coordinates. LEMMA-113 shows that raw output cofactor
+transitions cannot supply distinct witnesses; an internal bounded-reuse
+theorem remains missing.
+
 ## Model card
 
 | Field | Value |

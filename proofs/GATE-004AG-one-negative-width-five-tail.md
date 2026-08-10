@@ -63,6 +63,11 @@ tradeoff; its single-cofactor attack fails because no individual residual has
 size above `m`. The next proof must couple multiple cofactors within the same
 parent DAG without double counting shared gates.
 
+LEMMA-113 and GATE-004AI sharpen that requirement. The desired tradeoff is
+equivalent to assigning every clause index to a distinct NOT gate or cycle
+coordinate. The output cofactor lattice alone cannot perform this assignment,
+because its single output node witnesses all adjacent restriction changes.
+
 ## Model card
 
 | Field | Value |

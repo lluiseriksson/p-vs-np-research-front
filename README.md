@@ -806,11 +806,20 @@ Independent cofactor charging is `NO-GO` because summing mutually exclusive
 residuals would double count parent gates; a coupled multi-cofactor theorem is
 the next brick.
 
+The one-hundredth cycle audits the first coupled statistic. LEMMA-113 proves
+that the output cofactor profile assumes all `2^m` residuals and changes on
+all `m*2^(m-1)` edges of the canonical restriction cube. This does not count
+parent gates: one output node carries the entire profile. GATE-004AI now asks
+for a clause-index injection into the `N` negations and `t` independent cycle
+coordinates. Its inequality `m<=N+t` is exactly the missing GATE-004AH
+tradeoff. Raw output-transition counting is `NO-GO`; an internal first-
+divergence theorem with bounded witness reuse is the next brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–099 isolate the fixed-sign tail, exhaust generic unfolding, and begin function-specific multi-cofactor analysis. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–100 isolate the fixed-sign tail, exhaust generic unfolding, and reduce function-specific sharing to an internal bounded-reuse witness problem. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
