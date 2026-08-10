@@ -588,6 +588,43 @@ def bounded_zero_run_windows(
     )
 
 
+def power_two_long_zero_neutral_block(zero_run: int) -> str:
+    """Return a length-4r exact neutral block with maximum zero run r."""
+    if zero_run < 3:
+        raise ValueError("zero_run must be at least three")
+    identifier = 1 << (zero_run - 3)
+    return "01" + tautology(identifier)
+
+
+def long_zero_window_neutral_padding(
+    bits: str,
+    extra_length: int,
+    zero_run: int,
+    window_start: int,
+    window_length: int,
+) -> str:
+    """Place a tunable neutral block so its leading run covers a window."""
+    block = power_two_long_zero_neutral_block(zero_run)
+    if extra_length < len(block):
+        raise ValueError("extra_length is shorter than the neutral block")
+    if extra_length % 4:
+        raise ValueError("extra_length must be divisible by four")
+    if window_length < 0 or window_length > zero_run - 3:
+        raise ValueError("window_length exceeds the sweep guarantee")
+    if window_start < 3 or window_start > extra_length - len(block) + 3:
+        raise ValueError("window_start is outside the swept interior")
+    run_start = window_start - ((window_start - 3) % 4)
+    block_start = run_start - 3
+    if window_start + window_length > run_start + zero_run:
+        raise AssertionError("chosen zero run does not cover the window")
+    return (
+        "1" * block_start
+        + block
+        + "1" * (extra_length - block_start - len(block))
+        + bits
+    )
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

@@ -426,13 +426,21 @@ and LEMMA-050 show that maximum zero-run length `rho` leaves
 number of blocks, so dense block count alone is `NO-GO`. The next audit must
 permit zero runs on the `P/K` scale or use the full variable-core DNF syntax.
 
+The fiftieth cycle constructs those runs explicitly. ENC-026 and LEMMA-051
+use identifier `2^(rho-3)` to produce an exact neutral block of length
+`4rho`, maximum zero run `rho`, and a four-aligned sweep of interior windows.
+The single-block forcing attempt is nevertheless `NO-GO`: all zeros remain in
+one interval, so half-separated width-two clauses restore loss at most
+`K-floor(P/2)`. The next construction must combine dense independent blocks
+with long runs and retain coordinate density.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 88% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block and bounded-zero-run common-clause geometry, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 89% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable long-run neutral blocks, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Bounded-zero-run syntax families admit an exact local-clause tail even at dense block count; long-run/variable-core syntax and full GATE-004U remain open, with no loss theorem or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Tunable long runs are explicit but a single-block family re-enters the sparse-tail no-go; the combined dense-long-run construction and full GATE-004U remain open, with no loss theorem or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

@@ -1174,6 +1174,41 @@ exact circuit consequence.
 | Asymptotic quantifiers | Every finite `P,rho`, every qualifying context, and every complete width-`rho+1` window |
 | Regime | Worst-case exact syntax-location theorem; not a circuit lower bound |
 
+## ENC-026 — tunable long-zero exact neutral blocks
+
+**Label: PROVED**
+
+For every `rho>=3`, choose identifier `j=2^(rho-3)` and form the neutral block
+
+`A_rho=01 OR(V_j,NOT(V_j))`.
+
+LEMMA-051 proves that `A_rho` has length exactly `4rho`, maximum zero run
+exactly `rho`, and an initial run of length `rho` beginning at offset three.
+Four-aligned placements sweep every interior consecutive window of length at
+most `rho-3` in the explicit band
+
+`3<=a<=P-4rho+3`.
+
+Every placement preserves exact validity and satisfiability, including
+malformed-source rejection. The construction crosses the bounded-window
+premise locally but, with one block, remains subject to LEMMA-049.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma contexts, Elias gamma codes of power-of-two identifiers, and raw zero-run placement geometry |
+| Uniform/non-uniform | Uniform construction in `rho`, outer length, source string, and target window |
+| Circuit size | No lower bound; exact block length `4rho` |
+| Circuit depth | Constant formula-tree depth inside the block and possibly linear outer NOT depth; later circuits unrestricted |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Integer congruence and run-length geometry only |
+| Asymptotic quantifiers | Every `rho>=3`, every four-divisible `P>=4rho`, every source string, and every window in the stated swept band |
+| Regime | Worst-case exact total-language syntax theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

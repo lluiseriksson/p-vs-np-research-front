@@ -2686,6 +2686,57 @@
       "asymptotic_quantifiers": "Every parameter sequence with m=floor(P/(rho+1)) strictly greater than K; all compact DNF cores and qualifying bounded-zero-run contexts",
       "case_regime": "Worst-case exact counterexample to bounded-zero-run context forcing; full GATE-004U remains open",
       "evidence": "proofs/GATE-004U-bounded-zero-run-contexts.md; docs/sat-encoding.md ENC-025; proofs/LEMMA-050-bounded-zero-run-obstruction.md; docs/no-go-ledger.md NG-047"
+    },
+    {
+      "id": "ENC-026",
+      "label": "PROVED",
+      "statement": "For every rho at least three, the power-of-two identifier 2^(rho-3) gives an exact neutral block of length 4rho with maximum zero run rho, whose aligned placements sweep every stated interior window of length at most rho-3.",
+      "computational_model": "Exact SAT-gamma contexts, Elias gamma power-of-two identifiers, and raw zero-run placement geometry",
+      "uniformity": "Uniform construction in rho, outer length, source string, and target window",
+      "circuit_size": "No lower bound; exact block length 4rho",
+      "circuit_depth": "Constant formula-tree depth inside the block and possibly linear outer NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer congruence and run-length geometry only",
+      "asymptotic_quantifiers": "Every rho at least three, every four-divisible P at least 4rho, every source string, and every swept window in the explicit band",
+      "case_regime": "Worst-case exact total-language syntax theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; proofs/LEMMA-051-tunable-long-zero-neutral-block.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-051",
+      "label": "PROVED",
+      "statement": "The tunable length-4rho neutral block has exact maximum zero run rho and sweeps the interior bounded-window predicates, but its zero support remains inside one interval of length 4rho.",
+      "computational_model": "Exact formula contexts, single-block interval supports, and raw consecutive-window geometry",
+      "uniformity": "Uniform power-of-two identifier and placement family",
+      "circuit_size": "No lower bound; sparse-block application has loss at most K-floor(P/2)",
+      "circuit_depth": "Encoded context depth as stated; later ambient circuits unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer interval and congruence geometry only",
+      "asymptotic_quantifiers": "Every rho at least three and four-divisible P at least 4rho; sparse audit for P at least 8rho",
+      "case_regime": "Worst-case exact syntax construction and scoped method audit; not a SAT lower bound",
+      "evidence": "proofs/LEMMA-051-tunable-long-zero-neutral-block.md; verification/test_sat_encoding.py; proofs/LEMMA-049-bounded-block-width-obstruction.md"
+    },
+    {
+      "id": "GATE-004U-SINGLE-LONG-BLOCK-CONTEXTS",
+      "label": "NO-GO",
+      "statement": "Exact agreement under every placement of one tunable long-zero neutral block does not force positive diagonal loss because a linear family of half-separated width-two clauses remains common.",
+      "computational_model": "Globally minimum unrestricted circuits, exact single-long-block syntax agreement, canonical DNF core evaluation, and diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary/base minimum circuit; uniform long-block placements and distant pairs",
+      "circuit_size": "Counterexample exact size K+2m; quotient at least 3m; loss at most K-m<0",
+      "circuit_depth": "Unrestricted base with pairwise OR gates and a sequential AND tail",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer interval geometry only",
+      "asymptotic_quantifiers": "Every rho at least three, every four-divisible P at least 8rho, all compact DNF cores and placements, and every regime with floor(P/2)>K",
+      "case_regime": "Worst-case exact counterexample to single-long-block forcing; full GATE-004U remains open",
+      "evidence": "proofs/GATE-004U-single-long-block-contexts.md; docs/sat-encoding.md ENC-026; proofs/LEMMA-051-tunable-long-zero-neutral-block.md; docs/no-go-ledger.md NG-048"
     }
   ]
 }

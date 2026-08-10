@@ -25,6 +25,7 @@ from sat_encoding import (
     encode_or,
     encode_variable,
     evaluate,
+    long_zero_window_neutral_padding,
     pair_zero_neutral_padding,
     parse_formula,
     satisfiability_padding_wrap,
@@ -38,6 +39,7 @@ from sat_encoding import (
     one_bit_literal_gadgets,
     operator_square_prefix,
     maximum_zero_run,
+    power_two_long_zero_neutral_block,
     tautology,
     verify_assignment,
 )
@@ -763,6 +765,37 @@ class FormulaEncodingTests(unittest.TestCase):
         windows = bounded_zero_run_windows(131, 7)
         self.assertEqual(len(windows), 16)
         self.assertTrue(all(len(window) == 8 for window in windows))
+
+    def test_power_two_blocks_have_exact_tunable_zero_runs(self) -> None:
+        for zero_run in range(3, 25):
+            block = power_two_long_zero_neutral_block(zero_run)
+            self.assertEqual(len(block), 4 * zero_run)
+            self.assertEqual(maximum_zero_run(block), zero_run)
+
+        formula = assignment_conjunction({6: False, 7: True})
+        malformed = "01" + formula
+        for zero_run in (7, 11, 16):
+            extra_length = 12 * zero_run
+            window_length = zero_run - 3
+            for window_start in range(
+                3, extra_length - 4 * zero_run + 4
+            ):
+                padded = long_zero_window_neutral_padding(
+                    formula,
+                    extra_length,
+                    zero_run,
+                    window_start,
+                    window_length,
+                )
+                self.assertEqual(
+                    padded[window_start:window_start + window_length],
+                    "0" * window_length,
+                )
+                self.assertTrue(self.brute_sat(padded))
+            rejected = long_zero_window_neutral_padding(
+                malformed, extra_length, zero_run, 3, window_length
+            )
+            self.assertIsNone(parse_formula(rejected))
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

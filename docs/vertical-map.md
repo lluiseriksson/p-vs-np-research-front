@@ -60,6 +60,7 @@ Adjacent collision-aware active branch:
      + ENC-023 (proved distant common triples on ENC-022)
      + ENC-024 (proved general bounded-block distant groups)
      + ENC-025 (proved general bounded-zero-run windows)
+     + ENC-026 (proved tunable long-zero neutral block)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -75,6 +76,7 @@ Adjacent collision-aware active branch:
      - GATE-004U-TWO-BLOCK-CONTEXT-ONLY (no-go by LEMMA-048)
      - GATE-004U-BOUNDED-BLOCK-CONTEXTS (no-go by LEMMA-049)
      - GATE-004U-BOUNDED-ZERO-RUN-CONTEXTS (no-go by LEMMA-050)
+     - GATE-004U-SINGLE-LONG-BLOCK-CONTEXTS (no-go by LEMMA-051/049)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -629,6 +631,13 @@ clauses and loss at most `K-floor(P/(rho+1))`. The fixed ten-block alphabet
 has `rho=7` even under linear block count. The next active audit must permit
 zero runs on the `P/K` scale or exploit variable DNF core placement so that an
 isolated outer predicate is unavailable.
+
+ENC-026 supplies exact runs of any target length `rho` at encoding cost
+`4rho` and sweeps the interior window predicates. LEMMA-051's simultaneous
+audit shows that one such block re-enters the sparse-block obstruction:
+half-separated width-two clauses give loss at most `K-floor(P/2)`. The next
+construction must combine long runs with a dense enough independent block
+count to cross both quantitative thresholds at once.
 
 ### Smallest active brick: GATE-004U
 

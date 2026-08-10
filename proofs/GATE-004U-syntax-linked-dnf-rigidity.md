@@ -103,6 +103,14 @@ tail with loss at most `K-floor(P/(rho+1))`. The ten-block alphabet has
 runs of order at least `P/K`, or abandon the common outer/core split by using
 the full variation of DNF syntax. Neither escape is assumed sufficient.
 
+ENC-026 and LEMMA-051 realize the long-run escape exactly: a power-of-two
+identifier gives a neutral length-`4rho` block with a run of `rho` zeros and
+sweeps interior windows. A single block nevertheless triggers LEMMA-049, so
+single-long-block forcing is `NO-GO`. The next audit must combine long runs
+and sufficiently many independently placed blocks so that both
+`floor(P/(b+1))<D` and `floor(P/(rho+1))<=K` hold, without losing coordinate
+density or exact syntax agreement.
+
 ## Model card
 
 | Field | Value |

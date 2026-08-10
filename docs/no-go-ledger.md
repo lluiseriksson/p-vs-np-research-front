@@ -1009,3 +1009,23 @@ AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This does not cover long zero runs or
 full GATE-004U's variable-core syntax. Escaping the method requires roughly
 `rho(P)>=P/(K(P)+1)-1`, but that condition is not asserted sufficient.
+
+## NG-048 — a sweeping long-zero block forces quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal loss from exact agreement on common-inner-
+length DNF cores under every placement of one tunable long-zero ENC-026 block.
+
+Failure: the length-`4rho` block destroys many bounded-window clauses but all
+zeros remain in one interval. For `P>=8rho`, the half-separated coordinate
+pairs cannot both lie in that interval. Their `floor(P/2)` disjoint width-two
+clauses are common. LEMMA-046/049 give exact size `K+2m`, quotient at least
+`3m`, and loss at most `K-m<0` when `m=floor(P/2)>K`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; common-inner-
+length canonical DNF base; every four-aligned single-long-block placement;
+exact disjoint positive two-clauses; unrestricted depth, fan-in-two AND/OR and
+fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
+algebraic computation. Long runs remain necessary against NG-047, but must be
+combined with sufficiently dense independent placements to escape NG-046.
