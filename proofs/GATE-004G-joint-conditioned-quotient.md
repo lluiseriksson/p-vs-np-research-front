@@ -85,3 +85,27 @@ the explicit lower bound required here: the first has a different output task,
 and the second is minimization-problem hardness rather than a lower bound for
 `(CSAT_0,CSAT_1)`. Treating either as the missing surplus is
 `GATE-004G-LITERATURE — NO-GO`.
+
+## Parent-label normal form
+
+LEMMA-013 assigns every surviving joint residual class to one of its original
+parent-gate labels. Let `d` be the number of labels assigned no class and `t`
+the number assigned two distinct classes. Then
+
+`|C_n|-|J_n|=d-t`.
+
+Thus GATE-004G is exactly the signed-surplus requirement
+
+`d>=t+B n^delta+1`.
+
+Labels whose two conditioned residuals agree can never contribute to `t`; only
+condition-sensitive gates can create the negative split penalty. But output
+sensitivity alone does not force a favorable balance. LEMMA-011 has only a
+constant-size selector-dependent shell and its parent-to-pair gap is at most
+seven. Therefore a generic count of condition-sensitive gates is
+`GATE-004G-SENSITIVITY — NO-GO`.
+
+The next SAT-specific attack is to characterize which minimum-circuit gates
+can retain two distinct, live conditioned residuals and to find a structural
+injection from such split labels into disappeared labels with a polynomial
+surplus. No injection is currently claimed.

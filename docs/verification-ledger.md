@@ -67,6 +67,8 @@ truth. Each row has exactly one label.
 | BR-RZ21 | PROVED | Formal measures characterize identical-copy amortized complexity; arbitrary fanout trivializes it for general circuits | RZ21 primary-source note | Literature boundary only |
 | BR-ILO20 | PROVED | Minimizing truth-table-given total multi-output functions is NP-hard under randomized reductions | ILO20 primary-source note | No explicit-function lower bound |
 | GATE-004G-LITERATURE | NO-GO | Neither amortized-copy duality nor multi-output minimization hardness proves the conditioned-SAT joint gap | Bridge audit; NG-018 | Explicit SAT-specific surplus remains open |
+| LEMMA-013 | PROVED | Joint improvement equals disappeared parent labels minus labels representing two split residual classes | `proofs/LEMMA-013-parent-label-surplus.md` | Exact signed-surplus normal form |
+| GATE-004G-SENSITIVITY | NO-GO | Condition-sensitive gate counts alone do not force a favorable disappeared-minus-split balance | LEMMA-011; NG-019 | A SAT-specific structural injection is required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

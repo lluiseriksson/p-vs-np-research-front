@@ -986,6 +986,40 @@
       "asymptotic_quantifiers": "Scope mismatch between identical-copy limits or worst-case minimization instances and one explicit conditioned pair at every large length",
       "case_regime": "Method-promotion no-go; worst-case exact functions",
       "evidence": "docs/bridge-audit.md; docs/no-go-ledger.md NG-018"
+    },
+    {
+      "id": "LEMMA-013",
+      "label": "PROVED",
+      "statement": "Assigning each surviving joint residual class to one of its two-copy parent labels gives the exact joint improvement as disappeared labels minus labels representing two split classes.",
+      "computational_model": "Two restricted copies of an acyclic Boolean circuit and exact semantic residual-function classes",
+      "uniformity": "Fully non-uniform semantic classification with arbitrary fixed representatives",
+      "circuit_size": "Exact identity S-q_J=d-t",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one in the intended application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Integer counting only; no algebraic computation model",
+      "asymptotic_quantifiers": "Every finite circuit, every two restrictions, and every representative assignment",
+      "case_regime": "Worst-case exact multi-output circuit computation",
+      "evidence": "proofs/LEMMA-013-parent-label-surplus.md"
+    },
+    {
+      "id": "GATE-004G-SENSITIVITY",
+      "label": "NO-GO",
+      "statement": "Output distinction or a count of condition-sensitive parent gates alone does not imply a positive disappeared-minus-split label surplus in the joint quotient.",
+      "computational_model": "Minimum unrestricted selector circuits, two conditioned restrictions, and parent-label residual classification",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Generic conditioned selector parent-to-pair gap is at most seven",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every positive-arity nonzero shared core in the LEMMA-011 selector construction",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-011-conditioned-union-shared-core.md; docs/no-go-ledger.md NG-019"
     }
   ]
 }

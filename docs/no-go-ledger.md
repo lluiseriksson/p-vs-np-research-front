@@ -358,3 +358,24 @@ and ILO20's randomized truth-table minimization reduction. No randomness,
 advice, oracle, field, promise, or distribution is allowed in the desired
 GATE-004G lower bound. This no-go is a scope audit, not a criticism of either
 source theorem.
+
+## NG-019 — condition-sensitive gate count as joint surplus
+
+**Label: NO-GO**
+
+Scope: count gates whose residual functions differ between `R_0` and `R_1`
+and infer that many gates disappear in the joint conditioned quotient.
+
+Failure: LEMMA-013 gives the signed identity `S-q_J=d-t`. A gate with equal
+residuals cannot be a split label, but sensitivity only makes splitting
+possible; it does not force disappearance or a favorable `d-t` balance.
+LEMMA-011 exhibits the generic selector shell around an arbitrary core: the
+conditioned outputs differ and selector gates are sensitive, yet the minimum
+parent-to-shared-pair gap is at most seven. Output distinction and raw
+sensitivity therefore do not yield `Omega(n^delta)` surplus.
+
+Model: exact minimum gate count in unrestricted non-uniform single- and
+two-output acyclic circuits; unbounded depth; fan-in-two AND/OR and fan-in-one
+NOT; no randomness, advice, oracle, field, promise, or distribution. The no-go
+does not refute a SAT-specific structural injection from split labels to a
+larger set of disappeared labels.

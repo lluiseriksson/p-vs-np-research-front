@@ -202,6 +202,17 @@ circuits, while ILO20 proves hardness of the minimization problem rather than a
 lower bound for this explicit pair. `GATE-004G-LITERATURE — NO-GO` records the
 scope boundary.
 
+LEMMA-013 gives the per-parent normal form. Assign each surviving joint
+residual class to one original parent-gate label; if `d` labels represent no
+class and `t` labels represent two split classes, then
+
+`S(n)-|J_n|=d-t`.
+
+The active surplus is therefore `d>=t+B n^delta+1`. Equal conditioned
+residuals can never create the negative split term, but raw sensitivity does
+not imply disappearance; `GATE-004G-SENSITIVITY — NO-GO` records that generic
+selector obstruction.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification
