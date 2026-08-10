@@ -268,3 +268,26 @@ unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
 oracle, field, promise, or distribution. The no-go concerns the generic
 cofactor-pair inference, not a stronger SAT-specific invariant of the full
 operator-bit cofactor table.
+
+## NG-015 — complete local operator-bit cofactor square
+
+**Label: NO-GO**
+
+Scope: strengthen NG-014 by using all four cofactors of the two inner operator
+bits in the ENC-006 twelve-bit context.
+
+Failure: ENC-006 computes the exact table: token `10` leaves the SAT suffix
+function and each of `00`, `01`, `11` leaves constant zero for every nonempty
+suffix length. LEMMA-010 reproduces that complete table as
+
+`q_1 AND NOT(q_2) AND G`.
+
+Both selector bits are essential, but selecting the unique hard cofactor can
+remove at most three gates from a minimum circuit. The whole local table is a
+constant-size one-hot selector around an arbitrary core and therefore does not
+force same-column collisions inside that core.
+
+Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. The no-go is confined to this local
+output-cofactor inference; longer SAT-prefix residuals remain unaudited.

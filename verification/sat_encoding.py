@@ -191,6 +191,14 @@ def annihilating_prefix(identifier: int = 1) -> str:
     return "01" + contradiction(identifier)
 
 
+def operator_square_prefix(token: str, identifier: int = 1) -> str:
+    """Twelve-bit prefix obtained by varying the inner two-bit operator."""
+    if token not in {"00", "01", "10", "11"}:
+        raise ValueError("token must be one of 00, 01, 10, 11")
+    variable = encode_variable(identifier)
+    return "01" + token + variable + encode_not(variable)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

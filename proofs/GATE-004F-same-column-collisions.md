@@ -56,5 +56,12 @@ pair and selector essentiality.
 
 The next attempt must identify a SAT-specific invariant of internal residual
 gate functions that forces many same-column equivalence classes to merge. The
-next audit will examine the full four-cofactor table of the two differing
-operator bits; no derivative or sensitivity claim is assumed in advance.
+full four-cofactor audit is now exact: ENC-006 gives one SAT residual and three
+zero residuals. LEMMA-010 realizes that whole table with a three-gate selector
+around an arbitrary core, so `GATE-004F-FOUR-COFACTOR — NO-GO` for an
+output-table-only inference.
+
+The next attack must be nonlocal: it will classify longer prefix residuals that
+cannot all be represented by a constant-size selector around one shared
+function. No direct-sum or independence property is assumed until separately
+proved.

@@ -17,6 +17,7 @@ from sat_encoding import (
     parse_formula,
     neutral_prefix_family,
     neutral_prefix_index,
+    operator_square_prefix,
     tautology,
     verify_assignment,
 )
@@ -166,6 +167,24 @@ class FormulaEncodingTests(unittest.TestCase):
             wrapped = prefix + bits
             self.assertFalse(verify_assignment(wrapped, {1: True, 7: True}))
             self.assertEqual(parse_formula(bits) is None, parse_formula(wrapped) is None)
+
+    def test_operator_square_is_one_hot_on_nonempty_suffixes(self) -> None:
+        suffixes = [self.x, self.y, encode_or(self.x, self.y), self.x + "11"]
+        for token in ("00", "01", "10", "11"):
+            prefix = operator_square_prefix(token)
+            self.assertEqual(len(prefix), 12)
+            for suffix in suffixes:
+                wrapped = prefix + suffix
+                expected = token == "10" and verify_assignment(
+                    suffix, {1: True, 7: True}
+                )
+                self.assertEqual(
+                    verify_assignment(wrapped, {1: True, 7: True}), expected
+                )
+        self.assertEqual(operator_square_prefix("10"), context_prefix(left_tautologies=1))
+        self.assertEqual(operator_square_prefix("01"), annihilating_prefix())
+        with self.assertRaises(ValueError):
+            operator_square_prefix("xx")
 
 
 if __name__ == "__main__":

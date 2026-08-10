@@ -200,6 +200,42 @@ two bits selecting OR versus AND inside `T` and `F`.
 | Asymptotic quantifiers | Every binary suffix at every length |
 | Regime | Exact total-language decision; the residual is zero on valid and malformed suffixes |
 
+## ENC-006 — complete local operator-bit square
+
+Fix the twelve-bit prefix template
+
+`Q_b = 01 b V 11 V`,
+
+where `b` ranges over the four two-bit node tokens and the suffix has positive
+length. Its exact SAT-gamma residuals are
+
+| `b` | Parse/residual |
+|---|---|
+| `10` | `AND(OR(V,NOT(V)),y)`; residual `SAT-gamma(y)` |
+| `01` | `AND(AND(V,NOT(V)),y)`; residual zero |
+| `00` | the prefix already completes `AND(variable 7,V)`; nonempty `y` is trailing, so residual zero |
+| `11` | the prefix already completes `AND(NOT(V),NOT(V))`; nonempty `y` is trailing, so residual zero |
+
+Thus on this entire two-bit cofactor square the decision function is exactly
+
+`b_1 AND NOT(b_2) AND SAT-gamma(y)`.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix parser and four coordinate cofactors |
+| Uniform/non-uniform | Uniform fixed-template calculation |
+| Circuit size | No lower-bound conclusion; the residual identity has a three-gate selector form |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every suffix length `m>=1` and every `m`-bit suffix |
+| Regime | Exact total-language decision including malformed suffixes |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

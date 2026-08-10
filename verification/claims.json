@@ -782,6 +782,57 @@
       "asymptotic_quantifiers": "Every positive-arity nonzero shared core G in the selector construction",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-009-annihilating-cofactor-selector.md; docs/no-go-ledger.md NG-014"
+    },
+    {
+      "id": "ENC-006",
+      "label": "PROVED",
+      "statement": "Varying the two inner operator bits of the fixed twelve-bit SAT-gamma context gives exactly one SAT residual at token 10 and three constant-zero residuals for every nonempty suffix length.",
+      "computational_model": "Exact SAT-gamma prefix parser and four coordinate cofactors",
+      "uniformity": "Uniform fixed-template calculation",
+      "circuit_size": "No lower-bound conclusion; residual identity has a three-gate selector form",
+      "circuit_depth": "Unrestricted in later circuit applications",
+      "fan_in": "Encoded formula AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every suffix length m>=1, every m-bit suffix, and all four two-bit tokens",
+      "case_regime": "Exact total-language decision including malformed suffixes",
+      "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-010",
+      "label": "PROVED",
+      "statement": "A full two-bit cofactor square can contain one arbitrary hard function and three zero functions while the hard cofactor differs in minimum circuit size by at most three selector gates.",
+      "computational_model": "General acyclic Boolean circuits and all four restrictions of two selector bits",
+      "uniformity": "Fully non-uniform circuit complexity",
+      "circuit_size": "Exact minimum gate count; hard-cofactor size gap at most three",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every positive-arity nonzero Boolean function G",
+      "case_regime": "Worst-case exact total Boolean functions; no promise or distribution",
+      "evidence": "proofs/LEMMA-010-one-hot-cofactor-selector.md"
+    },
+    {
+      "id": "GATE-004F-FOUR-COFACTOR",
+      "label": "NO-GO",
+      "statement": "The complete local operator-bit cofactor table—one SAT-like hard residual and three zero residuals—does not generically force substantial loss inside the selected hard column.",
+      "computational_model": "Minimum unrestricted circuits and all four cofactors of two selector coordinates",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Generic hard-cofactor gap can be at most three gates",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every positive-arity nonzero core G in the one-hot selector construction",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-010-one-hot-cofactor-selector.md; docs/no-go-ledger.md NG-015"
     }
   ]
 }

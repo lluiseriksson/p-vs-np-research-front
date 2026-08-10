@@ -51,6 +51,9 @@ truth. Each row has exactly one label.
 | ENC-005 | PROVED | A prefix two bits from the neutral context has constant-zero SAT-gamma residual | `docs/sat-encoding.md`; reference test | Supplies a local cofactor comparison only |
 | LEMMA-009 | PROVED | Adjacent hard and zero cofactors can differ in minimum complexity by only one selector gate | `proofs/LEMMA-009-annihilating-cofactor-selector.md` | Generic selector limitation |
 | GATE-004F-ANNIHILATOR | NO-GO | A nearby zero residual does not generically force loss inside the retained hard column | LEMMA-009; NG-014 | Full SAT-specific cofactor structure remains open |
+| ENC-006 | PROVED | The complete local operator-bit square has one SAT residual and three zero residuals | `docs/sat-encoding.md`; reference test | Exact local output table only |
+| LEMMA-010 | PROVED | A one-hot two-bit selector retains an arbitrary hard core with only three gates overhead | `proofs/LEMMA-010-one-hot-cofactor-selector.md` | Generic selector limitation |
+| GATE-004F-FOUR-COFACTOR | NO-GO | The complete local one-hard/three-zero cofactor table does not force hard-column loss | LEMMA-010; NG-015 | A nonlocal SAT-specific invariant is required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

@@ -155,6 +155,12 @@ SAT cofactor. LEMMA-009 proves that this proximity still has no generic force:
 zero. This is `GATE-004F-ANNIHILATOR — NO-GO`; the next audit uses the complete
 two-bit cofactor table rather than the hard/zero pair alone.
 
+ENC-006 completes that audit: the four residuals are exactly one SAT column and
+three zero columns. LEMMA-010 shows that this entire table is realized by a
+three-gate one-hot selector around an arbitrary core. Therefore
+`GATE-004F-FOUR-COFACTOR — NO-GO`; the next attack must use nonlocal prefix
+residual structure rather than any constant-width operator window.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification
