@@ -3568,7 +3568,7 @@
       "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with affine prefix geometry over F_2",
       "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
       "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
-      "evidence": "proofs/GATE-004AE-width-four-sparse-rigidity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
+      "evidence": "proofs/GATE-004AE-width-four-sparse-rigidity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md; proofs/LEMMA-107-one-negative-clause-tail-bracket.md; proofs/LEMMA-108-four-positive-one-negative-width-five-packing.md; proofs/GATE-004AG-one-negative-width-five-tail.md"
     },
     {
       "id": "LEMMA076", "label": "PROVED",
@@ -4011,6 +4011,38 @@
       "circuit_size": "No lower bound; at most three local witness blocks", "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "Encoded AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and interval geometry",
       "asymptotic_quantifiers": "Every sufficiently interior quartet with at least one consecutive gap at least 72 and every ordinary zero mask 1 through 14", "case_regime": "Exact worst-case witness theorem; not a circuit lower bound or terminal result",
       "evidence": "proofs/LEMMA-106-large-gap-quartet-coverage.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md; proofs/LEMMA-104-one-block-singleton-pair-patterns.md; proofs/LEMMA-105-three-block-full-zero-triples.md; artifacts/cycle-094-large-gap-quartet-closure.md"
+    },
+    {
+      "id": "LEMMA107", "label": "PROVED",
+      "statement": "A nonconstant base conjoined with m disjoint clauses having p positive literals and one negative literal has circuit size between K+(p+1)m and K+(p+2)m; the displayed upper circuit has at least (p+3)m diagonal tail classes.",
+      "computational_model": "Globally minimum unrestricted Boolean circuits, disjoint one-negative clauses, restrictions, and exact semantic diagonal quotients", "uniformity": "Fully non-uniform base and minimizing circuit; uniform clause family and restriction sequence",
+      "circuit_size": "K+(p+1)m<=C(F)<=K+(p+2)m; displayed quotient at least (p+3)m; conditional loss at most K-m", "circuit_depth": "Base unrestricted; displayed OR and conjunction chains unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Every finite nonconstant base, every m,p at least one, every qualifying disjoint fresh input family, and every pair of distinct nonconstant designated base residuals for quotient counting", "case_regime": "Exact worst-case circuit-size bracket and displayed-representation theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-107-one-negative-clause-tail-bracket.md; proofs/LEMMA-048-width-w-clause-exact-tail.md; artifacts/cycle-095-one-negative-width-five-tail.md"
+    },
+    {
+      "id": "LEMMA108", "label": "PROVED",
+      "statement": "Every distant quintuple in a three-bounded-block option family with one exception admits a common signed width-five clause having exactly four positive and one negative literal.",
+      "computational_model": "Binary option families, three bounded zero intervals, one exceptional option, fixed-sign width-five clauses, and matching", "uniformity": "Uniform distant quintuples and deterministic absent-pattern selection; arbitrary qualifying option family",
+      "circuit_size": "No lower bound; fixed-sign common width-five packing at least floor(N/5) per slot", "circuit_depth": "Later circuits unrestricted", "fan_in": "Clause OR two; literal NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Every N,B with floor(N/5) at least B, every qualifying option family, and every s at least one in the slot-product application", "case_regime": "Exact worst-case combinatorial witness theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-108-four-positive-one-negative-width-five-packing.md; proofs/LEMMA-076-three-block-one-exception-retains-width-five.md; artifacts/cycle-095-one-negative-width-five-tail.md"
+    },
+    {
+      "id": "GATE004AG", "label": "EXPLORATORY",
+      "statement": "The canonical GATE004AE base conjoined with the LEMMA108 tail has either exact K+6m upper-circuit minimality with 7m tail classes or representation-independent minimum-circuit quotient surplus C(F)-K+m.",
+      "computational_model": "Minimum unrestricted Boolean circuits for the canonical GATE004AE base conjoined with disjoint four-positive one-negative width-five clauses; exact diagonal semantic quotients", "uniformity": "Uniform canonical witnesses and clause selection; fully non-uniform minimizing circuits",
+      "circuit_size": "Target size K+6m or quotient surplus C(F)-K+m; proved bracket K+5m<=C(F)<=K+6m; displayed quotient 7m only before minimality", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with inherited affine prefix geometry over F_2 only in base rows",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical parameter choice with m=s*floor(N/5) and the LEMMA108 clause family", "case_regime": "Worst-case exact falsification gate for GATE004AE; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AG-one-negative-width-five-tail.md; proofs/LEMMA-107-one-negative-clause-tail-bracket.md; proofs/LEMMA-108-four-positive-one-negative-width-five-packing.md"
+    },
+    {
+      "id": "GATE004AG-RESTRICTION-ONLY", "label": "NO-GO",
+      "statement": "Essential-variable restriction plus exact positive-clause cost cannot prove GATE004AG because it yields K+5m, exactly m below the displayed upper circuit and required quotient certificate.",
+      "computational_model": "Unrestricted Boolean circuits, essential-variable restrictions, disjoint one-negative width-five tails, and diagonal quotient targets", "uniformity": "Fully non-uniform base and minimizing circuit; uniform restriction method",
+      "circuit_size": "Method lower bound K+5m versus upper K+6m; exact deficit m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "None; Boolean circuits only",
+      "asymptotic_quantifiers": "Every finite nonconstant base and every m at least one qualifying disjoint clause family", "case_regime": "Structural no-go for the restriction-only proof method; GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AG-restriction-only.md; proofs/LEMMA-107-one-negative-clause-tail-bracket.md; docs/no-go-ledger.md NG-081; artifacts/cycle-095-one-negative-width-five-tail.md"
     }
   ]
 }

@@ -24,6 +24,10 @@ pattern defines a non-tautological signed width-five clause whose unique
 falsifying assignment is that pattern. Choose one per quintuple. This gives
 `floor(N/5)` pairwise coordinate-disjoint common signed width-five clauses.
 
+More sharply, the exception can realize at most one of the five four-zero
+patterns, so at least four such patterns remain absent on every quintuple.
+LEMMA-108 records the resulting four-positive/one-negative packing.
+
 Applied to the LEMMA-075 slots, `B=68` and the exceptional option is `A_rho`.
 The lemma exposes a next-width tail but says nothing about its exact circuit
 cost, minimum representations, or quotient survival.

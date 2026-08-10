@@ -1589,3 +1589,24 @@ domain is small enough to audit and passes all 22,500 types. LEMMA-104/105/106
 later bypass the large corrected quartet domain and restore GATE-004AD without
 reviving the unsafe reduction. No circuit or terminal claim is affected
 positively; P versus NP remains open.
+
+## NG-081 — essential restrictions certify the one-negative width-five tail
+
+**Label: NO-GO**
+
+Scope: use the LEMMA-108 four-positive/one-negative disjoint width-five tail,
+restrict its `m` negative variables to one, and combine earliest-dependent-
+gate elimination with LEMMA-048's exact positive-clause cost to prove the
+minimality-or-quotient alternative in GATE-004AG.
+
+Failure: LEMMA-107 gives only `K+5m<=C(F)<=K+6m`. The restriction lower bound
+is short by exactly `m` gates, which is also the entire quotient surplus
+needed to derive displayed loss at most `K-m`. Treating the local clause
+circuits as additively mandatory would silently assume the desired direct-sum
+property for unrestricted DAGs.
+
+Model: minimum unrestricted non-uniform Boolean circuits; disjoint signed
+width-five clauses with four positive and one negative literal; AND/OR fan-in
+two and NOT fan-in one; exact worst-case quantifiers; no randomness, advice,
+oracle, promise, distribution, or algebraic computation. The restriction-only
+method is closed, while GATE-004AG, GATE-004AE, and P versus NP remain open.

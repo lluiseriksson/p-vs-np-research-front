@@ -128,6 +128,10 @@ Adjacent collision-aware active branch:
      + GATE-004AD-CORRECTED-FULL-AUDIT (proved; large sweep retired)
   <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
      - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
+     + LEMMA-108 (linear four-positive/one-negative width-five packing)
+     + LEMMA-107 (`K+5m..K+6m` tail-cost bracket; displayed `7m` quotient)
+     <- GATE-004AG (active smallest tail brick): exact minimality or quotient survival
+        - GATE-004AG-RESTRICTION-ONLY (no-go: lower certificate misses by `m`)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

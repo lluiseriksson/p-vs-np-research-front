@@ -8,11 +8,12 @@ minimum unrestricted circuit agreeing with SAT-gamma on the canonical
 expanded rows and these witnesses has polynomial positive average diagonal
 quotient loss.
 
-This is falsifiable. A common predicate tail with exact additive circuit cost
-and enough representation-independent quotient classes, or a width-five
-packing whose cost survives minimum-circuit compression, refutes the proposed
-forcing mechanism. The first attack is the width-five clause ladder; overlap
-and nonclausal predicates remain explicit parallel obligations.
+This is falsifiable. LEMMA-108 now supplies a linear disjoint width-five tail
+with exactly four positive literals and one negative literal per clause.
+LEMMA-107 proves `K+5m<=C(F)<=K+6m` and a displayed `7m`-class quotient, but
+the exact upper minimality or representation-independent quotient survival is
+open. GATE-004AG isolates that next tail brick. Overlap and nonclausal
+predicates remain explicit parallel obligations.
 
 Even a proof would establish only the next local rigidity brick. The recorded
 GATE-004 and GATE-005 bridges would still be required before any terminal

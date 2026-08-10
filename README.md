@@ -762,13 +762,22 @@ the same three-block budget. All remaining types are exactly the historical
 corrected full-audit gate return explicitly to `PROVED`; the 9,515,749-type
 production sweep is retired, not silently assumed.
 
+The ninety-fifth cycle attacks GATE-004AE rather than extrapolating from the
+restored witness theorem. LEMMA-108 proves that every distant quintuple
+retains a common signed width-five clause with exactly four positive literals
+and one negative literal. LEMMA-107 gives the exact bracket
+`K+5m<=C(F)<=K+6m`; the displayed upper circuit has `7m` tail classes, but
+essential restrictions miss minimality by exactly `m`. GATE-004AG isolates
+the required minimality-or-quotient theorem, while the restriction-only route
+is `NO-GO`. GATE-004AE and every terminal bridge remain `EXPLORATORY`.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 091 exposed an unsafe reduction; Cycles 092–094 replace it with safe geometry, a phase audit, and an analytic large-gap closure that restores the width-four theorem. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycle 095 isolates the next fixed-sign tail and its exact one-gate-per-clause proof gap. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Three-block contexts again have an audited width-four sparsity proof, but GATE-004AE rigidity, width-five/overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

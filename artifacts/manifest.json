@@ -435,6 +435,10 @@
       "sha256": "c97c9f4617a9bc2866fcbe72d21b158f47bd1639d770ded72d98272403a1a27c"
     },
     {
+      "path": "artifacts/cycle-095-one-negative-width-five-tail.md",
+      "sha256": "b80225e1ebfb5e45c928a1432a19ebbe9f7163e6199b19461cfafc961bad4b35"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -460,7 +464,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "31438ab4590d17406f188d8f74c95405e6750b6de9985b272cc1c18f9a91f8dc"
+      "sha256": "0c9eccb2e196369664b941f0078cff337e4f12606a596254798cd99b1185ed53"
     },
     {
       "path": "docs/problem-statement.md",
@@ -468,7 +472,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "fd958bc5c6af3ce3d092cef7b7c48656f1b8d93add097f1ab70644bd3ca448e5"
+      "sha256": "8738a26f3253a011c50976d315487ca6e8a3f85b0ad2fd5a1690629575eb8698"
     },
     {
       "path": "docs/result-labels.md",
@@ -564,11 +568,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "256261d67daaf71d3873e48c64ac25d0b9c82636e6a4bdacc31b7ae55e259c5a"
+      "sha256": "49faf828ed2bbb1f04f80d363f47d9f4a89e5342bc3950a0614f36fcda7b4e62"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "fec829689e3a202dbca24c7a3600564ae57d527b561487af36d1ab17c68fb453"
+      "sha256": "341d346cf4f85033aba4640e1f2b688001f5c679d4f5e036a485514d01be1826"
     },
     {
       "path": "experiments/README.md",
@@ -648,7 +652,7 @@
     },
     {
       "path": "proofs/GATE-004AE-width-four-sparse-rigidity.md",
-      "sha256": "20155045ac23eeb3a4e32ad052c15506d508487ac69789823758ba210ff9cbaf"
+      "sha256": "7e32b0115fbb21e52db4691b7ce55e8d6c9eff4201276702004a1b74fb3eb319"
     },
     {
       "path": "proofs/GATE-004AF-four-block-width-five-sparsity.md",
@@ -709,6 +713,14 @@
     {
       "path": "proofs/GATE-004AF-two-id-repair-only.md",
       "sha256": "fc50c09c5c2fd81a55afd8e43862fa4f5a12654089939987eb34f5938176fef2"
+    },
+    {
+      "path": "proofs/GATE-004AG-one-negative-width-five-tail.md",
+      "sha256": "6a4a66d9cc890d000381decc9ba41646ba068935b8352eda77d7d1367a7a8e58"
+    },
+    {
+      "path": "proofs/GATE-004AG-restriction-only.md",
+      "sha256": "8e88c1069b96ea7c9795a153cea0ca940f056d5050a7a62ac844728e8ea5d553"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1176,7 +1188,7 @@
     },
     {
       "path": "proofs/LEMMA-076-three-block-one-exception-retains-width-five.md",
-      "sha256": "c2029f24d6b17b60b43d6de96318e3db40466b02cd0bfd68945fe8ec246bb240"
+      "sha256": "3d1d9b82f1c41bf1f6a60c89292baf976016e5dc415d76bfc9a1cc3936a13c1f"
     },
     {
       "path": "proofs/LEMMA-077-length68-four-block-quintet-obstruction.md",
@@ -1299,8 +1311,16 @@
       "sha256": "986defcbe42d499b69ceefabc1344d7382686fb27adfbffd99893c1fec74b7df"
     },
     {
+      "path": "proofs/LEMMA-107-one-negative-clause-tail-bracket.md",
+      "sha256": "a014bacd6c80977711eb53c221bd8324f7350c9884433ca7c8db752337e70de3"
+    },
+    {
+      "path": "proofs/LEMMA-108-four-positive-one-negative-width-five-packing.md",
+      "sha256": "62db64206d48af23e7ebd1bce5f493d9e86c5a4a477cd188e938459aabe55747"
+    },
+    {
       "path": "README.md",
-      "sha256": "d9a5d28f73f45ae76a1c9a2fdd7e91d711e55b0db59f857c767088204443922d"
+      "sha256": "40e557d1d896a995d5bbec4dcb5b5cf1b5b7db6773138c2f5818e90c3ca0bd0e"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1312,7 +1332,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "330e5416c57fd9ec2929c6327a4aca3c4acdf5ebc66a3ff2ae144783a89911db"
+      "sha256": "03db3fca62ab9510a3f030068ef368a5e021d87c4fd23a4b09aea18e3a0bc310"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
