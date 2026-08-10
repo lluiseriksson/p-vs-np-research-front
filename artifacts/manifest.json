@@ -308,7 +308,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "12f99631bf1733354f4b2598718b5a063d8b9503e2c58e0b88ecdfa5a1c395a2"
+      "sha256": "b8a9939d5d8abeb4cc52a77c8912ffaa9a38287b77b2037f14b95889cf6b769b"
     },
     {
       "path": "docs/problem-statement.md",
@@ -412,11 +412,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3c7297ccb3106511b0a6b15ef6a5c5d02f1d57a170f807477265eb0bff11a7ce"
+      "sha256": "0be925b01dec05e0ce3b562e16159238b0f72ba7581b1223d64ea7a367fd6343"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "64ac6cccd59141bbfbd9b2013985580f52aeae7f4703ea7aa7ba45b3e60aa84c"
+      "sha256": "20f24330b590bded4e9b3682ad5759da71413f43493f529a9ffa497197fdd33c"
     },
     {
       "path": "experiments/README.md",
@@ -459,8 +459,16 @@
       "sha256": "6eac66be5d95d3bbfa54902c71b9fb0895346a9eacd584ca2c7d835b0e26d7d4"
     },
     {
+      "path": "proofs/GATE-004AC-width-three-only.md",
+      "sha256": "0d982fc67f671107728c2b5feef8e7ae7a0af11c2867677a5cff154a0d5e5f71"
+    },
+    {
       "path": "proofs/GATE-004AC-width-three-sparse-rigidity.md",
       "sha256": "2773c2cf39c08b2510e918a23956651f2930a2ddfada563d9d7da1048737f2ca"
+    },
+    {
+      "path": "proofs/GATE-004AD-three-block-width-four-sparsity.md",
+      "sha256": "fa5cabfff7efa4941c5a458a533f4c1bf0d9c9aa6a5f9afb271979a2bcc74a0c"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -911,8 +919,12 @@
       "sha256": "d57a6ba1372cb2b0871662a861da887e4a63e9f2eecfe4bdbc42cab6f4f421ef"
     },
     {
+      "path": "proofs/LEMMA-072-two-block-one-exception-retains-width-four.md",
+      "sha256": "e84006ebebd7c4d1fbc4aeee9cb6054776ab66813651694047bfc6004d16d934"
+    },
+    {
       "path": "README.md",
-      "sha256": "c8276044b341c8aafd9075e1f78a4eec93ab898f7edb39adda7d62aab8457271"
+      "sha256": "cc47d0c97a5989fa58d56fca81248efdd0e9d2b56ab0b7393812b9f0f046e828"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -924,7 +936,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "b13d2e202ec2f4ca9180b33c86f7a90bf8190adb6125b457957eb0109b11b00a"
+      "sha256": "12a9acc287e203856b0764a05730d1c54379320844641890c585bdd65b24e880"
     },
     {
       "path": "verification/generate_manifest.py",

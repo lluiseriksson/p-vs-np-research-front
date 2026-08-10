@@ -3471,6 +3471,34 @@
       "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
       "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
       "evidence": "proofs/GATE-004AC-width-three-sparse-rigidity.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md"
+    },
+    {
+      "id": "LEMMA072", "label": "PROVED",
+      "statement": "Options with at most two bounded zero intervals and one arbitrary exception retain floor(N/4) disjoint common signed width-four clauses.",
+      "computational_model": "Binary option families, two bounded zero intervals, one exception, signed width-four clauses, and matching",
+      "uniformity": "Uniform distant quadruples; arbitrary bounded alphabets and exception", "circuit_size": "No lower bound; packing at least floor(N/4)",
+      "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Every N,B with floor(N/4) at least B", "case_regime": "Exact combinatorial obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-072-two-block-one-exception-retains-width-four.md"
+    },
+    {
+      "id": "GATE004AC-WIDTH3-ONLY", "label": "NO-GO",
+      "statement": "Width-three sparsity cannot control all disjoint signed tails because the two-block family retains a linear width-four packing.",
+      "computational_model": "Exact two-block slot products and signed clause matching", "uniformity": "Uniform witnesses; no circuit selected",
+      "circuit_size": "No lower bound; width-four packing linear per slot", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large rho", "case_regime": "Width-threshold method no-go only; GATE-004AC and P versus NP remain open",
+      "evidence": "proofs/GATE-004AC-width-three-only.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md; docs/no-go-ledger.md NG-061"
+    },
+    {
+      "id": "GATE004AD", "label": "EXPLORATORY",
+      "statement": "Three-block neutral slot families bound every disjoint common signed clause family through width four by a constant per slot.",
+      "computational_model": "Exact three-block neutral contexts, one long option, signed clauses through width four, and matching",
+      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; target constant-per-slot matching through width four",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation",
+      "asymptotic_quantifiers": "Exists fixed L,c_4; every sufficiently large rho; every disjoint width-at-most-four common family",
+      "case_regime": "Exact witness-construction gate; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AD-three-block-width-four-sparsity.md; proofs/LEMMA-072-two-block-one-exception-retains-width-four.md"
     }
   ]
 }

@@ -1269,3 +1269,13 @@ Two nonoverlapping blocks cannot jointly alter one aligned chunk, and the one
 long option adds at most one missing pattern. Hence `rho` disjoint common
 signed triples remain per slot. Identifier-10/12 enrichment repairs this
 specific defect, but GATE-004AB and P versus NP remain open.
+
+## NG-061 — width-three sparsity controls all disjoint signed tails
+
+**Label: NO-GO**
+
+LEMMA-072 gives `floor(rho)` distant disjoint common signed width-four clauses
+per slot when options contain at most two bounded blocks plus `A_rho`.
+Therefore the proved width-three hitting set cannot be extrapolated to higher
+width. This is an incidence no-go only: the circuit cost of the width-four
+tail, GATE-004AC, and P versus NP remain open.

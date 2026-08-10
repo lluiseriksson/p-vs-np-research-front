@@ -270,6 +270,9 @@ truth. Each row has exactly one label.
 | LEMMA-070 | PROVED | Identifier-10/12 neutral contexts supply `101/110` and complete every aligned triple after the first five | `proofs/LEMMA-070-identifier-enriched-aligned-completeness.md`; reference test | Aligned packing repaired; nonaligned triples open |
 | LEMMA-071 | PROVED | Identifiers 1 through 68 realize all seven nonzero triple patterns with two blocks; `A_rho` yields a 78-coordinate hitting set | `proofs/LEMMA-071-two-block-seven-pattern-universality.md`; reference test | Proves GATE-004AB |
 | GATE-004AC | EXPLORATORY | Prove positive diagonal loss on width-three-sparse two-block slot products | `proofs/GATE-004AC-width-three-sparse-rigidity.md`; LEMMA-071 | New smallest positive brick; width four/overlap/nonclausal remain |
+| LEMMA-072 | PROVED | Two bounded zero intervals plus one exception retain `floor(N/4)` disjoint common signed width-four clauses | `proofs/LEMMA-072-two-block-one-exception-retains-width-four.md` | Exposes the next-width tail; no circuit conclusion |
+| GATE-004AC-WIDTH3-ONLY | NO-GO | Width-three sparsity cannot control all disjoint tails because a linear width-four packing survives | `proofs/GATE-004AC-width-three-only.md`; LEMMA-072; NG-061 | GATE-004AC remains open |
+| GATE-004AD | EXPLORATORY | Use up to three translated neutral blocks to bound disjoint common signed clauses through width four | `proofs/GATE-004AD-three-block-width-four-sparsity.md`; LEMMA-072 | New constructive audit |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

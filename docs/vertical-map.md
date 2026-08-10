@@ -114,6 +114,8 @@ Adjacent collision-aware active branch:
      + LEMMA-070 (identifier-10/12 contexts repair interior aligned triples)
      + LEMMA-071 (proved seven-pattern universality and `78s` matching bound)
   <- GATE-004AC (active smallest positive brick): width-three-sparse rigidity
+     - GATE-004AC-WIDTH3-ONLY (no-go by LEMMA-072)
+  <- GATE-004AD (active constructive audit): three-block sparsity through width four
 
 Stronger dependent-region branch:
   GATE-004I

@@ -574,6 +574,12 @@ Every common signed clause through width three therefore meets a 78-coordinate
 hitting set, proving GATE-004AB. GATE-004AC is the new positive brick, with
 width-four, overlapping, and nonclausal predicates still open.
 
+The sixty-eighth cycle finds the next-width ladder obstruction. LEMMA-072
+uses distant quadruples: two bounded blocks can zero at most two coordinates,
+so five patterns with at least three zeros are absent and the sole long option
+can add only one. A linear common signed width-four packing survives.
+GATE-004AC-WIDTH3-ONLY is `NO-GO`; GATE-004AD opens the three-block repair.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
