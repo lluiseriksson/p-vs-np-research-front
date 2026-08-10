@@ -99,6 +99,8 @@ truth. Each row has exactly one label.
 | GATE-004I-GLOBAL-POOLING | NO-GO | A small quotient pooled across all identifiers cannot be credited to any pair without subtracting cross-pair overlap | LEMMA-020; NG-024 | Must bound the sum of pairwise quotients directly |
 | LEMMA-021 | PROVED | Complementary columns force `R` suffix-boundary signals and `R` binary gates in the prefix-dependent top region | `proofs/LEMMA-021-prefix-dependent-top-region.md` | Locates internal selector structure; no quotient loss |
 | GATE-004J | EXPLORATORY | Prove average pairwise loss by a positive power of the forced prefix-dependent top region | `proofs/GATE-004J-dependent-region-loss.md` | Active smallest brick; sufficient for GATE-004I |
+| LEMMA-022 | PROVED | `k` suffix-boundary signals admit `2^(2^k)-k-2` nonconstant non-coordinate functions, dwarfing polynomial gate counts | `proofs/LEMMA-022-boundary-function-universe.md` | Exact semantic-capacity ceiling |
+| GATE-004J-BOUNDARY-PIGEONHOLE | NO-GO | Dependent-region size and boundary arity alone cannot force residual-function collisions | LEMMA-022; NG-025 | Requires a smaller SAT-specific trace family |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

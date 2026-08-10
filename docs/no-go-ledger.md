@@ -484,3 +484,23 @@ Model: exact unrestricted non-uniform multi-output acyclic circuits; unbounded
 depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle,
 field, promise, or distribution. The no-go does not exclude a SAT-specific
 upper bound on the full quantity `Q+X=sum_j q_j`.
+
+## NG-025 — pigeonholing dependent-region residual functions
+
+**Label: NO-GO**
+
+Scope: use LEMMA-021's polynomially large prefix-dependent region, observe that
+every restricted gate becomes a function of the suffix-boundary signals, and
+infer many semantic collisions merely because there are many gate occurrences.
+
+Failure: LEMMA-022 counts `2^(2^k)-k-2` possible nonconstant, non-coordinate
+functions of `k` boundary bits. LEMMA-021 gives `k=Omega(n^c)`, so this class
+universe is double-exponential in a polynomial of `n`. Two copies of any
+polynomial-size region contain only polynomially many gate occurrences and do
+not trigger the pigeonhole principle. “Many dependent gates” is therefore not
+quantitatively close to “more gates than residual functions.”
+
+Model: exact unrestricted non-uniform semantic residual classes; unbounded
+depth; fan-in-two AND/OR and fan-in-one NOT in the parent; no randomness,
+advice, oracle, field, promise, or distribution. The no-go leaves open a
+SAT-specific theorem placing actual residual traces in a far smaller family.

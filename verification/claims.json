@@ -1377,6 +1377,40 @@
       "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the selected block",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004J-dependent-region-loss.md"
+    },
+    {
+      "id": "LEMMA-022",
+      "label": "PROVED",
+      "statement": "There are 2^(2^k)-k-2 nonconstant non-coordinate Boolean functions of k boundary bits, eventually more than two copies of any polynomial-size gate region when k=Omega(n^c).",
+      "computational_model": "Abstract Boolean functions of suffix-boundary values exposed by a restricted circuit top region",
+      "uniformity": "Fully non-uniform semantic class universe",
+      "circuit_size": "Two-copy polynomial gate counts are eventually smaller than the available nontrivial function universe",
+      "circuit_depth": "Unrestricted in the intended application",
+      "fan_in": "AND/OR two; NOT one in the intended circuit; universe count basis-independent",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; exact finite Boolean-function counting",
+      "asymptotic_quantifiers": "Every k at least one; every fixed positive c,K,A; all sufficiently large n with k at least A n^c",
+      "case_regime": "Worst-case semantic capacity bound; method ceiling",
+      "evidence": "proofs/LEMMA-022-boundary-function-universe.md"
+    },
+    {
+      "id": "GATE-004J-BOUNDARY-PIGEONHOLE",
+      "label": "NO-GO",
+      "statement": "The number of prefix-dependent gates and the arity of their suffix boundary alone cannot force semantic residual collisions by pigeonhole counting.",
+      "computational_model": "Unrestricted non-uniform semantic residual classes in conditioned top regions",
+      "uniformity": "Fully non-uniform circuit adversary",
+      "circuit_size": "Polynomially many residual occurrences versus a double-exponential function universe",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every polynomial size exponent and every positive boundary exponent at sufficiently large lengths",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-022-boundary-function-universe.md; docs/no-go-ledger.md NG-025"
     }
   ]
 }

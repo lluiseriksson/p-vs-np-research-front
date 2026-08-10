@@ -189,13 +189,20 @@ signal. GATE-004J is the new smallest brick: prove that conditioning removes or
 merges a positive power of this forced region on average, including the split-
 class charge.
 
+The twenty-second cycle tests raw semantic pigeonholing inside that region.
+LEMMA-022 shows that `k=Omega(n^c)` boundary signals admit a double-exponential
+universe of residual functions, vastly more than the two copies of any
+polynomial-size region. Region size plus boundary arity cannot force even one
+collision. This route is `NO-GO`; the next transfer must prove that SAT's
+actual gate traces occupy a much smaller structured family.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 60% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent, cross-identifier, and prefix-dependent-region accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 61% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent, cross-identifier, prefix-dependent-region, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | A polynomially large prefix-dependent region is located, but no loss from that region, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | A polynomially large prefix-dependent region is located, but raw collision counting fails and no loss, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

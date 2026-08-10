@@ -301,6 +301,14 @@ average, after all split classes are charged. Its proof would imply GATE-004I;
 its failure must identify a circuit architecture in which the entire large
 dependent region survives or splits under essentially every pair.
 
+Raw semantic pigeonholing does not perform this transfer. With `k` boundary
+signals there are `2^(2^k)-k-2` nonconstant non-coordinate functions, and
+LEMMA-021 has `k=Omega(n^c)`. LEMMA-022 therefore shows that polynomially many
+restricted gate occurrences occupy a negligible fraction of the possible
+classes. `GATE-004J-BOUNDARY-PIGEONHOLE — NO-GO` requires the next attack to
+prove a SAT-specific restriction on the trace family, not merely count its
+formal inputs.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification
