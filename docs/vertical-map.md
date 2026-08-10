@@ -121,6 +121,8 @@ Adjacent collision-aware active branch:
      - GATE-004AD-INITIAL-LENGTH68-REPAIR-ONLY (no-go by six finite failures)
      + LEMMA-075 (proved fourteen-pattern universality and `142s` matching bound)
   <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
+     - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
+  <- GATE-004AF (active constructive audit): four-block sparsity through width five
 
 Stronger dependent-region branch:
   GATE-004I
@@ -697,11 +699,11 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AE
+### Current operational brick: GATE-004AF
 
 The exact falsifiable statement and model card are in
-`proofs/GATE-004AE-width-four-sparse-rigidity.md`. LEMMA-075 supplies the
-width-four-sparse witness family, but no positive circuit loss is known.
+`proofs/GATE-004AF-four-block-width-five-sparsity.md`. LEMMA-076 shows why the
+proved width-four witness theorem cannot end the disjoint-clause ladder.
 
 ## Downstream amplification obligation: GATE-005
 

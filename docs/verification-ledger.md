@@ -282,6 +282,9 @@ truth. Each row has exactly one label.
 | GATE-004AD-INITIAL-LENGTH68-REPAIR-ONLY | NO-GO | The first 86-identifier repair set retains six mask-8 quartet failures | `proofs/GATE-004AD-initial-length68-repair-only.md`; fast exhaustive verifier; NG-064 | Six explicit identifiers repair it |
 | LEMMA-075 | PROVED | A 92-identifier alphabet realizes all fourteen ordinary nonzero masks through width four and yields a 142-coordinate hitting set per slot | `proofs/LEMMA-075-three-block-fourteen-pattern-universality.md`; fast exhaustive verifier; regression test | Proves GATE-004AD only |
 | GATE-004AE | EXPLORATORY | Prove positive diagonal loss on width-four-sparse three-block slot products | `proofs/GATE-004AE-width-four-sparse-rigidity.md`; LEMMA-075 | New smallest positive brick; width five/overlap/nonclausal remain |
+| LEMMA-076 | PROVED | Three bounded zero intervals plus one exception retain `floor(N/5)` disjoint common signed width-five clauses | `proofs/LEMMA-076-three-block-one-exception-retains-width-five.md` | Exposes next-width tail; no circuit conclusion |
+| GATE-004AE-WIDTH4-ONLY | NO-GO | Width-four sparsity does not control all disjoint tails because a linear width-five packing survives | `proofs/GATE-004AE-width-four-only.md`; LEMMA-076; NG-065 | GATE-004AE remains open |
+| GATE-004AF | EXPLORATORY | Use up to four translated neutral blocks to bound disjoint common signed clauses through width five | `proofs/GATE-004AF-four-block-width-five-sparsity.md`; LEMMA-076 | New constructive audit |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

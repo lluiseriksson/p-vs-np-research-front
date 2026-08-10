@@ -607,6 +607,14 @@ coordinates per slot. GATE-004AD is deliberately `PROVED` as a witness theorem
 only. GATE-004AE is the new positive rigidity brick; no circuit lower bound or
 terminal progress is inferred.
 
+The seventy-second cycle exposes the next-width ladder without promoting a
+circuit claim. LEMMA-076 proves that three bounded blocks plus one exceptional
+option retain `floor(N/5)` disjoint common signed width-five clauses: ordinary
+options omit six four-or-five-zero patterns on every distant quintuple, and
+the exception repairs at most one. GATE-004AE-WIDTH4-ONLY is `NO-GO`.
+GATE-004AE itself remains open because tail cost and quotient survival are not
+proved. GATE-004AF opens the four-block width-five construction audit.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

@@ -3569,6 +3569,33 @@
       "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
       "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
       "evidence": "proofs/GATE-004AE-width-four-sparse-rigidity.md; proofs/LEMMA-075-three-block-fourteen-pattern-universality.md"
+    },
+    {
+      "id": "LEMMA076", "label": "PROVED",
+      "statement": "Options with at most three bounded zero intervals and one arbitrary exception retain floor(N/5) disjoint common signed width-five clauses.",
+      "computational_model": "Binary option families, three bounded zero intervals, one arbitrary exception, signed width-five clauses, and matching",
+      "uniformity": "Uniform distant quintuples; arbitrary bounded alphabets and exceptional option", "circuit_size": "No lower bound; common signed width-five packing at least floor(N/5)",
+      "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence only",
+      "asymptotic_quantifiers": "Every N,B with floor(N/5) at least B; every qualifying option family", "case_regime": "Exact worst-case combinatorial obstruction; not an average-case, promise, circuit, or terminal result",
+      "evidence": "proofs/LEMMA-076-three-block-one-exception-retains-width-five.md"
+    },
+    {
+      "id": "GATE004AE-WIDTH4-ONLY", "label": "NO-GO",
+      "statement": "Width-four sparsity cannot control all disjoint signed tails because the three-block family retains a linear width-five packing.",
+      "computational_model": "Exact three-block slot products and signed clause matching", "uniformity": "Uniform witnesses; no circuit selected",
+      "circuit_size": "No lower bound; width-five common packing linear per slot", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large slot with floor(N/5) at least 68", "case_regime": "Width-threshold method no-go only; GATE-004AE and P versus NP remain open",
+      "evidence": "proofs/GATE-004AE-width-four-only.md; proofs/LEMMA-076-three-block-one-exception-retains-width-five.md; docs/no-go-ledger.md NG-065"
+    },
+    {
+      "id": "GATE004AF", "label": "EXPLORATORY",
+      "statement": "Four-block neutral slot families bound every disjoint family of non-tautological common signed clauses through width five by a constant per slot.",
+      "computational_model": "Exact four-block neutral contexts, one long option, signed clauses through width five, and matching",
+      "uniformity": "Uniform finite alphabet and placements; later circuits fully non-uniform", "circuit_size": "No lower bound; target constant-per-slot matching through width five",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and translation",
+      "asymptotic_quantifiers": "Exists fixed L,c_5; every sufficiently large slot; every disjoint width-at-most-five common family", "case_regime": "Exact witness-construction gate; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AF-four-block-width-five-sparsity.md; proofs/LEMMA-076-three-block-one-exception-retains-width-five.md"
     }
   ]
 }

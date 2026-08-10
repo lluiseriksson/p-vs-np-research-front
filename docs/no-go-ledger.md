@@ -1330,3 +1330,20 @@ four-coordinate finite incidence; unrestricted later non-uniform circuits;
 no randomness in the exhaustive result, advice, oracle, promise,
 distribution, or algebraic computation. GATE-004AD is separately proved by
 the repaired alphabet; P versus NP remains open.
+
+## NG-065 — width-four sparsity controls all disjoint signed tails
+
+**Label: NO-GO**
+
+LEMMA-076 partitions every sufficiently long slot into `floor(N/5)` distant
+quintuples. Three bounded blocks can place zeros on at most three coordinates,
+so all six patterns with four or five zeros are absent from ordinary options.
+The one exceptional option supplies at most one, leaving at least five common
+signed width-five clauses per quintuple and hence a linear disjoint packing.
+
+Model: exact three-block slot options; one arbitrary exception; signed
+width-five incidence and matching; later circuits fully non-uniform and
+unrestricted; no randomness, advice, oracle, promise, distribution, or
+algebraic computation. This rejects only extrapolation from the LEMMA-075
+width-four hitting set. Tail cost and quotient survival, GATE-004AE, and P
+versus NP remain open.
