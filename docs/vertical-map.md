@@ -345,6 +345,12 @@ in the quotient. `GATE-004L-SEMANTICS-ONLY — NO-GO` blocks any proof that uses
 only the computed function or conditioned-output distinctness. The next attack
 must extract a quantitative trace restriction from minimum-circuit optimality.
 
+Minimum size alone is still insufficient. LEMMA-026 exhibits a provably
+minimum circuit with distinct active cofactors but `z=t=1`.
+`GATE-004L-MINIMALITY-ONLY — NO-GO` therefore narrows the surviving proof
+obligation to a genuinely SAT-specific relation across the full identifier
+block; neither single-pair semantics nor generic optimality supplies a reserve.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification

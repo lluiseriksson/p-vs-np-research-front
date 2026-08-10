@@ -1513,6 +1513,40 @@
       "asymptotic_quantifiers": "Arbitrarily long even output chains for every active-distinct pair family",
       "case_regime": "Worst-case method-specific obstruction; explicitly nonminimum",
       "evidence": "proofs/LEMMA-025-label-score-implementation-instability.md; docs/no-go-ledger.md NG-026"
+    },
+    {
+      "id": "LEMMA-026",
+      "label": "PROVED",
+      "statement": "An explicit five-input function has minimum AND/OR/NOT circuit size five and a minimum circuit whose distinct active prefix cofactors have labelwise score z-t=0.",
+      "computational_model": "Exact five-input total Boolean function and globally minimum acyclic circuit",
+      "uniformity": "One finite non-uniform minimum circuit",
+      "circuit_size": "Exactly five gates; dependent-label score exactly zero",
+      "circuit_depth": "Three in the exhibited circuit; unrestricted in the lower bound",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "One explicit finite function and its complete one-bit prefix pair",
+      "case_regime": "Worst-case exact total-function computation; generic method counterexample",
+      "evidence": "proofs/LEMMA-026-minimum-circuit-zero-label-bias.md"
+    },
+    {
+      "id": "GATE-004L-MINIMALITY-ONLY",
+      "label": "NO-GO",
+      "statement": "Global minimum circuit size, prefix dependence, and two distinct active cofactors alone do not force a positive disappeared-minus-split label score.",
+      "computational_model": "Globally minimum unrestricted non-uniform circuits with one complete prefix pair",
+      "uniformity": "Fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Explicit minimum size five example has z-t=0",
+      "circuit_depth": "Unrestricted in the lower-bound argument",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "One explicit finite counterexample suffices against the generic implication",
+      "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
+      "evidence": "proofs/LEMMA-026-minimum-circuit-zero-label-bias.md; docs/no-go-ledger.md NG-027"
     }
   ]
 }

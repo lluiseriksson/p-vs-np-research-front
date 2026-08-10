@@ -526,3 +526,22 @@ unbounded depth; fan-in-one NOT with the parent AND/OR basis; no randomness,
 advice, oracle, field, promise, or distribution. The construction is
 deliberately nonminimum and therefore leaves GATE-004L open only as a
 minimality-sensitive theorem.
+
+## NG-027 — minimum size plus distinct active cofactors
+
+**Label: NO-GO**
+
+Scope: repair NG-026 by assuming the parent circuit is globally minimum, then
+infer a strictly positive disappeared-minus-split label score from minimum
+size, prefix dependence, and two distinct active cofactors alone.
+
+Failure: LEMMA-026 gives an explicit five-input function with a provably
+minimum five-gate AND/OR/NOT circuit. Its two `x`-cofactors are the distinct
+active functions `g OR h` and `h`, but its dependent labels have exactly one
+zero-residual label and one split label. Hence `z-t=0`, not positive.
+
+Model: exact globally minimum unrestricted non-uniform circuits; unbounded
+depth in the lower bound; fan-in-two AND/OR and fan-in-one NOT; no randomness,
+advice, oracle, field, promise, or distribution. The example is not SAT-gamma
+and has only one restriction pair, so the no-go leaves open a theorem using
+SAT's full multi-identifier trace relations.

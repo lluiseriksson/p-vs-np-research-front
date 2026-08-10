@@ -216,13 +216,19 @@ vanishes in the quotient. Semantics alone is therefore `NO-GO`. Any proof of
 GATE-004L must use minimum-circuit optimality quantitatively or restore
 `kappa`.
 
+The twenty-sixth cycle also tests generic minimum-circuit optimality. An
+explicit five-input function has a provably minimum five-gate circuit with
+distinct active cofactors but exactly `z=t=1`. Minimality plus one cofactor pair
+is therefore `NO-GO`; a GATE-004L proof must exploit SAT's relations across the
+entire identifier block.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 64% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 65% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The labelwise target is known to require quantitative minimum-circuit structure, but no positive bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | Even generic minimum-circuit structure is insufficient; no SAT-specific multi-pair bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

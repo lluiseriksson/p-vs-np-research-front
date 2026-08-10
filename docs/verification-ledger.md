@@ -111,6 +111,8 @@ truth. Each row has exactly one label.
 | GATE-004L | EXPLORATORY | Prove a polynomial average excess of disappeared dependent labels over split dependent labels | `proofs/GATE-004L-labelwise-survival-imbalance.md` | Active smallest brick; sufficient for GATE-004K |
 | LEMMA-025 | PROVED | Even NOT chains preserve the function while making the labelwise `z-t` score arbitrarily negative and increasing cross-label collisions | `proofs/LEMMA-025-label-score-implementation-instability.md` | Shows the score is not function-invariant |
 | GATE-004L-SEMANTICS-ONLY | NO-GO | Output semantics and conditioned distinctness alone cannot force positive labelwise bias | LEMMA-025; NG-026 | Any proof must use minimum-circuit structure or `kappa` |
+| LEMMA-026 | PROVED | A provably minimum five-gate circuit with distinct active cofactors has exactly `z=t=1` | `proofs/LEMMA-026-minimum-circuit-zero-label-bias.md` | Generic minimum-circuit obstruction |
+| GATE-004L-MINIMALITY-ONLY | NO-GO | Minimum size, prefix dependence, and distinct active cofactors alone do not force positive labelwise bias | LEMMA-026; NG-027 | SAT-specific multi-pair structure remains necessary |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
