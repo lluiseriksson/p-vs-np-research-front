@@ -326,6 +326,10 @@ truth. Each row has exactly one label.
 | LEMMA-126 | PROVED | Figure-eight and dumbbell three-NOT candidates for `W_6` are impossible | `proofs/LEMMA-126-bicyclic-cactus-exclusion.md`; LEMMA-121/123/125 | Only theta remains |
 | GATE-004AO | EXPLORATORY | Exclude theta-core bicyclic three-NOT circuits for fixed `W_6` | `proofs/GATE-004AO-theta-three-NOT-exclusion.md`; LEMMA-126 | Active theta gate |
 | GATE-004AO-ARTICULATION-ONLY | NO-GO | One-bit articulation factorization cannot split a theta core | `proofs/GATE-004AO-articulation-only.md`; NG-092 | Two-vertex interface required |
+| LEMMA-127 | PROVED | Every output-oriented theta core has split excess two: one ternary or two binary splits | `proofs/LEMMA-127-theta-split-budget.md` | Exact orientation classification |
+| LEMMA-128 | PROVED | A ternary-source theta core cannot compute `W_6` with three NOT gates | `proofs/LEMMA-128-theta-ternary-source-exclusion.md`; LEMMA-119/121/127 | Only binary splits remain |
+| GATE-004AP | EXPLORATORY | Exclude theta orientations with exactly two binary split vertices and three NOT gates | `proofs/GATE-004AP-two-binary-split-theta-exclusion.md`; LEMMA-127/128 | Active orientation gate |
+| GATE-004AP-SINGLE-BIT-ONLY | NO-GO | Parallel or nested binary splits do not supply a proved common one-bit interface | `proofs/GATE-004AP-single-bit-only.md`; NG-093 | Two-bit/sequential theorem required |
 | GATE-004AF | EXPLORATORY | Use up to four translated neutral blocks to bound disjoint common signed clauses through width five | `proofs/GATE-004AF-four-block-width-five-sparsity.md`; LEMMA-076 | New constructive audit |
 | LEMMA-077 | PROVED | The LEMMA-075 alphabet omits `11110` on a translation-stable quintuple under four-block unions, leaving `N/12-O(1)` common clauses | `proofs/LEMMA-077-length68-four-block-quintet-obstruction.md`; two DP implementations; regression test | Refutes alphabet reuse only |
 | GATE-004AF-LEMMA075-ALPHABET-ONLY | NO-GO | The 92-identifier width-four alphabet retains a linear signed width-five packing | `proofs/GATE-004AF-lemma075-alphabet-only.md`; LEMMA-077; NG-066 | Richer fixed alphabet required |

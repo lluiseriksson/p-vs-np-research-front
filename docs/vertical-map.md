@@ -169,7 +169,11 @@ Adjacent collision-aware active branch:
                           + LEMMA-126 (figure-eight and dumbbell candidates are impossible)
                           <- GATE-004AO (active theta brick): exclude theta-core three-NOT `W_6`
                              - GATE-004AO-ARTICULATION-ONLY (no-go: theta has no cycle-separating cut vertex)
-                             <- two-vertex/three-branch cofactor interface (next attackable brick)
+                             + LEMMA-127 (theta split-excess budget is exactly two)
+                             + LEMMA-128 (the single ternary-source orientation is impossible)
+                             <- GATE-004AP (active orientation brick): exclude two binary splits
+                                - GATE-004AP-SINGLE-BIT-ONLY (no-go: no proved common one-bit cut)
+                                <- parallel two-bit versus nested sequential interface (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

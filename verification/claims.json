@@ -4347,6 +4347,38 @@
       "circuit_size": "No additional lower bound; one-vertex factorization does not apply", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected vertex connectivity only",
       "asymptotic_quantifiers": "Every theta-core candidate in GATE004AO", "case_regime": "Structural no-go for articulation-only reuse; GATE004AO and larger gates remain open",
       "evidence": "proofs/GATE-004AO-articulation-only.md; docs/no-go-ledger.md NG-092; artifacts/cycle-107-bicyclic-core-audit.md"
+    },
+    {
+      "id": "LEMMA127", "label": "PROVED",
+      "statement": "Every output-oriented theta core has total split excess two, realized by one outdegree-three source or exactly two outdegree-two vertices.",
+      "computational_model": "DAG orientations of theta 2-cores in pruned Boolean output cones", "uniformity": "Every individual finite theta-core circuit orientation",
+      "circuit_size": "No gate lower bound; exact split-excess total two", "circuit_depth": "Unrestricted finite DAG", "fan_in": "Original AND/OR two and NOT one; core outdegree at most three", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and directed outdegree accounting",
+      "asymptotic_quantifiers": "Every output-oriented theta core in which all vertices reach one output", "case_regime": "Exact topology theorem; not a Boolean lower bound or terminal result",
+      "evidence": "proofs/LEMMA-127-theta-split-budget.md; artifacts/cycle-108-theta-orientation-audit.md"
+    },
+    {
+      "id": "LEMMA128", "label": "PROVED",
+      "statement": "No theta-core circuit whose split budget is one ternary source computes W_6 with exactly three NOT gates.",
+      "computational_model": "Ternary-source theta-core AND/OR/NOT circuits for fixed W_6 and one-bit source factorization", "uniformity": "Every individual non-uniform theta candidate with one outdegree-three split",
+      "circuit_size": "Excludes the ternary-source part of c=2,q=3; binary count would be 31", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; source fanout three allowed", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Theta orientation, one-bit cofactors, and formula inversion",
+      "asymptotic_quantifiers": "Fixed W_6 and every ternary-source theta-core circuit with exactly three NOTs", "case_regime": "Exact orientation-stratum exclusion; two-binary-split theta cases remain open",
+      "evidence": "proofs/LEMMA-128-theta-ternary-source-exclusion.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-127-theta-split-budget.md; artifacts/cycle-108-theta-orientation-audit.md"
+    },
+    {
+      "id": "GATE004AP", "label": "EXPLORATORY",
+      "statement": "No theta-core cycle-rank-two circuit with exactly two binary core split vertices and exactly three NOT gates computes W_6.",
+      "computational_model": "Two-binary-split theta-core bicyclic circuits for fixed W_6 with three NOT gates", "uniformity": "Every individual non-uniform remaining theta orientation",
+      "circuit_size": "Target exclusion of the final orientation strata inside c=2,q=3, 31 binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed theta split structure and Boolean two-bit/sequential interfaces",
+      "asymptotic_quantifiers": "Fixed W_6 and every theta-core candidate with exactly two binary core splits", "case_regime": "Exact finite structural gate; not full Hall, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AP-two-binary-split-theta-exclusion.md; proofs/LEMMA-127-theta-split-budget.md; proofs/LEMMA-128-theta-ternary-source-exclusion.md"
+    },
+    {
+      "id": "GATE004AP-SINGLE-BIT-ONLY", "label": "NO-GO",
+      "statement": "The two remaining theta splits cannot be collapsed to one intermediary bit without assuming an unproved common functional cut.",
+      "computational_model": "Two-binary-split theta orientations and attempted one-bit functional factorization", "uniformity": "Every individual non-uniform remaining theta candidate",
+      "circuit_size": "No lower bound; a common one-bit interface is unproved and generally absent topologically", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed split topology and Boolean interfaces only",
+      "asymptotic_quantifiers": "Every candidate in GATE004AP", "case_regime": "Structural no-go for single-bit reuse; GATE004AP and larger gates remain open",
+      "evidence": "proofs/GATE-004AP-single-bit-only.md; docs/no-go-ledger.md NG-093; artifacts/cycle-108-theta-orientation-audit.md"
     }
   ]
 }

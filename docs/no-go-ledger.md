@@ -1856,3 +1856,25 @@ NOT fan-in one; undirected vertex connectivity and Boolean cofactors; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. Articulation-only reuse is closed, while two-vertex GATE-004AO and
 GATE-004AN/AL/AK/AJ/AI/AH/AG/AE remain open.
+
+## NG-093 — collapse the two theta splits to one intermediary bit
+
+**Label: NO-GO**
+
+Scope: after excluding the ternary-source orientation, choose one of the two
+remaining binary split vertices as a common bit and apply LEMMA-121 exactly as
+in the one-source proof.
+
+Failure: the split budget permits two distinct source splits, whose attached
+input trees compute separate bits, or a source split followed by a non-source
+split whose value also depends on newly attached inputs. In neither topology
+has every relevant upstream variable been proved to reach the output through
+one common Boolean node. Assuming such a factorization would erase the second
+split rather than analyze it.
+
+Model: every pruned non-uniform two-binary-split theta candidate for fixed
+`W_6` with 31 binary gates and three NOT gates; unrestricted depth; AND/OR
+fan-in two and NOT fan-in one; directed split topology and Boolean cofactors;
+no randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. Single-bit collapse is closed, while two-bit/sequential GATE-004AP and
+GATE-004AO/AN/AL/AK/AJ/AI/AH/AG/AE remain open.

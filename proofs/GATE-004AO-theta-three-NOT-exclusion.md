@@ -18,6 +18,10 @@ core paths and no articulation separating a whole cycle. The next attack must
 bound the Boolean interface across a two-vertex separator or classify the
 cofactor states carried by the three branches.
 
+LEMMA-127 shows that the directed split excess is exactly two. LEMMA-128
+excludes the one-ternary-source orientation, leaving GATE-004AP with exactly
+two binary split vertices.
+
 ## Model card
 
 | Field | Value |

@@ -877,11 +877,19 @@ Articulation-only reuse is `NO-GO` there because the theta core has no
 cycle-separating cut vertex; GATE-004AO isolates a two-vertex/three-branch
 interface theorem as the next brick.
 
+The one-hundred-and-eighth cycle classifies theta orientations by an exact
+split budget. LEMMA-127 proves that the outdegree excess is two, hence the
+core has either one ternary source or exactly two binary split vertices.
+LEMMA-128 excludes the ternary source through a proved one-bit factorization.
+GATE-004AP contains only the parallel- or nested-binary-split cases. Treating
+them as one bit is `NO-GO`; the next theorem must construct a genuine two-bit
+or sequential interface.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–107 prove dependency-cone Hall through five indices and reduce the first open sextet to the theta-core bicyclic stratum. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–108 prove dependency-cone Hall through five indices and reduce the first open sextet to two binary-split theta orientations. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

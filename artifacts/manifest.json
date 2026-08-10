@@ -487,6 +487,10 @@
       "sha256": "0e7e36280492da743fb35e445e5911835b1f16bf734883a1f509efaca44e7e6b"
     },
     {
+      "path": "artifacts/cycle-108-theta-orientation-audit.md",
+      "sha256": "2df9961b5c3938f74881621b3cc6b3554e979b40ea8ff1286c4e9b7346cfc16e"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -512,7 +516,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "bfc47f222e005d03a2db20bb83b8547d40ce29bfa15311604e1cd3a6933647af"
+      "sha256": "2cc675c189c6f0287dfa93bfcef6b1d2dba29d37114a637a7a392c43c7a2fdbf"
     },
     {
       "path": "docs/problem-statement.md",
@@ -520,7 +524,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "8e3a7531867e9a6b4cad0d26f1577e25ff0661469c7b9affc41c09919188ad45"
+      "sha256": "ce68df587dd8c4b06adf5e0f01ee73a3ec6b2ca6de538d4ee2c8a46d1d7ef570"
     },
     {
       "path": "docs/result-labels.md",
@@ -624,11 +628,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c39b70b3fbdfddef91a289cc5a897e20f265bc25ed88371e4e518563794e7de3"
+      "sha256": "81e34b3f970a94913e00d6f610319c6323755e22dfd7b6b8b8ae63e466bd6818"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "5275bdb4ad8e2ccd4f4753fc082846007889f16bc67a0b41906c759cfb58f255"
+      "sha256": "b069b0df0b4b51409c5532eba6aa7339b26d451503150ccf2a42b935c4ee4d7e"
     },
     {
       "path": "experiments/README.md",
@@ -852,7 +856,15 @@
     },
     {
       "path": "proofs/GATE-004AO-theta-three-NOT-exclusion.md",
-      "sha256": "3bd6a2bb9e09c49674b6e9bacdbaea5c25502a0f99db2d8d86dd9a19d593085a"
+      "sha256": "33707785bcdbc2c61666960033da0acb1d45511a83aea397067c5fa7490d6e64"
+    },
+    {
+      "path": "proofs/GATE-004AP-single-bit-only.md",
+      "sha256": "57319b78f625e4e5c65cfd5d1a726e27ebb59b0939be5156b243c43113ed24c1"
+    },
+    {
+      "path": "proofs/GATE-004AP-two-binary-split-theta-exclusion.md",
+      "sha256": "77e727f195520eddcc95cfb4a4f4ed2ae01c2e5e1c04ab8547173385ffdea153"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1523,8 +1535,16 @@
       "sha256": "cb0873a9153e3ea7c0863ec419674b39073c2bc08a1e9e102e02689d12bd55e3"
     },
     {
+      "path": "proofs/LEMMA-127-theta-split-budget.md",
+      "sha256": "89c619f914fe69d6a12adaf84bf9e57f6b80ec59197ed9c8fd8cdab084b59417"
+    },
+    {
+      "path": "proofs/LEMMA-128-theta-ternary-source-exclusion.md",
+      "sha256": "46552d4453e6317d00dadf4a0c2750d101df4e605fefa88cddbeff666f988ad0"
+    },
+    {
       "path": "README.md",
-      "sha256": "65f7c0ffa89c22b3b8f781390e0f6f471d1ff40355e292d32afea339ae6a0260"
+      "sha256": "afc4591db8c62fa623771bf01df374f697f68a3d515e2ffe4e3f1633028ec917"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1536,7 +1556,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "5eb779c42c320f504561a8bf73019d38fc677bf0148c545ca273d213d23e5c01"
+      "sha256": "7427c1eaddfaa9e4ef825ca885c8b7eaf3a4c98944dc485211543518ab4d6642"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
