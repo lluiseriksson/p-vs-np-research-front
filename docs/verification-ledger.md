@@ -50,6 +50,7 @@ truth. Each row has exactly one label.
 | INFRA-043 | PROVED | Cycle-043 common-outer padding geometry and fixed-witness-face no-go reproduce from a cold clone | `artifacts/cold-clone-6e76f9b.md` | None |
 | INFRA-044 | PROVED | Cycle-044 coordinate-dense neutral padding and raw-coordinate-tail no-go reproduce from a cold clone | `artifacts/cold-clone-942470e.md` | None |
 | INFRA-045 | PROVED | Cycle-045 distant common clauses, exact paired-clause cost, and ENC-020-only no-go reproduce from a cold clone | `artifacts/cold-clone-426e338.md` | None |
+| INFRA-046 | PROVED | Cycle-046 almost-pairwise neutral padding and bounded disjoint-clause matching reproduce from a cold clone | `artifacts/cold-clone-7d2db9a.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
