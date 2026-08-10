@@ -276,7 +276,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "b21594f8884f98aba140ce253ce08ae3b959f8cde8281dbe4f46f28d6f9f5c22"
+      "sha256": "0c91ebfc19a44df5c14053ff40cc10c255df62243efb098bedd1fc77ea4bfa90"
     },
     {
       "path": "docs/result-labels.md",
@@ -284,7 +284,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "7855b0a04f1e7f4a3a1894fc6b7e233c98663cad82ba9f8246c640d0b87fc6c5"
+      "sha256": "55e65d0faf87d2acc13bbe4db41ff32fe7851cbfdcbc4160eeb833f80828c45b"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -372,11 +372,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "1ef906edb4ccf4baaadf088391f9f8040be21ec59f1c5c8e9344a49ac0b285a1"
+      "sha256": "4a0f042e1f6fd2fc7dc574cc1ecf0b89124f1ed556dc48cbec9ef0d366ceefbe"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "62a14bf11d8be8e76471b0ac58c43bb1a93c58515077884a700d2bf232fb0725"
+      "sha256": "90ac5cade81ba00dcbabccc25297b4c9695374531e6e956ac3cd62462a5c4999"
     },
     {
       "path": "experiments/README.md",
@@ -537,6 +537,10 @@
     {
       "path": "proofs/GATE-004W-implication-tail-minimality.md",
       "sha256": "2e5b45ae1a7442946ff01aa999f40ff14bcddce323aef1cca06c844c49186608"
+    },
+    {
+      "path": "proofs/GATE-004X-signed-binary-sparse-rigidity.md",
+      "sha256": "2f82c1963f0b5f779d7022d1d464c1ec3c64ebc8ef79abaf189b2af999fb28c3"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -779,8 +783,12 @@
       "sha256": "96fb6595adc288a4e87c6b2073c33e73bac52fcf64832122cabb5a3d47028a7d"
     },
     {
+      "path": "proofs/LEMMA-060-implication-sparse-long-run-slots.md",
+      "sha256": "1f00a174252cab038c9d898ac1ddb289814ae48f8eedc6e98d7200fa9fd455f7"
+    },
+    {
       "path": "README.md",
-      "sha256": "a788b64eef9e2085da08e632005af13d44bea865312c671627a00be6bca6c5ec"
+      "sha256": "06198922fcdd51398b534ad8e63663c8e01f9cff6a4072cbb8ff27a4ff03b8bd"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -792,7 +800,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "e19ac9e6e6cf148dec1f297d6c2eb0e190f8a1ba82d5f12bd1505a1fc220653a"
+      "sha256": "65767fba8dc7460b25f58387902731e0b1e9eaa899a2c04c92ed0c0111f4d19e"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -800,7 +808,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "c0a54249ffb6219df03152678597817b53517decfe1d81a94b92d7afce71a1d7"
+      "sha256": "e9d038f5647861eb5c2d718f72e5dae82ba49ecd9a3302ed98bf29fb465d439f"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -816,7 +824,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "8d536ee28f91a6acd9e0c6db9cfda13e1fcb69a18e25449147bc14f3ef03086e"
+      "sha256": "43da5618eae194d7597a181a7b63050f6dcf1ed2d38317cd9c1533567dae327a"
     },
     {
       "path": "verification/test_trace_accounting.py",

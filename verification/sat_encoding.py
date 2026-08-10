@@ -661,6 +661,30 @@ def balanced_common_implication_pairs(
     return tuple(pairs)
 
 
+def implication_sparse_long_run_slot_options(
+    zero_run: int,
+) -> tuple[str, ...]:
+    """Return balanced options plus all placements of ``A_7,...,A_12``.
+
+    The fixed translated long blocks destroy every common mixed two-clause
+    outside constant-size boundary regions while ``A_zero_run`` retains the
+    tunable run required by the outer construction.
+    """
+    if zero_run < 13:
+        raise ValueError("zero_run must be at least thirteen")
+    slot_length = 4 * zero_run
+    options = set(balanced_long_run_slot_options(zero_run))
+    for short_run in range(7, 13):
+        block = power_two_long_zero_neutral_block(short_run)
+        for start in range(0, slot_length - len(block) + 1, 4):
+            options.add(
+                "1" * start
+                + block
+                + "1" * (slot_length - start - len(block))
+            )
+    return tuple(sorted(options))
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

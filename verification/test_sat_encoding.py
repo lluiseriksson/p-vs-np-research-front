@@ -41,6 +41,7 @@ from sat_encoding import (
     one_bit_literal_gadgets,
     operator_square_prefix,
     maximum_zero_run,
+    implication_sparse_long_run_slot_options,
     power_two_long_zero_neutral_block,
     tautology,
     verify_assignment,
@@ -851,6 +852,55 @@ class FormulaEncodingTests(unittest.TestCase):
                         for option in options
                     )
                 )
+
+    def test_translated_long_blocks_confine_common_implications(self) -> None:
+        formula = assignment_conjunction({6: False, 7: True})
+        for zero_run in (*range(13, 24), 64):
+            slot_length = 4 * zero_run
+            options = implication_sparse_long_run_slot_options(zero_run)
+            self.assertIn("1" * slot_length, options)
+            self.assertIn(power_two_long_zero_neutral_block(zero_run), options)
+            for position in range(slot_length):
+                self.assertEqual(
+                    {option[position] for option in options}, {"0", "1"}
+                )
+            for option in options:
+                self.assertEqual(len(option), slot_length)
+                self.assertLessEqual(maximum_zero_run(option), zero_run)
+                self.assertTrue(self.brute_sat(option + formula))
+
+            fixed_options = set(
+                coordinate_dense_neutral_paddings("", slot_length)
+            )
+            for short_run in range(7, 13):
+                block = power_two_long_zero_neutral_block(short_run)
+                for start in range(0, slot_length - len(block) + 1, 4):
+                    fixed_options.add(
+                        "1" * start
+                        + block
+                        + "1" * (slot_length - start - len(block))
+                    )
+            self.assertTrue(fixed_options <= set(options))
+            fixed_options = tuple(sorted(fixed_options))
+            zero_sets = [
+                frozenset(
+                    option_index
+                    for option_index, option in enumerate(fixed_options)
+                    if option[position] == "0"
+                )
+                for position in range(slot_length)
+            ]
+            left = set(range(12))
+            right = set(range(slot_length - 12, slot_length))
+            for first in range(slot_length):
+                for second in range(first + 1, slot_length):
+                    common_mixed = (
+                        zero_sets[first] <= zero_sets[second]
+                        or zero_sets[second] <= zero_sets[first]
+                    )
+                    if common_mixed:
+                        pair = {first, second}
+                        self.assertTrue(pair <= left or pair <= right)
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

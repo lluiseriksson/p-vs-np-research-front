@@ -1316,6 +1316,39 @@ minimum-circuit cost is not inferred from their count.
 | Asymptotic quantifiers | Every `rho>=7,s>=1`; exact GATE-004V comparison under its stated parameter choice |
 | Regime | Worst-case exact witness-family theorem; not a circuit lower bound or counterexample |
 
+## ENC-030 — implication-sparse translated-long-block slots
+
+**Label: PROVED**
+
+For every `rho>=13`, enlarge a length-`4rho` balanced slot by adding every
+four-aligned placement of each fixed exact neutral block
+`A_7,A_8,A_9,A_10,A_11,A_12`, with all-one gaps. LEMMA-060 proves that any
+common mixed binary clause is confined to the first or last twelve slot
+coordinates. Hence its disjoint matching number is at most twelve per slot.
+The all-one option excludes negative-negative clauses; the all-long member
+retains the `6s` bound for positive clauses of every width.
+
+For `s=floor((R-1)/24)`, every disjoint signed binary family has at most
+`18s<=3(R-1)/4<=K`, while all earlier sparse-cover and zero-run counts remain
+below `K`. The family preserves the exact tunable run and introduces
+GATE-004X. This is a defense against known tails, not positive circuit loss.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact neutral contexts, translated fixed long blocks, independent slot products, signed binary clause incidence, and matching |
+| Uniform/non-uniform | Uniform fixed block alphabet and placements; arbitrary later non-uniform circuit adversary |
+| Circuit size | Disjoint signed-binary packing at most `18s`; arbitrary-width positive packing at most `6s`; both below `K>=R-1` at the chosen parameters |
+| Circuit depth | Contexts may have linear NOT depth; later circuits unrestricted |
+| Fan-in | Encoded and circuit AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Finite Boolean incidence and modulo-four translation only |
+| Asymptotic quantifiers | Every `rho>=13,s>=1`; explicit GATE-004X comparison for all sufficiently large `R` |
+| Regime | Worst-case exact witness-family theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

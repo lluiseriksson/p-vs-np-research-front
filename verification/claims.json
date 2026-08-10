@@ -3060,6 +3060,57 @@
       "asymptotic_quantifiers": "Every m at least one; method insufficient for every m at least five and linearly short asymptotically",
       "case_regime": "Quantitative method no-go only; exact growing size, GATE-004W, GATE-004V, and P versus NP remain open",
       "evidence": "proofs/GATE-004W-formula-boundary-only.md; proofs/LEMMA-059-formula-boundary-implication-lower-bound.md; docs/no-go-ledger.md NG-054"
+    },
+    {
+      "id": "ENC030",
+      "label": "PROVED",
+      "statement": "Adding every four-aligned placement of A_7 through A_12 confines all common mixed binary clauses to constant boundary regions while preserving coordinate density, the all-long witness, and the tunable zero run.",
+      "computational_model": "Exact neutral SAT-gamma contexts, translated fixed long blocks, independent slot products, and signed raw-coordinate binary clauses",
+      "uniformity": "Uniform fixed block alphabet, placements, product, and parameters; no circuit selected",
+      "circuit_size": "No lower bound; disjoint signed-binary packing at most 18s and arbitrary-width positive packing at most 6s",
+      "circuit_depth": "Contexts may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded and circuit AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
+      "asymptotic_quantifiers": "Every rho at least thirteen and s at least one; explicit GATE-004X comparison for all sufficiently large R",
+      "case_regime": "Worst-case exact witness-family theorem; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md ENC-030; proofs/LEMMA-060-implication-sparse-long-run-slots.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA060",
+      "label": "PROVED",
+      "statement": "Enhanced slots confine common mixed binary clauses to two twelve-coordinate boundary regions, giving mixed matching at most 12s and total disjoint signed-binary packing at most 18s<K for s=floor((R-1)/24).",
+      "computational_model": "Exact neutral SAT-gamma contexts, independent slot products, signed raw-coordinate binary clauses, matching, and unrestricted-circuit essential-input floors",
+      "uniformity": "Uniform fixed block alphabet, placements, product, and parameters; later circuit adversary fully non-uniform",
+      "circuit_size": "Common disjoint signed-binary packing at most 18s; arbitrary-width positive packing at most 6s; both below K>=R-1 for s=floor((R-1)/24)",
+      "circuit_depth": "Contexts may have linear NOT depth; later circuits unrestricted",
+      "fan_in": "Encoded and circuit AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite bit incidence and modulo-four translation only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every rho at least thirteen and s at least one; finite certificate plus translation for every slot length; explicit comparison for sufficiently large R",
+      "case_regime": "Worst-case exact total-language witness theorem and method boundary; not a circuit lower bound",
+      "evidence": "proofs/LEMMA-060-implication-sparse-long-run-slots.md; docs/sat-encoding.md ENC-030; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE004X",
+      "label": "EXPLORATORY",
+      "statement": "Exact SAT-gamma agreement on expanded rows and implication-sparse enhanced long-run slot products forces polynomial positive average diagonal joint-quotient loss.",
+      "computational_model": "Minimum unrestricted circuits for total functions agreeing with SAT-gamma on expanded rows and enhanced implication-sparse slot-product DNF suffixes; exact diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary; uniform rows, core family, fixed and tunable neutral blocks, placements, slots, and parameters",
+      "circuit_size": "Average diagonal loss target at least B R^eta+1; eligible base floor K>=R-1; known disjoint signed-binary packing at most 18s<=3(R-1)/4",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine prefix and assignment geometry over F_2; suffix syntax and circuits Boolean",
+      "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every agreeing total function; every minimum circuit; all enhanced witnesses",
+      "case_regime": "Worst-case exact agreement on an explicit total-language subset; no promise, distributional, average-case, or surrogate terminal claim",
+      "evidence": "proofs/GATE-004X-signed-binary-sparse-rigidity.md; proofs/LEMMA-060-implication-sparse-long-run-slots.md"
     }
   ]
 }
