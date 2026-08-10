@@ -1769,3 +1769,25 @@ subgraphs; `B=5m-1`, `N=4m+1`, `t=0`; unrestricted depth; AND/OR fan-in two
 and NOT fan-in one; no randomness, advice, oracle, promise, distribution, or
 algebraic circuit model. Range-free sensitive Hall is closed, while the low-N
 GATE-004AK and GATE-004AJ/AI/AH/AG/AE remain open.
+
+## NG-089 — generic residual inversion proves quintet dependency Hall
+
+**Label: NO-GO**
+
+Scope: restrict the parent circuit to any five selected clause blocks, bound
+its residual NOT count plus cycle rank by the union of their dependency-cone
+resources, and apply only LEMMA-111.
+
+Failure: the exact generic optimization is
+`g(5)=min_c[c+max(ceil(5/2^c),ceil(log2(6)))]=4`, attained at `c=1` with
+the permitted lower bound `q=3`. Hall requires union size five. Thus the
+restriction/unfolding certificate is short by exactly one resource at the
+first open subset size. This does not exhibit a deficient quintet; it proves
+that total cycle rank and inversion complexity alone cannot exclude one.
+
+Model: every unrestricted non-uniform parent circuit; arbitrary five-block
+restriction; dependency-cone NOT and non-tree-edge resources; unrestricted
+depth; AND/OR fan-in two and NOT fan-in one; binary cycle spaces over `F_2`;
+no randomness, advice, oracle, promise, distribution, or algebraic circuit
+model. LEMMA-111-only quintet Hall is closed, while function-specific
+GATE-004AL and GATE-004AK/AJ/AI/AH/AG/AE remain open.

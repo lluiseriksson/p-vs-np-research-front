@@ -4195,6 +4195,30 @@
       "circuit_size": "B=5m-1, N=4m+1, t=0; all m neighborhoods equal one singleton", "circuit_depth": "Unrestricted; displayed balanced or unbalanced formula allowed", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean sensitivity incidence; no algebraic circuit model",
       "asymptotic_quantifiers": "Every m at least two; Hall fails on every index subset of size at least two", "case_regime": "Explicit no-go outside the low-N target range; GATE004AK, GATE004AJ, GATE004AI, GATE004AH, GATE004AG, and GATE004AE remain open",
       "evidence": "proofs/GATE-004AK-range-free-sensitive-Hall.md; docs/no-go-ledger.md NG-088; artifacts/cycle-102-sensitive-Hall-audit.md"
+    },
+    {
+      "id": "GATE004AL", "label": "EXPLORATORY",
+      "statement": "For some output-cone spanning tree, the NOT gates and non-tree edges in full clause-block dependency cones satisfy every Hall inequality.",
+      "computational_model": "Pruned unrestricted Boolean circuits, directed dependency cones, spanning trees, and non-tree-edge cycle resources", "uniformity": "Every individual non-uniform circuit; uniform clause-block neighborhoods",
+      "circuit_size": "Full Hall expansion would imply m<=N+t and B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite bipartite matching",
+      "asymptotic_quantifiers": "Every m at least five, every pruned circuit for W_m, and every subset of clause indices", "case_regime": "Exact worst-case dependency-cone Hall gate; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AL-dependency-cone-Hall.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/GATE-004AJ-birth-resource-matching.md"
+    },
+    {
+      "id": "LEMMA116", "label": "PROVED",
+      "statement": "For every parent circuit, every spanning tree, and every clause-index subset of size one through four, the union of full dependency-cone NOT and non-tree-edge resources has size at least the subset.",
+      "computational_model": "Full block restrictions of unrestricted AND/OR/NOT circuits, dependency cones, and output-cone cycle rank", "uniformity": "Every individual non-uniform parent circuit; every selected block set of size at most four",
+      "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=4", "circuit_depth": "Unrestricted; restriction and pruning preserve a finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restrictions",
+      "asymptotic_quantifiers": "Every m at least one, every circuit for W_m, every spanning tree, and every I with 1<=|I|<=min(4,m)", "case_regime": "Exact worst-case local Hall theorem; quintets, full matching, SAT lower bounds, and the terminal problem remain open",
+      "evidence": "proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; artifacts/cycle-103-dependency-Hall-through-four.md"
+    },
+    {
+      "id": "GATE004AL-LEMMA111-ONLY", "label": "NO-GO",
+      "statement": "At dependency-cone subset size five, restriction plus the generic cycle-rank inversion theorem certifies only four resources and cannot prove the Hall target five.",
+      "computational_model": "Five-block restrictions of unrestricted circuits followed by generic cycle-rank unfolding and inversion bounds", "uniformity": "Every individual non-uniform parent circuit; method audit for arbitrary five-index subsets",
+      "circuit_size": "Generic resource lower bound four versus Hall target five", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean-lattice inversion",
+      "asymptotic_quantifiers": "Every parent size m at least five and every selected set of exactly five clause indices", "case_regime": "Quantitative no-go for LEMMA111 alone; GATE004AL and all larger gates remain open",
+      "evidence": "proofs/GATE-004AL-LEMMA111-only.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; docs/no-go-ledger.md NG-089; artifacts/cycle-103-dependency-Hall-through-four.md"
     }
   ]
 }

@@ -37,6 +37,11 @@ version is false by the explicit De Morgan formula in the companion no-go.
 Thus a proof must use the quantitative negation budget, not only the function's
 local sensitivity semantics.
 
+GATE-004AL broadens the neighborhoods to every resource in the full directed
+dependency cone of a block. LEMMA-116 proves the resulting Hall inequalities
+through subset size four. This supersedes singleton-sensitive incidence as
+the active route; size five is the first unresolved dependency-cone case.
+
 ## Model card
 
 | Field | Value |

@@ -38,6 +38,10 @@ using assignment-sensitive NOT gates and non-tree edges. Singleton
 neighborhoods are nonempty, but the range-free Hall property is false; the
 remaining proof must exploit `N<=m-1` to obtain expansion for larger subsets.
 
+The refined GATE-004AL uses full block dependency cones instead. LEMMA-116
+establishes its Hall inequalities for every subset of size at most four;
+quintets are the first open collision pattern.
+
 ## Model card
 
 | Field | Value |

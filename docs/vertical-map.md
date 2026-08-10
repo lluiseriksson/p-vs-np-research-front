@@ -150,7 +150,10 @@ Adjacent collision-aware active branch:
                  + LEMMA-115 (each canonical witness has a sensitive odd-NOT path)
                  <- GATE-004AK (active collision brick): low-N Hall expansion
                     - GATE-004AK-RANGE-FREE-SENSITIVE-HALL (no-go: all neighborhoods can share the top NOT)
-                    <- exploit `N<=m-1` for subset expansion (next attackable brick)
+                    + LEMMA-116 (dependency-cone Hall expansion for every subset of size at most four)
+                    <- GATE-004AL (active refined brick): full dependency-cone Hall expansion
+                       - GATE-004AL-LEMMA111-ONLY (no-go: quintet lower bound four versus five)
+                       <- function-specific quintet incidence (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

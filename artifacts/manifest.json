@@ -467,6 +467,10 @@
       "sha256": "b8b770e2f20e92cb298cf3dc4d76172c25d2caaf517ba7ed167099ef7ba43126"
     },
     {
+      "path": "artifacts/cycle-103-dependency-Hall-through-four.md",
+      "sha256": "a9644a6d9507a3c2bdf6b95f2cf6990290ac2d6786de924eb5dbeab6243008df"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -492,7 +496,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8f03307a3b45f23d94ed386c665be6dfb3a39e990de4ec3283ba06eb2030f9a0"
+      "sha256": "7a35f80492d0a17d0a89980321ecf1ba87d0684557ce6a58c6fbf60042174f79"
     },
     {
       "path": "docs/problem-statement.md",
@@ -500,7 +504,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "09444c823230b08676bb783fe3caa331f3f388157fd38cc9a148de29daf641c8"
+      "sha256": "3ba52396a945c12690157030018e607009fe44eaeb07e48ee18e42c908c2a7bc"
     },
     {
       "path": "docs/result-labels.md",
@@ -604,11 +608,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "30fecbf2bf69743100f0589f57345a976d8cd2f1af2dfdce1178915eced62f40"
+      "sha256": "4322ed9877d96de207cc8f9aaefb8888c865af7eafca534943ff2407e36d04ba"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "c2ea316a502567a4c8c67a3a7edd31392e6bd11cc9377714a7783572700f83a5"
+      "sha256": "f3f43ecbe3c2c3852e867b1e79ab1c2b7bb66e93641a472c509f0383e27460e0"
     },
     {
       "path": "experiments/README.md",
@@ -788,7 +792,7 @@
     },
     {
       "path": "proofs/GATE-004AJ-birth-resource-matching.md",
-      "sha256": "5e31fc37be7cec5a90d9c1166a39cf6f9106823e59788f29fe7b17bcff458229"
+      "sha256": "654dd11d0944637a1b52fef8630a8302a268e5870bafcd523a7484646c92e34a"
     },
     {
       "path": "proofs/GATE-004AJ-direct-birth-to-NOT.md",
@@ -800,7 +804,15 @@
     },
     {
       "path": "proofs/GATE-004AK-sensitive-resource-Hall.md",
-      "sha256": "8837e90302354dba78a54c67ce140a8574b42bc4c68435e5c4c229d14320e018"
+      "sha256": "1d96f6d466c0db0b1d11e7d71e830b3aa94c2bdbf9f23c4869965fc02d95ba9f"
+    },
+    {
+      "path": "proofs/GATE-004AL-dependency-cone-Hall.md",
+      "sha256": "8a608767a69649c221c1a55bf8a7f383e72ed45027d73fdb79e943621ee6423d"
+    },
+    {
+      "path": "proofs/GATE-004AL-LEMMA111-only.md",
+      "sha256": "6b604ee6016c1ec1de534ad5608e5be5025333c12b078bf79529320ff1256a74"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1427,8 +1439,12 @@
       "sha256": "eb5747f602a00e2de1b2ce659907fef020bc9f584a3cbeb28c325b7a7e18de7a"
     },
     {
+      "path": "proofs/LEMMA-116-dependency-cone-Hall-through-four.md",
+      "sha256": "32fba01871d96545e4ceafabaa48b33b29126d95d3760642dec36fda4f03901e"
+    },
+    {
       "path": "README.md",
-      "sha256": "9252e9532dbd42a0780de160fa755d584bb4fb0dcbf0074cc283df736c27676e"
+      "sha256": "38653ebc88c6983cd61ecbf83d1c0f146701d4762980601bf41a12ada270c04e"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1440,7 +1456,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "c7a5f1ad9295ded9e89ebd64b9a798db2db5c8563d558c93cb84d3b8b524ee62"
+      "sha256": "2129363832f253b1554b2a0693e61fe287118ce11a83f54f8527bdf6cb155ebd"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -833,11 +833,20 @@ edges. Singleton expansion is proved, but the range-free Hall claim is
 NOT singleton. The restricted low-N Hall expansion remains open and must use
 the negation budget substantively.
 
+The one-hundred-and-third cycle replaces witness-only neighborhoods by full
+block dependency cones. LEMMA-116 proves Hall expansion for every subset of
+one through four clause indices: restrict to those blocks, lift residual NOT
+and cycle resources back to the parent cone, and invoke the exact small-`m`
+part of LEMMA-111. The first open subset size is five. Generic restriction
+plus cycle-rank inversion certifies only four resources there, so that method
+is `NO-GO` by one exact unit; GATE-004AL now asks for dependency-specific
+quintet expansion.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–102 isolate the fixed-sign tail, exhaust generic unfolding, and reduce function-specific sharing to low-N Hall expansion of sensitive resources. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–103 isolate the fixed-sign tail, exhaust generic unfolding, and prove dependency-cone Hall expansion through four indices. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
