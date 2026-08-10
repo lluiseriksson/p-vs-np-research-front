@@ -54,6 +54,7 @@ truth. Each row has exactly one label.
 | INFRA-047 | PROVED | Cycle-047 distant common triples, general exact width-clause cost, and two-block-only no-go reproduce from a cold clone | `artifacts/cold-clone-5c38476.md` | None |
 | INFRA-048 | PROVED | Cycle-048 general bounded-block clause obstruction and sparse-context no-go reproduce from a cold clone | `artifacts/cold-clone-5d58b14.md` | None |
 | INFRA-049 | PROVED | Cycle-049 bounded-zero-run window obstruction and dense finite-alphabet no-go reproduce from a cold clone | `artifacts/cold-clone-ac77100.md` | None |
+| INFRA-050 | PROVED | Cycle-050 tunable long-zero neutral blocks and single-long-block no-go reproduce from a cold clone | `artifacts/cold-clone-30f7dce.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
