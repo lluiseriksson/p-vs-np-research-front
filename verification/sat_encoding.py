@@ -379,6 +379,36 @@ def common_outer_double_not_pad(
     return double_not_wrap(inner, reserved_ones // 4)
 
 
+def coordinate_dense_neutral_paddings(
+    bits: str,
+    extra_length: int,
+) -> tuple[str, ...]:
+    """Return equal-length neutral contexts varying every padding coordinate.
+
+    The construction uses all-NOT padding and one tautology/contradiction
+    context of length 12 or 16 placed at every compatible four-bit offset.
+    It is exact for arbitrary source strings, including malformed strings.
+    """
+    if extra_length < 16 or extra_length % 4:
+        raise ValueError("extra_length must be a multiple of four at least 16")
+
+    blocks = (
+        "01" + tautology(1),
+        "10" + contradiction(1),
+        "01" + tautology(2),
+        "10" + contradiction(2),
+    )
+    contexts = {"1" * extra_length}
+    for block in blocks:
+        for start in range(0, extra_length - len(block) + 1, 4):
+            contexts.add(
+                "1" * start
+                + block
+                + "1" * (extra_length - start - len(block))
+            )
+    return tuple(sorted(context + bits for context in contexts))
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

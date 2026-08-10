@@ -2397,6 +2397,57 @@
       "asymptotic_quantifiers": "Infinitely many compatible lengths for a sufficiently small fixed c>0 and growing common outer padding block",
       "case_regime": "Worst-case method-specific obstruction; does not cover padding-dense near-boundary DNF encodings",
       "evidence": "docs/sat-encoding.md ENC-019; proofs/LEMMA-044-fixed-witness-face-tail-counterexample.md; docs/no-go-ledger.md NG-042"
+    },
+    {
+      "id": "ENC-020",
+      "label": "PROVED",
+      "statement": "For every source formula and every outer budget P at least 16 divisible by four, an explicit O(P)-member family of exact neutral contexts preserves validity and satisfiability while taking both bit values at every outer raw coordinate.",
+      "computational_model": "Exact SAT-gamma formula syntax, exact neutral Boolean contexts, and raw suffix coordinates",
+      "uniformity": "Uniform construction using identifiers 1 and 2 and block placements at offsets divisible by four",
+      "circuit_size": "No circuit lower bound; O(P) witness encodings and zero fixed raw coordinates in the outer region",
+      "circuit_depth": "The displayed neutral contexts use unary NOT chains and constant-depth AND/OR wrappers over the source formula",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every source bit string and every P at least 16 divisible by four; every one of the P outer coordinates",
+      "case_regime": "Worst-case exact total-language encoding statement, including malformed source strings; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-045",
+      "label": "PROVED",
+      "statement": "No nonempty conjunction of positive or negative raw literals on the P outer coordinates is one on every member of the ENC-020 neutral-padding family.",
+      "computational_model": "Exact neutral-padding witness family and arbitrary conjunctions of raw Boolean-coordinate literals",
+      "uniformity": "Uniform witness family; the challenged literal conjunction may be fully non-uniform",
+      "circuit_size": "Zero raw outer coordinates are available as a fresh conjunctive tail common to all witnesses",
+      "circuit_depth": "Unrestricted later ambient circuit; the excluded predicate is a conjunction of literals",
+      "fan_in": "AND two and optional NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every source bit string, every P at least 16 divisible by four, and every nonempty raw-literal conjunction on the P outer coordinates",
+      "case_regime": "Worst-case exact witness-set statement; excludes only raw-coordinate literal tails",
+      "evidence": "proofs/LEMMA-045-dense-padding-blocks-raw-tail.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE-004U-RAW-COORDINATE-TAIL",
+      "label": "NO-GO",
+      "statement": "The LEMMA-044 counterexample cannot be extended to agreement on all ENC-020 encodings by choosing a nonempty fresh tail made solely from raw outer-coordinate literals.",
+      "computational_model": "Exact neutral syntax witnesses, raw-literal tail predicates, and unrestricted Boolean circuits in the later ambient argument",
+      "uniformity": "Uniform dense witness construction; arbitrary non-uniform choice of raw-literal tail",
+      "circuit_size": "No fresh raw padding coordinates remain, so the exact additive tail identity supplies no positive tail length",
+      "circuit_depth": "Unrestricted ambient circuit; excluded tail is an arbitrary-depth fan-in-two conjunction of literals",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every source formula and every outer budget P at least 16 divisible by four; every nonempty conjunction of raw outer-coordinate literals",
+      "case_regime": "Worst-case method obstruction, not a lower bound; non-coordinate predicates remain open",
+      "evidence": "docs/sat-encoding.md ENC-020; proofs/LEMMA-045-dense-padding-blocks-raw-tail.md; docs/no-go-ledger.md NG-043"
     }
   ]
 }

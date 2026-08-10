@@ -9,6 +9,7 @@ from sat_encoding import (
     context_wrap,
     conditioned_prefix,
     common_outer_double_not_pad,
+    coordinate_dense_neutral_paddings,
     context_prefix,
     contradiction,
     decode_gamma,
@@ -624,6 +625,35 @@ class FormulaEncodingTests(unittest.TestCase):
                         self.brute_sat(
                             conditioned_prefix(forced_value, identifier) + formula
                         ),
+                    )
+
+    def test_coordinate_dense_neutral_padding_varies_every_outer_bit(self) -> None:
+        formulas = (
+            encode_variable(1),
+            encode_not(encode_variable(2)),
+            assignment_conjunction({6: False, 7: True}),
+            "",
+            "01" + encode_variable(1),
+        )
+        for extra_length in range(16, 65, 4):
+            for formula in formulas:
+                padded_family = coordinate_dense_neutral_paddings(
+                    formula, extra_length
+                )
+                self.assertTrue(padded_family)
+                for padded in padded_family:
+                    self.assertEqual(len(padded), len(formula) + extra_length)
+                    self.assertEqual(
+                        self.brute_sat(padded), self.brute_sat(formula)
+                    )
+                    self.assertEqual(
+                        parse_formula(padded) is not None,
+                        parse_formula(formula) is not None,
+                    )
+                for position in range(extra_length):
+                    self.assertEqual(
+                        {padded[position] for padded in padded_family},
+                        {"0", "1"},
                     )
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:

@@ -934,6 +934,69 @@ formalizes that obstruction.
 | Asymptotic quantifiers | Every source formula fresh for identifier 1, every `m` divisible by four, and every inner target with at least twelve padding bits |
 | Regime | Worst-case exact total-language encoding; the claim concerns witness locations, not circuit lower bounds |
 
+## ENC-020 — coordinate-dense exact neutral padding
+
+**Label: PROVED**
+
+For every padding length `P>=16` divisible by four and every source string
+`phi`, there is an explicit equal-length family `N_P(phi)` of strings of
+length `P+|phi|` such that:
+
+1. every member is valid exactly when `phi` is valid and, when valid, has the
+   same satisfiability value;
+2. the source begins at the common coordinate `P`; and
+3. for every outer coordinate `0<=i<P`, some family member has bit zero at
+   `i` and another has bit one.
+
+The family contains the all-one context `1^P`, which is an even NOT chain.
+It also contains strings
+
+`1^(4a) B 1^(P-4a-|B|) phi`
+
+at every fitting four-bit offset, where `B` ranges over
+
+- `01 T_1` and `10 F_1`, of length 12; and
+- `01 T_2` and `10 F_2`, of length 16.
+
+Here `T_j=OR(V_j,NOT(V_j))` and
+`F_j=AND(V_j,NOT(V_j))`. The left/right runs of ones contain even numbers of
+NOT tokens. The middle block is respectively `AND(true,hole)` or
+`OR(false,hole)`. Hence each context preserves exact validity and
+satisfiability, including malformed-source rejection.
+
+The all-one member supplies bit one everywhere. For zero coverage, inspect
+the zero offsets in the four blocks. Their union contains, by residue modulo
+four,
+
+`{0,4,8,12}`, `{1,5,9,13}`, `{2,6,10}`, and `{3,11,15}`.
+
+For a direct boundary check, use the length-12 blocks at the final two fitting
+offsets and the length-16 blocks at the final fitting offset; their zero
+positions cover the last sixteen coordinates. At the left boundary the same
+blocks at offsets zero and four cover the first sixteen. Every remaining
+coordinate is a four-bit translate of one of these cases. Thus every outer
+coordinate varies.
+
+Unlike ENC-019, this family is not contained in any raw coordinate face on
+the `P` padding positions. It does not by itself prove circuit loss: a more
+general non-coordinate predicate may still be one on the whole family.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formula contexts, raw suffix coordinates, and validity/satisfiability preservation |
+| Uniform/non-uniform | Uniform family using identifiers 1 and 2 at every compatible block placement |
+| Circuit size | No lower bound; `O(P)` explicit encodings and zero fixed raw padding coordinates |
+| Circuit depth | Context depth grows linearly with padding in the all-NOT member and according to block placement in other members |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Coordinate-density statement over the Boolean prefix cube only |
+| Asymptotic quantifiers | Every source string and every `P>=16` divisible by four |
+| Regime | Worst-case exact total-language preservation, including malformed strings |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

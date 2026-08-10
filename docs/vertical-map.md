@@ -54,6 +54,7 @@ Adjacent collision-aware active branch:
      + ENC-017 (proved exact expanded output incidence)
      + ENC-018 (proved multi-witness union columns)
      + ENC-019 (proved common-padding fixed-face geometry)
+     + ENC-020 (proved coordinate-dense neutral padding)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -64,6 +65,7 @@ Adjacent collision-aware active branch:
      - LEMMA-043 (product-domain fresh-tail counterexample)
   <- GATE-004U (active smallest brick): syntax-linked DNF witness rigidity
      - GATE-004U-COMMON-PADDING-ONLY (no-go by LEMMA-044)
+     - GATE-004U-RAW-COORDINATE-TAIL (no-go by LEMMA-045)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -576,6 +578,12 @@ ENC-019 and LEMMA-044 show that one common growing outer padding block cannot
 supply that rigidity: its fixed raw coordinates are an exact fresh tail. The
 active audit now requires padding-dense DNF witnesses, including encodings
 with only constant padding overhead and no growing common coordinate face.
+
+ENC-020 supplies that density with `O(P)` neutral placements and LEMMA-045
+proves that no raw-literal tail survives. The next GATE-004U attack concerns
+non-coordinate predicates recognizing the dense witness language and whether
+they can have an exact additive conjunction cost without circularly assuming
+the desired circuit lower bound.
 
 ### Smallest active brick: GATE-004U
 

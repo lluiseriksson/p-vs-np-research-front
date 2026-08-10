@@ -882,3 +882,25 @@ DNF parser base and a fresh AND tail; fan-in-two AND/OR and fan-in-one NOT; no
 randomness, advice, oracle, promise, distribution, or algebraic computation.
 The no-go does not cover GATE-004U's dense near-boundary DNF encodings, which
 do not share a growing outer fixed-coordinate block.
+
+## NG-043 — padding-dense witnesses still admit a raw-coordinate fresh tail
+
+**Label: NO-GO**
+
+Scope: extend the LEMMA-044 counterexample to a witness family containing all
+ENC-020 neutral placements by finding one or more raw outer padding
+coordinates fixed across every encoding.
+
+Failure: ENC-020 supplies, for each outer coordinate, one exact neutral
+encoding with bit zero and another with bit one. LEMMA-045 therefore proves
+that no nonempty conjunction of positive or negative raw-coordinate literals
+is one on the entire family. The growing raw face required by LEMMA-044 has
+codimension zero on the padding region.
+
+Model: exact SAT-gamma neutral contexts and arbitrary conjunctions of raw
+suffix-coordinate literals; unrestricted later ambient circuits; fan-in-two
+AND and optional fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This is a no-go for the raw fresh-
+input counterexample method, not a circuit lower bound. A non-coordinate
+predicate recognizing the witness set remains possible, but LEMMA-037 gives
+no additive minimum-cost identity for such a predicate.

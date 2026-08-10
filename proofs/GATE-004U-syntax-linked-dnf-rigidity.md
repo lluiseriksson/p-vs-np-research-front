@@ -15,8 +15,9 @@ follows:
    primary and auxiliary identifiers;
 2. combine any nonempty list of them by the exact binary OR formula token;
 3. require the unpadded formula to fit; and
-4. use ENC-010's identifier-1-fresh padding together with any outer
-   double-NOT padding to reach length exactly `n-p`.
+4. use ENC-010's identifier-1-fresh padding together with outer double-NOT
+   padding or any ENC-020 neutral block placement to reach length exactly
+   `n-p`.
 
 Let `G:{0,1}^n->{0,1}` be any total Boolean function satisfying
 
@@ -44,12 +45,17 @@ ENC-019 and LEMMA-044 close the first syntax-linked attempt as well: witnesses
 sharing a growing common outer padding block lie in a fixed raw-coordinate
 face, and those coordinates become an exact-minimum fresh tail.
 
-Full GATE-004U remains open because `D_{L,n}` also contains DNFs with only
-constant padding overhead. The next audit is padding density: construct and
-verify a witness subfamily that still realizes the required multi-witness
-patterns but is not contained in any growing fixed-coordinate face. Then test
-whether a more general common predicate—not raw coordinates—can retain the
-fresh-tail obstruction. No conclusion may use common-padded witnesses alone.
+ENC-020 completes the raw padding-density task: for each DNF and every large
+four-divisible padding budget, an `O(n)` family of exact neutral encodings
+varies every outer raw coordinate. LEMMA-045 blocks any LEMMA-044 tail made
+from raw coordinate literals.
+
+The next audit is strictly harder. Characterize low-complexity non-coordinate
+predicates that equal one on every dense encoding, beginning with the regular
+language recognizing the ENC-020 contexts, and determine whether conjoining
+such a predicate has any exact additive minimum-circuit cost. LEMMA-037 cannot
+be invoked because those predicates are not fresh inputs. Full GATE-004U
+remains open.
 
 ## Model card
 
