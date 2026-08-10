@@ -136,7 +136,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "d0f699d6b6080ad98eb6fcca149ee8f5966ccbed49034e022983a11483c560f9"
+      "sha256": "ac85cb74e229d858ac19efad17291a7c008f5de3eb1a85dd09ab42419ae1dd75"
     },
     {
       "path": "docs/result-labels.md",
@@ -224,11 +224,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c3ab29f22615a2697c077c8b4c621fda13a77b86271af79a4a3dfc4a97a4dd6b"
+      "sha256": "3be219df8bbfb90ec2605d586cc9fabf2ce4be86be416328f98298bf0f910b06"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "6425b6b2cd07a78fa6bb0c94bed0201c4a9fd5f213ece0d6670ac2a063040230"
+      "sha256": "3d78ab296b6b6f4122214de5baa068859f97df5d3e63a2ac6485b7883494fc3d"
     },
     {
       "path": "experiments/README.md",
@@ -293,6 +293,10 @@
     {
       "path": "proofs/GATE-004K-dependent-trace-compression.md",
       "sha256": "687925e40db3a0c5be0845f11a1a9aa1ea9d217d47ad18680527d6454c1c6286"
+    },
+    {
+      "path": "proofs/GATE-004L-labelwise-survival-imbalance.md",
+      "sha256": "36fdc4f469b60ef80d0f7c2ee06aeef43d082c1cdb8ea728831e3a943b9ab3d5"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -391,8 +395,12 @@
       "sha256": "e7a244909c3d73f83b986e5a286090ce00c49b375aaaf5f75c7fd4fd39baaa46"
     },
     {
+      "path": "proofs/LEMMA-024-labelwise-dependent-surplus.md",
+      "sha256": "f6199095026736a296676c7a2dc4c574720dc3647475682147b76962e3617c2e"
+    },
+    {
       "path": "README.md",
-      "sha256": "d8e026f0ee4514dbac2c50cb602ca01f5aad490ba47fd420ea9b9b2ce3f00883"
+      "sha256": "4eb6fcbf8e704f3f454f1fff2751afad6368bd1cfd68deacb1111f932341d80f"
     },
     {
       "path": "verification/audit.py",
@@ -400,7 +408,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "5b93f8714312034fffb902632b4fb409fd56fd89fed2140b7bc5d66b2c25d8ec"
+      "sha256": "d2cb990e334bc0b37ff26777208ac81c8a628fbde1c174454c3adb624e55e6df"
     },
     {
       "path": "verification/generate_manifest.py",

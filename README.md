@@ -203,13 +203,19 @@ prefix-dependent parent labels and `T` their distinct active residual traces.
 GATE-004K is now the smallest brick: prove a polynomial positive average of
 this deficit for minimum SAT circuits.
 
+The twenty-fourth cycle removes the last representative choice from that
+quantity. LEMMA-024 proves `P-|T|=z-t+kappa`: disappeared dependent labels
+minus split labels, plus cross-label collisions. GATE-004L is the new smallest
+brick and deliberately asks for a positive average of the conservative
+`z-t` term alone.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 62% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 63% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The dependent-trace deficit is exact, but its required positive average, a superlinear SAT lower bound, a polynomial SAT algorithm, and a terminal chain remain unproved. |
+| Real progress toward P vs NP | 0.00% | The representative-free disappeared-minus-split target is exact, but its positive bias, a superlinear SAT lower bound, a polynomial SAT algorithm, and a terminal chain remain unproved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

@@ -1445,6 +1445,40 @@
       "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the block",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/GATE-004K-dependent-trace-compression.md"
+    },
+    {
+      "id": "LEMMA-024",
+      "label": "PROVED",
+      "statement": "For prefix-dependent labels, the trace deficit P-|T| equals labels with zero active residuals minus labels with two active residuals plus the cross-label collision surplus.",
+      "computational_model": "One acyclic parent circuit, two complete prefix restrictions, and active residual functions grouped by prefix-dependent parent label",
+      "uniformity": "Fully non-uniform semantic trace classification without representative assignment",
+      "circuit_size": "Exact identity P-|T|=z-t+kappa and lower bound S-q>=z-t+kappa",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one in the intended application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite set union and integer counting only",
+      "asymptotic_quantifiers": "Every finite parent circuit, designated prefix block, and pair of complete prefix restrictions",
+      "case_regime": "Worst-case exact multi-output circuit computation",
+      "evidence": "proofs/LEMMA-024-labelwise-dependent-surplus.md"
+    },
+    {
+      "id": "GATE-004L",
+      "label": "EXPLORATORY",
+      "statement": "Across the conditioned identifier block, disappeared prefix-dependent parent labels exceed split labels by a polynomial positive average.",
+      "computational_model": "Minimum unrestricted SAT-gamma circuits, prefix-dependent parent labels, and exact active residual functions under every conditioned pair",
+      "uniformity": "Fully non-uniform circuit adversary and representative-free labelwise classification",
+      "circuit_size": "Aggregate z_j-t_j at least |J|(B P^eta+1)",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the selected block",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/GATE-004L-labelwise-survival-imbalance.md"
     }
   ]
 }

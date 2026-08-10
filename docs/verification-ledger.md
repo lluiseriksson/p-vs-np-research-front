@@ -105,6 +105,8 @@ truth. Each row has exactly one label.
 | GATE-004J-BOUNDARY-PIGEONHOLE | NO-GO | Dependent-region size and boundary arity alone cannot force residual-function collisions | LEMMA-022; NG-025 | Requires a smaller SAT-specific trace family |
 | LEMMA-023 | PROVED | Prefix-independent labels contribute at most one joint class each, giving `S-q>=P-|T|=e+h-P` | `proofs/LEMMA-023-dependent-trace-accounting.md` | Exact dependent-trace lower bound |
 | GATE-004K | EXPLORATORY | Prove a polynomial average deficit in the actual residual traces of all prefix-dependent parent gates | `proofs/GATE-004K-dependent-trace-compression.md` | Active smallest brick; sufficient for GATE-004J |
+| LEMMA-024 | PROVED | The dependent-trace deficit is exactly disappeared labels minus split labels plus cross-label collision surplus | `proofs/LEMMA-024-labelwise-dependent-surplus.md` | Representative-free exact accounting |
+| GATE-004L | EXPLORATORY | Prove a polynomial average excess of disappeared dependent labels over split dependent labels | `proofs/GATE-004L-labelwise-survival-imbalance.md` | Active smallest brick; sufficient for GATE-004K |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

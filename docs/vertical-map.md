@@ -36,8 +36,10 @@ Alternative active route:
      + ENC-009 (proved complementary columns)
      + ENC-010 (proved all-large-length padding)
      + LEMMA-021 (proved dependent-region size)
-  <- GATE-004K (active smallest brick): compress actual dependent traces
+  <- GATE-004K (active parent): compress actual dependent traces
      + LEMMA-023 (proved dependent/independent accounting)
+  <- GATE-004L (active smallest brick): labelwise disappeared-minus-split bias
+     + LEMMA-024 (proved representative-free accounting)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -311,7 +313,7 @@ classes. `GATE-004J-BOUNDARY-PIGEONHOLE — NO-GO` requires the next attack to
 prove a SAT-specific restriction on the trace family, not merely count its
 formal inputs.
 
-## Smallest active brick: GATE-004K
+## Active parent: GATE-004K
 
 LEMMA-023 removes the prefix-independent core from the missing inequality. If
 `P` parent labels are prefix-dependent and their two restricted copies realize
@@ -323,6 +325,18 @@ Thus only the actual dependent traces can create an excess over the stable
 one-class-per-label baseline. GATE-004K asks for a polynomial positive average
 of this exact deficit. Unlike raw pigeonholing, it is sensitive to the fact
 that every trace comes from one shared minimum SAT circuit.
+
+## Smallest active brick: GATE-004L
+
+LEMMA-024 resolves the dependent trace set into parent-label contributions. If
+`z_j` labels contribute no active residual and `t_j` contribute two, while
+`kappa_j` counts cross-label collisions, then
+
+`P-|T_j|=z_j-t_j+kappa_j`.
+
+GATE-004L conservatively discards the helpful `kappa_j` term and asks for a
+polynomial positive average of `z_j-t_j`. This is the exact survival
+imbalance that a topology- or minimality-based charging argument must prove.
 
 ## Downstream amplification obligation: GATE-005
 
