@@ -43,6 +43,10 @@
       "sha256": "cc4de70e9b22c388d51391a406a3bbdac5184b23eb1660be1857336a2c113057"
     },
     {
+      "path": "artifacts/cold-clone-159fba7.md",
+      "sha256": "e4c79e1330c4d62783bce9fb08db7d6e798c73e9eecbc41239c05196c7e18a6c"
+    },
+    {
       "path": "artifacts/cold-clone-17cab2f.md",
       "sha256": "30ccce3d6a43f6239f6331f3800ee41ef3987c2993666c6475548de3d3364af5"
     },
