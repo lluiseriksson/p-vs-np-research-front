@@ -297,13 +297,22 @@ every gate depends on the context bit, yet the exact joint quotient has
 parent size is therefore `NO-GO`; GATE-004O must use SAT's simultaneous
 `2^R` assignment-column shattering, not gatewise context dependence alone.
 
+The thirty-sixth cycle adds that shattering and finds the next exact boundary.
+LEMMA-036 constructs a globally minimum circuit with parallel adjacent pairs,
+one common branch union, all `2^R` output columns across `R` contexts, and every
+gate context-dependent; its per-pair quotient loss is nevertheless
+`2R-m+2`, arbitrarily negative for large `m`. These contexts are one-hot in
+`R` coordinates. GATE-004P is now the smallest active brick and isolates the
+remaining SAT feature: the same `R` contexts exhaust every assignment of only
+`log_2 R` context bits under ENC-014's affine embedding.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 74% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, and minimum context-chain constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 75% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, and one-hot full-shattering constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | The forced SAT context region is exact, but minimum context-dependent circuits can expand under quotienting; no shattering-based elimination, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | The active gate now isolates compressed full-cube context geometry, but no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

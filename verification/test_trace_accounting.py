@@ -89,6 +89,49 @@ class FullTraceAccountingTests(unittest.TestCase):
                     gate_traces(True)[gate_index],
                 )
 
+    def test_one_hot_shattering_joint_quotient_count(self) -> None:
+        for context_count in range(2, 5):
+            for tail_count in range(3, 7):
+                suffixes = tuple(
+                    itertools.product(
+                        (False, True), repeat=context_count + tail_count
+                    )
+                )
+                input_traces = {
+                    tuple(suffix[index] for suffix in suffixes)
+                    for index in range(context_count + tail_count)
+                }
+                for context_index in range(context_count):
+                    active = set()
+                    for edge in (False, True):
+                        traces = [[] for _ in range(tail_count + 1)]
+                        for suffix in suffixes:
+                            y = suffix[:context_count]
+                            z = suffix[context_count:]
+                            value = edge or y[context_index]
+                            traces[0].append(value)
+                            value = value or z[0]
+                            traces[1].append(value)
+                            for tail_index in range(1, tail_count):
+                                value = value and z[tail_index]
+                                traces[tail_index + 1].append(value)
+                        for trace in map(tuple, traces):
+                            if trace in input_traces or len(set(trace)) == 1:
+                                continue
+                            active.add(trace)
+
+                    self.assertEqual(len(active), 2 * tail_count - 2)
+                    parent_size = 2 * context_count + tail_count
+                    self.assertEqual(
+                        parent_size - len(active),
+                        2 * context_count - tail_count + 2,
+                    )
+
+                observed_columns = set()
+                for column in itertools.product((False, True), repeat=context_count):
+                    observed_columns.add(tuple(column))
+                self.assertEqual(len(observed_columns), 2**context_count)
+
 
 if __name__ == "__main__":
     unittest.main()

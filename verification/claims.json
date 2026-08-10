@@ -1955,6 +1955,57 @@
       "asymptotic_quantifiers": "Every m at least three; loss becomes arbitrarily negative",
       "case_regime": "Worst-case method-specific obstruction; lacks SAT's simultaneous assignment-column shattering",
       "evidence": "proofs/LEMMA-035-minimum-context-chain-expands.md; docs/no-go-ledger.md NG-034"
+    },
+    {
+      "id": "LEMMA-036",
+      "label": "PROVED",
+      "statement": "A globally minimum circuit family has parallel adjacent pairs, common branch union, all 2^R output columns over R one-hot contexts, and every gate context-dependent, yet each joint quotient has signed loss 2R-m+2.",
+      "computational_model": "Exact total Boolean functions, globally minimum acyclic circuits, parallel adjacent context pairs, and full semantic joint quotients",
+      "uniformity": "Explicit non-uniform family with a uniform construction for every R,m",
+      "circuit_size": "Minimum parent size 2R+m; every pair quotient 2m-2; signed loss 2R-m+2",
+      "circuit_depth": "Construction-dependent; minimum lower bound permits unrestricted depth",
+      "fan_in": "AND/OR two; no NOT gates required",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every R at least two and m at least three; negative loss for m greater than 2R+2",
+      "case_regime": "Worst-case exact total-function computation; one-hot-context method obstruction, not SAT-gamma",
+      "evidence": "proofs/LEMMA-036-one-hot-shattering-minimum-expansion.md; verification/test_trace_accounting.py"
+    },
+    {
+      "id": "GATE-004O-SHATTERING-ONLY",
+      "label": "NO-GO",
+      "statement": "Parallel adjacency, common branch union, full 2^R shattering, global minimality, and context dependence of every gate do not force positive quotient loss when R contexts are one-hot in R coordinates.",
+      "computational_model": "Globally minimum unrestricted non-uniform Boolean circuits over a one-hot context block, one edge bit, and suffix inputs",
+      "uniformity": "Explicit non-uniform counterexample family",
+      "circuit_size": "Signed per-pair loss 2R-m+2, arbitrarily negative with growing m",
+      "circuit_depth": "Unrestricted in the minimum lower bound",
+      "fan_in": "AND/OR two; no NOT required",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every R at least two and arbitrary m greater than 2R+2",
+      "case_regime": "Worst-case method-specific obstruction; does not use a compressed full context cube",
+      "evidence": "proofs/LEMMA-036-one-hot-shattering-minimum-expansion.md; docs/no-go-ledger.md NG-035"
+    },
+    {
+      "id": "GATE-004P",
+      "label": "EXPLORATORY",
+      "statement": "For an affine embedded full d-bit context cube with R=2^d, common adjacent-branch union, full 2^R shattering, and U at least R context-dependent traces force positive polynomial average loss in quotients of the ambient minimum circuit.",
+      "computational_model": "Globally minimum unrestricted ambient Boolean circuits, an affine embedded edge/context cube, exact adjacent joint quotients of the ambient circuit, and explicit shattering witnesses",
+      "uniformity": "Fully non-uniform ambient circuit adversary; theorem quantifies over every finite ambient function and embedding satisfying the hypotheses",
+      "circuit_size": "Average parent-to-joint-quotient loss at least B U^eta+1",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine input embedding over F_2; all computation and quotients are Boolean",
+      "asymptotic_quantifiers": "Exists fixed B,eta>0,d0; every d at least d0, every ambient prefix/suffix dimension, every eligible embedding, and every ambient minimum circuit satisfying all hypotheses",
+      "case_regime": "Worst-case exact total-function computation; no promise or distribution",
+      "evidence": "proofs/GATE-004P-compressed-context-shattering.md"
     }
   ]
 }

@@ -147,6 +147,9 @@ truth. Each row has exactly one label.
 | GATE-004O | EXPLORATORY | Prove polynomial average joint-quotient loss from the forced context-dependent trace region | `proofs/GATE-004O-context-trace-elimination.md` | Active smallest brick; sufficient for GATE-004 |
 | LEMMA-035 | PROVED | A globally minimum `m`-gate circuit with every gate context-dependent has joint quotient size `2m-3` and signed loss `3-m` | `proofs/LEMMA-035-minimum-context-chain-expands.md`; reference test | Minimum region size alone can favor splitting |
 | GATE-004O-REGION-SIZE-ONLY | NO-GO | Global minimum size plus an arbitrarily large fully context-dependent region does not force positive quotient loss | LEMMA-035; NG-034 | Must use SAT's simultaneous assignment-column shattering |
+| LEMMA-036 | PROVED | A minimum circuit with parallel adjacent pairs, common union, full `2^R` shattering, and every gate context-dependent has per-pair loss `2R-m+2` | `proofs/LEMMA-036-one-hot-shattering-minimum-expansion.md`; reference test | One-hot contexts permit arbitrarily negative loss |
+| GATE-004O-SHATTERING-ONLY | NO-GO | Parallel adjacency, common union, full shattering, minimality, and context dependence do not force positive loss for one-hot contexts | LEMMA-036; NG-035 | Must use the compressed full context cube |
+| GATE-004P | EXPLORATORY | Prove polynomial loss from full shattering when `R` contexts exhaust a `log_2 R`-bit cube | `proofs/GATE-004P-compressed-context-shattering.md` | Active smallest brick; explicit bridge to GATE-004O and GATE-004 |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

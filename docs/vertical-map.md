@@ -43,9 +43,11 @@ Adjacent collision-aware active branch:
   <- GATE-004N (open adjacent route): one-bit conditioned-SAT surplus
      + ENC-013 (proved exact adjacent conditioning)
      + LEMMA-029 (proved exact full quotient accounting)
-  <- GATE-004O (active smallest brick): affine-context trace elimination
+  <- GATE-004O (open parent): affine-context trace elimination
      + ENC-014 (proved parallel affine edge cube)
      + LEMMA-034 (proved context-dependent region)
+  <- GATE-004P (active smallest brick): compressed full-context shattering
+     - GATE-004O-SHATTERING-ONLY (one-hot-context no-go)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -461,7 +463,7 @@ circuit for `s XOR G` loses at most four gates under the adjacent cofactors
 the simultaneous SAT-specific edge family and behavior on prefix rows outside
 each edge.
 
-## Smallest active brick: GATE-004O
+## Context-trace route: GATE-004O
 
 ENC-014 identifies the simultaneous geometry exactly. All supported pairs at
 bit length `L` flip the same zero-based coordinate `3L+10`. After that bit is
@@ -490,6 +492,27 @@ distinct active classes. Its signed parent-to-quotient loss is `3-m`.
 context-dependence charging argument. The surviving proof obligation must use
 the simultaneous `2^R` SAT assignment columns across all `R` contexts to
 prevent this split-heavy trace behavior.
+
+Cycle 036 includes those shattering columns and still finds a precise generic
+failure. LEMMA-036 gives a globally minimum circuit with parallel adjacent
+pairs, a common branch union, every parent gate context-dependent, and all
+`2^R` output columns over `R` one-hot contexts. Its exact per-pair loss is
+`2R-m+2`, arbitrarily negative when the suffix tail `m` grows.
+`GATE-004O-SHATTERING-ONLY — NO-GO` shows that shattering is not enough when
+the context block has `R` coordinates.
+
+## Smallest active brick: GATE-004P
+
+GATE-004P retains the remaining structural difference: the `R` SAT contexts
+are every assignment of only `d=log_2 R` bits, embedded by ENC-014's disjoint
+affine directions. It asks for polynomial average loss from global minimality,
+common conditioned union, full shattering, and this compressed full-cube
+context. ENC-013, ENC-014, ENC-009/010, and LEMMA-034 prove every hypothesis
+for SAT and give an explicit implication to GATE-004O and then GATE-004.
+
+The next attack must derive a consequence of exhausting the full compressed
+cube; repeating one-hot shattering or gatewise context sensitivity is already
+blocked.
 
 ## Downstream amplification obligation: GATE-005
 

@@ -180,7 +180,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d1b5b4c25b18a3802612ddbbb3a4b619a0604160a3e9356217dae8e0a5dab538"
+      "sha256": "813fbb7391db4f0c2b9a179522b8f237e1fea2338d976c94fc566a8530990f8e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -188,7 +188,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "5daaa3413b8454b71a07059acabcd11ee5da3f69585f5dda7d42e2762d389268"
+      "sha256": "9b7a321eeb94df9b00c82aa1e4a2b37907db632885b1b04cb60d1095178d1f0e"
     },
     {
       "path": "docs/result-labels.md",
@@ -276,11 +276,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c99bbde6bac42eb244e4a3f0ad4fdcb1fc95d8919afdeb99be2ca41dad5719a0"
+      "sha256": "2e672898f7cf92f3a6d8a7506476724465cbc2dddb553d367e36dcb7e0fa7ee1"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "26848db2a26de7eb9da9320ee0a189e72bd3bed998d3e7e3d7987611e2bb3b5b"
+      "sha256": "1307dcd7138ef8fce3107a11c85a30828f1c2e08fea1eb73605c1ef3db50eaf8"
     },
     {
       "path": "experiments/README.md",
@@ -365,6 +365,10 @@
     {
       "path": "proofs/GATE-004O-context-trace-elimination.md",
       "sha256": "5843131a339a95207446a66ff9185d7b289497be334ed7343eed789c0efd173c"
+    },
+    {
+      "path": "proofs/GATE-004P-compressed-context-shattering.md",
+      "sha256": "555449420ad5ecab62d29e6c2b5e8c8b5e59d963a88711aecc68c4cd40da950f"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -511,8 +515,12 @@
       "sha256": "4ce0f885e63e722b89a2eccf609865b62a15ceba9ed06f819b6ee0602b05598d"
     },
     {
+      "path": "proofs/LEMMA-036-one-hot-shattering-minimum-expansion.md",
+      "sha256": "dec67a334c28345e73cbc32a8ddacda7b674b4d5305d529d96ee18abde08d4fe"
+    },
+    {
       "path": "README.md",
-      "sha256": "679811065f3b52e180c2f6149228db6be6f0680d9a4815689b5b6eff7b031142"
+      "sha256": "ba169e388a77e35b1f6a1c7d0f3793e8a288bc5ee66bf8d4511fa56e2b03d5be"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -524,7 +532,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "ccc4e4db4f7963b8513316e07acdfd18f8236399f9a3334eb299c13c9a9d2107"
+      "sha256": "7bd7b69192ff1cd1526b40dae07b3ba7afb2a409be92fa807be6f7b76c5bb291"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -548,7 +556,7 @@
     },
     {
       "path": "verification/test_trace_accounting.py",
-      "sha256": "2ff340e700f4aacd40c55cb0c0118f78fcb7aa025b8ef9658a2edf79e0b7ab8b"
+      "sha256": "d0acb9e6d151813c89bf00a38e5cd0e99b567e8a3e5eec5f1340b0e4cd61ce30"
     }
   ]
 }

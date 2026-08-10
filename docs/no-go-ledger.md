@@ -695,3 +695,26 @@ parent depth `m` but lower bound depth unrestricted; fan-in two; no NOT,
 randomness, advice, oracle, field, promise, or distribution. The construction
 has only two contexts and no SAT assignment-column shattering, so GATE-004O
 remains open only as a simultaneous SAT-specific theorem.
+
+## NG-035 — parallel shattering plus minimum size forces positive loss
+
+**Label: NO-GO**
+
+Scope: infer positive average joint-quotient loss from global minimum size,
+parallel adjacent pairs, one common OR of the two branch residuals, all `2^R`
+output columns over `R` contexts, and semantic context dependence of every
+parent gate, without using a compressed full context cube.
+
+Failure: LEMMA-036 constructs a minimum `2R+m`-gate circuit satisfying every
+listed property on the `R` one-hot contexts `e_i`. Every pair's exact joint
+quotient has size `2m-2`, so its signed loss is `2R-m+2`. Taking
+`m>2R+2` makes every loss negative, and increasing `m` makes the failure
+arbitrarily large. The branch union remains the same suffix conjunction for
+every context, while explicit witnesses realize all `2^R` vectors.
+
+Model: exact globally minimum non-uniform AND/OR circuits; an `R`-bit one-hot
+context block and one common adjacent edge bit; depth unrestricted in the
+minimum lower bound; fan-in two; no NOT, randomness, advice, oracle, field,
+promise, or distribution. The obstruction does not use all assignments of a
+`log_2 R`-bit context cube. GATE-004P isolates that remaining compact-context
+hypothesis and its proved SAT bridge.
