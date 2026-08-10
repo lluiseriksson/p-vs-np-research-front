@@ -27,6 +27,10 @@
       "sha256": "2097b0f5501b3b4739b8b4016d2472c2794f9abe77fed061f949e823d012ccfc"
     },
     {
+      "path": "artifacts/cold-clone-070bfe3.md",
+      "sha256": "91877761e013d6ebf6043043ac617cc36b97f1bd5d9d05275da4edc6b25802fa"
+    },
+    {
       "path": "artifacts/cold-clone-0ca57cb.md",
       "sha256": "ceff332a41042131524ba8c99a7fd0bbd4f87df8570e22f9457b477600755365"
     },
@@ -388,7 +392,7 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "4dbda3631df9cb34a94898559512231973dc68f0ec8a8be680ec73019feabf90"
+      "sha256": "187462480d8fec312ae18f31b549f876f47b12895875dd0acbebfe9de728cf0b"
     },
     {
       "path": "docs/vertical-map.md",

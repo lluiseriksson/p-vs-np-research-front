@@ -66,6 +66,7 @@ truth. Each row has exactly one label.
 | INFRA-059 | PROVED | Cycle-059 signed-triple obstruction, product localization, cost bracket, and GATE-004Y reproduce from a cold clone | `artifacts/cold-clone-f3b7dee.md` | None |
 | INFRA-060 | PROVED | Cycle-060 global De Morgan compression and clausewise-minimality no-go reproduce from a cold clone | `artifacts/cold-clone-dfdd254.md` | None |
 | INFRA-061 | PROVED | Cycle-061 local signed-triple factorization, corrected cost bracket, and GATE-004Z reproduce from a cold clone | `artifacts/cold-clone-66b4880.md` | None |
+| INFRA-062 | PROVED | Cycle-062 standalone signed-triple formula-boundary theorem and quantitative no-go reproduce from a cold clone | `artifacts/cold-clone-070bfe3.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
