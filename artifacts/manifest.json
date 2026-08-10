@@ -123,6 +123,10 @@
       "sha256": "9eb8ea0de4e0a90cb8f487ef4560d26073ef541fceb9995354fee4bd71d96e2f"
     },
     {
+      "path": "artifacts/literal-subcube-search-31.json",
+      "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
+    },
+    {
       "path": "artifacts/README.md",
       "sha256": "735c508dde332be8a56dee73103536dad83f89f4ea10d41903b8a3ae19438149"
     },
@@ -152,7 +156,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "2cc465ac488c6f4f9c3dc2d556162fcaadc20b27472e9031c3ac2c0d2dcd6e09"
+      "sha256": "64dd4186717fbc33d5199d5ba4f02dc3534ebe81d3f008a8a2149db4d9b30df7"
     },
     {
       "path": "docs/result-labels.md",
@@ -240,15 +244,19 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "d87e6505539d0a1fc66a9eea7ce498b8c5abce03987d33d209f0c44e742f722b"
+      "sha256": "332ff9a19e49d31ad5122320bd47a46388a69b1e5157b74911b5555d8947051a"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "942aa3e5773ed4b00b290b777a19221a002cda4862fa714faaadb5c0e6e1a39e"
+      "sha256": "bb98333134b85957e4ba4058a4af763ccbdfd5b34225da35bc6abefe5ac80a61"
     },
     {
       "path": "experiments/README.md",
-      "sha256": "7d9b337ddff75d9332ebbb885c490498583385bb181fb17cec202a2bb03848cc"
+      "sha256": "08125fa50b9855bf3bbae93a620dff1a339fef4583b97bbd0c5e4669c581d8a2"
+    },
+    {
+      "path": "experiments/search_literal_subcube.py",
+      "sha256": "e185ad316e9b190d52e28b975a6f3fd16e5c79a67da11b3f77e26ba72c0e8ed6"
     },
     {
       "path": "formal/README.md",
@@ -428,7 +436,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "49f7a870a18b43f5a255af1279937818e59cc26675bb15d92f10b7fa4bb5d891"
+      "sha256": "2f3b727146566e57ac89e3eae8ec558a48ee0e06a124a273bfb138c89ced57a8"
     },
     {
       "path": "verification/audit.py",
@@ -436,7 +444,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "6bec0df37c8247f0a6333a79eecaf0a03ca5a6f892a3e2e7b91dc73637e782bc"
+      "sha256": "94a37c5fe9e9c469fafce330b0cacc1e3eeafc8e0b8bac0002e8ba541156d3a3"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -445,6 +453,10 @@
     {
       "path": "verification/sat_encoding.py",
       "sha256": "6b348d1cfc12f23a2a6670d9bb44b0eeaa8449105f7d423fe599b873a803f260"
+    },
+    {
+      "path": "verification/test_experiments.py",
+      "sha256": "2a53a2efac7abb5044101a4f9acc98d41933f98c7073e2cf4fd8e34cfff61b8f"
     },
     {
       "path": "verification/test_sat_encoding.py",

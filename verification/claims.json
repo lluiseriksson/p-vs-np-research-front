@@ -1564,6 +1564,23 @@
       "asymptotic_quantifiers": "Every fixed 0<c<1; all sufficiently large n; every minimum circuit; every identifier in the selected block",
       "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
       "evidence": "proofs/LEMMA-027-mandatory-output-split.md"
+    },
+    {
+      "id": "EXP-001",
+      "label": "NUMERICAL",
+      "statement": "Exhaustive generation of all identifier-1 formulas through length 31 finds no equal-length Hamming-distance-one positive/negative literal pair; the first distance-two pair occurs at length 15.",
+      "computational_model": "Finite exhaustive generation of exact SAT-gamma formulas using only variable identifier 1",
+      "uniformity": "Deterministic enumeration with no random choices",
+      "circuit_size": "Not applicable; encoding-gadget search only",
+      "circuit_depth": "All formula depths represented within the length bound",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Formula lengths 3 through 31 only; variable identifier exactly 1",
+      "case_regime": "Finite exhaustive numerical search; no asymptotic or circuit-lower-bound implication",
+      "evidence": "experiments/search_literal_subcube.py; artifacts/literal-subcube-search-31.json; verification/test_experiments.py"
     }
   ]
 }

@@ -228,13 +228,19 @@ conditioned-SAT functions for every identifier, contributing `-|J|` to the
 aggregate. Any GATE-004L proof must first pay this output charge and all other
 split labels before producing a polynomial reserve.
 
+The twenty-eighth cycle explores a sharper INDEX-style embedding without
+promoting finite evidence. A deterministic exhaustive search finds no
+equal-length `x_1`/`NOT x_1` encodings at Hamming distance one through length
+31; the first distance-two pair is at length 15. The result is labeled
+`NUMERICAL` and cannot close the coordinate-subcube question.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 66% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 67% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, a reproducible bounded literal-subcube search, exact pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | SAT contributes a proved mandatory negative output charge, but no compensating multi-pair bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | The bounded gadget search is numerical only; no coordinate-subcube theorem, compensating multi-pair bias, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

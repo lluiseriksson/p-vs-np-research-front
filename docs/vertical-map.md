@@ -357,6 +357,13 @@ aggregate. Any GATE-004L charging proof must pay this mandatory output charge,
 all additional split labels, and then leave the full polynomial reserve. A
 proof that omits the output label is quantitatively invalid.
 
+Cycle 028 tests whether ENC-009 can be upgraded to a literal coordinate
+subcube. `EXP-001 — NUMERICAL` exhaustively finds no one-bit-separated
+equal-length `x_1`/`NOT x_1` formula pair through length 31; the first
+distance-two pair occurs at length 15. This bounded result receives no
+asymptotic credit. A coordinate-subcube route remains open only with a proof
+or a gadget beyond the searched range.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification
