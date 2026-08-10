@@ -213,6 +213,22 @@ def conditioned_prefix(value: bool, identifier: int = 1) -> str:
     return "01" + conditioned_formula(value, identifier)
 
 
+def one_bit_auxiliary_identifier(identifier: int) -> int:
+    """Return the auxiliary identifier in the exact one-bit gadget.
+
+    The main affine family uses identifiers whose binary expansion begins
+    with ``11``.  Identifier 1 is retained for the separate base gadget.
+    """
+    if identifier < 1:
+        raise ValueError("identifier must be positive")
+    binary = format(identifier, "b")
+    if identifier == 1:
+        return 3
+    if binary.startswith("11"):
+        return int("1" + binary[2:] + "11", 2)
+    raise ValueError("identifier must be 1 or have a binary code beginning 11")
+
+
 def one_bit_literal_gadgets(identifier: int) -> dict[bool, str]:
     """Return exact positive/negative literal formulas at Hamming distance one.
 
@@ -220,15 +236,7 @@ def one_bit_literal_gadgets(identifier: int) -> dict[bool, str]:
     begins with ``11``.  Identifier 1 has the separate base construction with
     auxiliary identifier 3.
     """
-    if identifier < 1:
-        raise ValueError("identifier must be positive")
-    binary = format(identifier, "b")
-    if identifier == 1:
-        auxiliary = 3
-    elif binary.startswith("11"):
-        auxiliary = int("1" + binary[2:] + "11", 2)
-    else:
-        raise ValueError("identifier must be 1 or have a binary code beginning 11")
+    auxiliary = one_bit_auxiliary_identifier(identifier)
 
     variable = encode_variable(identifier)
     auxiliary_variable = encode_variable(auxiliary)
@@ -246,6 +254,69 @@ def one_bit_literal_gadgets(identifier: int) -> dict[bool, str]:
 def one_bit_conditioned_prefix(value: bool, identifier: int) -> str:
     """Prefix for AND(one-bit literal gadget, hole)."""
     return "01" + one_bit_literal_gadgets(identifier)[value]
+
+
+def one_bit_halo_prefixes(
+    value: bool,
+    identifier: int,
+    context_bit_index: int,
+) -> dict[str, str]:
+    """Return the three single-occurrence off-cube neighbors of a row.
+
+    ``identifier`` must have binary form ``11s``.  A selected bit of ``s``
+    occurs three times in the ENC-014 row.  The returned ``first``, ``middle``,
+    and ``final`` prefixes toggle exactly one respective occurrence while
+    retaining a well-formed formula with one suffix hole.
+    """
+    binary = format(identifier, "b")
+    if len(binary) < 3 or not binary.startswith("11"):
+        raise ValueError("identifier must have binary form 11s with nonempty s")
+    context_width = len(binary) - 2
+    if context_bit_index < 0 or context_bit_index >= context_width:
+        raise ValueError("context_bit_index is outside the identifier context")
+
+    toggled_identifier = identifier ^ (
+        1 << (context_width - context_bit_index - 1)
+    )
+    auxiliary = one_bit_auxiliary_identifier(identifier)
+    toggled_auxiliary = one_bit_auxiliary_identifier(toggled_identifier)
+
+    variable = encode_variable(identifier)
+    toggled_variable = encode_variable(toggled_identifier)
+    auxiliary_variable = encode_variable(auxiliary)
+    toggled_auxiliary_variable = encode_variable(toggled_auxiliary)
+
+    if value:
+        gadgets = {
+            "first": encode_or(
+                encode_and(toggled_variable, encode_not(auxiliary_variable)),
+                variable,
+            ),
+            "middle": encode_or(
+                encode_and(variable, encode_not(toggled_auxiliary_variable)),
+                variable,
+            ),
+            "final": encode_or(
+                encode_and(variable, encode_not(auxiliary_variable)),
+                toggled_variable,
+            ),
+        }
+    else:
+        gadgets = {
+            "first": encode_or(
+                encode_and(toggled_variable, encode_not(variable)),
+                encode_not(variable),
+            ),
+            "middle": encode_or(
+                encode_and(variable, encode_not(toggled_variable)),
+                encode_not(variable),
+            ),
+            "final": encode_or(
+                encode_and(variable, encode_not(variable)),
+                encode_not(toggled_variable),
+            ),
+        }
+    return {position: "01" + gadget for position, gadget in gadgets.items()}
 
 
 def assignment_conjunction(assignment: Mapping[int, bool]) -> str:

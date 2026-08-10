@@ -42,9 +42,15 @@ circuit lower bound GATE-004.
 ## First attack boundary
 
 LEMMA-038 proves that every abstract on-cube hypothesis audited so far is
-insufficient, even with ambient minimality. A proof must now exploit the exact
-behavior of SAT-gamma on prefix rows outside the ENC-014 affine cube. The next
-concrete audit is the one-bit off-cube halo obtained by changing one of the
-three repeated context-bit occurrences independently: classify which halo
-rows are malformed, annihilating, neutral, or encode related conditioned
-functions, then test whether those relations force trace loss.
+insufficient, even with ambient minimality. ENC-015 now classifies the entire
+one-bit off-cube halo. All six neighbors are valid formulas: two duplicate a
+base residual, one is neighboring negative conditioning, one is the exact
+union `H_{j,0} OR H_{j',0}`, and two are unions involving a positive
+condition and an auxiliary negative condition.
+
+LEMMA-039 and NG-037 show that the neutral duplicates alone force no circuit
+structure, even under global minimality. The next attack is therefore the
+simultaneous mixed-halo network, beginning with whether the exact negative
+union relations over every context-cube edge rule out the fresh-tail quotient
+expansion in LEMMA-038. Any such inference must use all relevant ambient SAT
+rows; equality of one pair receives no credit.

@@ -315,13 +315,22 @@ is at most `K-m` and becomes negative. GATE-004P is now `NO-GO`. GATE-004Q is
 the smallest active brick and explicitly requires the full SAT-gamma behavior
 outside ENC-014's affine cube; its first audit is the one-bit off-cube halo.
 
+The thirty-eighth cycle completes that halo audit. ENC-015 proves that all six
+single-occurrence context flips remain valid formula prefixes and classifies
+their exact semantics: two neutral duplicates, neighboring negative
+conditioning, an exact negative-conditioned union, and two mixed positive
+unions involving the auxiliary identifier. LEMMA-039 shows that neutral row
+duplication alone preserves exact minimum circuit size and can be implemented
+without any gate depending on the flipped coordinate, yielding NG-037. The
+active GATE-004Q attack now targets the simultaneous mixed-halo union network.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 76% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 77% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | All generic on-cube loss hypotheses audited so far are false; the active gate now requires exact SAT off-cube behavior, with no superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | The exact one-bit SAT halo is classified, but neutral duplication is generically powerless and no mixed-halo loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

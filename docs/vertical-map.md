@@ -49,6 +49,8 @@ Adjacent collision-aware active branch:
   <- GATE-004P (no-go): compressed full-context shattering
      - LEMMA-038 (fresh-tail counterexample)
   <- GATE-004Q (active smallest brick): SAT off-cube rigidity
+     + ENC-015 (proved six-case one-bit halo semantics)
+     - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -525,12 +527,19 @@ polynomial average loss only for minimum circuits computing the full total
 `SAT-gamma_n` function on every prefix string. Its bridge to GATE-004 remains
 the exact ENC-013 conditioned union and LEMMA-014 logarithmic recurrence.
 
-The first concrete attack is SAT's off-cube halo. Each ENC-014 context bit is
-repeated in three prefix positions. Independently flipping one occurrence
-leaves the affine cube and produces a nearby ambient SAT input. The next audit
-classifies those rows exactly—malformed, annihilating, neutral, or related
-conditioning—and tests whether their simultaneous relations block the fresh-
-tail quotient expansion of LEMMA-038.
+ENC-015 classifies SAT's one-bit off-cube halo exactly. Each ENC-014 context
+bit is repeated in three prefix positions, and independently flipping one
+occurrence always produces another valid formula prefix. Of the six polarized
+cases, two are neutral duplicates, one is neighboring negative conditioning,
+one is the exact union `H_{j,0} OR H_{j',0}`, and two are positive/auxiliary
+mixed unions. LEMMA-039 proves that neutral duplication alone has no generic
+forcing power.
+
+The next concrete attack is the simultaneous mixed-halo network. In
+particular, it asks whether the exact negative union relations on every edge
+of the compressed context cube obstruct LEMMA-038's fresh-tail quotient
+expansion. This remains an SAT-specific, unrestricted-circuit question; no
+loss theorem is presently proved.
 
 ## Downstream amplification obligation: GATE-005
 

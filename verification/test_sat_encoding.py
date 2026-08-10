@@ -22,7 +22,9 @@ from sat_encoding import (
     satisfiability_padding_wrap,
     neutral_prefix_family,
     neutral_prefix_index,
+    one_bit_auxiliary_identifier,
     one_bit_conditioned_prefix,
+    one_bit_halo_prefixes,
     one_bit_literal_gadgets,
     operator_square_prefix,
     tautology,
@@ -341,6 +343,85 @@ class FormulaEncodingTests(unittest.TestCase):
                         "".join(reconstructed),
                         one_bit_conditioned_prefix(polarity, identifier(context)),
                     )
+
+    def test_one_bit_off_cube_halo_has_six_exact_semantics(self) -> None:
+        def xor_support(left: str, right: str) -> set[int]:
+            self.assertEqual(len(left), len(right))
+            return {
+                index
+                for index, bits in enumerate(zip(left, right))
+                if bits[0] != bits[1]
+            }
+
+        for bit_length in range(3, 7):
+            context_width = bit_length - 2
+            for context in range(2**context_width):
+                suffix = format(context, f"0{context_width}b")
+                identifier = int("11" + suffix, 2)
+                for context_bit in range(context_width):
+                    toggled_identifier = identifier ^ (
+                        1 << (context_width - context_bit - 1)
+                    )
+                    auxiliary = one_bit_auxiliary_identifier(identifier)
+                    toggled_auxiliary = one_bit_auxiliary_identifier(
+                        toggled_identifier
+                    )
+                    variables = sorted(
+                        {
+                            identifier,
+                            toggled_identifier,
+                            auxiliary,
+                            toggled_auxiliary,
+                        }
+                    )
+                    for polarity in (False, True):
+                        base = one_bit_conditioned_prefix(polarity, identifier)
+                        opposite_context = one_bit_conditioned_prefix(
+                            polarity, toggled_identifier
+                        )
+                        direction_support = xor_support(base, opposite_context)
+                        self.assertEqual(len(direction_support), 3)
+
+                        halo = one_bit_halo_prefixes(
+                            polarity, identifier, context_bit
+                        )
+                        self.assertEqual(set(halo), {"first", "middle", "final"})
+                        singleton_supports = []
+                        for prefix in halo.values():
+                            self.assertEqual(len(prefix), len(base))
+                            support = xor_support(base, prefix)
+                            self.assertEqual(len(support), 1)
+                            singleton_supports.append(support)
+                            parsed = parse_formula(prefix[2:])
+                            self.assertIsNotNone(parsed)
+                        self.assertEqual(
+                            set().union(*singleton_supports), direction_support
+                        )
+
+                        for values in itertools.product(
+                            (False, True), repeat=len(variables)
+                        ):
+                            assignment = dict(zip(variables, values))
+                            x = assignment[identifier]
+                            xp = assignment[toggled_identifier]
+                            k = assignment[auxiliary]
+                            if polarity:
+                                expected = {
+                                    "first": (xp and not k) or x,
+                                    "middle": x,
+                                    "final": (x and not k) or xp,
+                                }
+                            else:
+                                expected = {
+                                    "first": not x,
+                                    "middle": (not x) or (not xp),
+                                    "final": not xp,
+                                }
+                            for position, prefix in halo.items():
+                                self.assertEqual(
+                                    verify_assignment(prefix[2:], assignment),
+                                    expected[position],
+                                )
 
     def test_conditioned_prefix_length_by_identifier_bit_length(self) -> None:
         for bit_length in range(1, 7):

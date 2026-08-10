@@ -635,6 +635,80 @@ matching of all `2^(L-2)` edges in one unit coordinate, with an
 | Asymptotic quantifiers | Every `L>=2`, every context `s`, and both polarities |
 | Regime | Exact syntax-level geometry for worst-case total-language restrictions |
 
+## ENC-015 — the one-bit off-cube halo has six exact SAT semantics
+
+**Label: PROVED**
+
+Fix `L>=3`, a supported identifier `j=(11s)_2`, and one coordinate of the
+nonempty context string `s`. Let `j'` toggle that coordinate, and let `k,k'`
+be the ENC-013 auxiliary identifiers for `j,j'`. A context coordinate occurs
+three times in each row `Q_{j,b}`. Toggle its first, middle, or final
+occurrence independently. Each resulting prefix:
+
+- has the same length `6L+13` as `Q_{j,b}`;
+- differs from `Q_{j,b}` in exactly one bit;
+- remains a well-formed prefix `01 B` with one formula hole; and
+- lies outside the ENC-014 affine cube, because a context direction toggles
+  all three occurrences together.
+
+Writing variables as `x_j,x_j',x_k,x_k'`, the six gadget functions are
+exactly:
+
+| Base row | Flipped occurrence | Halo gadget function |
+|---|---|---|
+| positive | first | `x_j OR (x_j' AND NOT x_k)` |
+| positive | middle | `x_j` |
+| positive | final | `x_j' OR (x_j AND NOT x_k)` |
+| negative | first | `NOT x_j` |
+| negative | middle | `NOT x_j OR NOT x_j'` |
+| negative | final | `NOT x_j'` |
+
+These identities follow by substituting `V_j,V_j',V_k,V_k'` into the ENC-013
+syntax and applying absorption or contradiction. In particular, the positive
+middle neighbor duplicates `Q_{j,1}`, and the negative first neighbor
+duplicates `Q_{j,0}`. The negative final neighbor is the adjacent-context row
+`Q_{j',0}` semantically, although its syntax differs from that cube row.
+
+For an arbitrary suffix formula `phi`, write
+
+`H_{a,b}(phi)=SAT(phi AND (x_a=b))`.
+
+The negative-middle residual obeys the exact union identity
+
+`SAT(phi AND (NOT x_j OR NOT x_j'))=H_{j,0}(phi) OR H_{j',0}(phi)`.
+
+The two mixed positive residuals obey
+
+`SAT(phi AND (x_j OR (x_j' AND NOT x_k)))`
+
+`=H_{j,1}(phi) OR SAT(phi AND x_j' AND NOT x_k)`
+
+and
+
+`SAT(phi AND (x_j' OR (x_j AND NOT x_k)))`
+
+`=H_{j',1}(phi) OR SAT(phi AND x_j AND NOT x_k)`.
+
+These are satisfiability identities, not pointwise Boolean identities between
+the disjuncts. They hold for every suffix, including suffixes that mention the
+auxiliary identifiers. No freshness, promise, or distribution is assumed.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formula prefixes, pointwise gadget semantics, and complete suffix restrictions |
+| Uniform/non-uniform | Uniform explicit construction for every supported identifier and context coordinate |
+| Circuit size | No lower bound; every halo prefix has length `6L+13` and Hamming distance one from its base row |
+| Circuit depth | Halo gadget formulas have constant depth; later computing circuits unrestricted |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Hamming/XOR geometry over `F_2` only; SAT semantics remain Boolean |
+| Asymptotic quantifiers | Every `L>=3`, every `j=(11s)_2`, every context coordinate, both polarities, every suffix formula and assignment |
+| Regime | Worst-case exact total-language behavior; all six halo rows are valid rather than malformed or promise inputs |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

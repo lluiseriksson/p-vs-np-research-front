@@ -742,3 +742,25 @@ fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. The construction is not SAT-gamma.
 It proves that the next gate must use SAT's values outside the embedded cube or
 another genuinely SAT-specific ambient relation.
+
+## NG-037 — neutral off-cube duplicates force quotient loss
+
+**Label: NO-GO**
+
+Scope: infer gate disappearance, collision, or positive parent-to-quotient
+loss solely because a one-bit off-cube neighbor computes exactly the same
+residual as its adjacent embedded row, even when the ambient circuit is
+globally minimum.
+
+Failure: LEMMA-039 extends an arbitrary function `H(r,y)` to
+`F(u,r,y)=H(r,y)` on a fresh coordinate. Restriction and lifting prove the
+exact identity `C(F)=C(H)`, and a minimum implementation ignores `u` at every
+gate while its two adjacent rows are identical. Thus semantic duplication
+alone has zero generic forcing power.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; depth
+unrestricted; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
+oracle, field, promise, or distribution. This obstruction applies only to the
+two neutral cases in ENC-015. It does not address the four mixed SAT-specific
+halo relations, especially the exact union
+`H_{j,0} OR H_{j',0}`.

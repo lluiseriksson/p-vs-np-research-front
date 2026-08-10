@@ -143,6 +143,7 @@ truth. Each row has exactly one label.
 | LEMMA-032 | PROVED | A minimum circuit for `s XOR G` loses at most four gates under its adjacent complementary cofactor pair | `proofs/LEMMA-032-adjacent-complementary-hard-core.md` | Arbitrary shared hard core survives adjacency |
 | GATE-004N-ADJACENCY-ONLY | NO-GO | Adjacency, complementary active cofactors, and minimum size alone cannot force growing quotient loss | LEMMA-032; NG-032 | Must use the multi-edge SAT family and off-edge semantics |
 | ENC-014 | PROVED | The one-bit conditioned rows form one affine subspace of parallel edges sharing coordinate `3L+10` with disjoint context directions | `docs/sat-encoding.md`; reference test | Exact shared-edge and context geometry |
+| ENC-015 | PROVED | Every single-occurrence context flip is a valid off-cube prefix, with six exact neutral, neighboring, or mixed conditioning semantics | `docs/sat-encoding.md`; reference test | Complete one-bit halo classification |
 | LEMMA-033 | PROVED | Complementary output influence over arbitrarily many parallel contexts can be confined to a four-gate common-edge shell | `proofs/LEMMA-033-parallel-edge-direction-shell.md` | Edge direction alone has constant overhead |
 | GATE-004N-DIRECTION-ONLY | NO-GO | Sensitivity along every parallel edge does not force a polynomial edge-dependent region | LEMMA-033; NG-033 | Must eliminate the context-dependent region |
 | LEMMA-034 | PROVED | After fixing one polarity and tracing the affine context cube, at least `2^(L-2)` parent binary gates depend on context | `proofs/LEMMA-034-context-dependent-trace-region.md` | Polynomial region survives edge-shell no-go |
@@ -154,7 +155,9 @@ truth. Each row has exactly one label.
 | GATE-004P | NO-GO | Even a compressed full context cube, common union, shattering, ambient minimality, and a large context trace region do not force positive loss | LEMMA-038; NG-036 | Fresh conjunctive tails make every quotient larger |
 | LEMMA-037 | PROVED | Conjoining a fresh input to any nonconstant Boolean function increases exact unrestricted circuit size by one | `proofs/LEMMA-037-fresh-conjunction-exact-cost.md` | Exact minimum-circuit padding identity |
 | LEMMA-038 | PROVED | A compressed XNOR-INDEX cube with a fresh minimum tail satisfies every GATE-004P hypothesis but has loss at most `K-m` | `proofs/LEMMA-038-compressed-cube-tail-counterexample.md`; reference test | Falsifies GATE-004P |
-| GATE-004Q | EXPLORATORY | Prove polynomial average loss for the exact ambient SAT-gamma function using its behavior outside the affine row cube | `proofs/GATE-004Q-sat-off-cube-rigidity.md` | Active smallest brick; next audit is the one-bit off-cube halo |
+| LEMMA-039 | PROVED | Duplicating an arbitrary function across a fresh coordinate preserves exact minimum circuit size and admits a minimum circuit ignoring that coordinate | `proofs/LEMMA-039-neutral-halo-duplication-no-go.md` | Neutral halo equality supplies no generic forcing |
+| GATE-004Q-NEUTRAL-HALO-ONLY | NO-GO | Equality between an embedded row and one adjacent halo row cannot alone force disappearance, collision, or positive loss | LEMMA-039; NG-037 | The four mixed ENC-015 relations remain unaudited |
+| GATE-004Q | EXPLORATORY | Prove polynomial average loss for the exact ambient SAT-gamma function using its behavior outside the affine row cube | `proofs/GATE-004Q-sat-off-cube-rigidity.md` | Active smallest brick; next audit is the mixed-halo union network |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
