@@ -29,10 +29,14 @@ def audit_residue(
     symbolic88: bool = False,
     symbolic100: bool = False,
     symbolic104: bool = False,
+    symbolic112: bool = False,
+    symbolic116: bool = False,
 ) -> dict[str, object]:
     if residue not in range(4):
         raise ValueError("residue must be 0, 1, 2, or 3")
     bound = (
+        116 if symbolic116 else
+        112 if symbolic112 else
         104 if symbolic104 else
         100 if symbolic100 else
         88 if symbolic88 else
@@ -47,10 +51,15 @@ def audit_residue(
         (
             initial, covering, length76_repair, symbolic76,
             symbolic80, symbolic84, symbolic88, symbolic100, symbolic104,
+            symbolic112, symbolic116,
         )
     ) > 1:
         raise ValueError("choose at most one alphabet mode")
-    if symbolic104:
+    if symbolic116:
+        identifiers: tuple[int, ...] | str = "all identifiers 1 through 134217727"
+    elif symbolic112:
+        identifiers = "all identifiers 1 through 67108863"
+    elif symbolic104:
         identifiers: tuple[int, ...] | str = "all identifiers 1 through 16777215"
     elif symbolic100:
         identifiers: tuple[int, ...] | str = "all identifiers 1 through 8388607"
@@ -74,6 +83,8 @@ def audit_residue(
             WIDTH5_INITIAL_IDENTIFIERS if initial else WIDTH5_REPAIR_IDENTIFIERS
         )
     representative_length = (
+        860 if symbolic116 else
+        820 if symbolic112 else
         760 if symbolic104 else
         720 if symbolic100 else
         580 if symbolic88 else
@@ -84,6 +95,8 @@ def audit_residue(
     )
     auditor = (
         CompleteIdentifierAuditor(
+            26 if symbolic116 else
+            25 if symbolic112 else
             23 if symbolic104 else
             22 if symbolic100 else
             19 if symbolic88 else
@@ -94,7 +107,7 @@ def audit_residue(
         )
         if (
             symbolic76 or symbolic80 or symbolic84 or symbolic88
-            or symbolic100 or symbolic104
+            or symbolic100 or symbolic104 or symbolic112 or symbolic116
         )
         else QuartetAuditor(identifiers, representative_length)
     )
@@ -145,6 +158,8 @@ if __name__ == "__main__":
     parser.add_argument("--symbolic88", action="store_true")
     parser.add_argument("--symbolic100", action="store_true")
     parser.add_argument("--symbolic104", action="store_true")
+    parser.add_argument("--symbolic112", action="store_true")
+    parser.add_argument("--symbolic116", action="store_true")
     arguments = parser.parse_args()
     print(
         json.dumps(
@@ -160,6 +175,8 @@ if __name__ == "__main__":
                 symbolic88=arguments.symbolic88,
                 symbolic100=arguments.symbolic100,
                 symbolic104=arguments.symbolic104,
+                symbolic112=arguments.symbolic112,
+                symbolic116=arguments.symbolic116,
             ),
             sort_keys=True,
         )

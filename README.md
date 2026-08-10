@@ -716,6 +716,19 @@ gives a length-104 block reading `11101` on the shifted representative.
 LEMMA-097 does not establish global coverage; the complete length-104 audit is
 the next operational gate.
 
+The eighty-eighth cycle executes that audit and finds 44 failures, partitioned
+`8,12,12,12` by residue. A 985-identifier projection-complete basis and the
+symbolic oracle agree that `(104,116,124,129,130)` omits only mask 16.
+LEMMA-098 retains an `N/28-O(1)` packing, making complete length 104 `NO-GO`.
+
+The eighty-ninth cycle follows the exact obstruction through complete lengths
+108 and 112. At length 112, a 1,232-identifier basis independently confirms
+the symbolic result. LEMMA-099 closes all length-at-most-112 specializations.
+
+The ninetieth cycle locates the next local repair: identifier 67,125,314 gives
+a length-116 block reading `11110` on the shifted representative. LEMMA-100 is
+not global coverage; the complete length-116 audit is next.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

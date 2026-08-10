@@ -1539,3 +1539,33 @@ unrestricted later non-uniform circuits; no randomness, advice, oracle,
 promise, average-case, distributional, or algebraic computation. Identifier
 8,390,664 repairs the representative at length 104, so the full gate remains
 open. P versus NP is unaffected.
+
+## NG-078 — some length-at-most-104 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+The exact local audit finds 44 failures across 640,000 types. LEMMA-098 checks
+one representative with the symbolic oracle and a 985-identifier basis having
+zero selected-projection failures. Mask 16 is absent on offsets
+`{0,12,20,25,26}`. Twenty-eight-spaced translations leave a linear common
+signed width-five packing.
+
+Model: every standard neutral block of length at most 104; four-block options;
+one six-one long option; unrestricted later non-uniform circuits; no
+randomness, advice, oracle, promise, average-case, distributional, or algebraic
+computation. Longer blocks remain open. P versus NP is unaffected.
+
+## NG-079 — some length-at-most-112 identifier enrichment repairs width five
+
+**Label: NO-GO**
+
+The exact symbolic oracle retains the LEMMA-098 mask-16 obstruction at lengths
+108 and 112. At length 112 an independent 1,232-identifier projection-complete
+basis and literal DP agree. Twenty-eight-spaced translations retain the linear
+common signed width-five packing.
+
+Model: every standard neutral block of length at most 112, equivalently every
+identifier through 67,108,863; four-block options; one six-one long option;
+unrestricted later non-uniform circuits; no randomness, advice, oracle,
+promise, average-case, distributional, or algebraic computation. Identifier
+67,125,314 repairs the representative at length 116. P versus NP is unaffected.

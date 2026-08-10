@@ -318,6 +318,11 @@ truth. Each row has exactly one label.
 | LEMMA-096 | PROVED | The complete length-at-most-100 alphabet omits `11101` and retains `N/28-O(1)` common width-five clauses | `proofs/LEMMA-096-complete-length100-four-block-obstruction.md`; symbolic and projection-complete literal DPs | Complete bounded-length obstruction |
 | GATE-004AF-LENGTH100-ONLY | NO-GO | Every standard neutral block through length 100 retains the linear width-five packing | `proofs/GATE-004AF-length100-only.md`; LEMMA-096; NG-077 | Length at least 104 required |
 | LEMMA-097 | PROVED | Identifier 8,390,664 gives a length-104 block realizing mask 8 on the shifted boundary quintuple | `proofs/LEMMA-097-first-length104-quintet-repair.md`; regression test | Local repair only; complete length-104 audit open |
+| LEMMA-098 | PROVED | The complete length-at-most-104 alphabet omits `11110` and retains `N/28-O(1)` common width-five clauses | `proofs/LEMMA-098-complete-length104-four-block-obstruction.md`; symbolic and projection-complete literal DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH104-ONLY | NO-GO | Every standard neutral block through length 104 retains the linear width-five packing | `proofs/GATE-004AF-length104-only.md`; LEMMA-098; NG-078 | Longer blocks required |
+| LEMMA-099 | PROVED | The complete length-at-most-112 alphabet still omits `11110` and retains `N/28-O(1)` common width-five clauses | `proofs/LEMMA-099-complete-length112-four-block-obstruction.md`; symbolic and projection-complete literal DPs | Complete bounded-length obstruction |
+| GATE-004AF-LENGTH112-ONLY | NO-GO | Every standard neutral block through length 112 retains the linear width-five packing | `proofs/GATE-004AF-length112-only.md`; LEMMA-099; NG-079 | Length at least 116 required |
+| LEMMA-100 | PROVED | Identifier 67,125,314 gives a length-116 block realizing mask 16 on the shifted boundary quintuple | `proofs/LEMMA-100-first-length116-quintet-repair.md`; regression test | Local repair only; complete length-116 audit open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
