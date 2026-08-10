@@ -173,7 +173,9 @@ truth. Each row has exactly one label.
 | GATE-004S | EXPLORATORY | Prove polynomial average loss for every total function agreeing exactly with SAT-gamma on the complete ENC-016 expanded-cube cylinder | `proofs/GATE-004S-exact-sat-expanded-context-cube.md` | Active parent; sufficient for GATE-004Q |
 | LEMMA-042 | PROVED | The LEMMA-041 family has the exact ENC-017 expanded output-incidence table but retains diagonal loss at most `K_d-m` | `proofs/LEMMA-042-output-incidence-tail-counterexample.md`; reference test | Static cubic output diversity is insufficient |
 | GATE-004S-OUTPUT-INCIDENCE-ONLY | NO-GO | Exact expanded output equalities and multiplicities do not generically force positive diagonal quotient loss | LEMMA-042; NG-040 | Must use multi-witness columns or stronger SAT composition |
-| GATE-004T | EXPLORATORY | Prove polynomial diagonal loss from exact expanded incidence plus all compact `3^R` ternary multi-witness columns | `proofs/GATE-004T-multi-witness-column-rigidity.md` | Active smallest brick; sufficient for GATE-004Q |
+| GATE-004T | NO-GO | Exact expanded incidence plus all compact `3^R` ternary multi-witness columns still does not force positive diagonal loss | LEMMA-043; NG-041 | Product-domain encoding preserves the fresh-tail obstruction |
+| LEMMA-043 | PROVED | A product-domain function realizes exact expanded incidence and all ternary columns but has exact-minimum fresh-tail loss at most `K_d-m` | `proofs/LEMMA-043-ternary-columns-tail-counterexample.md`; reference test | Falsifies GATE-004T |
+| GATE-004U | EXPLORATORY | Prove polynomial diagonal loss when the multi-witness columns occur at their explicit padded DNF suffix encodings | `proofs/GATE-004U-syntax-linked-dnf-rigidity.md` | Active smallest brick; sufficient for GATE-004Q |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

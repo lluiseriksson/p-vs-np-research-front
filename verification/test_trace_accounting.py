@@ -380,6 +380,152 @@ class FullTraceAccountingTests(unittest.TestCase):
                         traces.update(map(tuple, branch_traces))
                     self.assertEqual(len(traces), 2 * tail_count)
 
+    def test_ternary_witness_columns_admit_fresh_tail(self) -> None:
+        def base(
+            edge: bool,
+            first: int,
+            middle: int,
+            final: int,
+            low_x: tuple[bool, ...],
+            high_x: tuple[bool, ...],
+            low_u: tuple[bool, ...],
+            high_u: tuple[bool, ...],
+        ) -> bool:
+            valid = all(
+                low or high
+                for low, high in zip(low_x + low_u, high_x + high_u)
+            )
+            if edge:
+                feasible = high_x[final] or (
+                    high_x[first] and low_u[middle]
+                )
+            else:
+                feasible = low_x[final] or (
+                    high_x[first] and low_x[middle]
+                )
+            return valid and feasible
+
+        for context_width in (1, 2):
+            context_count = 2**context_width
+            observed = set()
+            for supports in itertools.product(
+                ((False,), (True,), (False, True)), repeat=context_count
+            ):
+                low_x = tuple(False in support for support in supports)
+                high_x = tuple(True in support for support in supports)
+                low_u = (True,) * context_count
+                high_u = (True,) * context_count
+                column = tuple(
+                    base(
+                        edge,
+                        context,
+                        context,
+                        context,
+                        low_x,
+                        high_x,
+                        low_u,
+                        high_u,
+                    )
+                    for context in range(context_count)
+                    for edge in (False, True)
+                )
+                observed.add(column)
+            self.assertEqual(len(observed), 3**context_count)
+
+            for x_values in itertools.product(
+                (False, True), repeat=context_count
+            ):
+                for u_values in itertools.product(
+                    (False, True), repeat=context_count
+                ):
+                    low_x = tuple(not value for value in x_values)
+                    high_x = x_values
+                    low_u = tuple(not value for value in u_values)
+                    high_u = u_values
+                    for first, middle, final in itertools.product(
+                        range(context_count), repeat=3
+                    ):
+                        self.assertEqual(
+                            base(
+                                True,
+                                first,
+                                middle,
+                                final,
+                                low_x,
+                                high_x,
+                                low_u,
+                                high_u,
+                            ),
+                            (x_values[first] and not u_values[middle])
+                            or x_values[final],
+                        )
+                        self.assertEqual(
+                            base(
+                                False,
+                                first,
+                                middle,
+                                final,
+                                low_x,
+                                high_x,
+                                low_u,
+                                high_u,
+                            ),
+                            (x_values[first] and not x_values[middle])
+                            or not x_values[final],
+                        )
+
+        context_count = 2
+        for tail_count in range(2, 5):
+            suffixes = tuple(
+                itertools.product((False, True), repeat=8 + tail_count)
+            )
+            for context in range(context_count):
+                traces = set()
+                branch_outputs = {}
+                for edge in (False, True):
+                    branch_traces = [[] for _ in range(tail_count)]
+                    outputs = []
+                    for suffix in suffixes:
+                        low_x = suffix[0:2]
+                        high_x = suffix[2:4]
+                        low_u = suffix[4:6]
+                        high_u = suffix[6:8]
+                        tail = suffix[8:]
+                        value = base(
+                            edge,
+                            context,
+                            context,
+                            context,
+                            low_x,
+                            high_x,
+                            low_u,
+                            high_u,
+                        )
+                        for index, tail_bit in enumerate(tail):
+                            value = value and tail_bit
+                            branch_traces[index].append(value)
+                        outputs.append(value)
+                    traces.update(map(tuple, branch_traces))
+                    branch_outputs[edge] = tuple(outputs)
+                self.assertEqual(len(traces), 2 * tail_count)
+                common_union = tuple(
+                    left or right
+                    for left, right in zip(
+                        branch_outputs[False], branch_outputs[True]
+                    )
+                )
+                expected_union = []
+                for suffix in suffixes:
+                    valid = all(
+                        low or high
+                        for low, high in zip(
+                            suffix[0:2] + suffix[4:6],
+                            suffix[2:4] + suffix[6:8],
+                        )
+                    )
+                    expected_union.append(valid and all(suffix[8:]))
+                self.assertEqual(common_union, tuple(expected_union))
+
 
 if __name__ == "__main__":
     unittest.main()

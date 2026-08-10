@@ -355,13 +355,22 @@ the diagonal conditioned pairs realize `3^R` compact ternary patterns where
 either or both polarities may be satisfiable. GATE-004T now asks whether this
 multi-witness column structure forces diagonal quotient loss.
 
+The forty-second cycle falsifies that gate. LEMMA-043 uses two allowance bits
+per condition variable to encode product domains. Singleton domains preserve
+the exact expanded incidence, while zero-only, one-only, and both-valued
+domains realize all `3^R` ternary columns. The diagonal union is common, yet an
+exact-minimum fresh tail again gives loss at most `K_d-m`; GATE-004T is
+`NO-GO`. GATE-004U is the next brick and fixes the actual padded DNF suffix
+strings and their formula-OR composition, rather than merely requiring that
+the corresponding output columns exist.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 80% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, and matching fresh-tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 81% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, product-domain and fresh-tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Exact expanded output incidence is generically insufficient; multi-witness columns are only an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Even all compact multi-witness columns are generically insufficient; syntax-linked DNF agreement is only an open gate, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

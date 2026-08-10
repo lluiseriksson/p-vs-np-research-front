@@ -59,7 +59,9 @@ Adjacent collision-aware active branch:
   <- GATE-004R (open alternative): radius-two SAT neighborhood rigidity
   <- GATE-004S (active parent): exact SAT expanded-cube rigidity
      - GATE-004S-OUTPUT-INCIDENCE-ONLY (no-go by LEMMA-042)
-  <- GATE-004T (active smallest brick): multi-witness column rigidity
+  <- GATE-004T (no-go): multi-witness column rigidity
+     - LEMMA-043 (product-domain fresh-tail counterexample)
+  <- GATE-004U (active smallest brick): syntax-linked DNF witness rigidity
 
 Stronger dependent-region branch:
   GATE-004I
@@ -558,15 +560,20 @@ represent sets of assignments, so SAT residual columns are OR-closures of
 assignment columns, with `3^R` compact ternary patterns already on the
 diagonal.
 
-GATE-004T is now the smallest attackable brick. It asks whether exact expanded
-incidence plus all compact multi-witness columns forces polynomial diagonal
-loss. GATE-004S remains the exact-SAT parent and GATE-004R the non-context
+LEMMA-043 realizes all ternary columns with product-domain allowance bits and
+retains the exact-minimum fresh tail. GATE-004T is therefore `NO-GO`: even the
+complete compact output-column family is insufficient without its input
+locations.
+
+GATE-004U is now the smallest attackable brick. It requires agreement at the
+actual padded DNF suffix encodings and retains their formula-OR composition.
+GATE-004S remains the exact-SAT parent and GATE-004R the non-context
 radius-two alternative. No unrestricted loss bound is presently proved.
 
-### Smallest active brick: GATE-004T
+### Smallest active brick: GATE-004U
 
 The exact falsifiable statement, model card, and SAT bridge are in
-`proofs/GATE-004T-multi-witness-column-rigidity.md`.
+`proofs/GATE-004U-syntax-linked-dnf-rigidity.md`.
 
 ## Downstream amplification obligation: GATE-005
 

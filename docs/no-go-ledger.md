@@ -835,3 +835,27 @@ depth and a fresh AND tail; fan-in-two AND/OR and fan-in-one NOT; no
 randomness, advice, oracle, promise, distribution, or algebraic computation.
 The construction lacks SAT's compact multi-witness columns, including suffixes
 for which both polarities of many conditioned variables are satisfiable.
+
+## NG-041 — compact ternary multi-witness columns force quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal parent-to-joint-quotient loss from ambient
+minimality, exact ENC-017 expanded incidence, the common diagonal union,
+complete-assignment columns, and all `3^R` compact ternary columns allowing
+zero, one, or both polarities independently at every diagonal context.
+
+Failure: LEMMA-043 gives each primary and auxiliary variable two domain bits
+indicating whether zero and one are allowed. Each expanded output reports
+whether its ENC-016 condition is feasible in that product domain. Singleton
+domains preserve exact incidence; three primary-domain choices realize all
+ternary columns; and diagonal branches OR to common domain validity. Appending
+`m` fresh conjuncts yields exact minimum size `K_d+m`, at least `2m` diagonal
+quotient classes, and loss at most `K_d-m<0`.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; full affine
+expanded prefix cube; `4R` product-domain allowance bits and an arbitrary
+fresh AND tail; base size `O(R+L)` and unrestricted depth; fan-in-two AND/OR
+and fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
+algebraic computation. The construction matches the column set but not the
+actual bit-level formula encodings that produce SAT's columns.

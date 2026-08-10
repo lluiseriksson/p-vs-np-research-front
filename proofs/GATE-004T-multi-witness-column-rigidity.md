@@ -1,6 +1,6 @@
 # GATE-004T — multi-witness column rigidity
 
-**Label: EXPLORATORY**
+**Label: NO-GO**
 
 ## Falsifiable theorem
 
@@ -33,13 +33,18 @@ gives all `3^R` compact ternary columns when `c` is chosen small enough that
 the `O(RL)` witness formulas and padding fit in the suffix. Thus GATE-004T
 would imply GATE-004Q and then GATE-004 through LEMMA-014.
 
-## Attack boundary
+## Falsification
 
-LEMMA-042 rules out any proof using only the static expanded-row equality
-table. The first attack must use the simultaneous both-polarities value in a
-ternary column. It will test whether a three-state suffix encoding can extend
-the LEMMA-041 fresh-tail counterexample. If it can, the next gate must retain
-SAT's explicit formula-composition maps rather than output columns alone.
+LEMMA-043 supplies an explicit product-domain function satisfying every
+premise. Two allowance bits per condition variable encode zero-only, one-only,
+or both values. Singleton domains preserve the complete ENC-017 equality
+table; product domains realize every ternary column; and diagonal branches OR
+to domain validity. A fresh conjunction tail gives a globally minimum circuit
+with loss at most `K_d-m<0` for arbitrarily large compatible lengths. This
+contradicts the displayed positive lower bound.
+
+GATE-004U is the next gate and retains the actual bit-level DNF suffix
+encodings rather than only requiring that corresponding output columns exist.
 
 ## Model card
 
@@ -56,4 +61,3 @@ SAT's explicit formula-composition maps rather than output columns alone.
 | Field/algebraic model | Affine prefix geometry over `F_2`; output-column closure is Boolean |
 | Asymptotic quantifiers | Exists fixed sufficiently small `c>0` and `B,eta>0`; every sufficiently large `n`; every eligible `G`; every minimum circuit; all contexts and ternary specifications |
 | Regime | Worst-case exact total-function computation; semantic column property, not a promise or distribution |
-

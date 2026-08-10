@@ -2298,11 +2298,11 @@
     },
     {
       "id": "GATE-004T",
-      "label": "EXPLORATORY",
-      "statement": "Exact ENC-017 expanded incidence together with all compact 3^R ternary multi-witness diagonal columns forces polynomial positive average diagonal quotient loss.",
+      "label": "NO-GO",
+      "statement": "Exact ENC-017 expanded incidence together with all compact 3^R ternary multi-witness diagonal columns does not force polynomial positive average diagonal quotient loss.",
       "computational_model": "Globally minimum unrestricted circuits, exact expanded-row output incidence, compact multi-witness diagonal columns, and exact semantic joint quotients",
       "uniformity": "Fully non-uniform circuit adversary; uniform explicit prefix family and ternary witness specification",
-      "circuit_size": "Average diagonal parent-to-joint-quotient loss at least B R^eta+1",
+      "circuit_size": "Product-domain counterexample has exact size K_d+m, quotient at least 2m, and loss at most K_d-m",
       "circuit_depth": "Unrestricted",
       "fan_in": "AND/OR two; NOT one",
       "randomness": "None",
@@ -2310,8 +2310,42 @@
       "oracle_access": "None",
       "field_or_algebraic_model": "Affine prefix geometry over F_2; output-column closure is Boolean",
       "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all contexts and ternary specifications",
-      "case_regime": "Worst-case exact total-function computation; semantic column property, not a promise or distribution",
-      "evidence": "proofs/GATE-004T-multi-witness-column-rigidity.md"
+      "case_regime": "Worst-case method-specific obstruction; preserves semantic columns but not their explicit formula encodings",
+      "evidence": "proofs/GATE-004T-multi-witness-column-rigidity.md; proofs/LEMMA-043-ternary-columns-tail-counterexample.md; docs/no-go-ledger.md NG-041"
+    },
+    {
+      "id": "LEMMA-043",
+      "label": "PROVED",
+      "statement": "A product-domain total function realizes exact ENC-017 incidence, a common diagonal union, complete-assignment columns, and all 3^R ternary columns, yet an exact-minimum fresh tail gives every diagonal quotient loss at most K_d-m.",
+      "computational_model": "Globally minimum unrestricted circuits on the full expanded prefix cube, product-domain multi-witness suffixes, and exact diagonal semantic joint quotients",
+      "uniformity": "Explicit uniformly described base; K_d is its non-uniform minimum size; uniform affine embedding into the exact prefix coordinates",
+      "circuit_size": "K_d=O(R+L) upper bound; exact tailed size K_d+m; quotient at least 2m; loss at most K_d-m",
+      "circuit_depth": "Selector and validity base unrestricted in the minimum lower bound; displayed fresh tail adds m layers",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Expanded affine prefix geometry over F_2; computation is Boolean",
+      "asymptotic_quantifiers": "Every d at least one and m at least one; for every fixed 0<c<1, arbitrarily large compatible n have m greater than K_d and negative loss",
+      "case_regime": "Worst-case exact total-function computation; method obstruction, not SAT-gamma and not suffix-syntax preserving",
+      "evidence": "proofs/LEMMA-043-ternary-columns-tail-counterexample.md; verification/test_trace_accounting.py"
+    },
+    {
+      "id": "GATE-004U",
+      "label": "EXPLORATORY",
+      "statement": "Agreement with SAT-gamma at all explicit padded DNF suffix encodings across the full expanded prefix cube forces polynomial positive average diagonal quotient loss.",
+      "computational_model": "Minimum unrestricted circuits for total functions agreeing with SAT-gamma on the full expanded prefix cube at explicit padded DNF suffix encodings and exact diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary; uniform explicit prefix, assignment, OR-composition, and padding maps",
+      "circuit_size": "Average diagonal parent-to-joint-quotient loss at least B R^eta+1",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Affine prefix geometry over F_2; suffix witnesses use exact Boolean formula syntax",
+      "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all expanded rows and fitting padded DNF witnesses",
+      "case_regime": "Worst-case exact agreement on an explicit total-language subset; no promise or distribution in the ambient function",
+      "evidence": "proofs/GATE-004U-syntax-linked-dnf-rigidity.md"
     }
   ]
 }

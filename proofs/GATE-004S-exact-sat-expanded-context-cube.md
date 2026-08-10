@@ -36,12 +36,15 @@ ENC-017 completes the static incidence audit: it classifies every equality and
 multiplicity among the `2R^3` output residuals. LEMMA-042 shows that this exact
 table alone still admits the fresh-tail counterexample.
 
-ENC-018 identifies the next genuinely SAT-specific layer. A suffix formula
-represents a set of satisfying assignments, so residual columns are Boolean
-unions of assignment columns; compact partial assignments already yield
-`3^R` diagonal patterns. GATE-004T tests that multi-witness layer. If it also
-fails generically, GATE-004S must use explicit suffix-formula composition or
-another property not closed under a common fresh factor.
+ENC-018 identifies the next layer: suffix formulas represent sets of
+satisfying assignments, so compact partial assignments yield `3^R` diagonal
+patterns. LEMMA-043 shows that even this full column family has a product-
+domain fresh-tail counterexample, making GATE-004T `NO-GO`.
+
+GATE-004U now retains the explicit padded DNF suffix strings and their
+bit-level OR composition. A successful proof must use those input locations
+or broader total-language agreement, not merely the output vectors they
+realize.
 
 ## Model card
 
