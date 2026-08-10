@@ -25,6 +25,7 @@ truth. Each row has exactly one label.
 | INFRA-018 | PROVED | Cycle-018 shattering-support transfer audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-732bc11.md` | None |
 | INFRA-019 | PROVED | Cycle-019 restriction/depth-reduction literature audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-cf21193.md` | None |
 | INFRA-020 | PROVED | Cycle-020 global-versus-pairwise quotient audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-1ee7a1a.md` | None |
+| INFRA-021 | PROVED | Cycle-021 prefix-dependent-region and exact-length-padding audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-37ee21f.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
