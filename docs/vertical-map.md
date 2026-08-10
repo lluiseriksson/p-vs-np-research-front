@@ -107,11 +107,13 @@ Adjacent collision-aware active branch:
          - GATE-004Z-STANDALONE-SEPARATE (no-go by LEMMA-066)
   <- GATE-004AA (no-go): one translated bounded block per option
      - LEMMA-067 (linear distant signed-triple packing)
-  <- GATE-004AB (active smallest constructive brick): two-block neutral-alphabet
+  <- GATE-004AB (proved constructive brick): two-block neutral-alphabet
      sparsity for every disjoint common signed clause of width at most three
      + LEMMA-068 (proved distant partition complete except at most six triples)
      - GATE-004AB-ENC022-ALPHABET-ONLY (no-go by LEMMA-069)
      + LEMMA-070 (identifier-10/12 contexts repair interior aligned triples)
+     + LEMMA-071 (proved seven-pattern universality and `78s` matching bound)
+  <- GATE-004AC (active smallest positive brick): width-three-sparse rigidity
 
 Stronger dependent-region branch:
   GATE-004I

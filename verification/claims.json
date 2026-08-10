@@ -3369,20 +3369,20 @@
     },
     {
       "id": "GATE004AB",
-      "label": "EXPLORATORY",
+      "label": "PROVED",
       "statement": "There is a fixed universally neutral alphabet such that options containing every pair of nonoverlapping translated blocks bound all disjoint common signed clauses through width three by a constant per slot.",
       "computational_model": "Exact total SAT-gamma neutral contexts with up to two translated bounded blocks, one tunable option, independent slot products, and signed clause matching through width three",
       "uniformity": "Uniform finite alphabet, pairs of placements, and parameters once L is fixed; later circuit adversary fully non-uniform",
-      "circuit_size": "No lower bound; target width-at-most-three disjoint common-clause packing at most c_3*s, chosen below base floor K",
+      "circuit_size": "No lower bound; width-at-most-three disjoint common-clause packing at most 78s",
       "circuit_depth": "Fixed-block contexts have bounded component depth; tunable option may have linear NOT depth; later circuits unrestricted",
       "fan_in": "Encoded and circuit AND/OR two; NOT one",
       "randomness": "None",
       "advice": "None",
       "oracle_access": "None",
       "field_or_algebraic_model": "Finite parser-state actions, Boolean pattern incidence, and matching only",
-      "asymptotic_quantifiers": "Exists fixed L and c_3; every rho>L; every disjoint common signed clause family of width at most three; later all sufficiently large canonical parameters",
-      "case_regime": "Worst-case exact witness-construction gate; not a circuit lower bound, promise statement, average-case statement, or terminal result",
-      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-067-one-bounded-block-plus-one-exception-retains-triples.md; proofs/LEMMA-068-two-block-long-run-distant-completeness.md"
+      "asymptotic_quantifiers": "L=36 and c_3=78; every sufficiently large rho; every disjoint common signed clause family through width three",
+      "case_regime": "Worst-case exact witness-construction theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md"
     },
     {
       "id": "ENC032",
@@ -3448,6 +3448,29 @@
       "asymptotic_quantifiers": "Every rho at least six and aligned chunk indices five through rho minus one",
       "case_regime": "Exact partial witness repair; not a general matching or circuit result",
       "evidence": "proofs/LEMMA-070-identifier-enriched-aligned-completeness.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA071", "label": "PROVED",
+      "statement": "Identifiers 1 through 68 give two-block seven-pattern universality, and with A_rho every disjoint common signed width-at-most-three family has at most 78 members per slot.",
+      "computational_model": "Exact two-block SAT-gamma contexts, finite pattern certificates, signed clauses through width three, hitting sets, and slot products",
+      "uniformity": "Uniform identifier alphabet, placements, reduction, and parameters; later circuits fully non-uniform",
+      "circuit_size": "No lower bound; disjoint common signed width-at-most-three packing at most 78s",
+      "circuit_depth": "Fixed blocks bounded; A_rho may have linear NOT depth; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation only",
+      "asymptotic_quantifiers": "Every sufficiently large rho greater than 36, every interior type, every disjoint common width-at-most-three family, and every s at least one",
+      "case_regime": "Exact witness-family theorem; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-071-two-block-seven-pattern-universality.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE004AC", "label": "EXPLORATORY",
+      "statement": "Width-three-sparse two-block slot products force polynomial positive diagonal quotient loss for every minimum circuit agreeing with SAT-gamma on the canonical witnesses.",
+      "computational_model": "Minimum unrestricted circuits agreeing with SAT-gamma on expanded rows and width-three-sparse slot products; exact diagonal quotients",
+      "uniformity": "Uniform witnesses and parameters; fully non-uniform circuit adversary",
+      "circuit_size": "Polynomial average-loss target; known disjoint signed width-at-most-three packing below K",
+      "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits with affine prefix geometry over F_2",
+      "asymptotic_quantifiers": "Fixed positive constants; all sufficiently large compatible lengths; every agreeing function and minimum circuit",
+      "case_regime": "Worst-case exact positive brick; not a circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AC-width-three-sparse-rigidity.md; proofs/LEMMA-071-two-block-seven-pattern-universality.md"
     }
   ]
 }

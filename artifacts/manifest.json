@@ -312,7 +312,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "e8a3edfae1600634ccc13e8b3b8fd4686d1b00cb7e13e6b0558e04a04d162067"
+      "sha256": "3512dce8f82c2fc79832efab3ba2ccc19038be601da8513c33f19d9047152bf3"
     },
     {
       "path": "docs/result-labels.md",
@@ -408,11 +408,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "beb93fcf5c7fb1ef10f92dd36a700fbc072069a6b809109e295b4a488df939d9"
+      "sha256": "2ffc5b6f4f189ef87ee9eaa2baa8e0784b1ace3b5126185ecbd5afb8a6a828d2"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "d8353d00ce6539dfcebc24a2ecb2bbe0517717b6bc541b2fe305960c36e57455"
+      "sha256": "64ac6cccd59141bbfbd9b2013985580f52aeae7f4703ea7aa7ba45b3e60aa84c"
     },
     {
       "path": "experiments/README.md",
@@ -452,7 +452,11 @@
     },
     {
       "path": "proofs/GATE-004AB-two-neutral-block-three-sparsity.md",
-      "sha256": "b6a26a303b7c1bc08ce06f96024db4ee04248b34b34bcf9dbe889a1add73e8df"
+      "sha256": "6eac66be5d95d3bbfa54902c71b9fb0895346a9eacd584ca2c7d835b0e26d7d4"
+    },
+    {
+      "path": "proofs/GATE-004AC-width-three-sparse-rigidity.md",
+      "sha256": "2773c2cf39c08b2510e918a23956651f2930a2ddfada563d9d7da1048737f2ca"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -899,8 +903,12 @@
       "sha256": "b27ed9c6afcd5440d6d1b69f5d6c00f9100f0dab8c3ad9d825ed65ae47d1081f"
     },
     {
+      "path": "proofs/LEMMA-071-two-block-seven-pattern-universality.md",
+      "sha256": "d57a6ba1372cb2b0871662a861da887e4a63e9f2eecfe4bdbc42cab6f4f421ef"
+    },
+    {
       "path": "README.md",
-      "sha256": "c0b0502a8474cc42cccd91f208355d60c38ab8bef2445e72607ba2c92fd01465"
+      "sha256": "c8276044b341c8aafd9075e1f78a4eec93ab898f7edb39adda7d62aab8457271"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -912,7 +920,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "65558fa0b572aef03e51aa7cf2db9a47501341560e128a7ec19294783d696ad5"
+      "sha256": "b13d2e202ec2f4ca9180b33c86f7a90bf8190adb6125b457957eb0109b11b00a"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -920,7 +928,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "61404f0cfc4184865a793b176ab7595687a0d29af460e5f8cd1c53156eb927c2"
+      "sha256": "19b6e8424a47043029d3c8fb679c8455e48d3ca60e23cb4aa83f042b8f7196f8"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -936,7 +944,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "743c5dc0c08eb81ddabe92881983fb1b8477ca20990c172e42005cea5f17aca9"
+      "sha256": "c19419fcff3a23767ecbbd67a7bdc5459d4c131df7b612125a14ff9fcec65269"
     },
     {
       "path": "verification/test_trace_accounting.py",

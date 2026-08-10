@@ -654,6 +654,76 @@ def identifier_enriched_complete_aligned_triples(
     )
 
 
+@lru_cache(maxsize=None)
+def identifier_68_two_block_interior_failures(
+) -> tuple[tuple[tuple[int, int, int], tuple[int, ...]], ...]:
+    """Audit all reduced interior triple types for seven-pattern coverage.
+
+    Identifiers 1 through 68 give neutral blocks of length at most 36.  Gaps
+    at least 36 decouple and reduce modulo four to representatives 36..39.
+    A failure records a triple and a zero-coordinate subset of size one or
+    two that no one/two-block context realizes exactly.
+    """
+    bound = 36
+    length = 160
+    blocks = {
+        block
+        for identifier in range(1, 69)
+        for block in (
+            "01" + tautology(identifier),
+            "10" + contradiction(identifier),
+        )
+    }
+    placements: list[tuple[int, int, frozenset[int]]] = []
+    by_zero: list[list[int]] = [[] for _ in range(length)]
+    for block in blocks:
+        for start in range(0, length - len(block) + 1, 4):
+            zeros = frozenset(
+                start + offset for offset, bit in enumerate(block) if bit == "0"
+            )
+            index = len(placements)
+            placements.append((start, start + len(block), zeros))
+            for position in zeros:
+                by_zero[position].append(index)
+
+    failures = []
+    for residue in range(4):
+        first = bound + residue
+        for first_gap in range(1, bound + 4):
+            for second_gap in range(1, bound + 4):
+                triple = (first, first + first_gap, first + first_gap + second_gap)
+                triple_set = set(triple)
+                subsets = (
+                    (triple[0],), (triple[1],), (triple[2],),
+                    (triple[0], triple[1]),
+                    (triple[0], triple[2]),
+                    (triple[1], triple[2]),
+                )
+                for zero_subset in subsets:
+                    forbidden = triple_set - set(zero_subset)
+                    left = [
+                        index for index in by_zero[zero_subset[0]]
+                        if not (placements[index][2] & forbidden)
+                    ]
+                    covered = bool(left)
+                    if len(zero_subset) == 2:
+                        right = [
+                            index for index in by_zero[zero_subset[1]]
+                            if not (placements[index][2] & forbidden)
+                        ]
+                        covered = bool(set(left) & set(right))
+                        if not covered and left and right:
+                            covered = (
+                                min(placements[index][1] for index in left)
+                                <= max(placements[index][0] for index in right)
+                                or min(placements[index][1] for index in right)
+                                <= max(placements[index][0] for index in left)
+                            )
+                    if not covered:
+                        failures.append((triple, zero_subset))
+    return tuple(failures)
+
+
 def bounded_block_distant_groups(
     extra_length: int,
     block_count: int,

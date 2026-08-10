@@ -1,6 +1,6 @@
 # GATE-004AB — two translated neutral blocks suppress signed clauses through width three
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 ## Falsifiable theorem
 
@@ -12,12 +12,7 @@ Use the universally neutral alphabet `N_L` defined in GATE-004AA. For fixed
 3. every exact context obtained by placing up to two nonoverlapping members
    of `N_L` at four-aligned positions, filling every gap with one bits.
 
-Prove that there exist constants `L,c_3` such that every pairwise variable-
-disjoint family of common signed clauses of width at most three has at most
-`c_3` members per slot for every `rho>L`.
-
-The theorem is falsified by an unbounded disjoint common width-at-most-three
-family surviving for every fixed `L`.
+LEMMA-071 proves this with `L=36` and `c_3=78`.
 
 ## Why two blocks are the next threshold
 
@@ -42,8 +37,10 @@ packing obstruction.
 
 LEMMA-068 completes the distant-partition case using only the ten ENC-022
 blocks: all but six canonical distant triples realize all eight patterns. The
-active subproblem is therefore a matching bound for local and intermediate-
-span triples, not the LEMMA-067 distant geometry.
+ten-block alphabet still fails locally by LEMMA-069. LEMMA-071 completes the
+repair with identifiers through 68: its finite translation certificate covers
+all interior local and intermediate types, and the boundary plus `A_rho` one
+bits form the claimed 78-coordinate hitting set.
 
 ## Model card
 
@@ -51,12 +48,12 @@ span triples, not the LEMMA-067 distant geometry.
 |---|---|
 | Computational model | Exact total SAT-gamma neutral contexts with up to two translated bounded blocks, one tunable option, independent slot products, and signed clause matching through width three |
 | Uniform/non-uniform | Uniform finite alphabet, pairs of placements, and parameters once `L` is fixed; later circuit adversary fully non-uniform |
-| Circuit size | No lower bound; target width-at-most-three disjoint common-clause packing at most `c_3 s`, chosen below base floor `K` |
+| Circuit size | No lower bound; width-at-most-three disjoint common-clause packing at most `78s` |
 | Circuit depth | Fixed-block contexts have bounded component depth; tunable option may have linear NOT depth; later circuits unrestricted |
 | Fan-in | Encoded and circuit AND/OR two; NOT one |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
 | Field/algebraic model | Finite parser-state actions, Boolean pattern incidence, and matching only |
-| Asymptotic quantifiers | Exists fixed `L,c_3`; every `rho>L`; every disjoint common signed clause family of width at most three; later all sufficiently large canonical parameters |
-| Regime | Worst-case exact witness-construction gate; not a circuit lower bound, promise statement, average-case statement, or terminal result |
+| Asymptotic quantifiers | `L=36,c_3=78`; every sufficiently large `rho`; every disjoint common signed clause family of width at most three |
+| Regime | Worst-case exact witness-construction theorem; not a circuit lower bound or terminal result |

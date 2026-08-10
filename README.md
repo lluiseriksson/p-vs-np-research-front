@@ -566,13 +566,21 @@ identifier-10/12 contexts whose terminal chunks are `1010` and `1100`; their
 translations complete all eight patterns on every aligned chunk except the
 first five. Nonaligned local and intermediate-span triples remain active.
 
+The sixty-seventh cycle closes the full two-block construction. Identifiers
+1 through 68 have maximum block length 36. A 6,084-type translation
+certificate proves that two blocks realize every triple pattern except
+`000` in the interior; `A_rho` supplies `000` away from its six one bits.
+Every common signed clause through width three therefore meets a 78-coordinate
+hitting set, proving GATE-004AB. GATE-004AC is the new positive brick, with
+width-four, overlapping, and nonclausal predicates still open.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
 | Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | One-block width-three repair is impossible; GATE-004AB tests two-block contexts, while GATE-004X and every terminal lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | Two-block contexts now suppress every established disjoint signed tail through width three, but GATE-004AC rigidity, width-four/overlapping/nonclausal predicates, and every terminal lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
