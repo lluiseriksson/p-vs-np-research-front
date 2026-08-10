@@ -685,6 +685,34 @@ def implication_sparse_long_run_slot_options(
     return tuple(sorted(options))
 
 
+def implication_sparse_common_signed_triples(
+    zero_run: int,
+) -> tuple[tuple[tuple[int, int, int], str], ...]:
+    """Return one common signed three-clause in every aligned chunk.
+
+    The string records the assignment that falsifies the clause.  Thus
+    ``101`` denotes ``NOT x OR y OR NOT z``, and ``110`` denotes
+    ``NOT x OR NOT y OR z``.  The fixed short-block alphabet omits both
+    patterns at every aligned chunk; the single tunable block can introduce
+    at most one, so at least one choice is always common.
+    """
+    options = implication_sparse_long_run_slot_options(zero_run)
+    triples = []
+    for chunk in range(zero_run):
+        coordinates = (4 * chunk, 4 * chunk + 1, 4 * chunk + 2)
+        observed = {
+            "".join(option[position] for position in coordinates)
+            for option in options
+        }
+        for missing in ("101", "110"):
+            if missing not in observed:
+                triples.append((coordinates, missing))
+                break
+        else:
+            raise AssertionError("enhanced slot realizes both forbidden patterns")
+    return tuple(triples)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

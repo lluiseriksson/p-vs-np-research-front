@@ -496,13 +496,22 @@ regions while retaining `A_rho` and its tunable run. With
 members. GATE-004X is the new smallest positive brick; signed clauses of width
 at least three, overlap, and nonclausal predicates remain open.
 
+The fifty-ninth cycle shows that binary sparsity does not survive the next
+width. ENC-031 and LEMMA-061 select one common signed triple in every aligned
+four-bit chunk, giving `rho*s=P/4` disjoint clauses. Product localization
+proves that cross-slot triples contain common binary subclauses, so the new
+obstruction is genuinely within-slot. LEMMA-062 gives
+`K+3m<=C(F)<=K+5m`; its displayed circuit has `6m` quotient classes, but the
+lower certificate is short by `2m`. GATE-004Y is the active falsification
+audit. No GATE-004X counterexample or positive circuit loss is proved.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, and mixed-implication classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 92% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, general bounded-block/zero-run common-clause geometry, tunable, balanced, and implication-sparse long-run slot products, positive-clause, complement-sensitive negative-tail, mixed-implication, and signed-triple classification, product-domain and exact fresh literal/general-clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Enhanced witnesses remove established signed-binary tails, but width-at-least-three/overlapping predicates, GATE-004X rigidity, and every terminal lower bound remain open. |
+| Real progress toward P vs NP | 0.00% | Enhanced witnesses retain a linear common signed-triple tail whose exact unrestricted-circuit effect is open; GATE-004Y, GATE-004X rigidity, and every terminal lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

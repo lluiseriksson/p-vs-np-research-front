@@ -1349,6 +1349,41 @@ GATE-004X. This is a defense against known tails, not positive circuit loss.
 | Asymptotic quantifiers | Every `rho>=13,s>=1`; explicit GATE-004X comparison for all sufficiently large `R` |
 | Regime | Worst-case exact witness-family theorem; not a circuit lower bound |
 
+## ENC-031 — every enhanced slot retains an aligned signed-triple packing
+
+**Label: PROVED**
+
+For each aligned chunk `(z_{4k},z_{4k+1},z_{4k+2})`, the fixed ENC-030
+option alphabet realizes neither `101` nor `110`. The one tunable option
+`A_rho` can add at most one of those two patterns at that chunk. Therefore
+one pattern remains absent, and the signed three-clause falsified exactly by
+that pattern is common to every option.
+
+The `rho` chunks are pairwise variable-disjoint. An `s`-slot product thus
+contains `rho*s=P/4` disjoint common signed width-three clauses. LEMMA-061
+also proves that any common clause spanning slots contains a common
+slot-local subclause; cross-slot common triples therefore reduce to the
+signed-binary packing already bounded by LEMMA-060.
+
+This exposes a new tail candidate. It does not prove that a minimum
+unrestricted circuit pays for or preserves the candidate clauses.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact neutral contexts, enhanced independent slot products, signed width-three raw-coordinate clauses, and set packing |
+| Uniform/non-uniform | Uniform explicit block alphabet, clause choice, product, and parameters; arbitrary later non-uniform circuit adversary |
+| Circuit size | No lower bound; explicit disjoint common signed-triple family has size `rho*s=P/4` |
+| Circuit depth | Irrelevant to incidence; later circuits unrestricted |
+| Fan-in | Clause OR two after binarization; NOT one; later circuits AND/OR two and NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Finite Boolean pattern incidence only |
+| Asymptotic quantifiers | Every `rho>=13,s>=1`; every aligned chunk and every product member |
+| Regime | Worst-case exact witness-family theorem; not a circuit lower bound or counterexample |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

@@ -42,9 +42,12 @@ tunable long run, and the all-long packing witness. At the adjusted slot
 count, every established disjoint positive or signed-binary tail is below the
 unavoidable base floor.
 
-This only removes a known vulnerability. It does not establish positive loss.
-The first attack on GATE-004X must classify disjoint signed clauses of width
-at least three, then overlapping and nonclausal predicates.
+This only removes a known binary vulnerability. It does not establish
+positive loss. LEMMA-061 completes the first width-three incidence audit and
+finds `rho*s=P/4` disjoint common signed triples. LEMMA-062 cannot yet turn
+them into a minimum-circuit counterexample: its exact restriction certificate
+is `2m` gates below the displayed circuit. GATE-004Y is now the active
+falsification audit. Overlapping and nonclausal predicates remain unclassified.
 
 ## Model card
 

@@ -65,6 +65,7 @@ Adjacent collision-aware active branch:
      + ENC-028 (proved disjoint positive-clause packing bound)
      + ENC-029 (proved linear common mixed-implication packing)
      + ENC-030 (proved implication-sparse translated-long-block slots)
+     + ENC-031 (proved linear aligned common signed-triple packing)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -91,6 +92,10 @@ Adjacent collision-aware active branch:
        - GATE-004W-FORMULA-BOUNDARY-ONLY (no-go by LEMMA-059)
   <- GATE-004X (active smallest positive brick): implication-sparse long-run rigidity
      + LEMMA-060 (proved signed-binary packing below the base floor)
+     + LEMMA-061 (proved `P/4` common signed width-three packing)
+     - GATE-004X-SIGNED-BINARY-ONLY (no-go by LEMMA-061)
+     ! GATE-004Y (active falsification audit): signed-triple-tail minimality
+       + LEMMA-062 (proved `K+3m` to `K+5m` cost bracket)
 
 Stronger dependent-region branch:
   GATE-004I

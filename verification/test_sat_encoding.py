@@ -41,6 +41,7 @@ from sat_encoding import (
     one_bit_literal_gadgets,
     operator_square_prefix,
     maximum_zero_run,
+    implication_sparse_common_signed_triples,
     implication_sparse_long_run_slot_options,
     power_two_long_zero_neutral_block,
     tautology,
@@ -901,6 +902,44 @@ class FormulaEncodingTests(unittest.TestCase):
                     if common_mixed:
                         pair = {first, second}
                         self.assertTrue(pair <= left or pair <= right)
+
+    def test_implication_sparse_slots_retain_common_signed_triples(self) -> None:
+        for zero_run in (*range(13, 40), 64, 128):
+            slot_length = 4 * zero_run
+            options = implication_sparse_long_run_slot_options(zero_run)
+            triples = implication_sparse_common_signed_triples(zero_run)
+            self.assertEqual(len(triples), zero_run)
+            used = [coordinate for coordinates, _ in triples for coordinate in coordinates]
+            self.assertEqual(len(used), len(set(used)))
+
+            fixed_options = set(
+                coordinate_dense_neutral_paddings("", slot_length)
+            )
+            for short_run in range(7, 13):
+                block = power_two_long_zero_neutral_block(short_run)
+                for start in range(0, slot_length - len(block) + 1, 4):
+                    fixed_options.add(
+                        "1" * start
+                        + block
+                        + "1" * (slot_length - start - len(block))
+                    )
+            for chunk in range(zero_run):
+                coordinates = (4 * chunk, 4 * chunk + 1, 4 * chunk + 2)
+                fixed_patterns = {
+                    "".join(option[position] for position in coordinates)
+                    for option in fixed_options
+                }
+                self.assertTrue({"101", "110"}.isdisjoint(fixed_patterns))
+
+            for coordinates, missing in triples:
+                self.assertIn(missing, {"101", "110"})
+                self.assertTrue(
+                    all(
+                        "".join(option[position] for position in coordinates)
+                        != missing
+                        for option in options
+                    )
+                )
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

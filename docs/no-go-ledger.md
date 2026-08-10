@@ -1151,3 +1151,24 @@ graph; formula and circuit inversion complexity; unrestricted depth;
 fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This is a method no-go only; it does
 not exhibit compression or refute the growing exact-size conjecture.
+
+## NG-055 — signed-binary sparsity controls higher-width signed tails
+
+**Label: NO-GO**
+
+Scope: infer GATE-004X rigidity, or even absence of a linear disjoint common
+signed-clause tail, from LEMMA-060's bound on common unit and signed-binary
+families.
+
+Failure: LEMMA-061 constructs one common signed width-three clause on every
+aligned four-bit chunk. The product therefore has `rho*s=P/4` pairwise
+variable-disjoint common triples while its signed-binary packing is still at
+most `18s`. Binary sparsity and linear ternary packing coexist.
+
+Model: exact enhanced SAT-gamma slot products; signed raw-coordinate clauses;
+finite incidence and Cartesian-product localization; later globally minimum
+non-uniform unrestricted AND/OR/NOT circuits; unrestricted depth; fan-in-two
+AND/OR and fan-in-one NOT; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This rejects only the inference from
+signed-binary sparsity. LEMMA-062 does not yet convert the triples into a
+minimum-circuit counterexample, so GATE-004X and P versus NP remain open.
