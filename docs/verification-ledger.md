@@ -33,6 +33,7 @@ truth. Each row has exactly one label.
 | INFRA-026 | PROVED | Cycle-026 minimum-circuit zero-label-bias audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-0444982.md` | None |
 | INFRA-027 | PROVED | Cycle-027 mandatory conditioned-output-split audit, manifest, and tests reproduce from a cold clone | `artifacts/cold-clone-e91981f.md` | None |
 | INFRA-028 | PROVED | Cycle-028 bounded literal-subcube experiment and artifact reproduce from a cold clone | `artifacts/cold-clone-b80599a.md` | None |
+| INFRA-029 | PROVED | Cycle-029 formula-weight-parity and affine-witness audit reproduce from a cold clone | `artifacts/cold-clone-e23e988.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
