@@ -136,7 +136,9 @@ Adjacent collision-aware active branch:
         - GATE-004AG-BINARY-INVERSION-ONLY (no-go: linear gap for `m>=5`)
         + LEMMA-110 (one reconvergence forces at least `ceil(m/2)` NOT gates)
         - GATE-004AG-ONE-CYCLE-UNFOLDING-ONLY (no-go: factor-two loss)
-        <- general cycle-rank tradeoff (next attackable brick)
+        + LEMMA-111 (all-DAG cycle-rank/inversion tradeoff)
+        - GATE-004AG-CYCLE-RANK-UNFOLDING-ONLY (no-go: `m-Theta(log m)` gap)
+        <- function-specific reconvergence sharing (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

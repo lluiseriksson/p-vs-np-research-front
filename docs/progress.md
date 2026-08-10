@@ -4,7 +4,7 @@ Date: 2026-08-11
 
 | Measure | Estimate | Audit note |
 |---|---:|---|
-| Infrastructure maturity | 93% | Required tree, exact bit-level `SAT-gamma` target, broad barrier/bridge audits, exact symbolic and literal finite verifiers, claims registry, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–097 isolate the fixed-sign tail and audit restrictions, inversion, and the first reconvergence stratum. Formal foundations and broader independent review are incomplete. |
+| Infrastructure maturity | 93% | Required tree, exact bit-level `SAT-gamma` target, broad barrier/bridge audits, exact symbolic and literal finite verifiers, claims registry, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–098 isolate the fixed-sign tail and exhaust restriction/inversion/unfolding lower-bound routes quantitatively. Formal foundations and broader independent review are incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical statement has a proof-assistant artifact. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction. GATE-004AG/AE rigidity, overlapping and nonclausal predicates, and every terminal lower bound remain unresolved. |
 

@@ -50,6 +50,13 @@ NOT gates. The factor-two loss remains linear and does not close the gate.
 The active structural question is now the general cycle-rank tradeoff between
 extra binary gates, unfolding multiplicity, and required negations.
 
+LEMMA-111 completes that tradeoff for every DAG and every binary-gate count.
+Its optimized surplus is only `g(m)=Theta(log m)`, leaving linear gap to the
+displayed circuit. Pure unfolding is therefore exhausted. The next attack
+must exploit the particular distribution of the `u_i` negative variables
+through reconvergent subgraphs or bypass size minimality with a direct
+semantic quotient theorem.
+
 ## Model card
 
 | Field | Value |

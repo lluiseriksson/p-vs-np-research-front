@@ -1656,3 +1656,29 @@ multigraph cycle rank and Boolean-lattice inversion; exact worst-case
 quantifiers; no randomness, advice, oracle, promise, distribution, or
 algebraic circuit model. The method is closed, while GATE-004AG, GATE-004AE,
 and P versus NP remain open.
+
+## NG-084 — optimizing cycle-rank unfolding proves GATE-004AG
+
+**Label: NO-GO**
+
+Scope: extend one-cycle unfolding to arbitrary output-cone cycle rank `t`,
+charge all extra binary gates, combine with Markov, and optimize over every
+possible binary-gate count.
+
+Failure: LEMMA-111 proves that a rank-`t` cone has at most `2^t` paths from any
+gate to the output. The strongest direct unfolding certificate is therefore
+`N>=max(ceil(m/2^t),ceil(log_2(m+1)))`. After charging the `t` extra binary
+gates and minimizing, the total lower bound is `5m-1+g(m)`, where
+
+`g(m)=min_t[t+max(ceil(m/2^t),ceil(log_2(m+1)))] = Theta(log m)`.
+
+The displayed circuit needs surplus `m`, so the remaining deficit is
+`m-g(m)=m-Theta(log m)`, positive from `m=5`. The optimization covers every
+cycle rank; repeating the same unfolding argument cannot close the gap.
+
+Model: every pruned minimum unrestricted non-uniform Boolean circuit output
+cone; arbitrary binary-gate count; AND/OR fan-in two, NOT fan-in one; binary
+cycle spaces over `F_2` and Boolean-lattice inversion; exact worst-case
+quantifiers; no randomness, advice, oracle, promise, distribution, or
+algebraic circuit model. The method is closed, while GATE-004AG, GATE-004AE,
+and P versus NP remain open.

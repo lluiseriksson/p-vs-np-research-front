@@ -787,11 +787,20 @@ forces `N>=ceil(m/2)`; together with Markov the lower bound is
 but misses `6m-1` by asymptotically `m/2`. One-cycle unfolding is `NO-GO` as
 a complete route, and the general cycle-rank tradeoff becomes the next brick.
 
+The ninety-eighth cycle closes that full unfolding route. LEMMA-111 injects
+all paths into the `t`-dimensional binary cycle space, so a rank-`t` output
+cone unfolds with multiplicity at most `2^t`. Optimizing the resulting NOT
+bound over every binary-gate count gives
+`C(W_m)>=5m-1+g(m)`, where `g(m)=Theta(log m)`. The target is `6m-1`, leaving
+linear deficit `m-g(m)` from `m=5`. Cycle-rank unfolding is therefore
+`NO-GO` as a complete method; GATE-004AG remains open and now requires
+function-specific sharing control or a direct minimum-quotient theorem.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–097 isolate the fixed-sign tail and audit restrictions, inversion, and the first reconvergence stratum. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–098 isolate the fixed-sign tail and exhaust restriction/inversion/unfolding lower-bound routes quantitatively. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

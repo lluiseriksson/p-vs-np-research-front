@@ -4075,6 +4075,22 @@
       "circuit_size": "Lower 5m+max(ceil(m/2),ceil(log2(m+1))) versus target 6m-1; asymptotic deficit about m/2", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected multigraph cycle rank and Boolean-lattice inversion only",
       "asymptotic_quantifiers": "Every m at least one and every pruned circuit in the exactly 5m-binary-gate stratum", "case_regime": "Structural no-go for one-cycle unfolding as a complete proof method; GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AG-one-cycle-unfolding-only.md; proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; docs/no-go-ledger.md NG-083; artifacts/cycle-097-one-reconvergence-inversion.md"
+    },
+    {
+      "id": "LEMMA111", "label": "PROVED",
+      "statement": "For every output-cone cycle rank t, the one-negative clause product needs at least max(ceil(m/2^t),ceil(log2(m+1))) NOT gates; optimizing over t gives an all-DAG lower bound (p+1)m-1+g(m).",
+      "computational_model": "Pruned unrestricted Boolean circuit output cones, binary cycle spaces, formula unfolding, and formula/circuit inversion complexity", "uniformity": "Every individual non-uniform circuit; uniform one-negative clause family",
+      "circuit_size": "Lower (p+1)m-1+g(m), upper (p+2)m-1, with exact integer optimization over cycle rank", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Binary cycle space over F_2 for an undirected multigraph; Boolean-lattice inversion for the computed function",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, and every pruned unrestricted circuit for W_m", "case_regime": "Exact worst-case all-DAG lower bound and asymptotic method audit; not a base direct sum, quotient theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; docs/source-citations/morizumi-2008.md; docs/source-citations/markov-1958.md; artifacts/cycle-098-cycle-rank-inversion-tradeoff.md"
+    },
+    {
+      "id": "GATE004AG-CYCLE-RANK-UNFOLDING-ONLY", "label": "NO-GO",
+      "statement": "Optimizing cycle-rank formula unfolding over every binary-gate count cannot prove GATE004AG because its surplus g(m) is Theta(log m), leaving a linear deficit from the required m.",
+      "computational_model": "All pruned unrestricted Boolean circuit output cones, binary cycle-rank unfolding, and inversion complexity", "uniformity": "Every individual non-uniform circuit; uniform fixed-sign tail family",
+      "circuit_size": "Lower 5m-1+g(m) versus target 6m-1, with deficit m-g(m)=m-Theta(log m)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected binary cycle space over F_2 and Boolean-lattice inversion",
+      "asymptotic_quantifiers": "Every m at least one, every cycle rank t at least zero, and every pruned circuit in the corresponding binary-gate stratum", "case_regime": "Structural no-go for cycle-rank unfolding as a complete method; GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AG-CYCLE-RANK-UNFOLDING-ONLY.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; docs/no-go-ledger.md NG-084; artifacts/cycle-098-cycle-rank-inversion-tradeoff.md"
     }
   ]
 }
