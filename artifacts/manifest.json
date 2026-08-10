@@ -160,7 +160,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "963ca037b52cd8beacf3e50a183740ec643739a7b8ef5e6d73dd09fae9b3c692"
+      "sha256": "c4cec618cc196aee3a2a4b7ea2250713935f9a7b610e88014fe375a9588fef53"
     },
     {
       "path": "docs/problem-statement.md",
@@ -168,7 +168,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4717f107d5d1971a04a8ba2a3bb03a064875fa4c18d6b99f0bad1f9663736de0"
+      "sha256": "ff2846b844033ad2bb911dff760aee0a770f55e32409ae1ab8e1c1516efb7f77"
     },
     {
       "path": "docs/result-labels.md",
@@ -256,11 +256,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3f62607c0f4c6cae240abcd04803889c6393255a4695390c784a7c253e42e924"
+      "sha256": "a27cc7ef3967d1924155116d7a1eeef9b59542eafc741cc8106c6a089f683ca1"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ae5585618fb55ec6f7f93cc85f98c0ffa9692c28c5a497285e5590d578cfbf6b"
+      "sha256": "006ec6ba3410d4dbdae12ab257f78efddff7f60c8950a8b2086897e1069287ba"
     },
     {
       "path": "experiments/README.md",
@@ -333,6 +333,10 @@
     {
       "path": "proofs/GATE-004L-labelwise-survival-imbalance.md",
       "sha256": "36fdc4f469b60ef80d0f7c2ee06aeef43d082c1cdb8ea728831e3a943b9ab3d5"
+    },
+    {
+      "path": "proofs/GATE-004M-stable-core-collision-surplus.md",
+      "sha256": "3059a0eb62e3d1735e76403d289ac5cfde78933dd81b800333f13d84dbfe30ca"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -451,8 +455,16 @@
       "sha256": "7020e19e2209818904d1c6ec0b593a51df0397a6a52c8d5f045a02d840ba73c4"
     },
     {
+      "path": "proofs/LEMMA-029-full-quotient-accounting.md",
+      "sha256": "9fa735be6848d781b7879f55c491e9920be587c76cbb6bcfeef29be2eb86e84f"
+    },
+    {
+      "path": "proofs/LEMMA-030-output-split-without-stable-core.md",
+      "sha256": "706dea3935454274433127c987af764c92a76b8d21173dff77aef526b22e2700"
+    },
+    {
       "path": "README.md",
-      "sha256": "b00959499613e157cc4bedbd1ac033cc83e1d2e7da168c92be8c709bc0eacf11"
+      "sha256": "19a4d2f87e0baeaf08a7820369cc978f473bf62f41ace95eed9dac36ad3e0c96"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -464,7 +476,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "016aab5e87c7892045a315b2caeca3b692c5ea9b1eec5254ad2bf15367cbab36"
+      "sha256": "7b548e4698396c23706386e92d14beb14bd175c6d0f22fbb4844203e8ed6fccd"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -485,6 +497,10 @@
     {
       "path": "verification/test_sat_encoding.py",
       "sha256": "fbd3c4e9ac48b481fb9921a0f63d3000563f8bc8ed1b8050421f5ce0087a93da"
+    },
+    {
+      "path": "verification/test_trace_accounting.py",
+      "sha256": "2cede19e3ef82912d636593bb7c4ba7cb93054742f7a92e72f1a3e680efac201"
     }
   ]
 }

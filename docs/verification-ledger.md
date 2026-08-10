@@ -125,6 +125,10 @@ truth. Each row has exactly one label.
 | ENC-012 | PROVED | The complete-assignment witness family is an exact affine subspace with disjoint nonzero directions and complementary INDEX outputs | `docs/sat-encoding.md`; reference test | Stronger SAT-specific witness geometry; no quotient loss yet |
 | LEMMA-028 | PROVED | Every affine complementary-INDEX witness table has an explicit total AND/OR/NOT extension of size at most `2Rp+3R+p-1` | `proofs/LEMMA-028-affine-index-extension-upper-bound.md`; reference test | Exact table-only upper bound |
 | GATE-004L-AFFINE-TABLE-ONLY | NO-GO | Affine geometry plus complementary-INDEX values alone cannot force superlinear unrestricted-circuit size or positive quotient loss | LEMMA-028; NG-029 | Must use off-table SAT semantics, SAT-specific minimality, or `kappa` |
+| LEMMA-029 | PROVED | The full joint quotient obeys `S-q=alpha+z-t+kappa+lambda`, including stable-core disappearance and dependent/core collisions | `proofs/LEMMA-029-full-quotient-accounting.md`; reference test | Exact strengthening of LEMMA-023/024 |
+| GATE-004M | EXPLORATORY | Prove a polynomial average collision-aware surplus including dependent/stable-core collisions | `proofs/GATE-004M-stable-core-collision-surplus.md` | Active smallest brick; sufficient for GATE-004I |
+| LEMMA-030 | PROVED | A circuit can have two distinct active output cofactors while every gate is prefix-dependent and `lambda=0` | `proofs/LEMMA-030-output-split-without-stable-core.md`; reference test | Output split alone supplies no stable-core collision |
+| GATE-004M-OUTPUT-ONLY | NO-GO | The mandatory conditioned output split alone cannot force `lambda_j>0` | LEMMA-030; NG-030 | Must use minimum SAT structure across identifiers |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

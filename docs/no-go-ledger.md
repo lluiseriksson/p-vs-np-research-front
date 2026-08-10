@@ -591,3 +591,22 @@ distribution, or algebraic computation. Affine notation is over `F_2` only.
 The no-go does not give a small circuit for SAT-gamma and leaves open arguments
 using SAT's off-table values, global minimum-circuit structure tied to those
 values, or cross-label collision surplus `kappa`.
+
+## NG-030 — mandatory output split forces a stable-core collision
+
+**Label: NO-GO**
+
+Scope: infer `lambda_j>0` in LEMMA-029 solely because the parent output has
+two distinct active residual functions under a prefix-restriction pair.
+
+Failure: LEMMA-030 gives an explicit eight-gate circuit with cofactors
+`y_1 AND y_2` and `w_1 AND w_2`. Every one of its gate functions depends on
+the prefix bit, so there is no prefix-independent active set at all and
+`lambda=0`. The output nevertheless splits into two distinct active non-input
+functions.
+
+Model: one exact non-uniform unrestricted circuit; depth four; fan-in-two
+AND/OR and fan-in-one NOT; no randomness, advice, oracle, field, promise, or
+distribution. The circuit is not claimed minimum and is not SAT-gamma. Thus
+the no-go blocks only output-semantics-only compensation; GATE-004M remains
+open for a minimum-SAT, multi-identifier argument.

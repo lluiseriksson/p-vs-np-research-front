@@ -32,13 +32,21 @@ Alternative active route:
   <- GATE-004I (active parent): aggregate signed identifier surplus
      + LEMMA-015 (proved incidence averaging)
      - GATE-004H-CANDIDATE-COUNT (no-go)
+
+Collision-aware active branch:
+  GATE-004I
+  <- GATE-004M (active smallest brick): stable-core collision surplus
+     + LEMMA-029 (proved exact full quotient accounting)
+
+Stronger dependent-region branch:
+  GATE-004I
   <- GATE-004J (active parent): loss from forced dependent region
      + ENC-009 (proved complementary columns)
      + ENC-010 (proved all-large-length padding)
      + LEMMA-021 (proved dependent-region size)
-  <- GATE-004K (active parent): compress actual dependent traces
+  <- GATE-004K (stronger sufficient route): compress actual dependent traces
      + LEMMA-023 (proved dependent/independent accounting)
-  <- GATE-004L (active smallest brick): labelwise disappeared-minus-split bias
+  <- GATE-004L (stronger conservative route): labelwise disappeared-minus-split bias
      + LEMMA-024 (proved representative-free accounting)
 ```
 
@@ -326,7 +334,7 @@ one-class-per-label baseline. GATE-004K asks for a polynomial positive average
 of this exact deficit. Unlike raw pigeonholing, it is sensitive to the fact
 that every trace comes from one shared minimum SAT circuit.
 
-## Smallest active brick: GATE-004L
+## Former conservative brick: GATE-004L
 
 LEMMA-024 resolves the dependent trace set into parent-label contributions. If
 `z_j` labels contribute no active residual and `t_j` contribute two, while
@@ -382,10 +390,34 @@ fan-in-two Boolean extension of every such table using at most
 `p=O(log R)`, so the entire table is compatible with `O(R log R)` circuit
 size and, for `R=Theta(n^c)` with `c<1`, even `o(n)` size in the ambient length.
 `GATE-004L-AFFINE-TABLE-ONLY — NO-GO` therefore blocks any transfer using only
-the selected affine table. The smallest active brick remains GATE-004L, but
-its next viable attack must use SAT's values outside the witness subspace,
-minimum-circuit consequences tied to those values, or restore and control
-`kappa_j` rather than discard it.
+the selected affine table. GATE-004L remains a valid stronger sufficient
+theorem, but repeated audits show that discarding all collision terms is an
+unnecessarily restrictive active strategy.
+
+## Smallest active brick: GATE-004M
+
+LEMMA-029 sharpens the earlier one-sided accounting. Let `A_j` be the active
+residual functions from prefix-independent labels, `T_j` those from dependent
+labels, `alpha_j=I-|A_j|`, and `lambda_j=|A_j intersect T_j|`. Then the full
+joint quotient satisfies the exact identity
+
+`S-q_j=alpha_j+z_j-t_j+kappa_j+lambda_j`.
+
+The term `lambda_j` records dependent residuals that collapse onto the stable
+suffix core; it was absent from GATE-004K and GATE-004L. In the minimum example
+of LEMMA-026 it equals two and accounts for all quotient loss missed by `z-t`.
+
+GATE-004M now asks for a polynomial average of
+`z_j-t_j+kappa_j+lambda_j`, conservatively omitting only the nonnegative
+`alpha_j`. This is sufficient for GATE-004I and is strictly weaker than the
+older active proposals.
+
+The first attempted shortcut fails exactly. LEMMA-030 constructs a circuit
+whose output has two distinct active cofactors while every gate is
+prefix-dependent, so `lambda=0`. `GATE-004M-OUTPUT-ONLY — NO-GO` blocks using
+the mandatory output split alone. The next attack must connect minimum SAT
+structure across many identifiers to stable-core collisions or to the other
+terms in the exact identity.
 
 ## Downstream amplification obligation: GATE-005
 
