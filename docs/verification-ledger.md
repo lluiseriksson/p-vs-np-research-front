@@ -46,6 +46,7 @@ truth. Each row has exactly one label.
 | INFRA-039 | PROVED | Cycle-039 full radius-one halo countermodel and radius-two gate reproduce from a cold clone | `artifacts/cold-clone-2e50afc.md` | None |
 | INFRA-040 | PROVED | Cycle-040 expanded affine context cube, full-schema countermodel, and exact-SAT gate reproduce from a cold clone | `artifacts/cold-clone-a2aace5.md` | None |
 | INFRA-041 | PROVED | Cycle-041 exact expanded residual incidence, multi-witness columns, and output-incidence no-go reproduce from a cold clone | `artifacts/cold-clone-f5739c0.md` | None |
+| INFRA-042 | PROVED | Cycle-042 product-domain ternary-column counterexample and syntax-linked DNF gate reproduce from a cold clone | `artifacts/cold-clone-4216f20.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
