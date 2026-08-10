@@ -114,6 +114,7 @@ truth. Each row has exactly one label.
 | GATE-004L-SEMANTICS-ONLY | NO-GO | Output semantics and conditioned distinctness alone cannot force positive labelwise bias | LEMMA-025; NG-026 | Any proof must use minimum-circuit structure or `kappa` |
 | LEMMA-026 | PROVED | A provably minimum five-gate circuit with distinct active cofactors has exactly `z=t=1` | `proofs/LEMMA-026-minimum-circuit-zero-label-bias.md` | Generic minimum-circuit obstruction |
 | GATE-004L-MINIMALITY-ONLY | NO-GO | Minimum size, prefix dependence, and distinct active cofactors alone do not force positive labelwise bias | LEMMA-026; NG-027 | SAT-specific multi-pair structure remains necessary |
+| LEMMA-027 | PROVED | The SAT output label contributes two active distinct residuals for every conditioned identifier pair, so `t_j>=1` | `proofs/LEMMA-027-mandatory-output-split.md` | Mandatory negative charge in GATE-004L |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

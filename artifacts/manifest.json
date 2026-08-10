@@ -148,7 +148,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "ee25565208e39fb6963df91b6d3e74126c24b5775c7ea759a97d5dc27389d31e"
+      "sha256": "2cc465ac488c6f4f9c3dc2d556162fcaadc20b27472e9031c3ac2c0d2dcd6e09"
     },
     {
       "path": "docs/result-labels.md",
@@ -236,11 +236,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "2512a5471b598b350de410b157e2851fe853a29fb5313d891788dedbd1aba002"
+      "sha256": "ea299ba92ca4dda49fb024b2b5b32616273dbef51c8f05cdab133ed5000ad19e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "62b01a3504bf467c13c7b3882abe66e4ad01af998b855b8879f6beb12052a574"
+      "sha256": "942aa3e5773ed4b00b290b777a19221a002cda4862fa714faaadb5c0e6e1a39e"
     },
     {
       "path": "experiments/README.md",
@@ -419,8 +419,12 @@
       "sha256": "869056d22f548c39a1c596791cfbd4eb83e8ec3dfed32618e49662326811ea6e"
     },
     {
+      "path": "proofs/LEMMA-027-mandatory-output-split.md",
+      "sha256": "39e350132ce86c50b770fe568b23a044bfb3bcbcfca41753c3089ca931fb9868"
+    },
+    {
       "path": "README.md",
-      "sha256": "0071b41ec25592535ec656272ffb1359eb4a433a4cd6c305963b8d5788f2f910"
+      "sha256": "49f7a870a18b43f5a255af1279937818e59cc26675bb15d92f10b7fa4bb5d891"
     },
     {
       "path": "verification/audit.py",
@@ -428,7 +432,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "a2830b5cf75c5bb405d526ec3bb72e82841d6957f59671798d5dcf87560699d4"
+      "sha256": "6bec0df37c8247f0a6333a79eecaf0a03ca5a6f892a3e2e7b91dc73637e782bc"
     },
     {
       "path": "verification/generate_manifest.py",

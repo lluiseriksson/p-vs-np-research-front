@@ -1547,6 +1547,23 @@
       "asymptotic_quantifiers": "One explicit finite counterexample suffices against the generic implication",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-026-minimum-circuit-zero-label-bias.md; docs/no-go-ledger.md NG-027"
+    },
+    {
+      "id": "LEMMA-027",
+      "label": "PROVED",
+      "statement": "For every conditioned identifier pair at all sufficiently large lengths, the SAT parent output label has two distinct active residual functions and is therefore a mandatory split label.",
+      "computational_model": "Minimum unrestricted SAT-gamma circuits and exact false/true conditioned prefix pairs",
+      "uniformity": "Every individual non-uniform minimum circuit",
+      "circuit_size": "No lower bound; one mandatory split dependent label per identifier pair",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every fixed 0<c<1; all sufficiently large n; every minimum circuit; every identifier in the selected block",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/LEMMA-027-mandatory-output-split.md"
     }
   ]
 }

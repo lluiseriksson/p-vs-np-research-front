@@ -351,6 +351,12 @@ minimum circuit with distinct active cofactors but `z=t=1`.
 obligation to a genuinely SAT-specific relation across the full identifier
 block; neither single-pair semantics nor generic optimality supplies a reserve.
 
+LEMMA-027 identifies the first such SAT-specific relation, but it is adverse:
+the output label splits for every identifier and contributes `-|J|` to the
+aggregate. Any GATE-004L charging proof must pay this mandatory output charge,
+all additional split labels, and then leave the full polynomial reserve. A
+proof that omits the output label is quantitatively invalid.
+
 ## Downstream amplification obligation: GATE-005
 
 To turn GATE-004 into a terminal chain, a separate same-language amplification
