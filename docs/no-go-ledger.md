@@ -1791,3 +1791,24 @@ depth; AND/OR fan-in two and NOT fan-in one; binary cycle spaces over `F_2`;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. LEMMA-111-only quintet Hall is closed, while function-specific
 GATE-004AL and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+
+## NG-090 — unfolded NOT-occurrence count excludes the deficient quintet
+
+**Label: NO-GO**
+
+Scope: use the exact `c=1,q=3` obstruction from LEMMA-117, unfold its single
+cycle, and compare the number of formula NOT occurrences with inversion
+complexity `d(W_5)=5`.
+
+Failure: if `k` of the three NOT gates have two directed paths to the output,
+unfolding produces exactly `3+k` NOT occurrences. Formula inversion forces
+only `3+k>=5`, hence `k>=2`. Both `k=2` and `k=3` remain numerically
+compatible, producing five or six occurrences. The bound reaches equality
+but supplies no contradiction or clause-indexed allocation constraint.
+
+Model: every pruned non-uniform unicyclic circuit for fixed `W_5` with
+exactly 25 binary gates and three NOT gates; unrestricted depth; AND/OR fan-in
+two and NOT fan-in one; directed path multiplicity, formula unfolding, and
+Boolean-lattice inversion; no randomness, advice, oracle, promise,
+distribution, or algebraic circuit model. Occurrence counting is closed,
+while GATE-004AM/AL/AK/AJ/AI/AH/AG/AE remain open.

@@ -471,6 +471,10 @@
       "sha256": "a9644a6d9507a3c2bdf6b95f2cf6990290ac2d6786de924eb5dbeab6243008df"
     },
     {
+      "path": "artifacts/cycle-104-deficient-quintet-stratum.md",
+      "sha256": "16243b95d830b657270fbc8b6e4e52162b19e46157a62cefca738a2c666bb2dd"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -496,7 +500,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "7a35f80492d0a17d0a89980321ecf1ba87d0684557ce6a58c6fbf60042174f79"
+      "sha256": "4b5044f0519aafa21bbf09cd02e6f98c00eccfff733e5db9461f2dee276debe0"
     },
     {
       "path": "docs/problem-statement.md",
@@ -504,7 +508,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "3ba52396a945c12690157030018e607009fe44eaeb07e48ee18e42c908c2a7bc"
+      "sha256": "10ef48a8b2fad6f7c3a317c9039f9a4eb99a2f210770aa2a4842b0f4cbb71b0c"
     },
     {
       "path": "docs/result-labels.md",
@@ -608,11 +612,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "4322ed9877d96de207cc8f9aaefb8888c865af7eafca534943ff2407e36d04ba"
+      "sha256": "47dbec3cd79de391dcdcfadd2db66b366d0f80faeabebc8709757cdc186dbe45"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f3f43ecbe3c2c3852e867b1e79ab1c2b7bb66e93641a472c509f0383e27460e0"
+      "sha256": "2e76cd5b0aeb2abcf07809fe62fb375dc3a4abcf9b98d6238f24ee4e209b06eb"
     },
     {
       "path": "experiments/README.md",
@@ -808,11 +812,19 @@
     },
     {
       "path": "proofs/GATE-004AL-dependency-cone-Hall.md",
-      "sha256": "8a608767a69649c221c1a55bf8a7f383e72ed45027d73fdb79e943621ee6423d"
+      "sha256": "f2c2823cc19e06ec90619db9e593843a636b66fa2817682a581091f6c9e30d80"
     },
     {
       "path": "proofs/GATE-004AL-LEMMA111-only.md",
-      "sha256": "6b604ee6016c1ec1de534ad5608e5be5025333c12b078bf79529320ff1256a74"
+      "sha256": "542bed9dde0f7e3132f20e769ccdd2f01d1e733ed36328aa229d848e9410fbae"
+    },
+    {
+      "path": "proofs/GATE-004AM-NOT-occurrence-counting-only.md",
+      "sha256": "361d406798a02c2a758eb115a88192f4a87851bf59274916d13b66c47cfce9cb"
+    },
+    {
+      "path": "proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md",
+      "sha256": "d50b96656b24fd6bca8d8b9a845b156ca17e72f1b5494abf5edd1b768591ee53"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1443,8 +1455,16 @@
       "sha256": "32fba01871d96545e4ceafabaa48b33b29126d95d3760642dec36fda4f03901e"
     },
     {
+      "path": "proofs/LEMMA-117-deficient-quintet-exact-stratum.md",
+      "sha256": "c2165ed8bfc3592d1dff8b7d495a1471915e644192391c7b6808d0b0c5678efa"
+    },
+    {
+      "path": "proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md",
+      "sha256": "bddfd2bfd1d1ff569ff24465747d0f615a0ee3cb564f41eeaf6a92862832c542"
+    },
+    {
       "path": "README.md",
-      "sha256": "38653ebc88c6983cd61ecbf83d1c0f146701d4762980601bf41a12ada270c04e"
+      "sha256": "034987549c41e56b3eb5dfc969f2c09435a4ebd4b411e0e862de477604cb8954"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1456,7 +1476,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "2129363832f253b1554b2a0693e61fe287118ce11a83f54f8527bdf6cb155ebd"
+      "sha256": "25cb40e35bc4f5db1f005f2940a7055b5ccbaadd2a5d448f7e7a98c32eec8ce0"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

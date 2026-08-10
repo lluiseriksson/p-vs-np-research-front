@@ -153,7 +153,11 @@ Adjacent collision-aware active branch:
                     + LEMMA-116 (dependency-cone Hall expansion for every subset of size at most four)
                     <- GATE-004AL (active refined brick): full dependency-cone Hall expansion
                        - GATE-004AL-LEMMA111-ONLY (no-go: quintet lower bound four versus five)
-                       <- function-specific quintet incidence (next attackable brick)
+                       + LEMMA-117 (a deficient quintet is exactly unicyclic with three NOTs)
+                       + LEMMA-118 (at least two of those NOTs must be duplicated)
+                       <- GATE-004AM (active quintet brick): exclude unicyclic three-NOT `W_5`
+                          - GATE-004AM-NOT-OCCURRENCE-COUNTING-ONLY (no-go: five occurrences meet the bound)
+                          <- clause-indexed duplicated-NOT placement (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

@@ -842,11 +842,20 @@ plus cycle-rank inversion certifies only four resources there, so that method
 is `NO-GO` by one exact unit; GATE-004AL now asks for dependency-specific
 quintet expansion.
 
+The one-hundred-and-fourth cycle collapses any deficient quintet to one exact
+stratum. LEMMA-117 proves that its resource union must have size four and the
+restricted `W_5` circuit must have cycle rank one, three NOT gates, and 25
+binary gates. LEMMA-118 forces at least two of those NOT gates to be duplicated
+by unicyclic formula unfolding. Occurrence counting then stops exactly at the
+formula lower bound—five occurrences—and is `NO-GO` as an exclusion. The
+active GATE-004AM is now the function-specific impossibility of that finite
+unicyclic three-NOT stratum.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–103 isolate the fixed-sign tail, exhaust generic unfolding, and prove dependency-cone Hall expansion through four indices. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–104 isolate the fixed-sign tail, prove dependency-cone Hall through four indices, and reduce the first open quintet to one exact unicyclic stratum. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

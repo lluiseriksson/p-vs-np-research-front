@@ -20,6 +20,10 @@ not show that a deficient quintet exists. A proof of the size-five inequality
 must use dependency-cone incidence beyond total residual cycle rank and
 inversion complexity. GATE-004AL and all larger gates remain open.
 
+LEMMA-117 records the equality case forced by any actual deficient quintet:
+`c=1,q=3`. GATE-004AM now asks to exclude that exact stratum by
+function-specific means.
+
 ## Model card
 
 | Field | Value |

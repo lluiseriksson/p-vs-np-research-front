@@ -31,6 +31,10 @@ that block's positive variables.
 LEMMA-116 proves every Hall inequality with `|I|<=4`. The smallest unresolved
 subset has size five.
 
+LEMMA-117 reduces any deficient quintet to a residual circuit with exactly one
+cycle and three NOT gates; LEMMA-118 forces at least two of those NOTs to be
+duplicated by unfolding. GATE-004AM is the exact active exclusion.
+
 ## Model card
 
 | Field | Value |

@@ -4219,6 +4219,38 @@
       "circuit_size": "Generic resource lower bound four versus Hall target five", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean-lattice inversion",
       "asymptotic_quantifiers": "Every parent size m at least five and every selected set of exactly five clause indices", "case_regime": "Quantitative no-go for LEMMA111 alone; GATE004AL and all larger gates remain open",
       "evidence": "proofs/GATE-004AL-LEMMA111-only.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; docs/no-go-ledger.md NG-089; artifacts/cycle-103-dependency-Hall-through-four.md"
+    },
+    {
+      "id": "LEMMA117", "label": "PROVED",
+      "statement": "Every Hall-deficient five-index dependency-cone union has exactly four resources and restricts to a W_5 circuit with exactly three NOT gates and cycle rank one.",
+      "computational_model": "Five-block restrictions of unrestricted circuits and dependency-cone NOT/non-tree-edge resources", "uniformity": "Every individual non-uniform parent circuit, spanning tree, and deficient five-index subset",
+      "circuit_size": "Deficiency forces exactly four union resources and residual counts q=3,c=1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean inversion complexity",
+      "asymptotic_quantifiers": "Every parent m at least five and every Hall-deficient selected quintet", "case_regime": "Exact worst-case obstruction stratum; not existence of a deficient quintet, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; artifacts/cycle-104-deficient-quintet-stratum.md"
+    },
+    {
+      "id": "LEMMA118", "label": "PROVED",
+      "statement": "In every unicyclic three-NOT circuit for W_5, at least two NOT gates have two directed paths to the output and are duplicated by formula unfolding.",
+      "computational_model": "Unicyclic unrestricted Boolean output cones, directed path multiplicity, and formula unfolding", "uniformity": "Every individual non-uniform residual circuit in the LEMMA117 stratum",
+      "circuit_size": "Exactly three parent NOT gates; at least two are duplicated, giving at least five formula occurrences", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected binary cycle rank and Boolean-lattice inversion",
+      "asymptotic_quantifiers": "Every unicyclic three-NOT circuit computing the fixed five-block W_5", "case_regime": "Exact worst-case necessary topology; not an exclusion theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; artifacts/cycle-104-deficient-quintet-stratum.md"
+    },
+    {
+      "id": "GATE004AM", "label": "EXPLORATORY",
+      "statement": "No pruned AND/OR/NOT circuit computing W_5 has output-cone cycle rank one and exactly three NOT gates.",
+      "computational_model": "Pruned unrestricted Boolean circuits for W_5 with exact output-cone cycle rank and NOT count", "uniformity": "Every individual non-uniform five-block circuit",
+      "circuit_size": "Target exclusion of c=1,q=3; binary count exactly 25", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean cofactor/inversion structure",
+      "asymptotic_quantifiers": "The fixed five-block function and every pruned circuit with c=1,q=3", "case_regime": "Exact finite structural gate for quintet Hall; not a full family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md"
+    },
+    {
+      "id": "GATE004AM-NOT-OCCURRENCE-COUNTING-ONLY", "label": "NO-GO",
+      "statement": "Formula-unfolding NOT-occurrence counting cannot exclude c=1,q=3 because two duplicated NOTs give exactly the required five occurrences and three give six.",
+      "computational_model": "Unicyclic formula unfolding and formula inversion complexity for W_5", "uniformity": "Every individual non-uniform circuit in the exact c=1,q=3 stratum",
+      "circuit_size": "Parent NOT count three; unfolded count five or six after necessary duplication", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank and Boolean-lattice inversion only",
+      "asymptotic_quantifiers": "Every candidate unicyclic three-NOT circuit for fixed W_5", "case_regime": "Quantitative no-go for occurrence counting; GATE004AM, GATE004AL, and larger gates remain open",
+      "evidence": "proofs/GATE-004AM-NOT-occurrence-counting-only.md; proofs/LEMMA-118-two-duplicated-NOTs-in-deficient-quintet.md; docs/no-go-ledger.md NG-090; artifacts/cycle-104-deficient-quintet-stratum.md"
     }
   ]
 }
