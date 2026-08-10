@@ -56,6 +56,7 @@ Adjacent collision-aware active branch:
      + ENC-019 (proved common-padding fixed-face geometry)
      + ENC-020 (proved coordinate-dense neutral padding)
      + ENC-021 (proved distant common clauses on ENC-020)
+     + ENC-022 (proved almost pairwise-zero neutral padding)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -594,6 +595,13 @@ ENC-020-only forcing is `NO-GO`. The active full gate now needs syntax
 interactions with at least pairwise zero coverage on every large candidate
 padding region; that coverage is a necessary defense against this tail, not a
 sufficient lower-bound theorem.
+
+ENC-022 composes one or two blocks from a fixed ten-block alphabet and zeros
+every coordinate pair except four root-token pairs. LEMMA-047 shows those
+exceptions have matching number two, so the exact disjoint paired-clause tail
+cannot grow on the enlarged witness set. This repairs the cycle-045
+counterexample but does not prove loss; the next GATE-004U audit concerns
+overlapping or higher-width common predicates and the full DNF syntax set.
 
 ### Smallest active brick: GATE-004U
 

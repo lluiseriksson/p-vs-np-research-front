@@ -1034,6 +1034,44 @@ and can restore negative joint-quotient loss.
 | Asymptotic quantifiers | Every four-divisible `P>=32`, every source string, and every member of its ENC-020 family |
 | Regime | Worst-case exact syntax-location statement; not a circuit lower bound |
 
+## ENC-022 — almost pairwise-zero exact neutral padding
+
+**Label: PROVED**
+
+For every four-divisible `P>=32`, use one or two nonoverlapping exact neutral
+blocks `01 T_j` or `10 F_j` with
+
+`j in {1,2,4,8,16}`
+
+at four-divisible offsets, filling all gaps with one bits. LEMMA-047 proves
+that for every pair of outer coordinates except
+
+`(0,1),(0,2),(1,3),(2,3)`,
+
+one such context has zero at both coordinates. The construction is exact for
+every source string, including malformed strings, and uses `O(P^2)` contexts.
+
+The four exceptions lie entirely in the root token region and have matching
+number two. Thus no growing family of disjoint positive two-literal clauses
+is one on all ENC-022 contexts. This repairs the specific ENC-021/LEMMA-046
+tail but does not address higher-width or overlapping predicates.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formula contexts and raw-coordinate pairwise zero coverage |
+| Uniform/non-uniform | Uniform ten-block alphabet, one/two-block placements, and finite periodic certificate |
+| Circuit size | `O(P^2)` witness contexts; common disjoint positive two-clause matching number at most two; no lower bound |
+| Circuit depth | Exact contexts may contain linear even-NOT runs; later circuits unrestricted |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Modulo-four placement geometry only |
+| Asymptotic quantifiers | Every source string, every four-divisible `P>=32`, and every coordinate pair outside four explicit root pairs |
+| Regime | Worst-case exact total-language syntax theorem; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

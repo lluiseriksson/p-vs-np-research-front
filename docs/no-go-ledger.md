@@ -930,3 +930,9 @@ computation. This falsifies ENC-020-only forcing, not full GATE-004U. The full
 suffix set contains other padding forms and cores that need not satisfy the
 paired clauses. The next syntax audit requires at least pairwise zero coverage
 on any proposed large neutral-padding region.
+
+Cycle 046 response: ENC-022 meets this defense up to four root-token pairs,
+whose matching number is only two. LEMMA-047 therefore prevents this specific
+no-go from extending to the enlarged one/two-block witness family. This
+repair is not promoted to a loss theorem; higher-width and overlapping common
+predicates remain unaudited.

@@ -2499,6 +2499,40 @@
       "asymptotic_quantifiers": "Infinitely many compatible lengths, every four-divisible P at least 32, every compact DNF core and ENC-020 placement, and sufficiently small fixed context exponent c",
       "case_regime": "Worst-case exact total-function counterexample to ENC-020-only forcing; full GATE-004U remains open",
       "evidence": "proofs/GATE-004U-neutral-context-only.md; docs/sat-encoding.md ENC-021; proofs/LEMMA-046-paired-clause-exact-tail.md; docs/no-go-ledger.md NG-044"
+    },
+    {
+      "id": "ENC-022",
+      "label": "PROVED",
+      "statement": "For every four-divisible outer length P at least 32, one or two nonoverlapping exact neutral blocks simultaneously zero every coordinate pair except four explicit root-token pairs.",
+      "computational_model": "Exact SAT-gamma formula contexts, a fixed ten-block neutral alphabet, and raw-coordinate pairwise zero coverage",
+      "uniformity": "Uniform one/two-block placement construction and finite periodic coverage certificate",
+      "circuit_size": "O(P^2) explicit contexts; no circuit lower bound",
+      "circuit_depth": "Context depth may grow linearly through even-NOT padding; later circuits unrestricted",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Modulo-four placement and translation bookkeeping only",
+      "asymptotic_quantifiers": "Every source string, every four-divisible P at least 32, and every outer coordinate pair except (0,1), (0,2), (1,3), and (2,3)",
+      "case_regime": "Worst-case exact total-language syntax theorem; necessary counterexample defense, not a loss theorem",
+      "evidence": "docs/sat-encoding.md; proofs/LEMMA-047-almost-pairwise-neutral-padding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-047",
+      "label": "PROVED",
+      "statement": "The only positive two-coordinate clauses common to every ENC-022 context are supported on a four-edge root-token graph of matching number two, so no growing disjoint LEMMA-046 clause tail survives.",
+      "computational_model": "Exact neutral syntax witnesses, raw positive two-literal clauses, disjoint clause matchings, and unrestricted later ambient circuits",
+      "uniformity": "Uniform witness family and clause-graph classification; arbitrary non-uniform choice of a disjoint clause tail",
+      "circuit_size": "Common disjoint positive two-clause tail length at most two; no circuit lower bound",
+      "circuit_depth": "Unrestricted later ambient circuit; candidate clauses have depth one",
+      "fan_in": "AND/OR two; NOT one available",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Finite graph matching and modulo-four syntax geometry only",
+      "asymptotic_quantifiers": "Every four-divisible P at least 32 and every disjoint family of positive two-coordinate clauses common to all ENC-022 contexts",
+      "case_regime": "Worst-case exact method defense; overlapping and higher-width predicates remain open",
+      "evidence": "proofs/LEMMA-047-almost-pairwise-neutral-padding.md; verification/test_sat_encoding.py"
     }
   ]
 }

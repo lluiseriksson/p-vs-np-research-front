@@ -16,8 +16,8 @@ follows:
 2. combine any nonempty list of them by the exact binary OR formula token;
 3. require the unpadded formula to fit; and
 4. use ENC-010's identifier-1-fresh padding together with outer double-NOT
-   padding or any ENC-020 neutral block placement to reach length exactly
-   `n-p`.
+   padding or any one/two-block ENC-022 neutral placement to reach length
+   exactly `n-p`.
 
 Let `G:{0,1}^n->{0,1}` be any total Boolean function satisfying
 
@@ -68,6 +68,14 @@ must set both bits to zero. This blocks the particular positive two-literal
 clauses above but is not assumed sufficient. Full GATE-004U remains open
 because its complete DNF set may already supply interactions absent from the
 single-block ENC-020 subfamily.
+
+ENC-022 and LEMMA-047 meet that constraint up to four root-token pairs whose
+matching number is only two. They therefore eliminate every growing disjoint
+positive two-clause tail of the LEMMA-046 form once the required witness set
+includes all one/two-block placements. The active audit now moves to
+overlapping clauses, higher-width CNF predicates, and interactions already
+present in the complete DNF suffix set. No pairwise-coverage statement is
+treated as sufficient for loss.
 
 ## Model card
 

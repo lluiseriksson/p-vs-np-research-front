@@ -7,6 +7,7 @@ It verifies assignments; it does not attempt to solve SAT efficiently.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Mapping
 
 
@@ -423,6 +424,82 @@ def coordinate_dense_distant_pairs(
         raise ValueError("extra_length must be a multiple of four at least 32")
     half = extra_length // 2
     return tuple((position, position + half) for position in range(half))
+
+
+@lru_cache(maxsize=None)
+def _pair_zero_neutral_placements(
+    extra_length: int,
+) -> tuple[tuple[int, str, frozenset[int]], ...]:
+    blocks = tuple(
+        block
+        for identifier in (1, 2, 4, 8, 16)
+        for block in (
+            "01" + tautology(identifier),
+            "10" + contradiction(identifier),
+        )
+    )
+    placements = []
+    for block in blocks:
+        for start in range(0, extra_length - len(block) + 1, 4):
+            zeros = frozenset(
+                start + offset
+                for offset, bit in enumerate(block)
+                if bit == "0"
+            )
+            placements.append((start, block, zeros))
+    return tuple(placements)
+
+
+def pair_zero_neutral_padding(
+    bits: str,
+    extra_length: int,
+    left_position: int,
+    right_position: int,
+) -> str | None:
+    """Return a one/two-block neutral context zeroing two coordinates.
+
+    Blocks use identifiers 1, 2, 4, 8, and 16.  For four-divisible outer
+    lengths at least 32, a context exists for every unordered coordinate pair
+    except (0,1), (0,2), (1,3), and (2,3).
+    """
+    if extra_length < 32 or extra_length % 4:
+        raise ValueError("extra_length must be a multiple of four at least 32")
+    if not 0 <= left_position < extra_length:
+        raise ValueError("left_position is outside the outer context")
+    if not 0 <= right_position < extra_length:
+        raise ValueError("right_position is outside the outer context")
+    if left_position > right_position:
+        left_position, right_position = right_position, left_position
+
+    placements = _pair_zero_neutral_placements(extra_length)
+
+    def assemble(selected: tuple[tuple[int, str, frozenset[int]], ...]) -> str:
+        context = []
+        cursor = 0
+        for start, block, _ in sorted(selected):
+            context.append("1" * (start - cursor))
+            context.append(block)
+            cursor = start + len(block)
+        context.append("1" * (extra_length - cursor))
+        return "".join(context) + bits
+
+    for placement in placements:
+        if left_position in placement[2] and right_position in placement[2]:
+            return assemble((placement,))
+
+    for left_placement in placements:
+        if left_position not in left_placement[2]:
+            continue
+        left_start, left_block, _ = left_placement
+        left_end = left_start + len(left_block)
+        for right_placement in placements:
+            if right_position not in right_placement[2]:
+                continue
+            right_start, right_block, _ = right_placement
+            right_end = right_start + len(right_block)
+            if left_end <= right_start or right_end <= left_start:
+                return assemble((left_placement, right_placement))
+    return None
 
 
 def neutral_prefix_family(k: int) -> tuple[str, ...]:

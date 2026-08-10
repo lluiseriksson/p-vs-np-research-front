@@ -393,13 +393,22 @@ Therefore ENC-020-only forcing is `NO-GO`. Full GATE-004U remains open, and
 the next syntax audit requires at least pairwise zero coverage across every
 large candidate padding region.
 
+The forty-sixth cycle supplies that defense. ENC-022 uses one or two exact
+neutral blocks from a fixed ten-block alphabet to put simultaneous zeros on
+every outer coordinate pair except four root-token pairs. LEMMA-047 proves
+that those exceptions have matching number two, so no growing disjoint
+positive two-clause tail survives after these witnesses are required. This
+repairs the exact cycle-045 counterexample but does not prove GATE-004U; the
+next audit concerns overlapping clauses, higher-width predicates, and the
+complete DNF syntax set.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 84% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate-dense neutral padding, distant common-clause geometry, product-domain and exact fresh literal/clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 85% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, exact six-case off-cube halo semantics, the full three-copy affine formula cube, exact cubic output incidence, compact multi-witness union columns, common-padding fixed-face geometry, coordinate- and almost-pairwise-dense neutral padding, distant common-clause geometry, product-domain and exact fresh literal/clause tail countermodels, all-large-length affine complementary-INDEX tests, exact table-only, raw-boundary/no-stable-core, minimum context-chain, one-hot shattering, and compressed fresh-tail constructions, a reproducible bounded literal search plus global weight-parity theorem, exact fresh-conjunction complexity and full quotient accounting, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, shattering, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Coordinate-dense witnesses still admit an exact paired-clause tail; pairwise syntax coverage and full GATE-004U remain open, with no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain proved. |
+| Real progress toward P vs NP | 0.00% | Almost-pairwise syntax density removes one exact clause tail, but higher-width predicates and full GATE-004U remain open; no loss theorem, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

@@ -21,6 +21,7 @@ from sat_encoding import (
     encode_or,
     encode_variable,
     evaluate,
+    pair_zero_neutral_padding,
     parse_formula,
     satisfiability_padding_wrap,
     neutral_prefix_family,
@@ -679,6 +680,32 @@ class FormulaEncodingTests(unittest.TestCase):
                             (padded[left], padded[right]),
                             ("0", "0"),
                         )
+
+    def test_one_or_two_blocks_zero_every_nonroot_pair(self) -> None:
+        unavoidable = {(0, 1), (0, 2), (1, 3), (2, 3)}
+        certificate_lengths = tuple(range(32, 88, 4)) + (128,)
+        formula = encode_variable(1)
+        for extra_length in certificate_lengths:
+            missing = set()
+            for left in range(extra_length):
+                for right in range(left, extra_length):
+                    padded = pair_zero_neutral_padding(
+                        formula, extra_length, left, right
+                    )
+                    if padded is None:
+                        missing.add((left, right))
+                        continue
+                    self.assertEqual(len(padded), len(formula) + extra_length)
+                    self.assertEqual(padded[left], "0")
+                    self.assertEqual(padded[right], "0")
+                    self.assertTrue(self.brute_sat(padded))
+            self.assertEqual(missing, unavoidable)
+
+        malformed = "01" + formula
+        for pair in ((4, 5), (14, 15), (31, 63), (60, 63)):
+            padded = pair_zero_neutral_padding(malformed, 64, *pair)
+            self.assertIsNotNone(padded)
+            self.assertIsNone(parse_formula(padded or ""))
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):
