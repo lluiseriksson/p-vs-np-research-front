@@ -1180,11 +1180,10 @@ minimum-circuit counterexample, so GATE-004X and P versus NP remain open.
 Scope: prove the `K+5m` clausewise circuit minimum and transfer its `6m`
 paired-row quotient classes to a GATE-004X counterexample.
 
-Failure: LEMMA-063 complements the OR of the clauses' violation terms and
-shares one outer NOT. The resulting circuit costs at most `K+4m+1`, strictly
-less than `K+5m` for every `m>=2`. Thus the clausewise representation is not
-minimum in the asymptotic regime. Its quotient richness is implementation-
-specific and cannot be promoted by minimality.
+Failure: LEMMA-064 factors every clause as `p OR NOT(u AND v)`. The resulting
+circuit costs at most `K+4m`, strictly less than `K+5m` for every `m>=1`.
+Thus the literalwise clause representation is never minimum. Its quotient
+richness is implementation-specific and cannot be promoted by minimality.
 
 Model: exact globally minimum non-uniform unrestricted AND/OR/NOT circuits;
 pairwise-disjoint signed width-three clauses with one positive and two

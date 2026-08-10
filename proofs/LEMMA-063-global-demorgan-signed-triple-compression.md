@@ -17,6 +17,11 @@ disjoint inputs,
 Hence the clausewise circuit of cost `K+5m` from the first LEMMA-062 attempt
 is not minimum whenever `m>=2`.
 
+LEMMA-064 subsequently gives the sharper bounds `C(W)<=4m-1` and
+`C(H AND W)<=K+4m` by factoring each clause locally. The global De Morgan
+construction remains a proved alternative implementation and an
+implementation-instability witness; it is not the best recorded upper bound.
+
 Under two distinct nonconstant base residuals, the compressed displayed
 circuit supplies at least `4m+2` active semantic joint-quotient classes in
 its signed tail and final output. Its displayed loss is therefore at most

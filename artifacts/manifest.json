@@ -280,7 +280,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "fc9c37c82f99fe40d548642a324bfb216233ae4b224b8208ed42c7283fc8b331"
+      "sha256": "8d0100782927ebc5108ca9c398d1c195021162b7c3ae2b84aa4f86b2d3086048"
     },
     {
       "path": "docs/problem-statement.md",
@@ -288,7 +288,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "875571d472d473e8ffd5b3539f5d62be65863b85be601fc7c802dfa750afa548"
+      "sha256": "88a7eced9f39294dce9d8b07dd61f8b23218ca7820c96cc040a0df4557160f6c"
     },
     {
       "path": "docs/result-labels.md",
@@ -384,11 +384,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "00b894ceedfa129b291db775b2df15ad278845a419a444e3ca0f020d32adc583"
+      "sha256": "0d2416da8eeb7da3a41a1468ccf5981cccc6353252b5c63ac2a04601870a4497"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "15f1b81b6a67171d493b43a562f361367e84458c6a52e00cd3afe615e3c0e1c9"
+      "sha256": "79e661c3a586997e6959aed3cff84828f43f18557970c59f63a0a7f0272fdf24"
     },
     {
       "path": "experiments/README.md",
@@ -560,11 +560,15 @@
     },
     {
       "path": "proofs/GATE-004Y-clausewise-minimality.md",
-      "sha256": "d6d89942e02960b9b955be587839adbd08d0eb5781d093653195c7552290bf9f"
+      "sha256": "0417f6423c38cd56d21a2103f05e075c8db0c693f09ba90393f7358783890554"
     },
     {
       "path": "proofs/GATE-004Y-signed-triple-tail-minimality.md",
-      "sha256": "bd7d37d135bd6fd5674e64da948efab7ce5bb0aa7a3ff7eb967977f5eca0baf9"
+      "sha256": "7f7013919023a6ab5256834e88cb8a39dbe8807b1f655089e48bfe274f7a8c2a"
+    },
+    {
+      "path": "proofs/GATE-004Z-factorized-signed-triple-minimality.md",
+      "sha256": "901f6e4e7fe0fbf5945ca0b25ca1bd9f5dda9ed8f35141e8aca30d5a7cc2d33e"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -816,15 +820,19 @@
     },
     {
       "path": "proofs/LEMMA-062-signed-triple-tail-cost-bracket.md",
-      "sha256": "f9b92241574639b173634dd5ebe7722b4bb910d7e1acef812f242fd42f9d9bad"
+      "sha256": "e6f0d24c812c1ceb1a5d1d984ec74a52199f5afe1da59765d7c9f6ada63d263f"
     },
     {
       "path": "proofs/LEMMA-063-global-demorgan-signed-triple-compression.md",
-      "sha256": "63bb87763b655df439cbe81e01f2c68c08e62d846880042a54318519ef202dfc"
+      "sha256": "882208dc5431ac8f0cf5e53b49cd83fe59a80ae11b6eca81f30ccbfbd4215ae2"
+    },
+    {
+      "path": "proofs/LEMMA-064-factorized-signed-triple-tail.md",
+      "sha256": "238e04181d07e707ea97cd3dabf285bc3b9d97d02d9a0af11ccf4be52345ee76"
     },
     {
       "path": "README.md",
-      "sha256": "480098ec6e942e6782e7fd04d8673629f7794073545cc72097486df8bb497cf8"
+      "sha256": "21c5b05c48ed67ebe16c5bc2a603ce9816db3aa115b4a3ba6ffa1b02d79e8fe4"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -836,7 +844,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "8c00ce7ddb1ea64ce1fdab50148284f4f27174cea8557d5d48c86449f4af0835"
+      "sha256": "fae106a3f11a0ba05b97645c58e63f0b5a230a94fca3d8b8600c84c38030779f"
     },
     {
       "path": "verification/generate_manifest.py",

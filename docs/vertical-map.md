@@ -95,9 +95,11 @@ Adjacent collision-aware active branch:
      + LEMMA-061 (proved `P/4` common signed width-three packing)
      - GATE-004X-SIGNED-BINARY-ONLY (no-go by LEMMA-061)
      ! GATE-004Y (active falsification audit): signed-triple-tail minimality
-       + LEMMA-062 (proved `K+3m` to `K+4m+1` cost bracket)
+       + LEMMA-062 (proved `K+3m` to `K+4m` cost bracket)
        + LEMMA-063 (proved global De Morgan compression)
-       - GATE-004Y-CLAUSEWISE-MINIMALITY (no-go by LEMMA-063)
+       - GATE-004Y-CLAUSEWISE-MINIMALITY (no-go by LEMMA-064)
+       ! GATE-004Z (active concrete audit): factorized signed-triple minimality
+         + LEMMA-064 (proved `K+3m` to `K+4m` bracket and `5m` displayed classes)
 
 Stronger dependent-region branch:
   GATE-004I

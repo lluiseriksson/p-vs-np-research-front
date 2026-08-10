@@ -1,4 +1,4 @@
-# LEMMA-062 — disjoint signed-triple tails have a two-gate-per-clause gap
+# LEMMA-062 — disjoint signed-triple tails have a one-gate-per-clause gap
 
 **Label: PROVED**
 
@@ -16,28 +16,24 @@ or
 
 Put `F=H AND Q_1 AND ... AND Q_m`. Then
 
-`K+3m <= C(F) <= K+4m+1`.
+`K+3m <= C(F) <= K+4m`.
 
 For any two restrictions giving distinct nonconstant base residuals, the
-clausewise `K+5m` circuit has at least `6m` active semantic joint-quotient
-classes in its signed tail. But LEMMA-063 gives the stronger upper bound and
-proves that the clausewise circuit is not minimum for `m>=2`. Its quotient
-surplus therefore cannot be transferred by asserting displayed minimality.
+factorized `K+4m` circuit from LEMMA-064 has at least `5m` active semantic
+joint-quotient classes in its signed tail. If that circuit were proved
+minimum, its loss would be at most `K-m`. The proved lower bound is short of
+this minimality certificate by exactly `m` gates.
 
 ## Upper bound
 
-Each clause has one positive literal `p_i` and two negatively occurring
-variables `u_i,v_i`. Its violation term is
+Write each clause as
 
-`V_i=u_i AND NOT p_i AND v_i`.
+`Q_i=p_i OR NOT(u_i AND v_i)`.
 
-Build every `V_i` with one NOT and two AND gates, OR the violation terms,
-negate once to obtain `W=AND_i Q_i`, and conjoin `W` to `H`. This costs
-
-`K + 3m + (m-1) + 1 + 1 = K+4m+1`.
-
-The older clausewise construction costs `K+5m` and remains useful only as a
-quotient comparison.
+It uses one AND, one NOT, and one OR gate. Conjoin the `m` clauses above `H`
+with `m` further AND gates, for total cost `K+4m`. LEMMA-064 records the
+factorization and its quotient count. The older literalwise construction
+costs `K+5m` and is nonminimum for every `m>=1`.
 
 ## Lower bound
 
@@ -53,10 +49,10 @@ the original circuit has size at least `K+2m+m=K+3m`.
 
 ## Displayed quotient count
 
-Implement a clause with its two literal-negation gates and a two-gate OR
-chain. These four functions are distinct within the clause. Across clauses
-their disjoint essential-input supports distinguish them, giving `4m`
-row-independent active classes.
+Implement a clause as `p_i OR NOT(u_i AND v_i)`. Its AND, NOT, and OR
+functions are distinct within the clause. Across clauses their disjoint
+essential-input supports distinguish them, giving `3m` row-independent active
+classes.
 
 Under base row `e`, the `j`th conjunction-tail gate computes
 
@@ -66,15 +62,15 @@ The resulting `2m` functions are distinct across rows and prefix lengths:
 all clauses can be set true to preserve `H_0!=H_1`, and the successive
 essential clause supports distinguish different `j`. They depend on base
 variables and cannot collide with a clause-internal function. The displayed
-tail therefore supplies at least `6m` classes.
+tail therefore supplies at least `5m` classes.
 
 ## Exact unresolved gap
 
-Restriction proves only `K+3m`, while the best recorded construction costs
-`K+4m+1`, leaving at most `m+1` gates of size uncertainty. More importantly,
-the representation carrying `6m` classes is provably nonminimum for `m>=2`.
-Global minimization may merge its semantic classes. Neither exact size nor
-representation-independent quotient survival is asserted.
+Restriction proves only `K+3m`, while the factorized construction costs
+`K+4m`, leaving exactly `m` gates between the certificates. Global
+minimization may remove those gates and merge displayed semantic classes.
+Neither exact size nor representation-independent quotient survival is
+asserted.
 
 ## Model card
 
@@ -82,7 +78,7 @@ representation-independent quotient survival is asserted.
 |---|---|
 | Computational model | Globally minimum unrestricted Boolean circuits, pairwise-disjoint fresh signed width-three clauses, restrictions, and exact semantic joint quotients |
 | Uniform/non-uniform | Fully non-uniform base and minimizing circuit; uniform displayed extension and restriction sequence |
-| Circuit size | `K+3m<=C(F)<=K+4m+1`; nonminimum clausewise circuit costs `K+5m` and has quotient at least `6m` |
+| Circuit size | `K+3m<=C(F)<=K+4m`; factorized displayed quotient at least `5m`; conditional displayed loss at most `K-m` |
 | Circuit depth | Base unrestricted; displayed clause and conjunction chains unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |

@@ -24,15 +24,16 @@ quotient surplus for every minimum representation.
 
 ## Current proof attempt
 
-LEMMA-062 sets both negatively occurring inputs in each clause to one and
-LEMMA-063 applies global De Morgan sharing. Together they prove
+LEMMA-062 sets both negatively occurring inputs in each clause to one, while
+LEMMA-064 factors each clause locally. Together they prove
 
-`K+3m<=C(F)<=K+4m+1`.
+`K+3m<=C(F)<=K+4m`.
 
-The clausewise circuit has `6m` tail classes but costs `K+5m` and is provably
-nonminimum for `m>=2`. The compressed circuit costs `K+4m+1` and exposes only
-`4m+2` tail/output classes, yielding displayed loss `K-1`, not `K-m`.
-Neither representation establishes the required minimum-circuit quotient.
+The factorized circuit has `5m` tail classes and would give loss `K-m` if
+minimum. But the lower certificate is short by `m`, and minimum-circuit
+quotient survival is unproved. GATE-004Z isolates this concrete alternative.
+The separate global De Morgan circuit of LEMMA-063 exposes only `4m+2`
+tail/output classes, illustrating representation instability.
 
 ## Next attack
 
@@ -48,7 +49,7 @@ paired-row quotient directly; treating clauses as black boxes is invalid.
 |---|---|
 | Computational model | Minimum unrestricted circuits for the canonical GATE-004X base conjoined with the explicit disjoint common signed triples; exact diagonal semantic joint quotients |
 | Uniform/non-uniform | Uniform canonical base, witness family, clause selection, and parameters; fully non-uniform minimizing circuits |
-| Circuit size | Target loss at most `K-m`; current bracket `K+3m<=C(F)<=K+4m+1`; compressed displayed quotient has only `4m+2` tail/output classes |
+| Circuit size | Target loss at most `K-m`; current bracket `K+3m<=C(F)<=K+4m`; factorized displayed quotient at least `5m`, but only before minimality is established |
 | Circuit depth | Unrestricted |
 | Fan-in | AND/OR two; NOT one |
 | Randomness | None |
