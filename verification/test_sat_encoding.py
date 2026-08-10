@@ -292,6 +292,56 @@ class FormulaEncodingTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 one_bit_literal_gadgets(identifier)
 
+    def test_adjacent_conditioning_rows_form_affine_parallel_edges(self) -> None:
+        def xor(left: str, right: str) -> str:
+            self.assertEqual(len(left), len(right))
+            return "".join("1" if a != b else "0" for a, b in zip(left, right))
+
+        for bit_length in range(2, 8):
+            context_width = bit_length - 2
+
+            def identifier(context: int) -> int:
+                suffix = format(context, f"0{context_width}b") if context_width else ""
+                return int("11" + suffix, 2)
+
+            base = one_bit_conditioned_prefix(True, identifier(0))
+            edge = xor(base, one_bit_conditioned_prefix(False, identifier(0)))
+            edge_support = {index for index, bit in enumerate(edge) if bit == "1"}
+            self.assertEqual(edge_support, {3 * bit_length + 10})
+
+            directions = []
+            occupied = set(edge_support)
+            for context_bit in range(context_width):
+                unit_context = 1 << (context_width - context_bit - 1)
+                direction = xor(
+                    base,
+                    one_bit_conditioned_prefix(True, identifier(unit_context)),
+                )
+                support = {index for index, bit in enumerate(direction) if bit == "1"}
+                self.assertEqual(len(support), 3)
+                self.assertTrue(occupied.isdisjoint(support))
+                occupied.update(support)
+                directions.append(direction)
+
+            for context in range(2**context_width):
+                for polarity in (False, True):
+                    reconstructed = list(base)
+                    if not polarity:
+                        reconstructed = [
+                            "1" if bit != delta else "0"
+                            for bit, delta in zip(reconstructed, edge)
+                        ]
+                    for context_bit, direction in enumerate(directions):
+                        if context & (1 << (context_width - context_bit - 1)):
+                            reconstructed = [
+                                "1" if bit != delta else "0"
+                                for bit, delta in zip(reconstructed, direction)
+                            ]
+                    self.assertEqual(
+                        "".join(reconstructed),
+                        one_bit_conditioned_prefix(polarity, identifier(context)),
+                    )
+
     def test_conditioned_prefix_length_by_identifier_bit_length(self) -> None:
         for bit_length in range(1, 7):
             identifiers = range(2 ** (bit_length - 1), 2**bit_length)

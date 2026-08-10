@@ -138,6 +138,11 @@ truth. Each row has exactly one label.
 | GATE-004N | EXPLORATORY | Prove polynomial collision-aware loss across the exact adjacent conditioned-SAT pairs | `proofs/GATE-004N-adjacent-conditioned-surplus.md` | Active smallest brick; sufficient for GATE-004 |
 | LEMMA-032 | PROVED | A minimum circuit for `s XOR G` loses at most four gates under its adjacent complementary cofactor pair | `proofs/LEMMA-032-adjacent-complementary-hard-core.md` | Arbitrary shared hard core survives adjacency |
 | GATE-004N-ADJACENCY-ONLY | NO-GO | Adjacency, complementary active cofactors, and minimum size alone cannot force growing quotient loss | LEMMA-032; NG-032 | Must use the multi-edge SAT family and off-edge semantics |
+| ENC-014 | PROVED | The one-bit conditioned rows form one affine subspace of parallel edges sharing coordinate `3L+10` with disjoint context directions | `docs/sat-encoding.md`; reference test | Exact shared-edge and context geometry |
+| LEMMA-033 | PROVED | Complementary output influence over arbitrarily many parallel contexts can be confined to a four-gate common-edge shell | `proofs/LEMMA-033-parallel-edge-direction-shell.md` | Edge direction alone has constant overhead |
+| GATE-004N-DIRECTION-ONLY | NO-GO | Sensitivity along every parallel edge does not force a polynomial edge-dependent region | LEMMA-033; NG-033 | Must eliminate the context-dependent region |
+| LEMMA-034 | PROVED | After fixing one polarity and tracing the affine context cube, at least `2^(L-2)` parent binary gates depend on context | `proofs/LEMMA-034-context-dependent-trace-region.md` | Polynomial region survives edge-shell no-go |
+| GATE-004O | EXPLORATORY | Prove polynomial average joint-quotient loss from the forced context-dependent trace region | `proofs/GATE-004O-context-trace-elimination.md` | Active smallest brick; sufficient for GATE-004 |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

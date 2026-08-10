@@ -652,3 +652,24 @@ bit; unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness,
 advice, oracle, field, promise, or distribution. The no-go is not SAT-gamma and
 has only one edge, so GATE-004N remains open for the simultaneous polynomial
 family of adjacent SAT conditioning pairs.
+
+## NG-033 — parallel edge influence forces a large edge-dependent region
+
+**Label: NO-GO**
+
+Scope: infer polynomially many gates depending on the common flip coordinate
+from output sensitivity on every edge of ENC-014's parallel family, even when
+the context residuals realize complementary INDEX.
+
+Failure: LEMMA-033 wraps any context function `M(s,y)` in the four-gate shell
+`q XOR M(s,y)`. All gates computing `M` are independent of `q`, only four new
+gates can depend on it, and every context still has the complementary adjacent
+cofactors `M(s,.)` and `NOT M(s,.)`. Choosing `M` as a context multiplexer
+reproduces the full output table without expanding the edge-direction shell.
+
+Model: exact unrestricted non-uniform AND/OR/NOT circuits; arbitrary context
+and suffix dimensions; core depth unrestricted and shell depth constant;
+fan-in-two AND/OR and fan-in-one NOT; no randomness, advice, oracle, field,
+promise, or distribution. The no-go concerns only dependence on the common
+edge bit. LEMMA-034 separately forces a large context-dependent region, which
+GATE-004O must eliminate on average.

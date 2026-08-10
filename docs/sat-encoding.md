@@ -587,6 +587,54 @@ Boolean prefix cube.
 | Asymptotic quantifiers | Every `L>=2`, every bit-length-`L` identifier beginning `11`, both polarities, and every suffix string; plus the explicit `j=1` base case |
 | Regime | Worst-case exact total-language conditioning; malformed suffixes reject and auxiliary identifiers may occur in the suffix |
 
+## ENC-014 — the adjacent rows are one affine parallel-edge cube
+
+**Label: PROVED**
+
+Fix `L>=2`, put `d=L-2`, and index the supported identifiers by
+
+`j(s)=(11s)_2` for `s in {0,1}^d`.
+
+All `Q_{j(s),b}` have length `p=6L+13`. Their unique polarity-flip coordinate
+is the same zero-based coordinate
+
+`q_L=3L+10`
+
+for every `s`. The positive row has zero there and the negative row has one.
+
+Let `r_0=Q_{j(0^d),1}` and let `e` be the unit vector at coordinate `q_L`.
+For each context coordinate `i`, let
+
+`d_i=r_0 XOR Q_{j(e_i),1}`.
+
+Each `d_i` has Hamming weight three: the corresponding bit of `s` occurs once
+in the first `V_j`, once in the middle `V_k` (or aligned `V_j 11`), and once
+in the final `V_j`. These supports are pairwise disjoint and avoid `q_L`.
+Consequently
+
+`Q_{j(s),b}=r_0 XOR (1-b)e XOR XOR_{i:s_i=1} d_i`.
+
+The complete `2^(L-1)`-row family is therefore an affine subspace of the
+prefix cube with `L-1` independent disjoint directions. It is a parallel
+matching of all `2^(L-2)` edges in one unit coordinate, with an
+`(L-2)`-dimensional repeated-coordinate affine context cube.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix strings and Hamming/XOR geometry |
+| Uniform/non-uniform | Uniform explicit affine embedding of the context and polarity parameters |
+| Circuit size | No lower bound; row length `6L+13`, one unit direction, and `L-2` weight-three directions |
+| Circuit depth | Unrestricted in later applications |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | Affine geometry over `F_2` only; later computing circuits remain Boolean |
+| Asymptotic quantifiers | Every `L>=2`, every context `s`, and both polarities |
+| Regime | Exact syntax-level geometry for worst-case total-language restrictions |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

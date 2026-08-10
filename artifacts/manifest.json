@@ -172,7 +172,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "1ac60bd3132926f59269fd0f7adecfe90fc58f419c49fab9a3de719612688f85"
+      "sha256": "883cff02d86b59f18646100da156b83d2afd23529c2a8e8519d0fc79f4e67a07"
     },
     {
       "path": "docs/problem-statement.md",
@@ -180,7 +180,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "b2711e2d85912bcc61a3199dd0a662fde8e3246cf58787352412be36762b58fa"
+      "sha256": "7118f5fc3ffe6ec9352b2d216d29bc30b557f0fb3b65889c737d1efd26562aa1"
     },
     {
       "path": "docs/result-labels.md",
@@ -188,7 +188,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "c9573709869571f8561ba57afa74df77fe041564c8b53397abce3b11e16e7f2d"
+      "sha256": "60053297710c994bb486c18aedc64795c5764f038679967467dad4528625fac2"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -268,11 +268,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "251b42d186f84e59ca6d4bb3f1bff7101b92bf638bf025f035e38f05b840264e"
+      "sha256": "89faff692dde0274463ebfff9aaf400ba7bc4255d0b1b4007c85a1a7c609081f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "bbba8c46d280654af0b3019e63d644234af9de84450c9ebb386f8be92ccd0009"
+      "sha256": "a859af3967d2e1f04d34023a6ab292c4a1df16b0ade9abd57612d6930ae8cc70"
     },
     {
       "path": "experiments/README.md",
@@ -353,6 +353,10 @@
     {
       "path": "proofs/GATE-004N-adjacent-conditioned-surplus.md",
       "sha256": "073ffb9efd0d2c0fb0412c7a6f55dcdc87dbee6c4d085aed0762377ab2f06e68"
+    },
+    {
+      "path": "proofs/GATE-004O-context-trace-elimination.md",
+      "sha256": "d70b3b2c3d2a3051b3d9a7daca4bff1bdc0a6dbef40ac00be5e78d8c820a5a1a"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -487,8 +491,16 @@
       "sha256": "9580222c84defe976d34b1cef6562c5aeb328f5c05cd0eb74173d671e6cd5c0e"
     },
     {
+      "path": "proofs/LEMMA-033-parallel-edge-direction-shell.md",
+      "sha256": "9f14b9334ea67d51759db6ee7738c728abc3c32115e656465662136af18e7ee8"
+    },
+    {
+      "path": "proofs/LEMMA-034-context-dependent-trace-region.md",
+      "sha256": "ede64ca1ce79f593994d0ba926be3a737a18639ea3648c4cf9c68c0dbd26ca10"
+    },
+    {
       "path": "README.md",
-      "sha256": "02d642d1192f186e9639a8bd375bdd7e4931e06e8651d7aa9a16fc0bca9e9ed0"
+      "sha256": "ee599b5622be4aef31bc03d66e619af267f90014dda2905e0fb65486c8bcc8ea"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -500,7 +512,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "c56e8ff921f55b074650b5dfe8fc2b631a33788e93f993a4e2669b8d9416d9fa"
+      "sha256": "fe4cb37565cf4334732b9085a03424cb87315993cfb3a0f4706ad3a6caec64d9"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -520,7 +532,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "ea570271cf9a7b4eda519694dfa458a1dd85c845f5912b19e0d7fabe37b85f33"
+      "sha256": "1d2f1782d3f26e54787b5b51524761230bfb3672b452144ae9515162b69ffd39"
     },
     {
       "path": "verification/test_trace_accounting.py",

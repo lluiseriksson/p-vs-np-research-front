@@ -280,13 +280,23 @@ generic attack is `NO-GO`: LEMMA-032 proves that a minimum circuit for
 independent of the shared hard-core complexity. The next proof must use the
 whole SAT-specific edge family and off-edge semantics.
 
+The thirty-fourth cycle determines that edge family's full geometry. ENC-014
+proves that all pairs flip the same coordinate `3L+10` and that their contexts
+form an affine cube with disjoint weight-three directions. LEMMA-033 shows
+that influence along the shared edge direction still fits in a four-gate XOR
+shell, so direction sensitivity alone is `NO-GO`. LEMMA-034 then isolates the
+structure the shell cannot hide: after either polarity is fixed, at least
+`2^(L-2)` parent binary-gate traces depend on the identifier context.
+GATE-004O is now the smallest active brick and asks whether complete context
+restriction eliminates a positive power of that region on average.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 72% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, all-large-length affine complementary-INDEX tests, exact table-only and raw-boundary/no-stable-core constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 73% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier and exact adjacent one-bit conditioning, parallel affine edge/context geometry, all-large-length affine complementary-INDEX tests, exact table-only and raw-boundary/no-stable-core constructions, a reproducible bounded literal search plus global weight-parity theorem, exact full quotient accounting including stable-core collisions, a forced polynomial context-trace region, pairwise/global, per-parent, dependent-trace, labelwise-survival, mandatory-output, minimum-circuit and implementation-instability, overlap, adjacency, and boundary-capacity accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Exact adjacent SAT conditioning is now available, but adjacency alone retains arbitrary hard cores and no multi-edge surplus, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
+| Real progress toward P vs NP | 0.00% | A polynomial context-dependent SAT trace region is now proved, but no average elimination of it, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

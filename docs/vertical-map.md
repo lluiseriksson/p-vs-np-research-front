@@ -40,9 +40,12 @@ Collision-aware active branch:
 
 Adjacent collision-aware active branch:
   GATE-004I
-  <- GATE-004N (active smallest brick): one-bit conditioned-SAT surplus
+  <- GATE-004N (open adjacent route): one-bit conditioned-SAT surplus
      + ENC-013 (proved exact adjacent conditioning)
      + LEMMA-029 (proved exact full quotient accounting)
+  <- GATE-004O (active smallest brick): affine-context trace elimination
+     + ENC-014 (proved parallel affine edge cube)
+     + LEMMA-034 (proved context-dependent region)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -436,7 +439,7 @@ remains active, but its next viable proof must use global minimum-circuit
 factorization forced by SAT's off-table values, or extract the reserve from
 `z`, `kappa`, and `alpha` rather than assuming a stable gate boundary.
 
-## Smallest active brick: GATE-004N
+## Adjacent route: GATE-004N
 
 ENC-013 closes the auxiliary-leaf loophole left by NG-028. For every
 bit-length-`L` identifier whose binary representation begins `11`, it gives
@@ -457,6 +460,27 @@ circuit for `s XOR G` loses at most four gates under the adjacent cofactors
 `GATE-004N-ADJACENCY-ONLY — NO-GO` therefore requires the next attack to use
 the simultaneous SAT-specific edge family and behavior on prefix rows outside
 each edge.
+
+## Smallest active brick: GATE-004O
+
+ENC-014 identifies the simultaneous geometry exactly. All supported pairs at
+bit length `L` flip the same zero-based coordinate `3L+10`. After that bit is
+removed, the identifier context `s` is copied into three disjoint coordinate
+sets, so the entire row family is an `(L-1)`-dimensional affine subspace: one
+unit edge direction and `L-2` disjoint context directions.
+
+The common direction itself is insufficient. LEMMA-033 places influence on
+every parallel edge in a four-gate `q XOR M(s,y)` shell, even when `M` realizes
+the complete context INDEX table. `GATE-004N-DIRECTION-ONLY — NO-GO` records
+that exact ceiling.
+
+The context directions cannot all be compressed into that shell. LEMMA-034
+fixes either polarity, substitutes the affine context parametrization into any
+SAT circuit, and applies the complementary assignment columns. At least
+`R=2^(L-2)` parent binary-gate traces in the resulting top region depend on
+context. GATE-004O asks for a positive-power average elimination of this
+specific region when the context is completely fixed. Proving it would yield
+GATE-004 through the existing logarithmic-step recurrence.
 
 ## Downstream amplification obligation: GATE-005
 
