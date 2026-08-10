@@ -409,6 +409,22 @@ def coordinate_dense_neutral_paddings(
     return tuple(sorted(context + bits for context in contexts))
 
 
+def coordinate_dense_distant_pairs(
+    extra_length: int,
+) -> tuple[tuple[int, int], ...]:
+    """Pair the two halves of an ENC-020 outer context.
+
+    For a four-divisible length at least 32, paired coordinates are at least
+    16 positions apart.  Since every nontrivial ENC-020 member has all zero
+    bits inside one block of length at most 16, no pair is simultaneously
+    zero on any member.
+    """
+    if extra_length < 32 or extra_length % 4:
+        raise ValueError("extra_length must be a multiple of four at least 32")
+    half = extra_length // 2
+    return tuple((position, position + half) for position in range(half))
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

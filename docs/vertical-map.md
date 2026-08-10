@@ -55,6 +55,7 @@ Adjacent collision-aware active branch:
      + ENC-018 (proved multi-witness union columns)
      + ENC-019 (proved common-padding fixed-face geometry)
      + ENC-020 (proved coordinate-dense neutral padding)
+     + ENC-021 (proved distant common clauses on ENC-020)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -66,6 +67,7 @@ Adjacent collision-aware active branch:
   <- GATE-004U (active smallest brick): syntax-linked DNF witness rigidity
      - GATE-004U-COMMON-PADDING-ONLY (no-go by LEMMA-044)
      - GATE-004U-RAW-COORDINATE-TAIL (no-go by LEMMA-045)
+     - GATE-004U-NEUTRAL-CONTEXT-ONLY (no-go by LEMMA-046)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -584,6 +586,14 @@ proves that no raw-literal tail survives. The next GATE-004U attack concerns
 non-coordinate predicates recognizing the dense witness language and whether
 they can have an exact additive conjunction cost without circularly assuming
 the desired circuit lower bound.
+
+ENC-021 finds such a predicate without full recognition: `P/2` disjoint
+distant OR clauses are one on the entire single-block ENC-020 family.
+LEMMA-046 proves exact additive cost and recreates negative diagonal loss, so
+ENC-020-only forcing is `NO-GO`. The active full gate now needs syntax
+interactions with at least pairwise zero coverage on every large candidate
+padding region; that coverage is a necessary defense against this tail, not a
+sufficient lower-bound theorem.
 
 ### Smallest active brick: GATE-004U
 

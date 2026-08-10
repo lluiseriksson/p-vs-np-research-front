@@ -997,6 +997,43 @@ general non-coordinate predicate may still be one on the whole family.
 | Asymptotic quantifiers | Every source string and every `P>=16` divisible by four |
 | Regime | Worst-case exact total-language preservation, including malformed strings |
 
+## ENC-021 — coordinate density leaves distant common clauses
+
+**Label: PROVED**
+
+Let `P>=32` be divisible by four and write `m=P/2`. For the `P` outer
+coordinates of ENC-020, define
+
+`W_P(z)=AND_{i=0}^{m-1}(z_i OR z_{i+m})`.
+
+Then `W_P(z)=1` on every ENC-020 context. The all-one context is immediate.
+Every other context differs from all ones only inside its inserted length-12
+or length-16 neutral block. The coordinates in each pair are distance
+`m>=16` apart, whereas two positions in one such block have distance at most
+15. Therefore the two paired bits cannot both be zero.
+
+The pairs partition all `P` coordinates. Hence this is a genuinely
+non-coordinate common predicate: every raw bit varies by ENC-020, but `P/2`
+two-bit clauses remain simultaneously fixed to one. LEMMA-046 proves that
+conjoining these clauses to a nonconstant base has exact additive circuit cost
+and can restore negative joint-quotient loss.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact ENC-020 formula contexts and a conjunction of disjoint raw-coordinate OR clauses |
+| Uniform/non-uniform | Uniform half-block pairing and neutral-context construction |
+| Circuit size | `P/2` pairwise OR gates and `P/2` conjunction gates in the displayed predicate application; exact application cost is deferred to LEMMA-046 |
+| Circuit depth | The predicate may be a balanced or sequential conjunction; later circuits are unrestricted |
+| Fan-in | AND/OR two; NOT one is available but unused |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every four-divisible `P>=32`, every source string, and every member of its ENC-020 family |
+| Regime | Worst-case exact syntax-location statement; not a circuit lower bound |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

@@ -9,6 +9,7 @@ from sat_encoding import (
     context_wrap,
     conditioned_prefix,
     common_outer_double_not_pad,
+    coordinate_dense_distant_pairs,
     coordinate_dense_neutral_paddings,
     context_prefix,
     contradiction,
@@ -655,6 +656,29 @@ class FormulaEncodingTests(unittest.TestCase):
                         {padded[position] for padded in padded_family},
                         {"0", "1"},
                     )
+
+    def test_distant_pair_clauses_hold_on_every_dense_context(self) -> None:
+        formulas = (
+            encode_variable(1),
+            assignment_conjunction({6: False, 7: True}),
+            "",
+        )
+        for extra_length in range(32, 129, 4):
+            pairs = coordinate_dense_distant_pairs(extra_length)
+            self.assertEqual(len(pairs), extra_length // 2)
+            self.assertEqual(
+                {position for pair in pairs for position in pair},
+                set(range(extra_length)),
+            )
+            for formula in formulas:
+                for padded in coordinate_dense_neutral_paddings(
+                    formula, extra_length
+                ):
+                    for left, right in pairs:
+                        self.assertNotEqual(
+                            (padded[left], padded[right]),
+                            ("0", "0"),
+                        )
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:
         with self.assertRaises(ValueError):

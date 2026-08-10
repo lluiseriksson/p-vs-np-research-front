@@ -57,6 +57,18 @@ such a predicate has any exact additive minimum-circuit cost. LEMMA-037 cannot
 be invoked because those predicates are not fresh inputs. Full GATE-004U
 remains open.
 
+ENC-021 and LEMMA-046 close that first non-coordinate audit. Half-block-
+separated OR clauses are all one on ENC-020, and successive restrictions prove
+their conjunction has exact additive cost. The resulting minimum circuit has
+loss at most `K-P/2`, so ENC-020-only forcing is `NO-GO`.
+
+The next syntax-design constraint is pairwise zero coverage: on any large
+candidate padding region and for every coordinate pair, some required witness
+must set both bits to zero. This blocks the particular positive two-literal
+clauses above but is not assumed sufficient. Full GATE-004U remains open
+because its complete DNF set may already supply interactions absent from the
+single-block ENC-020 subfamily.
+
 ## Model card
 
 | Field | Value |

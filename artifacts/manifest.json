@@ -216,7 +216,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "9dc09495764872a324f190fc9e76150a2fcfccb87183acd2e84afd2154d76b60"
+      "sha256": "0e2e910b37940b418cc919a20cb7a495e39fac307985ab1f585ec0f03d3a4cfd"
     },
     {
       "path": "docs/problem-statement.md",
@@ -224,7 +224,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "b6b3981003dce33eb28300483924c545e2b6996caeabbae6cbff8015a8c23046"
+      "sha256": "7b94edb1c143fd51ceea19c653f24ecc331554dbb66331745446c4bf9ba5ca0b"
     },
     {
       "path": "docs/result-labels.md",
@@ -232,7 +232,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "8cd68149c691598c66e4f71dd860b6669daa259d70c10b0eb8550d77c40b2e6e"
+      "sha256": "1fb2dc21f48806820864c4d8ae86269fb94583efff72150284c132b31d664fff"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -312,11 +312,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "768f89fbaa8d5113635456cae7853443e6f4e815e2f9499b237ac88a26d40076"
+      "sha256": "33abcf52bf23257660ada7c5f0d7fa97770bafdca93bd4861a6b613cd7ceb3b2"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "c6f8e5542f062df4fbb7d2cb4548cce5578fdd1f0c2bef1158b3ba8c97ceac58"
+      "sha256": "5849f30a926f7616f6d19fc654dcecdefd56f631555706c06fe3c810349b1e45"
     },
     {
       "path": "experiments/README.md",
@@ -423,8 +423,12 @@
       "sha256": "9779f2c724e9b015f0f315a3dd79a9eeace7c3ed88b790d765e66d57aa326db4"
     },
     {
+      "path": "proofs/GATE-004U-neutral-context-only.md",
+      "sha256": "f005f4325f564b7e3cc2e112e85c1c6ef1a3aa84e7bd349433f766ab33d58948"
+    },
+    {
       "path": "proofs/GATE-004U-syntax-linked-dnf-rigidity.md",
-      "sha256": "d7684dd6fba8eea9b26dc233fb45b47d2245757b6aed9081d30469d5d3305d0e"
+      "sha256": "37accf898c49282f02170c15246f132a2961b4e85280af78ec3d01453cb83b9a"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -611,8 +615,12 @@
       "sha256": "5afbd4cdeba3b38f3c249a7368dcb930c71768fa9e9b6b3d866efe394c15a0c3"
     },
     {
+      "path": "proofs/LEMMA-046-paired-clause-exact-tail.md",
+      "sha256": "bcf5049050fed6e8cc39f44671b55dd5904c830f30542bef85df3d82704c6a01"
+    },
+    {
       "path": "README.md",
-      "sha256": "77550949c83391212ab3068db6335f6fe805fc710f518191e6c6bd5c4c7a0cda"
+      "sha256": "364678bfa02763e75246d04e2476da3107d16b4899b8c2c271fcfee079b95123"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -624,7 +632,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "207b8c77aed434dada869ae5643e7e40fa8deefc10a23b88b2093eaf4dd916cc"
+      "sha256": "03bc5f0b04ff651a86101c71ee70a82231094b9fd8ed88e12595dec099f0789b"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -632,7 +640,7 @@
     },
     {
       "path": "verification/sat_encoding.py",
-      "sha256": "4b4a8cda490049e53992a1eb5b369e8e4be11f9e1a45bc6ddf537d04ba78e42f"
+      "sha256": "70851aef51ae2e599d6d1dda7f3f84c311d395b544f45bd3f60b04751c9c8241"
     },
     {
       "path": "verification/test_affine_index_extension.py",
@@ -648,11 +656,11 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "67260812c92278996b31afd03285398bbea4eb88114d989439aa8a63d43e2ae3"
+      "sha256": "8ec23f3706036f36d41fb5f7520a97c11774b2169945270c098eac6b4dda5b80"
     },
     {
       "path": "verification/test_trace_accounting.py",
-      "sha256": "77ff208d318d7a8856917e5cb6daafc616a73342919c01db80d6d091fd19589e"
+      "sha256": "77b0ec73e609f7bafe08431591f77311efbb8a5335587d2b82288d2232c0f458"
     }
   ]
 }

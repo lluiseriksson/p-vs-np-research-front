@@ -2448,6 +2448,57 @@
       "asymptotic_quantifiers": "Every source formula and every outer budget P at least 16 divisible by four; every nonempty conjunction of raw outer-coordinate literals",
       "case_regime": "Worst-case method obstruction, not a lower bound; non-coordinate predicates remain open",
       "evidence": "docs/sat-encoding.md ENC-020; proofs/LEMMA-045-dense-padding-blocks-raw-tail.md; docs/no-go-ledger.md NG-043"
+    },
+    {
+      "id": "ENC-021",
+      "label": "PROVED",
+      "statement": "For every four-divisible P at least 32, pairing the two halves of the outer region gives P/2 disjoint two-bit OR clauses that are one on every ENC-020 context.",
+      "computational_model": "Exact ENC-020 formula contexts and conjunctions of disjoint raw-coordinate OR clauses",
+      "uniformity": "Uniform half-block coordinate pairing and neutral-context family",
+      "circuit_size": "P/2 clause gates; the full predicate application uses another P/2 AND gates and is analyzed exactly by LEMMA-046",
+      "circuit_depth": "Clause depth one; conjunction depth unrestricted or balanced",
+      "fan_in": "AND/OR two; NOT one available but unused",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every source string, every four-divisible P at least 32, every half-block pair, and every member of the ENC-020 family",
+      "case_regime": "Worst-case exact syntax-location statement; not a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-046",
+      "label": "PROVED",
+      "statement": "Conjoining m fresh disjoint two-variable OR clauses to any nonconstant base of exact circuit size K gives exact size K+2m; two distinct nonconstant row residuals yield at least 3m active joint-quotient tail classes.",
+      "computational_model": "Globally minimum unrestricted circuits, fresh disjoint two-variable clauses, sequential restrictions, and exact semantic joint quotients",
+      "uniformity": "Fully non-uniform base and minimum circuit; uniform fresh-pair extension",
+      "circuit_size": "Exact K+2m; quotient at least 3m; signed loss at most K-m",
+      "circuit_depth": "Base unrestricted; clause gates depth one and displayed AND tail may add m layers",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every finite nonconstant base and every m at least one; every pair of distinct nonconstant designated row residuals",
+      "case_regime": "Worst-case exact total-function computation; the ENC-020 application is a method obstruction, not a SAT lower bound",
+      "evidence": "proofs/LEMMA-046-paired-clause-exact-tail.md; verification/test_trace_accounting.py"
+    },
+    {
+      "id": "GATE-004U-NEUTRAL-CONTEXT-ONLY",
+      "label": "NO-GO",
+      "statement": "Exact SAT-gamma agreement on common-inner-length compact DNF cores under every coordinate-dense ENC-020 outer context does not force positive diagonal joint-quotient loss.",
+      "computational_model": "Globally minimum unrestricted circuits, exact syntax-linked ENC-020 agreement, canonical compact DNF core evaluation, and diagonal semantic joint quotients",
+      "uniformity": "Fully non-uniform circuit adversary and base minimum circuit; uniform DNF core maps, neutral contexts, and half-block pairing",
+      "circuit_size": "Counterexample exact size K+P; quotient at least 3P/2; loss at most K-P/2 and asymptotically negative",
+      "circuit_depth": "Unrestricted base with pairwise OR gates and a sequential AND tail",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Infinitely many compatible lengths, every four-divisible P at least 32, every compact DNF core and ENC-020 placement, and sufficiently small fixed context exponent c",
+      "case_regime": "Worst-case exact total-function counterexample to ENC-020-only forcing; full GATE-004U remains open",
+      "evidence": "proofs/GATE-004U-neutral-context-only.md; docs/sat-encoding.md ENC-021; proofs/LEMMA-046-paired-clause-exact-tail.md; docs/no-go-ledger.md NG-044"
     }
   ]
 }

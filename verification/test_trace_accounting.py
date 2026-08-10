@@ -5,6 +5,37 @@ import unittest
 
 
 class FullTraceAccountingTests(unittest.TestCase):
+    def test_paired_clause_tail_has_three_classes_per_pair(self) -> None:
+        for pair_count in range(1, 6):
+            suffixes = tuple(
+                itertools.product((False, True), repeat=1 + 2 * pair_count)
+            )
+            clause_traces = []
+            row_tail_traces = []
+            for pair_index in range(pair_count):
+                clause_traces.append(
+                    tuple(
+                        suffix[1 + pair_index]
+                        or suffix[1 + pair_count + pair_index]
+                        for suffix in suffixes
+                    )
+                )
+            for row in (False, True):
+                traces = [[] for _ in range(pair_count)]
+                for suffix in suffixes:
+                    value = suffix[0] if not row else not suffix[0]
+                    for pair_index in range(pair_count):
+                        clause = (
+                            suffix[1 + pair_index]
+                            or suffix[1 + pair_count + pair_index]
+                        )
+                        value = value and clause
+                        traces[pair_index].append(value)
+                row_tail_traces.extend(map(tuple, traces))
+
+            active = set(clause_traces) | set(row_tail_traces)
+            self.assertEqual(len(active), 3 * pair_count)
+
     def test_lemma_026_audit_exposes_stable_core_collisions(self) -> None:
         independent = {"g", "h"}
         dependent_by_label = [set(), {"g"}, {"g_or_h", "h"}]

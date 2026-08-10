@@ -904,3 +904,29 @@ distribution, or algebraic computation. This is a no-go for the raw fresh-
 input counterexample method, not a circuit lower bound. A non-coordinate
 predicate recognizing the witness set remains possible, but LEMMA-037 gives
 no additive minimum-cost identity for such a predicate.
+
+## NG-044 — coordinate-dense neutral contexts force quotient loss
+
+**Label: NO-GO**
+
+Scope: infer positive polynomial diagonal quotient loss from exact SAT-gamma
+agreement on common-inner-length compact DNF cores under every coordinate-
+dense ENC-020 neutral context.
+
+Failure: ENC-021 pairs the two halves of the outer context. Every ENC-020
+zero lies in one block of length at most 16, so each distant clause
+`z_i OR z_{i+P/2}` is one on every witness. LEMMA-046 proves the exact
+identity `C(H AND W_P)=C(H)+P`. In its displayed minimum circuit the `P/2`
+clause functions and `P` row-specific AND-prefix functions give at least
+`3P/2` quotient classes, so every diagonal loss is at most `K-P/2`. The
+canonical DNF base has `K=o(P)` for sufficiently small fixed context exponent
+`c`, making the loss negative.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; common-inner-
+length DNF cores and every ENC-020 outer placement; disjoint coordinate-pair
+clauses; exact size `K+P`, unrestricted depth, fan-in-two AND/OR and fan-in-one
+NOT; no randomness, advice, oracle, promise, distribution, or algebraic
+computation. This falsifies ENC-020-only forcing, not full GATE-004U. The full
+suffix set contains other padding forms and cores that need not satisfy the
+paired clauses. The next syntax audit requires at least pairwise zero coverage
+on any proposed large neutral-padding region.
