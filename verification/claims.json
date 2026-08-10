@@ -1020,6 +1020,57 @@
       "asymptotic_quantifiers": "Every positive-arity nonzero shared core in the LEMMA-011 selector construction",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-011-conditioned-union-shared-core.md; docs/no-go-ledger.md NG-019"
+    },
+    {
+      "id": "ENC-008",
+      "label": "PROVED",
+      "statement": "Every identifier of binary length ell has an equal-length false/true conditioned SAT-gamma prefix pair of length 4ell+10, and the two residuals OR to exact SAT-gamma.",
+      "computational_model": "Exact SAT-gamma prefix formulas and conditioned assignments for arbitrary identifiers",
+      "uniformity": "Uniform prefix construction; later identifier choice may be non-uniform",
+      "circuit_size": "No lower bound; 2^(ell-1) candidate pairs at a common prefix length",
+      "circuit_depth": "Unrestricted in later circuit applications",
+      "fan_in": "Encoded formula AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None in construction; non-uniform identifier selection allowed in later gate",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every ell>=1, every identifier of that bit length, and every binary suffix",
+      "case_regime": "Worst-case exact total-language decision; malformed suffixes reject",
+      "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-014",
+      "label": "PROVED",
+      "statement": "A recurrence gaining B n^delta size while losing at most A log n input length at every large n yields Omega(n^(1+delta)/log n) size and hence a superlinear lower bound.",
+      "computational_model": "Abstract nonnegative size recurrence with intended unrestricted-circuit application",
+      "uniformity": "Not applicable abstractly; non-uniform in circuit application",
+      "circuit_size": "Gain B n^delta per logarithmic length loss",
+      "circuit_depth": "Unrestricted in circuit application",
+      "fan_in": "AND/OR two; NOT one in circuit application",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "Real-valued recurrence only; no algebraic computation model",
+      "asymptotic_quantifiers": "Fixed A,B,delta>0; every sufficiently large integer n",
+      "case_regime": "Worst-case size recurrence",
+      "evidence": "proofs/LEMMA-014-logarithmic-step-recurrence.md"
+    },
+    {
+      "id": "GATE-004H",
+      "label": "EXPLORATORY",
+      "statement": "Among polynomially many equal-length identifier-conditioned SAT pairs, one joint quotient of every minimum parent circuit is smaller by B n^delta plus the final OR gate.",
+      "computational_model": "Minimum unrestricted SAT-gamma circuits, many equal-length conditioned pairs, and a shared two-output semantic quotient",
+      "uniformity": "Fully non-uniform circuit adversary and per-circuit identifier choice",
+      "circuit_size": "Joint quotient size at most |C_n|-B n^delta-1 with O(log n) length loss",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "No verifier advice; identifier choice is non-uniform within the theorem",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Exists fixed c,B,delta>0; every sufficiently large n; every minimum circuit; exists one identifier of bit length floor(c log_2 n)",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/GATE-004H-many-identifier-conditioned-quotient.md"
     }
   ]
 }

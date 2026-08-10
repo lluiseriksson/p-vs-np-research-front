@@ -222,6 +222,16 @@ class FormulaEncodingTests(unittest.TestCase):
                 branches.append(branch)
             self.assertEqual(any(branches), self.brute_sat(suffix))
 
+    def test_conditioned_prefix_length_by_identifier_bit_length(self) -> None:
+        for bit_length in range(1, 7):
+            identifiers = range(2 ** (bit_length - 1), 2**bit_length)
+            lengths = {
+                len(conditioned_prefix(value, identifier))
+                for identifier in identifiers
+                for value in (False, True)
+            }
+            self.assertEqual(lengths, {4 * bit_length + 10})
+
 
 if __name__ == "__main__":
     unittest.main()

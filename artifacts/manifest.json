@@ -96,7 +96,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "edb5ee3a0298620494322445dfed0ef09e4c6efc43acf33870ea3a82d9061f0a"
+      "sha256": "d7807f8d9cbacbeffa24efaac7cf7796365db321fda92e4d5ebc9568bc81e1b7"
     },
     {
       "path": "docs/result-labels.md",
@@ -104,7 +104,7 @@
     },
     {
       "path": "docs/sat-encoding.md",
-      "sha256": "867f10b49266b9b5b6121e55f25e66a7dc4681d7df8bbbaa079f7175172b3951"
+      "sha256": "f93bb5577bcdc4c32ade39d13158303b4af1cb56f5fa0e2ac9f2e5bd627a93d9"
     },
     {
       "path": "docs/source-citations/aaronson-wigderson.md",
@@ -176,11 +176,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "84d9e62be31b29ad48f02b32a7376cce3c2318759719b23854a7670c0bfb223c"
+      "sha256": "073b0d6edc035bd4eab8dd52883f471266b4f0616c568e1206367ab4d895e86d"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2e8c63ad473854ab21e6072a443cf1392e92dfac56c0f33feec8b083fd0280ac"
+      "sha256": "4e876c25a271bfbc90cfc1220d66029e91139d0ad1f83bd21baf410621d19f03"
     },
     {
       "path": "experiments/README.md",
@@ -229,6 +229,10 @@
     {
       "path": "proofs/GATE-004G-joint-conditioned-quotient.md",
       "sha256": "c6f4962f41d430e78cb4cc1ceea0c79c18397bb71d37985fafd5ddfb70c258e6"
+    },
+    {
+      "path": "proofs/GATE-004H-many-identifier-conditioned-quotient.md",
+      "sha256": "8c87d5eb4794a09c48eca7d169c25fd0b6db8855e2bc05f95c86d20ae0b8a139"
     },
     {
       "path": "proofs/GATE-005-same-language-amplification.md",
@@ -287,8 +291,12 @@
       "sha256": "3dab70967c11c25077fac9042bd0ee63998c59dfca98cfa0a313092aad972f35"
     },
     {
+      "path": "proofs/LEMMA-014-logarithmic-step-recurrence.md",
+      "sha256": "7564706f082b6b9f5f257badbd8ffb9c3dd60bf6bfca857f4d75793887610006"
+    },
+    {
       "path": "README.md",
-      "sha256": "6279ae4cafc6b84b05f5c82933ec5e1860a18b9f1e2c59d5de2460f27c4ab704"
+      "sha256": "99249ec371c288c012c4767f8842fca048cd0a18e403a12d3649a220cfd273eb"
     },
     {
       "path": "verification/audit.py",
@@ -296,7 +304,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7574d68236bad2b6ad68bc516108beed80e25aac623aebabbdbc1a5e0e345e9f"
+      "sha256": "dfc791476322b3e81950f7c6958f266675a14cea2898602991f96c5da535598d"
     },
     {
       "path": "verification/generate_manifest.py",
@@ -308,7 +316,7 @@
     },
     {
       "path": "verification/test_sat_encoding.py",
-      "sha256": "56a4154ebd0fd2075b185daf4ca41cfb9568f1897e25c530cc9f69ce319f18e5"
+      "sha256": "c17dfe573b0c4a75de9225a20eb4ab8ab7b3c549d90fae085fd3bc06ec550a3a"
     }
   ]
 }

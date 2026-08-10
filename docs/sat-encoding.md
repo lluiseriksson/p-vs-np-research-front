@@ -278,6 +278,40 @@ malformed strings because all three functions reject.
 | Asymptotic quantifiers | Every suffix length and every binary suffix |
 | Regime | Worst-case exact total-language decision; malformed suffixes reject |
 
+## ENC-008 — many equal-length conditioned pairs
+
+ENC-007 generalizes to every positive identifier `j`. If `j` has binary length
+`ell`, then `enc(variable j)` has length `2ell+1`. Replacing `V` by this
+variable in the two conditioned formulas gives
+
+`A_{j,1}=NOT(NOT(AND(V_j,V_j)))`,
+
+`A_{j,0}=AND(NOT(V_j),NOT(V_j))`.
+
+Both have length `4ell+8`, so the prefixes `R_{j,b}=01 A_{j,b}` have common
+length `4ell+10`. For every suffix `y`, their residuals are satisfiability of
+`y` conditioned on identifier `j` being `b`, and their OR is exact SAT-gamma.
+
+Consequently all `2^(ell-1)` identifiers of bit length `ell` supply distinct
+conditioned pairs at the same parent and suffix lengths. This is projection
+supply only; it gives no averaging or circuit-loss theorem.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix formulas and conditioned assignments for arbitrary variable identifiers |
+| Uniform/non-uniform | Uniform prefix construction; later identifier choice may be non-uniform by circuit and length |
+| Circuit size | No lower bound; `2^(ell-1)` candidate two-output decompositions at prefix length `4ell+10` |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None in construction; identifier may be selected non-uniformly in a gate theorem |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every `ell>=1`, every identifier with that bit length, and every binary suffix |
+| Regime | Worst-case exact total-language decision; malformed suffixes reject |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

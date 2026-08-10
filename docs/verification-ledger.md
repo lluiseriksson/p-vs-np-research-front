@@ -70,6 +70,9 @@ truth. Each row has exactly one label.
 | GATE-004G-LITERATURE | NO-GO | Neither amortized-copy duality nor multi-output minimization hardness proves the conditioned-SAT joint gap | Bridge audit; NG-018 | Explicit SAT-specific surplus remains open |
 | LEMMA-013 | PROVED | Joint improvement equals disappeared parent labels minus labels representing two split residual classes | `proofs/LEMMA-013-parent-label-surplus.md` | Exact signed-surplus normal form |
 | GATE-004G-SENSITIVITY | NO-GO | Condition-sensitive gate counts alone do not force a favorable disappeared-minus-split balance | LEMMA-011; NG-019 | A SAT-specific structural injection is required |
+| ENC-008 | PROVED | Every identifier bit-length block supplies exponentially many equal-length conditioned SAT pairs | `docs/sat-encoding.md`; reference test | Projection supply only |
+| LEMMA-014 | PROVED | An `n^delta` gain per `O(log n)` length loss yields `Omega(n^(1+delta)/log n)` size | `proofs/LEMMA-014-logarithmic-step-recurrence.md` | Closes the logarithmic-step summation |
+| GATE-004H | EXPLORATORY | Choose one identifier among polynomially many whose joint conditioned quotient has `B n^delta` net loss | `proofs/GATE-004H-many-identifier-conditioned-quotient.md` | Active smallest brick; sufficient for GATE-004 |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

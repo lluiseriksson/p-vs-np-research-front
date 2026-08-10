@@ -23,9 +23,12 @@ P != NP
 
 Alternative active route:
   GATE-004
-  <- GATE-004G (active smallest brick): joint conditioned-SAT quotient
+  <- GATE-004G (active parent): joint conditioned-SAT quotient
      + ENC-007 (proved conditioned union)
      + LEMMA-002 with beta=0 (proved recurrence)
+  <- GATE-004H (active smallest brick): choose among many identifiers
+     + ENC-008 (proved equal-length pair supply)
+     + LEMMA-014 (proved logarithmic-step recurrence)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -167,7 +170,7 @@ three-gate one-hot selector around an arbitrary core. Therefore
 `GATE-004F-FOUR-COFACTOR — NO-GO`; the next attack must use nonlocal prefix
 residual structure rather than any constant-width operator window.
 
-## Smallest active brick: GATE-004G
+## Active joint-quotient gate: GATE-004G
 
 ENC-007 supplies two equal-length fourteen-bit restrictions computing SAT
 conditioned on variable identifier 1 being zero or one. Their pointwise OR is
@@ -212,6 +215,20 @@ The active surplus is therefore `d>=t+B n^delta+1`. Equal conditioned
 residuals can never create the negative split term, but raw sensitivity does
 not imply disappearance; `GATE-004G-SENSITIVITY — NO-GO` records that generic
 selector obstruction.
+
+## Smallest active brick: GATE-004H
+
+ENC-008 generalizes conditioning to every identifier. All identifiers with
+binary length `ell` have prefix length `4ell+10`, so choosing
+`ell=Theta(log n)` supplies polynomially many candidate joint quotients with
+only logarithmic length loss. GATE-004H asks for one candidate with
+`B n^delta+1` net loss.
+
+LEMMA-014 proves that the resulting recurrence gives
+`Omega(n^(1+delta)/log n)` size and hence a genuine superlinear unrestricted
+SAT lower bound. Candidate multiplicity alone receives no credit: the next
+audit must build a signed disappeared/split incidence matrix across identifiers
+and prove a positive column surplus.
 
 ## Downstream amplification obligation: GATE-005
 
