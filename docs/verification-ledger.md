@@ -73,6 +73,7 @@ truth. Each row has exactly one label.
 | INFRA-066 | PROVED | Cycle-066 ENC-022 aligned defect and identifier-10/12 repair reproduce from a cold clone | `artifacts/cold-clone-8e599c2.md` | None |
 | INFRA-067 | PROVED | Cycle-067 two-block seven-pattern universality, 78-coordinate hitting set, and GATE-004AC reproduce from a cold clone | `artifacts/cold-clone-5e875ea.md` | None |
 | INFRA-068 | PROVED | Cycle-068 two-block width-four obstruction and GATE-004AD reproduce from a cold clone | `artifacts/cold-clone-c257eef.md` | None |
+| INFRA-069 | PROVED | Cycle-069 identifier-68 quartet obstruction, slow exhaustive verifier, and fast stable-type certificate reproduce from a cold clone | `artifacts/cold-clone-7e515ba.md` | None |
 | T-UNIFORM | EXPLORATORY | Open target: `SAT notin P` | `docs/problem-statement.md` | Not established |
 | EQ-COOK | PROVED | `SAT notin P` is equivalent to `P != NP` under Cook-Levin | Cook problem statement/source note | Defines exact target |
 | T-NONUNIFORM | EXPLORATORY | Open sufficient target: `SAT notin P/poly` | `docs/problem-statement.md` | Not established |
