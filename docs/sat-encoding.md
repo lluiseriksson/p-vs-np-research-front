@@ -894,6 +894,46 @@ case with no variable left free.
 | Asymptotic quantifiers | Every finite condition family for unbounded witness length; every `R=2^(L-2)` and sufficiently large compatible suffix budget for the compact `3^R` diagonal family |
 | Regime | Worst-case exact total-language satisfiability; arbitrary formulas represent sets of witnesses, not a promise distribution |
 
+## ENC-019 — common outer padding creates a fixed raw-coordinate face
+
+**Label: PROVED**
+
+Let `phi` be any formula not using identifier 1, let `m` be a nonnegative
+multiple of four, and choose an inner target length `t>=|phi|+12`. First apply
+ENC-010 inside to obtain a satisfiability-equivalent formula `psi` of length
+`t`. Then define
+
+`Pad_{m,t}(phi)=1^m psi`.
+
+Because token `11` is NOT, `1^m` is a chain of `m/2` NOT gates. Divisibility
+by four makes that number even, so `Pad_{m,t}(phi)` is a valid formula of
+length `m+t` with exactly the same satisfying assignments on the original
+identifiers. Every member of a family padded with the same `(m,t)` lies in the
+raw suffix face
+
+`{1}^m x {0,1}^t`.
+
+This is an exact embedding, but the fixed coordinates are a circuit-method
+hazard: an ambient function constrained only on this witness family may use
+those `m` raw bits as fresh conjunctive inputs away from the face. LEMMA-044
+formalizes that obstruction.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formula syntax, satisfying assignments, and raw Hamming-coordinate faces |
+| Uniform/non-uniform | Uniform padding map for every source formula and common `(m,t)` budget |
+| Circuit size | No lower bound; exact codimension-`m` witness face |
+| Circuit depth | Adds `m/2` unary NOT levels outside the inner ENC-010 padding |
+| Fan-in | Encoded AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every source formula fresh for identifier 1, every `m` divisible by four, and every inner target with at least twelve padding bits |
+| Regime | Worst-case exact total-language encoding; the claim concerns witness locations, not circuit lower bounds |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

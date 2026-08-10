@@ -152,6 +152,7 @@ truth. Each row has exactly one label.
 | ENC-016 | PROVED | The three repeated context blocks vary independently to form a full affine formula cube with two exact closed-form SAT residual conditions | `docs/sat-encoding.md`; reference test | Subsumes every context-coordinate mutation radius |
 | ENC-017 | PROVED | The `2R^3` expanded rows have exactly `(4R^3-7R^2+7R)/2` SAT-residual equality classes with fully classified multiplicities | `docs/sat-encoding.md`; reference test | Exact output-incidence system |
 | ENC-018 | PROVED | SAT residual columns are unions of assignment columns and the diagonal literal pairs realize exactly `3^R` compact nonzero ternary patterns | `docs/sat-encoding.md`; reference test | Adds multi-witness columns beyond complete assignments |
+| ENC-019 | PROVED | Common outer double-NOT padding preserves satisfiability while placing every witness in a codimension-`m` raw suffix face | `docs/sat-encoding.md`; reference test | Exposes a padding-induced fresh-coordinate hazard |
 | LEMMA-033 | PROVED | Complementary output influence over arbitrarily many parallel contexts can be confined to a four-gate common-edge shell | `proofs/LEMMA-033-parallel-edge-direction-shell.md` | Edge direction alone has constant overhead |
 | GATE-004N-DIRECTION-ONLY | NO-GO | Sensitivity along every parallel edge does not force a polynomial edge-dependent region | LEMMA-033; NG-033 | Must eliminate the context-dependent region |
 | LEMMA-034 | PROVED | After fixing one polarity and tracing the affine context cube, at least `2^(L-2)` parent binary gates depend on context | `proofs/LEMMA-034-context-dependent-trace-region.md` | Polynomial region survives edge-shell no-go |
@@ -177,6 +178,8 @@ truth. Each row has exactly one label.
 | GATE-004T | NO-GO | Exact expanded incidence plus all compact `3^R` ternary multi-witness columns still does not force positive diagonal loss | LEMMA-043; NG-041 | Product-domain encoding preserves the fresh-tail obstruction |
 | LEMMA-043 | PROVED | A product-domain function realizes exact expanded incidence and all ternary columns but has exact-minimum fresh-tail loss at most `K_d-m` | `proofs/LEMMA-043-ternary-columns-tail-counterexample.md`; reference test | Falsifies GATE-004T |
 | GATE-004U | EXPLORATORY | Prove polynomial diagonal loss when the multi-witness columns occur at their explicit padded DNF suffix encodings | `proofs/GATE-004U-syntax-linked-dnf-rigidity.md` | Active smallest brick; sufficient for GATE-004Q |
+| LEMMA-044 | PROVED | Any local agreement table confined to `m` fixed-one raw coordinates admits an exact-minimum fresh-conjunction extension with pair loss at most `K-m` | `proofs/LEMMA-044-fixed-witness-face-tail-counterexample.md`; reference test | General fixed-witness-face obstruction |
+| GATE-004U-COMMON-PADDING-ONLY | NO-GO | Actual syntax locations obtained through one growing common outer padding block do not force positive loss | ENC-019; LEMMA-044; NG-042 | GATE-004U must use padding-dense witnesses |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

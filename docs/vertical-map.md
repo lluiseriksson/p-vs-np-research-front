@@ -53,6 +53,7 @@ Adjacent collision-aware active branch:
      + ENC-016 (proved full expanded context formula cube)
      + ENC-017 (proved exact expanded output incidence)
      + ENC-018 (proved multi-witness union columns)
+     + ENC-019 (proved common-padding fixed-face geometry)
      - GATE-004Q-NEUTRAL-HALO-ONLY (no-go by LEMMA-039)
      - GATE-004Q-RADIUS1-SCHEMA (no-go by LEMMA-040)
      - GATE-004Q-CONTEXT-CUBE-SCHEMA (no-go by LEMMA-041)
@@ -62,6 +63,7 @@ Adjacent collision-aware active branch:
   <- GATE-004T (no-go): multi-witness column rigidity
      - LEMMA-043 (product-domain fresh-tail counterexample)
   <- GATE-004U (active smallest brick): syntax-linked DNF witness rigidity
+     - GATE-004U-COMMON-PADDING-ONLY (no-go by LEMMA-044)
 
 Stronger dependent-region branch:
   GATE-004I
@@ -569,6 +571,11 @@ GATE-004U is now the smallest attackable brick. It requires agreement at the
 actual padded DNF suffix encodings and retains their formula-OR composition.
 GATE-004S remains the exact-SAT parent and GATE-004R the non-context
 radius-two alternative. No unrestricted loss bound is presently proved.
+
+ENC-019 and LEMMA-044 show that one common growing outer padding block cannot
+supply that rigidity: its fixed raw coordinates are an exact fresh tail. The
+active audit now requires padding-dense DNF witnesses, including encodings
+with only constant padding overhead and no growing common coordinate face.
 
 ### Smallest active brick: GATE-004U
 

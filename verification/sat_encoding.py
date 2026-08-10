@@ -359,6 +359,26 @@ def satisfiability_padding_wrap(bits: str, extra_length: int) -> str:
     return result
 
 
+def common_outer_double_not_pad(
+    bits: str,
+    total_length: int,
+    reserved_ones: int,
+) -> str:
+    """Pad to ``total_length`` with a shared all-one outer syntax block.
+
+    ``reserved_ones`` must be a multiple of four, so the leading ones encode
+    an even number of NOT tokens and preserve satisfiability.  Remaining
+    length adjustment uses :func:`satisfiability_padding_wrap` inside it.
+    """
+    if reserved_ones < 0 or reserved_ones % 4:
+        raise ValueError("reserved_ones must be a nonnegative multiple of four")
+    inner_extra = total_length - reserved_ones - len(bits)
+    if inner_extra < 12:
+        raise ValueError("inner padding budget must be at least 12")
+    inner = satisfiability_padding_wrap(bits, inner_extra)
+    return double_not_wrap(inner, reserved_ones // 4)
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

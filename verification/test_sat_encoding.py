@@ -8,6 +8,7 @@ from sat_encoding import (
     annihilating_prefix,
     context_wrap,
     conditioned_prefix,
+    common_outer_double_not_pad,
     context_prefix,
     contradiction,
     decode_gamma,
@@ -597,6 +598,32 @@ class FormulaEncodingTests(unittest.TestCase):
                             conditioned_prefix(forced_value, identifier) + padded
                         ),
                         forced_value == assignment[identifier],
+                    )
+
+    def test_common_outer_padding_reserves_raw_one_coordinates(self) -> None:
+        identifiers = (6, 7, 12)
+        formulas = tuple(
+            assignment_conjunction(dict(zip(identifiers, values)))
+            for values in itertools.product((False, True), repeat=len(identifiers))
+        )
+        reserved_ones = 20
+        total_length = max(map(len, formulas)) + reserved_ones + 40
+        for formula in formulas:
+            padded = common_outer_double_not_pad(
+                formula, total_length, reserved_ones
+            )
+            self.assertEqual(len(padded), total_length)
+            self.assertEqual(padded[:reserved_ones], "1" * reserved_ones)
+            self.assertIsNotNone(parse_formula(padded))
+            for identifier in identifiers:
+                for forced_value in (False, True):
+                    self.assertEqual(
+                        self.brute_sat(
+                            conditioned_prefix(forced_value, identifier) + padded
+                        ),
+                        self.brute_sat(
+                            conditioned_prefix(forced_value, identifier) + formula
+                        ),
                     )
 
     def test_satisfiability_padding_rejects_short_increment(self) -> None:

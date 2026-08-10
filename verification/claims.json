@@ -2346,6 +2346,57 @@
       "asymptotic_quantifiers": "Exists fixed sufficiently small c>0 and B,eta>0; every sufficiently large n; every eligible total function; every minimum circuit; all expanded rows and fitting padded DNF witnesses",
       "case_regime": "Worst-case exact agreement on an explicit total-language subset; no promise or distribution in the ambient function",
       "evidence": "proofs/GATE-004U-syntax-linked-dnf-rigidity.md"
+    },
+    {
+      "id": "ENC-019",
+      "label": "PROVED",
+      "statement": "A common outer block of a multiple of four one bits preserves formula satisfiability and places every equally padded witness in a raw fixed-coordinate suffix face.",
+      "computational_model": "Exact SAT-gamma formula syntax, satisfying assignments, and raw Hamming-coordinate faces",
+      "uniformity": "Uniform padding map for every source formula and common outer and inner budgets",
+      "circuit_size": "No lower bound; exact codimension-m witness face",
+      "circuit_depth": "Adds m/2 unary NOT levels outside the inner ENC-010 padding",
+      "fan_in": "Encoded AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every source formula fresh for identifier 1, every m divisible by four, and every inner target with at least twelve padding bits",
+      "case_regime": "Worst-case exact total-language encoding; witness locations rather than a circuit lower bound",
+      "evidence": "docs/sat-encoding.md; verification/sat_encoding.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-044",
+      "label": "PROVED",
+      "statement": "Any nonconstant base extended by m fresh conjunctive inputs agrees exactly with the base on the fixed-one face, has exact size K+m, and retains at least 2m active classes under every pair of distinct nonconstant base rows.",
+      "computational_model": "Globally minimum unrestricted circuits, local agreement on a fixed raw-coordinate face, and exact semantic joint quotients",
+      "uniformity": "Fully non-uniform base; uniform fresh-coordinate extension and explicit common-padding application",
+      "circuit_size": "Exact size K+m; quotient at least 2m; signed loss at most K-m",
+      "circuit_depth": "Base unrestricted; displayed fresh AND tail adds m layers",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; the witness face is a Boolean-coordinate subcube",
+      "asymptotic_quantifiers": "Every finite nonconstant base and m at least one; common-padding application on infinitely many compatible lengths for sufficiently small fixed c>0",
+      "case_regime": "Worst-case exact total-function computation; method obstruction for local witness-face agreement, not SAT-gamma on all suffixes",
+      "evidence": "proofs/LEMMA-044-fixed-witness-face-tail-counterexample.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE-004U-COMMON-PADDING-ONLY",
+      "label": "NO-GO",
+      "statement": "Agreement at actual compact DNF syntax locations obtained through one growing common outer double-NOT padding block does not force positive diagonal quotient loss.",
+      "computational_model": "Globally minimum unrestricted non-uniform Boolean circuits with syntax-linked agreement confined to a fixed raw suffix face",
+      "uniformity": "Explicit common-padding counterexample family with a non-uniform minimum parser base",
+      "circuit_size": "Exact size K+m; quotient at least 2m; signed loss at most K-m and asymptotically negative for sufficiently small fixed c",
+      "circuit_depth": "Unrestricted base and displayed fresh AND tail",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Infinitely many compatible lengths for a sufficiently small fixed c>0 and growing common outer padding block",
+      "case_regime": "Worst-case method-specific obstruction; does not cover padding-dense near-boundary DNF encodings",
+      "evidence": "docs/sat-encoding.md ENC-019; proofs/LEMMA-044-fixed-witness-face-tail-counterexample.md; docs/no-go-ledger.md NG-042"
     }
   ]
 }

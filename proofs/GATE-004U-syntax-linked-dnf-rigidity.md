@@ -15,7 +15,8 @@ follows:
    primary and auxiliary identifiers;
 2. combine any nonempty list of them by the exact binary OR formula token;
 3. require the unpadded formula to fit; and
-4. use ENC-010's identifier-1-fresh padding to reach length exactly `n-p`.
+4. use ENC-010's identifier-1-fresh padding together with any outer
+   double-NOT padding to reach length exactly `n-p`.
 
 Let `G:{0,1}^n->{0,1}` be any total Boolean function satisfying
 
@@ -39,13 +40,16 @@ first superlinear unrestricted SAT circuit lower bound GATE-004.
 ## Attack boundary
 
 LEMMA-043 shows that the abstract output-column set carries no forcing power.
-GATE-004U fixes the actual suffix strings and their OR-formula composition.
-The first audit asks whether the witness set leaves a nonconstant common
-suffix predicate equal to one on every specified encoding. If so, determine
-whether that predicate can be converted into an exact-minimum common-factor
-counterexample; if not, quantify the circuit structure forced by the syntax
-coverage. No conclusion may use the column vectors without their explicit
-input locations.
+ENC-019 and LEMMA-044 close the first syntax-linked attempt as well: witnesses
+sharing a growing common outer padding block lie in a fixed raw-coordinate
+face, and those coordinates become an exact-minimum fresh tail.
+
+Full GATE-004U remains open because `D_{L,n}` also contains DNFs with only
+constant padding overhead. The next audit is padding density: construct and
+verify a witness subfamily that still realizes the required multi-witness
+patterns but is not contained in any growing fixed-coordinate face. Then test
+whether a more general common predicate—not raw coordinates—can retain the
+fresh-tail obstruction. No conclusion may use common-padded witnesses alone.
 
 ## Model card
 
@@ -62,4 +66,3 @@ input locations.
 | Field/algebraic model | Affine prefix geometry over `F_2`; suffix witnesses use exact Boolean formula syntax |
 | Asymptotic quantifiers | Exists fixed sufficiently small `c>0` and `B,eta>0`; every sufficiently large `n`; every eligible total `G`; every minimum circuit; all expanded rows and fitting padded DNF witnesses |
 | Regime | Worst-case exact agreement on an explicit total-language subset; no promise or distribution in the ambient function |
-

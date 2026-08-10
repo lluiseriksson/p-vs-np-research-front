@@ -859,3 +859,26 @@ fresh AND tail; base size `O(R+L)` and unrestricted depth; fan-in-two AND/OR
 and fan-in-one NOT; no randomness, advice, oracle, promise, distribution, or
 algebraic computation. The construction matches the column set but not the
 actual bit-level formula encodings that produce SAT's columns.
+
+## NG-042 — common outer padding preserves syntax-linked forcing
+
+**Label: NO-GO**
+
+Scope: infer positive diagonal quotient loss merely because compact DNF
+witnesses occur at their actual formula encodings after all are placed at one
+length by a common growing outer double-NOT padding block.
+
+Failure: ENC-019 shows that reserving `m` outer padding bits puts every witness
+in the raw face `{1}^m x {0,1}^t`. LEMMA-044 uses those same raw coordinates as
+fresh conjunctive circuit inputs away from the witness face. It preserves the
+entire prescribed table on the face, has exact minimum size `K+m`, retains at
+least `2m` tail classes per diagonal pair, and has loss at most `K-m`.
+Canonical compact DNF evaluation has polynomial base size, so sufficiently
+small fixed `c` permits `m/K -> infinity` at compatible lengths.
+
+Model: exact globally minimum non-uniform AND/OR/NOT circuits; explicit local
+agreement on a codimension-`m` raw suffix face; unrestricted polynomial-size
+DNF parser base and a fresh AND tail; fan-in-two AND/OR and fan-in-one NOT; no
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+The no-go does not cover GATE-004U's dense near-boundary DNF encodings, which
+do not share a growing outer fixed-coordinate block.
