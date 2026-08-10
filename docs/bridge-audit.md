@@ -81,6 +81,12 @@ padding calculation the usable ratio is
 
 where terminalization via GATE-002 would require an unbounded ratio.
 
+The underlying easy-witness Lemma 4.1 already requires the nondeterministic
+time parameter to dominate a triple composition of the assumed circuit-size
+function. For `s(n)=n^k`, this creates an `Omega(k^3)` exponent before the final
+Theorem 1.1 parameter loss. Reindexing cannot change a bounded ratio, and
+polynomial padding divides both exponents by the same factor (LEMMA-001).
+
 ## BR-KL — Karp-Lipton collapse
 
 If `NP subseteq P/poly`, the polynomial hierarchy collapses to its second level.
@@ -104,4 +110,6 @@ The strongest audited transfers reach restricted circuit classes, high uniform
 time classes, or fixed exponent lower bounds in NP. None supplies the
 quantifier-stable, unrestricted, non-uniform lower bound needed for
 `SAT notin P/poly`. GATE-001 records the failed attempt to treat the Williams
-bridge as terminal; GATE-002 isolates the exact exponent-ratio requirement.
+bridge as terminal; GATE-002 isolates the exponent-ratio requirement; GATE-003
+is now rejected because satisfying that requirement is equivalent to the
+terminal-sufficient non-uniform separation rather than a smaller milestone.

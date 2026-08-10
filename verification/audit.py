@@ -52,6 +52,8 @@ MODEL_FIELDS = [
     "case_regime",
 ]
 
+OPEN_TARGET_IDS = {"T-UNIFORM", "T-NONUNIFORM"}
+
 
 def fail(errors: list[str], message: str) -> None:
     errors.append(message)
@@ -77,6 +79,7 @@ def main() -> int:
         claims = []
 
     seen: set[str] = set()
+    claim_labels: dict[str, str] = {}
     for index, claim in enumerate(claims):
         prefix = f"claim[{index}]"
         if not isinstance(claim, dict):
@@ -94,6 +97,10 @@ def main() -> int:
         label = claim.get("label")
         if label not in ALLOWED_LABELS:
             fail(errors, f"{claim_id}: invalid label {label!r}")
+        else:
+            claim_labels[claim_id] = label
+        if claim_id in OPEN_TARGET_IDS and label != "EXPLORATORY":
+            fail(errors, f"{claim_id}: open terminal target must remain EXPLORATORY absent a full-solution audit")
         if not isinstance(claim.get("statement"), str) or not claim["statement"].strip():
             fail(errors, f"{claim_id}: missing statement")
         for field in MODEL_FIELDS:
@@ -150,18 +157,34 @@ def main() -> int:
             fail(errors, f"cannot validate artifact manifest: {exc}")
 
     verification_ledger = (ROOT / "docs/verification-ledger.md").read_text(encoding="utf-8")
+    ledger_labels: dict[str, str] = {}
     for line in verification_ledger.splitlines():
         if not line.startswith("|") or line.startswith("|---"):
             continue
         cells = [cell.strip() for cell in line.strip("|").split("|")]
         if len(cells) >= 2 and cells[0] != "ID" and cells[1] not in ALLOWED_LABELS:
             fail(errors, f"verification ledger row has invalid label: {cells[1]}")
+        elif len(cells) >= 2 and cells[0] != "ID":
+            ledger_labels[cells[0]] = cells[1]
+
+    for claim_id, ledger_label in ledger_labels.items():
+        claim_label = claim_labels.get(claim_id)
+        if claim_label is not None and claim_label != ledger_label:
+            fail(errors, f"label mismatch for {claim_id}: claims={claim_label}, ledger={ledger_label}")
 
     no_go_ledger = (ROOT / "docs/no-go-ledger.md").read_text(encoding="utf-8")
     explicit_labels = re.findall(r"\*\*Label:\s*([A-Z-]+)\*\*", no_go_ledger)
     for label in explicit_labels:
         if label not in ALLOWED_LABELS:
             fail(errors, f"no-go ledger contains invalid label: {label}")
+
+    for proof in (ROOT / "proofs").glob("*.md"):
+        proof_text = proof.read_text(encoding="utf-8")
+        match = re.search(r"\*\*Label:\s*([A-Z-]+)", proof_text)
+        if match is None:
+            fail(errors, f"proof record missing explicit label: {proof.relative_to(ROOT)}")
+        elif match.group(1) not in ALLOWED_LABELS:
+            fail(errors, f"proof record has invalid label: {proof.relative_to(ROOT)}: {match.group(1)}")
 
     if errors:
         print("AUDIT FAILED")

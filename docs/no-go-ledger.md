@@ -62,3 +62,54 @@ language can also depend on the exponent.
 Model: uniform language, generator-restricted circuit families, fixed
 polynomial size, unrestricted depth unless the cited theorem says otherwise,
 no randomness/oracle/field, worst-case exact decision.
+
+## NG-005 — GATE-003 presented as a smaller brick
+
+**Label: NO-GO**
+
+Scope: use the unbounded exponent-ratio family of GATE-003 as an intermediate
+milestone below `NP notsubseteq P/poly`.
+
+Failure: GATE-002 proves the family implies `NP notsubseteq P/poly`. Conversely,
+if one `L in NP` is outside `P/poly`, take `L_j=L`, a constant verifier exponent,
+and lower-bound exponent `b(j)=j`. Thus the statements are equivalent. The gate
+repackages the desired non-uniform separation and is not a decomposition.
+
+Model: one uniform NP verifier family versus unrestricted non-uniform,
+unbounded-depth, fan-in-two Boolean circuits; no randomness, advice on the
+verifier side, oracle, field, promise, or distribution.
+
+## NG-006 — reindex or pad the Murray-Williams family
+
+**Label: NO-GO**
+
+Scope: obtain the unbounded GATE-002 exponent ratio by computable reindexing or
+standard polynomial padding of the BR-MW18 fixed-exponent family.
+
+Failure: reindexing only selects existing ratios. Padding `N=n^q` divides both
+the verifier-time exponent and transferable circuit exponent by `q`; their
+ratio is preserved or reduced by the linear-time floor. The original ratio is
+`epsilon/(c k^3)`, hence remains bounded and tends to zero along unbounded `k`.
+
+Model: BR-MW18's uniform nondeterministic gap algorithm and time classes versus
+general non-uniform circuits when instantiated to that class; unbounded depth,
+fan-in two, no oracle or algebraic field, and the explicit gap promise.
+
+## NG-007 — generic constant-substitution gate elimination for GATE-004
+
+**Label: NO-GO**
+
+Scope: prove the superlinear SAT lower bound in GATE-004 by the generic
+gate-elimination framework whose induction step is established for all
+functions/circuits using only a constant number of substitutions and constant
+certified gate removal per step.
+
+Failure: the GHKK16 limitation bounds such schemes by `c n` for a constant
+depending on the local substitution budget. Summing constant certified progress
+over at most `n` variable eliminations cannot yield `n^{1+delta}`. The theorem
+does not exclude a SAT-specific induction step valid only for SAT and the
+functions reached from SAT by the chosen substitutions.
+
+Model: unrestricted acyclic Boolean circuits, non-uniform, unbounded depth,
+bounded fan-in gate basis as instantiated, no randomness/advice/oracle/field,
+worst-case exact Boolean function computation. The no-go is method-specific.

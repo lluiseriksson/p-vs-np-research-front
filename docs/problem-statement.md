@@ -24,7 +24,7 @@ and `V` halts within `(|x|+|y|)^c + c` steps on every pair.
 `SAT` uses a fixed, polynomial-time parsable binary encoding of propositional
 formulas over `AND`, `OR`, and `NOT`. Malformed encodings are rejected.
 
-## Terminal statement T-UNIFORM
+## Terminal statement T-UNIFORM — EXPLORATORY
 
 There is no pair `(M,c)` consisting of a deterministic multitape Turing machine
 and a constant `c >= 1` such that, for every binary string `x` of length `n`,
@@ -47,12 +47,12 @@ satisfiable formula.
 | Asymptotic quantifiers | For every machine `M` and constant `c`, there exists an input `x` on which correctness or the `|x|^c+c` bound fails |
 | Regime | Worst-case decision, total language, no promise |
 
-Cook-Levin gives that `SAT` is NP-complete under uniform deterministic
+Cook-Levin gives the following **PROVED** equivalence (EQ-COOK): `SAT` is NP-complete under uniform deterministic
 polynomial-time many-one reductions. Consequently:
 
 `T-UNIFORM` iff `SAT notin P` iff `P != NP`.
 
-## Terminal-sufficient statement T-NONUNIFORM
+## Terminal-sufficient statement T-NONUNIFORM — EXPLORATORY
 
 For every constant `k >= 1` and every family `(C_n)` of Boolean circuits over
 fan-in-two `AND/OR` and fan-in-one `NOT` with at most `n^k+k` gates, there are
@@ -75,9 +75,10 @@ all `n`-bit strings.
 | Asymptotic quantifiers | For every fixed `k` and family, infinitely many failure lengths; equivalently no family has polynomial size for all lengths |
 | Regime | Worst-case exact decision, total language, no promise |
 
-`T-NONUNIFORM` is `SAT notin P/poly`. Since every uniform polynomial-time
-machine has polynomial-size circuits, `T-NONUNIFORM` implies `T-UNIFORM`, and
-therefore implies `P != NP`. The converse is not known and must never be assumed.
+`T-NONUNIFORM` is `SAT notin P/poly`; it is open. The **PROVED** bridge
+BR-NONUNIFORM says that every uniform polynomial-time machine has
+polynomial-size circuits, so `T-NONUNIFORM` implies `T-UNIFORM`, and therefore
+implies `P != NP`. The converse is not known and must never be assumed.
 
 ## Alternative success branch
 

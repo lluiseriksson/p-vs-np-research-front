@@ -58,9 +58,13 @@ language remains in the promised class under one fixed verifier exponent.
 Counting proves that almost all Boolean functions need large circuits, but it
 does not make an NP function explicit. Restricted lower bounds for `AC0`,
 `ACC0`, formulas, monotone circuits, or threshold subclasses do not transfer to
-unrestricted fan-in-two, unbounded-depth Boolean circuits. As of this audit,
-even a superpolynomial lower bound for an explicit NEXP function against general
-circuits remains open; a fortiori no such SAT lower bound is known.
+unrestricted fan-in-two, unbounded-depth Boolean circuits. The current explicit
+unrestricted-circuit record remains linear (`3.1n-o(n)` for affine dispersers),
+and the generic constant-substitution gate-elimination framework has a proved
+linear ceiling. As of
+this audit, even a superlinear lower bound for an explicit Boolean function and
+a superpolynomial lower bound for an explicit NEXP function against general
+circuits remain open; a fortiori no superlinear SAT lower bound is known.
 
 Design constraint: every restriction on gates, depth, size, uniformity, or input
 distribution is part of the theorem name and model card. Dropping it requires a

@@ -49,11 +49,15 @@ randomness, advice, oracle access, algebraic model, quantifiers, or case regime.
 
 ## Current vertical route
 
-`P != NP <- SAT notin P <- SAT notin P/poly <- a single NP language outside P/poly <- quantifier-stable lower-bound gate`
+`P != NP <- SAT notin P <- SAT notin P/poly <- all same-language SAT circuit-exponent rungs`
 
-The first audit found that current SAT-algorithm transfers do not close the last
-arrow. In particular, fixed-exponent NP circuit lower bounds cannot be silently
-uniformized into `NP notsubseteq P/poly`. See
+The second audit proved that the proposed unbounded-ratio family GATE-003 is
+equivalent to `NP notsubseteq P/poly`, so it is rejected as a circular
+decomposition. Current SAT-algorithm transfers still do not close the terminal
+arrow, and reindexing or padding their fixed-exponent NP lower bounds cannot
+repair the exponent ratio. The active GATE-004 asks for a first same-language
+superlinear unrestricted circuit lower bound for SAT; it is explicitly
+non-terminal. See
 [`docs/vertical-map.md`](docs/vertical-map.md) and
 [`docs/no-go-ledger.md`](docs/no-go-ledger.md).
 
@@ -61,7 +65,7 @@ uniformized into `NP notsubseteq P/poly`. See
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 28% | Repository, ledgers, source audit, model-card checker, and first gate cycle exist; formal library and cold-clone CI remain immature. |
+| Infrastructure maturity | 32% | Repository, corrected target/bridge labels, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and hosted CI evidence remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | A known quantifier/padding failure has been made explicit; no new terminal lower bound or algorithm exists. |
 

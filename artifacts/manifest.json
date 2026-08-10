@@ -32,23 +32,23 @@
     },
     {
       "path": "docs/barrier-audit.md",
-      "sha256": "585e3d1050af00a72420acc4780e36e22a6c4f531552bb95c1798d800445e9f1"
+      "sha256": "d32549633e50be734195cb976f06e620799cfc67ca9c29ac5d1fe91b0c3a51aa"
     },
     {
       "path": "docs/bridge-audit.md",
-      "sha256": "321735135f255693739e55117cec52d8e06f7c15d382e5621b5dc96d615615e5"
+      "sha256": "6d0518c9d799623c1329c95cc07d9533d7b3646e8db0633fd34956c2839a7eed"
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "f6e648f4bc10b24424545b4a09b64b44a85d28df2bba371db18c3e9a37c4a5db"
+      "sha256": "73bf4349d351db078885f90eb642eca73e546c93c476b7ea18630c8c38a2885b"
     },
     {
       "path": "docs/problem-statement.md",
-      "sha256": "bc0512aa12787b484aee9fb49c257387ebd2aeb81bd3ef79f839e7ce8634f158"
+      "sha256": "4109c9aaa58a107d5202eb3e4e7ca3edd03ca2e7a993dd37439306e1cdf6d5c3"
     },
     {
       "path": "docs/progress.md",
-      "sha256": "09acfe7f27376099ffce22312f7efa63e50d415caaca1bdc8974c06344895ee4"
+      "sha256": "b2aba162475725ffb4405857e7e6fe5641115330249a8a70e530f8a2f8e8ebc2"
     },
     {
       "path": "docs/result-labels.md",
@@ -63,6 +63,10 @@
       "sha256": "e463eb6a3c0095aff71bd5771fca12953c5ca074fa65cb6c685a4623d437337a"
     },
     {
+      "path": "docs/source-citations/carmosino-dang-jackman-2026.md",
+      "sha256": "0d1cffa2ead3078a1e80edf25a3685f088200ce67fc71bbbbd87ad8304a8cbb3"
+    },
+    {
       "path": "docs/source-citations/chen-hu-ren-2026.md",
       "sha256": "49efce740b2cc3fb7fe2f0a9fefee9aa95a812db84de6ad260e03981037063f8"
     },
@@ -71,8 +75,16 @@
       "sha256": "2f1d71148d3a23b8f1d118a8410beaeb0def937303d4781a16ceea2962f17a65"
     },
     {
+      "path": "docs/source-citations/golovnev-et-al-gate-elimination.md",
+      "sha256": "a1a56931866bff2ea3e3531e06eafbf2e43badbd27d8d9ae5d002a36ba4f5d0d"
+    },
+    {
       "path": "docs/source-citations/karp-lipton.md",
       "sha256": "c0951947c984eb2479d77215ffb6c2103f43753d24952bc9a747bf391e5d81ba"
+    },
+    {
+      "path": "docs/source-citations/li-yang-2022.md",
+      "sha256": "c3a1b600eaabd085fec9a887495b8a450766e00fe7e0858336e0805251f1200c"
     },
     {
       "path": "docs/source-citations/murray-williams-2018.md",
@@ -84,11 +96,15 @@
     },
     {
       "path": "docs/source-citations/README.md",
-      "sha256": "55c0e2ab63789ec6b8e3378ea52a46504878f1a82bcc42cb600afd5e95d43b0f"
+      "sha256": "1c5b07a2b9cc340c345f5d86519320978db56badd52192cd890d5c2760d860a0"
     },
     {
       "path": "docs/source-citations/santhanam-williams-2013.md",
       "sha256": "6d280dc22893dc8852f182f8bba1c273bf046d142e9c2e97f645e019be417fc4"
+    },
+    {
+      "path": "docs/source-citations/santhanam-williams-fixed-polynomial.md",
+      "sha256": "376e2578dd4d2cb147ef07d45f4d0b8a2e28dd04c2347bd28cca89398805afff"
     },
     {
       "path": "docs/source-citations/williams-2010.md",
@@ -100,11 +116,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "5263e4f6628341d1d8a8b94cde43146112ee50529300163bf04f72639628360f"
+      "sha256": "1badbacdbeb7798db628ca1f000f36dde27d25b8d1dda108d3b5d183ea115827"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "09fde6013be2153003b8a5581173189b5e871de4d62b5470ff3c7ac57b2b5946"
+      "sha256": "eaef3d4d5ebb20278bcca5c23e81fd5106275a503def993c77dd0060db48e62c"
     },
     {
       "path": "experiments/README.md",
@@ -124,19 +140,31 @@
     },
     {
       "path": "proofs/GATE-003-quantifier-stable-family.md",
-      "sha256": "ab833fe397a06fecf73451596113968418e6f3ae4975f2720b3a23217ada8602"
+      "sha256": "4002e30550936a75b96a431ff9f3684506b67c32707df0f345375267951b55b0"
+    },
+    {
+      "path": "proofs/GATE-004-sat-superlinear.md",
+      "sha256": "5020e5f122fbaa90b2ef2ca54968e6f104e7854af99a050387a50d468bc403ba"
+    },
+    {
+      "path": "proofs/GATE-005-same-language-amplification.md",
+      "sha256": "9065545f1ac003c43f2b77489b55e8b52114e435e6687111f0089189dee49698"
+    },
+    {
+      "path": "proofs/LEMMA-001-ratio-invariance.md",
+      "sha256": "1ab7a1c3eb122aaa733a1fe0ef15db2bf797880e28b5d935508225d35742f4fb"
     },
     {
       "path": "README.md",
-      "sha256": "06629e38ef34d39ffa9f4c1e9862c56a219f1316811ac212be1a41cea658b63e"
+      "sha256": "f9c0394713e7d4b7adfa25a2864b15f56116a4522cbddea7d5f8725d0ee6dee1"
     },
     {
       "path": "verification/audit.py",
-      "sha256": "ff764941e7e32fbe54f3676f9e279b4f33285a9bc9623dfe848a3257d51fbb36"
+      "sha256": "f91db5433ee3a83d8002c3ed132a2642e2949392f8a743b6098ff028d3b26392"
     },
     {
       "path": "verification/claims.json",
-      "sha256": "5c8383dcb2c5c95ce01cc545b8e7ceb80c60e79e6c76a3195ecb7bb8bce24f55"
+      "sha256": "49b434add54d9c8922196af700614e3a1885fbfef8ab22908e5fb0e0905132f0"
     },
     {
       "path": "verification/generate_manifest.py",
