@@ -1347,3 +1347,19 @@ unrestricted; no randomness, advice, oracle, promise, distribution, or
 algebraic computation. This rejects only extrapolation from the LEMMA-075
 width-four hitting set. Tail cost and quotient survival, GATE-004AE, and P
 versus NP remain open.
+
+## NG-066 — the width-four alphabet lifts unchanged to width five
+
+**Label: NO-GO**
+
+LEMMA-077 certifies with two exact interval-DP implementations that four
+nonoverlapping blocks from the 92-identifier LEMMA-075 alphabet cannot realize
+`11110` on offsets `{0,4,7,9,10}`. Twelve-spaced translations are disjoint,
+and the six-one long option can repair at most one because each occurrence
+uses four one positions. A linear common signed width-five packing survives.
+
+Model: exact four-block SAT-gamma neutral contexts; fixed 92-identifier
+alphabet; one six-one long option; signed width-five matching; unrestricted
+later non-uniform circuits; no randomness, advice, oracle, promise,
+distribution, or algebraic computation. This closes only alphabet reuse;
+richer GATE-004AF constructions and P versus NP remain open.

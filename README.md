@@ -615,6 +615,14 @@ the exception repairs at most one. GATE-004AE-WIDTH4-ONLY is `NO-GO`.
 GATE-004AE itself remains open because tail cost and quotient survival are not
 proved. GATE-004AF opens the four-block width-five construction audit.
 
+The seventy-third cycle tests the width-four alphabet at that new threshold.
+Two independent exact interval DPs agree that four blocks omit `11110` on
+offsets `{0,4,7,9,10}`. Twelve-spaced translations are disjoint, and `A_rho`
+repairs at most one because the pattern consumes four of its six one bits.
+LEMMA-077 gives an `N/12-O(1)` common signed width-five packing, and the
+LEMMA-075-alphabet specialization is `NO-GO`. GATE-004AF remains open for a
+richer fixed alphabet; no circuit or terminal result is inferred.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

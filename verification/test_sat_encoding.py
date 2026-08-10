@@ -4,7 +4,11 @@ import itertools
 import unittest
 
 import sat_encoding
-from quartet_type_audit import reached_masks, reached_masks_direct
+from quartet_type_audit import (
+    reached_masks,
+    reached_masks_direct,
+    reached_masks_direct_positions,
+)
 from quartet_type_audit import (
     LENGTH68_REPAIR_IDENTIFIERS,
     LENGTH68_REPRESENTATIVE_LENGTH,
@@ -863,6 +867,18 @@ class FormulaEncodingTests(unittest.TestCase):
                 reached_masks_direct(quartet, tuple(range(1, 69)), 164)
                 & 0x7FFE,
             )
+
+    def test_length_68_four_block_quintet_obstruction(self) -> None:
+        positions = (68, 72, 75, 77, 78)
+        auditor = QuartetAuditor(LENGTH68_REPAIR_IDENTIFIERS, 432)
+        fast = auditor.reached_masks_positions(positions, 4)
+        direct = reached_masks_direct_positions(
+            positions, 4, LENGTH68_REPAIR_IDENTIFIERS, 432
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(fast & relevant, direct & relevant)
+        self.assertFalse((fast >> 12) & 1)
+        self.assertFalse((fast >> 16) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28

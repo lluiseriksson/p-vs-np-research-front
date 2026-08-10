@@ -123,6 +123,7 @@ Adjacent collision-aware active branch:
   <- GATE-004AE (active smallest positive brick): width-four-sparse rigidity
      - GATE-004AE-WIDTH4-ONLY (no-go by LEMMA-076)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
+     - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
 
 Stronger dependent-region branch:
   GATE-004I

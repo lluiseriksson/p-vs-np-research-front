@@ -15,6 +15,11 @@ interval-DP falsifier. A translation-stable missing pattern gives a linear
 packing and rejects the chosen alphabet; complete universality proves only
 the witness theorem and opens a new rigidity gate.
 
+LEMMA-077 carries out the baseline audit and finds a stable mask-16 failure on
+offsets `{0,4,7,9,10}`. Thus the LEMMA-075 alphabet is `NO-GO` for this gate.
+The next attack must enrich the fixed alphabet and preserve the resulting
+larger block-length bound in the five-coordinate reduction.
+
 ## Model card
 
 | Field | Value |

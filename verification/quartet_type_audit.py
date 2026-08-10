@@ -117,6 +117,26 @@ def reached_masks_direct(
     representative_length: int,
 ) -> int:
     """Audit one quartet without materializing every global placement."""
+    return reached_masks_direct_positions(
+        quartet, 3, identifiers, representative_length
+    )
+
+
+def reached_masks_direct_positions(
+    positions: tuple[int, ...],
+    max_blocks: int,
+    identifiers: tuple[int, ...],
+    representative_length: int,
+) -> int:
+    """Audit one coordinate tuple by the original explicit interval DP."""
+    if (
+        not positions
+        or max_blocks < 1
+        or positions != tuple(sorted(set(positions)))
+        or positions[0] < 0
+        or positions[-1] >= representative_length
+    ):
+        raise ValueError("positions must be strictly increasing and interior")
     candidates = set()
     for identifier in identifiers:
         for block in (
@@ -126,7 +146,7 @@ def reached_masks_direct(
             for start in range(0, representative_length - len(block) + 1, 4):
                 mask = sum(
                     1 << bit
-                    for bit, position in enumerate(quartet)
+                    for bit, position in enumerate(positions)
                     if start <= position < start + len(block)
                     and block[position - start] == "0"
                 )
@@ -135,16 +155,19 @@ def reached_masks_direct(
     ordered = sorted(candidates)
     ends = [candidate[0] for candidate in ordered]
     count = len(ordered)
-    dynamic = [[0] * (count + 1) for _ in range(4)]
+    dynamic = [[0] * (count + 1) for _ in range(max_blocks + 1)]
     dynamic[0] = [1] * (count + 1)
     for position, (_, start, mask) in enumerate(ordered, 1):
         previous = bisect_right(ends, start, 0, position - 1)
-        for block_count in range(1, 4):
+        for block_count in range(1, max_blocks + 1):
             dynamic[block_count][position] = (
                 dynamic[block_count][position - 1]
                 | _extend(dynamic[block_count - 1][previous], mask)
             )
-    return dynamic[1][count] | dynamic[2][count] | dynamic[3][count]
+    reached = 0
+    for block_count in range(1, max_blocks + 1):
+        reached |= dynamic[block_count][count]
+    return reached
 
 
 def audit_residue(

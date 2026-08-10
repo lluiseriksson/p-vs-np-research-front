@@ -285,6 +285,8 @@ truth. Each row has exactly one label.
 | LEMMA-076 | PROVED | Three bounded zero intervals plus one exception retain `floor(N/5)` disjoint common signed width-five clauses | `proofs/LEMMA-076-three-block-one-exception-retains-width-five.md` | Exposes next-width tail; no circuit conclusion |
 | GATE-004AE-WIDTH4-ONLY | NO-GO | Width-four sparsity does not control all disjoint tails because a linear width-five packing survives | `proofs/GATE-004AE-width-four-only.md`; LEMMA-076; NG-065 | GATE-004AE remains open |
 | GATE-004AF | EXPLORATORY | Use up to four translated neutral blocks to bound disjoint common signed clauses through width five | `proofs/GATE-004AF-four-block-width-five-sparsity.md`; LEMMA-076 | New constructive audit |
+| LEMMA-077 | PROVED | The LEMMA-075 alphabet omits `11110` on a translation-stable quintuple under four-block unions, leaving `N/12-O(1)` common clauses | `proofs/LEMMA-077-length68-four-block-quintet-obstruction.md`; two DP implementations; regression test | Refutes alphabet reuse only |
+| GATE-004AF-LEMMA075-ALPHABET-ONLY | NO-GO | The 92-identifier width-four alphabet retains a linear signed width-five packing | `proofs/GATE-004AF-lemma075-alphabet-only.md`; LEMMA-077; NG-066 | Richer fixed alphabet required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 
