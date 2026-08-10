@@ -361,6 +361,52 @@ literal `x_j=b`, so consistency and hence satisfiability hold exactly when
 | Asymptotic quantifiers | Every `ell>=1`, every nonempty finite identifier subset of that bit length, every assignment vector, and every integer padding count `d>=0` |
 | Regime | Worst-case exact total-language decision on valid witness formulas |
 
+## ENC-010 — all-sufficiently-large-length witness padding
+
+**Label: PROVED**
+
+Let `F` be a valid formula that does not contain identifier 1, and suppose any
+separately forced variable also has identifier different from 1. For every
+integer `d>=12`, there is a valid formula `Pad_d(F)` of length `|F|+d` such
+that `Pad_d(F)` is satisfiable under the forced condition exactly when `F` is.
+
+Write `b=d mod 4`, with `0<=b<=3`, and
+
+`a=(d-5b)/4`.
+
+For `d>=12`, `a` is a nonnegative integer. Apply `a` double-negation wrappers,
+each adding four bits, then apply `b` wrappers of the form
+
+`AND(V_1, hole)`,
+
+each adding `2+|V_1|=5` bits. The total increase is `4a+5b=d`. Double
+negation preserves the formula, and the new positive variable can always be
+set true independently, so satisfiability under every condition on identifiers
+other than 1 is unchanged. QED.
+
+For every fixed `0<c<1`, choose
+`ell=floor(c log_2 n)`, the full bit-length-`ell` block `J`, and
+`R=|J|`. ENC-009's base witness length is `R(4ell+10)-2=O(n^c log n)`.
+Consequently, for every sufficiently large `n`, ENC-010 pads every witness to
+the exact suffix length `n-(4ell+10)`. Thus the complementary matrix exists at
+every sufficiently large parent length, not only on a congruence subsequence.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma formulas, double-negation padding, and conjunction with one fresh positive variable |
+| Uniform/non-uniform | Uniform explicit padding construction |
+| Circuit size | No circuit lower bound; exact length increase by every integer `d>=12` |
+| Circuit depth | Unrestricted in later applications |
+| Fan-in | Encoded AND two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every valid source avoiding identifier 1, every forced identifier other than 1, and every integer increase `d>=12`; every sufficiently large `n` in the `0<c<1` corollary |
+| Regime | Worst-case exact satisfiability preservation; total-language parser remains exact |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

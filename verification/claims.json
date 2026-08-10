@@ -1326,6 +1326,57 @@
       "asymptotic_quantifiers": "Arbitrarily many restriction pairs around every nonconstant shared core",
       "case_regime": "Worst-case method-specific obstruction; not a SAT-gamma lower bound",
       "evidence": "proofs/LEMMA-020-global-versus-pairwise-quotients.md; docs/no-go-ledger.md NG-024"
+    },
+    {
+      "id": "ENC-010",
+      "label": "PROVED",
+      "statement": "Every integer length increase at least 12 is realizable by 4-bit double-negation and 5-bit fresh-positive-variable wrappers while preserving conditioned satisfiability.",
+      "computational_model": "Exact SAT-gamma formulas with double-negation and fresh-variable conjunction padding",
+      "uniformity": "Uniform explicit padding construction",
+      "circuit_size": "No lower bound; exact length increase by every d at least 12",
+      "circuit_depth": "Unrestricted in later applications",
+      "fan_in": "Encoded AND two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Every valid source avoiding identifier 1, every forced identifier other than 1, and every increase d at least 12; all sufficiently large n for each fixed 0<c<1",
+      "case_regime": "Worst-case exact satisfiability preservation under the total parser",
+      "evidence": "docs/sat-encoding.md; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "LEMMA-021",
+      "label": "PROVED",
+      "statement": "If 2^R suffix columns give distinct output vectors across prefix rows and two row residuals differ, every circuit has at least R suffix-boundary nodes and R binary gates in its prefix-dependent top region.",
+      "computational_model": "Total Boolean functions with prefix/suffix partition and semantic dependence classification inside unrestricted acyclic circuits",
+      "uniformity": "Every individual non-uniform circuit satisfying the matrix hypothesis",
+      "circuit_size": "At least R suffix-boundary nodes and R prefix-dependent binary gates",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None; finite column counting and graph connectivity",
+      "asymptotic_quantifiers": "Every finite circuit and row/column family satisfying the hypotheses; every fixed 0<c<1 and all sufficiently large lengths in the SAT corollary",
+      "case_regime": "Worst-case exact total-function computation; internal structural count only",
+      "evidence": "proofs/LEMMA-021-prefix-dependent-top-region.md"
+    },
+    {
+      "id": "GATE-004J",
+      "label": "EXPLORATORY",
+      "statement": "Across the identifier block, average pairwise quotient loss is at least a positive power of the forced prefix-dependent top region plus the final OR gate.",
+      "computational_model": "Minimum unrestricted SAT-gamma circuits, semantic prefix-dependent top region, and exact joint quotients for all equal-bit-length conditioned pairs",
+      "uniformity": "Fully non-uniform circuit adversary; average over the full identifier block",
+      "circuit_size": "Aggregate loss at least |J|(B|D|^eta+1)",
+      "circuit_depth": "Unrestricted",
+      "fan_in": "AND/OR two; NOT one",
+      "randomness": "None",
+      "advice": "None",
+      "oracle_access": "None",
+      "field_or_algebraic_model": "None",
+      "asymptotic_quantifiers": "Exists fixed 0<c<1 and B,eta>0; every sufficiently large n; every minimum circuit; all identifiers in the selected block",
+      "case_regime": "Worst-case exact total-language computation; malformed suffixes reject",
+      "evidence": "proofs/GATE-004J-dependent-region-loss.md"
     }
   ]
 }

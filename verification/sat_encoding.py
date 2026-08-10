@@ -229,6 +229,26 @@ def assignment_conjunction(assignment: Mapping[int, bool]) -> str:
     return result
 
 
+def satisfiability_padding_wrap(bits: str, extra_length: int) -> str:
+    """Add exactly ``extra_length`` bits while preserving satisfiability.
+
+    This uses double negations (+4) and conjunctions with positive variable 1
+    (+5).  Semantic preservation requires identifier 1 to be fresh in the
+    source and in any separately forced condition.
+    """
+    if extra_length < 12:
+        raise ValueError("extra_length must be at least 12")
+    five_count = extra_length % 4
+    remainder = extra_length - 5 * five_count
+    if remainder < 0 or remainder % 4:
+        raise ValueError("extra_length is not representable by 4 and 5")
+    result = double_not_wrap(bits, remainder // 4)
+    fresh_variable = encode_variable(1)
+    for _ in range(five_count):
+        result = encode_and(fresh_variable, result)
+    return result
+
+
 def neutral_prefix_family(k: int) -> tuple[str, ...]:
     """The k+1 exact neutral prefixes of common length 12*k.
 

@@ -19,6 +19,7 @@ from sat_encoding import (
     encode_variable,
     evaluate,
     parse_formula,
+    satisfiability_padding_wrap,
     neutral_prefix_family,
     neutral_prefix_index,
     operator_square_prefix,
@@ -271,6 +272,27 @@ class FormulaEncodingTests(unittest.TestCase):
     def test_assignment_conjunction_rejects_empty_map(self) -> None:
         with self.assertRaises(ValueError):
             assignment_conjunction({})
+
+    def test_assignment_witnesses_pad_to_every_larger_length(self) -> None:
+        identifiers = (4, 5, 6)
+        assignment = {4: False, 5: True, 6: False}
+        formula = assignment_conjunction(assignment)
+        for extra_length in range(12, 40):
+            padded = satisfiability_padding_wrap(formula, extra_length)
+            self.assertEqual(len(padded), len(formula) + extra_length)
+            self.assertIsNotNone(parse_formula(padded))
+            for identifier in identifiers:
+                for forced_value in (False, True):
+                    self.assertEqual(
+                        self.brute_sat(
+                            conditioned_prefix(forced_value, identifier) + padded
+                        ),
+                        forced_value == assignment[identifier],
+                    )
+
+    def test_satisfiability_padding_rejects_short_increment(self) -> None:
+        with self.assertRaises(ValueError):
+            satisfiability_padding_wrap(self.x, 11)
 
 
 if __name__ == "__main__":

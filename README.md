@@ -180,13 +180,22 @@ global quotient look dramatically compressed while every identifier pair has
 zero improvement. Global pooling is therefore `NO-GO`; GATE-004I still
 requires a direct bound on the actual pairwise sum.
 
+The twenty-first cycle finally locates polynomial structure inside the parent
+circuit rather than only at its output. ENC-010 pads the witness family to
+every sufficiently large length. LEMMA-021 proves that ENC-009's
+complementary columns force at least `R` binary gates in the prefix-dependent
+top region after every suffix-only subcomputation is collapsed to a boundary
+signal. GATE-004J is the new smallest brick: prove that conditioning removes or
+merges a positive power of this forced region on average, including the split-
+class charge.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 59% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning and complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent and cross-identifier incidence accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 60% | Repository, corrected target/bridge labels, exact bit-level SAT language, arbitrary-identifier conditioning, all-large-length complementary-shattering tests, exact pairwise/global quotient and overlap accounting, per-parent, cross-identifier, and prefix-dependent-region accounting, support/selector/depth-reduction stress tests, logarithmic recurrence bridge, expanded primary-source audit, ledgers, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Global pooling is separated from the required pairwise loss, but no SAT-specific aggregate quotient bound, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain exists. |
+| Real progress toward P vs NP | 0.00% | A polynomially large prefix-dependent region is located, but no loss from that region, superlinear SAT lower bound, polynomial SAT algorithm, or terminal chain is proved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

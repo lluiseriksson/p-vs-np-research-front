@@ -29,9 +29,13 @@ Alternative active route:
   <- GATE-004H (active parent): choose among many identifiers
      + ENC-008 (proved equal-length pair supply)
      + LEMMA-014 (proved logarithmic-step recurrence)
-  <- GATE-004I (active smallest brick): aggregate signed identifier surplus
+  <- GATE-004I (active parent): aggregate signed identifier surplus
      + LEMMA-015 (proved incidence averaging)
      - GATE-004H-CANDIDATE-COUNT (no-go)
+  <- GATE-004J (active smallest brick): loss from forced dependent region
+     + ENC-009 (proved complementary columns)
+     + ENC-010 (proved all-large-length padding)
+     + LEMMA-021 (proved dependent-region size)
 ```
 
 `T-UNIFORM <- T-NONUNIFORM` is valid because every uniform polynomial-time
@@ -233,7 +237,7 @@ SAT lower bound. Candidate multiplicity alone receives no credit: the next
 audit must build a signed disappeared/split incidence matrix across identifiers
 and prove a positive column surplus.
 
-## Smallest active brick: GATE-004I
+## Active parent: GATE-004I
 
 LEMMA-015 supplies the exact incidence matrix. Its column sum is the parent
 size minus that identifier's joint quotient size, and its total sum is the sum
@@ -281,6 +285,21 @@ tiny relative to duplicated copies but makes `X` cancel the entire apparent
 saving. `GATE-004I-GLOBAL-POOLING — NO-GO` therefore requires any successful
 trace argument to bound the actual sum of pairwise quotients, not a globally
 shared multi-output circuit.
+
+## Smallest active brick: GATE-004J
+
+ENC-010 first ensures that ENC-009's witness matrix fits every sufficiently
+large parent length for any fixed `0<c<1`, rather than only one length
+congruence. LEMMA-021 then moves the shattering inside the circuit. After every
+prefix-independent subcomputation is collapsed to a suffix-boundary signal,
+the remaining top region still contains at least `|J|` prefix-dependent binary
+gates. For `ell=Theta(log n)` this is polynomially large.
+
+Abundance is not loss. GATE-004J asks whether conditioning across the full
+identifier block removes or merges a positive power of that forced region on
+average, after all split classes are charged. Its proof would imply GATE-004I;
+its failure must identify a circuit architecture in which the entire large
+dependent region survives or splits under essentially every pair.
 
 ## Downstream amplification obligation: GATE-005
 
