@@ -44,6 +44,12 @@ away from the formula boundary or establish quotient survival directly for a
 minimum circuit over the canonical base. Clause-local syntax cannot be
 assumed additive inside an unrestricted DAG.
 
+LEMMA-110 resolves the first DAG stratum: with one extra binary gate, the
+output graph is unicyclic and formula unfolding forces at least `ceil(m/2)`
+NOT gates. The factor-two loss remains linear and does not close the gate.
+The active structural question is now the general cycle-rank tradeoff between
+extra binary gates, unfolding multiplicity, and required negations.
+
 ## Model card
 
 | Field | Value |

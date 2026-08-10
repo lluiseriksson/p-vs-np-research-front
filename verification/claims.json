@@ -4059,6 +4059,22 @@
       "circuit_size": "Lower min(6m-1,5m+ceil(log2(m+1))) versus upper 6m-1; deficit m-1-ceil(log2(m+1))", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean lattice and graph connectivity only",
       "asymptotic_quantifiers": "Every m at least one; exact method closure for m through four and explicit deficit for every m at least five", "case_regime": "Structural no-go for the connectivity-plus-inversion method; GATE004AG, GATE004AE, and P versus NP remain open",
       "evidence": "proofs/GATE-004AG-binary-inversion-only.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; docs/no-go-ledger.md NG-082; artifacts/cycle-096-one-negative-formula-boundary.md"
+    },
+    {
+      "id": "LEMMA110", "label": "PROVED",
+      "statement": "A pruned circuit for the one-negative clause product with exactly one binary gate above essential-input connectivity has a unicyclic output graph and at least max(ceil(m/2),ceil(log2(m+1))) NOT gates.",
+      "computational_model": "Pruned unrestricted Boolean circuit output cones, undirected cycle rank, formula unfolding, and formula/circuit inversion complexity", "uniformity": "Every individual non-uniform circuit; uniform one-negative clause family",
+      "circuit_size": "At exactly (p+1)m binary gates, at least max(ceil(m/2),ceil(log2(m+1))) NOT gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected multigraph cycle rank and Boolean-lattice inversion only",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, and every pruned circuit for W_m with exactly (p+1)m binary gates", "case_regime": "Exact worst-case structural lower bound for one binary-gate stratum; not a full minimum-size, quotient, SAT-lower-bound, or terminal theorem",
+      "evidence": "proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; proofs/LEMMA-109-formula-boundary-one-negative-width-five.md; docs/source-citations/morizumi-2008.md; docs/source-citations/markov-1958.md; artifacts/cycle-097-one-reconvergence-inversion.md"
+    },
+    {
+      "id": "GATE004AG-ONE-CYCLE-UNFOLDING-ONLY", "label": "NO-GO",
+      "statement": "Unfolding the one-reconvergence output graph into a formula cannot close GATE004AG because its factor-two NOT duplication leaves an asymptotic size deficit about m/2.",
+      "computational_model": "Unicyclic unrestricted Boolean circuit output cones, formula unfolding, and inversion complexity", "uniformity": "Every individual non-uniform circuit in the exact one-extra-binary stratum",
+      "circuit_size": "Lower 5m+max(ceil(m/2),ceil(log2(m+1))) versus target 6m-1; asymptotic deficit about m/2", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected multigraph cycle rank and Boolean-lattice inversion only",
+      "asymptotic_quantifiers": "Every m at least one and every pruned circuit in the exactly 5m-binary-gate stratum", "case_regime": "Structural no-go for one-cycle unfolding as a complete proof method; GATE004AG, GATE004AE, and P versus NP remain open",
+      "evidence": "proofs/GATE-004AG-one-cycle-unfolding-only.md; proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md; docs/no-go-ledger.md NG-083; artifacts/cycle-097-one-reconvergence-inversion.md"
     }
   ]
 }

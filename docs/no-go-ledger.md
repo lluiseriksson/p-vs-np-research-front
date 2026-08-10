@@ -1632,3 +1632,27 @@ NOT fan-in one; Boolean-lattice chains and graph connectivity; exact
 worst-case quantifiers; no randomness, advice, oracle, promise, distribution,
 or algebraic circuit model. This combined method is closed, while
 GATE-004AG, GATE-004AE, and P versus NP remain open.
+
+## NG-083 — one-cycle formula unfolding closes GATE-004AG
+
+**Label: NO-GO**
+
+Scope: analyze the first non-formula stratum, with exactly `5m` binary gates,
+by unfolding its single reconvergence into a formula and applying formula
+inversion complexity.
+
+Failure: LEMMA-110 proves the output multigraph is unicyclic, so every gate is
+copied at most twice in the unfolding. This yields the genuine linear bound
+`N>=ceil(m/2)`, strengthened by Markov to
+`N>=max(ceil(m/2),ceil(log_2(m+1)))`. The resulting total lower bound remains
+short of `6m-1` by
+`m-1-max(ceil(m/2),ceil(log_2(m+1)))`, positive from `m=5` and asymptotic to
+`m/2`. The unfolding cannot identify two copied NOTs as a single charge
+without an additional structural theorem.
+
+Model: pruned minimum unrestricted non-uniform Boolean circuit output cones;
+exactly `5m` binary gates; AND/OR fan-in two and NOT fan-in one; undirected
+multigraph cycle rank and Boolean-lattice inversion; exact worst-case
+quantifiers; no randomness, advice, oracle, promise, distribution, or
+algebraic circuit model. The method is closed, while GATE-004AG, GATE-004AE,
+and P versus NP remain open.

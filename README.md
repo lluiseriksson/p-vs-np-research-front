@@ -779,11 +779,19 @@ gap `m-1-ceil(log_2(m+1))`. GATE-004AG-BINARY-INVERSION-ONLY is therefore
 `NO-GO`; the asymptotic gate still needs a new DAG-sharing or direct quotient
 theorem.
 
+The ninety-seventh cycle resolves the first non-formula graph stratum.
+LEMMA-110 shows that exactly one extra binary gate makes the pruned output
+graph unicyclic. Unfolding copies each NOT at most twice, so formula inversion
+forces `N>=ceil(m/2)`; together with Markov the lower bound is
+`5m+max(ceil(m/2),ceil(log_2(m+1)))`. This closes the stratum through `m=4`
+but misses `6m-1` by asymptotically `m/2`. One-cycle unfolding is `NO-GO` as
+a complete route, and the general cycle-rank tradeoff becomes the next brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–096 isolate the fixed-sign tail and close two insufficient lower-bound methods quantitatively. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–094 repair the width-four proof; Cycles 095–097 isolate the fixed-sign tail and audit restrictions, inversion, and the first reconvergence stratum. Formal foundations and broader independent review remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

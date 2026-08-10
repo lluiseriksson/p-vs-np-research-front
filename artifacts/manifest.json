@@ -443,6 +443,10 @@
       "sha256": "4d8cdc572ae9b83c9b094bdd630af5e15d713fc9facc3c26a15e905432fd44c5"
     },
     {
+      "path": "artifacts/cycle-097-one-reconvergence-inversion.md",
+      "sha256": "30d404407dd63f8f267783152bdb3e85f0ea6275ce9f5fb3d94f591b390a28d7"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -468,7 +472,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "51e3a8160e5bc460ab69497463313a79323b12c01659a6abaabecf0500eb1903"
+      "sha256": "490c51d6592a88e719851ba7505eda527b49fe6a816b9935ef64294d89298d79"
     },
     {
       "path": "docs/problem-statement.md",
@@ -476,7 +480,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9cd5ebcac8e15fc8cc01bafcabc1583db9bb31d6baa0f57bbc8922cd472dcac2"
+      "sha256": "04ecb61c975c9703524a4820956fe05b9620156477da34a645fb0461f962952b"
     },
     {
       "path": "docs/result-labels.md",
@@ -572,11 +576,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "b9aa6b362d6343ac28d2ebc3ac5f8feb622f146c86ee79a41492a1008c4f0a27"
+      "sha256": "1bc012bc4d52c033ce4bec6e6d9d84eb8f1f9c23884bdeac6ddfdc03025ee8e3"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "dcada208f55fb6b833e18ea02299c41d68822ab4eb97203445d37df50c13a776"
+      "sha256": "14af202b1c888232a057eb932b6063308914dc3e4285d44e8a606286d8f320cd"
     },
     {
       "path": "experiments/README.md",
@@ -723,8 +727,12 @@
       "sha256": "da64b88649cfd4d1861f1732aba36a0a45590370782f88a04138ec11f56ce672"
     },
     {
+      "path": "proofs/GATE-004AG-one-cycle-unfolding-only.md",
+      "sha256": "75907c62d25aa2f29fae617121d0496ef6cdbfa1d7fa4daa92fa4e28e35d85b6"
+    },
+    {
       "path": "proofs/GATE-004AG-one-negative-width-five-tail.md",
-      "sha256": "680957de0985c4410dadb7950992605106fe32c6fea37f8bd82ab02b29dde933"
+      "sha256": "7bc03cf65bc30ba5c27e31a3945c5c995087ed413480d0cb3f6e1d5d5a19e2eb"
     },
     {
       "path": "proofs/GATE-004AG-restriction-only.md",
@@ -1331,8 +1339,12 @@
       "sha256": "dd48e96e7c8a5307cf25874f32d18b90f9a4d7d72601c1de8a3c7b77f4065d83"
     },
     {
+      "path": "proofs/LEMMA-110-one-reconvergence-inversion-lower-bound.md",
+      "sha256": "cd9801e7aab6609c1061fe1e7298ea76cca743f1acdf7f417d32e4fbf309b476"
+    },
+    {
       "path": "README.md",
-      "sha256": "a4d48966b96c7e85f205bbf30ceaf9c654a921dd5fc606274fc43047ea0008ad"
+      "sha256": "214285f4309817f6d11f084dbe815caa5769dca3e657563e602c06e782d31fc0"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1344,7 +1356,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "2638d11eb9954c591ec228f9faf0239d417fe1152704a388418a0ed9bbd8ff3c"
+      "sha256": "865bb26969d38320af96efa4c8b3081ac3d1e03fdc865d87f5ab7c32473442b2"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
