@@ -1363,3 +1363,20 @@ alphabet; one six-one long option; signed width-five matching; unrestricted
 later non-uniform circuits; no randomness, advice, oracle, promise,
 distribution, or algebraic computation. This closes only alphabet reuse;
 richer GATE-004AF constructions and P versus NP remain open.
+
+## NG-067 — repairing the first two quintet masks suffices
+
+**Label: NO-GO**
+
+Identifiers 1,089 and 1,098 realize the two masks missing from the LEMMA-077
+representative without increasing the block bound. The resulting
+94-identifier alphabet nevertheless has 1,787 failures in the exact
+gap-at-most-20 audit. LEMMA-078 isolates mask 8 on offsets `{0,1,6,7,10}`;
+twelve-spaced translations survive except for at most one repair by the
+six-one long option.
+
+Model: exact four-block SAT-gamma neutral contexts; fixed 94-identifier
+alphabet; one long option; signed width-five matching; unrestricted later
+non-uniform circuits; no randomness in the exhaustive local audit, advice,
+oracle, promise, distribution, or algebraic computation. This closes only the
+two-identifier patch; GATE-004AF and P versus NP remain open.

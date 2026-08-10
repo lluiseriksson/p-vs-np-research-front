@@ -3613,6 +3613,23 @@
       "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Alphabet-specific no-go; GATE-004AF and P versus NP remain open",
       "evidence": "proofs/GATE-004AF-lemma075-alphabet-only.md; proofs/LEMMA-077-length68-four-block-quintet-obstruction.md; docs/no-go-ledger.md NG-066"
+    },
+    {
+      "id": "LEMMA078", "label": "PROVED",
+      "statement": "The 94-identifier two-ID repair alphabet omits 11101 on a translation-stable quintuple under four-block unions, leaving N/12-O(1) common signed width-five clauses after the long option.",
+      "computational_model": "Exact four-block neutral contexts, two independent interval DPs, one long option, signed width-five clauses, and matching",
+      "uniformity": "Uniform fixed 94-identifier alphabet and translations; no circuit selected", "circuit_size": "No lower bound; common signed width-five packing N/12-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most one", "case_regime": "Alphabet-specific exact obstruction; not a circuit or terminal result",
+      "evidence": "proofs/LEMMA-078-two-id-repair-quintet-obstruction.md; verification/quintet_type_audit.py; verification/test_sat_encoding.py; artifacts/cycle-074-quintet-local-audit.md"
+    },
+    {
+      "id": "GATE004AF-TWO-ID-REPAIR-ONLY", "label": "NO-GO",
+      "statement": "Adding only identifiers 1089 and 1098 repairs the first quintet but retains a translation-stable mask-8 failure and 1,787 local failed types.",
+      "computational_model": "Exact four-block neutral contexts and signed width-five matching", "uniformity": "Uniform fixed 94-identifier alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot; exact local audit over 640,000 reduced types", "case_regime": "Alphabet-specific no-go; GATE-004AF and P versus NP remain open",
+      "evidence": "proofs/GATE-004AF-two-id-repair-only.md; proofs/LEMMA-078-two-id-repair-quintet-obstruction.md; docs/no-go-ledger.md NG-067"
     }
   ]
 }

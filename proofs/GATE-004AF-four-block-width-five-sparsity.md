@@ -20,6 +20,10 @@ offsets `{0,4,7,9,10}`. Thus the LEMMA-075 alphabet is `NO-GO` for this gate.
 The next attack must enrich the fixed alphabet and preserve the resulting
 larger block-length bound in the five-coordinate reduction.
 
+Identifiers 1,089 and 1,098 repair that representative at the same length
+bound, but LEMMA-078 finds a new mask-8 obstruction and 1,787 failures in the
+gap-at-most-20 audit. This two-identifier specialization is also `NO-GO`.
+
 ## Model card
 
 | Field | Value |

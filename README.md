@@ -623,6 +623,14 @@ LEMMA-077 gives an `N/12-O(1)` common signed width-five packing, and the
 LEMMA-075-alphabet specialization is `NO-GO`. GATE-004AF remains open for a
 richer fixed alphabet; no circuit or terminal result is inferred.
 
+The seventy-fourth cycle tests the smallest same-bound repair. Identifiers
+1,089 and 1,098 realize the two masks missing from LEMMA-077, but an exhaustive
+gap-at-most-20 audit finds 1,787 failures among 640,000 types. Both exact DPs
+confirm that `(70,71,76,77,80)` omits only mask 8. Twelve-spaced translations
+leave an `N/12-O(1)` common width-five packing after at most one `A_rho`
+repair. The 94-identifier specialization is `NO-GO`; the full 101-million-type
+GATE-004AF audit remains open and no circuit conclusion is drawn.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

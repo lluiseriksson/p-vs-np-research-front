@@ -287,6 +287,8 @@ truth. Each row has exactly one label.
 | GATE-004AF | EXPLORATORY | Use up to four translated neutral blocks to bound disjoint common signed clauses through width five | `proofs/GATE-004AF-four-block-width-five-sparsity.md`; LEMMA-076 | New constructive audit |
 | LEMMA-077 | PROVED | The LEMMA-075 alphabet omits `11110` on a translation-stable quintuple under four-block unions, leaving `N/12-O(1)` common clauses | `proofs/LEMMA-077-length68-four-block-quintet-obstruction.md`; two DP implementations; regression test | Refutes alphabet reuse only |
 | GATE-004AF-LEMMA075-ALPHABET-ONLY | NO-GO | The 92-identifier width-four alphabet retains a linear signed width-five packing | `proofs/GATE-004AF-lemma075-alphabet-only.md`; LEMMA-077; NG-066 | Richer fixed alphabet required |
+| LEMMA-078 | PROVED | The 94-identifier two-ID repair alphabet omits `11101` on a translation-stable quintuple, leaving `N/12-O(1)` common clauses | `proofs/LEMMA-078-two-id-repair-quintet-obstruction.md`; two DPs; local audit | Refutes narrow repair only |
+| GATE-004AF-TWO-ID-REPAIR-ONLY | NO-GO | The two-identifier repair retains a mask-8 obstruction and 1,787 local failures | `proofs/GATE-004AF-two-id-repair-only.md`; LEMMA-078; NG-067 | Broader alphabet required |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

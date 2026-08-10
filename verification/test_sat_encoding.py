@@ -880,6 +880,19 @@ class FormulaEncodingTests(unittest.TestCase):
         self.assertFalse((fast >> 12) & 1)
         self.assertFalse((fast >> 16) & 1)
 
+    def test_two_identifier_quintet_repair_retains_mask_8_obstruction(self) -> None:
+        from quartet_type_audit import WIDTH5_REPAIR_IDENTIFIERS
+
+        positions = (70, 71, 76, 77, 80)
+        auditor = QuartetAuditor(WIDTH5_REPAIR_IDENTIFIERS, 432)
+        fast = auditor.reached_masks_positions(positions, 4)
+        direct = reached_masks_direct_positions(
+            positions, 4, WIDTH5_REPAIR_IDENTIFIERS, 432
+        )
+        relevant = (1 << 31) - 2
+        self.assertEqual(fast & relevant, direct & relevant)
+        self.assertFalse((fast >> 8) & 1)
+
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:
         max_block_length = 28
         for block_count in range(1, 6):
