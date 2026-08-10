@@ -16,7 +16,8 @@ P != NP
   <- GATE-004 (active): first superlinear unrestricted SAT circuit lower bound
   <- GATE-004B (active): SAT-specific amortized block restriction
   <- GATE-004C (active): semantic loss under exact prefix contexts
-  <- GATE-004D (active smallest brick): SAT internal residual-function collisions
+  <- GATE-004D (active): SAT internal residual-function collisions
+  <- GATE-004E (active smallest brick): collisions in one neutral-prefix family
      + LEMMA-002 (proved recurrence)
 ```
 
@@ -107,7 +108,7 @@ weight. This is recorded as
 could use semantic structure unique to minimum SAT circuits or propagation
 beyond the input boundary.
 
-## Smallest active brick: GATE-004D
+## Active residual-collision gate: GATE-004D
 
 LEMMA-005 defines the exact semantic quotient of a restricted circuit: merge
 internal gates with identical residual functions, replace constant/input
@@ -120,6 +121,20 @@ minimum circuit can have all `p` restricted inputs essential and the maximum
 gates of the original function. A large core can be shared by all branches.
 This defeats the generic semantic route but leaves the SAT-specific collision
 theorem falsifiable and open.
+
+## Smallest active brick: GATE-004E
+
+ENC-004 and LEMMA-006 give an explicit family: for padding `12k`, there are
+`k+1` separated prefix assignments, every one leaving the exact same
+`SAT-gamma_{n-12k}` residual. GATE-004E asks for the collision surplus within
+one such family, so the cross-restriction table of internal gate functions is
+the concrete object under audit.
+
+LEMMA-007 proves that neutral parser-state multiplicity does not lift
+generically. Any separated neutral set can sit in front of an arbitrary shared
+core with every prefix bit essential and only an `O(pr)` decoder shell. This is
+`GATE-004D-PARSER-LIFT — NO-GO`; the open gate must use an internal property
+specific to SAT circuits, not only the output parser states.
 
 ## Downstream amplification obligation: GATE-005
 

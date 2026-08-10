@@ -36,7 +36,12 @@ truth. Each row has exactly one label.
 | LEMMA-004 | PROVED | Essential restricted inputs and all `2^p` distinct residuals can coexist with only an `O(p)` minimum-size gap | `proofs/LEMMA-004-shared-core-obstruction.md` | Generic shared-core limitation only |
 | LEMMA-005 | PROVED | Exact residual-function quotienting preserves the restricted circuit output | `proofs/LEMMA-005-semantic-restriction-quotient.md` | Makes the semantic loss obligation exact |
 | GATE-004C-GENERIC-SEMANTICS | NO-GO | Minimality, essentiality, and maximal input-residual diversity cannot generically force superlinear block loss | LEMMA-004; NG-011 | SAT-specific internal collisions required |
-| GATE-004D | EXPLORATORY | Prove a superlinear surplus of constant, colliding, or dead internal residual gates under an exact SAT prefix restriction | `proofs/GATE-004D-sat-residual-collisions.md` | Active smallest brick; sufficient for GATE-004C |
+| GATE-004D | EXPLORATORY | Prove a superlinear surplus of constant, colliding, or dead internal residual gates under an exact SAT prefix restriction | `proofs/GATE-004D-sat-residual-collisions.md` | Active parent gate; sufficient for GATE-004C |
+| ENC-004 | PROVED | For padding `12k`, `k+1` separated equal-length prefixes all preserve the exact SAT-gamma suffix function | `docs/sat-encoding.md`; LEMMA-006 | Supplies a concrete restriction family only |
+| LEMMA-006 | PROVED | Neutral-prefix parser stacks and pairwise distances are exact | `proofs/LEMMA-006-neutral-prefix-family.md` | Output-level structure only |
+| LEMMA-007 | PROVED | Separated neutral subcubes with essential prefix bits can retain an arbitrary shared core behind an `O(pr)` shell | `proofs/LEMMA-007-neutral-subcube-shared-core.md` | Generic shared-core limitation |
+| GATE-004D-PARSER-LIFT | NO-GO | Neutral parser-state multiplicity and essentiality do not generically force internal collisions | LEMMA-007; NG-012 | SAT-specific internal property required |
+| GATE-004E | EXPLORATORY | Prove the collision surplus within one explicit ENC-004 neutral-prefix family | `proofs/GATE-004E-neutral-family-collisions.md` | Active smallest brick; sufficient for GATE-004D |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

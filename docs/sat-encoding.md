@@ -144,6 +144,33 @@ source coordinates survive. LEMMA-003 separately proves that even a
 hypothetical family of all contiguous placements would not support a generic
 coordinate-coverage averaging argument.
 
+## ENC-004 — equal-length neutral-prefix family
+
+For every `k>=0` and `0<=l<=k`, let
+
+`P_{k,l}=(1111)^{3(k-l)}(01T)^l`.
+
+Every `P_{k,l}` has length `12k`, and prefixing it to an arbitrary string
+preserves exact validity and satisfiability. For fixed `k` these are `k+1`
+distinct assignments to the same prefix coordinates, with pairwise Hamming
+distance `6|l-j|`. LEMMA-006 proves the exact parser-state and distance claims.
+
+### Model card
+
+| Field | Value |
+|---|---|
+| Computational model | Exact SAT-gamma prefix parser and coordinate restrictions |
+| Uniform/non-uniform | Uniform family construction; later circuit selection may be non-uniform |
+| Circuit size | No circuit-size conclusion |
+| Circuit depth | Unrestricted in later circuit applications |
+| Fan-in | Encoded formula AND/OR two; NOT one |
+| Randomness | None |
+| Advice | None |
+| Oracle access | None |
+| Field/algebraic model | None |
+| Asymptotic quantifiers | Every `k>=0`, all indices `0<=l,j<=k`, and every binary suffix |
+| Regime | Exact total-language validity and satisfiability; malformed suffixes reject |
+
 ## Reference implementation
 
 `verification/sat_encoding.py` is an iterative reference parser, evaluator,

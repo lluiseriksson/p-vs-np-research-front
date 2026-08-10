@@ -4,6 +4,7 @@ import unittest
 
 from sat_encoding import (
     context_wrap,
+    context_prefix,
     contradiction,
     decode_gamma,
     double_not_wrap,
@@ -13,6 +14,7 @@ from sat_encoding import (
     encode_or,
     encode_variable,
     parse_formula,
+    neutral_prefix_family,
     tautology,
     verify_assignment,
 )
@@ -111,6 +113,35 @@ class FormulaEncodingTests(unittest.TestCase):
     def test_context_counts_must_be_nonnegative(self) -> None:
         with self.assertRaises(ValueError):
             context_wrap(self.x, left_tautologies=-1)
+
+    def test_neutral_prefix_family(self) -> None:
+        k = 5
+        prefixes = neutral_prefix_family(k)
+        self.assertEqual(len(prefixes), k + 1)
+        self.assertEqual(len(set(prefixes)), k + 1)
+        for index, prefix in enumerate(prefixes):
+            self.assertEqual(len(prefix), 12 * k)
+            self.assertEqual(
+                prefix,
+                context_prefix(
+                    left_tautologies=index,
+                    double_nots=3 * (k - index),
+                ),
+            )
+            wrapped = prefix + self.y
+            self.assertTrue(verify_assignment(wrapped, {1: False, 7: True}))
+            self.assertFalse(verify_assignment(wrapped, {1: True, 7: False}))
+
+        for left in range(k + 1):
+            for right in range(k + 1):
+                distance = sum(
+                    a != b for a, b in zip(prefixes[left], prefixes[right])
+                )
+                self.assertEqual(distance, 6 * abs(left - right))
+
+    def test_neutral_prefix_family_rejects_negative_index(self) -> None:
+        with self.assertRaises(ValueError):
+            neutral_prefix_family(-1)
 
 
 if __name__ == "__main__":

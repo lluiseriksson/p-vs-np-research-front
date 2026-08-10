@@ -175,3 +175,26 @@ def context_wrap(
     for _ in range(left_tautologies):
         result = encode_and(true_formula, result)
     return double_not_wrap(result, double_nots)
+
+
+def context_prefix(*, left_tautologies: int = 0, double_nots: int = 0) -> str:
+    """Return only the fixed prefix used by :func:`context_wrap`."""
+    return context_wrap(
+        "",
+        left_tautologies=left_tautologies,
+        double_nots=double_nots,
+    )
+
+
+def neutral_prefix_family(k: int) -> tuple[str, ...]:
+    """The k+1 exact neutral prefixes of common length 12*k.
+
+    Member ``l`` uses ``l`` tautology conjunctions and ``3*(k-l)`` double
+    negations.
+    """
+    if k < 0:
+        raise ValueError("k must be nonnegative")
+    return tuple(
+        context_prefix(left_tautologies=l, double_nots=3 * (k - l))
+        for l in range(k + 1)
+    )

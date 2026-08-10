@@ -51,5 +51,18 @@ large `G(u)` core survives every restriction while only an `O(p)` shell changes.
 Thus GATE-004D must establish a SAT-specific fact about residual functions of
 *internal gates* in every minimum circuit. Counting input residuals, proving
 input influence, or invoking circuit minimality alone is quantitatively
-insufficient. The next attack is to test whether parser-state descendants force
-such internal collisions; absent that bridge, the gate remains open.
+insufficient.
+
+## Parser-state attempt
+
+LEMMA-006 identifies `k+1` separated length-`12k` prefixes that leave the exact
+same SAT-gamma suffix function. This is genuine output-level structure but it
+still does not lift generically to internal gates. LEMMA-007 constructs an
+arbitrary shared core behind any separated neutral-prefix set while keeping all
+prefix coordinates essential and adding only an `O(pr)` decoder shell. Thus
+the inference from parser-state multiplicity and essentiality alone is
+`GATE-004D-PARSER-LIFT — NO-GO`.
+
+The active subgate is GATE-004E, which restricts the desired collision surplus
+to one explicit LEMMA-006 neutral family and makes the cross-restriction gate
+table the object of the next SAT-specific audit.

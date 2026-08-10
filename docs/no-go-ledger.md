@@ -199,3 +199,29 @@ unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, advice,
 oracle, field, promise, or distribution. This is a generic method limitation,
 not a claim about SAT-gamma; SAT-specific internal residual-gate collisions
 remain possible.
+
+## NG-012 — lift neutral parser states to internal circuit collisions
+
+**Label: NO-GO**
+
+Scope: infer GATE-004D solely from multiple separated prefix assignments that
+leave the same output residual function, together with essentiality of all
+prefix coordinates and circuit minimality.
+
+Failure: LEMMA-007 hardwires any separated neutral set `A` into a decoder and
+defines
+
+`F(a,w,z)=G(z) XOR (OUT_A(a) AND w)`.
+
+Every assignment in `A` leaves the identical arbitrary core `G`; every prefix
+coordinate remains essential; and the shell has at most `2p|A|+5` gates.
+Thus the complete output-level parser-state pattern can coexist with an
+arbitrarily complex core shared intact by all neutral restrictions. The
+premises do not imply collisions among internal core gates or a loss scaling
+with core complexity.
+
+Model: exact minimum gate count in unrestricted non-uniform acyclic circuits;
+unbounded depth; fan-in-two AND/OR and fan-in-one NOT; no randomness, oracle,
+field, promise, or distribution. The neutral set is part of the counterexample
+function definition. The no-go concerns the generic lifting inference, not the
+SAT-specific GATE-004D or GATE-004E statements.

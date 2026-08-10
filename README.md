@@ -80,13 +80,20 @@ large core survives every restriction. GATE-004D now states the precise
 SAT-specific internal residual-collision surplus that would have to overcome
 this obstruction.
 
+The sixth cycle makes the parser-state attempt exact. ENC-004 supplies `k+1`
+separated neutral prefixes of common length `12k`, all leaving the same SAT
+suffix function. LEMMA-007 then proves that this entire output-level pattern,
+even with every prefix bit essential, can retain an arbitrary shared core
+behind an `O(k^2)` shell. GATE-004E isolates the still-open requirement inside
+the cross-restriction table of internal SAT gate functions.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 40% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative reference parser/context tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
+| Infrastructure maturity | 42% | Repository, corrected target/bridge labels, exact bit-level SAT language, iterative parser/context-family tests, semantic quotient specification, ledgers, source audit, model-card checker, manifest, and cold-clone audit exist; formal library and independent review remain immature. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, and generic shared-core failures are explicit; no new SAT lower bound or algorithm exists. |
+| Real progress toward P vs NP | 0.00% | Quantifier, padding, generic gate-elimination, fanout, contiguous-coverage, shared-core, and parser-state lifting failures are explicit; no new SAT lower bound or algorithm exists. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.
