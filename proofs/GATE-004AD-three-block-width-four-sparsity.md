@@ -14,9 +14,12 @@ LEMMA-071. A surviving unbounded matching for every fixed alphabet falsifies
 the gate.
 
 The complete identifier-1-through-68 audit finds a stable failure, isolated
-in LEMMA-073. The next attack must enrich the alphabet (the first missing
-patterns have explicit witnesses among larger identifiers) and rerun the
-finite type reduction with the resulting larger block-length bound.
+in LEMMA-073. A targeted length-48 enrichment still has 35 failures among
+530,604 reduced types. LEMMA-074 strengthens this to the complete alphabet of
+all identifiers 1 through 1,023: pattern `1110` remains absent on offsets
+`{0,5,9,10}`. The next attack must use length at least 52; explicit longer
+identifiers repair the returned representatives, so the full gate remains
+falsifiable rather than rejected.
 
 ## Model card
 

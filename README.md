@@ -587,6 +587,15 @@ Translations spaced by eight are disjoint, and the six-one long option repairs
 at most two, leaving a linear width-four packing. The identifier-68
 specialization is `NO-GO`; GATE-004AD remains open for a richer alphabet.
 
+The seventieth cycle tests that enrichment and finds a sharper boundary. A
+targeted length-48 alphabet fails on 35 of 530,604 reduced quartet types.
+LEMMA-074 then audits the complete identifier range 1 through 1,023 and proves
+that `1110` is still absent on offsets `{0,5,9,10}`. Its twelve-spaced
+translations leave a linear common width-four packing, so every length-48
+specialization is `NO-GO`. Explicit length-52-or-longer identifiers repair
+the representatives; GATE-004AD therefore advances to a larger-bound audit
+without any circuit or terminal claim.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |

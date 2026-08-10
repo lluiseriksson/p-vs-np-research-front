@@ -3518,6 +3518,27 @@
       "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
       "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Alphabet-specific no-go; GATE-004AD and P versus NP remain open",
       "evidence": "proofs/GATE-004AD-identifier68-only.md; proofs/LEMMA-073-identifier68-three-block-quartet-obstruction.md; docs/no-go-ledger.md NG-062"
+    },
+    {
+      "id": "LEMMA074", "label": "PROVED",
+      "statement": "Every standard identifier block of length at most 48 omits 1110 on a translation-stable quartet under unions of at most three nonoverlapping blocks, leaving N/12-O(1) common signed clauses after the long option.",
+      "computational_model": "Exact three-block neutral contexts, exhaustive interval-DP certificate, one long option, signed width-four clauses, and matching",
+      "uniformity": "Uniform complete identifier-1-through-1023 alphabet and translations; no circuit selected",
+      "circuit_size": "No lower bound; common signed width-four packing N/12-O(1) per slot",
+      "circuit_depth": "Fixed blocks bounded; later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence and modulo-four translation",
+      "asymptotic_quantifiers": "Every sufficiently large four-divisible slot; every eligible translation except at most two",
+      "case_regime": "Complete bounded-length witness obstruction; not a circuit lower bound or terminal result",
+      "evidence": "proofs/LEMMA-074-length48-three-block-quartet-obstruction.md; verification/quartet_type_audit.py; verification/test_sat_encoding.py"
+    },
+    {
+      "id": "GATE004AD-LENGTH48-ONLY", "label": "NO-GO",
+      "statement": "Even the complete identifier-1-through-1023 alphabet cannot yield three-block width-four sparsity because it retains a linear signed width-four packing.",
+      "computational_model": "Exact three-block neutral contexts and signed width-four matching", "uniformity": "Uniform complete length-at-most-48 alphabet; no circuit selected",
+      "circuit_size": "No lower bound; linear surviving packing", "circuit_depth": "Later circuits unrestricted", "fan_in": "AND/OR two; NOT one",
+      "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite Boolean incidence",
+      "asymptotic_quantifiers": "Every sufficiently large compatible slot", "case_regime": "Bounded-length witness no-go; GATE-004AD and P versus NP remain open",
+      "evidence": "proofs/GATE-004AD-length48-only.md; proofs/LEMMA-074-length48-three-block-quartet-obstruction.md; docs/no-go-ledger.md NG-063"
     }
   ]
 }

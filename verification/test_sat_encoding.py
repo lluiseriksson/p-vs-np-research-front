@@ -4,7 +4,7 @@ import itertools
 import unittest
 
 import sat_encoding
-from quartet_type_audit import reached_masks
+from quartet_type_audit import reached_masks, reached_masks_direct
 from sat_encoding import (
     assignment_conjunction,
     annihilating_prefix,
@@ -815,6 +815,12 @@ class FormulaEncodingTests(unittest.TestCase):
 
     def test_identifier_68_three_block_quartet_obstruction(self) -> None:
         reached = reached_masks((36, 57, 61, 62))
+        self.assertFalse((reached >> 8) & 1)
+
+    def test_all_length_48_identifiers_retain_quartet_obstruction(self) -> None:
+        reached = reached_masks_direct(
+            (48, 53, 57, 58), tuple(range(1, 1024)), 256
+        )
         self.assertFalse((reached >> 8) & 1)
 
     def test_bounded_blocks_hit_at_most_one_coordinate_per_group(self) -> None:

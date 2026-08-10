@@ -12,6 +12,10 @@ from sat_encoding import contradiction, tautology
 
 BOUND = 36
 REPRESENTATIVE_LENGTH = 164
+BASE_IDENTIFIERS = tuple(range(1, 69))
+ENRICHED_IDENTIFIERS = BASE_IDENTIFIERS + (69, 80, 98, 130, 260, 324, 529)
+ENRICHED_BOUND = 48
+ENRICHED_REPRESENTATIVE_LENGTH = 256
 
 
 @lru_cache(maxsize=None)
@@ -25,10 +29,14 @@ def _extend(mask_set: int, mask: int) -> int:
     return result
 
 
-def _placements() -> tuple[tuple[int, int, frozenset[int]], ...]:
+@lru_cache(maxsize=None)
+def _placements(
+    identifiers: tuple[int, ...] = BASE_IDENTIFIERS,
+    representative_length: int = REPRESENTATIVE_LENGTH,
+) -> tuple[tuple[int, int, frozenset[int]], ...]:
     blocks = {
         block
-        for identifier in range(1, 69)
+        for identifier in identifiers
         for block in (
             "01" + tautology(identifier),
             "10" + contradiction(identifier),
@@ -39,13 +47,17 @@ def _placements() -> tuple[tuple[int, int, frozenset[int]], ...]:
             start + offset for offset, bit in enumerate(block) if bit == "0"
         ))
         for block in blocks
-        for start in range(0, REPRESENTATIVE_LENGTH - len(block) + 1, 4)
+        for start in range(0, representative_length - len(block) + 1, 4)
     )
 
 
-def reached_masks(quartet: tuple[int, int, int, int]) -> int:
-    """Return zero masks realized by up to three identifier-1..68 blocks."""
-    placements = _placements()
+def reached_masks(
+    quartet: tuple[int, int, int, int],
+    identifiers: tuple[int, ...] = BASE_IDENTIFIERS,
+    representative_length: int = REPRESENTATIVE_LENGTH,
+) -> int:
+    """Return zero masks realized by up to three selected identifier blocks."""
+    placements = _placements(identifiers, representative_length)
     indices = {
         index
         for index, (_, _, zeros) in enumerate(placements)
@@ -76,21 +88,62 @@ def reached_masks(quartet: tuple[int, int, int, int]) -> int:
     return dynamic[1][count] | dynamic[2][count] | dynamic[3][count]
 
 
-def audit_residue(residue: int) -> dict[str, object]:
+def reached_masks_direct(
+    quartet: tuple[int, int, int, int],
+    identifiers: tuple[int, ...],
+    representative_length: int,
+) -> int:
+    """Audit one quartet without materializing every global placement."""
+    candidates = set()
+    for identifier in identifiers:
+        for block in (
+            "01" + tautology(identifier),
+            "10" + contradiction(identifier),
+        ):
+            for start in range(0, representative_length - len(block) + 1, 4):
+                mask = sum(
+                    1 << bit
+                    for bit, position in enumerate(quartet)
+                    if start <= position < start + len(block)
+                    and block[position - start] == "0"
+                )
+                if mask:
+                    candidates.add((start + len(block), start, mask))
+    ordered = sorted(candidates)
+    ends = [candidate[0] for candidate in ordered]
+    count = len(ordered)
+    dynamic = [[0] * (count + 1) for _ in range(4)]
+    dynamic[0] = [1] * (count + 1)
+    for position, (_, start, mask) in enumerate(ordered, 1):
+        previous = bisect_right(ends, start, 0, position - 1)
+        for block_count in range(1, 4):
+            dynamic[block_count][position] = (
+                dynamic[block_count][position - 1]
+                | _extend(dynamic[block_count - 1][previous], mask)
+            )
+    return dynamic[1][count] | dynamic[2][count] | dynamic[3][count]
+
+
+def audit_residue(
+    residue: int,
+    identifiers: tuple[int, ...] = BASE_IDENTIFIERS,
+    bound: int = BOUND,
+    representative_length: int = REPRESENTATIVE_LENGTH,
+) -> dict[str, object]:
     if residue not in range(4):
         raise ValueError("residue must be 0, 1, 2, or 3")
-    placements = _placements()
-    by_zero: list[list[int]] = [[] for _ in range(REPRESENTATIVE_LENGTH)]
+    placements = _placements(identifiers, representative_length)
+    by_zero: list[list[int]] = [[] for _ in range(representative_length)]
     for index, (_, _, zeros) in enumerate(placements):
         for position in zeros:
             by_zero[position].append(index)
 
     failures = []
     checked = 0
-    first = BOUND + residue
-    for gap_1 in range(1, BOUND + 4):
-        for gap_2 in range(1, BOUND + 4):
-            for gap_3 in range(1, BOUND + 4):
+    first = bound + residue
+    for gap_1 in range(1, bound + 4):
+        for gap_2 in range(1, bound + 4):
+            for gap_3 in range(1, bound + 4):
                 quartet = (
                     first,
                     first + gap_1,
@@ -131,11 +184,34 @@ def audit_residue(residue: int) -> dict[str, object]:
                 if missing:
                     failures.append((quartet, missing))
                 checked += 1
-    return {"residue": residue, "checked": checked, "failures": failures}
+    return {
+        "residue": residue,
+        "checked": checked,
+        "identifiers": identifiers,
+        "bound": bound,
+        "failures": failures,
+    }
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("residue", type=int)
+    parser.add_argument("--enriched", action="store_true")
+    parser.add_argument("--summary", action="store_true")
     arguments = parser.parse_args()
-    print(json.dumps(audit_residue(arguments.residue), sort_keys=True))
+    if arguments.enriched:
+        result = audit_residue(
+            arguments.residue,
+            ENRICHED_IDENTIFIERS,
+            ENRICHED_BOUND,
+            ENRICHED_REPRESENTATIVE_LENGTH,
+        )
+    else:
+        result = audit_residue(arguments.residue)
+    if arguments.summary:
+        result = {
+            **{key: value for key, value in result.items() if key != "failures"},
+            "failure_count": len(result["failures"]),
+            "first_failures": result["failures"][:10],
+        }
+    print(json.dumps(result, sort_keys=True))

@@ -117,6 +117,8 @@ Adjacent collision-aware active branch:
      - GATE-004AC-WIDTH3-ONLY (no-go by LEMMA-072)
   <- GATE-004AD (active constructive audit): three-block sparsity through width four
      - GATE-004AD-IDENTIFIER68-ONLY (no-go by LEMMA-073)
+     - GATE-004AD-LENGTH48-ONLY (no-go by LEMMA-074)
+     ! next falsifier: complete length-at-most-68 alphabet or a smaller explicit repair set
 
 Stronger dependent-region branch:
   GATE-004I
@@ -693,10 +695,11 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Smallest active brick: GATE-004U
+### Current operational brick: GATE-004AD
 
-The exact falsifiable statement, model card, and SAT bridge are in
-`proofs/GATE-004U-syntax-linked-dnf-rigidity.md`.
+The exact falsifiable statement and model card are in
+`proofs/GATE-004AD-three-block-width-four-sparsity.md`. This is a constructive
+witness-family gate beneath GATE-004AC; it is not itself a circuit lower bound.
 
 ## Downstream amplification obligation: GATE-005
 

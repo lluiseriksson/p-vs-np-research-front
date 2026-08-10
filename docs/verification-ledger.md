@@ -277,6 +277,8 @@ truth. Each row has exactly one label.
 | GATE-004AD | EXPLORATORY | Use up to three translated neutral blocks to bound disjoint common signed clauses through width four | `proofs/GATE-004AD-three-block-width-four-sparsity.md`; LEMMA-072 | New constructive audit |
 | LEMMA-073 | PROVED | Identifier-68 three-block contexts omit `1110` on a translation-stable quartet, leaving `N/8-O(1)` disjoint common clauses after the long option | `proofs/LEMMA-073-identifier68-three-block-quartet-obstruction.md`; fast certificate test | Refutes reuse of the width-three alphabet |
 | GATE-004AD-IDENTIFIER68-ONLY | NO-GO | The identifier-68 alphabet retains a linear signed width-four packing | `proofs/GATE-004AD-identifier68-only.md`; LEMMA-073; NG-062 | Richer fixed alphabet required |
+| LEMMA-074 | PROVED | Every standard neutral block of length at most 48 still omits `1110` on a translation-stable quartet under three-block unions | `proofs/LEMMA-074-length48-three-block-quartet-obstruction.md`; direct interval-DP regression test | Complete bounded-length obstruction |
+| GATE-004AD-LENGTH48-ONLY | NO-GO | Even the complete identifier-1-through-1023 alphabet retains a linear signed width-four packing | `proofs/GATE-004AD-length48-only.md`; LEMMA-074; NG-063 | Length at least 52 required; full GATE-004AD remains open |
 | GATE-005 | EXPLORATORY | Same-language exponent amplification for SAT | `proofs/GATE-005-same-language-amplification.md` | Downstream open bridge; not assumed |
 | FORMAL-001 | EXPLORATORY | Formalize stable encoding and padding lemmas | `formal/README.md` | 0% formally closed chain |
 

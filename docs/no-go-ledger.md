@@ -1289,3 +1289,23 @@ cannot realize `1110` on offsets `{0,21,25,26}`. Disjoint translations leave
 a linear common signed width-four packing after `A_rho` repairs at most two.
 This closes only that fixed alphabet; richer GATE-004AD constructions and P
 versus NP remain open.
+
+## NG-063 — all standard neutral blocks through length 48 suffice at width four
+
+**Label: NO-GO**
+
+Scope: allow every block `01 T_j,10 F_j` with `1<=j<=1023`, choose up to
+three nonoverlapping aligned blocks per ordinary option, and seek constant
+signed-width-four packing per slot.
+
+Failure: LEMMA-074's exact interval DP omits `1110` on offsets `{0,5,9,10}`
+even for this complete alphabet. Twelve-spaced translations are disjoint, and
+the six-one exceptional option repairs at most two, leaving `N/12-O(1)` common
+signed clauses. This dominates every subset of the length-48 alphabet.
+
+Model: exact three-block SAT-gamma neutral contexts; complete identifier range
+1 through 1,023; one six-one long option; signed width-four matching;
+unrestricted later non-uniform circuits; no randomness, advice, oracle,
+promise, distribution, or algebraic computation. Identifiers of length at
+least 52 repair individual failed types, so larger-alphabet GATE-004AD and P
+versus NP remain open.
