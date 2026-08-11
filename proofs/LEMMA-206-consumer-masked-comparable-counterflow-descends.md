@@ -19,9 +19,9 @@ Assume there is a **consumer-masked cofactor region** `S` such that:
    `r|_{u=sigma}` leaves the Boolean function computed at `c` unchanged.
 
 Then specializing raw `u` inside `S` to `sigma`, propagating constants, and
-replacing `S` by the resulting sub-DAG preserves the parent function, uses no
-more gates, and strictly lowers an earlier potential or `R_0`. Consequently no
-such boundary exists in an `R_0`-extremal minimum parent.
+replacing `S` by the resulting sub-DAG preserves the parent function and
+strictly decreases circuit size. Consequently no such boundary exists in any
+minimum parent.
 
 ## Proof
 
@@ -30,10 +30,10 @@ by LEMMA-204 is exactly one row-zero cofactor of `r`. LEMMA-203 gives
 `r_01=r_11`, so the full replacement signal is the global cofactor
 `r|_{u=sigma}` on both rows.
 
-Specialize the occurrence of raw `u` entering `S` to `sigma` and propagate
-constants. Conditions 3 and 4 imply that the resulting acyclic AND/OR/NOT
-sub-DAG `S^sigma` computes `r|_{u=sigma}`, contains at most `|S|` gates, and
-that every gate in `S^sigma` is globally `u`-independent.
+Counterflow makes `r` depend essentially on raw `u`. If the selected cofactor
+is nonconstant, LEMMA-209 gives an acyclic constant-free AND/OR/NOT sub-DAG
+`S^sigma` computing `r|_{u=sigma}` with at most `|S|-1` gates. If it is
+constant, propagation through `b` gives the strict saving from LEMMA-205.
 
 At `b`, all four cofactors are unchanged by LEMMA-204. At every other direct
 consumer of `r`, the computed function is unchanged by condition 5. Condition
@@ -42,21 +42,10 @@ from these direct consumers therefore shows that every gate outside
 `S^sigma` computes its former function. In particular, the parent output is
 unchanged even though `r` had shared fanout.
 
-If specialization removes a gate, minimum size is contradicted. Otherwise
-the size is unchanged. Gates outside the replacement keep their functions,
-and every replacement gate is globally `u`-independent, so the earlier
-potentials `W` and `Q` cannot increase. A strict decrease in either is already
-an earlier lexicographic contradiction.
-
-If `W` and `Q` stay equal, the boundary `b` is no longer counted by `R_0`
-because its replacement input has equal `00/10` cofactors. No boundary outside
-the secondary consumers can change. A secondary direct consumer that is also
-an `h`-boundary either was already counted or loses, rather than gains, a
-counterflow input because `r|_{u=sigma}` is globally `u`-independent; all its
-other inputs are unchanged. The distinguished physical gate `h` cannot lie in
-`S`: it has the outgoing edge `h -> b`, whereas condition 2 permits only edges
-leaving `r`. Hence no new direct `h`-boundary is created inside `S^sigma`.
-Thus `R_0` strictly decreases, contradicting the refined extremal choice.
+The exterior uses exactly its former physical gates, while `S^sigma` uses at
+least one fewer gate than `S`. Hence the parent is strictly smaller,
+contradicting minimum size. No equal-size potential or transfer-path argument
+is needed.
 
 ## Model card
 
@@ -64,7 +53,7 @@ Thus `R_0` strictly decreases, contradicting the refined extremal choice.
 |---|---|
 | Computational model | Lexicographically extremal minimum unrestricted AND/OR/NOT plateau with a consumer-masked cofactor region |
 | Uniform/non-uniform | Every finite non-uniform refined endpoint and every comparable counterflow satisfying conditions 1–5 |
-| Circuit size | Replacement has at most the region size; strict saving or equal-size strict lexicographic descent |
+| Circuit size | Every nonconstant selected cofactor uses at most `|S|-1` gates; a constant cofactor also gives a strict parent saving through `b` |
 | Circuit depth | Unrestricted; specialization and replacement remain acyclic |
 | Fan-in | AND/OR two; NOT one; every secondary direct consumer of the shared output is audited |
 | Randomness | None |

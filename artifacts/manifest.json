@@ -755,6 +755,10 @@
       "sha256": "7449577a002dde5cd646f64cacf20be457854c7796d39e98344bfa542bb83c3d"
     },
     {
+      "path": "artifacts/cycle-175-strict-specialization-saving-audit.md",
+      "sha256": "2ce6c25abb50996ea2faac113151b45fa3c6c1c34252b1115313fbb930ed3e64"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -900,11 +904,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "9b13f428814b45f9313938ce7d18a7edf0c3ef86ad9e3fdb75dc32adf07b3227"
+      "sha256": "ca7964142ff3a75e5293e791e5ee2dd40c3606cd16f306df18e92390a0206ee9"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "930302d45ad06a81cfd03d0cc70fbff894e527ed76a84751fd74d0a1355f8e21"
+      "sha256": "f77a9e824c09702aeca6e8126c9f48c6fcb8d11fac18e04a44f6c86e11bbdcb8"
     },
     {
       "path": "experiments/README.md",
@@ -1640,7 +1644,7 @@
     },
     {
       "path": "proofs/GATE-004DA-charge-first-transferred-boundary.md",
-      "sha256": "4fe1ac8da4f6fab85c370e8a840c9f1a648e7581f95b23ca2ed446e4e4bdbfb8"
+      "sha256": "ca2a2f3baab526ac3904f46c037b593860dd72d708314f3ce306c4cf84f0affc"
     },
     {
       "path": "proofs/GATE-004DA-satisfying-exterior-only.md",
@@ -1648,7 +1652,11 @@
     },
     {
       "path": "proofs/GATE-004DB-directional-transfer-charge.md",
-      "sha256": "fcce2497a1a11e4b05be6e9e3535046b69e3566a5e715aef483042bfdf344a22"
+      "sha256": "a65baacb05b08d81f3bcfcfd881c14a935ac6a54efeb979921525bf8060ef9b4"
+    },
+    {
+      "path": "proofs/GATE-004DC-edge-local-or-incomparable-erasure.md",
+      "sha256": "9289cccdc813fdb1c846ff01f16c4ea4fb7129e9e05645a9b8e3b3d76451ce09"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2620,23 +2628,27 @@
     },
     {
       "path": "proofs/LEMMA-205-private-comparable-counterflow-descends.md",
-      "sha256": "b3d5e260fe86eacfaa6f883163dc16e87ce609f86d80eb2c0b84c8fa41e1ee40"
+      "sha256": "5799bdafaa6391324259d9a74e58264056f83923c8cc04f4fef04a0c1475a948"
     },
     {
       "path": "proofs/LEMMA-206-consumer-masked-comparable-counterflow-descends.md",
-      "sha256": "bb8a3bb8bb3190cb3e80276b2161001fc0e20de550e64bf2c596eae471b63c6e"
+      "sha256": "4f041f3e4331232de245a7d498723fcde71aea880aa3f3af0ea7e97338ff8d9a"
     },
     {
       "path": "proofs/LEMMA-207-failed-counterflow-descent-localizes-transfer-path.md",
-      "sha256": "ebcd8ecdde69bf3d5aa8af50cd2c088dfaa9895d462bca7c4c748925db7f10d2"
+      "sha256": "4c0399c92f28de0595f6980d0fdf0e839879a71f154dd51779cccac73bc85860"
     },
     {
       "path": "proofs/LEMMA-208-comparable-transfer-is-single-code.md",
       "sha256": "ea0829ce5b64840484d3e4004827c609516f4fa69a8a04156dfea812914cd664"
     },
     {
+      "path": "proofs/LEMMA-209-nontrivial-isolated-specialization-saves-a-gate.md",
+      "sha256": "ba615b2774d6f8de8676bfe003d66cc01b8070b53161ec2eb68dbde9915da786"
+    },
+    {
       "path": "README.md",
-      "sha256": "6da0a90385b0ec8abe7e2d69921ad50c0db8a009e0bbd616aa44e47ea9846720"
+      "sha256": "45a721c0da4e09c7e131352f39d9d8f097541506cd94d3a1ae0000e99b505bd1"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2648,7 +2660,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7c932742552e9cfb43d1d83155108c0901ee7d8c9aefe194f9186a0f9f0aff45"
+      "sha256": "d149975e096c13d46bcc810a84a780f93da8d664e1712cca67892e4829ebd87b"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

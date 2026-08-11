@@ -2,7 +2,7 @@
 
 **Label: PROVED**
 
-Let `D` be a refined endpoint circuit with a comparable counterflow boundary
+Let `D` be a finite circuit carrying the refined endpoint annotations and a comparable counterflow boundary
 `b` whose other input is `r`. Let `S` satisfy conditions 1–4 of LEMMA-206, and
 let `D^sigma` be obtained by specializing `S` to the cofactor selected by the
 AND/OR operation at `b`. Assume that the selected cofactor is nonconstant,
@@ -29,6 +29,16 @@ Then:
 Thus every failure of strict `R_0` descent in this comparable specialization
 has an explicit counterflow-transfer path. The theorem localizes the transfer;
 it does not bound the path, factor its gates, or charge a satisfying minor.
+
+## Minimum-size audit
+
+LEMMA-209 sharpens the size premise: under conditions 1–4, every nonconstant
+selected cofactor removes at least one gate from `S`, while a constant
+selected cofactor saves through `b`. Therefore, when the parent function is
+preserved, `D^sigma` is strictly smaller than `D`. No instance of this theorem
+can occur inside a minimum parent. The transfer-path conclusion remains a
+valid semantic diagnostic for the explicit nonminimal families in NG-150,
+NG-151, and NG-152, but it is not a residual minimum-parent branch.
 
 ## Proof
 
@@ -64,8 +74,8 @@ changed path from `r` to `q`. This proves item 3.
 | Field | Value |
 |---|---|
 | Computational model | Two finite unrestricted AND/OR/NOT DAGs with the same physical exterior, related by one nonconstant comparable cofactor specialization inside a unique-output region |
-| Uniform/non-uniform | Every finite non-uniform refined endpoint and every specialization satisfying the stated interface and output hypotheses |
-| Circuit size | Specialized circuit has size at most the parent; no lower bound or exchange cost follows |
+| Uniform/non-uniform | Every finite non-uniform annotated circuit and every specialization satisfying the stated interface and output hypotheses |
+| Circuit size | Under the stated isolation hypotheses the specialized circuit is strictly smaller by LEMMA-209; hence the theorem has no minimum-parent instance |
 | Circuit depth | Unrestricted; transfer path length is finite but unbounded |
 | Fan-in | AND/OR two; NOT one; all changed predecessors, consumers, and direct `h`-boundaries are audited |
 | Randomness | None |

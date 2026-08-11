@@ -46,6 +46,17 @@ the specialized region remain available. GATE-004DB is the active directional
 brick: charge unsatisfying-only transfer physically, charge the changed `00`
 pruning exactly, or resolve the incomparable branch.
 
+## Cycle-175 audit
+
+LEMMA-209 proves that every nonconstant isolated specialization removes at
+least one gate. Thus a comparable specialization satisfying the LEMMA-207
+interface cannot both preserve the parent function and occur in a minimum
+parent. The transfer families remain valid nonminimal diagnostics, but they no
+longer define a minimum-parent residual. GATE-004DC now isolates the genuine
+residue: an edge-local comparable rewrite where global specialization either
+is unavailable because interior fanout escapes the region or changes the
+parent output, and the incomparable branch.
+
 ## Model card
 
 | Field | Value |

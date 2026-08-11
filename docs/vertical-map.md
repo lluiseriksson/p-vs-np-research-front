@@ -1269,6 +1269,13 @@ direction (NG-152). GATE-004DB is the active residual brick: use physical
 minimum-cost data for unsatisfying-only transfer, exact code-`00` pruning for
 the other direction, or resolve the incomparable branch.
 
+LEMMA-209 proves that any nonconstant specialization of a qualifying
+`u`-isolated region strictly saves a gate. Thus every parent-preserving
+comparable transfer covered by LEMMA-207 is nonminimal, irrespective of its
+changed code. GATE-004DC is the active residual brick: realize comparable
+erasure edge-locally when global specialization is unavailable or changes the
+output, or resolve incomparable erasure.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

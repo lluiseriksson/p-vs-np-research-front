@@ -36,6 +36,17 @@ The theorem fails if a refined minimum parent can transfer either directional
 comparable defect, or realize incomparable erasure, with zero net potential
 change and within every exact two-gate satisfying budget.
 
+## Cycle-175 audit
+
+LEMMA-209 closes both directional branches whenever the specialization is
+implemented on a qualifying isolated region and preserves the parent
+function: the region loses at least one gate, contradicting minimum size.
+Consequently the single-code split of LEMMA-208 is diagnostic only for
+nonminimal parent-preserving transfer. GATE-004DC is the active gate and keeps
+exactly the cases not covered by that argument: comparable erasure must be
+edge-local because an isolatable global specialization is unavailable or
+output-changing, or the row-zero cofactors are incomparable.
+
 ## Model card
 
 | Field | Value |
