@@ -239,16 +239,18 @@ Adjacent collision-aware active branch:
                                 <- GATE-004BE (active smallest brick): one neutral clause lowers `N+r` by one
                                    - GATE-004BE-STRATUM-COUNTS-ONLY (no-go: integer pairs omit survival)
                                    + LEMMA-159 (global formula excess one is impossible when `sigma>=2`)
-                                   <- GATE-004BF (active smallest brick): prune the unicyclic parent
+                                   + GATE-004BF (proved: every unicyclic parent prunes)
                                       - GATE-004BF-RESIDUAL-LOCALITY-ONLY (no-go: one cofactor hides base support)
                                       + LEMMA-160 (zero/one cut dichotomy and exact regional NOT split)
-                                      <- GATE-004BG (active smallest brick): convert the split into survival
+                                      + GATE-004BG (proved: both partitions prune)
                                          - GATE-004BG-NOT-SPLIT-ONLY (no-go: regional counts omit gate functions)
                                          + LEMMA-161 (at most one hidden private NOT per external leaf)
                                          + GATE-004BG-NO-CUT (proved throughout the operational range)
-                                         <- GATE-004BI (active sole-cut brick)
+                                         + GATE-004BI (proved: neutralizing the cut destroys the cycle)
                                             + LEMMA-162 (proved when `j-1>h_Y+3`)
-                                            <- close the constant-width sole-cut boundary (next attack)
+                                            + LEMMA-163 (sole-cut upstream contains no base input)
+                                <- GATE-004BL (active smallest brick): prune higher-rank one-excess parents
+                                   <- generalize one-bit residual partitions to multiple cycle sources (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -884,7 +886,11 @@ and fixes the regional NOT counts. GATE-004BG must now turn that equality
 split into actual pruning. LEMMA-161 charges every nonprivate residual NOT to
 a distinct external leaf. This closes the no-cut branch throughout the
 operational range and, by LEMMA-162, the sole-cut branch whenever
-`j-1>h_Y+3`. GATE-004BI is the remaining constant-width sole-cut boundary.
+`j-1>h_Y+3`. LEMMA-163 closes the remaining sole-cut edge: any upstream base
+bit would create at least three residual functions, impossible through one
+bit. Neutralizing the cut makes `z` constant and destroys the cycle. Thus the
+entire rank-one parent is closed. GATE-004BL is now exactly the remaining
+rank-`r>=2` range of GATE-004BE.
 
 ### Parallel constructive audit: GATE-004AF
 

@@ -587,6 +587,10 @@
       "sha256": "c30a22abf56499ab10dc4e6e7bcca6a3de35fafe3e6091630922d4c819f5d837"
     },
     {
+      "path": "artifacts/cycle-133-sole-cut-closure.md",
+      "sha256": "d97b4bfff9c0e9c5e794e3a8d04ec2d7dc7b97c27c6c6bbbe8edc4eb36df11c1"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -612,7 +616,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2573d06bd1c02eb51ad6379b11285e0f5fde33709dfbb2f3586b48d83fdfce86"
+      "sha256": "a2d7c5846fd0c3f557f21a2dec65b651d946516f7b0795c74a4ad1e798294bd0"
     },
     {
       "path": "docs/problem-statement.md",
@@ -620,7 +624,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "b5ba9d22752d59f2a6174734e5e8098a8a8933b6e20b8ec17d6fd6d34e9ac3e8"
+      "sha256": "14172179ab33a7777db09c29d4581eb7c76baab45db8e4d606bdf9dfb4620e29"
     },
     {
       "path": "docs/result-labels.md",
@@ -732,11 +736,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "b8ccec5ac25c6a459d3fc6d816f433f04eb06a722a175dedb353ebd8062660ab"
+      "sha256": "05fda95b99a08917854bad6e1c3abf28d700d8f070e489c74cfd57e766c443c4"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f772f37b19be537c5ef17363f01747e9a371127c961e63e0cd9a63541981a776"
+      "sha256": "365ce8b10f7de71e931256eace20c6bcc826353225a282b0fb1a1cc5e9df639d"
     },
     {
       "path": "experiments/README.md",
@@ -1116,11 +1120,11 @@
     },
     {
       "path": "proofs/GATE-004BF-residual-locality-only.md",
-      "sha256": "84fc27cd3a7e31146398b7721ac797141fc2ff76be17ff00b7109384325d7b97"
+      "sha256": "270fa06ed3bc706b7fd3705b6352c3ecf1708be81bae7b4539d19e9adf21829a"
     },
     {
       "path": "proofs/GATE-004BF-unicyclic-parent-pruning.md",
-      "sha256": "638bf71f7c154091d8d042e7985edfda36ebe212f6a7eac8fc77e452efe0b595"
+      "sha256": "f88967b23f2c57281c8981958f4c73151156ed1e4e7aa56422e7bd26c78c6d04"
     },
     {
       "path": "proofs/GATE-004BG-no-cut.md",
@@ -1128,15 +1132,19 @@
     },
     {
       "path": "proofs/GATE-004BG-NOT-split-only.md",
-      "sha256": "c8a5c83f88461374d6fa90c1bb5816c9937c666f1db92e32bbd09e5a8aad8d1a"
+      "sha256": "dc470d0264763c8b3ba9f52f7feb356cc59881c0ac3f9a01a54116227ccbd820"
     },
     {
       "path": "proofs/GATE-004BG-unicyclic-split-survival.md",
-      "sha256": "648947beaf9613c9eafafbad38bc6c47f745108d64bdf36cdfa4e4d3267f16bc"
+      "sha256": "895df648ba1034c8211a6fa8d7e2fd2114d1536ba69137cdac28f5c7b1af951e"
     },
     {
       "path": "proofs/GATE-004BI-sole-cut-unicyclic-pruning.md",
-      "sha256": "41cb4c52db30bef03ec715c19b4248dc28af3412aa344f78e4c9d6415c224d98"
+      "sha256": "5409bb8e3cb47ceb22f76a49f6480b8ac991b2f4ea4db7122a00e883e7f10734"
+    },
+    {
+      "path": "proofs/GATE-004BL-higher-rank-one-excess-pruning.md",
+      "sha256": "7f9c0bd41eeb8cbbf9a3214035d5340332139f720bb0505c7b895a312d325374"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1947,8 +1955,12 @@
       "sha256": "2ed787e733152621b1bfb0999ee6f296684dc6459d103f6f7fa2b16a5e098171"
     },
     {
+      "path": "proofs/LEMMA-163-sole-cut-base-exclusion.md",
+      "sha256": "1dbae3c9079e668b0ac2ff3ec7c000c58346eba8ddfe25891196b30126b358db"
+    },
+    {
       "path": "README.md",
-      "sha256": "0038f6b8d9c4a2d75f5ea102bd604b6496c1f798f0f92aa9e7fe6747e39666f5"
+      "sha256": "3a8006f7f615faf73fbc710a2e65201d997f4f0e5fabdfc0bfdc60d764943cc9"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1960,7 +1972,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3e8533172051e38ddea5a59e0d8f039ed0b9fdfeadf6c5cb95b2bce36a983344"
+      "sha256": "6e6ed603f84af73d8b5ae6969bb928cc1f71b4747e53b1532b0ce2a12fff3831"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

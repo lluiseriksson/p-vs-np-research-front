@@ -37,4 +37,4 @@ use the unique-cycle wiring and all output paths.
 | Oracle access | None |
 | Field/algebraic model | Boolean cofactors and essential dependence only |
 | Asymptotic quantifiers | Every clause index and every nonconstant base mask with an attained zero |
-| Regime | Structural no-go for residual-locality-only lifting; GATE-004BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
+| Regime | Structural no-go for residual-locality-only lifting; GATE-004BF is later proved using LEMMA-160/163, while GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |

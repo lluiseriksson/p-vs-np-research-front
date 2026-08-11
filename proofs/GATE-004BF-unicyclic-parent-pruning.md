@@ -1,21 +1,22 @@
 # GATE-004BF — prune one resource from the unicyclic parent
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Assume `sigma>=2`, `Delta_j=sigma-1`, and let a minimum pruned circuit `C`
 for `J_j` have
 
 `N=j`, `r=1`.
 
-## Falsifiable theorem
+## Theorem
 
-Prove that some clause-neutral restriction `(u_i,t_i)=(0,1)` leaves a circuit
+Some clause-neutral restriction `(u_i,t_i)=(0,1)` leaves a circuit
 for `J_{j-1}` with
 
 `N+r<=j`.
 
-A compatible unicyclic minimum parent retaining all `j+1` resources under
-every neutral clause restriction falsifies the theorem.
+LEMMA-160 reduces every parent to the no-cut or sole-cut partition.
+GATE-004BG-NO-CUT proves the first, while LEMMA-163/GATE-004BI prove the
+second. Hence GATE-004BG and this gate are closed.
 
 ## Position in the active gate
 
@@ -43,4 +44,4 @@ neutralizing a clause deletes a NOT or breaks the unique cycle.
 | Oracle access | None |
 | Field/algebraic model | One-bit Boolean factorization and undirected cycle rank over `F_2` |
 | Asymptotic quantifiers | Every `j>=2` in the near-maximal unicyclic parent stratum with `sigma>=2` |
-| Regime | Falsifiable worst-case subgate of GATE-004BE; not full GATE-004BD/BA, a SAT lower bound, or a terminal result |
+| Regime | Exact worst-case unicyclic subgate of GATE-004BE; not higher-rank GATE-004BD/BA, a SAT lower bound, or a terminal result |

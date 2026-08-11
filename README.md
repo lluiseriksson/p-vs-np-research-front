@@ -1087,11 +1087,19 @@ count closes the complete no-cut branch: otherwise
 sole-cut branch whenever `j-1>h_Y+3`. GATE-004BI isolates the remaining
 constant-width sole-cut boundary.
 
+The one-hundred-and-thirty-third cycle closes that boundary without finite
+enumeration. LEMMA-163 proves that an upstream essential base bit would create
+at least three residual functions when combined with the cut-clause half,
+contradicting factorization through one bit. Hence neutralizing the cut makes
+the duplicated source constant and destroys the unique cycle. GATE-004BI,
+GATE-004BG, and GATE-004BF are promoted manually to `PROVED`. GATE-004BL now
+isolates the remaining one-excess parents of cycle rank at least two.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–132 close the standalone/extreme-deficit boundaries, classify one-excess residuals, close the unicyclic no-cut branch, and leave a constant-width sole-cut edge. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–133 close the standalone/extreme-deficit boundaries and the full rank-one one-excess parent, leaving rank at least two. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -1,18 +1,20 @@
 # GATE-004BI — prune the sole-cut unicyclic partition
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Assume the GATE-004BG parent is in LEMMA-160's sole-cut case. There are no
 upstream whole clauses, all `j-1` other clauses are downstream, and the
 upstream formula has at most one NOT.
 
-## Falsifiable theorem
+## Theorem
 
-In the operational range `j>K+sigma-1`, prove that some neutral clause
-restriction leaves `N+r<=j`.
+The neutral restriction of the unique cut clause leaves `N+r<=j`.
 
-A compatible minimum sole-cut unicyclic parent preserving all resources under
-every neutral clause restriction falsifies the theorem.
+LEMMA-163 proves that no essential base input lies upstream. LEMMA-160 already
+excludes upstream whole clauses. Thus the upstream formula depends only on the
+upstream half of the cut clause. Neutralizing the cut clause makes `z`
+constant, destroys the unique cycle, and cannot create a NOT. The parent
+resource total falls from `j+1` to at most `j`.
 
 ## Remaining quantitative edge
 
@@ -42,4 +44,4 @@ external leaf.
 | Oracle access | None |
 | Field/algebraic model | Boolean cofactors, formula external-leaf defects, and undirected cycle rank over `F_2` |
 | Asymptotic quantifiers | Every `sigma>=2` and `j>K+sigma-1` in the sole-cut stratum |
-| Regime | Falsifiable worst-case remaining branch of GATE-004BG; not full GATE-004BE/BD/BA, a SAT lower bound, or terminal result |
+| Regime | Exact worst-case closure of the sole-cut branch of GATE-004BG; not higher-rank GATE-004BE/BD/BA, a SAT lower bound, or terminal result |

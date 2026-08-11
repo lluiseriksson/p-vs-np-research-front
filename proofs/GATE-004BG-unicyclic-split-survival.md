@@ -1,18 +1,18 @@
 # GATE-004BG — turn the unicyclic NOT split into clause pruning
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Use LEMMA-120 to factor a GATE-004BF parent through its unique duplicated bit,
 and use LEMMA-160 to enter either the no-cut or sole-cut tail partition.
 
-## Falsifiable theorem
+## Theorem
 
-Prove that in each permitted partition, some neutral clause restriction
-deletes at least one of the exactly allocated NOT occurrences or breaks the
-unique cycle, leaving `N+r<=j`.
+In each permitted partition, some neutral clause restriction deletes an
+allocated NOT or breaks the unique cycle, leaving `N+r<=j`.
 
-A compatible minimum unicyclic parent realizing either partition while every
-neutral clause preserves all `j` NOT/cycle resources falsifies the theorem.
+GATE-004BG-NO-CUT proves the no-cut case throughout the operational range.
+LEMMA-163 and GATE-004BI prove the sole-cut case by neutralizing the cut
+clause and making the duplicated source bit constant.
 
 ## Exact remaining cases
 
@@ -39,4 +39,4 @@ cycle.
 | Oracle access | None |
 | Field/algebraic model | Boolean cofactors and undirected cycle rank over `F_2` |
 | Asymptotic quantifiers | Every `j>=2` in either LEMMA-160 partition case |
-| Regime | Falsifiable worst-case equivalent refinement of GATE-004BF; not full GATE-004BE/BD/BA, a SAT lower bound, or a terminal result |
+| Regime | Exact worst-case closure of the unicyclic partitions in GATE-004BF; not higher-rank GATE-004BE/BD/BA, a SAT lower bound, or a terminal result |
