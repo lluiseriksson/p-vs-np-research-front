@@ -2647,3 +2647,24 @@ promise, distribution, or algebraic computation beyond cycle space over
 `F_2`. This is not a plateau counterexample. It closes full-table/signature-
 only inference and leaves GATE-004CF to use the exact two-binary-deletion
 budget or obtain a private certificate.
+
+## NG-131 — charge cancellation fronts injectively to eliminations
+
+**Label: NO-GO**
+
+Scope: count distinct first `01/11` cancellation gates or reconvergence cycles
+and assign a different binary neutralization event to each.
+
+Failure: for every `m`, LEMMA-186 uses one multiplexer signal `p` with
+`p_01=x`, `p_11=y`, stable masks
+`q_i=(x XOR y) OR z_i`, and live fronts `d_i=p OR q_i`. Every `d_i` has equal
+satisfying cofactors and remains essential in an AND-tree output, but all
+incoming differences equal the single function `x XOR y`. Arbitrarily many
+fronts can therefore be fanout copies of one semantic obligation.
+
+Model: uniform `O(m)`-size non-uniform AND/OR/NOT family; unrestricted target
+depth/fanout, fan-in two/one; no minimum or plateau claim, randomness, advice,
+oracle, promise, distribution, or algebraic computation beyond the Boolean
+function vector space over `F_2`. This is not a plateau counterexample. It
+closes front-count-only charging and leaves GATE-004CG to prove three event-
+separated path regions using minimum-parent structure.

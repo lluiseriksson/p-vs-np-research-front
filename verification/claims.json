@@ -5490,7 +5490,31 @@
       "computational_model": "Minimum unrestricted plateau DAG with named shared-exit cycle and exact restriction/pruning reductions", "uniformity": "Every individual non-uniform operational GATE004CE parent; uniform fresh implication pair",
       "circuit_size": "Three required eliminations, forbidden non-bridge deletion within a two-gate budget, or same-size private descent", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor signatures and undirected cycle minors over F_2",
       "asymptotic_quantifiers": "Every operational shared-exit plateau parent and every reduction under each satisfying code", "case_regime": "Exact worst-case deletion-budget gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CF-two-deletion-cycle-core.md; proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md; artifacts/cycle-152-four-code-kernel-audit.md"
+      "evidence": "proofs/GATE-004CF-two-deletion-cycle-core.md; proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md; proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; proofs/GATE-004CG-three-region-neutralization-separator.md; artifacts/cycle-153-front-rank-audit.md"
+    },
+    {
+      "id": "LEMMA186", "label": "PROVED",
+      "statement": "For every positive m, a live AND/OR/NOT DAG can have m distinct first cancellation fronts whose incoming Boolean differences span dimension one.",
+      "computational_model": "Explicit finite AND/OR/NOT DAG with arbitrary live fanout multiplicity", "uniformity": "Uniform construction for every integer m at least one; no minimum-parent claim",
+      "circuit_size": "O(m) gates; m fronts but Boolean-difference span exactly one", "circuit_depth": "Unrestricted target; logarithmic output-tree depth plus constant local depth in the construction", "fan_in": "AND/OR two; NOT one; fanout of the varying signal is m", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean functions as an F_2 vector space under pointwise XOR",
+      "asymptotic_quantifiers": "Every positive integer m and every assignment to the displayed inputs", "case_regime": "Exact structural multiplicity theorem; not a deletion lower bound, plateau realization, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; artifacts/cycle-153-front-rank-audit.md"
+    },
+    {
+      "id": "GATE004CF-FRONT-COUNT-ONLY", "label": "NO-GO",
+      "statement": "Cancellation-front or reconvergence-cycle multiplicity does not charge injectively to distinct binary neutralization events.",
+      "computational_model": "Unrestricted AND/OR/NOT fanout DAGs compared with plateau deletion accounting", "uniformity": "Uniform finite counterfamily for every front multiplicity; no minimum-parent claim",
+      "circuit_size": "Arbitrarily many fronts with one-dimensional difference span; no deletion lower bound", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean difference functions over F_2 and undirected reconvergence cycles",
+      "asymptotic_quantifiers": "Every positive number of cancellation fronts in the explicit family", "case_regime": "Structural no-go for front-count-only charging; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CF-front-count-only.md; proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; docs/no-go-ledger.md NG-131; artifacts/cycle-153-front-rank-audit.md"
+    },
+    {
+      "id": "GATE004CG", "label": "EXPLORATORY",
+      "statement": "Some satisfying restriction separates the t, earliest-mixed-NOT, and shared-exit obligations into three regions that no rank-neutral event covers twice, or yields a private or non-bridge contradiction.",
+      "computational_model": "Minimum unrestricted plateau DAG with earliest mixed NOT, shared-exit cycle, and exact pruning events", "uniformity": "Every individual non-uniform operational GATE004CF parent; uniform fresh implication pair",
+      "circuit_size": "Three event-disjoint obligations versus exactly two binary eliminations, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor obligations and undirected cycle minors over F_2",
+      "asymptotic_quantifiers": "Every operational shared-exit plateau parent and every minimum satisfying pruning", "case_regime": "Exact worst-case neutralization-separator gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CG-three-region-neutralization-separator.md; proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; artifacts/cycle-153-front-rank-audit.md"
     }
   ]
 }

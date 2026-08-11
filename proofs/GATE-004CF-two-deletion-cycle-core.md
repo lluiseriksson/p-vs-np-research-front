@@ -28,6 +28,12 @@ The proof must use the minimum-parent deletion budget. The full four-code
 table and cancellation signatures without that budget are insufficient by
 GATE-004CE-FOUR-CODE-SIGNATURES-ONLY.
 
+LEMMA-186 shows that even arbitrarily many live cancellation fronts may carry
+only one independent Boolean difference, so front counting is not a deletion
+lower bound (GATE-004CF-FRONT-COUNT-ONLY). GATE-004CG isolates the missing
+minimum-parent statement: separate the `t`, earliest-NOT, and shared-exit
+obligations into three regions that no rank-neutral event covers twice.
+
 ## Model card
 
 | Field | Value |

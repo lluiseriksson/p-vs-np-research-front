@@ -311,6 +311,9 @@ Adjacent collision-aware active branch:
                                                                                    + LEMMA-185 (two satisfying losses are binary and rank-neutral)
                                                                                    - GATE-004CE-FOUR-CODE-SIGNATURES-ONLY (no-go: exact table can retain cycle)
                                                                                    <- GATE-004CF (active smallest brick): exceed two deletions or expose a noncontractible edge
+                                                                                      + LEMMA-186 (arbitrarily many fronts can have signature rank one)
+                                                                                      - GATE-004CF-FRONT-COUNT-ONLY (no-go: fronts do not charge injectively)
+                                                                                      <- GATE-004CG (active smallest brick): separate three neutralization regions
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1073,6 +1076,14 @@ cancellation fronts and a cycle surviving all satisfying codes (NG-130); it
 is not minimum. GATE-004CF is the active minimum-structure gate: force a third
 elimination or a genuinely noncontractible cycle-edge deletion within the
 two-gate budget, unless the private certificate exists.
+
+LEMMA-186 blocks the naive deletion count: arbitrarily many live first
+cancellation fronts can all carry the same Boolean difference, so their
+signature span has dimension one. Assigning one deletion per front is NG-131.
+GATE-004CG is the active refinement: define path-level obligations for raw
+`t`, the earliest mixed NOT, and the shared exit, then prove that no one rank-
+neutral contraction event covers two of their regions unless it yields the
+private certificate or a forbidden non-bridge deletion.
 
 ### Parallel constructive audit: GATE-004AF
 
