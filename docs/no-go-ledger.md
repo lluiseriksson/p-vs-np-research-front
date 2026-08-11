@@ -1969,3 +1969,23 @@ conjoined with `m` disjoint four-positive/one-negative clauses; unrestricted
 depth and fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice,
 oracle, promise, distribution, or algebraic circuit model. The standalone
 promotion is closed; GATE-004AG/AE and every SAT/terminal bridge remain open.
+
+## NG-098 — infer a pure-base bottleneck from disjoint supports alone
+
+**Label: NO-GO**
+
+Scope: from freshness and disjointness of the base variables `X` and tail
+variables `Y`, assert that some minimum circuit for `H(X) AND W_m(Y)` has one
+pure-base gate through which every essential base-to-output path passes.
+
+Failure: unrestricted binary gates may mix `X` and `Y` before the output,
+fan out into several mixed regions, and reconverge. Disjoint primary supports
+do not imply a directed one-vertex separator, and pruning supplies no
+size-nonincreasing uncrossing transformation. Assuming the separator invokes
+the conclusion of GATE-004AT.
+
+Model: minimum unrestricted non-uniform base-tail circuit DAGs; disjoint
+primary input supports; unrestricted depth and fanout; AND/OR fan-in two and
+NOT fan-in one; no randomness, advice, oracle, promise, distribution, or
+algebraic circuit model. Support-only separation is closed; canonical-row or
+uncrossing GATE-004AT and GATE-004AG/AE remain open.

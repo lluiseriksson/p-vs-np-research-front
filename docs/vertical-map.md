@@ -193,7 +193,11 @@ Adjacent collision-aware active branch:
                        + LEMMA-140 (exact standalone `C(W_m)=(p+2)m-1`)
                        + LEMMA-141 (full Hall for every subset and spanning tree)
         - GATE-004AG-STANDALONE-WM-ONLY (no-go: standalone exactness is not base additivity)
-        <- base-tail additivity or semantic-quotient survival (next attackable brick)
+        + LEMMA-142 (exact positive/negative enabled-tail costs)
+        + LEMMA-143 (conditional: pure-base bottleneck implies exact additivity)
+        <- GATE-004AT (active base-tail topology brick): obtain the bottleneck canonically
+           - GATE-004AT-DISJOINT-SUPPORT-ONLY (no-go: fresh supports do not force a separator)
+           <- canonical-row separator or size-nonincreasing uncrossing theorem (next brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

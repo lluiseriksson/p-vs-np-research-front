@@ -75,6 +75,15 @@ positive-rank residual selected polarity of `W_{m-1}` needs at least
 
 Both core cases prove `q>=m-r+1` for rank `r`, completing the induction.
 
+## Heterogeneous-clause corollary
+
+The proof uses only that the clauses are variable-disjoint and each contains
+exactly one negative literal. Their numbers of positive literals need not be
+equal. LEMMA-121's cofactor proof and LEMMA-119's formula inversion proof
+apply verbatim because both count clauses, not clause widths. Consequently the
+same bound holds for a product of `m` disjoint clauses with arbitrary positive
+widths `p_i>=0`.
+
 ## Model card
 
 | Field | Value |
@@ -88,5 +97,5 @@ Both core cases prove `q>=m-r+1` for rank `r`, completing the induction.
 | Advice | None |
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle rank over `F_2`, vertex sums, and Boolean cofactor partitions |
-| Asymptotic quantifiers | Every fixed `p>=1`, every `m>=1`, every integer `r>=0`, and every pruned circuit of exact rank `r` |
+| Asymptotic quantifiers | Every `m>=1`, every disjoint one-negative clause family with arbitrary fixed positive widths, every `r>=0`, and every pruned circuit of exact rank `r` |
 | Regime | Exact worst-case function-specific tradeoff; not additivity over an external base, a SAT lower bound, or a terminal result |

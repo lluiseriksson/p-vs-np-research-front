@@ -929,11 +929,19 @@ base-tail conjunction: GATE-004AG-STANDALONE-WM-ONLY records that doing so
 would assume the missing direct sum or semantic-quotient survival theorem.
 GATE-004AG/AE and all SAT/terminal lower bounds remain open.
 
+The one-hundred-and-fourteenth cycle isolates a falsifiable base-tail topology
+gate. LEMMA-142 computes both enabled-tail costs exactly, including the extra
+gate needed when the separator encodes `NOT H`. LEMMA-143 conditionally proves
+the required `K+6m` lower bound from a pure-base one-vertex bottleneck.
+GATE-004AT asks for that bottleneck in some minimum canonical circuit.
+Disjoint supports alone are `NO-GO`; a canonical-row separator or a
+size-nonincreasing uncrossing theorem is the next brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 113 closes the all-rank standalone `W_m` tradeoff and full dependency Hall. Formal foundations, independent mathematical review, and base-tail/SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 113 closes the all-rank standalone `W_m` tradeoff; Cycle 114 isolates the pure-base bottleneck gate without assuming it. Formal foundations, independent mathematical review, and base-tail/SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

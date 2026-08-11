@@ -4513,15 +4513,15 @@
       "statement": "A rank-r circuit computing either polarity of W_m has at least m-max(r-1,0) NOT gates.",
       "computational_model": "Pruned unrestricted AND/OR/NOT circuits, undirected 2-cores, block-cut trees, and one-bit cofactors", "uniformity": "Every individual non-uniform circuit for either polarity of W_m",
       "circuit_size": "NOT lower m-max(r-1,0) at exact cycle rank r; binary count otherwise unrestricted", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2, vertex sums, and Boolean cofactor partitions",
-      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, every r at least zero, and every pruned circuit of exact rank r", "case_regime": "Exact worst-case function-specific tradeoff; not external-base additivity, a SAT lower bound, or a terminal result",
+      "asymptotic_quantifiers": "Every disjoint one-negative clause family with arbitrary fixed positive widths, every r at least zero, and every pruned circuit of exact rank r", "case_regime": "Exact worst-case function-specific tradeoff; not external-base additivity, a SAT lower bound, or a terminal result",
       "evidence": "proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
       "id": "LEMMA140", "label": "PROVED",
-      "statement": "The unrestricted De Morgan circuit size of W_m is exactly (p+2)m-1.",
+      "statement": "The unrestricted De Morgan circuit size of W_m is exactly (p+2)m-1, with the stated heterogeneous one-negative-clause extension.",
       "computational_model": "Unrestricted pruned De Morgan circuits for a disjoint fixed-sign clause product", "uniformity": "Every individual non-uniform circuit; uniform explicit function family",
       "circuit_size": "Exact (p+2)m-1; for p=4 exact 6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean cofactor partitions",
-      "asymptotic_quantifiers": "Every fixed p at least one and every m at least one", "case_regime": "Exact worst-case standalone size; not a direct sum, SAT lower bound, or terminal result",
+      "asymptotic_quantifiers": "Every disjoint one-negative clause family; fixed-width W_m is the uniform special case", "case_regime": "Exact worst-case standalone size; not a direct sum, SAT lower bound, or terminal result",
       "evidence": "proofs/LEMMA-140-exact-circuit-size-of-Wm.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
@@ -4539,6 +4539,38 @@
       "circuit_size": "Standalone exact C(W_m)=(p+2)m-1; no proved additive lower for C(H AND W_m)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits and semantic quotients; no algebraic circuit model",
       "asymptotic_quantifiers": "Every canonical base-tail instance in GATE004AG and every minimum circuit for its conjunction", "case_regime": "Structural no-go for standalone-to-direct-sum promotion; GATE004AG remains open",
       "evidence": "proofs/GATE-004AG-standalone-Wm-only.md; docs/no-go-ledger.md NG-097; artifacts/cycle-113-general-rank-tradeoff-audit.md"
+    },
+    {
+      "id": "LEMMA142", "label": "PROVED",
+      "statement": "A fresh positive enable bit gives C(z AND W_m)=(p+2)m, while a negative enable bit gives C(NOT z AND W_m)=(p+2)m+1.",
+      "computational_model": "Minimum unrestricted De Morgan circuits for fresh positive or negative enable bits conjoined with W_m", "uniformity": "Every individual non-uniform circuit; uniform explicit function families",
+      "circuit_size": "Exact (p+2)m for positive enable and (p+2)m+1 for negative enable", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction, gate elimination, and heterogeneous clause exactness",
+      "asymptotic_quantifiers": "Every fixed p at least one and every m at least one", "case_regime": "Exact worst-case enabled-tail size; not external-base additivity, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-142-enabled-tail-exact-size.md; proofs/LEMMA-140-exact-circuit-size-of-Wm.md; artifacts/cycle-114-base-tail-bottleneck-audit.md"
+    },
+    {
+      "id": "LEMMA143", "label": "CONDITIONAL",
+      "statement": "A pure-base one-vertex bottleneck in a circuit for H AND W_m implies the additive lower K+(p+2)m.",
+      "computational_model": "Minimum unrestricted base-tail circuits with a pure-base one-vertex functional separator", "uniformity": "Fully non-uniform base and circuit; uniform disjoint tail family",
+      "circuit_size": "Conditional lower K+(p+2)m matching the displayed upper bound", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and directed vertex separation",
+      "asymptotic_quantifiers": "Every nonconstant finite H, every m,p at least one, and every circuit satisfying the three separator conditions", "case_regime": "Conditional base-tail direct sum; the separator premise and terminal bridges remain unproved",
+      "evidence": "proofs/LEMMA-143-pure-base-bottleneck-implication.md; proofs/LEMMA-142-enabled-tail-exact-size.md; artifacts/cycle-114-base-tail-bottleneck-audit.md"
+    },
+    {
+      "id": "GATE004AT", "label": "EXPLORATORY",
+      "statement": "Some minimum circuit for the canonical base-tail function has the pure-base bottleneck required by LEMMA143.",
+      "computational_model": "Minimum unrestricted circuits for the canonical base conjoined with fresh disjoint one-negative clauses", "uniformity": "Uniform canonical instance; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Separator would prove exact K+6m and the displayed 7m tail quotient for p=4", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed vertex separators and Boolean cofactors",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and at least one of its minimum circuits", "case_regime": "Exact canonical base-tail gate; not arbitrary direct sum, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004AT-canonical-pure-base-bottleneck.md; proofs/LEMMA-143-pure-base-bottleneck-implication.md; artifacts/cycle-114-base-tail-bottleneck-audit.md"
+    },
+    {
+      "id": "GATE004AT-DISJOINT-SUPPORT-ONLY", "label": "NO-GO",
+      "statement": "Fresh disjoint base and tail supports do not force a pure-base one-vertex separator in an unrestricted circuit DAG.",
+      "computational_model": "Unrestricted base-tail circuit DAGs with disjoint primary-input supports", "uniformity": "Every individual non-uniform circuit; support-only method audit",
+      "circuit_size": "No additive lower bound and no proved separator from disjointness alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed graph separation only; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every disjoint pair of base-tail variable sets and every unrestricted circuit for their conjunction", "case_regime": "Structural no-go for support-only separation; GATE004AT/AG/AE remain open",
+      "evidence": "proofs/GATE-004AT-disjoint-support-only.md; docs/no-go-ledger.md NG-098; artifacts/cycle-114-base-tail-bottleneck-audit.md"
     }
   ]
 }

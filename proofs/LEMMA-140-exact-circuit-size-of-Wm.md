@@ -36,6 +36,16 @@ The theorem concerns `W_m` alone. It does not prove that adjoining these
 clauses to an arbitrary base circuit costs additively, nor that their semantic
 quotient classes survive minimization.
 
+More generally, for `m` variable-disjoint clauses having one negative literal
+and respective positive widths `p_i>=0`, the heterogeneous corollary of
+LEMMA-139 gives exact size
+
+`sum_i p_i + 2m - 1`.
+
+Indeed there are `m+sum_i p_i` essential inputs, the rank identity fixes the
+binary count, and the displayed clause product uses `m` NOT gates. This
+includes a unit clause `NOT z` when `p_i=0`.
+
 ## Model card
 
 | Field | Value |
@@ -49,5 +59,5 @@ quotient classes survive minimization.
 | Advice | None |
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle rank over `F_2` and Boolean cofactor partitions |
-| Asymptotic quantifiers | Every fixed `p>=1` and every `m>=1` |
+| Asymptotic quantifiers | Every `m>=1` and every disjoint one-negative clause family; fixed-width `W_m` is the uniform special case |
 | Regime | Exact worst-case standalone size; not a direct sum, SAT lower bound, or terminal result |
