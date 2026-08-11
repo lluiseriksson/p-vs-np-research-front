@@ -265,6 +265,9 @@ Adjacent collision-aware active branch:
                                       + GATE-004BP-NONTRIVIAL-SOURCE (proved: a minimum counterexample source is primary)
                                       - GATE-004BP-BASE-COUNT-INDUCTION-ONLY (no-go: primary compression is renaming)
                                       <- GATE-004BQ (active smallest brick): prune a primary base core source
+                                         + LEMMA-171 (fixing a degree-`d` primary formula interface hides at most `d` private NOTs)
+                                         + GATE-004BQ-FORMULA-RESIDUAL (proved for rank one and `r=2,d=3`)
+                                         <- GATE-004BR (active smallest brick): degree-two primary source with cyclic residual
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -920,6 +923,12 @@ while all lower-resource compressed cases descend. Primary-input compression
 is only a renaming, so base-arity induction is `NO-GO` at that boundary.
 GATE-004BQ is now the active brick and must use the two primary-input
 cofactors or the actual pair of outgoing core paths.
+
+LEMMA-171 handles the cases in which deleting that primary source leaves a
+formula: fixing its `d` unfolded occurrences can hide at most `d`
+clause-private NOTs. The operational margin gives `j>=5`, so a private clause
+survives for `r=1,d=2` and `r=2,d=3`. GATE-004BQ-FORMULA-RESIDUAL closes both.
+GATE-004BR is the remaining degree-two source with positive residual rank.
 
 ### Parallel constructive audit: GATE-004AF
 

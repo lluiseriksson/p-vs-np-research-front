@@ -15,9 +15,10 @@ The factorization is
 `H(x,Y)W_j(T)=F(x,Y,T)`
 
 with two possibly distinct nonzero base cofactors. Replacing `x` by a fresh
-input is only a renaming, so the next proof must exploit the two outgoing core
-paths, compare the `x=0,1` cofactors, or locate a tail-private resource after
-the primary split.
+input is only a renaming. LEMMA-171 and GATE-004BQ-FORMULA-RESIDUAL prove the
+theorem when fixing `x` leaves rank zero, covering rank one and the exceptional
+`r=2,d=3` case. GATE-004BR is the sole remainder: `d=2` and positive residual
+rank.
 
 ## Model card
 

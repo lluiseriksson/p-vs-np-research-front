@@ -1125,11 +1125,18 @@ must therefore have a primary base-input source. Arity induction alone is
 `NO-GO` there because compression becomes a variable renaming. GATE-004BQ is
 the active cofactor/path boundary.
 
+The one-hundred-and-thirty-eighth cycle closes the acyclic side of that
+boundary. LEMMA-171 shows that a degree-`d` primary formula interface can hide
+at most `d` tail-private NOTs. Since the operational descent has `j>=5`, this
+proves GATE-004BQ-FORMULA-RESIDUAL for rank one and for `r=2,d=3`.
+GATE-004BR is now the sole remainder: a degree-two primary source with a
+cyclic residual.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–137 reduce the two-excess remainder to a primary base-input cycle source. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–138 reduce the two-excess remainder to a degree-two primary source with cyclic residual. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

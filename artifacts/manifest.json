@@ -607,6 +607,10 @@
       "sha256": "336d86730bf7a1f5f6551087680c6b93375e0c2d0847c220fb698153059f530d"
     },
     {
+      "path": "artifacts/cycle-138-primary-formula-interface.md",
+      "sha256": "5629e07722372c97bab2e2e7e2641f2dee6e57ad146e90be6f5b87d87ea59f2c"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -640,7 +644,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "309ee4947ea1eff19e3778a38bd40641fcfc681b48f0859cd8409aee9c58780b"
+      "sha256": "0707ad18c1c7dcbb7c25a141343a1dca8e82b4753ba2a89bf30206bd5ac09ed3"
     },
     {
       "path": "docs/result-labels.md",
@@ -752,11 +756,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "d2b22aa8084b995fcabf0286b895e020e0cc412c916f238fcb7b3372f7c6e6fa"
+      "sha256": "191b3beae8e51f0a7b4794b45a0d387ec21f1f3a42b448cf48356226c163a733"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "cccdca271bb09fec1723521870c7d17b9e0d9abc35916012246cb70e2426364a"
+      "sha256": "ed51fd872f3682d5a45ff0c95dcc2ebb4abb39eb6ce43171014fd79e56e32a31"
     },
     {
       "path": "experiments/README.md",
@@ -1191,8 +1195,16 @@
       "sha256": "b2442e2d2d7b25b1a4b5e98b6674583655bfacd0d5006702576c02da830a0d23"
     },
     {
+      "path": "proofs/GATE-004BQ-formula-residual.md",
+      "sha256": "8a1dc057083be181cde4f564c491068455941ac572f2781f69b47ff8b0fd9516"
+    },
+    {
       "path": "proofs/GATE-004BQ-primary-base-core-source.md",
-      "sha256": "e92a6d0fc9168cad90f0707b84f7acfe27c538f6eae73db4d94330caa666290a"
+      "sha256": "a0d05d200e6eeda85c164b0430e3d3a9e4b73c0df75c48aad3f18723b578ab69"
+    },
+    {
+      "path": "proofs/GATE-004BR-degree-two-primary-source.md",
+      "sha256": "d6f5831f0b523f12ea89753a99bbccab20bb2950eda4a9e5d1c460c17906fbaa"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2035,8 +2047,12 @@
       "sha256": "f7ff2cd146a72a45abb446aeeccb99fb5ea44c731a89ffc0e5674e10a6b967ff"
     },
     {
+      "path": "proofs/LEMMA-171-primary-interface-formula-defect.md",
+      "sha256": "2f4353b695df1de26e2edbe29cc9b6a6f8d7ed6359369f49636a949a7712c6c4"
+    },
+    {
       "path": "README.md",
-      "sha256": "1f7ac9ab64bb95422457f89cc9381655e4981a48504295c33a8ed7d8d896f956"
+      "sha256": "7f7a8a8e44b11e99811ce8200a994deb4159de964592a025dce3a3510b187557"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2048,7 +2064,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "6b0d288b48d21f04ec88680962698b5589ede72305305c5d30c5e21d8b0764b9"
+      "sha256": "7d6b13fac873f41b075385aba6b27a1a8e02243ca0f68eef36380cdfaf661575"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

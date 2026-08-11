@@ -5122,7 +5122,31 @@
       "computational_model": "Minimum pruned two-excess implication circuits whose selected core source is a primary base input", "uniformity": "Every minimum-arity non-uniform candidate; uniform symmetric tail",
       "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary-input fanout at least two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Two Boolean base cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every j at least two, sigma at least three, and minimum-arity GATE004BP candidate", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BP; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BQ-primary-base-core-source.md; proofs/GATE-004BP-nontrivial-source-reduction.md; artifacts/cycle-137-base-source-compression.md"
+      "evidence": "proofs/GATE-004BQ-primary-base-core-source.md; proofs/GATE-004BQ-formula-residual.md; proofs/GATE-004BR-degree-two-primary-source.md; artifacts/cycle-138-primary-formula-interface.md"
+    },
+    {
+      "id": "LEMMA171", "label": "PROVED",
+      "statement": "Fixing d unfolded occurrences of a primary formula interface can hide at most d tail-private NOT gates.",
+      "computational_model": "Fanout-one AND/OR/NOT formulas with repeated occurrences of one primary interface input", "uniformity": "Every individual non-uniform formula; uniform symmetric implication tail",
+      "circuit_size": "At least j-d parent-private tail NOTs after fixing d interface leaves", "circuit_depth": "Unrestricted formula depth", "fan_in": "AND/OR two; NOT one; fanout one after interface unfolding", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Formula-tree ancestry and Boolean cofactors only",
+      "asymptotic_quantifiers": "Every j at least one, d at least one, and attained nonzero base cofactor satisfying the premise", "case_regime": "Exact worst-case external-interface defect theorem; not a cyclic-residual, SAT-lower-bound, or terminal result",
+      "evidence": "proofs/LEMMA-171-primary-interface-formula-defect.md; proofs/LEMMA-161-external-leaf-defect-bound.md; artifacts/cycle-138-primary-formula-interface.md"
+    },
+    {
+      "id": "GATE004BQ-FORMULA-RESIDUAL", "label": "PROVED",
+      "statement": "Every operational primary-source parent prunes when fixing the source leaves cycle rank zero.",
+      "computational_model": "Minimum pruned two-excess implication circuits with a primary base source and acyclic fixed-source residual", "uniformity": "Every individual non-uniform operational parent; uniform symmetric tail",
+      "circuit_size": "Parent N+r=j+2; restricted target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source degree two or three", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Formula external-leaf defects and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational j greater than K+sigma-2, sigma at least three, and primary-source parent with zero residual rank", "case_regime": "Exact worst-case subgate of GATE004BQ; cyclic degree-two residuals remain open; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BQ-formula-residual.md; proofs/LEMMA-171-primary-interface-formula-defect.md; artifacts/cycle-138-primary-formula-interface.md"
+    },
+    {
+      "id": "GATE004BR", "label": "EXPLORATORY",
+      "statement": "A neutral tail restriction prunes one resource from a degree-two primary base source whose fixed-source residual remains cyclic.",
+      "computational_model": "Minimum pruned two-excess implication circuits with a degree-two primary base source and positive residual rank", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
+      "circuit_size": "Exact parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Two Boolean cofactors, common cyclic downstream graph, and cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational j greater than K+sigma-2, sigma at least three, and remaining parent with rank at least two and source degree two", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BQ; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BR-degree-two-primary-source.md; proofs/GATE-004BQ-formula-residual.md; artifacts/cycle-138-primary-formula-interface.md"
     }
   ]
 }
