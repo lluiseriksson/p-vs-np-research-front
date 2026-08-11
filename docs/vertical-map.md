@@ -330,6 +330,9 @@ Adjacent collision-aware active branch:
                                                                                                      - GATE-004CK-SIZE-TWO-TOPOLOGY-ONLY (no-go: topology/table are realizable)
                                                                                                      + GATE-004CL / LEMMA-192 (proved: plateau carrier size is at least three)
                                                                                                      <- GATE-004CM (active smallest brick): classify carrier sizes three through seven
+                                                                                                        + LEMMA-193 (size three alternates and exhausts a neutral deletion budget)
+                                                                                                        - GATE-004CM-SIZE-THREE-LOCAL-ONLY (no-go: local chain is realizable)
+                                                                                                        <- GATE-004CN (active smallest brick): cross-code fanout exclusion
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1132,6 +1135,12 @@ it costs six new gates and supplies no plateau. LEMMA-192 closes GATE-004CL:
 canonicity would force a direct raw-`u` input to `h` in a two-gate carrier,
 contradicting LEMMA-179. Thus the conditional range is `3<=|H|<=7`.
 GATE-004CM is the active symbolic classification of those remaining sizes.
+
+LEMMA-193 resolves the topology at size three: the carrier is an alternating
+AND→OR or OR→AND chain, and the neutral satisfying code(s) spend both losses
+on its two binary gates. An explicit equalized local gadget realizes this
+signature (NG-137), so local alternation alone is insufficient. GATE-004CN is
+the active refinement: audit every fanout exit and all cross-code pruning maps.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

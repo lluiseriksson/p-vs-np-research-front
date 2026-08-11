@@ -2772,3 +2772,21 @@ Model: uniform six-gate non-uniform AND/OR/NOT extension of every finite base;
 unrestricted base depth and fanout, fan-in two/one; no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation; exact
 worst-case construction, not a SAT lower bound or terminal result.
+
+## NG-137 — contradict the size-three carrier from local alternation
+
+**Label: NO-GO**
+
+Scope: infer that the AND→OR or OR→AND chain and its two-gate neutral
+contraction are locally impossible.
+
+Failure: `g=u AND x`, `h=g OR y`, `n=NOT h`, `d=h OR n` has canonical
+`01/11` carrier exactly `{g,h,n}` and binary equal boundary `d=1`. At `u=0`,
+`g,h` contract while `n=NOT y` remains nonconstant. Boolean duality gives the
+OR→AND case. This is a constant-size local non-uniform gadget, not the full
+`A,A,0,A` table, a minimum circuit, or a plateau. It closes local-chain-only
+reasoning and leaves GATE-004CN to use every fanout exit and cross-code pruning.
+
+Model: explicit constant-depth AND/OR/NOT gadget; fan-in two/one and arbitrary
+ambient fanout; no randomness, advice, oracle, promise, distribution, field,
+or algebraic computation; every assignment to `u,x,y`; not a terminal result.

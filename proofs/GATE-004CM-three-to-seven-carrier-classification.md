@@ -27,6 +27,11 @@ The proof must begin with carrier size three and retain the identity of the
 predecessor on the raw-`u` to `h` path. A finite unlabeled graph enumeration
 does not prove the Boolean cases.
 
+LEMMA-193 classifies size three as an alternating AND→OR or OR→AND chain and
+identifies the neutral deletion pair exactly. The local pattern is realizable
+and hence not itself contradictory. GATE-004CN is the active cross-code fanout
+exclusion for this first remaining size.
+
 ## Model card
 
 | Field | Value |
