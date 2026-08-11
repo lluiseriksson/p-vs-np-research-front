@@ -1382,11 +1382,18 @@ counterflow semantics alone do not force this basis-one certificate
 (NG-153). GATE-004DD now asks minimum joint cost or exact pruning to pay for
 the first missing independent factor, while retaining the incomparable branch.
 
+The one-hundred-and-seventy-seventh cycle proves a paid basis-two rewrite when
+the counterflow input gate has fanout one and the inner replacement factor is
+aligned on both fresh inputs. A six-input witness with boundary output
+`xyz OR w` shows that comparability does not force basis radius two (NG-154).
+GATE-004DE retains deep or unaligned factors, raw/shared counterflow inputs,
+and incomparable erasure.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–176 exclude isolated parent-preserving specialization and free basis-one boundary rewrites; paying for a missing independent factor, incomparable erasure, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–177 exclude isolated specialization and free basis-one/aligned-inner basis-two boundary rewrites; deep/shared factor payment, incomparable erasure, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

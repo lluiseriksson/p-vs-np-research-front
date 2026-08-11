@@ -1282,6 +1282,12 @@ Comparability does not force this certificate (NG-153). GATE-004DD is the
 active residual brick: minimum joint cost or exact pruning must pay for the
 first missing independent factor, or the incomparable branch must be resolved.
 
+LEMMA-211 pays one aligned missing factor by repurposing a fanout-one
+counterflow input gate and the boundary gate. Comparability and fanout one do
+not force basis radius two (NG-154). GATE-004DE is the active residual brick:
+deep or unaligned factors and raw/shared inputs require a minimum-cost or exact
+pruning charge, while incomparable erasure remains separate.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

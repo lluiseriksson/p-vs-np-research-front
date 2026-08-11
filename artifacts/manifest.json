@@ -763,6 +763,10 @@
       "sha256": "35a84720ad221e33e2a6cab341607aa3eff2ee17d9987d395d08ec3a0e89b363"
     },
     {
+      "path": "artifacts/cycle-177-basis-two-boundary-audit.md",
+      "sha256": "c8c7ff476a6c35001affbb49b276cc7cb9eac547a94863cb8b59e7bf21364f40"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -788,7 +792,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "b27e653ae734935c82c5662080e2198d242b76f8325bed0e95e820ef05142490"
+      "sha256": "60a3c1298900e945b5142b1327cae5e323be34bb7bd9046b47e234fc1abce683"
     },
     {
       "path": "docs/problem-statement.md",
@@ -908,11 +912,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "ec47dac2e72702fb76006ae672f0c23d26601d36cd75abdbcc5958edb92b8860"
+      "sha256": "627f9f5dc18a08f056d20e5f4b8cd8dd436d8b87c578709c62b7883eefd20431"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "508c5868186a396443978b76a18a39b9b44e3d39830cc47bee32d0dc06d990ce"
+      "sha256": "9a8c17ffed966680b89df8291ee4da226a9496eb126224e3fad88ebd392ad745"
     },
     {
       "path": "experiments/README.md",
@@ -1667,8 +1671,16 @@
       "sha256": "70bb90d65673c79d51d9619a9c570667580e2d8b01cf6f85c8931331c079df27"
     },
     {
+      "path": "proofs/GATE-004DD-comparability-basis-two-only.md",
+      "sha256": "1a061f5f9277726a49d2fd7deb63772d85abd613cbd36569f63140fe535fa52b"
+    },
+    {
       "path": "proofs/GATE-004DD-pay-for-missing-independent-factor.md",
-      "sha256": "977cda820eebf3e33b103ce3e0e3a40c8f82397b7e4882f5c1cd7a7a46aaa872"
+      "sha256": "5a1893120909d2be5c7d9f79c7a3567e8dca6797c96cbc5a9ad08257ef98f9cd"
+    },
+    {
+      "path": "proofs/GATE-004DE-deep-factor-shared-input-or-incomparable.md",
+      "sha256": "cbed4f0ebf67985f5d791188ef490815b14f1ad354b05b50fbaa4c4831159d5f"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2663,8 +2675,12 @@
       "sha256": "1d636f8ae9987d44a88b7d44566be63244be43a10aaf88de7b78741a79fa846c"
     },
     {
+      "path": "proofs/LEMMA-211-basis-two-boundary-with-expendable-input-descends.md",
+      "sha256": "28ad0946eb1d6bd5e3af5eeb44e23eba7d02a319e7619408daab4223b5626937"
+    },
+    {
       "path": "README.md",
-      "sha256": "14ab65ecdf2dc08aea283d30d0a54254f385c31d0caa913c5b05545cfd040733"
+      "sha256": "a2ff24f43e91a38f2c31ea34b7af939d94297ae2dc06edc02077274b1c1dd468"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2676,7 +2692,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "bd94fc585a54d317f4fafb18ed50cc718ea063f0f261f27baddcafffa25e7476"
+      "sha256": "eb60f172ca0d83162de64b631c61572c21979aaf894bb1c95e93e99c4688a201"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2693,6 +2709,10 @@
     {
       "path": "verification/covering_basis.py",
       "sha256": "ddd3f4e4ceb326f8bf660b548707e139bf9aff3245593d12ccf72ef6e37cb631"
+    },
+    {
+      "path": "verification/free_basis_two_realization_audit.py",
+      "sha256": "5efc9dbe4bfd4c49615d09c842d2f7fca7bc9d47a780dccbf0301a5062727318"
     },
     {
       "path": "verification/free_local_realization_audit.py",

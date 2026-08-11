@@ -44,3 +44,12 @@ two-gate satisfying budget remains unchanged.
 | Field/algebraic model | Exact Boolean signal equality, basis distance, physical DAG topology, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable-missing-factor or incomparable boundary |
 | Regime | Exact worst-case minimum-joint-cost gate; not a SAT lower bound or terminal result |
+
+## Cycle-177 audit
+
+LEMMA-211 closes the aligned-inner basis-two case when the counterflow input
+is a gate used only by `b`: that vertex pays for the missing factor and `b`
+pays for the outer gate. GATE-004DD-COMPARABILITY-BASIS-TWO-ONLY shows that
+comparability, fanout one, and exact cancellation do not force basis radius
+two. GATE-004DE is active and retains deep independent factors, a shared or
+raw counterflow input, unaligned inner formulas, and the incomparable branch.

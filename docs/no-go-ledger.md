@@ -3103,3 +3103,27 @@ Model: constant finite non-uniform constant-free AND/OR/NOT DAG; ten gates,
 constant depth, fan-in two/one; exact worst-case five-input truth table and
 complete basis-radius-one pool; no randomness, advice, oracle, promise,
 distribution, field, or algebraic computation.
+
+## NG-154 — bound the free independent formula radius by two
+
+**Label: NO-GO**
+
+Scope: combine row-zero cofactor comparability, exact cancellation, and a
+fanout-one counterflow input to infer that the unchanged boundary function has
+a constant-free formula of at most two gates over existing independent
+predecessor signals.
+
+Failure: GATE-004DD-COMPARABILITY-BASIS-TWO-ONLY gives a six-input DAG with
+`h=xyz OR uw`, `r=w OR uxyz NOT t`, and `b=h OR r=xyz OR w`. The exact
+cofactors are `r_00=w`, `r_10=w OR xyz`, and `r_01=r_11=w`; `r` has fanout
+one to `b`. The independent predecessors are precisely raw `x,y,z,w,t` and
+`NOT t`. Every two-gate formula has at most three leaves and so depends on at
+most three of `x,y,z,w`, while `xyz OR w` depends essentially on all four.
+The regression checks all 64 assignments and all 220 distinct radius-two
+functions. The witness is nonminimal and does not refute LEMMA-211 or a
+minimum-cost forcing theorem.
+
+Model: constant finite non-uniform constant-free AND/OR/NOT DAG; thirteen
+gates, constant depth, fan-in two/one, counterflow fanout one; exact worst-case
+six-input table and complete basis-radius-two pool; no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation.
