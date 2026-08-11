@@ -51,3 +51,13 @@ aggregate gate counts or formula existence alone do not suffice.
 | Field/algebraic model | Exact Boolean signal equality, formula cost, physical DAG closure, and satisfying cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable, no-aligned-formula, raw/shared, or incomparable boundary |
 | Regime | Exact worst-case deficit-payment gate; not a SAT lower bound or terminal result |
+
+## Cycle-179 audit
+
+LEMMA-213 makes the maximum admissible reservoir exact: remove precisely the
+eligible ancestors that reach an escape frontier. GATE-004DF-ESCAPE-COUNT-ONLY
+then shows that the frontier cardinality is not a payment. A constant
+three-edge frontier blocks deficit `n-2` in an explicit uniform family.
+GATE-004DG replaces raw edge counting by joint semantic replacement cost
+across every live consumer and satisfying pruning. GATE-004DF retains its
+`EXPLORATORY` label; no automatic promotion is made.

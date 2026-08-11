@@ -1296,6 +1296,13 @@ private-reservoir deficit with distinct minimum-cost or pruning resources,
 construct and pay an aligned formula when none is available, or resolve the
 raw/shared and incomparable branches.
 
+LEMMA-213 identifies the greatest admissible reservoir as the eligible
+ancestors with no directed path to the escape frontier. A uniform family has
+unbounded private deficit behind three frontier exits, so edge counting is
+NG-156. GATE-004DG is the active residual brick: lower-bound the joint semantic
+replacement cost of live escape regions, respecting shared prefixes and all
+satisfying prunings, or obtain an exact descent or contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

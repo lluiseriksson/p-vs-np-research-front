@@ -3142,8 +3142,9 @@ to a 29-gate single-output DAG. It adds `NOT h` and a live escape from each of
 the final output. Thus `r` still has only the consumer `b`, but escapes at
 `g,i,j,k` and the live complement of `h` propagate through consumer closure.
 The greatest admissible strict-ancestor set closed toward `b` is exactly
-`{r}`. Meanwhile `b=xyz OR w` depends essentially on four base variables, so every formula over
-the independent base pool needs at least three gates and two non-root hosts.
+`{r}`. Meanwhile `b=xyz OR w` depends essentially on four base variables, so
+every formula over the independent base pool needs at least three gates and two
+non-root hosts.
 The witness is nonminimal and does not refute a minimum-cost or exact-pruning
 payment theorem; it refutes fanout-one topology alone.
 
@@ -3152,3 +3153,28 @@ Model: explicit finite non-uniform single-output constant-free AND/OR/NOT DAG;
 ancestor escapes; exact worst-case six-input base table plus symbolic selector
 liveness and consumer-closure fixed point; no randomness, advice, oracle,
 promise, distribution, field, or algebraic computation.
+
+## NG-156 — pay private deficit by escape-frontier cardinality
+
+**Label: NO-GO**
+
+Scope: use LEMMA-213's exact escape frontier and assign one physical payment
+to each frontier edge in order to cover the private formula deficit `D_b`.
+
+Failure: GATE-004DF-ESCAPE-COUNT-ONLY gives a uniform family for every
+`n>=3`. Its boundary output is `(AND_i x_i) OR w`, with exact constant-free
+formula size `n`. Its maximum admissible private reservoir is `{r}`, so
+`D_b=n-2`. Nevertheless the frontier has exactly three exits: two enter the
+excluded distinguished carrier `h`, and the sole noncarrier live escape is
+`k -> s`. Reverse reachability through that one escape blocks the entire
+counterflow chain. The circuit has one output through selector-isolated terms
+and size `3n+11`; every member is nonminimal. Thus the family refutes raw
+frontier cardinality, not a semantic replacement-cost or minimum-pruning
+charge.
+
+Model: uniform family of finite non-uniform single-output constant-free
+AND/OR/NOT DAGs; size `3n+11`, depth linear in `n`, fan-in two/one, three
+frontier exits and unrestricted internal fanout; exact worst-case Boolean
+identities and formula leaf lower bound for every `n>=3` and every assignment;
+no randomness, advice, oracle, promise, distribution, field, or algebraic
+computation.
