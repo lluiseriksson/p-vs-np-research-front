@@ -230,7 +230,10 @@ Adjacent collision-aware active branch:
                              + LEMMA-155 (maximal deficit forces a formula with exactly `m` surviving NOTs)
                              <- GATE-004BB (active boundary brick): localize maximal deficit by `K+sigma`
                                 - GATE-004BB-ENDPOINT-COUNTS-ONLY (no-go: rank/count/base survival omit polarity)
-                                <- classify equality in the exact implication formula stratum (next attack)
+                                + LEMMA-156 (exact NOT-state potential and variable-read-once endpoint)
+                                <- GATE-004BC (active smallest brick): one neutral clause prunes one NOT
+                                   - GATE-004BC-STATE-COUNTS-ONLY (no-go: constant potential permits label swaps)
+                                   <- exploit formula wiring to forbid all-clause pruning failure (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -831,7 +834,7 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004BB inside GATE-004BA
+### Current operational brick: GATE-004BC inside GATE-004BB
 
 The exact falsifiable statement and model card are in
 `proofs/GATE-004BA-small-saving-witness.md`. LEMMA-153 identifies every
@@ -847,8 +850,14 @@ LEMMA-155 proves that the extreme case `d=sigma` forces every endpoint minimum
 circuit to be a rank-zero formula with exactly `m` NOT gates, all surviving
 every satisfying-base restriction. GATE-004BB asks whether equality can be
 localized by `K+sigma` clauses. Endpoint rank/count data alone remain
-insufficient: the next obligation is an equality-case theorem using the exact
-implication polarity and minimum-circuit semantics.
+insufficient.
+
+LEMMA-156 now proves that the endpoint is variable-read-once and that
+Morizumi's NOT-state potential has no scalar slack on the canonical tail
+chain. GATE-004BC is the smallest sufficient operation: find one neutral
+clause restriction that prunes one NOT. It iterates to prove GATE-004BB.
+Scalar potential alone permits paired label swaps, so the next attack must use
+formula wiring and exact implication semantics.
 
 ### Parallel constructive audit: GATE-004AF
 

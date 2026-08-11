@@ -2236,3 +2236,24 @@ every `m>=1`; unrestricted depth; no minimum-size or canonical-function claim;
 no randomness, advice, oracle, promise, distribution, or algebraic model. The
 witness does not refute GATE-004BB. It closes only endpoint-count-only
 inference; GATE-004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+
+## NG-111 — derive one-clause pruning from scalar NOT-state counts
+
+**Label: NO-GO**
+
+Scope: use only LEMMA-156's exact scalar trajectory
+`0,1,1,2,2,...,m,m` to persistently match NOT gates to clauses and prove
+GATE-004BC.
+
+Failure: for two abstract labels, the down-state sets can follow
+`empty -> {a} -> {b} -> {a,b} -> {a,b}`. Falling steps increase cardinality
+by one and repair steps preserve it exactly, but the first repair swaps the
+identity of the down-state NOT. This is compatible with the paired-transition
+accounting behind the scalar inequality. Fresh labels extend the trace to any
+`m>=2`.
+
+Model: explicit finite state-set traces with no formula-realizability claim;
+no circuit depth or gate topology represented; no randomness, advice, oracle,
+promise, distribution, or algebraic model. The trace does not refute
+GATE-004BC. It closes scalar-state-only pruning; GATE-004BC/BB/BA/AZ/AY/AX/AW/
+AV/AU/AG/AE remain open.

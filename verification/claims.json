@@ -4843,6 +4843,30 @@
       "circuit_size": "Exactly m displayed NOT gates and cycle rank zero; no minimum-size assertion", "circuit_depth": "Unrestricted binary conjunction-tree depth", "fan_in": "AND two; NOT one; formula fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction semantics only",
       "asymptotic_quantifiers": "Every m at least one", "case_regime": "Structural worst-case no-go for endpoint-count-only inference; no promise or distributional claim; GATE004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BB-endpoint-counts-only.md; docs/no-go-ledger.md NG-110; artifacts/cycle-126-maximal-deficit-rigidity.md"
+    },
+    {
+      "id": "LEMMA156", "label": "PROVED",
+      "statement": "Every maximal-deficit endpoint minimum is variable-read-once and has exact NOT-state potential 0,1,1 through m,m on every canonical tail chain.",
+      "computational_model": "Minimum rank-zero AND/OR/NOT output cones and NOT-state potential along increasing Boolean chains", "uniformity": "Every individual non-uniform endpoint minimum formula; uniform canonical tail chain",
+      "circuit_size": "Exactly m NOT gates; potential rises exactly once at each of m output falls and never at repairs", "circuit_depth": "Unrestricted read-once formula depth", "fan_in": "AND/OR two; NOT one; fanout one in the output cone", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean-lattice chains and integer state potential only",
+      "asymptotic_quantifiers": "Every m at least one, every maximal-deficit instance, every endpoint minimum circuit, and every satisfying base assignment", "case_regime": "Exact worst-case equality-state theorem; not persistent gate matching, clause pruning, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-156-maximal-deficit-state-potential.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; docs/source-citations/morizumi-2008.md; artifacts/cycle-127-equality-state-audit.md"
+    },
+    {
+      "id": "GATE004BC", "label": "EXPLORATORY",
+      "statement": "Some neutral clause restriction prunes at least one NOT from every maximal-deficit equality-stratum formula.",
+      "computational_model": "Variable-read-once AND/OR/NOT formulas for a base conjoined with disjoint implication clauses under neutral restrictions", "uniformity": "Every individual non-uniform equality-stratum formula; symmetric uniform clause family",
+      "circuit_size": "Premise exactly j NOTs and rank zero; target a restricted formula with at most j-1 NOTs and rank zero", "circuit_depth": "Unrestricted read-once formula depth", "fan_in": "AND/OR two; NOT one; fanout one in the output cone", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions, formula trees, and integer NOT-state potential",
+      "asymptotic_quantifiers": "Every j at least two in every compatible maximal-deficit descent stratum", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BB; not full GATE004BA, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BC-one-clause-NOT-pruning.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; proofs/LEMMA-156-maximal-deficit-state-potential.md; artifacts/cycle-127-equality-state-audit.md"
+    },
+    {
+      "id": "GATE004BC-STATE-COUNTS-ONLY", "label": "NO-GO",
+      "statement": "The exact scalar NOT-state potential permits paired label swaps and does not imply syntactic one-clause pruning.",
+      "computational_model": "Abstract NOT-state sets satisfying the exact scalar potential constraints from a formula lower-bound proof", "uniformity": "Explicit finite abstract trace; no formula-realizability or uniformity claim",
+      "circuit_size": "Two labels suffice for the first swap; extensible to m labels with the exact cardinality trajectory", "circuit_depth": "Not represented", "fan_in": "Not represented; target formula basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite sets and integer cardinality only",
+      "asymptotic_quantifiers": "Every m at least two in the abstract trace class", "case_regime": "Structural worst-case no-go for scalar-state-only pruning; no promise or distributional claim; GATE004BC/BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BC-state-counts-only.md; docs/no-go-ledger.md NG-111; artifacts/cycle-127-equality-state-audit.md"
     }
   ]
 }
