@@ -42,3 +42,12 @@ explicit separate branches.
 | Field/algebraic model | Exact Boolean replacement cost, directed reachability, and satisfying cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable, raw/shared, no-formula, or incomparable boundary |
 | Regime | Exact worst-case semantic-frontier payment gate; not a SAT lower bound or terminal result |
+
+## Cycle-180 audit
+
+LEMMA-214 proves a joint multi-output exchange: common masking pays every gate
+that directly consumes raw `u`. GATE-004DG-ENTRY-COUNT-ONLY shows that this
+interface payment can be one while `D_b=n-2`; the residual specialized AND
+chain remains large. GATE-004DH therefore replaces entry counting by the full
+minimum joint cofactor-circuit saving. GATE-004DG retains its `EXPLORATORY`
+label; no automatic promotion is made.

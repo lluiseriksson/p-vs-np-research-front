@@ -1405,11 +1405,17 @@ has deficit `n-2` behind only three frontier exits (NG-156). GATE-004DG now
 asks for joint semantic replacement cost across live escape consumers and all
 three satisfying prunings, with shared prefixes charged only once.
 
+The one-hundred-and-eightieth cycle proves a multi-output masked-region
+exchange that removes every gate directly consuming raw `u`. A uniform family
+has a live two-output masking certificate but only one such entry gate against
+deficit `n-2` (NG-157). GATE-004DH now asks for the complete minimum joint
+cofactor-circuit saving, not an interface cardinality.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–179 exclude isolated specialization, every aligned-formula rewrite with sufficient private budget, and escape-cardinality payment; semantic escape cost, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–180 exclude isolated specialization, every aligned-formula rewrite with sufficient private budget, escape-cardinality payment, and raw-entry counting; full joint cofactor saving, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

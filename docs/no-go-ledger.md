@@ -3178,3 +3178,26 @@ frontier exits and unrestricted internal fanout; exact worst-case Boolean
 identities and formula leaf lower bound for every `n>=3` and every assignment;
 no randomness, advice, oracle, promise, distribution, field, or algebraic
 computation.
+
+## NG-157 — pay private deficit by raw-`u` entry count
+
+**Label: NO-GO**
+
+Scope: after finding a jointly masked multi-output escape region, use the
+number of its gates directly consuming raw `u` as the physical payment for
+the private formula deficit.
+
+Failure: GATE-004DG-ENTRY-COUNT-ONLY modifies the NG-156 family with the live
+consumer `c=u AND k`. For the marked region with outputs `{k,r}`, `u` enters
+only at `q_1`. Specializing to `u=1` preserves both consumers exactly:
+`u AND (X AND NOT t)=k` at `c`, and
+`h OR (w OR X AND NOT t)=X OR w` at `b`. LEMMA-214 therefore saves the one
+entry gate, but the maximum private reservoir remains `{r}` and the exact
+formula deficit remains `D_b=n-2`. The nonminimal uniform family refutes entry
+cardinality alone, not the full minimum joint cofactor-circuit saving.
+
+Model: uniform family of finite non-uniform single-output constant-free
+AND/OR/NOT DAGs with a marked two-output region; size `3n+11`, depth linear in
+`n`, fan-in two/one, one raw-`u` entry and two live masked consumers; exact
+worst-case identities for every `n>=3` and every assignment; no randomness,
+advice, oracle, promise, distribution, field, or algebraic computation.

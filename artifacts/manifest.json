@@ -775,6 +775,10 @@
       "sha256": "88a47f129d4a6ccd6edb815a538e365bb52ff5880a72374e2d02b778e61b07cf"
     },
     {
+      "path": "artifacts/cycle-180-multi-output-masking-audit.md",
+      "sha256": "eaf08ff3fed20c3f8ea460644df3d5e928eb151949bb0074c2ccfe22445a5fd3"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -800,7 +804,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "b34e44b71d63e7d4f787a1b238666e90ce8a83f961f3906ab721265ea4e80672"
+      "sha256": "b06cf8829a19a89f9579947c1938f1d0bed8232ba5ba45fa661cb57e5a146f9c"
     },
     {
       "path": "docs/problem-statement.md",
@@ -920,11 +924,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "cc30f28d2845260b2b608effb7977370c5d092c3d87b10bea5f0fa09774aca98"
+      "sha256": "880fa15b5d72af8f1ba452c79298ce008c0ad373540fca550851b90c7057fd2d"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "52fbd680761c860ba434d839f73d3330f47539241bb59535ad385f2f254c5532"
+      "sha256": "75e825eea7dac331045572d14cdb4ac732700ad5b6afacdab71057c3693b4309"
     },
     {
       "path": "experiments/README.md",
@@ -1703,8 +1707,16 @@
       "sha256": "24e0be5a804eb072ee23658c7ef43a0071770929f5b717069757c83fa02df60e"
     },
     {
+      "path": "proofs/GATE-004DG-entry-count-only.md",
+      "sha256": "b74ebbc97852108f184325f298b5ad40c01db03ce8a06b35dacb1289b787b08d"
+    },
+    {
       "path": "proofs/GATE-004DG-semantic-charge-of-escape-frontier.md",
-      "sha256": "4df64cf016be9ff630384fb44e1aa3eaecff31802842e4041b2b267c3aa8498c"
+      "sha256": "099a37caeda7c212fb41e881202027efde53e0dbeaabf8003c5b85285d9e1f96"
+    },
+    {
+      "path": "proofs/GATE-004DH-joint-cofactor-circuit-saving.md",
+      "sha256": "f76b95062afa5e7e2db69f0355b08b3d1e4bb7ecde49093a74b6bc77a4108508"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2711,8 +2723,12 @@
       "sha256": "3dec15c43bd612d6b74134e61bb248c3286dbbea086a485824d52071cc985a43"
     },
     {
+      "path": "proofs/LEMMA-214-multi-output-masked-specialization-saves-entry-gates.md",
+      "sha256": "b356cf98169c1cf30bfc060d151df0102fdc4dcaf1907dad3deb62475846a500"
+    },
+    {
       "path": "README.md",
-      "sha256": "cb803d5677762006ebb826a87e152a4c80c42d7c61b88c764553fa93fd0aa480"
+      "sha256": "93720a1df5185040ca397de5c8c3c67c4a61137399201f79ef9a8f470c94df5b"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2724,7 +2740,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3a178fbbb2cb5479c36c579aecf203ad5163d52d5700126700c925b99b8162e5"
+      "sha256": "10dcbbc490765fca06b408ced486e580348356fe2965311595f34c5dfff7f329"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2757,6 +2773,10 @@
     {
       "path": "verification/generate_manifest.py",
       "sha256": "d15b059b86ceaace7a04937755943c13ac9610f880212c1d5132e957884a7c54"
+    },
+    {
+      "path": "verification/multi_output_masked_audit.py",
+      "sha256": "708856a9853f8c0295796a11137cf2831989168e275a5ea7376c14acbed3d697"
     },
     {
       "path": "verification/phase_gap_reduction.py",

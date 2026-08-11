@@ -1303,6 +1303,12 @@ NG-156. GATE-004DG is the active residual brick: lower-bound the joint semantic
 replacement cost of live escape regions, respecting shared prefixes and all
 satisfying prunings, or obtain an exact descent or contradiction.
 
+LEMMA-214 specializes a jointly masked multi-output region and saves every
+raw-`u` entry gate. One live masked entry can still hide deficit `n-2`
+(NG-157). GATE-004DH is the active residual brick: compare the region with a
+minimum joint circuit for its complete selected cofactor vector, including
+constant propagation at every named consumer.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base
