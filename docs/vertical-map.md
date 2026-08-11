@@ -241,7 +241,10 @@ Adjacent collision-aware active branch:
                                    + LEMMA-159 (global formula excess one is impossible when `sigma>=2`)
                                    <- GATE-004BF (active smallest brick): prune the unicyclic parent
                                       - GATE-004BF-RESIDUAL-LOCALITY-ONLY (no-go: one cofactor hides base support)
-                                      <- combine the unique-cycle factorization with clause subtrees (next attack)
+                                      + LEMMA-160 (zero/one cut dichotomy and exact regional NOT split)
+                                      <- GATE-004BG (active smallest brick): convert the split into survival
+                                         - GATE-004BG-NOT-SPLIT-ONLY (no-go: regional counts omit gate functions)
+                                         <- use the two unique-cycle paths under neutral restriction (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -871,7 +874,10 @@ alone contain no restriction-survival relation; topology or Boolean semantics
 must supply it. LEMMA-159 excludes the global formula with one extra NOT and
 forces every exact-formula residual to come from a parent with `N=m,r=1`.
 GATE-004BF now isolates that unicyclic parent. Residual private-NOT locality
-does not lift through one cofactor; the unique-cycle output paths must be used.
+does not lift through one cofactor. LEMMA-160 proves that the one-bit
+factorization cuts zero clauses, or exactly one with no upstream whole clause,
+and fixes the regional NOT counts. GATE-004BG must now turn that equality
+split into actual pruning using the two unique-cycle output paths.
 
 ### Parallel constructive audit: GATE-004AF
 

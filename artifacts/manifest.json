@@ -579,6 +579,10 @@
       "sha256": "160ed37e74e10c5af77b90d8f83893ba1510028d36435fa05b86b556601ea7c8"
     },
     {
+      "path": "artifacts/cycle-131-unicyclic-tail-partition.md",
+      "sha256": "f22b0dd773b23702ab27cb107a7add41bf9fe89d520eab1d14d5051d43d16300"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -604,7 +608,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "a7d98c5dbdf3ed5457a61686fd2a8a6803974e7508d5506fe3cfc87e53728909"
+      "sha256": "2573d06bd1c02eb51ad6379b11285e0f5fde33709dfbb2f3586b48d83fdfce86"
     },
     {
       "path": "docs/problem-statement.md",
@@ -612,7 +616,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9345a56fcd3f4fe49725174d337cee4792a068b77a93558871c0b8056ea8d30d"
+      "sha256": "d7b513ff7007df24737f41f4eba47104da9aafc00bab2f8fa3ef6b45ab0fd57e"
     },
     {
       "path": "docs/result-labels.md",
@@ -724,11 +728,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a8a3f42a86df252a107258d8487049b59b6aba382ac3129e62070c119c286dc0"
+      "sha256": "e8e354159e993670a6958fdc35e49ada74e8b11242c75930d5faf9b1e9371f6f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2c6d9eaa794132940cabaa0ce0700a518078193f58933b23d61fba0ca503a896"
+      "sha256": "2b01ee04928785b0a520d3ab5fd4f22e9a361f966aec597d519b7514f7dda6f0"
     },
     {
       "path": "experiments/README.md",
@@ -1113,6 +1117,14 @@
     {
       "path": "proofs/GATE-004BF-unicyclic-parent-pruning.md",
       "sha256": "638bf71f7c154091d8d042e7985edfda36ebe212f6a7eac8fc77e452efe0b595"
+    },
+    {
+      "path": "proofs/GATE-004BG-NOT-split-only.md",
+      "sha256": "c8a5c83f88461374d6fa90c1bb5816c9937c666f1db92e32bbd09e5a8aad8d1a"
+    },
+    {
+      "path": "proofs/GATE-004BG-unicyclic-split-survival.md",
+      "sha256": "648947beaf9613c9eafafbad38bc6c47f745108d64bdf36cdfa4e4d3267f16bc"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1911,8 +1923,12 @@
       "sha256": "19e62ef56139fa3ce127d8f4cb0e0192eb19c5b777d282ff883ed858dbcad57c"
     },
     {
+      "path": "proofs/LEMMA-160-unicyclic-tail-partition.md",
+      "sha256": "6205f2bbb2d2c6bdec7becf7611e11d9d494f5d67c4ed670cddd3ad8515b9742"
+    },
+    {
       "path": "README.md",
-      "sha256": "e7bae6946d86f1c876bfc64628cc82e7dff14ab380b2daab7def2c8ec1b39945"
+      "sha256": "636505da3f09cbf93b93b46b9cec076b3ced6264bbfd46fb6ec3810f35ab48f9"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1924,7 +1940,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "fa0b439aeb830b1445dfebad742d4be32850e0bacce428c983db8eb6c075d66b"
+      "sha256": "4924533a51a26a9363ab6e360f889a9e85c306fbb2e8cb3f24b86de8e7c4507c"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

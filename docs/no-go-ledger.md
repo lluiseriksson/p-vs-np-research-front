@@ -2297,3 +2297,23 @@ unicyclic-parent, or full-neutral-restriction survival claim; OR fan-in two,
 NOT fan-in one, unrestricted ambient depth/fanout; no randomness, advice,
 oracle, promise, distribution, or algebraic model. Residual-locality-only
 lifting is closed; GATE-004BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+
+## NG-114 — infer unicyclic survival from regional NOT counts
+
+**Label: NO-GO**
+
+Scope: derive GATE-004BG only from LEMMA-160's exact upstream/downstream NOT
+split in the no-cut or sole-cut partition.
+
+Failure: an occurrence that is `NOT u_i` in a satisfying cofactor may be
+decorated globally as `NOT(u_i OR R_i(X_base))`. Such mixed occurrences
+preserve the same regional integer counts while changing parent support. The
+counts do not state whether a second output path retains the occurrence or
+the unique cycle after clause neutralization.
+
+Model: abstract regional NOT allocations decorated by explicit non-uniform
+mixed Boolean gate functions; no minimum unicyclic realization claim;
+unrestricted ambient depth, OR fan-in two and NOT fan-in one; no randomness,
+advice, oracle, promise, distribution, or algebraic model. NOT-split-only
+survival is closed; GATE-004BG/BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain
+open.

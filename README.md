@@ -1071,11 +1071,19 @@ One satisfying cofactor still cannot lift private-NOT locality: a mixed gate
 can specialize to `NOT u_i` while retaining hidden base dependence.
 GATE-004BF is the active subgate for the unique-cycle parent.
 
+The one-hundred-and-thirty-first cycle classifies that unique-cycle
+factorization. LEMMA-160 proves a zero/one-cut dichotomy for tail clauses. In
+the no-cut case, upstream and downstream NOT counts equal their whole-clause
+counts exactly; in the sole-cut case, there is no upstream whole clause and
+the upstream formula has at most one NOT. These integers still do not imply
+survival. GATE-004BG must use the actual two cycle paths to make a neutral
+restriction delete a NOT or the cycle coordinate.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–130 close the standalone and extreme-deficit boundaries, classify one-excess residuals, and reduce the exact-formula branch to a unicyclic parent. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–131 close the standalone and extreme-deficit boundaries, classify one-excess residuals, and reduce the unicyclic branch to two exact clause partitions. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
