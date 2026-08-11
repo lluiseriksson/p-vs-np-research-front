@@ -1334,6 +1334,11 @@ the unrestricted parent; loss-to-free-host is NG-161. GATE-004DM is active:
 certify every candidate host by a four-code parent-preserving consumer
 interface, or force another resource/descent.
 
+LEMMA-220 permits changed consumers inside a complete forward region when its
+first exterior frontier is functionally sealed. A fixed consumer radius cannot
+find every seal (NG-162). GATE-004DN is active: force a sealed host region from
+endpoint minimality or turn an unsealed path into an exact contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

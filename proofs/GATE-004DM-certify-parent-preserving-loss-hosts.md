@@ -40,3 +40,10 @@ no-aligned-DAG, and incomparable branches remain explicit.
 | Field/algebraic model | Four-code Boolean interfaces, physical loss sets, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and residual comparable, raw, unmasked, no-DAG, or incomparable boundary |
 | Regime | Exact worst-case host-certification gate; not a SAT lower bound or terminal result |
+
+## Cycle-186 audit
+
+LEMMA-220 replaces immediate-consumer equality by a complete forward changed
+region with a sealed functional frontier. NG-162 shows no fixed radius reaches
+that seal in general. GATE-004DN operationally replaces this gate; GATE-004DM
+retains its `EXPLORATORY` label.

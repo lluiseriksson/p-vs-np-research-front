@@ -799,6 +799,10 @@
       "sha256": "4e266fa3bea7dba0d443077bbf18ab42476f45703593136fc3396a491f24b004"
     },
     {
+      "path": "artifacts/cycle-186-sealed-frontier-audit.md",
+      "sha256": "bf4cc4923bda27af4b5d473e22a44f0d37ae3912f9f6942baee1e08d5691ad67"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -824,7 +828,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "90ae9f1c1b0cbfe5a29512e90ae0892d3d001df6337ff6d64f8f02f3e23be613"
+      "sha256": "7197e62b7c2b5b0ba15957c361806ff75dff9eebd0126c1d0fac52292654d82c"
     },
     {
       "path": "docs/problem-statement.md",
@@ -944,11 +948,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "7d68fc5efda81f03fe1d24f23ac16821e7082f12edb16e5219127a7d536c1595"
+      "sha256": "40346ac7656024f89973e3283214b640bd13bfbbb5a89e1989cd600cb3b536ed"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "a04aef7f011b7d1c7ea22d5e29fb3aae4b163480c282d13cdf37d8226483d238"
+      "sha256": "b7ead9b68e7702de5ec471cf769472a285cef99580fb4e4f5966a939174c3def"
     },
     {
       "path": "experiments/README.md",
@@ -1772,7 +1776,15 @@
     },
     {
       "path": "proofs/GATE-004DM-certify-parent-preserving-loss-hosts.md",
-      "sha256": "5cf9db309928a4cc6b56c1e0608fed55ca78d18e2acd066bb69765da238399ed"
+      "sha256": "21902658e88dee93a28f69fdf211605735fcd8373d83a33e2700de8d21ce1682"
+    },
+    {
+      "path": "proofs/GATE-004DM-fixed-radius-consumer-audit-only.md",
+      "sha256": "315762b6ad26527460f0b40abc122e3af4ee7c976574178d9d152d7d345226ec"
+    },
+    {
+      "path": "proofs/GATE-004DN-force-a-sealed-host-region.md",
+      "sha256": "294478e8f7a6de48d90f237629c14738c4ef0f73ee208796e233310663dc00a4"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2803,8 +2815,12 @@
       "sha256": "c632a95ae7fbb5cc099b0d2848e958abb6e0766d3aa6642273e2c4e250c43590"
     },
     {
+      "path": "proofs/LEMMA-220-sealed-frontier-preserves-the-parent.md",
+      "sha256": "6fc38e12044176e13eb5e1ad5f78f4a264af8452e3edf0d9cfb33546cd3f0d85"
+    },
+    {
       "path": "README.md",
-      "sha256": "4e6a8a600b372bbdb11c41ee27b072e239d5313e2137bc8a043d8e8d8be5319f"
+      "sha256": "3834ffd971753006716c08f605fa406b3c7bbb203bcfd10e5b7f1de737e00641"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2820,7 +2836,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7e8ad13bc487341288d6329ad2e5b034f093eb52ce247876c0470c2f738476ac"
+      "sha256": "bb731ddc5aa2e772cd453fc5bc720e8576d3356a9f6b1bb17879f2f831140523"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2901,6 +2917,10 @@
     {
       "path": "verification/sat_encoding.py",
       "sha256": "22a4abdc9a2c6dde0b4d4d58e4a6b4b415f624b2b2bd003033bac4a5615a78a0"
+    },
+    {
+      "path": "verification/sealed_frontier_depth_audit.py",
+      "sha256": "4d9da4e6be1d141527f36126853d15c4b889c1a23a1f52b13ab499baa4004098"
     },
     {
       "path": "verification/single_code_transfer_audit.py",

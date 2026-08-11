@@ -3270,3 +3270,19 @@ size `4m-1`, exactly `m` lost binary gates, arbitrary OR-tree depth, fan-in two
 and fanout one in the witness; exact worst-case restrictions for every
 `m>=1`; no randomness, advice, oracle, promise, distribution, field, or
 algebraic computation.
+
+## NG-162 — certify parent preservation at a fixed consumer radius
+
+**Label: NO-GO**
+
+For every `m>=1`, GATE-004DM-FIXED-RADIUS-CONSUMER-AUDIT-ONLY changes
+`e=v OR x` to `x` and propagates the change through an `m`-gate AND chain. The
+functions first agree again at `c_m OR NOT c_m=1`, after which the nonconstant
+parent `y` is preserved. Thus no fixed radius independent of circuit depth can
+find every functional seal. The family is redundant and nonminimal; it does
+not refute an endpoint theorem forcing or charging a complete sealed region.
+
+Model: uniform family of finite non-uniform constant-free AND/OR/NOT DAGs;
+size `m+4`, depth linear in `m`, fan-in two/one and fanout two at the last chain
+gate; exact worst-case identities for every `m>=1`; no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation.
