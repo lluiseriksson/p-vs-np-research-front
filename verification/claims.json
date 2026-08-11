@@ -5442,7 +5442,31 @@
       "computational_model": "Lexicographically extremal minimum unrestricted plateau DAG with maximal private predecessor region", "uniformity": "Every individual non-uniform operational one-sided parent; uniform fresh implication pair",
       "circuit_size": "Private realization within the region size with strict lexicographic descent, or one-unit satisfying-minor resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and partitioned into private versus shared exits", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle space over F_2",
       "asymptotic_quantifiers": "Every operational GATE004CC parent under the exact two-gate plateau hypothesis", "case_regime": "Exact worst-case topological and cost dichotomy gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CD-private-budget-or-shared-exit.md; proofs/LEMMA-183-private-cone-substitution-certificate.md; artifacts/cycle-150-private-cone-budget-audit.md"
+      "evidence": "proofs/GATE-004CD-private-budget-or-shared-exit.md; proofs/LEMMA-183-private-cone-substitution-certificate.md; proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; proofs/GATE-004CE-signature-cycle-kernel.md; artifacts/cycle-151-shared-exit-cancellation-audit.md"
+    },
+    {
+      "id": "LEMMA184", "label": "PROVED",
+      "statement": "A live shared exit from the differing mask signal forces a distinct binary cancellation front and a reconvergence cycle surviving every satisfying minor.",
+      "computational_model": "Minimum unrestricted one-sided plateau DAG with a live shared exit", "uniformity": "Every individual finite non-uniform operational parent",
+      "circuit_size": "No new gate bound; one additional binary cancellation front and one surviving cycle coordinate", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout at the differing signal at least two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean symmetric differences and undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every GATE004CD shared-exit parent and all three satisfying restrictions", "case_regime": "Exact worst-case topology and signature theorem; not a killed-cycle result, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; artifacts/cycle-151-shared-exit-cancellation-audit.md"
+    },
+    {
+      "id": "GATE004CD-CYCLE-EXISTENCE-ONLY", "label": "NO-GO",
+      "statement": "Existence of a shared reconvergence cycle does not imply satisfying-minor resource loss; equal rank forces its survival.",
+      "computational_model": "Explicit finite AND/OR/NOT double-cancellation DAG plus equal-rank plateau audit", "uniformity": "Uniform finite local identity; no minimum-parent realization claim",
+      "circuit_size": "Constant-size witness; no parent size or lower-bound conclusion", "circuit_depth": "Constant witness; ambient target unrestricted", "fan_in": "AND/OR two; NOT one; differing signal has two live exits", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean identities and undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every assignment to the witness variables; plateau statement covers every satisfying restriction", "case_regime": "Structural no-go for cycle-existence-only charging; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CD-cycle-existence-only.md; proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; docs/no-go-ledger.md NG-129; artifacts/cycle-151-shared-exit-cancellation-audit.md"
+    },
+    {
+      "id": "GATE004CE", "label": "EXPLORATORY",
+      "statement": "The full four-code Boolean signatures force a named shared-exit cycle coordinate into a satisfying restriction kernel or yield a private realization certificate.",
+      "computational_model": "Lexicographically extremal minimum unrestricted plateau DAG with two signature-cancellation fronts", "uniformity": "Every individual non-uniform operational shared-exit parent; uniform fresh implication pair",
+      "circuit_size": "Same-size private descent or one satisfying restriction loses a cycle coordinate", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean symmetric-difference flow and cycle-space maps over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004CD shared-exit parent and all four pair codes", "case_regime": "Exact worst-case signature-kernel gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CE-signature-cycle-kernel.md; proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; artifacts/cycle-151-shared-exit-cancellation-audit.md"
     }
   ]
 }

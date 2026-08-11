@@ -1210,11 +1210,18 @@ required contradiction. Fanout one alone is `NO-GO`: a one-gate masked signal
 can have a canonical replacement of exact size three. GATE-004CD now asks for
 the missing private budget or a shared-exit cycle/resource loss.
 
+The one-hundred-and-fifty-first cycle audits the shared-exit branch.
+LEMMA-184 forces a second binary cancellation front and a reconvergence cycle,
+but exact plateau rank makes that cycle survive every satisfying minor.
+Cycle-existence-only charging is therefore `NO-GO`. GATE-004CE now requires a
+specific cycle-space kernel derived from edgewise signatures and the full
+three-equal/one-zero cofactor table.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–150 reduce the two-excess remainder to funding a private mask-erasure cone or charging a shared exit before the surviving-cycle branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–151 reduce the two-excess remainder to a signature-level kernel for the shared-exit cycle before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

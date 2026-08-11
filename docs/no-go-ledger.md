@@ -2601,3 +2601,26 @@ one and three; unrestricted ambient depth, fan-in two/one, and fanout-one at
 distribution, or algebraic computation. This is not a plateau counterexample.
 It closes fanout-one-only budgeting and leaves GATE-004CD to obtain an actual
 private-cone realization or charge a shared exit to resource loss.
+
+## NG-129 — infer resource loss from shared-cycle existence
+
+**Label: NO-GO**
+
+Scope: use the reconvergence cycle created by a live second exit from `p` as
+though its existence forced some satisfying restriction to kill a cycle
+coordinate.
+
+Failure: exact plateau rank equality and LEMMA-174 force every parent cycle
+coordinate to survive every satisfying minor modulo contractions. Locally,
+let `r=x XOR y`, `s=NOT r`,
+`p=(NOT u AND x) OR (u AND y)`, `d=p OR r`, `c=p AND s`, and
+`o=d AND NOT c`, with XOR expanded in the standard AND/OR/NOT basis. For both
+values of `u`, `d=x OR y`, `c=x AND y`, and `o=x XOR y`; both exits remain
+nonconstant and their cycle survives after multiplexer contraction.
+
+Model: explicit constant-size non-uniform AND/OR/NOT double-cancellation DAG
+plus the general equal-rank graph theorem; unrestricted ambient depth and
+fanout; no minimum-gadget claim, randomness, advice, oracle, promise,
+distribution, or algebraic computation beyond cycle space over `F_2`. This is
+not a plateau counterexample. It closes topology-only charging and leaves
+GATE-004CE to identify a kernel from edgewise four-code signatures.

@@ -27,6 +27,12 @@ exclude the one-sided branch. It must exhibit the realization circuit or the
 specific cycle coordinate and the satisfying restriction that destroys it;
 fanout-one alone is insufficient by GATE-004CC-FANOUT-ONE-ONLY.
 
+LEMMA-184 proves what a shared exit gives for free: a second cancellation
+front and a reconvergence cycle that survives every satisfying minor. That
+survival is not the required loss (GATE-004CD-CYCLE-EXISTENCE-ONLY).
+GATE-004CE isolates the missing signature-level kernel argument using all four
+pair codes.
+
 ## Model card
 
 | Field | Value |

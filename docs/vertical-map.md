@@ -305,6 +305,9 @@ Adjacent collision-aware active branch:
                                                                              + LEMMA-183 (a budgeted private cone certifies an exact exchange)
                                                                              - GATE-004CC-FANOUT-ONE-ONLY (no-go: privacy alone supplies no budget)
                                                                              <- GATE-004CD (active smallest brick): private budget or shared-exit charge
+                                                                                + LEMMA-184 (a shared exit forces a second cancellation and surviving cycle)
+                                                                                - GATE-004CD-CYCLE-EXISTENCE-ONLY (no-go: cycle existence forces no loss)
+                                                                                <- GATE-004CE (active smallest brick): force a signature-cycle kernel
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1051,6 +1054,14 @@ that even fanout one can turn a one-gate `p` into an exact three-gate
 `p^dagger` (NG-128). GATE-004CD is the active topological/cost dichotomy:
 obtain the private budget or charge the first shared exit to a resource lost
 by a satisfying restriction.
+
+LEMMA-184 resolves the topology of that shared exit: a second directed route
+must meet a distinct binary `01/11` cancellation front and creates a cycle.
+Equal plateau rank, however, makes this coordinate survive every satisfying
+minor. An explicit double-cancellation gadget confirms that cycle existence
+alone is no loss (NG-129). GATE-004CE is the active signature-level repair:
+use the complete three-equal/one-zero cofactor table to put a named coordinate
+in a satisfying restriction kernel, or recover the private certificate.
 
 ### Parallel constructive audit: GATE-004AF
 

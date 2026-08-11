@@ -4,7 +4,7 @@ Date: 2026-08-11
 
 | Measure | Estimate | Audit note |
 |---|---:|---|
-| Infrastructure maturity | 94% | Required tree, exact bit-level `SAT-gamma` target, broad barrier/bridge audits, exact symbolic and literal finite verifiers, claims registry, manifest, and cold-clone evidence exist. Cycles 113–150 reduce the two-excess remainder to funding a private mask-erasure cone or charging a shared exit before the surviving-cycle branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Required tree, exact bit-level `SAT-gamma` target, broad barrier/bridge audits, exact symbolic and literal finite verifiers, claims registry, manifest, and cold-clone evidence exist. Cycles 113–151 reduce the two-excess remainder to a signature-level kernel for the shared-exit cycle before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical statement has a proof-assistant artifact. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family has an exact unrestricted size theorem. GATE-004AG/AE base-tail rigidity, overlapping and nonclausal predicates, and every terminal lower bound remain unresolved. |
 
