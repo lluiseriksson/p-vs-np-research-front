@@ -25,6 +25,16 @@ The theorem is false if a minimum counterflow can reuse base topology under
 all three contractions without enabling the factoring in item 1. Merely
 exhibiting `gamma_b` or counting its edges is not evidence for any item.
 
+## Cycle-169 audit
+
+LEMMA-202 proves that abstract coordinate alignment is automatic: all three
+restriction maps are isomorphisms, so transition maps align every parent
+coordinate. Its two-subdivision witness also realizes exact two-vertex
+contraction with no rank loss. GATE-004CV-ABSTRACT-COORDINATE-ONLY therefore
+closes dimension, basis, and unmarked-coordinate comparisons as `NO-GO`.
+GATE-004CW is the active refinement and retains marked contraction support and
+four-code Boolean signatures.
+
 ## Model card
 
 | Field | Value |

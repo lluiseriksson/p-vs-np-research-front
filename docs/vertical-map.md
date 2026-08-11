@@ -356,7 +356,10 @@ Adjacent collision-aware active branch:
                                                                                                                              <- GATE-004CU (counterflow brick): minimum reconvergence cost
                                                                                                                                 + LEMMA-201 (counterflow cycle survives all satisfying minors)
                                                                                                                                 - GATE-004CU-CYCLE-EXISTENCE-ONLY (no-go: existence does not force loss)
-                                                                                                                                <- GATE-004CV (active coordinate brick): independence or factoring
+                                                                                                                                <- GATE-004CV (coordinate brick): independence or factoring
+                                                                                                                                   + LEMMA-202 (cross-minor coordinate alignment is tautological)
+                                                                                                                                   - GATE-004CV-ABSTRACT-COORDINATE-ONLY (no-go: unmarked isomorphisms align everything)
+                                                                                                                                   <- GATE-004CW (active marked brick): Boolean transport on cycle support
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1208,6 +1211,12 @@ all three satisfying minors preserve it modulo contraction. This makes cycle
 existence alone NG-145 rather than a rank contradiction. GATE-004CV is the
 active counterflow-coordinate brick: either separate that coordinate from
 common base topology or factor its reuse into a strict extremal descent.
+
+LEMMA-202 shows that abstract coordinate alignment cannot perform that
+separation: transition isomorphisms align every parent cycle automatically,
+and a two-subdivision witness preserves rank through two contractions
+(NG-146). GATE-004CW is now the active counterflow brick and retains marked
+edge support, eliminated-gate identities, and full four-code signatures.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

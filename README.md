@@ -1325,11 +1325,18 @@ satisfying minors preserve it modulo contraction. Cycle existence is therefore
 coordinate is independent of common base topology or its reuse factors into a
 strict extremal descent.
 
+The one-hundred-and-sixty-ninth cycle proves that satisfying-minor cycle maps
+are isomorphisms, so abstract cross-minor alignment is automatic for every
+parent coordinate. A two-subdivision graph witness confirms that two
+contractions can preserve the marked cycle without rank loss. This is
+`NO-GO` for unmarked coordinate comparisons, not a Boolean plateau witness.
+GATE-004CW now tracks physical contraction support and four-code signatures.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–168 isolate a preserved counterflow-cycle coordinate; independence/factoring, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–169 show that the counterflow brick requires marked Boolean transport rather than abstract cycle alignment; factoring, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

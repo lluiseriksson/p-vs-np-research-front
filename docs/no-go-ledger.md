@@ -2932,3 +2932,23 @@ Model: minimum unrestricted non-uniform AND/OR/NOT plateau endpoint; parent
 size `K+2`, unrestricted depth, fan-in two/one, fanout unrestricted; cycle
 spaces over `F_2`; every satisfying code; no randomness, advice, oracle,
 promise, or distributional qualification.
+
+## NG-146 — distinguish counterflow by abstract cross-minor coordinates
+
+**Label: NO-GO**
+
+Scope: compare only the vector-space images of `gamma_b` in the three
+satisfying minors and infer independence, extra rank, or Boolean factoring.
+
+Failure: LEMMA-202 proves that each restriction map `rho_s` is an isomorphism.
+Thus `rho_t o rho_s^{-1}` aligns the images of every parent coordinate, not
+just the counterflow coordinate. A two-subdivision graph witness additionally
+has exact two-vertex contraction, unchanged cycle rank, and survival of its
+marked cycle without deleting a non-bridge edge. It is not a minimum Boolean
+plateau witness. Physical contraction support and four-code Boolean labels
+are absent from the abstract data and must be restored in GATE-004CW.
+
+Model: finite exact-plateau cycle spaces and a subdivision multigraph witness;
+parent size `K+2` in the circuit application, unrestricted depth, circuit
+fan-in two/one, no randomness, advice, oracle, promise, or distributional
+qualification; linear maps over `F_2`; every ordered satisfying-code pair.
