@@ -23,6 +23,11 @@ one of the following holds:
 The proof must use minimum cost or minor structure. The complete signature
 table alone is ruled out by GATE-004CQ-FOUR-CODE-SIGNATURES-ONLY.
 
+LEMMA-198 shows that every handoff is a bisensitive neutral survivor. A
+uniform redundant exact-table family has arbitrarily many such handoffs, so
+counting them is `NO-GO`. GATE-004CS is the active lexicographic handoff-
+potential descent, with a separate zero-handoff branch if descent succeeds.
+
 ## Model card
 
 | Field | Value |

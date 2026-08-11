@@ -1301,11 +1301,16 @@ the size-three carrier, and a cross-row handoff, but only redundantly. Hence
 four-code signatures plus the table are still `NO-GO` without minimality.
 GATE-004CR now targets the minimum cost of a handoff.
 
+The one-hundred-and-sixty-fifth cycle proves that every handoff is sensitive
+to both fresh inputs and survives neutral pruning alongside `n`. Arbitrarily
+many coexist in redundant exact-table circuits, so counting them is `NO-GO`.
+GATE-004CS minimizes a handoff potential `Q` among genuine minimum parents.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–164 reduce the size-three carrier to charging a cross-row handoff by minimum cost before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–165 reduce the size-three carrier to strict descent of a minimum-parent handoff potential before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

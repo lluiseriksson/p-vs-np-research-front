@@ -345,6 +345,9 @@ Adjacent collision-aware active branch:
                                                                                                                     + LEMMA-197 (exact table admits a nonminimal cross-row handoff)
                                                                                                                     - GATE-004CQ-FOUR-CODE-SIGNATURES-ONLY (no-go: signatures/table coexist)
                                                                                                                     <- GATE-004CR (active smallest brick): minimum handoff cost
+                                                                                                                       + LEMMA-198 (handoffs are bisensitive neutral survivors)
+                                                                                                                       - GATE-004CR-HANDOFF-COUNT-ONLY (no-go: many handoffs coexist redundantly)
+                                                                                                                       <- GATE-004CS (active smallest brick): handoff-potential descent
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1173,6 +1176,11 @@ LEMMA-197 embeds the full table, size-three carrier, and a cross-row handoff in
 one redundant single-output circuit. Thus complete signature consistency is
 NG-141 unless minimum cost is used. GATE-004CR is the active handoff-cost,
 extra-deletion, private-certificate, or cycle-minor gate.
+
+LEMMA-198 proves every handoff is sensitive to both fresh inputs and survives
+neutral pruning alongside `n`. A uniform exact-table family has arbitrarily
+many redundant handoffs (NG-142), so their count is not a deletion charge.
+GATE-004CS minimizes the handoff potential `Q` among minimum parents.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

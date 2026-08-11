@@ -2862,3 +2862,22 @@ minimum cost, exact losses, a private certificate, or a cycle-minor conflict.
 Model: one finite non-uniform constant-size AND/OR/NOT single-output circuit;
 constant depth, fan-in two/one, fanout unrestricted; no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation.
+
+## NG-142 — charge the deletion budget by handoff count
+
+**Label: NO-GO**
+
+Scope: infer a contradiction from many bisensitive handoffs or neutral
+pair-sensitive survivors.
+
+Failure: for every `m`, extend LEMMA-197 with
+`r_i=(NOT x AND z_i) OR NOT t`, `b_i=h AND r_i`, and tautologies
+`c_i=b_i OR NOT b_i`; AND the `c_i` into the exact output. The resulting
+single-output circuit retains the exact table and carrier `{g,h,n}` and has
+`m` distinct handoffs. It is uniformly `O(m)` but deliberately redundant,
+not minimum or a plateau. GATE-004CS must use an extremal minimum-parent
+potential rather than multiplicity.
+
+Model: unrestricted non-uniform AND/OR/NOT exact-table family; `O(m)` size,
+fan-in two/one, unrestricted depth/fanout; no randomness, advice, oracle,
+promise, distribution, field, or algebraic computation; every `m>=1`.
