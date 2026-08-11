@@ -2051,3 +2051,22 @@ implication circuits and two-row semantic quotients; unrestricted depth and
 fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
 promise, distribution, or algebraic circuit model. Prefix-only transfer is
 closed; GATE-004AW/AV/AU/AT/AG/AE remain open.
+
+## NG-102 — bound raw-input collisions from two cofactor tables
+
+**Label: NO-GO**
+
+Scope: infer `b=o(m)` from the facts that a minimum parent has no globally raw
+input gate and that only two designated base-row cofactors are observed.
+
+Failure: choose one nonzero base predicate `R` that vanishes on both rows.
+The `m` globally non-raw functions `g_i=t_i OR R` all restrict to raw `t_i`
+on both rows and cost only one shared circuit for `R` plus `m` OR gates. Thus
+bilateral cofactor equality supplies neither a collision bound nor automatic
+cross-row quotient surplus. LEMMA-147 proves the witness exactly.
+
+Model: unrestricted Boolean parent-gate functions under two fixed base
+restrictions; fully non-uniform finite witness; shared `C(R)` plus `m` binary
+gates; unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in one;
+no randomness, advice, oracle, promise, distribution, or algebraic model.
+Two-rows-only inference is closed; GATE-004AX/AW/AV/AU/AT/AG/AE remain open.

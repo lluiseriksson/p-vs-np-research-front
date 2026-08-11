@@ -207,7 +207,9 @@ Adjacent collision-aware active branch:
               + LEMMA-146 (width five = implication tail + exact `3m` OR substitution)
               <- GATE-004AW (active refined brick): implication surplus plus raw-input collision bound
                  - GATE-004AW-PREFIXES-ONLY (no-go: two independent one-`m` deficits remain)
-                 <- bound implication row surplus and raw-`t_i` cofactors (next brick)
+                 + LEMMA-147 (two rows cannot recognize a globally raw input)
+                 - GATE-004AW-TWO-ROWS-ONLY (no-go: `m` bilateral raw cofactors remain possible)
+                 <- GATE-004AX (active weakest brick): charge quotient surplus minus raw collisions
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -808,7 +810,16 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AF
+### Current operational brick: GATE-004AX
+
+The exact falsifiable statement and model card are in
+`proofs/GATE-004AX-combined-implication-tradeoff.md`. It asks for the single
+quantity `Q_J-b` needed by the width-five bridge. LEMMA-147 rules out deriving
+the collision term from the two selected cofactor tables alone, so the next
+attack must use minimum-circuit exchange, additional canonical rows, or an
+injective surplus charge.
+
+### Parallel constructive audit: GATE-004AF
 
 The exact falsifiable statement and model card are in
 `proofs/GATE-004AF-four-block-width-five-sparsity.md`. LEMMA-076 shows why the

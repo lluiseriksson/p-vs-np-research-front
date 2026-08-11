@@ -4643,6 +4643,30 @@
       "circuit_size": "Exact plus 3m parent size, but only plus 2m unconditional quotient transfer and 3m implication baseline", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean functional substitution and row-cofactor equality only",
       "asymptotic_quantifiers": "Every m at least one, every nonconstant base, and every minimum implication circuit under the prefix-only method", "case_regime": "Quantitative no-go for prefix-only transfer; GATE004AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004AW-prefixes-only.md; docs/no-go-ledger.md NG-101; artifacts/cycle-117-derived-implication-reduction.md"
+    },
+    {
+      "id": "LEMMA147", "label": "PROVED",
+      "statement": "Two fixed base rows cannot distinguish raw t_i from m globally non-raw functions t_i OR R(X) sharing one predicate R.",
+      "computational_model": "Boolean functions represented by unrestricted circuits and observed under two fixed base restrictions", "uniformity": "Fully non-uniform finite construction",
+      "circuit_size": "One shared circuit for R plus m binary OR gates", "circuit_depth": "Unrestricted; one extra layer after R suffices", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors only",
+      "asymptotic_quantifiers": "Every m at least one and every two selected rows in a base cube containing a third assignment", "case_regime": "Worst-case exact structural witness; not a minimum-circuit counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-147-two-row-raw-cofactor-witness.md; artifacts/cycle-118-two-row-collision-audit.md"
+    },
+    {
+      "id": "GATE004AW-TWO-ROWS-ONLY", "label": "NO-GO",
+      "statement": "Two cofactor tables plus global non-rawness do not bound the number of bilateral raw-input collisions.",
+      "computational_model": "Unrestricted Boolean parent-gate functions observed under two fixed base restrictions", "uniformity": "Fully non-uniform finite witness family",
+      "circuit_size": "Shared C(R) plus m binary gates; no minimum-circuit claim", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor semantics only",
+      "asymptotic_quantifiers": "Every m at least one and every selected row pair in a base cube containing a third assignment", "case_regime": "Structural no-go for a two-rows-only collision argument; GATE004AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AW-two-rows-only.md; proofs/LEMMA-147-two-row-raw-cofactor-witness.md; docs/no-go-ledger.md NG-102; artifacts/cycle-118-two-row-collision-audit.md"
+    },
+    {
+      "id": "GATE004AX", "label": "EXPLORATORY",
+      "statement": "Some minimum implication circuit satisfies Q_J-b at least 4m-2(Delta+K).",
+      "computational_model": "Minimum unrestricted canonical implication circuits, two-row semantic quotients, and raw-input cofactor collisions", "uniformity": "Uniform canonical rows and implication tail; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Parent K+3m-Delta; target Q_J-b at least 4m-2(Delta+K)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors, semantic equivalence classes, and exact functional substitution",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum implication circuit for each instance", "case_regime": "Worst-case exact implication-collision subgate for GATE004AU; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AX-combined-implication-tradeoff.md; proofs/LEMMA-146-width-five-derived-implication-reduction.md; proofs/LEMMA-147-two-row-raw-cofactor-witness.md; artifacts/cycle-118-two-row-collision-audit.md"
     }
   ]
 }

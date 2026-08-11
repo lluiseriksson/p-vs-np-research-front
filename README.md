@@ -963,11 +963,20 @@ falsifiable inequalities: implication quotient `4m-(Delta+K)` and at most
 `2m` classes unconditionally, but prefix-only transfer is `NO-GO` because
 both residual one-`m` gaps remain.
 
+The one-hundred-and-eighteenth cycle audits the collision half before trying
+to prove it. LEMMA-147 shows that two rows cannot recognize a globally raw
+input: `t_i OR R(X)` can equal `t_i` on both selected rows for every index
+while remaining globally non-raw. Hence a two-cofactor-only collision bound is
+`NO-GO`. GATE-004AX is the weaker exact target actually needed downstream:
+`Q_J-b>=4m-2(Delta+K)`, allowing every collision to be paid for by quotient
+surplus. Minimum-circuit exchange or additional canonical-row information is
+now indispensable.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–117 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce width-five stability to two quantified implication/collision inequalities. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–118 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce width-five stability to one quantified implication surplus-minus-collision inequality. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -527,6 +527,10 @@
       "sha256": "5801819cc8329215a50b8702e4a895436c78ed490c209cb0277011982c0d05ce"
     },
     {
+      "path": "artifacts/cycle-118-two-row-collision-audit.md",
+      "sha256": "b4633d926521c68182149942fd8f3b44c33a9e21ea30640d4cf7a04a4f329e92"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -552,7 +556,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "41a025d70b44e05d160fbe30ba6cea196da55b07d4d423f1d8cd28d4f9d7d51e"
+      "sha256": "5c52c5d77980ab46d872454dc034387c6a94403f1bf25e99bef6553171b3fd4a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -664,11 +668,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "858766bacafe4a54b20a1b0d80f04047fb9b429103aaf0aad81730d6bd4a3239"
+      "sha256": "e8a76cfeaa8a4a13ee0652ffe55273357050b747f1e123d8a828a15c93823dcb"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "8fab0be5b26195d32fe6e2846f1a6c76923801500ef834344c6c9427d64503f6"
+      "sha256": "0c3c8acf9f4b9257686c9e9513a6ae529a90a5d97931b77c1057b19d3b46e08d"
     },
     {
       "path": "experiments/README.md",
@@ -961,6 +965,14 @@
     {
       "path": "proofs/GATE-004AW-prefixes-only.md",
       "sha256": "f00ef71e0afb8cb47e42a766f430d0f10a9aea65b072b78baf8bfaddeb2ea8b5"
+    },
+    {
+      "path": "proofs/GATE-004AW-two-rows-only.md",
+      "sha256": "98cec821f04bd04b31f2a23b4bf4632f31adffde6b2789403cefd9b505adecdc"
+    },
+    {
+      "path": "proofs/GATE-004AX-combined-implication-tradeoff.md",
+      "sha256": "46ae8c9e06bba7764bb2de93b9a3c17beb1b9743ec17f196f99450c92bb4a3bc"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1711,8 +1723,12 @@
       "sha256": "cf5a2f6b9ee1f94c8d963640dd5e4ceb3fee77bad37ef0deebc9fb4aaff97e3d"
     },
     {
+      "path": "proofs/LEMMA-147-two-row-raw-cofactor-witness.md",
+      "sha256": "43105d27ead473d94a8443add9aeebce8a4056b6d3ff6b1389cbb9c165497f64"
+    },
+    {
       "path": "README.md",
-      "sha256": "69808189419e1387dfad322ff11a4dafbcb1ca36c09b1f6be4323f37abac67df"
+      "sha256": "7851f561136bee70763b88921ef3596361ebabea4ad5732bb4a020828d05fe91"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1724,7 +1740,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "058942dd1b6121c183d84465f359e577b17aa97f0fcb775afcc435210e1de933"
+      "sha256": "e4248ec86c85abd2417077a0a5e8d7de7b4733fe01fea95084a058596a6121b1"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
