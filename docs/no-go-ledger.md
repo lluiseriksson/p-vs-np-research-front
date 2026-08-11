@@ -2215,3 +2215,24 @@ gates and counted fan-in-two AND/OR plus unary NOT; non-uniform exact finite
 functions; unrestricted depth; no randomness, advice, oracle, promise,
 distribution, or algebraic model. Basis-agnostic direct-sum inference is
 closed; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+
+## NG-110 — localize maximal deficit from endpoint counts alone
+
+**Label: NO-GO**
+
+Scope: infer GATE-004BB solely from LEMMA-155's numerical/topological tuple:
+rank zero, exactly `m` NOT gates, and survival of all those NOT gates under a
+satisfying-base restriction.
+
+Failure: the explicit formula
+`F(x,q)=x AND AND_i NOT q_i` has rank zero and exactly `m` displayed NOT
+gates, all of which survive `x=1`. Fixing any one abstract clause signal
+`q_j=1`, however, makes the output constant zero and removes all remaining
+tail NOTs under constant propagation. Rank, count, and base survival do not
+record the signal polarity needed for prefix restriction.
+
+Model: explicit non-uniform fanout-one formulas with binary AND and unary NOT;
+every `m>=1`; unrestricted depth; no minimum-size or canonical-function claim;
+no randomness, advice, oracle, promise, distribution, or algebraic model. The
+witness does not refute GATE-004BB. It closes only endpoint-count-only
+inference; GATE-004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.

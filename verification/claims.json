@@ -4819,6 +4819,30 @@
       "circuit_size": "PAUL76 permits disjoint-copy OR complexity (1+epsilon)C(f) in its model; no numeric bound imported into the repository model", "circuit_depth": "Unrestricted in both models", "fan_in": "PAUL76 general two-input switching gates; target AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean switching functions; no algebraic circuit claim",
       "asymptotic_quantifiers": "Every positive epsilon in PAUL76's theorem and every attempted basis-agnostic promotion in the repository", "case_regime": "Literature-backed no-go for generic direct-sum inference; GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BA-generic-direct-sum.md; docs/source-citations/paul-1976.md; docs/no-go-ledger.md NG-109; artifacts/cycle-125-direct-sum-literature-audit.md"
+    },
+    {
+      "id": "LEMMA155", "label": "PROVED",
+      "statement": "Maximal implication deficit forces every endpoint minimum circuit to be a formula with exactly m NOT gates, all surviving every satisfying-base restriction.",
+      "computational_model": "Minimum pruned unrestricted AND/OR/NOT circuits, satisfying-base restrictions, and undirected output-cone cycle rank", "uniformity": "Every individual non-uniform minimum circuit for the uniform base-implication family",
+      "circuit_size": "Under Delta_m=sigma, exact N=m and r=0; every satisfying-base residual has exact q=m and rho=0", "circuit_depth": "Unrestricted formula depth after the proved rank-zero conclusion", "fan_in": "AND/OR two; NOT one; fanout unrestricted before the conclusion and formula fanout in the output cone after it", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2; Boolean restrictions and formula inversion lower bounds",
+      "asymptotic_quantifiers": "Every m at least one, every nonconstant finite base H, every minimum pruned J_m circuit with Delta_m=sigma, and every satisfying assignment of H", "case_regime": "Exact worst-case maximal-deficit stratum; not NOT localization, prefix saving, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; artifacts/cycle-126-maximal-deficit-rigidity.md"
+    },
+    {
+      "id": "GATE004BB", "label": "EXPLORATORY",
+      "statement": "Maximal canonical implication deficit is already attained by min(m,K+sigma) clauses.",
+      "computational_model": "Minimum unrestricted canonical base-implication circuits with a rank-zero endpoint supplied by LEMMA155", "uniformity": "Uniform symmetric clause family; fully non-uniform circuit minima and prefix circuits",
+      "circuit_size": "Premise Delta_m=sigma; target Delta_min(m,K+sigma)=sigma, equivalently prefix N+r at most k_max", "circuit_depth": "Unrestricted; endpoint minimum circuits are formulas by LEMMA155", "fan_in": "AND/OR two; NOT one; fanout unrestricted in prefix competitors", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean formula semantics and undirected cycle rank over F_2 only",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance satisfying Delta_m=sigma", "case_regime": "Falsifiable worst-case maximal-deficit subgate of GATE004BA; not the full positive-deficit theorem, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BB-maximal-deficit-localization.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; artifacts/cycle-126-maximal-deficit-rigidity.md"
+    },
+    {
+      "id": "GATE004BB-ENDPOINT-COUNTS-ONLY", "label": "NO-GO",
+      "statement": "Rank zero, m displayed NOT gates, and their survival under a base restriction alone do not determine clause-signal restriction behavior.",
+      "computational_model": "Explicit fanout-one AND/OR/NOT formulas under base and clause-signal restrictions", "uniformity": "Explicit non-uniform witness family; no minimum-circuit or canonical-function claim",
+      "circuit_size": "Exactly m displayed NOT gates and cycle rank zero; no minimum-size assertion", "circuit_depth": "Unrestricted binary conjunction-tree depth", "fan_in": "AND two; NOT one; formula fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction semantics only",
+      "asymptotic_quantifiers": "Every m at least one", "case_regime": "Structural worst-case no-go for endpoint-count-only inference; no promise or distributional claim; GATE004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BB-endpoint-counts-only.md; docs/no-go-ledger.md NG-110; artifacts/cycle-126-maximal-deficit-rigidity.md"
     }
   ]
 }

@@ -559,6 +559,10 @@
       "sha256": "8ef02406ca9f499b44acd2c7f2d76ac45e79bd02447515cfdd13447f50de4beb"
     },
     {
+      "path": "artifacts/cycle-126-maximal-deficit-rigidity.md",
+      "sha256": "4f9c08bd44c301f5a5108b84fc99991bf4b23c569301daf53f1b21cb47c4b1fd"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -584,7 +588,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d2cd61157b472bd49a5435d6329762e172383ed8a58c649c89975107df07f54e"
+      "sha256": "1f91000c7944195cdf965b9294b94d71459a53ae58ead34777b5ef3f4894a24a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -592,7 +596,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "0fb849ed22d2d9fd3b15b0524f689523628629c00331e826d7a64a57bdb5e835"
+      "sha256": "8fbe1d6a00dbb096dbeb70ce1b7ab39ac7991eb480196bd959234a3da6504a10"
     },
     {
       "path": "docs/result-labels.md",
@@ -700,11 +704,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "0b83a20424a1837c6c755f52e76b7b08f0a5be39065f7281610b453c4762314e"
+      "sha256": "a0890fb670fd2632fb8ca001a07b3ab7a94dc5b46b8ef2a32934005ade400fa3"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "b06918398a823f14df9607d4b36d2aa0dfa8635d731fada27bea1a450fac1f71"
+      "sha256": "4ab49b4558f8fb3462468cce1f97683199e24d309c730cd581af5aa3d70cc86e"
     },
     {
       "path": "experiments/README.md",
@@ -1053,6 +1057,14 @@
     {
       "path": "proofs/GATE-004BA-small-saving-witness.md",
       "sha256": "38cb80bcabbefdb65bbc905d470c913d4b2f9c34b71230c7559e4c1df111aeb1"
+    },
+    {
+      "path": "proofs/GATE-004BB-endpoint-counts-only.md",
+      "sha256": "aa4bec4923c4584d1ff77e17285a87a502e3c99581dca4ca271c78959fa99afb"
+    },
+    {
+      "path": "proofs/GATE-004BB-maximal-deficit-localization.md",
+      "sha256": "43a943bde9ffb492447779c1d09a6e5670d4c7f64cb04f059b25f79638a4f93e"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1831,8 +1843,12 @@
       "sha256": "6f0d05b792c7eba2ece304a8fd0ccfd0ac6ac56a043d184a0abbb7019048545a"
     },
     {
+      "path": "proofs/LEMMA-155-maximal-deficit-formula-rigidity.md",
+      "sha256": "4cf6b485ad1ba2663df27a7d3e6b6f1be29c3f8e28c797fac8a91236e2d09cff"
+    },
+    {
       "path": "README.md",
-      "sha256": "5f0c795ee68c79a1694bb8146d485385a5db0c1c31fdb7a210eac7099c9f2ac7"
+      "sha256": "2ac0aa6ea69ab6c9f7ca1c8aad2718afed113930fb4d62cb2632d7c52c52ab17"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1844,7 +1860,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "eeec934fd0992eccee35b10d1280e6f0f7c13dc5e357018e35f28008f8d5aeca"
+      "sha256": "67f49ad78c7bc69dd71c70340e64b0bf0696a795cbf1c3d203f815e4439b0dfe"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -1029,11 +1029,20 @@ counted AND/OR/NOT and no counterexample transfers, but basis-agnostic
 direct-sum reasoning is now explicitly `NO-GO`. GATE-004BA must use its exact
 one-negative clauses and negation-cycle resources.
 
+The one-hundred-and-twenty-sixth cycle closes the extreme resource stratum.
+LEMMA-155 proves that maximal deficit `Delta_m=sigma` forces every endpoint
+minimum circuit to have cycle rank zero and exactly `m` NOT gates; every one
+survives every satisfying-base restriction. This is genuine equality-case
+rigidity but not localization. GATE-004BB now asks whether the maximal saving
+must already occur by `K+sigma` clauses. Rank, NOT count, and base-restriction
+survival alone are `NO-GO`; the next proof must use exact implication polarity
+and minimum-formula equality.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and a model-exact direct-sum literature warning exist. Cycles 113–125 close the standalone tradeoff and zero-deficit boundary, identify exact negation-cycle savings, and force one base-tail shared resource per deficit unit. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and a model-exact direct-sum literature warning exist. Cycles 113–126 close the standalone tradeoff and zero-deficit boundary, identify exact negation-cycle savings, force one base-tail shared resource per deficit unit, and classify the maximal-deficit endpoint as a formula. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

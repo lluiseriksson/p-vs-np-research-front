@@ -227,7 +227,10 @@ Adjacent collision-aware active branch:
                              - GATE-004BA-HALL-INCIDENCE-ONLY (no-go: cycle incidence hides one saving globally)
                              + LEMMA-154 (each deficit unit forces a base-tail shared resource)
                              - GATE-004BA-CONE-MEMBERSHIP-ONLY (no-go: path membership does not imply survival)
-                             <- prove minimum-circuit survival/exchange for the shared resources (next attack)
+                             + LEMMA-155 (maximal deficit forces a formula with exactly `m` surviving NOTs)
+                             <- GATE-004BB (active boundary brick): localize maximal deficit by `K+sigma`
+                                - GATE-004BB-ENDPOINT-COUNTS-ONLY (no-go: rank/count/base survival omit polarity)
+                                <- classify equality in the exact implication formula stratum (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -828,18 +831,24 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004BA
+### Current operational brick: GATE-004BB inside GATE-004BA
 
 The exact falsifiable statement and model card are in
 `proofs/GATE-004BA-small-saving-witness.md`. LEMMA-153 identifies every
 deficit unit with a plateau of the minimum `N+r` resource count. GATE-004BA
 asks that the final saving `d` already occur on at most `K+d` clauses; this is
 exactly equivalent to GATE-004AZ. Abstract cycle incidence defeats full Hall
-cardinality localization, so the next attack must exploit realizable circuit
-topology, orientation, or Boolean gate semantics. LEMMA-154 now forces `d`
-base-tail shared resources in every minimum circuit, but cone membership alone
-does not keep them alive under restriction; survival or exchange is the next
-obligation.
+cardinality localization. LEMMA-154 forces `d` base-tail shared resources in
+every minimum circuit, but cone membership alone does not keep them alive
+under restriction.
+
+The current boundary attack is `proofs/GATE-004BB-maximal-deficit-localization.md`.
+LEMMA-155 proves that the extreme case `d=sigma` forces every endpoint minimum
+circuit to be a rank-zero formula with exactly `m` NOT gates, all surviving
+every satisfying-base restriction. GATE-004BB asks whether equality can be
+localized by `K+sigma` clauses. Endpoint rank/count data alone remain
+insufficient: the next obligation is an equality-case theorem using the exact
+implication polarity and minimum-circuit semantics.
 
 ### Parallel constructive audit: GATE-004AF
 
