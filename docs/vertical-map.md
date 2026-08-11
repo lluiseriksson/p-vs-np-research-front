@@ -212,7 +212,10 @@ Adjacent collision-aware active branch:
                  <- GATE-004AX (active weakest brick): charge quotient surplus minus raw collisions
                     + LEMMA-148 (exposed common OR masks factor with saving `b-1`)
                     - GATE-004AX-COMMON-MASK-ONLY (no-go: cofactors do not imply that normal form)
-                    <- derive collision normal form or charge every failure (next attack)
+                    + LEMMA-149 (minimum circuits exclude inessential-input dependence)
+                    + LEMMA-150 (`Q=s+D_a-E_row` selector accounting)
+                    - GATE-004AX-ARBITRARY-BASE (no-go: identical nonconstant rows give `Q<=3m`)
+                    <- GATE-004AY (active equivalent brick): canonical selector-penetration balance
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -813,16 +816,15 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AX
+### Current operational brick: GATE-004AY
 
 The exact falsifiable statement and model card are in
-`proofs/GATE-004AX-combined-implication-tradeoff.md`. It asks for the single
-quantity `Q_J-b` needed by the width-five bridge. LEMMA-147 rules out deriving
-the collision term from the two selected cofactor tables alone, so the next
-attack must use minimum-circuit exchange, additional canonical rows, or an
-injective surplus charge. LEMMA-148 supplies an exact linear-saving exchange
-for exposed common masks; GATE-004AX-COMMON-MASK-ONLY records why the required
-normal form still has to be proved rather than inferred from two cofactors.
+`proofs/GATE-004AY-selector-penetration-balance.md`. LEMMA-150 rewrites the
+single quantity `Q_J-b` required by GATE-004AX as the exact balance
+`D_a-E_row-b>=m-Delta-3K`. GATE-004AX-ARBITRARY-BASE proves that identical
+nonconstant row residuals fail this balance, so GATE-004AY must exploit the
+specific canonical row transition. LEMMA-147 and LEMMA-148 remain the audited
+collision and local-exchange inputs.
 
 ### Parallel constructive audit: GATE-004AF
 

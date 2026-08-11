@@ -2091,3 +2091,24 @@ common-mask submodule; fully non-uniform finite witness; unrestricted depth
 and fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice,
 oracle, promise, distribution, or algebraic model. Common-mask-only
 normalization is closed; GATE-004AX/AW/AV/AU/AT/AG/AE remain open.
+
+## NG-104 — promote GATE-004AX to every pair of nonconstant row residuals
+
+**Label: NO-GO**
+
+Scope: replace the canonical row geometry in GATE-004AX by the assertion that
+both selected residual base functions are merely nonconstant.
+
+Failure: take `H(a,z)=z`, use rows `a=0,1`, and conjoin the implication tail.
+Both row residuals are the nonconstant input `z`, while LEMMA-142 gives exact
+size `C(z AND W_m)=3m` and `K=Delta=0`. The output is independent of `a`, so
+LEMMA-149 makes every gate function of every minimum circuit independent of
+`a`. LEMMA-150 then gives `Q<=3m`, hence `Q-b<4m`, falsifying the generalized
+target for every `m>=1`.
+
+Model: minimum unrestricted non-uniform circuits for a raw enable input and
+the implication tail; two rows of an inessential selector; exact size `3m`;
+unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in one; no
+randomness, advice, oracle, promise, distribution, or algebraic model.
+Arbitrary-base promotion is closed; canonical GATE-004AY/AX/AW/AV/AU/AG/AE
+remain open.

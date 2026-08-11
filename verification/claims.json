@@ -4683,6 +4683,38 @@
       "circuit_size": "LEMMA148 saves b-1 only inside the exposed form; arbitrary XOR-type witnesses have constant overhead", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and distributivity; XOR only as an AND/OR/NOT-definable witness function",
       "asymptotic_quantifiers": "Every selected row pair admitting a nonzero vanishing predicate and arbitrary collision witnesses outside the exposed form", "case_regime": "Structural no-go for common-mask-only normalization; GATE004AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004AX-common-mask-only.md; proofs/LEMMA-148-common-mask-factoring-exchange.md; docs/no-go-ledger.md NG-103; artifacts/cycle-119-common-mask-exchange.md"
+    },
+    {
+      "id": "LEMMA149", "label": "PROVED",
+      "statement": "No gate function in a minimum circuit depends essentially on an inessential output variable.",
+      "computational_model": "Minimum unrestricted Boolean circuits", "uniformity": "Fully non-uniform exact finite circuit complexity",
+      "circuit_size": "Strict one-gate reduction under the contradictory premise", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and semantic essential dependence only",
+      "asymptotic_quantifiers": "Every finite Boolean function, every minimum circuit, and every inessential primary input", "case_regime": "Exact worst-case structural lemma; not a quotient lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-149-inessential-input-exclusion.md; artifacts/cycle-120-selector-penetration-audit.md"
+    },
+    {
+      "id": "LEMMA150", "label": "PROVED",
+      "statement": "A two-row quotient obeys Q at most s plus D_a and admits the exact defect identity Q=s+D_a-E_row.",
+      "computational_model": "Arbitrary unrestricted circuits under two row restrictions and their one-bit interpolation", "uniformity": "Every individual non-uniform circuit; canonical rows only in the consequence",
+      "circuit_size": "Exact upper Q at most s+D_a and canonical identity with s=K+3m-Delta", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and a semantic one-bit row interpolation; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every finite circuit and every pair of compatible row restrictions; sufficiently large canonical instances only for the o(m) consequence", "case_regime": "Exact worst-case quotient accounting and necessary condition; not quotient stability, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-150-row-selector-quotient-accounting.md; artifacts/cycle-120-selector-penetration-audit.md"
+    },
+    {
+      "id": "GATE004AX-ARBITRARY-BASE", "label": "NO-GO",
+      "statement": "Two nonconstant row residuals alone do not imply GATE004AX; an inessential selector gives quotient at most 3m.",
+      "computational_model": "Minimum unrestricted circuits for a raw positive enable input conjoined with the implication tail", "uniformity": "Fully non-uniform exact counterexample family",
+      "circuit_size": "Exact C(J)=3m, K=Delta=0, and quotient upper Q_J at most 3m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and essential-variable dependence only",
+      "asymptotic_quantifiers": "Every m at least one; two rows of one inessential selector; both residual bases nonconstant", "case_regime": "Exact worst-case counterexample to arbitrary-base promotion; canonical GATE004AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AX-arbitrary-base.md; proofs/LEMMA-149-inessential-input-exclusion.md; proofs/LEMMA-150-row-selector-quotient-accounting.md; docs/no-go-ledger.md NG-104; artifacts/cycle-120-selector-penetration-audit.md"
+    },
+    {
+      "id": "GATE004AY", "label": "EXPLORATORY",
+      "statement": "Some minimum canonical implication circuit satisfies D_a-E_row-b at least m-Delta-3K.",
+      "computational_model": "Minimum unrestricted canonical implication circuits under a one-bit interpolation of two designated rows", "uniformity": "Uniform canonical row geometry and tail; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Parent K+3m-Delta; target balance D_a-E_row-b at least m-Delta-3K", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic selector dependence; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum circuit for each instance", "case_regime": "Exact reformulation of GATE004AX; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AY-selector-penetration-balance.md; proofs/LEMMA-150-row-selector-quotient-accounting.md; artifacts/cycle-120-selector-penetration-audit.md"
     }
   ]
 }

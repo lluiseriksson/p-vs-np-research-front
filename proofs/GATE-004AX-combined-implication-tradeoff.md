@@ -57,6 +57,19 @@ two rows implies neither OR-mask form nor exposed uses. The active subproblem
 is now a minimum-circuit collision normal form, or an injective charge from
 every non-factorable exception to quotient surplus or `Delta+K` slack.
 
+## Selector accounting
+
+LEMMA-150 interpolates the two rows by a selector `a` and proves the exact
+identity `Q_J=|C_J|+D_a-E_row`. It therefore rewrites this gate without loss
+as GATE-004AY:
+
+`D_a-E_row-b>=m-Delta-3K`.
+
+GATE-004AX-ARBITRARY-BASE gives an exact counterexample when the two row
+residuals are nonconstant but identical. Consequently, any proof here must
+use the specific canonical row transition to force almost `m`
+selector-dependent gates; nonconstancy of each residual is insufficient.
+
 ## Model card
 
 | Field | Value |
