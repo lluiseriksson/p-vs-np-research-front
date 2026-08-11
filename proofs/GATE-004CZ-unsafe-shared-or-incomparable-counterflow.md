@@ -36,6 +36,16 @@ counterflow through an arbitrarily long chain of unsafe consumers with zero
 net potential change, or can realize incomparable meet/join erasure within
 the exact rank-neutral budgets of all satisfying minors.
 
+## Cycle-173 audit
+
+LEMMA-207 proves that every comparable failure of strict `R_0` descent has a
+changed path ending at the other input of a newly counted direct
+`h`-boundary. GATE-004CZ-TRANSFER-PATH-ONLY realizes such paths at arbitrary
+length while preserving the parent and total `R_0`, so path topology alone is
+insufficient. GATE-004DA is the active minimum-cost brick: charge the first
+transferred boundary using exact pruning data, or resolve the incomparable
+branch.
+
 ## Model card
 
 | Field | Value |

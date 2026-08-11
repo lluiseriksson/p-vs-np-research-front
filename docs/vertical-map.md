@@ -370,7 +370,10 @@ Adjacent collision-aware active branch:
                                                                                                                                          <- GATE-004CY: shared or incomparable counterflow
                                                                                                                                             + LEMMA-206 (consumer-masked shared comparable descent)
                                                                                                                                             - GATE-004CY-TERMINAL-OUTPUT-ONLY (no-go: counterflow can transfer)
-                                                                                                                                            <- GATE-004CZ (active residual brick): unsafe shared or incomparable counterflow
+                                                                                                                                            <- GATE-004CZ: unsafe shared or incomparable counterflow
+                                                                                                                                               + LEMMA-207 (failed descent localizes a transfer path)
+                                                                                                                                               - GATE-004CZ-TRANSFER-PATH-ONLY (no-go: arbitrary path length)
+                                                                                                                                               <- GATE-004DA (active residual brick): charge first transferred boundary
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1246,9 +1249,16 @@ cofactors.
 LEMMA-206 extends exact descent to a shared comparable output when every
 secondary direct consumer masks the selected specialization. Equality only at
 the parent output can transfer the counted counterflow to another boundary
-(NG-150), so it is insufficient. GATE-004CZ is the active residual brick:
-follow the first unmasked consumer until it is charged or handle both witness
-regions of incomparable cofactors.
+(NG-150), so it is insufficient. GATE-004CZ follows the first unmasked
+consumer until it is charged or handles both witness regions of incomparable
+cofactors.
+
+LEMMA-207 localizes every comparable failure of strict `R_0` descent to a
+changed path reaching a newly counted direct `h`-boundary. Such paths can be
+arbitrarily long with unchanged parent and total `R_0` (NG-151), so route
+topology alone is insufficient. GATE-004DA is the active residual brick:
+charge the first transferred boundary with minimum-cost and pruning data, or
+resolve the incomparable branch.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

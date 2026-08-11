@@ -3034,3 +3034,27 @@ Model: constant finite non-uniform AND/OR/NOT shared-fanout gadget; constant
 depth, fan-in two/one, unrestricted ambient fanout; exact worst-case four-code
 cofactors; no randomness, advice, oracle, promise, distribution, field, or
 algebraic computation.
+
+## NG-151 — charge a counterflow-transfer path by length or changed-gate count
+
+**Label: NO-GO**
+
+Scope: after LEMMA-207 localizes a failed `R_0` descent to a changed path,
+infer a circuit-size or satisfying-minor contradiction from the existence,
+length, or number of changed gates on that path.
+
+Failure: GATE-004CZ-TRANSFER-PATH-ONLY gives a uniform family for every
+`m>=0`. The path `r -> q_0 -> ... -> q_m` has `m+1` changed gates after the
+selected specialization. Exact cofactor formulas show that the original
+boundary `b`, the new boundary `c`, and the parent output are all preserved,
+while the counted counterflow transfers from `b` to `c` and total `R_0`
+remains constant. Every member is nonminimal and not a plateau parent. Thus
+the family does not refute a minimum-cost argument; it shows that such an
+argument must actually use minimality, pruning budgets, or additional
+topology rather than raw path data.
+
+Model: uniform family of finite non-uniform AND/OR/NOT DAGs of size and depth
+linear in `m`; fan-in two/one, shared source fanout two, transfer-chain fanout
+one; exact worst-case four-code cofactors; no randomness, advice, oracle,
+promise, distribution, field, or algebraic computation; every `m>=0` and all
+assignments.
