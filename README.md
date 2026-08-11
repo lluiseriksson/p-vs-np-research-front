@@ -1332,11 +1332,18 @@ contractions can preserve the marked cycle without rank loss. This is
 `NO-GO` for unmarked coordinate comparisons, not a Boolean plateau witness.
 GATE-004CW now tracks physical contraction support and four-code signatures.
 
+The one-hundred-and-seventieth cycle proves that every counterflow is confined
+to `00/10`, so its same-row difference is invisible to satisfying minors.
+Meet at an AND boundary and join at an OR boundary erase that difference
+semantically while preserving all four boundary cofactors. Both satisfying-
+transport-only and semantic-erasure-only inferences are `NO-GO`; GATE-004CX
+now requires an explicit same-size, fanout-preserving basis rewrite.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–169 show that the counterflow brick requires marked Boolean transport rather than abstract cycle alignment; factoring, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–170 reduce counterflow to the exact cost of a row-zero semantic erasure; its basis realization, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

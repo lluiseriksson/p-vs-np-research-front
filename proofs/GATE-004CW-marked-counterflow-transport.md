@@ -25,6 +25,14 @@ GATE-004CV-ABSTRACT-COORDINATE-ONLY. The theorem fails if all three marked
 transports fit within their exact two-gate contraction budgets and no
 factoring or private certificate follows.
 
+## Cycle-170 audit
+
+LEMMA-203 shows that the marked difference is always `00/10`; satisfying
+transport alone cannot observe it (GATE-004CW-SATISFYING-TRANSPORT-ONLY).
+LEMMA-204 gives the exact meet/join edge function that erases the difference,
+but GATE-004CW-SEMANTIC-ERASURE-ONLY records the missing DAG cost. GATE-004CX
+is the active exact-realization brick.
+
 ## Model card
 
 | Field | Value |

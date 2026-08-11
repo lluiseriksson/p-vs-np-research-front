@@ -359,7 +359,12 @@ Adjacent collision-aware active branch:
                                                                                                                                 <- GATE-004CV (coordinate brick): independence or factoring
                                                                                                                                    + LEMMA-202 (cross-minor coordinate alignment is tautological)
                                                                                                                                    - GATE-004CV-ABSTRACT-COORDINATE-ONLY (no-go: unmarked isomorphisms align everything)
-                                                                                                                                   <- GATE-004CW (active marked brick): Boolean transport on cycle support
+                                                                                                                                   <- GATE-004CW (marked brick): Boolean transport on cycle support
+                                                                                                                                      + LEMMA-203 (counterflow is confined to `00/10`)
+                                                                                                                                      - GATE-004CW-SATISFYING-TRANSPORT-ONLY (no-go: `10` is invisible)
+                                                                                                                                      + LEMMA-204 (meet/join erases counterflow semantically)
+                                                                                                                                      - GATE-004CW-SEMANTIC-ERASURE-ONLY (no-go: no free DAG rewrite)
+                                                                                                                                      <- GATE-004CX (active cost brick): realize erasure in the basis
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1217,6 +1222,13 @@ separation: transition isomorphisms align every parent cycle automatically,
 and a two-subdivision witness preserves rank through two contractions
 (NG-146). GATE-004CW is now the active counterflow brick and retains marked
 edge support, eliminated-gate identities, and full four-code signatures.
+
+LEMMA-203 localizes every counterflow difference to `00/10`; satisfying
+restriction transports cannot observe the same-row defect (NG-147).
+LEMMA-204 erases that defect exactly at the function level by meet for AND or
+join for OR, but this supplies no fanout-preserving size bound (NG-148).
+GATE-004CX is the active brick: realize the erasure at exact basis cost or
+force a satisfying-code resource contradiction.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

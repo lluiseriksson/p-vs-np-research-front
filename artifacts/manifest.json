@@ -735,6 +735,10 @@
       "sha256": "2cf7d750a6218332a7153ef82576f427438d5013093dbb018a020d91bb3c5175"
     },
     {
+      "path": "artifacts/cycle-170-counterflow-row-erasure-audit.md",
+      "sha256": "42704d90f1b84d8b14bfaffcc52c2bf4899299120e8157accb6d77d9e7eb70b5"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -760,7 +764,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "277d3803fe103ca9b96d4690d041694d4a2bf85430461c2d1008605da53c92a2"
+      "sha256": "323bd064e2df97b282d5ca8ae08b16b798f071202fc0371acda2dccf34057d9a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -768,7 +772,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "3ec009c9abcd1e1e7e56bdb4d32b0b99e7d73366c9c572d8325b8e45bcd9ff0a"
+      "sha256": "d0c673c0d51f3d19ba50afae470949cea5e652fb6ba74a937e8d9ff58e686dbf"
     },
     {
       "path": "docs/result-labels.md",
@@ -880,11 +884,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "74165157d5b19bd3d71950d26bd4ab272153208b904ee88204066e12ee75b706"
+      "sha256": "509db3e337b4ea4937336eb4c856aa6250e5bc75a33adb1eef0548a69978d336"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "0140cf86370be6beafcb85da1d20c48d464a43cb8e7ce7c8f6c63d4f55fa8f9a"
+      "sha256": "cab4c8244e13e34878f99406899763a2bd78ee4a9a313df6e93fdbbec4df99d9"
     },
     {
       "path": "experiments/README.md",
@@ -1580,7 +1584,19 @@
     },
     {
       "path": "proofs/GATE-004CW-marked-counterflow-transport.md",
-      "sha256": "136d89b9d663a2fae2c3edad059d7a4225cb4811feb6f57342f9d265c1f5d602"
+      "sha256": "6c724a5eeca62d066f9c7ad7d82883bfe190172adfc3f2267e8719e40e1becc1"
+    },
+    {
+      "path": "proofs/GATE-004CW-satisfying-transport-only.md",
+      "sha256": "1766d27cbb1cb3b7f157744c2fe4a38c78639b73f731eaf153209f686aee6515"
+    },
+    {
+      "path": "proofs/GATE-004CW-semantic-erasure-only.md",
+      "sha256": "9a2f21089797480175e873827d7560452d904db9998a1f82c8bc9d8cef59fa11"
+    },
+    {
+      "path": "proofs/GATE-004CX-realize-counterflow-erasure.md",
+      "sha256": "1796bbe4d81b1dc0b6b7275eabd5a23b270a637383e8aff1cb989f15c622c0b0"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2547,8 +2563,16 @@
       "sha256": "7b7e38da6deab871e708eab6200eaaf37c70bb9c0f08d5990858c46312874164"
     },
     {
+      "path": "proofs/LEMMA-203-counterflow-is-confined-to-zero-row.md",
+      "sha256": "587fe07773e4bb7a56b824829908a9e8610c9d897b7f5300b7f28d13405ae6ba"
+    },
+    {
+      "path": "proofs/LEMMA-204-counterflow-admits-exact-semantic-erasure.md",
+      "sha256": "c3adfc82f55142c27d5347b3d07d679b9079111279a3d84e9d6f0aa0d5f6db9f"
+    },
+    {
       "path": "README.md",
-      "sha256": "bbca648a42b2985ae9225f832358170971a5d666ce46825f91acc298bda37b97"
+      "sha256": "a6dbeae49fa5598b70551ad404762ca4e17b7e9f47ec6e5ff00442673c7b9d75"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2560,7 +2584,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "216493b2be95116e70cdaf166c07567539018917132360e0f92abd79e8409218"
+      "sha256": "ef0039a7277b3b480f77e539396c45ca6a3378d0f10903ade1b2a41c72e439cb"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

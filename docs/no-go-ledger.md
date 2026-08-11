@@ -2952,3 +2952,42 @@ Model: finite exact-plateau cycle spaces and a subdivision multigraph witness;
 parent size `K+2` in the circuit application, unrestricted depth, circuit
 fan-in two/one, no randomness, advice, oracle, promise, or distributional
 qualification; linear maps over `F_2`; every ordered satisfying-code pair.
+
+## NG-147 — recover counterflow from satisfying-minor transport alone
+
+**Label: NO-GO**
+
+Scope: use only the `00`, `01`, and `11` restricted circuits to observe the
+same-row `u` difference carried by the auxiliary input of a counterflow.
+
+Failure: LEMMA-203 proves `r_01=r_11` and `r_00!=r_10`; the distinguishing
+cofactor is always the unsatisfying code `10`. GATE-004CW-SATISFYING-
+TRANSPORT-ONLY gives a six-input finite circuit in which an arbitrary live
+`w` term occurs in `r_10` while `r_00,r_01,r_11` and every cofactor of the
+boundary `b` remain fixed. The witness is nonminimal and not a plateau.
+Satisfying transport must be supplemented by the exact zero cofactor.
+
+Model: minimum unrestricted non-uniform endpoint for localization and a
+constant nonminimal AND/OR/NOT witness for underdetermination; unrestricted
+target depth, fan-in two/one, fanout unrestricted; exact worst-case cofactors;
+no randomness, advice, oracle, promise, distribution, field, or algebraic
+computation.
+
+## NG-148 — treat semantic meet/join erasure as a free circuit exchange
+
+**Label: NO-GO**
+
+Scope: replace a counterflow edge by the abstract `r^dagger` of LEMMA-204 and
+infer a same-size strict descent without constructing that signal.
+
+Failure: realizing `r_00 AND r_10` or `r_00 OR r_10` can require duplicated
+cofactor cones and selector gates. Shared fanout prevents globally changing
+`r`, while an edge-local change can require a private copy. The exact truth-
+table identity gives no bound on this DAG cost. GATE-004CX must exhibit the
+basis-level rewrite, pay for it with provably freed gates, or force an exact
+resource contradiction.
+
+Model: minimum unrestricted non-uniform AND/OR/NOT endpoint DAG; parent size
+`K+2`, unrestricted depth, fan-in two/one and unrestricted fanout; exact
+cofactor meet/join with no size claim; no randomness, advice, oracle, promise,
+distribution, field, or algebraic computation.
