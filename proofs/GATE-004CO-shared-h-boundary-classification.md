@@ -23,6 +23,11 @@ The proof must cover nonconstant aligned masks such as
 `(u AND x OR y) AND NOT x`, which survives the neutral contraction. Counting
 the number of exits without their Boolean labels is insufficient.
 
+LEMMA-195 classifies those labels through the nonzero difference region
+`Delta`. Arbitrarily many nonconstant aligned masks can coexist locally, so
+boundary counting is `NO-GO`. GATE-004CP is the active shared-cost and
+reconvergence audit for the complete mask family.
+
 ## Model card
 
 | Field | Value |

@@ -336,6 +336,9 @@ Adjacent collision-aware active branch:
                                                                                                            + LEMMA-194 (`g` has fanout exactly one to `h`)
                                                                                                            - GATE-004CN-SOURCE-FANOUT-ONE-ONLY (no-go: `h` can remain shared)
                                                                                                            <- GATE-004CO (active smallest brick): shared-`h` boundary classification
+                                                                                                              + LEMMA-195 (shared boundaries are exact masks of `Delta`)
+                                                                                                              - GATE-004CO-BOUNDARY-COUNT-ONLY (no-go: arbitrarily many masks coexist)
+                                                                                                              <- GATE-004CP (active smallest brick): aligned-mask-family uncrossing
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1149,6 +1152,11 @@ LEMMA-194 spends the exhausted neutral budget to prove `fanout(g)=1`. This
 does not isolate the full carrier cone: a nonconstant aligned-mask boundary
 can survive as a second consumer of `h` (NG-138). GATE-004CO is the active
 classification of these shared `h` exits and their Boolean masks.
+
+LEMMA-195 identifies those masks exactly: AND masks vanish on the difference
+region `Delta`, while OR masks cover it. A uniform family has arbitrarily many
+nonconstant aligned boundaries (NG-139), so multiplicity is not a deletion
+charge. GATE-004CP is the active shared-cost and reconvergence gate.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

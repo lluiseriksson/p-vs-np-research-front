@@ -703,6 +703,10 @@
       "sha256": "2528fbc733fb74a26b5df8d7168dee1e37307545f36b48ea69920d35d857a8f9"
     },
     {
+      "path": "artifacts/cycle-162-boundary-mask-audit.md",
+      "sha256": "a3813d7289db885507afeffed13d0f9ac217910f50ad3479c1654af50f95ec3d"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -728,7 +732,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "e635d1ff3adaed95dc58392681d3e7a4cd4d485174242d9aed99ab26abb040af"
+      "sha256": "3685376a3fc6b86b0d4fdc888517c0177c3ecebfbaf70010d58b4e08ec32f4bd"
     },
     {
       "path": "docs/problem-statement.md",
@@ -736,7 +740,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4f2f2bcc81fe7c931f1c0a29a1dc8c14152c1973e5a30589ba2c1c7b17858188"
+      "sha256": "9d4d2b376333055b52f7418e5cb4b1b09ced47b880af2c276d83d3b81e36ba6c"
     },
     {
       "path": "docs/result-labels.md",
@@ -848,11 +852,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "aae257f82c897c0640ae83785dc92c2b5b4669a1b58738c8d7e82854dcec9a43"
+      "sha256": "d6a3be14eea2f009fe011d29551d1e4ede391233cebdddcc20170a9bfc2fb523"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "062542710c79840a09a21d28121163ae054bff87939180ff2f50392a204de05e"
+      "sha256": "f282b56a30b398fc25d656195a374f1594eb200c6323d77b81e60dfb8aa6bbdc"
     },
     {
       "path": "experiments/README.md",
@@ -1483,8 +1487,16 @@
       "sha256": "a8cd29fe87d2a22eb2f837adccfe7ed910abc869f2fe83de5fbc9dfb1225f798"
     },
     {
+      "path": "proofs/GATE-004CO-boundary-count-only.md",
+      "sha256": "578bb8364f56fe3cdd530c8caf199c0ecce6e330e29879fca0ecf53ab119a85e"
+    },
+    {
       "path": "proofs/GATE-004CO-shared-h-boundary-classification.md",
-      "sha256": "634f52766a7193a9b2fdf938e6a0a723950bd114ea45fe710737afee7bf52803"
+      "sha256": "32bc724d2dbeb9ed4e68cf6765ac1d925eacf2632a11c3fb2e63334afd35a80b"
+    },
+    {
+      "path": "proofs/GATE-004CP-aligned-mask-family-uncrossing.md",
+      "sha256": "042eb18be0e023ef13ee5cef7eef65a450b89512624bec1ff50976f7f3143f9e"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2419,8 +2431,12 @@
       "sha256": "afcc0cae11001d446002a5f8b97c46ae89e4fcc62d4c38f6bd433b459b087b5f"
     },
     {
+      "path": "proofs/LEMMA-195-shared-boundaries-are-difference-masks.md",
+      "sha256": "c89e593ada63fa8b74a4f4dc9659850a016e1de0064cb5493fd59d0cb7c8e1bf"
+    },
+    {
       "path": "README.md",
-      "sha256": "80c9117e668c5d2f3dafedc4f214c535451818041e2a2a8e3556a8ab03a55824"
+      "sha256": "353b9618e3f26ba61289a01bb426a47118282774050d10f7de69ea94bec2cbbc"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2432,7 +2448,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "2695b57a135d3e264296e319ce27725d8f183bc2c36e5c9c9ae8410e1cd0d239"
+      "sha256": "47707f335878f4a5b5f77928092b9192786c8496764c932115b6994391eeb4ca"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

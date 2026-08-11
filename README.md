@@ -1284,11 +1284,17 @@ nonconstant aligned-mask gadget shows that `h` can nevertheless remain
 shared, so source-fanout-one privacy is `NO-GO`. GATE-004CO now classifies the
 shared equal-cofactor boundaries of `h`.
 
+The one-hundred-and-sixty-second cycle classifies every such boundary by the
+nonzero difference region `Delta`: AND masks vanish on it and OR masks cover
+it. Arbitrarily many nonconstant aligned masks coexist locally, so boundary
+count is `NO-GO`. GATE-004CP now targets shared realization cost and
+reconvergence of the complete mask family.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–161 reduce the size-three carrier to classification of shared aligned boundaries from `h` before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–162 reduce the size-three carrier to shared-cost uncrossing of an exact aligned-mask family before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -2808,3 +2808,21 @@ fanout-one-only privacy and leaves GATE-004CO to classify shared `h` exits.
 Model: constant-size non-uniform AND/OR/NOT gadget; constant local depth,
 fan-in two/one, `g` fanout one and `h` fanout at least two; no randomness,
 advice, oracle, promise, distribution, field, or algebraic computation.
+
+## NG-139 — charge one deletion per aligned boundary
+
+**Label: NO-GO**
+
+Scope: use the number or fanout multiplicity of shared `h` boundaries as a
+lower bound on neutral-code gate losses.
+
+Failure: for every `m`, let `g=u AND x`, `h=g OR y`, `n=NOT h`, and
+`b_i=h AND (NOT x AND z_i)`. Each `b_i` is nonconstant and satisfies
+`(b_i)_01=(b_i)_11=y AND NOT x AND z_i`; all survive the neutral contraction
+while `h` has `m+1` consumers. This is a uniform `O(m)` local multi-exit DAG,
+not a minimum single-output circuit, the full table, or a plateau. It closes
+boundary-count-only charging and leaves GATE-004CP to use shared cost.
+
+Model: unrestricted AND/OR/NOT local family; constant depth, fan-in two/one,
+unbounded `h` fanout; no randomness, advice, oracle, promise, distribution,
+field, or algebraic computation; every `m>=1` and every assignment.
