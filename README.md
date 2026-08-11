@@ -1195,11 +1195,19 @@ cycle; plateau rank equality preserves the latter in every satisfying minor.
 Local examples make mask/cycle data alone `NO-GO`. GATE-004CB is the active
 one-sided-mask exchange under full minimality.
 
+The one-hundred-and-forty-ninth cycle closes the semantic part of that
+exchange. LEMMA-182 erases the masked `01/11` edge difference by meet at OR or
+join at AND while preserving all four cofactors of the cancellation gate.
+Treating this abstract signal as a free same-size circuit rewrite is `NO-GO`
+because basis cost and shared fanout remain uncontrolled. GATE-004CC is now
+the active equal-size realization gate under lexicographic `(T_j,V_j)`
+minimality.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–148 reduce the two-excess remainder to uncrossing the one-sided first-cancellation mask before the surviving-cycle branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–149 reduce the two-excess remainder to realizing a semantic one-sided-mask erasure at equal size before the surviving-cycle branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

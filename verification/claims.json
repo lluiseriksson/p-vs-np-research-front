@@ -5394,7 +5394,31 @@
       "computational_model": "Pair-minimal minimum plateau circuits with a one-sided first binary mask", "uniformity": "Every individual non-uniform operational one-sided branch; uniform fresh implication pair",
       "circuit_size": "Same-size strict decrease of T_j, or one-unit satisfying-code resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean mask containment and undirected N+r accounting",
       "asymptotic_quantifiers": "Every operational GATE004CA parent in the one-sided mask case", "case_regime": "Exact worst-case one-sided cancellation subgate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CB-one-sided-mask-exchange.md; proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; artifacts/cycle-148-first-cancellation-audit.md"
+      "evidence": "proofs/GATE-004CB-one-sided-mask-exchange.md; proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; proofs/GATE-004CC-size-preserving-mask-realization.md; artifacts/cycle-149-one-sided-mask-erasure.md"
+    },
+    {
+      "id": "LEMMA182", "label": "PROVED",
+      "statement": "Meet at an OR mask or join at an AND mask erases the satisfying-signature difference on one input edge while preserving all four cofactors at the cancellation gate.",
+      "computational_model": "Boolean cofactor functions at one binary gate with an abstract edge substitution", "uniformity": "Every finite one-sided cancellation identity inside an individual non-uniform parent",
+      "circuit_size": "No circuit-size claim; exact truth-table preservation at the cancellation gate", "circuit_depth": "Unrestricted ambient circuit", "fan_in": "Cancellation gate has fan-in two; replacement is abstract; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean lattice meet and join only",
+      "asymptotic_quantifiers": "Every operational one-sided branch and every base assignment", "case_regime": "Exact worst-case local semantic identity; not a same-size rewrite, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; artifacts/cycle-149-one-sided-mask-erasure.md"
+    },
+    {
+      "id": "GATE004CB-SEMANTIC-ERASURE-ONLY", "label": "NO-GO",
+      "statement": "An abstract semantic edge replacement does not imply a same-size AND/OR/NOT DAG rewrite when basis cost and shared fanout are uncontrolled.",
+      "computational_model": "Minimum unrestricted AND/OR/NOT DAGs audited against an abstract edge substitution", "uniformity": "Every individual finite non-uniform one-sided parent; no uniform rewrite asserted",
+      "circuit_size": "No bound follows; replacement or cone duplication cost is uncontrolled", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and explicitly obstructive", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors only",
+      "asymptotic_quantifiers": "Every proposed use of LEMMA182 without an explicit basis-level realization", "case_regime": "Structural no-go for semantic-erasure-only reasoning; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CB-semantic-erasure-only.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; docs/no-go-ledger.md NG-127; artifacts/cycle-149-one-sided-mask-erasure.md"
+    },
+    {
+      "id": "GATE004CC", "label": "EXPLORATORY",
+      "statement": "Every one-sided mask in a lexicographically extremal plateau parent admits an equal-size basis realization decreasing satisfying-signature variation, or a satisfying minor loses a resource.",
+      "computational_model": "Lexicographically extremal minimum unrestricted AND/OR/NOT plateau circuits", "uniformity": "Every individual non-uniform operational one-sided parent; uniform fresh implication pair",
+      "circuit_size": "Exact same-size rewrite with nonincreasing T_j and strictly decreasing V_j, or one-unit resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and must be audited", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors plus undirected N+r accounting over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004CB parent under the exact two-gate hypothesis", "case_regime": "Exact worst-case realization gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CC-size-preserving-mask-realization.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; artifacts/cycle-149-one-sided-mask-erasure.md"
     }
   ]
 }

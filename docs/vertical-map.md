@@ -299,6 +299,9 @@ Adjacent collision-aware active branch:
                                                                        + LEMMA-181 (first cancellation is a one-sided mask or a surviving cycle)
                                                                        - GATE-004CA-LOCAL-CANCELLATION-ONLY (no-go: both local patterns occur in gadgets)
                                                                        <- GATE-004CB (active smallest brick): uncross the one-sided mask
+                                                                          + LEMMA-182 (meet/join erases the masked edge difference semantically)
+                                                                          - GATE-004CB-SEMANTIC-ERASURE-ONLY (no-go: no free basis realization or fanout repair)
+                                                                          <- GATE-004CC (active smallest brick): realize the erasure at equal size
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1030,6 +1033,13 @@ coordinate, and plateau rank equality preserves that coordinate in every
 satisfying minor. Explicit local gadgets realize both patterns without a
 generic saving (NG-126). GATE-004CB isolates the one-sided mask exchange
 under pair minimality and the full four-code table.
+
+LEMMA-182 gives the exact semantic erasure in that one-sided branch. Meet the
+two satisfying path-input cofactors at an OR mask, or join them at an AND
+mask; all four cofactors at the cancellation gate are preserved. This does
+not construct the replacement signal at equal size or protect other fanout
+consumers (NG-127). GATE-004CC is the active basis-level realization gate,
+using a lexicographic `(T_j,V_j)` extremal parent.
 
 ### Parallel constructive audit: GATE-004AF
 

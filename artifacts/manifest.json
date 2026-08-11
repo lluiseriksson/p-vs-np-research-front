@@ -651,6 +651,10 @@
       "sha256": "1df981328df389a186f7871c07b32e14d9424627d611d26f189bde4d45e91748"
     },
     {
+      "path": "artifacts/cycle-149-one-sided-mask-erasure.md",
+      "sha256": "9613a81cdf3e3cbdcac12c0aceeb4ecd88b696cdadb18eee4285aff8f1b42dc6"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -676,7 +680,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "6c304034bad3ee6154641294195739512917a140413a48007d865de2f2bee8a0"
+      "sha256": "8bb6ee5fad35360b7deaf94b57fada4ccbca3980088ec535b1ee4486e0da7516"
     },
     {
       "path": "docs/problem-statement.md",
@@ -684,7 +688,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "56838ac46ce281b37e36bce2592cdbe20f3155ddbbf061a490908e51245b0594"
+      "sha256": "f40b7a25d09a93e0de0645838b3334812c745998d62779a41e0a5f5bd8eb85c0"
     },
     {
       "path": "docs/result-labels.md",
@@ -796,11 +800,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a945d99f1d1546e9546726868c0c1431f3882c53a80f1a21963690a9e653e133"
+      "sha256": "2fb944e123522e9685bb9bb063f9935646f7de356286bac910e6823c1341f106"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "916300706461c06e2d7fe22da0b06885a07e35b767ddfe0ff7465c79cece8d0e"
+      "sha256": "80803e9902000a9506779dfca1fe43ea0a3c3f9ed6024d75988d92b4f839a2d0"
     },
     {
       "path": "experiments/README.md",
@@ -1332,7 +1336,15 @@
     },
     {
       "path": "proofs/GATE-004CB-one-sided-mask-exchange.md",
-      "sha256": "489ad12d844dc61dc1b34245dfd7475d77a5ff72e7bad4ce9b6ccc3d8161f03a"
+      "sha256": "4487ddf90eb19d8ceab80907ab500f6cc9a6354ea923d1959f08b46d68c1b3d1"
+    },
+    {
+      "path": "proofs/GATE-004CB-semantic-erasure-only.md",
+      "sha256": "e06d6e00036e718f4eba188094af14f974fe2f8d914f34df978a2093a44c92c9"
+    },
+    {
+      "path": "proofs/GATE-004CC-size-preserving-mask-realization.md",
+      "sha256": "b80a6806092be8188740e4ca1e8ac4e13c8bf69857e65e6ed2a9c10cbfd7b74f"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2215,8 +2227,12 @@
       "sha256": "ae7018c0a1bdd325bcc343f8cc3a38f65155eb3681ccba0a9be907761dab7887"
     },
     {
+      "path": "proofs/LEMMA-182-one-sided-mask-semantic-erasure.md",
+      "sha256": "f3ffa5ba073949c8ef19cddb010b53f1fc25eeb370ac3cf9e7842dd5f7bc2ca5"
+    },
+    {
       "path": "README.md",
-      "sha256": "b6319d7cedce1bc3beb559659bd4918e3bd8058775a6e38cbd786ada6e7e59e1"
+      "sha256": "79d11040b65ea9d0adabc2951d6e75bae6f312403cfcc0e251e7e472897ad1cb"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2228,7 +2244,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "49a98ad72fca2bdb86547810e28d326b17e10d586cfff29bcf6690253dacbd7d"
+      "sha256": "fb035da3fa5a86040c7fa72b3f0bab210474460aa8efe02418debd016229954f"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

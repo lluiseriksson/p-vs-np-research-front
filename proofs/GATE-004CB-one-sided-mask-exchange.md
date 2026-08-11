@@ -22,6 +22,12 @@ is insufficient. The rewrite must use pair minimality, the fact that each
 satisfying minor is a minimum circuit for the same `A`, and the fourth zero
 cofactor.
 
+LEMMA-182 gives the strongest cost-free semantic statement available: the
+masked edge difference can be erased while preserving all four cofactors at
+`d`. GATE-004CB-SEMANTIC-ERASURE-ONLY proves why this is not yet a same-size
+DAG exchange. GATE-004CC isolates the missing basis-level realization under a
+refined lexicographic extremal choice.
+
 ## Model card
 
 | Field | Value |

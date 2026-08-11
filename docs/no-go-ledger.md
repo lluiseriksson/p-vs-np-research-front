@@ -2560,3 +2560,23 @@ advice, oracle, promise, distribution, or algebraic computation. These are
 not plateau counterexamples. The no-go closes local-type-only reasoning and
 leaves GATE-004CB to use pair minimality, minimum satisfying minors, and the
 fourth zero cofactor in the one-sided branch.
+
+## NG-127 — treat semantic edge erasure as a free DAG rewrite
+
+**Label: NO-GO**
+
+Scope: after LEMMA-182 replaces the satisfying cofactors of one input edge by
+their meet or join, infer a same-size circuit with fewer pair-sensitive gates.
+
+Failure: the replacement is a Boolean function, not an existing AND/OR/NOT
+gate. Constructing it can require new gates or duplicated feeding cones.
+Furthermore the source gate may have other consumers, so changing it globally
+need not preserve the parent function, while changing only one outgoing edge
+can incur exactly that duplication cost. Equality of four cofactors at `d`
+does not control either cost.
+
+Model: individual finite non-uniform unrestricted AND/OR/NOT DAG; unrestricted
+depth and fanout; no randomness, advice, oracle, promise, distribution, or
+algebraic computation. This does not refute the one-sided exchange. It closes
+semantic-erasure-only reasoning and leaves GATE-004CC to provide an explicit
+same-size basis realization or force satisfying-code resource loss.
