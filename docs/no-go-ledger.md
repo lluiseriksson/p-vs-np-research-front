@@ -2341,3 +2341,20 @@ circuit realizability, depth, fan-in, uniformity, randomness, advice, oracle,
 promise, distribution, or algebraic computation. This does not refute
 GATE-004BM. It closes source-rank-count-only pruning and leaves GATE-004BN as
 the Boolean/topological equality gate.
+
+## NG-116 — close a primary base source by arity induction
+
+**Label: NO-GO**
+
+Scope: iterate LEMMA-170 using only essential base arity as a well-founded
+measure until every base-only core source disappears.
+
+Failure: if the source is the primary input `x`, compression replaces it by a
+fresh input `z` and merely renames the distinguished argument of
+`H(x,Y)=G(x,Y)`. Essential arity, cycle rank, NOT count, and the factor graph
+at the interface are unchanged. There is no strict inductive descent.
+
+Model: exact Boolean variable renaming and integer arity; no minimum-circuit
+counterexample, randomness, advice, oracle, promise, distribution, or
+algebraic model. This does not refute GATE-004BP. It closes arity-only
+induction and leaves GATE-004BQ to exploit cofactor or path structure.

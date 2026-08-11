@@ -1118,11 +1118,18 @@ upstream tail forces `H=B(X)R(Y)`. GATE-004BN-TAIL-SOURCE is therefore
 `PROVED`. GATE-004BP now isolates the sole remainder: a base-only cycle source
 that may select two distinct nonzero base cofactors.
 
+The one-hundred-and-thirty-seventh cycle compresses that base-only source.
+LEMMA-169 proves universal one-excess descent, and LEMMA-170 proves that
+source substitution preserves rank exactly. A minimum-arity counterexample
+must therefore have a primary base-input source. Arity induction alone is
+`NO-GO` there because compression becomes a variable renaming. GATE-004BQ is
+the active cofactor/path boundary.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–136 close all one-excess ranks and every two-excess source containing a tail clause, leaving base-only cycle sources. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–137 reduce the two-excess remainder to a primary base-input cycle source. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

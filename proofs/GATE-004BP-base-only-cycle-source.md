@@ -13,12 +13,14 @@ with `N+r<=j+1`.
 
 Unlike LEMMA-168, a base-only one-bit source need not force
 `H=B(X)R(Y)`: its two codes may select two distinct nonzero base cofactors.
-The next attack must either:
+LEMMA-169/170 and GATE-004BP-NONTRIVIAL-SOURCE prove that a minimum-arity
+counterexample has a primary base-input source. The next attack must either:
 
-1. peel base-only sources by a well-founded circuit transformation without
-   increasing `N+r`;
-2. show that a tail clause becomes private after all such sources; or
-3. give a structural no-go for one of those inference schemes.
+1. exploit the two base cofactors selected by that primary input; or
+2. show that a tail clause becomes private after the primary split.
+
+GATE-004BP-BASE-COUNT-INDUCTION-ONLY records why arity descent itself stops
+there. GATE-004BQ is the active boundary theorem.
 
 ## Model card
 

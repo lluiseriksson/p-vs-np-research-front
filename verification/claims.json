@@ -5082,7 +5082,47 @@
       "computational_model": "Minimum pruned two-excess implication circuits with a no-cut core source depending only on base inputs", "uniformity": "Every individual non-uniform base-only-source parent; uniform symmetric tail",
       "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor pairs and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every j at least two, sigma at least three, and remaining LEMMA166 parent with no upstream tail clause", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BN; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BP-base-only-cycle-source.md; proofs/LEMMA-166-two-excess-source-equality.md; artifacts/cycle-136-positive-tail-source-closure.md"
+      "evidence": "proofs/GATE-004BP-base-only-cycle-source.md; proofs/GATE-004BP-nontrivial-source-reduction.md; proofs/GATE-004BQ-primary-base-core-source.md; artifacts/cycle-137-base-source-compression.md"
+    },
+    {
+      "id": "LEMMA169", "label": "PROVED",
+      "statement": "Every canonical implication tail with resource at most j+1 descends after one neutral clause to resource at most j.",
+      "computational_model": "Minimum pruned unrestricted canonical implication circuits and arbitrary witness circuits", "uniformity": "Every individual non-uniform base; uniform symmetric tail family",
+      "circuit_size": "Premise mu_j at most j+1; conclusion mu_{j-1} at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean restrictions",
+      "asymptotic_quantifiers": "Every nonzero finite base and every j at least two", "case_regime": "Exact worst-case corollary of GATE004BE; not a SAT lower bound or terminal result",
+      "evidence": "proofs/LEMMA-169-universal-one-excess-descent.md; proofs/GATE-004BE-one-clause-resource-pruning.md; artifacts/cycle-137-base-source-compression.md"
+    },
+    {
+      "id": "LEMMA170", "label": "PROVED",
+      "statement": "Compressing a base-only source formula preserves cycle rank and removes exactly its NOT gates; substitution reverses the operation.",
+      "computational_model": "Pruned Boolean output cones, base-only no-bypass source formulas, and canonical implication tails", "uniformity": "Every individual non-uniform factorization; uniform tail family",
+      "circuit_size": "Compression subtracts exactly p NOTs and preserves rank; substitution adds p and preserves rank", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted downstream and one in the source formula", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every positive tail length and every nonconstant base-only no-bypass source factorization", "case_regime": "Exact worst-case compression theorem; not by itself a pruning theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-170-base-only-interface-compression.md; artifacts/cycle-137-base-source-compression.md"
+    },
+    {
+      "id": "GATE004BP-NONTRIVIAL-SOURCE", "label": "PROVED",
+      "statement": "A minimum-essential-base-arity counterexample to two-excess pruning has a primary base-input core source.",
+      "computational_model": "Minimum-counterexample reduction for pruned two-excess implication circuits with base-only sources", "uniformity": "Fully non-uniform bases and circuits; uniform symmetric tail",
+      "circuit_size": "Preserves target N+r at most j+1 and strictly reduces base arity unless the source is primary", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean substitution and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every minimum-arity counterexample candidate with j at least two and sigma at least three", "case_regime": "Exact worst-case reduction of GATE004BP; primary-source boundary remains open; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BP-nontrivial-source-reduction.md; proofs/LEMMA-169-universal-one-excess-descent.md; proofs/LEMMA-170-base-only-interface-compression.md; artifacts/cycle-137-base-source-compression.md"
+    },
+    {
+      "id": "GATE004BP-BASE-COUNT-INDUCTION-ONLY", "label": "NO-GO",
+      "statement": "Essential-base arity does not strictly decrease when a primary base source is compressed.",
+      "computational_model": "Abstract primary-input interface compression and essential-variable counts", "uniformity": "Every individual base with an essential selected input; no minimum-circuit realization claim",
+      "circuit_size": "Compression preserves every resource count at the primary boundary", "circuit_depth": "Unrestricted ambient factor circuit", "fan_in": "Interface is a primary input; target basis remains AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean variable renaming and integer arity only",
+      "asymptotic_quantifiers": "Every nonconstant base with an essential distinguished input", "case_regime": "Structural no-go for base-arity induction alone; not a refutation of GATE004BP or a SAT lower bound",
+      "evidence": "proofs/GATE-004BP-base-count-induction-only.md; docs/no-go-ledger.md NG-116; artifacts/cycle-137-base-source-compression.md"
+    },
+    {
+      "id": "GATE004BQ", "label": "EXPLORATORY",
+      "statement": "A neutral tail restriction prunes one resource when the selected cycle source is a primary base input.",
+      "computational_model": "Minimum pruned two-excess implication circuits whose selected core source is a primary base input", "uniformity": "Every minimum-arity non-uniform candidate; uniform symmetric tail",
+      "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary-input fanout at least two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Two Boolean base cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two, sigma at least three, and minimum-arity GATE004BP candidate", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BP; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BQ-primary-base-core-source.md; proofs/GATE-004BP-nontrivial-source-reduction.md; artifacts/cycle-137-base-source-compression.md"
     }
   ]
 }

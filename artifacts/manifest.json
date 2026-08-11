@@ -603,6 +603,10 @@
       "sha256": "e0d45b3af9579bfde977776247097eed34b12f307b594b57da887bd87934537c"
     },
     {
+      "path": "artifacts/cycle-137-base-source-compression.md",
+      "sha256": "336d86730bf7a1f5f6551087680c6b93375e0c2d0847c220fb698153059f530d"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -628,7 +632,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "fa6934c7be19d86db030cbf1351c15a64ff3fd374cb8c8beb506fe5399a7e604"
+      "sha256": "ec9e77d72363b665850ce55f27ea850cfffa29f30dbc23f50694fffe6cbf1712"
     },
     {
       "path": "docs/problem-statement.md",
@@ -636,7 +640,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "d9382fba220bf5d9cb49459766f537733c38f9707b9fadd5533aa3c889009e86"
+      "sha256": "309ee4947ea1eff19e3778a38bd40641fcfc681b48f0859cd8409aee9c58780b"
     },
     {
       "path": "docs/result-labels.md",
@@ -748,11 +752,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "d02a2c8a3d0395526465cd29009b682ca2a540101f59c19cc90d47dae60ee85b"
+      "sha256": "d2b22aa8084b995fcabf0286b895e020e0cc412c916f238fcb7b3372f7c6e6fa"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "1e57252afd94330a11efa2de3f9fffdba17618fe4b9645b9855278c8ef82b918"
+      "sha256": "cccdca271bb09fec1723521870c7d17b9e0d9abc35916012246cb70e2426364a"
     },
     {
       "path": "experiments/README.md",
@@ -1175,8 +1179,20 @@
       "sha256": "1f9819915e7f87084100040b719ad822446e788ea0370ed6ee39125e9398eb86"
     },
     {
+      "path": "proofs/GATE-004BP-base-count-induction-only.md",
+      "sha256": "36dc73501e42b5b2ec8d1f562052ac86807d17b66ab7600a972f7123d8343fd5"
+    },
+    {
       "path": "proofs/GATE-004BP-base-only-cycle-source.md",
-      "sha256": "8b53ef89f920ed8996ac00e6e172de90c262867c5e42bd1afc1435080fb2904b"
+      "sha256": "ae4dab32fcb0ca834498c222ac436ba6d6363c471a437c1a6e93ce7384216981"
+    },
+    {
+      "path": "proofs/GATE-004BP-nontrivial-source-reduction.md",
+      "sha256": "b2442e2d2d7b25b1a4b5e98b6674583655bfacd0d5006702576c02da830a0d23"
+    },
+    {
+      "path": "proofs/GATE-004BQ-primary-base-core-source.md",
+      "sha256": "e92a6d0fc9168cad90f0707b84f7acfe27c538f6eae73db4d94330caa666290a"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2011,8 +2027,16 @@
       "sha256": "151423b2c5f1db25863ff1c5a434f2b35088bb0dd210037c6aff6127f8e9823d"
     },
     {
+      "path": "proofs/LEMMA-169-universal-one-excess-descent.md",
+      "sha256": "b3e05e7a1b6465da0ed63f339ff22f308e68ec413aaf5b7701b1dcac587a0104"
+    },
+    {
+      "path": "proofs/LEMMA-170-base-only-interface-compression.md",
+      "sha256": "f7ff2cd146a72a45abb446aeeccb99fb5ea44c731a89ffc0e5674e10a6b967ff"
+    },
+    {
       "path": "README.md",
-      "sha256": "480ec44b87358682c4ebecc67c5c9d144a0efc698a907e0f5d7f48177352071e"
+      "sha256": "1f7ac9ab64bb95422457f89cc9381655e4981a48504295c33a8ed7d8d896f956"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2024,7 +2048,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3d8ffe46eef95b04248ef5a62c9bb15b830a074003b73e7bda2065789fcf58a6"
+      "sha256": "6b0d288b48d21f04ec88680962698b5589ede72305305c5d30c5e21d8b0764b9"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

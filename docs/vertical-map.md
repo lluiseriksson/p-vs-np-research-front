@@ -260,6 +260,11 @@ Adjacent collision-aware active branch:
                                    + LEMMA-168 (a positive upstream tail forces `H=B(X)R(Y)`)
                                    + GATE-004BN-TAIL-SOURCE (proved whenever the source contains a clause)
                                    <- GATE-004BP (active smallest brick): eliminate base-only cycle sources
+                                      + LEMMA-169 (every tail with resource at most `j+1` descends to `j`)
+                                      + LEMMA-170 (base-only interface compression preserves rank exactly)
+                                      + GATE-004BP-NONTRIVIAL-SOURCE (proved: a minimum counterexample source is primary)
+                                      - GATE-004BP-BASE-COUNT-INDUCTION-ONLY (no-go: primary compression is renaming)
+                                      <- GATE-004BQ (active smallest brick): prune a primary base core source
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -906,6 +911,15 @@ that any no-cut source with `a>=1` forces the base product factorization
 slack split, and proves pruning throughout that regime. The active gate is
 now GATE-004BP: when `a=0`, the source is base-only and may select two distinct
 nonzero base cofactors, so the product argument no longer applies.
+
+LEMMA-169 gives a base-independent descent for every at-most-one-excess tail,
+and LEMMA-170 compresses a base-only source without changing rank. A
+minimum-arity counterexample therefore cannot have a nontrivial source
+formula: compressing two or more source inputs gives a smaller counterexample,
+while all lower-resource compressed cases descend. Primary-input compression
+is only a renaming, so base-arity induction is `NO-GO` at that boundary.
+GATE-004BQ is now the active brick and must use the two primary-input
+cofactors or the actual pair of outgoing core paths.
 
 ### Parallel constructive audit: GATE-004AF
 
