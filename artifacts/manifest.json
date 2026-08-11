@@ -679,6 +679,10 @@
       "sha256": "776ade77828547c1767571dd412cc334969c18f8e985e96cf54540a9ab5a04e5"
     },
     {
+      "path": "artifacts/cycle-156-misalignment-floor-audit.md",
+      "sha256": "f006befdc11a273d0a4aa9043a0c09c3d2bd7ae8c37710ed8792c23ad9fc95f7"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -704,7 +708,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "aa7f4e85caa9a7efb2a564a5560fc5d56dd28e13bf8bdb99b3e122e12504416d"
+      "sha256": "d110c387b84294e5f57180275aeef4be9f1cb76f28a1ac06498c07f5353e2de2"
     },
     {
       "path": "docs/problem-statement.md",
@@ -712,7 +716,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "c87c9f5b12bb3ee5da35ccf3a1b134f8de124f9bda5ad08deb19cd8d1e76f90f"
+      "sha256": "7659bfb49336e69b6798f0eb25118e99cc9f6e54bcbe592d02a568766007234e"
     },
     {
       "path": "docs/result-labels.md",
@@ -824,11 +828,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "93b3d40de2c36669430e092f65e84df7c12fa73e0ba130b13843d622e2d5447c"
+      "sha256": "ac775e1ec1f2977db0209729343131870d11b98cfe8e889eeaac9e3139a0c0e7"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "b868542273c0a9635255bd8c19b2a310eeb1b0ec50a006ae1338f831a47289c8"
+      "sha256": "546517da753f09d0e34b44c7608ec8b999a3447dc38b64e7bec4c5cfdef5be3d"
     },
     {
       "path": "experiments/README.md",
@@ -1416,7 +1420,15 @@
     },
     {
       "path": "proofs/GATE-004CI-common-backbone-alignment-descent.md",
-      "sha256": "e3e6c28f65209ba45e55e2603cd558996bcbfaecf421e012abd6f6cab6529e68"
+      "sha256": "89af16a51d4d9aa01c3527837bcb51e7b91af34dfea7820588cd281a3d1e211e"
+    },
+    {
+      "path": "proofs/GATE-004CI-zero-alignment-only.md",
+      "sha256": "6e63dd7e8622d91239fbe2d611c036b7c6c6f5ce267a05a03f8829e9c52e26cf"
+    },
+    {
+      "path": "proofs/GATE-004CJ-unique-misaligned-NOT-localization.md",
+      "sha256": "ea8b2095b1470e03e447a08fc139c363f1632244b0b9b9ec138593dd250a2652"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2327,8 +2339,12 @@
       "sha256": "348b9463e9e3083a0cbb75f793e1b8e15d7db63bae029fe739a0c50847702400"
     },
     {
+      "path": "proofs/LEMMA-189-switching-forces-common-misalignment.md",
+      "sha256": "f2e68e11005dafcd69de867b0e3af231e39ffea80a1050bdb7d9308aa7f01e19"
+    },
+    {
       "path": "README.md",
-      "sha256": "53a122342af9d117eece5c46b64b473e263936a12650ee542c993b044c4686d6"
+      "sha256": "38941ead98447b46a7f8cfe666e585438fcd3b468d3a450d05b46a36657587ca"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2340,7 +2356,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "835e6da6ffbfd7fb84dc9616cee4b59a39f5952070a4ae4a7a33bb51d099b40e"
+      "sha256": "b9cca5393eea19799e0f4d9a8ed80274614b335856b50f4ecf8f5bed9efba02b"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

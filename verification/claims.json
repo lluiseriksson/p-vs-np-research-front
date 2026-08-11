@@ -5562,7 +5562,31 @@
       "computational_model": "Extremal minimum unrestricted plateau parent plus three minimum satisfying pruning maps", "uniformity": "Every individual non-uniform operational GATE004CH tuple; uniform fresh implication pair",
       "circuit_size": "Same-size strict W descent, three distinct eliminations versus budget two, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and preserved by rewrite", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor equality, finite extremal potentials, and cycle minors over F_2",
       "asymptotic_quantifiers": "Every operational minimum parent/pruning triple under the exact two-gate plateau hypothesis", "case_regime": "Exact worst-case common-backbone alignment gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CI-common-backbone-alignment-descent.md; proofs/LEMMA-188-three-minor-physical-overlap.md; artifacts/cycle-155-three-minor-overlap-audit.md"
+      "evidence": "proofs/GATE-004CI-common-backbone-alignment-descent.md; proofs/LEMMA-188-three-minor-physical-overlap.md; proofs/LEMMA-189-switching-forces-common-misalignment.md; proofs/GATE-004CJ-unique-misaligned-NOT-localization.md; artifacts/cycle-156-misalignment-floor-audit.md"
+    },
+    {
+      "id": "LEMMA189", "label": "PROVED",
+      "statement": "For any satisfying pruning triple W is at least M(C)-6, and the active switching earliest mixed NOT forces W at least one.",
+      "computational_model": "Minimum unrestricted switching-branch plateau parent with three minimum pruning maps", "uniformity": "Every individual finite non-uniform operational parent and pruning triple",
+      "circuit_size": "At most six misaligned gates can be excluded from the common backbone; W at least one in the switching branch", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set counting and Boolean cofactor inequality",
+      "asymptotic_quantifiers": "Every active switching plateau parent and every valid triple of satisfying minimum prunings", "case_regime": "Exact worst-case misalignment floor; not a descent theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-189-switching-forces-common-misalignment.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; proofs/LEMMA-188-three-minor-physical-overlap.md; artifacts/cycle-156-misalignment-floor-audit.md"
+    },
+    {
+      "id": "GATE004CI-ZERO-ALIGNMENT-ONLY", "label": "NO-GO",
+      "statement": "The active switching branch cannot be freely normalized to W zero because its earliest mixed NOT is a mandatory misaligned common gate.",
+      "computational_model": "Extremal minimum unrestricted switching-branch plateau parents and satisfying pruning triples", "uniformity": "Every individual finite non-uniform operational tuple",
+      "circuit_size": "No new size bound; structural lower floor W at least one", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor inequality and finite survivor intersection",
+      "asymptotic_quantifiers": "Every active GATE004CI switching tuple", "case_regime": "Structural no-go for zero-alignment-only normalization; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CI-zero-alignment-only.md; proofs/LEMMA-189-switching-forces-common-misalignment.md; docs/no-go-ledger.md NG-134; artifacts/cycle-156-misalignment-floor-audit.md"
+    },
+    {
+      "id": "GATE004CJ", "label": "EXPLORATORY",
+      "statement": "An extremal tuple descends while W exceeds one; at W one all common misalignment localizes to the mandatory earliest mixed NOT and forces three distinct exposed classes or an existing contradiction.",
+      "computational_model": "Extremal minimum unrestricted switching plateau parent with earliest mixed NOT and three pruning maps", "uniformity": "Every individual non-uniform operational GATE004CI tuple; uniform fresh implication pair",
+      "circuit_size": "Same-size strict descent above W one, or three distinct eliminations/private/non-bridge contradiction at W one", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and preserved by rewrite", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor equality, finite lexicographic potential, and cycle minors over F_2",
+      "asymptotic_quantifiers": "Every operational extremal tuple and every satisfying minimum pruning triple", "case_regime": "Exact worst-case unique-misalignment gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CJ-unique-misaligned-NOT-localization.md; proofs/LEMMA-189-switching-forces-common-misalignment.md; artifacts/cycle-156-misalignment-floor-audit.md"
     }
   ]
 }

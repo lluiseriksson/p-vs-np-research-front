@@ -320,6 +320,9 @@ Adjacent collision-aware active branch:
                                                                                             + LEMMA-188 (three minors share at least `K-4` gates and every NOT)
                                                                                             - GATE-004CH-OVERLAP-ONLY (no-go: physical overlap does not align functions)
                                                                                             <- GATE-004CI (active smallest brick): common-backbone alignment descent
+                                                                                               + LEMMA-189 (switching forces common misalignment `W>=1`)
+                                                                                               - GATE-004CI-ZERO-ALIGNMENT-ONLY (no-go: `W=0` assumes away the branch)
+                                                                                               <- GATE-004CJ (active smallest brick): descend to the unique misaligned NOT
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1099,6 +1102,13 @@ matching LEMMA-178's mandatory survivor. GATE-004CH is the active repair: for
 every triple of minimum satisfying prunings, prove cross-code carrier
 absorption incompatible or convert the alignment into the private/non-bridge
 contradiction.
+
+LEMMA-189 bounds the alignment potential by `W>=M(C)-6` and proves the active
+switching floor `W>=1`: the earliest mixed NOT is common to all minors and has
+unequal `01/11` cofactors. Treating `W=0` as a normal form is NG-134.
+GATE-004CJ is the active refinement: descend while `W>1`; if `W=1`, use
+the unique mandatory-NOT misalignment to force three distinct exposed classes
+or the private/non-bridge contradiction.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

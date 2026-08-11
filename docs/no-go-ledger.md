@@ -2712,3 +2712,23 @@ randomness, advice, oracle, promise, distribution, or algebraic computation.
 This is not a plateau counterexample. It closes overlap-cardinality-only
 alignment and leaves GATE-004CI to prove a strict descent in the common-
 backbone misalignment potential or expose three distinct classes.
+
+## NG-134 — normalize the switching backbone to zero misalignment
+
+**Label: NO-GO**
+
+Scope: assume or freely normalize to `W=0` and then use complete gatewise
+alignment across `00,01,11`.
+
+Failure: the earliest mixed NOT in the active switching branch satisfies
+`n_01!=n_11`. LEMMA-178 preserves every NOT in every satisfying minor, so this
+physical gate belongs to every common backbone and contributes to `W`.
+LEMMA-189 therefore gives `W>=1` for every pruning triple. Assuming `W=0`
+removes the branch whose exclusion is being attempted.
+
+Model: extremal finite non-uniform minimum unrestricted AND/OR/NOT plateau
+parents; unrestricted depth/fanout, fan-in two/one; no randomness, advice,
+oracle, promise, distribution, or algebraic computation. This is not a
+plateau counterexample and does not refute a rewrite that itself leaves the
+branch. It closes zero-alignment-only normalization and leaves GATE-004CJ to
+descend above the mandatory floor and analyze the case `W=1` if reached.

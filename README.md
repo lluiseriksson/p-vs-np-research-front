@@ -1245,11 +1245,17 @@ gate functions, as an exact-table witness shows. GATE-004CI now minimizes the
 number `W` of semantically misaligned common gates and demands descent or
 three distinct exposed classes.
 
+The one-hundred-and-fifty-sixth cycle proves a mandatory floor for that
+potential. LEMMA-189 proves `W>=M(C)-6` and, in the switching branch, `W>=1`
+because the earliest mixed NOT survives all three minors with unequal
+`01/11` cofactors. Normalizing to `W=0` is therefore `NO-GO`. GATE-004CJ now
+asks for descent above one and unique-NOT localization at `W=1`.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–155 reduce the two-excess remainder to a semantic-alignment descent on the common physical backbone of three minimum minors before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–156 reduce the two-excess remainder to descending common-backbone misalignment to its mandatory mixed-NOT floor before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -32,6 +32,13 @@ Every rewrite must account for fanout and basis cost. LEMMA-188 supplies only
 physical overlap, and GATE-004CH-OVERLAP-ONLY shows why equal functions cannot
 be inferred without the descent.
 
+LEMMA-189 proves that the active switching branch has the unavoidable floor
+`W>=1`, contributed by the earliest mixed NOT, and that at most six total
+misaligned gates can be hidden outside the common backbone.
+GATE-004CI-ZERO-ALIGNMENT-ONLY rules out treating `W=0` as a free normal form.
+GATE-004CJ refines the descent to `W>1` and the unique mandatory-NOT case
+`W=1`.
+
 ## Model card
 
 | Field | Value |
