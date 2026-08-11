@@ -326,6 +326,9 @@ Adjacent collision-aware active branch:
                                                                                                   + LEMMA-190 (`W=1` carrier has two through seven gates)
                                                                                                   - GATE-004CJ-CARRIER-CARDINALITY-ONLY (no-go: the counts are tight)
                                                                                                   <- GATE-004CK (active smallest brick): bounded carrier/incidence classification
+                                                                                                     + LEMMA-191 (exact table admits carrier `{h,n}` nonminimally)
+                                                                                                     - GATE-004CK-SIZE-TWO-TOPOLOGY-ONLY (no-go: topology/table are realizable)
+                                                                                                     <- GATE-004CL (active smallest brick): minimum size-two carrier exclusion
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1120,6 +1123,14 @@ tight as an abstract incidence system (NG-135), so cardinality alone cannot
 close GATE-004CJ. GATE-004CK is the active refinement: classify the bounded
 directed carrier/deletion incidences with symbolic four-code Boolean labels
 and the named cycle constraints.
+
+LEMMA-191 handles the first carrier size adversarially: a uniform redundant
+extension realizes exactly `{h,n}`, the earliest switching NOT, a binary
+cancellation boundary, and the complete output table. This is NG-136 because
+it costs six new gates and supplies no plateau. GATE-004CL is the active
+minimum-budget case: use deletion of `h`, mandatory survival and rewiring of
+`n`, and the two-binary-gate budget to exclude the size-two carrier or obtain
+an existing private/non-bridge contradiction.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

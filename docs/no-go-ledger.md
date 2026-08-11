@@ -2753,3 +2753,22 @@ algebraic computation. It closes carrier-cardinality-only reasoning. The
 remaining GATE-004CK obligation must use directed topology, the distinguished
 `h->n` edge, cancellation boundaries, full cofactor identities, or cycle-rank
 preservation.
+
+## NG-136 — reject the two-gate carrier from topology and the output table
+
+**Label: NO-GO**
+
+Scope: treat `H_{01,11}={h,n}`, `h->n`, earliest switching, a binary
+cancellation boundary, and `F_00=F_01=F_11=A`, `F_10=0` as contradictory.
+
+Failure: for any nonconstant base, LEMMA-191 adds
+`q=NOT x`, `c=x OR q`, `h=u AND c`, `n=NOT h`, `i=t OR n`, and
+`F=A AND i`. Then `c=1`, the output table is exact, and the carrier is exactly
+`{h,n}`. This redundant extension adds six gates and is not minimum or a
+two-gate plateau. It closes only topology/table-only reasoning and leaves
+GATE-004CL to exploit the three exact two-binary-deletion maps.
+
+Model: uniform six-gate non-uniform AND/OR/NOT extension of every finite base;
+unrestricted base depth and fanout, fan-in two/one; no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation; exact
+worst-case construction, not a SAT lower bound or terminal result.

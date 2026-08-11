@@ -687,6 +687,10 @@
       "sha256": "0013931ca222de0ea9b2328a9a9ab0b66d2b0cfab76b85a76683c3e7ac1fd8fe"
     },
     {
+      "path": "artifacts/cycle-158-size-two-carrier-audit.md",
+      "sha256": "32870cf245e02a7500bf92646d8bb6b5b09b9f4a0d5e399448e398d9fd14e82f"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -712,7 +716,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d64fa9ade1c5601d8f252d4d2f4c2d78abd1b337e5fb47204a9b7962efc4f396"
+      "sha256": "4875a0e8819158a5e6070e1e1816aa7523e5f6e208996876cec745bab58fc5c4"
     },
     {
       "path": "docs/problem-statement.md",
@@ -720,7 +724,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "8ca71ba153e0f27eac574e695fa0c15cfe58c8754f7a1bed61023843bef33455"
+      "sha256": "9d123cc94380631c99a218bbee4e0c7cdaba9228ab29a061e61168fc1f36cc5b"
     },
     {
       "path": "docs/result-labels.md",
@@ -832,11 +836,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "94060b867428d2e95ff42524dfa945af8931b3bc381dbd1ba0e60068f39bcf45"
+      "sha256": "8884a314ba6e60f58ec831395438c2070b85946d56aa3a3ef5b48c3eeb492fbd"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2acde4471638c68ddccf1d1d9c8f9e7d5b063a04603eb2a033f2cecd42e0ceec"
+      "sha256": "d78aee401b67c96b817b736d6fd77107fb495a15003e03e7a2bd7bc4351a744a"
     },
     {
       "path": "experiments/README.md",
@@ -1440,7 +1444,15 @@
     },
     {
       "path": "proofs/GATE-004CK-bounded-carrier-incidence-classification.md",
-      "sha256": "3a636cadb8764e11039dcb02cbf788f6ea70ad355cbb39dd903502dc9ffe2957"
+      "sha256": "d91ca20b051837360541f608287e0bfcc1cf149978596577ba7cf609d7ed4ee1"
+    },
+    {
+      "path": "proofs/GATE-004CK-size-two-topology-only.md",
+      "sha256": "c03a02c475002f464eb1e1d07a40d385c1511a1fdd56372aa8b27717b71d753d"
+    },
+    {
+      "path": "proofs/GATE-004CL-minimum-size-two-carrier-exclusion.md",
+      "sha256": "ce7dea393c570a1dd17072dbf8d5b78bf1957d125e24eedb94f85b4b9890bf01"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2359,8 +2371,12 @@
       "sha256": "a3338601b6cfb125d52030c19e8532893ea7726f7d21772ddd5ae510c5ed956f"
     },
     {
+      "path": "proofs/LEMMA-191-exact-table-two-gate-carrier-realization.md",
+      "sha256": "5f2fac0f4ec0a0ee734b054ec3277b6aa5130847c436699c96ea37143c6cf015"
+    },
+    {
       "path": "README.md",
-      "sha256": "29eb6fafbd0b688cc50685868903b9d5485176b9f964c325e2df572beaa95d3c"
+      "sha256": "7be0c792a78ef26ae64c535a488214f6c96f5f528741acd0eb69d7e97c7de4c8"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2372,7 +2388,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "5f73e09ef083a9e19e4c82ea8c1338506cd23648a82681bde648b4894db10c27"
+      "sha256": "7aa3f371fefb47c08dedbea7168909cad4029800604b54202a623fc6379496cf"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

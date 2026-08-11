@@ -31,6 +31,12 @@ Topology and incidence are finite; Boolean-function labels are not thereby
 reduced to a numerical enumeration. Each surviving case requires an explicit
 symbolic identity or contradiction.
 
+LEMMA-191 realizes the minimum directed carrier `{h,n}` together with the
+full output table in a nonminimal six-gate extension. Hence
+GATE-004CK-SIZE-TWO-TOPOLOGY-ONLY closes topology/table-only reasoning for
+that class. GATE-004CL isolates the remaining minimum-budget exclusion of the
+two-gate carrier before sizes three through seven are considered.
+
 ## Model card
 
 | Field | Value |
