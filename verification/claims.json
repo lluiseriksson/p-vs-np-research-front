@@ -5050,7 +5050,39 @@
       "computational_model": "Minimum pruned unrestricted implication circuits in the no-cut LEMMA166 equality and slack cases", "uniformity": "Every individual non-uniform surviving two-excess parent; uniform symmetric tail family",
       "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every j at least two, sigma at least three, and no-cut parent in one of the three LEMMA166 regimes", "case_regime": "Falsifiable worst-case remaining local subgate for GATE004BM; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BN-two-excess-no-cut-equality.md; proofs/LEMMA-166-two-excess-source-equality.md; artifacts/cycle-135-two-excess-equality-audit.md"
+      "evidence": "proofs/GATE-004BN-two-excess-no-cut-equality.md; proofs/GATE-004BN-tail-source.md; proofs/GATE-004BP-base-only-cycle-source.md; artifacts/cycle-136-positive-tail-source-closure.md"
+    },
+    {
+      "id": "LEMMA167", "label": "PROVED",
+      "statement": "Either output polarity of an exact variable-read-once implication product has one private NOT per tail pair and none elsewhere.",
+      "computational_model": "Variable-read-once AND/OR/NOT formulas for either polarity of a base times disjoint implication clauses", "uniformity": "Every individual non-uniform formula; uniform symmetric tail family",
+      "circuit_size": "Exactly a NOT gates imply one private NOT in each of a pair subtrees", "circuit_depth": "Unrestricted read-once depth", "fan_in": "AND/OR two; NOT one; fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean unateness, minterms, and tree LCAs only",
+      "asymptotic_quantifiers": "Every a at least one, every nonzero disjoint base B, and either output polarity", "case_regime": "Exact worst-case bipolar formula theorem; not an unrestricted-circuit, SAT-lower-bound, or terminal result",
+      "evidence": "proofs/LEMMA-167-bipolar-read-once-private-tail-NOTs.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-136-positive-tail-source-closure.md"
+    },
+    {
+      "id": "LEMMA168", "label": "PROVED",
+      "statement": "An essential no-cut one-bit source containing a whole tail clause forces H=B(X)R(Y) and identifies the source code with B times the upstream tail.",
+      "computational_model": "Essential one-bit factorizations of a base conjoined with disjoint implication products", "uniformity": "Every individual non-uniform factorization; uniform tail family",
+      "circuit_size": "No gate lower bound; exact functional product decomposition", "circuit_depth": "Unrestricted", "fan_in": "Boolean factorization statement; parent basis AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and residual-function cardinality only",
+      "asymptotic_quantifiers": "Every positive upstream clause count, every nonnegative downstream count, every nonzero base, and every essential no-cut factorization", "case_regime": "Exact worst-case factorization theorem; false without a positive upstream tail; not a SAT lower bound or terminal result",
+      "evidence": "proofs/LEMMA-168-positive-upstream-product-factorization.md; artifacts/cycle-136-positive-tail-source-closure.md"
+    },
+    {
+      "id": "GATE004BN-TAIL-SOURCE", "label": "PROVED",
+      "statement": "Every surviving two-excess source containing at least one whole implication clause admits a neutral restriction with resource at most j+1.",
+      "computational_model": "Minimum pruned two-excess implication circuits with a no-cut source containing a whole tail clause", "uniformity": "Every individual non-uniform parent in the stated source regime; uniform symmetric tail",
+      "circuit_size": "Parent N+r=j+2; restricted or reconstructed target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted globally and one in source and residual formulas", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors, read-once tree geometry, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two, sigma at least three, and LEMMA166 no-cut parent with at least one upstream whole clause", "case_regime": "Exact worst-case subgate of GATE004BN; base-only sources remain open; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BN-tail-source.md; proofs/LEMMA-167-bipolar-read-once-private-tail-NOTs.md; proofs/LEMMA-168-positive-upstream-product-factorization.md; artifacts/cycle-136-positive-tail-source-closure.md"
+    },
+    {
+      "id": "GATE004BP", "label": "EXPLORATORY",
+      "statement": "A neutral tail restriction prunes one resource from every surviving two-excess parent whose selected cycle source is base-only.",
+      "computational_model": "Minimum pruned two-excess implication circuits with a no-cut core source depending only on base inputs", "uniformity": "Every individual non-uniform base-only-source parent; uniform symmetric tail",
+      "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor pairs and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two, sigma at least three, and remaining LEMMA166 parent with no upstream tail clause", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BN; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BP-base-only-cycle-source.md; proofs/LEMMA-166-two-excess-source-equality.md; artifacts/cycle-136-positive-tail-source-closure.md"
     }
   ]
 }

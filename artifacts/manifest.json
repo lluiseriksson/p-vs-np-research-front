@@ -599,6 +599,10 @@
       "sha256": "8232f6e7284ed3c73e1db6d580bb972be54dce8f7e319995d744d8984a6d5300"
     },
     {
+      "path": "artifacts/cycle-136-positive-tail-source-closure.md",
+      "sha256": "e0d45b3af9579bfde977776247097eed34b12f307b594b57da887bd87934537c"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -632,7 +636,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "46b7e565eaf52b2b12b2efee4bf400917b38a1467a248600b2503eebef04ed6f"
+      "sha256": "d9382fba220bf5d9cb49459766f537733c38f9707b9fadd5533aa3c889009e86"
     },
     {
       "path": "docs/result-labels.md",
@@ -744,11 +748,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "dc597b92ebcb0556070b17e3781eb7f0d16aa13147c8c374d778cd0224ca7c46"
+      "sha256": "d02a2c8a3d0395526465cd29009b682ca2a540101f59c19cc90d47dae60ee85b"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "abe4a6f9687beac0a4f228720a9470f72f5eddd6d9dbb082fca76a03b4574f53"
+      "sha256": "1e57252afd94330a11efa2de3f9fffdba17618fe4b9645b9855278c8ef82b918"
     },
     {
       "path": "experiments/README.md",
@@ -1163,8 +1167,16 @@
       "sha256": "2708a25c627411a13d01e6a67c20cb4bcfd811105a56bfc829b7bdad50ede03b"
     },
     {
+      "path": "proofs/GATE-004BN-tail-source.md",
+      "sha256": "0ce23d7a3d60bddf2c360022f1439e1f68c8f586fc51bc56b661e74ee67bff70"
+    },
+    {
       "path": "proofs/GATE-004BN-two-excess-no-cut-equality.md",
-      "sha256": "301a7fd0d3779d82b0b98a1adcedda21d715c8c831134727ab347b07a658a024"
+      "sha256": "1f9819915e7f87084100040b719ad822446e788ea0370ed6ee39125e9398eb86"
+    },
+    {
+      "path": "proofs/GATE-004BP-base-only-cycle-source.md",
+      "sha256": "8b53ef89f920ed8996ac00e6e172de90c262867c5e42bd1afc1435080fb2904b"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1991,8 +2003,16 @@
       "sha256": "7209e19d3b1c596eb17e79b6ce6ba932e3f5de7f72f4601e24c55fa3b8ed43a9"
     },
     {
+      "path": "proofs/LEMMA-167-bipolar-read-once-private-tail-NOTs.md",
+      "sha256": "273cce66d775c0b85d44f33cce6daa9a316e64f0e60af3be1178ae1ddafe86d1"
+    },
+    {
+      "path": "proofs/LEMMA-168-positive-upstream-product-factorization.md",
+      "sha256": "151423b2c5f1db25863ff1c5a434f2b35088bb0dd210037c6aff6127f8e9823d"
+    },
+    {
       "path": "README.md",
-      "sha256": "4bbadd19529d12a5c810f3c22b39be4099c7fab105afd272926ae4cefc8b1443"
+      "sha256": "480ec44b87358682c4ebecc67c5c9d144a0efc698a907e0f5d7f48177352071e"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2004,7 +2024,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "8ccc8cd7aa280ce81f9e0c8e8723b93d1921bcd1d9e9b3192b12ad7b75c07dcc"
+      "sha256": "3d8ffe46eef95b04248ef5a62c9bb15b830a074003b73e7bda2065789fcf58a6"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -256,6 +256,10 @@ Adjacent collision-aware active branch:
                                 + LEMMA-166 (rank zero and sole-cut close; three no-cut cases survive)
                                 - GATE-004BM-SOURCE-RANK-COUNTS-ONLY (no-go: equality data omit survival)
                                 <- GATE-004BN (active smallest brick): prune the surviving no-cut cases
+                                   + LEMMA-167 (bipolar read-once equality gives private tail NOTs)
+                                   + LEMMA-168 (a positive upstream tail forces `H=B(X)R(Y)`)
+                                   + GATE-004BN-TAIL-SOURCE (proved whenever the source contains a clause)
+                                   <- GATE-004BP (active smallest brick): eliminate base-only cycle sources
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -894,6 +898,14 @@ exceptional `r=2,d=3` equality case. Source/rank/count equality alone is
 `NO-GO` because it contains no restriction-survival relation. The smallest
 brick is now GATE-004BN: use Boolean equality structure to expose a private
 resource, or find a second no-bypass interface.
+
+LEMMA-167 proves that exact read-once formulas for either polarity of a base
+times implication clauses contain one private NOT per pair. LEMMA-168 proves
+that any no-cut source with `a>=1` forces the base product factorization
+`H=B(X)R(Y)`. GATE-004BN-TAIL-SOURCE combines them, including the rank-one
+slack split, and proves pruning throughout that regime. The active gate is
+now GATE-004BP: when `a=0`, the source is base-only and may select two distinct
+nonzero base cofactors, so the product argument no longer applies.
 
 ### Parallel constructive audit: GATE-004AF
 

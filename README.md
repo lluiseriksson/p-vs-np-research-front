@@ -1111,11 +1111,18 @@ source/rank equalities alone are `NO-GO`: an abstract survival table can obey
 all of them while retaining every resource. GATE-004BN is therefore the next
 brick and must use Boolean equality structure or a second no-bypass interface.
 
+The one-hundred-and-thirty-sixth cycle supplies that Boolean structure for
+every source containing a tail clause. LEMMA-167 proves private tail NOTs for
+both output polarities at read-once equality. LEMMA-168 proves that a positive
+upstream tail forces `H=B(X)R(Y)`. GATE-004BN-TAIL-SOURCE is therefore
+`PROVED`. GATE-004BP now isolates the sole remainder: a base-only cycle source
+that may select two distinct nonzero base cofactors.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–135 close all one-excess ranks and reduce two-excess to three no-cut equality regimes. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–136 close all one-excess ranks and every two-excess source containing a tail clause, leaving base-only cycle sources. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -14,9 +14,11 @@ source degree, ranks, regional clause counts, and regional NOT counts. The
 abstract no-go GATE-004BM-SOURCE-RANK-COUNTS-ONLY proves that those data alone
 cannot supply the conclusion.
 
-The first subcase to audit is `r>=2,d=2`, where both regional lower bounds are
-equalities. A valid proof must either turn equality in LEMMA-119/139 into a
-clause-private resource or expose a second no-bypass interface.
+LEMMA-167/168 and GATE-004BN-TAIL-SOURCE prove the theorem whenever the source
+contains at least one whole implication clause. The remaining case is exactly
+GATE-004BP: a no-cut source depending only on base inputs. Such a source may
+select two distinct nonzero base cofactors, so the product-factorization proof
+does not extend automatically.
 
 ## Model card
 
