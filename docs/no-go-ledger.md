@@ -2278,3 +2278,22 @@ realizability, depth, fan-in, uniformity, randomness, advice, oracle, promise,
 distribution, or algebraic model. The table does not refute GATE-004BE. It
 closes only stratum-count-only pruning; GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/
 AG/AE remain open.
+
+## NG-113 — lift a residual private NOT directly to the parent
+
+**Label: NO-GO**
+
+Scope: infer parent-level clause locality and GATE-004BF solely because a NOT
+gate specializes to `NOT u_i` in one satisfying-base residual formula.
+
+Failure: for any nonconstant base mask `R(X)` with `R(x*)=0`, the gate
+`g_i=NOT(u_i OR R(X))` specializes to `NOT u_i` at `x*` but globally depends
+on the base. Setting `u_i=0` leaves `NOT R(X)`, which is nonconstant. A single
+cofactor therefore does not determine the parent support or make the gate
+constant under tail restriction.
+
+Model: one explicit non-uniform Boolean gate function; no minimum-circuit,
+unicyclic-parent, or full-neutral-restriction survival claim; OR fan-in two,
+NOT fan-in one, unrestricted ambient depth/fanout; no randomness, advice,
+oracle, promise, distribution, or algebraic model. Residual-locality-only
+lifting is closed; GATE-004BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.

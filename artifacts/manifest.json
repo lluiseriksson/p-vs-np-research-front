@@ -575,6 +575,10 @@
       "sha256": "4b755ed45e204eabe88b51b958dff5f979216fef76dbae5381853f98dbe12821"
     },
     {
+      "path": "artifacts/cycle-130-formula-excess-exclusion.md",
+      "sha256": "160ed37e74e10c5af77b90d8f83893ba1510028d36435fa05b86b556601ea7c8"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -600,7 +604,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "357869450652f52426e452b9b890feb7243721b5fa6118e7bf6e95631cac867f"
+      "sha256": "a7d98c5dbdf3ed5457a61686fd2a8a6803974e7508d5506fe3cfc87e53728909"
     },
     {
       "path": "docs/problem-statement.md",
@@ -608,7 +612,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4c0967719a89f75d30fae658c1a6941eeb17e5e23b723571676149d718fde622"
+      "sha256": "9345a56fcd3f4fe49725174d337cee4792a068b77a93558871c0b8056ea8d30d"
     },
     {
       "path": "docs/result-labels.md",
@@ -720,11 +724,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "131c019e29929cf5973be989ba9191aebf34db7af6be4d4e3747be81563dde7e"
+      "sha256": "a8a3f42a86df252a107258d8487049b59b6aba382ac3129e62070c119c286dc0"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "0a04e90b64e07e7ebef174fa798a6ac06718f22223a938d8489312b05ef975f6"
+      "sha256": "2c6d9eaa794132940cabaa0ce0700a518078193f58933b23d61fba0ca503a896"
     },
     {
       "path": "experiments/README.md",
@@ -1101,6 +1105,14 @@
     {
       "path": "proofs/GATE-004BE-stratum-counts-only.md",
       "sha256": "1061d8d21eff9308915544645f977923cc01fba895607e5e87a7a559f276b701"
+    },
+    {
+      "path": "proofs/GATE-004BF-residual-locality-only.md",
+      "sha256": "84fc27cd3a7e31146398b7721ac797141fc2ff76be17ff00b7109384325d7b97"
+    },
+    {
+      "path": "proofs/GATE-004BF-unicyclic-parent-pruning.md",
+      "sha256": "638bf71f7c154091d8d042e7985edfda36ebe212f6a7eac8fc77e452efe0b595"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1895,8 +1907,12 @@
       "sha256": "7694507ce444d460876e88616c16c474fa9000189edf0ac55ecf3fe6a95eced1"
     },
     {
+      "path": "proofs/LEMMA-159-formula-excess-bounds-base-surplus.md",
+      "sha256": "19e62ef56139fa3ce127d8f4cb0e0192eb19c5b777d282ff883ed858dbcad57c"
+    },
+    {
       "path": "README.md",
-      "sha256": "3c76441194a042855af73f89769a6b36e84d36e7174b9488857c4bbbe91358ab"
+      "sha256": "e7bae6946d86f1c876bfc64628cc82e7dff14ab380b2daab7def2c8ec1b39945"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1908,7 +1924,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "c45127430ade64f9b2e7eee2d9cff78f1b57b3963ede858b833811f178b59ee6"
+      "sha256": "fa0b439aeb830b1445dfebad742d4be32850e0bacce428c983db8eb6c075d66b"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

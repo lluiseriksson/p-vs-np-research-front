@@ -238,7 +238,10 @@ Adjacent collision-aware active branch:
                                 + LEMMA-158 (four exact satisfying-base residual strata)
                                 <- GATE-004BE (active smallest brick): one neutral clause lowers `N+r` by one
                                    - GATE-004BE-STRATUM-COUNTS-ONLY (no-go: integer pairs omit survival)
-                                   <- exploit clause-resource topology within the four strata (next attack)
+                                   + LEMMA-159 (global formula excess one is impossible when `sigma>=2`)
+                                   <- GATE-004BF (active smallest brick): prune the unicyclic parent
+                                      - GATE-004BF-RESIDUAL-LOCALITY-ONLY (no-go: one cofactor hides base support)
+                                      <- combine the unique-cycle factorization with clause subtrees (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -865,7 +868,10 @@ read-once uniqueness no longer closes the topology. LEMMA-158 classifies the
 four exact residual count/rank strata. GATE-004BE is the smallest sufficient
 operation: one neutral clause must lower `N+r` by one. The integer strata
 alone contain no restriction-survival relation; topology or Boolean semantics
-must supply it.
+must supply it. LEMMA-159 excludes the global formula with one extra NOT and
+forces every exact-formula residual to come from a parent with `N=m,r=1`.
+GATE-004BF now isolates that unicyclic parent. Residual private-NOT locality
+does not lift through one cofactor; the unique-cycle output paths must be used.
 
 ### Parallel constructive audit: GATE-004AF
 

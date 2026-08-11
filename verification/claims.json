@@ -4907,6 +4907,30 @@
       "circuit_size": "Exactly m+1 abstract resources, all retained by every one-clause restriction", "circuit_depth": "Not represented", "fan_in": "Not represented; target circuit basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite sets and integer resource partitions only",
       "asymptotic_quantifiers": "Every m at least one in the abstract survival-table class", "case_regime": "Structural worst-case no-go for stratum-count-only pruning; no promise or distributional claim; GATE004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BE-stratum-counts-only.md; docs/no-go-ledger.md NG-112; artifacts/cycle-129-one-excess-strata.md"
+    },
+    {
+      "id": "LEMMA159", "label": "PROVED",
+      "statement": "A read-once formula with j+s NOT gates has base surplus at most s; near-maximal parents are non-formulas and an exact-formula residual has a unicyclic parent.",
+      "computational_model": "Variable-read-once AND/OR/NOT formulas and minimum one-excess parent circuits", "uniformity": "Every individual non-uniform formula; uniform disjoint implication tail",
+      "circuit_size": "j+s formula NOTs imply K at most h-1+s; near-maximal parents have r at least one; exact-formula residual forces N=j,r=1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout one in the formula case and unrestricted in the parent consequence", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean unateness, minterm LCA geometry, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least one, every s at least zero, every nonconstant essential base, and every compatible formula; every near-maximal parent for the consequences", "case_regime": "Exact worst-case formula-excess theorem and topology exclusion; not unicyclic pruning, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-159-formula-excess-bounds-base-surplus.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-130-formula-excess-exclusion.md"
+    },
+    {
+      "id": "GATE004BF", "label": "EXPLORATORY",
+      "statement": "Some neutral clause restriction prunes one resource from every near-maximal unicyclic parent with N=j and r=1.",
+      "computational_model": "Minimum pruned unicyclic AND/OR/NOT circuits for a base conjoined with disjoint implication clauses", "uniformity": "Every individual non-uniform unicyclic minimum parent; symmetric uniform clause family",
+      "circuit_size": "Exact parent N=j,r=1; target restricted N+r at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted with one undirected cycle", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "One-bit Boolean factorization and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two in the near-maximal unicyclic parent stratum with sigma at least two", "case_regime": "Falsifiable worst-case subgate of GATE004BE; not full GATE004BD or GATE004BA, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BF-unicyclic-parent-pruning.md; proofs/LEMMA-120-unicyclic-one-bit-factorization.md; proofs/LEMMA-159-formula-excess-bounds-base-surplus.md; artifacts/cycle-130-formula-excess-exclusion.md"
+    },
+    {
+      "id": "GATE004BF-RESIDUAL-LOCALITY-ONLY", "label": "NO-GO",
+      "statement": "A NOT gate that is clause-local in one satisfying-base residual may be a mixed base-tail function in the parent.",
+      "computational_model": "Boolean gate functions under a satisfying-base cofactor and tail restrictions", "uniformity": "Explicit non-uniform semantic witness; no minimum-circuit or realizability-in-stratum claim",
+      "circuit_size": "One displayed mixed NOT gate; no parent-size assertion", "circuit_depth": "Unrestricted ambient circuit", "fan_in": "OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and essential dependence only",
+      "asymptotic_quantifiers": "Every clause index and every nonconstant base mask with an attained zero", "case_regime": "Structural worst-case no-go for residual-locality-only lifting; no promise or distributional claim; GATE004BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BF-residual-locality-only.md; docs/no-go-ledger.md NG-113; artifacts/cycle-130-formula-excess-exclusion.md"
     }
   ]
 }
