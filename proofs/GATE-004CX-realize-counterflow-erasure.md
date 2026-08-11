@@ -29,6 +29,13 @@ The theorem fails if a minimum parent can share the `r` cone so that every
 edge-local erasure costs an extra gate while all satisfying restrictions
 retain their exact two-gate, rank-neutral budgets.
 
+## Cycle-171 audit
+
+LEMMA-205 discharges the comparable case whenever a cofactor-private region
+is present. GATE-004CX-GLOBAL-SPECIALIZATION-ONLY shows why a shared `r`
+cannot simply be specialized globally. GATE-004CY is the active residual
+brick for shared comparable cones or incomparable row-zero cofactors.
+
 ## Model card
 
 | Field | Value |

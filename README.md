@@ -1339,11 +1339,18 @@ semantically while preserving all four boundary cofactors. Both satisfying-
 transport-only and semantic-erasure-only inferences are `NO-GO`; GATE-004CX
 now requires an explicit same-size, fanout-preserving basis rewrite.
 
+The one-hundred-and-seventy-first cycle gives that rewrite for comparable
+row-zero cofactors whenever an explicit cofactor-private region exists.
+Specializing raw `u` inside the region adds no gates and strictly lowers an
+earlier potential or `R_0`. A shared-fanout witness makes unaudited global
+specialization `NO-GO`. GATE-004CY now isolates shared comparable cones and
+incomparable cofactors.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–170 reduce counterflow to the exact cost of a row-zero semantic erasure; its basis realization, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–171 exclude private comparable counterflow; shared or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -364,7 +364,10 @@ Adjacent collision-aware active branch:
                                                                                                                                       - GATE-004CW-SATISFYING-TRANSPORT-ONLY (no-go: `10` is invisible)
                                                                                                                                       + LEMMA-204 (meet/join erases counterflow semantically)
                                                                                                                                       - GATE-004CW-SEMANTIC-ERASURE-ONLY (no-go: no free DAG rewrite)
-                                                                                                                                      <- GATE-004CX (active cost brick): realize erasure in the basis
+                                                                                                                                      <- GATE-004CX (cost brick): realize erasure in the basis
+                                                                                                                                         + LEMMA-205 (private comparable cone gives exact descent)
+                                                                                                                                         - GATE-004CX-GLOBAL-SPECIALIZATION-ONLY (no-go: shared consumers change)
+                                                                                                                                         <- GATE-004CY (active residual brick): shared or incomparable counterflow
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1229,6 +1232,13 @@ LEMMA-204 erases that defect exactly at the function level by meet for AND or
 join for OR, but this supplies no fanout-preserving size bound (NG-148).
 GATE-004CX is the active brick: realize the erasure at exact basis cost or
 force a satisfying-code resource contradiction.
+
+LEMMA-205 supplies that realization when the row-zero cofactors are
+comparable and an explicit cofactor-private region exists. A shared consumer
+blocks naive global specialization (NG-149), although it does not rule out
+every edge-local rewrite. GATE-004CY is the active residual brick: charge the
+first shared escape or the two nonzero witness regions of incomparable
+cofactors.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

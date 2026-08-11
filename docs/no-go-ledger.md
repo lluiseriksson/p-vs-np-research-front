@@ -2991,3 +2991,24 @@ Model: minimum unrestricted non-uniform AND/OR/NOT endpoint DAG; parent size
 `K+2`, unrestricted depth, fan-in two/one and unrestricted fanout; exact
 cofactor meet/join with no size claim; no randomness, advice, oracle, promise,
 distribution, field, or algebraic computation.
+
+## NG-149 — globally specialize a shared comparable counterflow signal
+
+**Label: NO-GO**
+
+Scope: once comparability identifies `r^dagger` with `r|u=sigma`, replace the
+physical gate `r` globally without checking its other fanouts.
+
+Failure: GATE-004CX-GLOBAL-SPECIALIZATION-ONLY constructs
+`r=x OR NOT(u OR t)`. At the cancelling boundary, its row-zero cofactors are
+`1` and `x`, its row-one cofactors are both `x`, and specializing to `u=1`
+preserves the boundary. A second live consumer `c=r OR z`, however, changes
+under that global replacement, as does the displayed downstream output. All
+auxiliary gates remain `01/11`-aligned. The witness is nonminimal, not the
+implication table, and not a plateau. It does not rule out an edge-local
+rewrite; it rules out the unaudited global substitution.
+
+Model: constant finite non-uniform AND/OR/NOT shared-fanout gadget;
+constant depth, fan-in two/one, `r` fanout two; exact worst-case cofactors;
+no randomness, advice, oracle, promise, distribution, field, or algebraic
+computation.
