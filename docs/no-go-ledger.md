@@ -2396,3 +2396,21 @@ resource-total, randomness, advice, oracle, promise, distribution, or
 algebraic model. This does not refute GATE-004BS. It closes survival-only
 identity and leaves GATE-004BT to prove uniform neutralization from the common
 minimum graph.
+
+## NG-119 — align clauses from the common residual cycle space
+
+**Label: NO-GO**
+
+Scope: combine LEMMA-174's common equal-rank cycle space with one
+clause-coordinate loss pair in each primary code and infer a common pair.
+
+Failure: choose one nonzero vector `v` and distinct clauses `i,k`. Let code
+zero lose `v` only under `i` and code one lose it only under `k`. Both codes
+have the same pre-restriction vector space and each has a loss witness, but
+their clause-vector incidence sets are disjoint.
+
+Model: abstract two-code incidence over one finite `F_2` space; no circuit
+realizability, depth, fan-in, randomness, advice, oracle, promise,
+distribution, or algebraic-computation claim. This does not refute
+GATE-004BT. It closes dimension/vector-only alignment and leaves GATE-004BU
+to use actual directed paths and Boolean semantics.

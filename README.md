@@ -1145,11 +1145,17 @@ primary codes while changing from clause-private to mixed-tail. That route is
 `NO-GO`. GATE-004BT now asks for the exact stronger event: the same NOT
 constant or the same cycle loss under one neutral clause in both codes.
 
+The one-hundred-and-forty-first cycle adds exact cycle-space rigidity.
+LEMMA-174 proves that equal-rank restrictions preserve the whole cycle space
+modulo contractions, so both primary codes share one residual space for
+`r>=3`. A common space or vector still does not align clause labels; that
+incidence-only route is `NO-GO`. GATE-004BU is the active clause-vector gate.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–140 reduce the two-excess remainder to uniform neutralization across two nonzero primary cofactors. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–141 reduce the two-excess remainder to common clause incidence in an identified residual cycle space. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

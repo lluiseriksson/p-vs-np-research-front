@@ -275,6 +275,9 @@ Adjacent collision-aware active branch:
                                                + LEMMA-173 (one surviving NOT can change tail signature across codes)
                                                - GATE-004BS-COMMON-SURVIVAL-ONLY (no-go: survival omits uniform neutralization)
                                                <- GATE-004BT (active smallest brick): same NOT constant or cycle loss in both codes
+                                                  + LEMMA-174 (equal-rank restrictions preserve the cycle space modulo contraction)
+                                                  - GATE-004BT-CYCLE-SPACE-ONLY (no-go: common vectors need not share clause labels)
+                                                  <- GATE-004BU (active smallest brick): common clause-cycle incidence
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -949,6 +952,13 @@ LEMMA-173 shows that even a physical NOT surviving both codes can change from
 not imply a stable clause resource. GATE-004BT replaces that failed inference
 with the exact sufficient condition: one neutral clause must give the same
 NOT constant, or destroy the same cycle coordinate, in both primary codes.
+
+LEMMA-174 uses the exact-rank equality absent from earlier selector audits: a
+restriction of equal rank preserves the entire residual cycle space modulo
+contraction. Both nonzero codes therefore share one identified space for
+`r>=3`. Dimension and even a common lost vector still do not align its clause
+label; a two-code incidence table separates them. GATE-004BU is now the
+active common clause-vector gate.
 
 ### Parallel constructive audit: GATE-004AF
 

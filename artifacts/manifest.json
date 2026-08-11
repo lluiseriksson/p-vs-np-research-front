@@ -619,6 +619,10 @@
       "sha256": "5bb77a139cacfd81854206e471c828d026374c3b2535f2d5ce7bf3912897deec"
     },
     {
+      "path": "artifacts/cycle-141-common-cycle-space.md",
+      "sha256": "6bb07fa0cb2a7bb22661e454860cfc480d7f66b507349944a7f306f4152d4841"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -644,7 +648,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d0fe5818041ee2861719511f9548d6cae94dec52382815e544354fc2ef0f03f1"
+      "sha256": "8a1928cd4258d94e3286d657720851136aea0d5e081135099b2abd5be1c6de6e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -652,7 +656,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "36e8c3383c802854d7efb02c67c5f7bde823ad325ed9d45926ccffefdd5ae783"
+      "sha256": "125d3384819247f61a1c4e48d006f0ffedd48cb03f41680f9c82ec0b6d591940"
     },
     {
       "path": "docs/result-labels.md",
@@ -764,11 +768,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "cc7da6c98b9921101bf0a111311f8d11e13e4693b53168b552fe2dc183d00751"
+      "sha256": "d780dc90287c825c244166b79b236bfc1a464d44cf0cab04b192b0b8497ba731"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "b88640951a8917c6824079a99fa06adbb3dba037725b167dd2d2dd709bef83dd"
+      "sha256": "3539b30b8bc15011eca5369154b6c12aeb5b358f3f23bdf7c3833b8766087e55"
     },
     {
       "path": "experiments/README.md",
@@ -1231,8 +1235,16 @@
       "sha256": "efdd599659f2a42c75e1abdecffdef8cf44a021f806a88a510e01bcb74306825"
     },
     {
+      "path": "proofs/GATE-004BT-cycle-space-only.md",
+      "sha256": "ca4c140425e73c741ce7f28b39f8cbd50c4e828a51de633f7d01720454722b5d"
+    },
+    {
       "path": "proofs/GATE-004BT-uniform-neutral-resource.md",
-      "sha256": "255756c96de3cf7a4bc8b217cb9ccc703f534a3b2810a4f855275f0ef0ad9489"
+      "sha256": "b806cdfd43a78162b2f61063f70e4bcac86cb0722dcd3f497286b55403326c1e"
+    },
+    {
+      "path": "proofs/GATE-004BU-common-clause-cycle-incidence.md",
+      "sha256": "5c2c6e4be32c191a4b929666707dfe02b48d382b5ae15afeb8f75afb24568b08"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2087,8 +2099,12 @@
       "sha256": "abc637f0f480a683738ec01e108e67ad3875ccea066232c37472da25a0ebd6a9"
     },
     {
+      "path": "proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md",
+      "sha256": "2e48f1d111d3c4a2d6d369b94a7dd9b35bc1ad1a9b562a346579f7d8cffa8ad2"
+    },
+    {
       "path": "README.md",
-      "sha256": "84e380afb7392b9cb1067deed720d0f8f28228aa25bff0c7b1b9b3d04489ed77"
+      "sha256": "4d358df9fef22c9cadb8041d16659c811be9793021e6ae0dee782ecda3b161e1"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2100,7 +2116,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3b069f7d276a33007dedd0eb9363cff19ebea8fe5516c4a83f7011f9a6c1dc5d"
+      "sha256": "e4f088f2927993724fe4b615bfe0852eaf8a081e80d62f4c8be8334edcef1742"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

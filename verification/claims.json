@@ -5202,7 +5202,31 @@
       "computational_model": "One common minimum two-excess circuit under both nonzero primary cofactors and neutral tail restrictions", "uniformity": "Every individual non-uniform GATE004BS parent; uniform symmetric tail",
       "circuit_size": "Exact parent N+r=j+2; one uniform resource loss implies target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean two-code equality and common undirected cycle space over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BS parent with two distinct nonzero cofactors", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BS; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BT-uniform-neutral-resource.md; proofs/LEMMA-173-surviving-NOT-can-change-tail-signature.md; artifacts/cycle-140-common-survival-audit.md"
+      "evidence": "proofs/GATE-004BT-uniform-neutral-resource.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; proofs/GATE-004BU-common-clause-cycle-incidence.md; artifacts/cycle-141-common-cycle-space.md"
+    },
+    {
+      "id": "LEMMA174", "label": "PROVED",
+      "statement": "Equal-rank restriction minors preserve the entire cycle space modulo contractions.",
+      "computational_model": "Connected undirected output-cone multigraphs under restriction minors and contractions", "uniformity": "Every individual finite graph reduction; circuit consequence is non-uniform",
+      "circuit_size": "No gate bound; exact equality of initial and final cycle rank", "circuit_depth": "Unrestricted", "fan_in": "Graph theorem; circuit application retains AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Cycle spaces over F_2",
+      "asymptotic_quantifiers": "Every connected finite multigraph restriction reduction of equal cycle rank", "case_regime": "Exact topology theorem; not clause incidence, resource pruning, a SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; proofs/LEMMA-172-primary-cofactor-resource-rigidity.md; artifacts/cycle-141-common-cycle-space.md"
+    },
+    {
+      "id": "GATE004BT-CYCLE-SPACE-ONLY", "label": "NO-GO",
+      "statement": "A common residual cycle space and one loss pair per primary code do not align their clause labels.",
+      "computational_model": "Abstract two-code clause-to-cycle-vector incidence over one finite F_2 space", "uniformity": "Explicit finite abstraction; no circuit-realizability claim",
+      "circuit_size": "One declared cycle loss per code; no gate or parent-resource realization", "circuit_depth": "Not represented", "fan_in": "Not represented; target basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "A common finite-dimensional vector space over F_2 and incidence sets",
+      "asymptotic_quantifiers": "Every tail with at least two clauses and every nonzero common cycle space", "case_regime": "Structural no-go for common-cycle-space-only alignment; not a refutation of GATE004BT or a SAT lower bound",
+      "evidence": "proofs/GATE-004BT-cycle-space-only.md; docs/no-go-ledger.md NG-119; artifacts/cycle-141-common-cycle-space.md"
+    },
+    {
+      "id": "GATE004BU", "label": "EXPLORATORY",
+      "statement": "One tail clause kills one identified residual cycle coordinate in both primary codes unless a NOT already neutralizes uniformly.",
+      "computational_model": "One common minimum two-excess circuit and its two equal-rank primary cofactors", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
+      "circuit_size": "Exact parent N+r=j+2; one common cycle or NOT loss gives target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "One identified residual cycle space over F_2 plus Boolean restriction semantics",
+      "asymptotic_quantifiers": "Every operational GATE004BT parent with residual cycle rank at least two", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BT; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BU-common-clause-cycle-incidence.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; artifacts/cycle-141-common-cycle-space.md"
     }
   ]
 }

@@ -21,6 +21,10 @@ LEMMA-173 shows that survival of a gate in both codes is insufficient; the
 same neutral outcome or common cycle loss must be proved from exact
 minimality and shared path topology.
 
+LEMMA-174 now identifies the equal-rank cofactors with one common residual
+cycle space. GATE-004BT-CYCLE-SPACE-ONLY shows that vector-space equality
+still does not align clause labels. GATE-004BU is the active incidence gate.
+
 ## Model card
 
 | Field | Value |
