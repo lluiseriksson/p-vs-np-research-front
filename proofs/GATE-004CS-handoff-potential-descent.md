@@ -21,6 +21,11 @@ If descent reaches `Q=0`, every direct `h` boundary is aligned on both rows;
 that zero-handoff branch must then be analyzed separately. The rewrite must
 use minimum cost, not handoff multiplicity or the output table alone.
 
+LEMMA-199 now proves that `n` is the unique `u`-sensitive child at `Q=0`.
+Semantic privacy alone is `NO-GO` because an essential base boundary can still
+consume `h`. GATE-004CT is the active aligned-mask versus counterflow
+classification for this endpoint; descent for `Q>0` remains open.
+
 ## Model card
 
 | Field | Value |

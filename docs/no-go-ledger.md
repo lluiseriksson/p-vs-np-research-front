@@ -2881,3 +2881,18 @@ potential rather than multiplicity.
 Model: unrestricted non-uniform AND/OR/NOT exact-table family; `O(m)` size,
 fan-in two/one, unrestricted depth/fanout; no randomness, advice, oracle,
 promise, distribution, field, or algebraic computation; every `m>=1`.
+
+## NG-143 — promote semantic `u`-privacy to a physical private cone
+
+**Label: NO-GO**
+
+At `Q=0`, `n` being the unique `u`-sensitive child does not make every other
+exit removable. With `g=u AND x`, `h=g OR y`, `n=NOT h`, and
+`b=h AND NOT x`, the identity `b=y AND NOT x` makes `b` nonconstant and
+`u`-independent while it physically consumes `h`. This local gadget is not
+minimum, a full table, or a plateau. GATE-004CT must audit physical cost or
+sensitivity counterflow.
+
+Model: constant-size unrestricted non-uniform AND/OR/NOT local gadget;
+constant depth, fan-in two/one, `h` fanout two; no randomness, advice, oracle,
+promise, distribution, field, or algebraic computation.
