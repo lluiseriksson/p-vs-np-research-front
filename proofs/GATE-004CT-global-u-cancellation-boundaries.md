@@ -21,6 +21,11 @@ The proof must preserve all four cofactors and account for essential base
 outputs such as `y AND NOT x` in GATE-004CS-SEMANTIC-PRIVATE-ONLY. Semantic
 independence of the boundary output is not itself a cost certificate.
 
+LEMMA-200 now gives the exact rowwise identities for both aligned masks and
+counterflows. A nonminimal local counterflow realizes them on both rows, so
+reconvergence existence alone is `NO-GO`. GATE-004CU is the active minimum-
+cost counterflow branch; the all-aligned two-row mask branch remains separate.
+
 ## Model card
 
 | Field | Value |

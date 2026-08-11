@@ -2896,3 +2896,20 @@ sensitivity counterflow.
 Model: constant-size unrestricted non-uniform AND/OR/NOT local gadget;
 constant depth, fan-in two/one, `h` fanout two; no randomness, advice, oracle,
 promise, distribution, field, or algebraic computation.
+
+## NG-144 — infer a contradiction from counterflow reconvergence alone
+
+**Label: NO-GO**
+
+Scope: treat a second `u`-sensitive route meeting `h` at a globally
+`u`-cancelling boundary as an automatic third deletion or killed cycle.
+
+Failure: GATE-004CT-COUNTERFLOW-LOCAL-ONLY builds `r` so that at `t=1` it is
+the aligned mask `NOT x`, while at `t=0` it equals `z` for `u=0` and
+`y AND z` for `u=1`. Then `b=h AND r` is respectively `y AND NOT x` and
+`y AND z`, independent of `u` on both rows. The local gadget is nonminimal,
+not a full table or plateau. GATE-004CU must use minimum cost or minor loss.
+
+Model: constant-size unrestricted non-uniform AND/OR/NOT two-route gadget;
+constant depth, fan-in two/one, fanout unrestricted; no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation.

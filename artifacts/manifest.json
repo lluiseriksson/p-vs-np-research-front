@@ -723,6 +723,10 @@
       "sha256": "b212b8a6e6ea6444edd73f06d657363d4ec3d7255da258554151d0c32b503d78"
     },
     {
+      "path": "artifacts/cycle-167-rowwise-cancellation-audit.md",
+      "sha256": "9d209642a4fdcf9eaf15b2473c0f17cc024ecf3f085cffd9b0b5df22e739a0b7"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -748,7 +752,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "9d42b6fe27872d7051b7068f3f3d8badb45b17261da93699df7bb27d20f8c42d"
+      "sha256": "ea602ef81c4d92a77855c40eef414fc0c3e2d1edb1ac19a77e709eb7beb0eb9d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -756,7 +760,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "31e470d6aaa4beb4c1a61f2797fa9fc4201cdfe6370b4cead7bee04523a6ff00"
+      "sha256": "aedbf98428d38c14e7c430f351b1e4d230811b9cdf48be294dddff2eff4ebcf7"
     },
     {
       "path": "docs/result-labels.md",
@@ -868,11 +872,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "1fa8f382b4f851963c875d2440b6d5b879c5825de229c7282c1f2ae54c525680"
+      "sha256": "c83563979a03b8cfff20404f2a75d62277cca9f8cbd14a2d1a25f7fc9a48933a"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "3583dabc605e743f165b4f0585a787631499550976fc8bd7ec05c6804e15f5c9"
+      "sha256": "374c3310d8142957887cb74f9cf2022dcd45316fb4d29a6a2ea033a4a5a0ea11"
     },
     {
       "path": "experiments/README.md",
@@ -1543,8 +1547,16 @@
       "sha256": "7a4374b85d997b78cb14a801a58f6105c03430c88c7fd1ac8ae2455acaa0aaa4"
     },
     {
+      "path": "proofs/GATE-004CT-counterflow-local-only.md",
+      "sha256": "006f4fc1b210ed34204d3123ad968cd280d2f1e8bd6c76dae477fa914d3b89ae"
+    },
+    {
       "path": "proofs/GATE-004CT-global-u-cancellation-boundaries.md",
-      "sha256": "3b7ba75d4c11d6bc47f30b9bb44e1337904011920287ef287d48c65ca4498dda"
+      "sha256": "717b7785b566c7f741618fdc5872b68737368b21e93fdb86f98b6a35e8289968"
+    },
+    {
+      "path": "proofs/GATE-004CU-minimum-counterflow-reconvergence.md",
+      "sha256": "cad748e11221d77819920c61af0090f1d071f64b8875d4a46d7493d7d9cb6416"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2499,8 +2511,12 @@
       "sha256": "751113552c741a2196a8f25cbee5d59ac10a559fba7eb3bd99b8eabce942e6ba"
     },
     {
+      "path": "proofs/LEMMA-200-rowwise-u-cancellation-identities.md",
+      "sha256": "69b2c65ed41a2f4e98f2f2c22b44282066c49e59b5f23ad813ea84dfd432598d"
+    },
+    {
       "path": "README.md",
-      "sha256": "2a7144d86bf848f8d9830835a4acab3e322d978afb0a0142e23dbb82f89d5786"
+      "sha256": "48ddb4fe5c8b01e02e84dc7ed6eabb62ba4939cd3565ee9dea007910eff359e4"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2512,7 +2528,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3cd8440c9eb3365b72e82467652653a1a3d79e89063572edfb4fd145bdd6b4be"
+      "sha256": "d29bae787b0b5ce8ea84dddcd7e5b4963200555188279bf92043d2880c5d7650"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

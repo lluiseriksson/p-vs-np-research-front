@@ -351,6 +351,9 @@ Adjacent collision-aware active branch:
                                                                                                                           + LEMMA-199 (`Q=0`: `n` uniquely preserves direct `u` sensitivity)
                                                                                                                           - GATE-004CS-SEMANTIC-PRIVATE-ONLY (no-go: semantic privacy is not physical)
                                                                                                                           <- GATE-004CT (active `Q=0` brick): global `u`-cancellation boundaries
+                                                                                                                             + LEMMA-200 (exact rowwise mask/counterflow identities)
+                                                                                                                             - GATE-004CT-COUNTERFLOW-LOCAL-ONLY (no-go: local counterflow cancels exactly)
+                                                                                                                             <- GATE-004CU (active counterflow brick): minimum reconvergence cost
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1190,6 +1193,12 @@ At the conditional endpoint `Q=0`, LEMMA-199 makes `n` the unique direct
 while cancelling `u` globally (NG-143), so semantic privacy is not a cost
 certificate. GATE-004CT splits aligned-mask exits from counterflow exits;
 descent above zero remains open.
+
+LEMMA-200 gives necessary and sufficient rowwise identities for both aligned
+masks and counterflows. A local two-route gadget realizes exact global
+cancellation (NG-144), so reconvergence existence is not a cost or rank loss.
+GATE-004CU is the active minimum-counterflow branch; the all-aligned branch
+and GATE-004CS descent remain open.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
