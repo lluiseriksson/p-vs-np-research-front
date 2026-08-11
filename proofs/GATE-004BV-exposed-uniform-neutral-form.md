@@ -19,6 +19,11 @@ shows that the form cannot be inferred by counting mixed signatures or
 selector-dependent gates. It must follow from a size-preserving normal-form
 exchange, exact minimality, or the disjoint implication semantics.
 
+LEMMA-153 shows that size preservation already fixes `N+r`. An unnamed
+exchange supplies no proof of exposure, as recorded by
+GATE-004BV-UNSPECIFIED-EXCHANGE-ONLY. LEMMA-176 and GATE-004BW replace that
+schema with the independently defined selector-minimal representation.
+
 ## Model card
 
 | Field | Value |

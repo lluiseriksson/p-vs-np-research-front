@@ -2435,3 +2435,23 @@ no exact minimum-parent, randomness, advice, oracle, promise, distribution,
 or algebraic model. This does not refute GATE-004BU. It closes
 signature-count-only charging and leaves GATE-004BV to prove an exposed form
 by exact exchange.
+
+## NG-121 — invoke an unspecified size-preserving normal-form exchange
+
+**Label: NO-GO**
+
+Scope: replace the common minimum parent by another minimum representation
+that exposes a uniform neutral NOT or cycle path, citing “normal-form
+exchange” without giving the exchange or a descending invariant.
+
+Failure: LEMMA-153 already makes `N+r` fixed by size and essential-input
+count. The remaining assertion — existence of the exposed minimum
+representation — is the structural theorem to be proved. Naming it as an
+exchange provides neither a function-preserving rewrite nor a well-founded
+descent and therefore cannot be used as an intermediate proof step.
+
+Model: finite non-uniform minimum pruned AND/OR/NOT circuits; unrestricted
+depth and fanout; binary AND/OR and unary NOT; no randomness, advice, oracle,
+promise, distribution, or algebraic computation. This does not refute a
+normal form. LEMMA-176 supplies an independent selector-minimal choice, and
+GATE-004BW must prove exposure from that extremality.

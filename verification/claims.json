@@ -5250,7 +5250,31 @@
       "computational_model": "Minimum unrestricted two-excess implication circuits under size-preserving Boolean and graph exchanges", "uniformity": "Existential minimum representation for every non-uniform GATE004BU parent; uniform tail",
       "circuit_size": "Exchange preserves minimum size and N+r; exposed neutralization loses at least one resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean gate identities and common cycle space over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BU instance", "case_regime": "Exact worst-case sufficient normal-form subgate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BV-exposed-uniform-neutral-form.md; proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; artifacts/cycle-142-signature-compression-audit.md"
+      "evidence": "proofs/GATE-004BV-exposed-uniform-neutral-form.md; proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; proofs/LEMMA-176-selector-minimal-representation-exists.md; artifacts/cycle-143-extremal-normal-form-audit.md"
+    },
+    {
+      "id": "LEMMA176", "label": "PROVED",
+      "statement": "Every finite minimum circuit class has a selector-minimal pruned representation, and all its members have the same N+r.",
+      "computational_model": "Finite deterministic AND/OR/NOT DAG representations with one distinguished primary input", "uniformity": "Extremal existence for each individual finite non-uniform function; no uniform selector algorithm",
+      "circuit_size": "Minimum total gate count; exact common N+r inherited from LEMMA153", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every finite Boolean function essential in every listed input, with one distinguished input, and all its minimum circuits", "case_regime": "Exact finite extremal-existence lemma; not an exposure theorem, circuit lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-176-selector-minimal-representation-exists.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; artifacts/cycle-143-extremal-normal-form-audit.md"
+    },
+    {
+      "id": "GATE004BV-UNSPECIFIED-EXCHANGE-ONLY", "label": "NO-GO",
+      "statement": "Naming a size-preserving normal-form exchange without a rewrite or descending invariant proves no exposure theorem.",
+      "computational_model": "Minimum pruned unrestricted AND/OR/NOT circuits and abstract equivalent-representation exchange", "uniformity": "Every individual non-uniform minimum circuit; no uniform transformation supplied",
+      "circuit_size": "Size preservation fixes N+r by LEMMA153; no gate-saving rewrite proved", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean functional equivalence",
+      "asymptotic_quantifiers": "Every fixed finite Boolean function and all its pruned minimum representations", "case_regime": "Circularity no-go for an unspecified exchange step; not a refutation of GATE004BV, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BV-unspecified-exchange-only.md; docs/no-go-ledger.md NG-121; artifacts/cycle-143-extremal-normal-form-audit.md"
+    },
+    {
+      "id": "GATE004BW", "label": "EXPLORATORY",
+      "statement": "Every selector-minimal minimum representation has a neutral tail clause that deletes a NOT or lowers cycle rank with the primary selector free.",
+      "computational_model": "Selector-minimal members of the minimum unrestricted two-excess implication-circuit class", "uniformity": "Extremal choice inside every finite non-uniform minimum-representation set; uniform tail family",
+      "circuit_size": "Minimum size fixed; N+r fixed by LEMMA153; target restriction loses at least one resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BU function and every selector-minimal minimum representation", "case_regime": "Exact worst-case sufficient normal-form subgate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BW-selector-minimal-normal-form.md; proofs/LEMMA-176-selector-minimal-representation-exists.md; artifacts/cycle-143-extremal-normal-form-audit.md"
     }
   ]
 }

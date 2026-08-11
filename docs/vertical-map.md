@@ -281,6 +281,9 @@ Adjacent collision-aware active branch:
                                                      + LEMMA-175 (one NOT mixes arbitrarily many tail blocks with constant selector penetration)
                                                      - GATE-004BU-SIGNATURE-COUNT-ONLY (no-go: changed signatures do not inject into gates)
                                                      <- GATE-004BV (active smallest brick): expose a uniform neutral form by exchange
+                                                        + LEMMA-176 (a selector-minimal minimum representation exists)
+                                                        - GATE-004BV-UNSPECIFIED-EXCHANGE-ONLY (no-go: naming an exchange proves no normal form)
+                                                        <- GATE-004BW (active smallest brick): uniform loss in the selector-minimal form
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -969,6 +972,13 @@ primary selector. Changed signatures therefore do not inject into selector
 resources, consistent with LEMMA-151/NG-105. GATE-004BV is the active
 normal-form gate: use exact minimality to expose one uniformly neutral NOT or
 cycle path by a size-preserving exchange.
+
+LEMMA-153 makes `N+r` invariant across all minimum representations of the
+fixed function. LEMMA-176 independently selects one minimizing the number of
+selector-sensitive gates. An unspecified exchange is not a proof of
+exposure (NG-121); GATE-004BW is the exact active gate: absence of uniform
+loss must yield a same-size rewrite strictly decreasing that finite
+potential.
 
 ### Parallel constructive audit: GATE-004AF
 
