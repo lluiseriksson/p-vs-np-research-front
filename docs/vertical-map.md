@@ -290,6 +290,9 @@ Adjacent collision-aware active branch:
                                                               + LEMMA-178 (a two-gate plateau makes all three minors minimum and forces interleaving)
                                                               - GATE-004BX-EXPOSED-TWO-GATE-SHELL-ONLY (no-go: a shell cannot realize the table)
                                                               <- GATE-004BY (active smallest brick): exclude pair-minimal interleaving
+                                                                 + LEMMA-179 (the negative polarity uses a mixed NOT surviving all three codes)
+                                                                 - GATE-004BY-PURE-LITERAL-NOT-ONLY (no-go: plateau forbids a pair-only NOT)
+                                                                 <- GATE-004BZ (active smallest brick): uncross the earliest mixed surviving NOT
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1000,6 +1003,13 @@ exactly two binary gates. Nevertheless every parent has at least three pair-
 sensitive gates, so the hypothetical saving must interleave pair dependence
 with base computation. Exposed-shell reasoning is NG-123; GATE-004BY asks for
 a same-size uncrossing that reduces pair sensitivity in an extremal parent.
+
+LEMMA-179 locates the necessary polarity inside that interleaving. Every
+`u_j`-sensitive NOT survives all three satisfying codes, must also depend on
+base variables, and is fed by an internal pair-sensitive binary gate with no
+direct `u_j` or `t_j` input. Thus the canonical literal NOT cannot be assumed
+(NG-124). GATE-004BZ is the active local rewrite at the earliest such mixed
+NOT.
 
 ### Parallel constructive audit: GATE-004AF
 

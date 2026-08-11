@@ -1177,11 +1177,17 @@ required pair-sensitive gates must survive as base computation. An exposed
 two-gate shell is therefore `NO-GO`. GATE-004BY is the active interleaving-
 exclusion gate.
 
+The one-hundred-and-forty-sixth cycle localizes the required inversion.
+LEMMA-179 proves that a plateau's `u_j`-sensitive NOT survives all satisfying
+codes, depends on the base, and is fed by an internal mixed binary gate with
+no direct fresh-pair input. A canonical `NOT u_j` argument is `NO-GO`.
+GATE-004BZ now targets a same-size uncrossing of this earliest mixed NOT.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–145 reduce the two-excess remainder to excluding a pair-minimal interleaved two-gate implication plateau. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–146 reduce the two-excess remainder to uncrossing an earliest mixed surviving NOT in a pair-minimal plateau. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

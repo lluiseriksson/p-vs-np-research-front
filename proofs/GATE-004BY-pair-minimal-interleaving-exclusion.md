@@ -24,6 +24,12 @@ at least one pair-sensitive gate survives as base computation in each code.
 The missing exchange must uncross one such interleaved survivor. Disjoint
 support or an output-only shell cannot supply it.
 
+LEMMA-179 further localizes the interleaving: a `u_j`-sensitive NOT survives
+all three satisfying codes, depends on the base, and receives an internal
+mixed binary signal with no direct fresh-pair input. A literal `NOT u_j`
+argument is `NO-GO`. GATE-004BZ is the active local uncrossing of this mixed
+surviving NOT.
+
 ## Model card
 
 | Field | Value |

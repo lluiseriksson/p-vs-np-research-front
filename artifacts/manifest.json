@@ -639,6 +639,10 @@
       "sha256": "360bd72bc848278fdf6be976ab7ef3ef6edc72a724e82416ebe2f4a26e5f2445"
     },
     {
+      "path": "artifacts/cycle-146-mixed-NOT-localization.md",
+      "sha256": "6cc24b2b7a5aa83efc8ceee9eee834291fde9fb5402d30bf3e3dc319b6503814"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -664,7 +668,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "5b78e01c536054346b42861f244978db53f12de7324bd3d17b5eb04ef284acb9"
+      "sha256": "b5e93abd78fc1684ad62cde37de0a6dbf4855f28b149fe5726c1cff883b5d87c"
     },
     {
       "path": "docs/problem-statement.md",
@@ -672,7 +676,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "4efd40d0ad7b46347d1312a7cee291eef3d3bac3c8c8b7fd77e40df24aba0e9c"
+      "sha256": "0fc1cd63ead1277ba8f320b82676ee8ab2a5b998ba84aadd21da3ebbee1ec662"
     },
     {
       "path": "docs/result-labels.md",
@@ -784,11 +788,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c1066351e1729bd9dc4f2e21fed28c3bf1bd92bd2179a84178bd882880b2393d"
+      "sha256": "018c2df6de503ed1b000efb0e115a73d4596fd037810ff422e31a3e9ae5c21ac"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f502686da298f692b1485b547e9d386ed8ad3b5dae0230c631853e350241a23e"
+      "sha256": "7ca18a5522d17f102f12f9250245ab435d3663976186a4cd2bf420ead2ab209a"
     },
     {
       "path": "experiments/README.md",
@@ -1292,7 +1296,15 @@
     },
     {
       "path": "proofs/GATE-004BY-pair-minimal-interleaving-exclusion.md",
-      "sha256": "c555a1035d616a7dd5f3743c9d16ff45cba3d667bfac452a2985d744b0d65fc4"
+      "sha256": "52fe6def3f1d1be871fcb4b2e849d430f9d609834da8114735d4c3181baebb44"
+    },
+    {
+      "path": "proofs/GATE-004BY-pure-literal-NOT-only.md",
+      "sha256": "832f421a090a8b9576badd34e68edaafa38da8ce9df74159028af0d05f2f9ddd"
+    },
+    {
+      "path": "proofs/GATE-004BZ-mixed-NOT-uncrossing.md",
+      "sha256": "393ddb0d73c5750b667af4dc37ee8062fbce69ad2d72b94412935ec2aea3d00f"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2167,8 +2179,12 @@
       "sha256": "a59a374caea67b92afe5b0ff73b63130433df564844c65165e825b4d80c2c9d7"
     },
     {
+      "path": "proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md",
+      "sha256": "11c9f3315a53ec904affc699c6f6e132e28fd1ef293aa6319c28873bebed89d0"
+    },
+    {
       "path": "README.md",
-      "sha256": "65d67b69e52039d8a60589fe2a0a6ec5790031c8ee2754aea9e69503d1056b5c"
+      "sha256": "b0d0b2a16e62e5a297cc7e47af483e6088e6f216ed4cce029ff6db02a9ea94e9"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2180,7 +2196,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "b34f73f2c70662761c47de851ee5f95cf984d179c4cb10fe2e3790bbb6a6b69c"
+      "sha256": "cca0c64dd8a8e4d601bd92e05c3b8ec80fbba75f1eaf4bb3cd34355b27127be5"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

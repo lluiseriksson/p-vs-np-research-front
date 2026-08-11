@@ -2498,3 +2498,24 @@ fanout; no randomness, advice, oracle, promise, distribution, or algebraic
 computation. This does not prove or refute the two-gate plateau. It closes the
 output-shell-only architecture and leaves GATE-004BY to uncross a pair-
 minimal interleaved parent.
+
+## NG-124 — expose the fresh negative literal as `NOT u`
+
+**Label: NO-GO**
+
+Scope: locate a physical pair-only NOT for the fresh negative literal and
+delete it under one satisfying restriction, copying the displayed three-gate
+extension.
+
+Failure: a two-gate plateau preserves every parent NOT under each of `00`,
+`01`, and `11`. Any NOT depending only on the fully fixed pair becomes
+constant and would be pruned. LEMMA-179 proves that every NOT carrying the
+necessary negative `u` dependence instead also depends on base variables; its
+input is an internal mixed binary gate and receives neither raw pair input
+directly.
+
+Model: finite non-uniform minimum AND/OR/NOT circuits at exact
+`C(A AND (t OR NOT u))=C(A)+2`; unrestricted depth and fanout; no randomness,
+advice, oracle, promise, distribution, or algebraic computation. This does
+not refute the plateau. It closes literal-NOT-only pruning and leaves
+GATE-004BZ to uncross the earliest mixed surviving NOT.

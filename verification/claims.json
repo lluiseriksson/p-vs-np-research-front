@@ -5322,7 +5322,31 @@
       "computational_model": "Pair-sensitivity-minimal minimum unrestricted circuits at a hypothetical two-gate implication increment", "uniformity": "Extremal choice for every individual non-uniform operational prefix; uniform fresh implication pair",
       "circuit_size": "Hypothetical C(F)=C(A)+2; target contradiction forces exact increment three and one resource unit", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Four Boolean cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BX prefix and every pair-minimal minimum parent under the two-gate hypothesis", "case_regime": "Exact worst-case sufficient interleaving-exclusion gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BY-pair-minimal-interleaving-exclusion.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-145-three-code-plateau-rigidity.md"
+      "evidence": "proofs/GATE-004BY-pair-minimal-interleaving-exclusion.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; artifacts/cycle-146-mixed-NOT-localization.md"
+    },
+    {
+      "id": "LEMMA179", "label": "PROVED",
+      "statement": "Every two-gate plateau realizes negative u polarity through a mixed base-dependent NOT surviving all three satisfying codes.",
+      "computational_model": "Minimum unrestricted AND/OR/NOT circuits at an exact two-gate fresh-implication plateau", "uniformity": "Every finite non-uniform nonconstant base and every minimum plateau parent",
+      "circuit_size": "Parent C(F)=C(A)+2; every NOT preserved under all three satisfying restrictions", "circuit_depth": "Unrestricted; proved mixed path has at least one internal predecessor before a binary-to-NOT edge", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean monotonicity, cofactors, and restriction survival; no algebraic computation",
+      "asymptotic_quantifiers": "Every nonconstant finite base, every fresh implication pair, every minimum plateau circuit, and every u-sensitive NOT in it", "case_regime": "Exact equality-case polarity localization; not an exclusion of the plateau, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-146-mixed-NOT-localization.md"
+    },
+    {
+      "id": "GATE004BY-PURE-LITERAL-NOT-ONLY", "label": "NO-GO",
+      "statement": "A two-gate plateau cannot expose a deletable pair-only NOT such as the canonical NOT u.",
+      "computational_model": "Minimum unrestricted base-implication circuits under exact two-gate equality and satisfying-code restrictions", "uniformity": "Every finite non-uniform plateau parent; no uniform normalization supplied",
+      "circuit_size": "All parent NOTs survive; no pure-pair NOT can be the deletable resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean polarity and restriction survival only",
+      "asymptotic_quantifiers": "Every nonconstant base, fresh implication pair, and minimum parent satisfying C(F)=C(A)+2", "case_regime": "Structural no-go for literal-NOT-only pruning; not a counterexample to GATE004BY, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BY-pure-literal-NOT-only.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; docs/no-go-ledger.md NG-124; artifacts/cycle-146-mixed-NOT-localization.md"
+    },
+    {
+      "id": "GATE004BZ", "label": "EXPLORATORY",
+      "statement": "The earliest mixed surviving NOT can be uncrossed at equal size to lower pair sensitivity or expose a deletable pair-only NOT.",
+      "computational_model": "Pair-minimal minimum unrestricted plateau circuits localized at an earliest mixed u-sensitive NOT", "uniformity": "Every individual non-uniform operational plateau parent; uniform fresh implication pair",
+      "circuit_size": "Same-size rewrite lowering pair sensitivity, or one satisfying restriction loses a NOT resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean gate identities, four pair cofactors, and N+r accounting over F_2 cycle rank",
+      "asymptotic_quantifiers": "Every operational GATE004BY parent under the two-gate equality", "case_regime": "Exact worst-case sufficient local uncrossing gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BZ-mixed-NOT-uncrossing.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; artifacts/cycle-146-mixed-NOT-localization.md"
     }
   ]
 }
