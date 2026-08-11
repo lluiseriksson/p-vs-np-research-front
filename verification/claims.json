@@ -4667,6 +4667,22 @@
       "circuit_size": "Parent K+3m-Delta; target Q_J-b at least 4m-2(Delta+K)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors, semantic equivalence classes, and exact functional substitution",
       "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum implication circuit for each instance", "case_regime": "Worst-case exact implication-collision subgate for GATE004AU; not a SAT lower bound or terminal result",
       "evidence": "proofs/GATE-004AX-combined-implication-tradeoff.md; proofs/LEMMA-146-width-five-derived-implication-reduction.md; proofs/LEMMA-147-two-row-raw-cofactor-witness.md; artifacts/cycle-118-two-row-collision-audit.md"
+    },
+    {
+      "id": "LEMMA148", "label": "PROVED",
+      "statement": "An exposed common OR mask across b implication clauses factors from 4b-1 to 3b gates, saving b-1.",
+      "computational_model": "Unrestricted Boolean circuits with an exposed clause-local submodule", "uniformity": "Fully non-uniform finite identity and circuit rewrite",
+      "circuit_size": "Exact rewrite from 4b-1 to 3b gates with R already available; saving b-1", "circuit_depth": "Unrestricted; binary AND trees may have arbitrary shape", "fan_in": "AND/OR two; NOT one; fanout unrestricted outside the exposed-module premise", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean distributivity only",
+      "asymptotic_quantifiers": "Every b at least one, every Boolean mask R, and every fresh disjoint implication-input family", "case_regime": "Exact local worst-case exchange; not a normal form, quotient lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-148-common-mask-factoring-exchange.md; artifacts/cycle-119-common-mask-exchange.md"
+    },
+    {
+      "id": "GATE004AX-COMMON-MASK-ONLY", "label": "NO-GO",
+      "statement": "Two-row raw cofactors do not imply exact common OR masks or exposed clause-local uses.",
+      "computational_model": "Minimum unrestricted implication circuits audited by a restricted exposed common-mask rewrite", "uniformity": "Fully non-uniform circuit adversary and finite semantic counterexample to the normalization inference",
+      "circuit_size": "LEMMA148 saves b-1 only inside the exposed form; arbitrary XOR-type witnesses have constant overhead", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and distributivity; XOR only as an AND/OR/NOT-definable witness function",
+      "asymptotic_quantifiers": "Every selected row pair admitting a nonzero vanishing predicate and arbitrary collision witnesses outside the exposed form", "case_regime": "Structural no-go for common-mask-only normalization; GATE004AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AX-common-mask-only.md; proofs/LEMMA-148-common-mask-factoring-exchange.md; docs/no-go-ledger.md NG-103; artifacts/cycle-119-common-mask-exchange.md"
     }
   ]
 }

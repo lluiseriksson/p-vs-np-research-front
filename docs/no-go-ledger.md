@@ -2070,3 +2070,24 @@ restrictions; fully non-uniform finite witness; shared `C(R)` plus `m` binary
 gates; unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in one;
 no randomness, advice, oracle, promise, distribution, or algebraic model.
 Two-rows-only inference is closed; GATE-004AX/AW/AV/AU/AT/AG/AE remain open.
+
+## NG-103 — normalize every raw cofactor to an exposed common OR mask
+
+**Label: NO-GO**
+
+Scope: apply LEMMA-148 to every collision by treating a gate with selected-row
+cofactor `t_i` as an exposed gate `t_i OR R(X)`, with masks shared across
+indices and only clause-local uses.
+
+Failure: if `S(X)` vanishes on both selected rows, `t_i XOR S` has cofactor
+`t_i` on both while being neither `t_i OR R(X)` nor `t_i AND R(X)` for any
+base-only `R`. It has a constant-size AND/OR/NOT implementation. Moreover,
+cofactor semantics say nothing about fanout or downstream mixing. Thus exact
+mask form, mask commonality, and exposed use are all additional structural
+premises. LEMMA-148's factorization is sound only after they are established.
+
+Model: minimum unrestricted implication circuits audited through an exposed
+common-mask submodule; fully non-uniform finite witness; unrestricted depth
+and fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice,
+oracle, promise, distribution, or algebraic model. Common-mask-only
+normalization is closed; GATE-004AX/AW/AV/AU/AT/AG/AE remain open.

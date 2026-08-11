@@ -45,6 +45,18 @@ the `m` raw inputs on both rows. The next proof attempt must therefore use
 minimum-circuit exchange, additional canonical rows, or an injective charge
 from each unpaid collision to surplus quotient structure.
 
+## First exchange attempt
+
+LEMMA-148 proves a linear-saving rewrite when several collision gates have
+the exact form `t_i OR R(X)`, share the same mask, and occur in an exposed
+clause-local module. The mask factors once across the conjunction, saving
+`b-1` gates. Hence that module cannot survive unchanged in a minimum circuit.
+
+GATE-004AX-COMMON-MASK-ONLY closes the attempted promotion: a raw cofactor on
+two rows implies neither OR-mask form nor exposed uses. The active subproblem
+is now a minimum-circuit collision normal form, or an injective charge from
+every non-factorable exception to quotient surplus or `Delta+K` slack.
+
 ## Model card
 
 | Field | Value |

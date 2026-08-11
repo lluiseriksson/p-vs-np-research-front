@@ -210,6 +210,9 @@ Adjacent collision-aware active branch:
                  + LEMMA-147 (two rows cannot recognize a globally raw input)
                  - GATE-004AW-TWO-ROWS-ONLY (no-go: `m` bilateral raw cofactors remain possible)
                  <- GATE-004AX (active weakest brick): charge quotient surplus minus raw collisions
+                    + LEMMA-148 (exposed common OR masks factor with saving `b-1`)
+                    - GATE-004AX-COMMON-MASK-ONLY (no-go: cofactors do not imply that normal form)
+                    <- derive collision normal form or charge every failure (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -817,7 +820,9 @@ The exact falsifiable statement and model card are in
 quantity `Q_J-b` needed by the width-five bridge. LEMMA-147 rules out deriving
 the collision term from the two selected cofactor tables alone, so the next
 attack must use minimum-circuit exchange, additional canonical rows, or an
-injective surplus charge.
+injective surplus charge. LEMMA-148 supplies an exact linear-saving exchange
+for exposed common masks; GATE-004AX-COMMON-MASK-ONLY records why the required
+normal form still has to be proved rather than inferred from two cofactors.
 
 ### Parallel constructive audit: GATE-004AF
 

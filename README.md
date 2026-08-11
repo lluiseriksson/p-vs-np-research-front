@@ -972,11 +972,20 @@ while remaining globally non-raw. Hence a two-cofactor-only collision bound is
 surplus. Minimum-circuit exchange or additional canonical-row information is
 now indispensable.
 
+The one-hundred-and-nineteenth cycle executes the first such exchange in its
+exact valid scope. LEMMA-148 factors a common base mask out of `b` exposed
+implication clauses, reducing `4b-1` gates to `3b`; a minimum circuit cannot
+contain that module for `b>=2`. The promotion to arbitrary collisions is
+`NO-GO`: a gate `t_i XOR S(X)` can look like raw `t_i` on both rows without
+having OR-mask or AND-mask form, and cofactor data do not control fanout.
+GATE-004AX therefore remains open pending a genuine collision normal form or
+an exception-to-surplus/slack charge.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–118 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce width-five stability to one quantified implication surplus-minus-collision inequality. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–119 close the standalone tradeoff, give a canonical `o(m)` size gap, reduce width-five stability to one quantified implication surplus-minus-collision inequality, and prove the first exact local collision exchange. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
