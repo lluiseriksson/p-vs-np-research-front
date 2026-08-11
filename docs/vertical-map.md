@@ -296,6 +296,9 @@ Adjacent collision-aware active branch:
                                                                     + LEMMA-180 (ordered earliest-NOT signatures: stable or first binary cancellation)
                                                                     - GATE-004BZ-COFACTOR-ORDER-ONLY (no-go: one OR can mask an ordered difference)
                                                                     <- GATE-004CA (active smallest brick): exclude satisfying-signature cancellation
+                                                                       + LEMMA-181 (first cancellation is a one-sided mask or a surviving cycle)
+                                                                       - GATE-004CA-LOCAL-CANCELLATION-ONLY (no-go: both local patterns occur in gadgets)
+                                                                       <- GATE-004CB (active smallest brick): uncross the one-sided mask
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1020,6 +1023,13 @@ first binary cancellation gate. A local OR gadget shows that order plus final
 equality alone cannot justify an exchange (NG-125). GATE-004CA is the active
 switching-branch gate and must use pair minimality, exact resource survival,
 or the falsifying `10` code.
+
+LEMMA-181 classifies the first cancellation gate. An unchanged second input
+masks the cofactor difference; a changing second input creates a cycle
+coordinate, and plateau rank equality preserves that coordinate in every
+satisfying minor. Explicit local gadgets realize both patterns without a
+generic saving (NG-126). GATE-004CB isolates the one-sided mask exchange
+under pair minimality and the full four-code table.
 
 ### Parallel constructive audit: GATE-004AF
 

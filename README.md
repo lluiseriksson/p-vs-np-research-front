@@ -1189,11 +1189,17 @@ cancellation dichotomy. A constant-size OR gadget shows that order and final
 equality alone are `NO-GO`. GATE-004CA now asks whether pair minimality and
 the falsifying `10` code exclude the cancellation branch.
 
+The one-hundred-and-forty-eighth cycle classifies the first cancellation.
+LEMMA-181 proves it is either a one-sided mask or a two-sided reconvergence
+cycle; plateau rank equality preserves the latter in every satisfying minor.
+Local examples make mask/cycle data alone `NO-GO`. GATE-004CB is the active
+one-sided-mask exchange under full minimality.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–147 reduce the two-excess remainder to excluding first binary cancellation of an ordered earliest-NOT signature. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–148 reduce the two-excess remainder to uncrossing the one-sided first-cancellation mask before the surviving-cycle branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

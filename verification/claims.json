@@ -5370,7 +5370,31 @@
       "computational_model": "Pair-minimal minimum plateau circuits with a first binary cancellation after an earliest mixed NOT", "uniformity": "Every individual non-uniform operational plateau parent; uniform fresh implication pair",
       "circuit_size": "Same-size pair-sensitivity descent or one-unit satisfying-code resource loss in the switching branch", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Ordered Boolean cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BZ parent whose earliest mixed NOT has distinct 01 and 11 signatures", "case_regime": "Exact worst-case switching-branch subgate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CA-exclude-satisfying-signature-cancellation.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; artifacts/cycle-147-earliest-NOT-dichotomy.md"
+      "evidence": "proofs/GATE-004CA-exclude-satisfying-signature-cancellation.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; artifacts/cycle-148-first-cancellation-audit.md"
+    },
+    {
+      "id": "LEMMA181", "label": "PROVED",
+      "statement": "A first satisfying-signature cancellation is either a one-sided Boolean mask or a two-sided cycle surviving every satisfying minor.",
+      "computational_model": "Minimum unrestricted plateau circuits at the first binary cancellation of two satisfying cofactors", "uniformity": "Every individual finite non-uniform switching-branch parent",
+      "circuit_size": "No new gate bound; exact mask containment or persistent cycle coordinate", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean symmetric difference and undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004CA switching path and every satisfying pair restriction", "case_regime": "Exact local cancellation classification; not a branch exclusion, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; artifacts/cycle-148-first-cancellation-audit.md"
+    },
+    {
+      "id": "GATE004CA-LOCAL-CANCELLATION-ONLY", "label": "NO-GO",
+      "statement": "Local mask containment or a two-sided reconvergence cycle alone does not force a deletion or same-size rewrite.",
+      "computational_model": "Explicit constant-size AND/OR/NOT cancellation gadgets and local cofactor topology", "uniformity": "Finite non-uniform identities; no minimum-parent realization claim",
+      "circuit_size": "Constant-size witnesses; no global size or resource assertion", "circuit_depth": "Constant in the witnesses; ambient target unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean identities and one undirected cycle coordinate",
+      "asymptotic_quantifiers": "Every choice of independent Boolean variables in the two displayed identities", "case_regime": "Structural no-go for local-cancellation-only reasoning; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CA-local-cancellation-only.md; proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; docs/no-go-ledger.md NG-126; artifacts/cycle-148-first-cancellation-audit.md"
+    },
+    {
+      "id": "GATE004CB", "label": "EXPLORATORY",
+      "statement": "Pair minimality uncrosses a one-sided first-cancellation mask at equal size or exposes a satisfying-code resource loss.",
+      "computational_model": "Pair-minimal minimum plateau circuits with a one-sided first binary mask", "uniformity": "Every individual non-uniform operational one-sided branch; uniform fresh implication pair",
+      "circuit_size": "Same-size strict decrease of T_j, or one-unit satisfying-code resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean mask containment and undirected N+r accounting",
+      "asymptotic_quantifiers": "Every operational GATE004CA parent in the one-sided mask case", "case_regime": "Exact worst-case one-sided cancellation subgate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CB-one-sided-mask-exchange.md; proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md; artifacts/cycle-148-first-cancellation-audit.md"
     }
   ]
 }

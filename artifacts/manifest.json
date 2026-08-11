@@ -647,6 +647,10 @@
       "sha256": "4186641742f0b783b7c3f6beab3ee73fa3bbadc45102c9f293956ec0654f4741"
     },
     {
+      "path": "artifacts/cycle-148-first-cancellation-audit.md",
+      "sha256": "1df981328df389a186f7871c07b32e14d9424627d611d26f189bde4d45e91748"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -672,7 +676,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "9b0b3ecff1033f2b849293121d8c197f4f6de1e3551a36175e79684eecd89833"
+      "sha256": "6c304034bad3ee6154641294195739512917a140413a48007d865de2f2bee8a0"
     },
     {
       "path": "docs/problem-statement.md",
@@ -680,7 +684,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "8ee658e9075bb6c0224bce7fbfbe10e3e0b1459019b053b91a3242c7e974d942"
+      "sha256": "56838ac46ce281b37e36bce2592cdbe20f3155ddbbf061a490908e51245b0594"
     },
     {
       "path": "docs/result-labels.md",
@@ -792,11 +796,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "39f9ec91cc1a494c9e595485142be533a5bfc3d87035fcc36d43231fc3014ada"
+      "sha256": "a945d99f1d1546e9546726868c0c1431f3882c53a80f1a21963690a9e653e133"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "6917ba09bbe278387ec4979094d333276432ff05e390817a8918cbce3f8b6bc9"
+      "sha256": "916300706461c06e2d7fe22da0b06885a07e35b767ddfe0ff7465c79cece8d0e"
     },
     {
       "path": "experiments/README.md",
@@ -1320,7 +1324,15 @@
     },
     {
       "path": "proofs/GATE-004CA-exclude-satisfying-signature-cancellation.md",
-      "sha256": "e6022a44f37f210e220a7ccf94a4cb622979b943178820da6153a97b5205d8da"
+      "sha256": "b15bb412bfb4ad9c2ec2c9488e8bf52511ca5b1b4c0ce602480e0d38b185efe0"
+    },
+    {
+      "path": "proofs/GATE-004CA-local-cancellation-only.md",
+      "sha256": "de10dbec668b4e06e4559c99da92557f252385c496dc4a5edb12079f057b7b33"
+    },
+    {
+      "path": "proofs/GATE-004CB-one-sided-mask-exchange.md",
+      "sha256": "489ad12d844dc61dc1b34245dfd7475d77a5ff72e7bad4ce9b6ccc3d8161f03a"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2199,8 +2211,12 @@
       "sha256": "8aaf7cf3424e4756daaaf5c18b91960535378be707f58c76d997ff7e1bc759a7"
     },
     {
+      "path": "proofs/LEMMA-181-first-cancellation-mask-cycle-dichotomy.md",
+      "sha256": "ae7018c0a1bdd325bcc343f8cc3a38f65155eb3681ccba0a9be907761dab7887"
+    },
+    {
       "path": "README.md",
-      "sha256": "350f478a0fa6ef6e0dc55742906b687ba3a5d5432cf44d11c6bee6b4ab2064c9"
+      "sha256": "b6319d7cedce1bc3beb559659bd4918e3bd8058775a6e38cbd786ada6e7e59e1"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2212,7 +2228,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7ab31a133a4a9778c6a84eedf73c47bef68a9d338705e92b41011c215388c08c"
+      "sha256": "49a98ad72fca2bdb86547810e28d326b17e10d586cfff29bcf6690253dacbd7d"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

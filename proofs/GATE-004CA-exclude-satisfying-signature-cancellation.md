@@ -22,6 +22,11 @@ GATE-004BZ-COFACTOR-ORDER-ONLY shows that pointwise order and final cofactor
 equality are insufficient. The proof must use minimality of all three
 satisfying minors, exact preservation of `N+r`, or the fourth zero cofactor.
 
+LEMMA-181 now splits the first cancellation into a one-sided mask or a two-
+sided reconvergence cycle that survives all satisfying minors. Local mask or
+cycle data alone are `NO-GO`. GATE-004CB is the active smallest branch and
+asks for the one-sided mask exchange using the full plateau hypotheses.
+
 ## Model card
 
 | Field | Value |

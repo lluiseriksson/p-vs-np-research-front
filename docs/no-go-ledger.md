@@ -2539,3 +2539,24 @@ ambient depth/fanout; no minimum-parent claim, randomness, advice, oracle,
 promise, distribution, or algebraic computation. This is not a plateau
 counterexample. It closes cofactor-order-only rewriting and leaves
 GATE-004CA to use pair minimality, exact resource survival, or the zero code.
+
+## NG-126 — infer a saving from the local first-cancellation type
+
+**Label: NO-GO**
+
+Scope: conclude that either the one-sided mask containment or the two-sided
+reconvergence cycle of LEMMA-181 directly yields a deletion or same-size
+uncrossing.
+
+Failure: both types have constant-size identities. The NG-125 mask gadget is
+one-sided. For the two-sided case, `p=u AND v`, `q=NOT u AND v`, and
+`d=p OR q` give `d=v`; both inputs change with `u` and their paths create an
+undirected reconvergence cycle. Neither local table alone supplies a global
+minimum-circuit exchange.
+
+Model: finite non-uniform AND/OR/NOT gadgets; constant witness depth,
+unrestricted ambient depth/fanout; no minimum-parent claim, randomness,
+advice, oracle, promise, distribution, or algebraic computation. These are
+not plateau counterexamples. The no-go closes local-type-only reasoning and
+leaves GATE-004CB to use pair minimality, minimum satisfying minors, and the
+fourth zero cofactor in the one-sided branch.
