@@ -197,7 +197,11 @@ Adjacent collision-aware active branch:
         + LEMMA-143 (conditional: pure-base bottleneck implies exact additivity)
         <- GATE-004AT (active base-tail topology brick): obtain the bottleneck canonically
            - GATE-004AT-DISJOINT-SUPPORT-ONLY (no-go: fresh supports do not force a separator)
-           <- canonical-row separator or size-nonincreasing uncrossing theorem (next brick)
+           <- canonical-row separator or size-nonincreasing uncrossing theorem
+        + LEMMA-144 (tail Hall: canonical parent is within `K-h+1=o(m)` of displayed size)
+        <- GATE-004AU (active semantic route): near-minimum quotient stability
+           - GATE-004AU-GLOBAL-SIZE-ONLY (no-go: row restriction can merge global gates)
+           <- charge row-cofactor collisions to `Delta+K` slack (next brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

@@ -1989,3 +1989,24 @@ primary input supports; unrestricted depth and fanout; AND/OR fan-in two and
 NOT fan-in one; no randomness, advice, oracle, promise, distribution, or
 algebraic circuit model. Support-only separation is closed; canonical-row or
 uncrossing GATE-004AT and GATE-004AG/AE remain open.
+
+## NG-099 — promote near-minimum parent size to diagonal quotient stability
+
+**Label: NO-GO**
+
+Scope: use LEMMA-144's canonical size deficit `Delta=o(m)` as if it directly
+bounded the number of missing active semantic classes in the two-row diagonal
+quotient.
+
+Failure: globally distinct gate functions may restrict to the same Boolean
+function on a selected row, and globally essential gates may become constant
+or inactive on both rows. Neither collapse reduces the unrestricted parent
+size, so `Delta` alone does not count row-quotient collisions. A separate
+charge to canonical suffix dependence or to an explicit slack resource is
+required.
+
+Model: globally minimum unrestricted non-uniform canonical base-tail circuits
+and their two designated row restrictions; unrestricted depth and fanout;
+AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle, promise,
+distribution, or algebraic circuit model. Size-only promotion is closed;
+GATE-004AU/AT/AG/AE remain open.

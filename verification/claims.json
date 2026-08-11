@@ -4571,6 +4571,30 @@
       "circuit_size": "No additive lower bound and no proved separator from disjointness alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Directed graph separation only; no algebraic circuit model",
       "asymptotic_quantifiers": "Every disjoint pair of base-tail variable sets and every unrestricted circuit for their conjunction", "case_regime": "Structural no-go for support-only separation; GATE004AT/AG/AE remain open",
       "evidence": "proofs/GATE-004AT-disjoint-support-only.md; docs/no-go-ledger.md NG-098; artifacts/cycle-114-base-tail-bottleneck-audit.md"
+    },
+    {
+      "id": "LEMMA144", "label": "PROVED",
+      "statement": "Every base-tail conjunction satisfies C(H AND W_m)>=h+(p+2)m-1, leaving deficit at most min(m,K-h+1) from the displayed upper bound.",
+      "computational_model": "Pruned unrestricted circuits for an arbitrary satisfiable base conjoined with a fresh disjoint one-negative clause product", "uniformity": "Fully non-uniform base and circuit; uniform tail restriction and Hall matching",
+      "circuit_size": "Lower h+(p+2)m-1 and combined deficit at most min(m,K-h+1) from upper K+(p+2)m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Fundamental cycle bases over F_2, Boolean restrictions, and finite Hall matching",
+      "asymptotic_quantifiers": "Every nonconstant H, every fixed p at least one, every m at least one, and every pruned circuit for H AND W_m", "case_regime": "Exact base-tail size lower and canonical near-minimality; not exact additivity, quotient stability, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-144-base-tail-Hall-size-lower-bound.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-115-base-tail-Hall-and-stability.md"
+    },
+    {
+      "id": "GATE004AU", "label": "EXPLORATORY",
+      "statement": "Some minimum canonical base-tail circuit retains at least 7m-2(Delta+K) active tail-dependent diagonal quotient classes.",
+      "computational_model": "Globally minimum unrestricted canonical base-tail circuits and two-row semantic diagonal quotients", "uniformity": "Uniform canonical rows and tail; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Parent S=K+6m-Delta with 0<=Delta<=K; target tail quotient at least 7m-2(Delta+K)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic equivalence classes; inherited affine row geometry only",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical parameter choice and some minimum circuit for each instance", "case_regime": "Exact quantitative quotient-stability gate; not a SAT circuit lower bound or terminal result",
+      "evidence": "proofs/GATE-004AU-near-minimum-quotient-stability.md; proofs/LEMMA-144-base-tail-Hall-size-lower-bound.md; artifacts/cycle-115-base-tail-Hall-and-stability.md"
+    },
+    {
+      "id": "GATE004AU-GLOBAL-SIZE-ONLY", "label": "NO-GO",
+      "statement": "Near-minimum global parent size alone does not bound collisions or inactivity in the two-row diagonal quotient.",
+      "computational_model": "Minimum unrestricted parent circuits and their two-row semantic cofactor quotients", "uniformity": "Uniform selected rows; fully non-uniform minimizing circuit",
+      "circuit_size": "Near-minimum deficit Delta=o(m) but no class-count lower from size alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean semantic equivalence under restriction only",
+      "asymptotic_quantifiers": "Every canonical base-tail instance and every minimum circuit considered by the size-only method", "case_regime": "Structural no-go for size-only quotient promotion; GATE004AU/AT/AG/AE remain open",
+      "evidence": "proofs/GATE-004AU-global-size-only.md; docs/no-go-ledger.md NG-099; artifacts/cycle-115-base-tail-Hall-and-stability.md"
     }
   ]
 }

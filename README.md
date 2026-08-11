@@ -937,11 +937,20 @@ GATE-004AT asks for that bottleneck in some minimum canonical circuit.
 Disjoint supports alone are `NO-GO`; a canonical-row separator or a
 size-nonincreasing uncrossing theorem is the next brick.
 
+The one-hundred-and-fifteenth cycle lifts dependency Hall into the joint
+base-tail circuit. LEMMA-144 proves
+`C(H AND W_m)>=h+(p+2)m-1`, so the canonical minimum is within
+`K-h+1<=K=o(m)` gates of the displayed circuit. GATE-004AU replaces exact
+additivity by a quantitative semantic-stability target sufficient for
+negative diagonal loss. Global near-minimality alone is `NO-GO`: distinct
+gate functions can collide or become inactive after the two row restrictions.
+The next brick must charge those collisions to the `Delta+K` slack budget.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 113 closes the all-rank standalone `W_m` tradeoff; Cycle 114 isolates the pure-base bottleneck gate without assuming it. Formal foundations, independent mathematical review, and base-tail/SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–115 close the standalone tradeoff and give a canonical `o(m)` base-tail size gap while isolating the missing semantic stability theorem. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
