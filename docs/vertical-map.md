@@ -1346,6 +1346,13 @@ equality is NG-163. GATE-004DO is active: produce a paid directed cut whose
 full four-code equality is derived independently of the output, or trace an
 uncut signature to a named endpoint contradiction.
 
+LEMMA-222 proves the exact independent directed-cut implication. LEMMA-223
+factors any old/new cut difference agreeing at `00,01,11` as
+`u AND NOT t AND d(x)`; this generalizes LEMMA-208's earlier branch-specific
+directional localization. The defect `d` is arbitrary (NG-164), so
+GATE-004DP is active: kill every code-`10` cut defect or charge its first
+physical cancellation without double counting.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

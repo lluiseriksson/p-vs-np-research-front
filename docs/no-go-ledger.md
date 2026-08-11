@@ -3310,3 +3310,25 @@ common raw inputs and named vertices; arbitrary finite size and depth, fan-in
 two/one, unrestricted fanout, exact worst-case Boolean functions and union-DAG
 reachability; no randomness, advice, oracle, promise, distribution, field, or
 algebraic computation.
+
+## NG-164 — seal a cut from the three satisfying rows alone
+
+**Label: NO-GO**
+
+Scope: prove equality at every proposed cut gate after restrictions
+`00,01,11` and infer the unrestricted equality required by LEMMA-222.
+
+Failure: LEMMA-223 proves the exact identity
+`A xor B = u AND NOT t AND d(x)`, where the satisfying restrictions impose no
+condition on `d=A_10 xor B_10`. The constant-free functions
+`A=x OR (u AND NOT t)` and `B=x` agree in all three satisfying rows but have
+`d=NOT x`. Thus satisfying-row comparison does not seal the cut. The witness
+does not refute an endpoint theorem forcing `d=0` or converting its first
+downstream cancellation into a distinct physical payment or descent.
+
+Model: arbitrary pairs of finite non-uniform unrestricted AND/OR/NOT cut-gate
+functions; explicit three-gate-versus-wire witness of depth three, fan-in
+two/one and unrestricted ambient fanout; exact worst-case four-code cofactors
+for every base assignment; no randomness, advice, oracle, promise,
+distribution, field, or algebraic computation beyond analytical `F_2`
+difference notation.

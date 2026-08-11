@@ -52,3 +52,11 @@ minimality without an explicit exchange is inadmissible.
 | Field/algebraic model | Exact four-code Boolean functions, directed vertex cuts, physical losses, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, counted boundary, proposed host rewrite, and residual branch |
 | Regime | Exact worst-case noncircular seal-certification gate; not a SAT lower bound or terminal result |
+
+## Cycle-188 audit
+
+LEMMA-222 proves the exact directed-cut implication. LEMMA-223 shows that
+equalities in the three satisfying prunings leave an arbitrary defect at code
+`10`, so satisfying-row certification alone is NG-164. GATE-004DP replaces
+this gate with the explicit obligation to kill or physically charge every
+nonzero code-`10` cut defect. GATE-004DO remains `EXPLORATORY`.
