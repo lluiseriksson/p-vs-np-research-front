@@ -29,6 +29,11 @@ three satisfying restrictions preserve resources, LEMMA-174 identifies their
 surviving cycle spaces, but an additional directed-path or gate-function
 argument is required to make the fourth code incompatible with minimum `S`.
 
+LEMMA-178 now proves the exact equality structure: failure through a
+two-gate increment makes all three satisfying minors minimum and forces pair
+dependence to survive as base computation. An exposed two-gate shell is
+`NO-GO`; GATE-004BY is the active pair-minimal interleaving gate.
+
 ## Model card
 
 | Field | Value |

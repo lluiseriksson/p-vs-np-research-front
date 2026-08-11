@@ -2476,3 +2476,25 @@ advice, oracle, promise, distribution, or algebraic computation. The blocks
 are not implication pairs, so this does not refute GATE-004BW. It closes
 extremality-only reasoning and leaves GATE-004BX to use the three satisfying
 and one falsifying codes of each implication clause.
+
+## NG-123 — model a two-gate saving as an exposed pair shell
+
+**Label: NO-GO**
+
+Scope: assume a hypothetical `C(A AND (t OR NOT u))=C(A)+2` circuit consists
+of a minimum base circuit plus only two pair-sensitive attachment gates, and
+exclude the saving by enumerating that shell.
+
+Failure: LEMMA-178 proves that every realization of the four-code table needs
+at least three pair-sensitive gates. Under the two-gate total increment, all
+three satisfying restrictions nevertheless delete exactly two binary gates
+and preserve every NOT and cycle coordinate. Hence at least one pair-
+sensitive gate survives each restriction as nonconstant base computation.
+The only possible saving is interleaved, not an exposed shell.
+
+Model: finite non-uniform minimum AND/OR/NOT circuits for an arbitrary
+nonconstant base and one fresh implication pair; unrestricted depth and
+fanout; no randomness, advice, oracle, promise, distribution, or algebraic
+computation. This does not prove or refute the two-gate plateau. It closes the
+output-shell-only architecture and leaves GATE-004BY to uncross a pair-
+minimal interleaved parent.

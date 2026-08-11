@@ -287,6 +287,9 @@ Adjacent collision-aware active branch:
                                                            + LEMMA-177 (exact selector-minimal singleton-tail family retains `N+r`)
                                                            - GATE-004BW-SELECTOR-MINIMALITY-ONLY (no-go: extremality alone forces no loss)
                                                            <- GATE-004BX (active smallest brick): use all three satisfying implication codes
+                                                              + LEMMA-178 (a two-gate plateau makes all three minors minimum and forces interleaving)
+                                                              - GATE-004BX-EXPOSED-TWO-GATE-SHELL-ONLY (no-go: a shell cannot realize the table)
+                                                              <- GATE-004BY (active smallest brick): exclude pair-minimal interleaving
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -989,6 +992,14 @@ That inference is NG-122. GATE-004BX is the active implication-specific
 repair: among the three satisfying codes `00,01,11` of some pair, prove that
 one restriction loses a NOT or a cycle-rank unit; the fourth code `10` is the
 unique zero cofactor.
+
+LEMMA-178 resolves the equality bookkeeping for that four-code table. If the
+fresh implication costs only two gates, all three satisfying minors are
+minimum base circuits, preserve NOT count and rank separately, and delete
+exactly two binary gates. Nevertheless every parent has at least three pair-
+sensitive gates, so the hypothetical saving must interleave pair dependence
+with base computation. Exposed-shell reasoning is NG-123; GATE-004BY asks for
+a same-size uncrossing that reduces pair sensitivity in an extremal parent.
 
 ### Parallel constructive audit: GATE-004AF
 

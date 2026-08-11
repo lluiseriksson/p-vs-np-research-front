@@ -5298,7 +5298,31 @@
       "computational_model": "Selector-minimal minimum unrestricted two-excess circuits for a disjoint implication product", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric implication tail",
       "circuit_size": "Minimum parent resource N+r=j+2; target after one satisfying pair restriction at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Four Boolean pair cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BW instance and all three satisfying codes of every implication pair", "case_regime": "Exact worst-case sufficient weakening of the canonical-neutral gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BX-three-satisfying-code-loss.md; proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; artifacts/cycle-144-selector-extremality-audit.md"
+      "evidence": "proofs/GATE-004BX-three-satisfying-code-loss.md; proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-145-three-code-plateau-rigidity.md"
+    },
+    {
+      "id": "LEMMA178", "label": "PROVED",
+      "statement": "A two-gate implication plateau makes every satisfying minor minimum, preserves NOT count and rank, and forces a pair-sensitive gate to survive as base computation.",
+      "computational_model": "Minimum unrestricted AND/OR/NOT circuits for a nonconstant base conjoined with one fresh implication pair", "uniformity": "Every individual finite non-uniform base and every minimum parent under the stated equality",
+      "circuit_size": "At least three pair-sensitive gates; under C(F)=K+2 every satisfying restriction has exact size K and deletes two binary gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every nonconstant finite base, every fresh pair, every minimum K+2 parent, and all three satisfying codes", "case_regime": "Exact equality-case rigidity; not exclusion of the two-gate plateau, a SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; artifacts/cycle-145-three-code-plateau-rigidity.md"
+    },
+    {
+      "id": "GATE004BX-EXPOSED-TWO-GATE-SHELL-ONLY", "label": "NO-GO",
+      "statement": "An exposed two-gate pair attachment cannot realize the implication table and omits the mandatory interleaving mechanism.",
+      "computational_model": "Minimum unrestricted base-implication circuits compared with an exposed output-only attachment architecture", "uniformity": "Every finite non-uniform base; no uniform normal-form transformation supplied",
+      "circuit_size": "Two-gate exposed shell impossible; a total K+2 interleaved circuit remains unexcluded", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean four-code table and undirected output-cone accounting",
+      "asymptotic_quantifiers": "Every nonconstant base and every attempted output-only two-gate implication attachment", "case_regime": "Structural no-go for exposed-shell-only reasoning; not a counterexample to GATE004BX, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BX-exposed-two-gate-shell-only.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; docs/no-go-ledger.md NG-123; artifacts/cycle-145-three-code-plateau-rigidity.md"
+    },
+    {
+      "id": "GATE004BY", "label": "EXPLORATORY",
+      "statement": "Every pair-minimal minimum parent at a hypothetical two-gate implication increment admits a same-size rewrite with fewer pair-sensitive gates.",
+      "computational_model": "Pair-sensitivity-minimal minimum unrestricted circuits at a hypothetical two-gate implication increment", "uniformity": "Extremal choice for every individual non-uniform operational prefix; uniform fresh implication pair",
+      "circuit_size": "Hypothetical C(F)=C(A)+2; target contradiction forces exact increment three and one resource unit", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Four Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BX prefix and every pair-minimal minimum parent under the two-gate hypothesis", "case_regime": "Exact worst-case sufficient interleaving-exclusion gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BY-pair-minimal-interleaving-exclusion.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-145-three-code-plateau-rigidity.md"
     }
   ]
 }

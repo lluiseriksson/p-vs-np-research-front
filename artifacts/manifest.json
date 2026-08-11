@@ -635,6 +635,10 @@
       "sha256": "be56b8c68c2b8f73969e9a6c2ef126f616e621f844f9b60e490a159e1bcd713d"
     },
     {
+      "path": "artifacts/cycle-145-three-code-plateau-rigidity.md",
+      "sha256": "360bd72bc848278fdf6be976ab7ef3ef6edc72a724e82416ebe2f4a26e5f2445"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -660,7 +664,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "36aeda9ac28d7b14aaa69ad763942fc4b407934ad06f7eba65984c7cf6126831"
+      "sha256": "5b78e01c536054346b42861f244978db53f12de7324bd3d17b5eb04ef284acb9"
     },
     {
       "path": "docs/problem-statement.md",
@@ -668,7 +672,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "1f6724d46f6392e01cfc5c7b7a7d888a33fb50bdb829686b05ac40e06844966f"
+      "sha256": "4efd40d0ad7b46347d1312a7cee291eef3d3bac3c8c8b7fd77e40df24aba0e9c"
     },
     {
       "path": "docs/result-labels.md",
@@ -780,11 +784,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "8ce9b240ca3329ee4e4291d071f0cc62766d8acf92b8d9c31279eb3e1242a3a2"
+      "sha256": "c1066351e1729bd9dc4f2e21fed28c3bf1bd92bd2179a84178bd882880b2393d"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "0f34a2865b47981eb9860b84cbdad8249ed7ba29327e15c66fccaf8ac8f47afd"
+      "sha256": "f502686da298f692b1485b547e9d386ed8ad3b5dae0230c631853e350241a23e"
     },
     {
       "path": "experiments/README.md",
@@ -1279,8 +1283,16 @@
       "sha256": "f55613b5e2d873ef249a7f71d8374e62a8f1fa16c143b7422c2c36b3f2908435"
     },
     {
+      "path": "proofs/GATE-004BX-exposed-two-gate-shell-only.md",
+      "sha256": "d8085fa2c1f141d678d1221245a65b4682408bb3352913ed206d316dc5ceab19"
+    },
+    {
       "path": "proofs/GATE-004BX-three-satisfying-code-loss.md",
-      "sha256": "5febc689173935ad44a822f627b93185cb680e89ee9e01caa93e9426d9c0ec8b"
+      "sha256": "d893ebd4a80c3187e7d8420db15661f9afb88a3b3c5c31b7ff662635d562ee24"
+    },
+    {
+      "path": "proofs/GATE-004BY-pair-minimal-interleaving-exclusion.md",
+      "sha256": "c555a1035d616a7dd5f3743c9d16ff45cba3d667bfac452a2985d744b0d65fc4"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2151,8 +2163,12 @@
       "sha256": "25b9484ea8b801acf9c0311f8748cf78d220fe7e9c91cfc08db072e7aa7f3705"
     },
     {
+      "path": "proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md",
+      "sha256": "a59a374caea67b92afe5b0ff73b63130433df564844c65165e825b4d80c2c9d7"
+    },
+    {
       "path": "README.md",
-      "sha256": "de3f08976f7d188d170e34b80c4865671c6ed6813138348556e1063c97b656bc"
+      "sha256": "65d67b69e52039d8a60589fe2a0a6ec5790031c8ee2754aea9e69503d1056b5c"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2164,7 +2180,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "f4b68f73d5fc2306fa1edf45f72fa710712dec9021fe4110b811020f4fad1c4a"
+      "sha256": "b34f73f2c70662761c47de851ee5f95cf984d179c4cb10fe2e3790bbb6a6b69c"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
