@@ -3127,3 +3127,28 @@ Model: constant finite non-uniform constant-free AND/OR/NOT DAG; thirteen
 gates, constant depth, fan-in two/one, counterflow fanout one; exact worst-case
 six-input table and complete basis-radius-two pool; no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation.
+
+## NG-155 — infer sufficient private reservoir from fanout one
+
+**Label: NO-GO**
+
+Scope: infer from fanout one of the final counterflow gate that enough of its
+strict ancestors are private to the boundary to host every non-root gate of an
+aligned formula under LEMMA-212.
+
+Failure: GATE-004DE-FANOUT-ONE-PRIVATE-BUDGET-ONLY extends the NG-154 witness
+to a 29-gate single-output DAG. It adds `NOT h` and a live escape from each of
+`g,i,j,k`, then selector-isolates `b`, the complement, and all four escapes in
+the final output. Thus `r` still has only the consumer `b`, but escapes at
+`g,i,j,k` and the live complement of `h` propagate through consumer closure.
+The greatest admissible strict-ancestor set closed toward `b` is exactly
+`{r}`. Meanwhile `b=xyz OR w` depends essentially on four base variables, so every formula over
+the independent base pool needs at least three gates and two non-root hosts.
+The witness is nonminimal and does not refute a minimum-cost or exact-pruning
+payment theorem; it refutes fanout-one topology alone.
+
+Model: explicit finite non-uniform single-output constant-free AND/OR/NOT DAG;
+29 gates, constant depth, fan-in two/one, final counterflow fanout one and live
+ancestor escapes; exact worst-case six-input base table plus symbolic selector
+liveness and consumer-closure fixed point; no randomness, advice, oracle,
+promise, distribution, field, or algebraic computation.

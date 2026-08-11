@@ -1288,6 +1288,14 @@ not force basis radius two (NG-154). GATE-004DE is the active residual brick:
 deep or unaligned factors and raw/shared inputs require a minimum-cost or exact
 pruning charge, while incomparable erasure remains separate.
 
+LEMMA-212 pays every non-root gate of an arbitrary aligned formula from a
+closed private noncarrier ancestor reservoir and retargets the boundary to the
+formula root. Fanout one of the counterflow output does not force a large enough
+reservoir (NG-155). GATE-004DF is the active residual brick: charge the exact
+private-reservoir deficit with distinct minimum-cost or pruning resources,
+construct and pay an aligned formula when none is available, or resolve the
+raw/shared and incomparable branches.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

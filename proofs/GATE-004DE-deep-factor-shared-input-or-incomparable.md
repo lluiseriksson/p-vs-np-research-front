@@ -46,3 +46,15 @@ lexicographic descent.
 | Field/algebraic model | Exact Boolean signal equality, basis distance, physical DAG topology, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual deep/shared comparable or incomparable boundary |
 | Regime | Exact worst-case minimum-joint-cost gate; not a SAT lower bound or terminal result |
+
+## Cycle-178 audit
+
+LEMMA-212 closes the arbitrary-depth aligned branch whenever a closed private
+reservoir supplies one physical vertex for every non-root formula gate.
+GATE-004DE-FANOUT-ONE-PRIVATE-BUDGET-ONLY shows that fanout one of the final
+counterflow output does not force that reservoir: live escape consumers can
+leave only one private vertex while the boundary needs two internal hosts.
+GATE-004DF therefore replaces this gate operationally and isolates the exact
+private-reservoir deficit, absence of an aligned formula, raw/shared inputs,
+and incomparable cofactors. GATE-004DE retains its `EXPLORATORY` label; no
+automatic promotion is made.
