@@ -827,6 +827,10 @@
       "sha256": "b6faa765037ea0349c6dbf36ecd5efbfb52eb2532199af13b825ff02a9972102"
     },
     {
+      "path": "artifacts/cycle-193-cycle-support-contraction-audit.md",
+      "sha256": "2c4033e585bd56baea307e02064d4ee6a3c6238b65304e95dcddab9034afc948"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -852,7 +856,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "3f1ddfe1cc9afa3258a7ae15cfb7c25c10a96acdd5771713cef2e45afd9465b1"
+      "sha256": "d5f3f5f36472d7b565043cfef8c7a745e8bec49952011d895766afd6ed980f5d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -972,11 +976,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "2a87864a2f520fa5dd14a32a105a81de84a2329e19d5a877f61956d5ab40bdc0"
+      "sha256": "0e2186cc363068ab38412be22d1b7e2344bae864b9d5943f92bb4155bbc5303f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f32f6d1a87339484e51cb0a90ce5a2293f704d45e501a672d5b7b1f11f1e6257"
+      "sha256": "e35c814a97671b8bff8d1c3738d68dcb1a5243f2e14086c980a9fdbf0589acd9"
     },
     {
       "path": "experiments/README.md",
@@ -1855,8 +1859,16 @@
       "sha256": "be802c6b991a58208f3803a440177eb0a0ab161378a0a3a46a3c9747f1f8f552"
     },
     {
+      "path": "proofs/GATE-004DT-common-literal-cycle-edge.md",
+      "sha256": "727d57aa553889e1ffca8c3e055548cd2a0c5d0b0ae768b4ce1a176d36c0535d"
+    },
+    {
       "path": "proofs/GATE-004DT-distinct-origins-or-marked-surviving-cycle.md",
-      "sha256": "e9eb5ad9a274e8640ac428f3b262567898a3ebb34c5df975e6140f2ee8cbf13d"
+      "sha256": "3381111bf168ba8f6d05b352d26f429b0e25acdd1ddf8e808c43f4df28b64f61"
+    },
+    {
+      "path": "proofs/GATE-004DU-contraction-aware-swap-support.md",
+      "sha256": "60d5ad5769a3cf5dd54d948c1b2721e06dfc219bafb3976ca757985a41680fbe"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2927,8 +2939,12 @@
       "sha256": "cd7a7aa93717d1e79a8829ee083846ab8bc2c1d0714f24e9efe1263ebacfe35e"
     },
     {
+      "path": "proofs/LEMMA-230-cycle-survival-has-no-common-literal-edge.md",
+      "sha256": "24e50f58e8e7c01ce9f4b0d85c152abc4fd1175bfce937fcbd4d7cf9fd70d006"
+    },
+    {
       "path": "README.md",
-      "sha256": "0d14162bdbe85edd319b8604263c21531863fc0397f9c325e13bb2144be93caa"
+      "sha256": "e8e3d7eb2e11478aef2174448ae5ddcd9adf4bb06b138c2d8c6c8d937c1b3415"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2948,7 +2964,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "719af742c1ea9c7c8ce82c105c23e437df0b058d05168999a1622d9fbb9e7cba"
+      "sha256": "3c38111acc324aa626cf34beaeb9f386277f97660d317b71316de569ba7adbdc"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2965,6 +2981,10 @@
     {
       "path": "verification/covering_basis.py",
       "sha256": "ddd3f4e4ceb326f8bf660b548707e139bf9aff3245593d12ccf72ef6e37cb631"
+    },
+    {
+      "path": "verification/cycle_support_contraction_audit.py",
+      "sha256": "0e86d07b2b8f45b671f589e1587feed54fae12eaddbc7deec012e520666de256"
     },
     {
       "path": "verification/free_basis_two_realization_audit.py",

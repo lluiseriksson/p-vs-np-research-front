@@ -1478,11 +1478,17 @@ satisfying minor, so it cannot be charged as lost (NG-168). GATE-004DT now
 separates real distinct-origin payments from marked-support uncrossings on a
 surviving cycle.
 
+The one-hundred-and-ninety-third cycle shows that cycle survival need not
+leave any literal parent edge uncontracted in all three satisfying minors: a
+six-cycle can have three disjoint two-edge contraction pairs (NG-169).
+GATE-004DU must transport marked support through the full contraction maps or
+prove that the Boolean endpoint forbids this covering pattern.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–192 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the code-10 defect, close its one-sided semantic branch, classify the two-sided swap, and prove that common-origin provenance cycles survive rather than pay by loss; path-complete certification of enough real hosts, marked-support swap exchanges, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–193 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the code-10 defect, classify its masks and swaps, prove provenance-cycle survival, and exclude an unjustified common-literal-edge pivot; contraction-aware marked-support exchanges, matching enough real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

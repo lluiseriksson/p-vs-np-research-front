@@ -1381,6 +1381,13 @@ modulo contraction, so charging it as lost is NG-168. GATE-004DT is active:
 pay genuinely distinct origins or use marked support of the surviving cycle
 in an explicit size/potential exchange.
 
+LEMMA-230 gives a rank-one six-cycle whose three satisfying-labeled minors
+contract disjoint edge pairs covering the entire parent support. The cycle
+survives everywhere but no literal edge remains uncontracted everywhere, so a
+common-edge pivot is NG-169. GATE-004DU is active: transport marked support
+through the full contraction maps or use Boolean endpoint identities to rule
+out the covering pattern; distinct origins require a separate host matching.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

@@ -45,3 +45,11 @@ remaining provenance exists only across incompatible old/new edges.
 | Field/algebraic model | Exact four-code defects, physical DAG paths, marked cycle supports, potentials, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, overlap swap, provenance pair, and residual branch |
 | Regime | Exact worst-case physical-provenance payment gate; not a SAT lower bound or terminal result |
+
+## Cycle-193 audit
+
+LEMMA-230 shows that a surviving parent coordinate can have no literal edge
+left uncontracted in all three satisfying minors. Selecting a common edge from
+survival alone is NG-169. GATE-004DU replaces that route with the full labeled
+contraction maps and a separate matching obligation for distinct origins.
+GATE-004DT remains `EXPLORATORY`.

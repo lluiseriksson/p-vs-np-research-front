@@ -3427,3 +3427,25 @@ rank-neutral binary losses in each satisfying minor, unrestricted depth and
 fanout, fan-in two/one; exact cycle-space isomorphisms over `F_2`; no
 randomness, advice, oracle, promise, distribution, or alternative algebraic
 computation.
+
+## NG-169 — choose a common literal cycle edge from coordinate survival
+
+**Label: NO-GO**
+
+Scope: because one parent provenance coordinate survives in all three
+satisfying minors, choose a parent edge left literally uncontracted in
+`00,01,11` and use it as a universal physical pivot or payment.
+
+Failure: LEMMA-230 partitions the six edges of a rank-one parent cycle into
+three labeled pairs. Contracting one pair per minor removes two edges and
+vertices, preserves rank one, and keeps the parent coordinate nonzero. The
+three uncontracted literal supports nevertheless have empty intersection.
+This graph witness does not assert Boolean endpoint realizability; it refutes
+the common-edge conclusion from cycle-space survival alone. A valid argument
+must use the actual contraction maps or additional endpoint identities.
+
+Model: one finite non-uniform connected rank-one six-cycle with three labeled
+two-edge contraction minors; no circuit-depth claim, target fan-in remains
+AND/OR two and NOT one; exact literal supports and cycle ranks over `F_2`; no
+randomness, advice, oracle, promise, distribution, or Boolean endpoint
+realizability claim.
