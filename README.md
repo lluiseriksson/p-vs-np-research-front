@@ -1278,11 +1278,17 @@ two-gate deletion set exactly. A four-gate local gadget realizes that pattern,
 so local alternation is `NO-GO` as a contradiction. GATE-004CN now audits all
 fanout exits and the three cross-code pruning maps.
 
+The one-hundred-and-sixty-first cycle proves `fanout(g)=1` in that carrier:
+any extra consumer would be a third simplification in a neutral code. A
+nonconstant aligned-mask gadget shows that `h` can nevertheless remain
+shared, so source-fanout-one privacy is `NO-GO`. GATE-004CO now classifies the
+shared equal-cofactor boundaries of `h`.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–160 classify the first remaining carrier size and reduce it to cross-code fanout exclusion before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–161 reduce the size-three carrier to classification of shared aligned boundaries from `h` before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

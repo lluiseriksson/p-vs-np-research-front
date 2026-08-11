@@ -2790,3 +2790,21 @@ reasoning and leaves GATE-004CN to use every fanout exit and cross-code pruning.
 Model: explicit constant-depth AND/OR/NOT gadget; fan-in two/one and arbitrary
 ambient fanout; no randomness, advice, oracle, promise, distribution, field,
 or algebraic computation; every assignment to `u,x,y`; not a terminal result.
+
+## NG-138 — infer a private carrier cone from `fanout(g)=1`
+
+**Label: NO-GO**
+
+Scope: promote isolation of the first carrier gate `g` to isolation of the
+whole binary predecessor region `{g,h}`.
+
+Failure: with `g=u AND x`, `h=g OR y`, `n=NOT h`, `r=NOT x`, and
+`b=h AND r`, the gate `g` has only consumer `h`, but `h` feeds both `n,b`.
+The boundary is nonconstant and aligned:
+`b_01=y AND NOT x=b_11`; it survives the neutral contraction. This is a local
+nonminimal gadget, not the full output table or a plateau. It closes source-
+fanout-one-only privacy and leaves GATE-004CO to classify shared `h` exits.
+
+Model: constant-size non-uniform AND/OR/NOT gadget; constant local depth,
+fan-in two/one, `g` fanout one and `h` fanout at least two; no randomness,
+advice, oracle, promise, distribution, field, or algebraic computation.

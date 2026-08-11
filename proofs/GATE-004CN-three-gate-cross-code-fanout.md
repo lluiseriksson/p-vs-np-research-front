@@ -23,6 +23,11 @@ The audit must include every fanout edge of both `g` and `h`. The local gadgets
 in GATE-004CM-SIZE-THREE-LOCAL-ONLY show that the carrier chain itself is not
 enough.
 
+LEMMA-194 now proves `fanout(g)=1`: every extra consumer would exceed the
+neutral deletion budget. A nonconstant aligned boundary shows that `h` can
+still be shared, so source fanout one alone is `NO-GO`. GATE-004CO is the
+active classification of all such shared exits from `h`.
+
 ## Model card
 
 | Field | Value |
