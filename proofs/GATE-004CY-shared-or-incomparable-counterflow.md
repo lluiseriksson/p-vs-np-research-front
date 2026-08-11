@@ -30,6 +30,15 @@ The theorem fails if a minimum parent can share every comparable cofactor
 cone without an exchange and can realize incomparable meet/join erasure
 within the exact rank-neutral budgets of all satisfying minors.
 
+## Cycle-172 audit
+
+LEMMA-206 proves the shared comparable branch whenever every secondary direct
+consumer masks the selected cofactor specialization. Terminal output equality
+alone is not enough: GATE-004CY-TERMINAL-OUTPUT-ONLY transfers the counted
+counterflow from one `h`-boundary to another while preserving the parent
+function. GATE-004CZ is the active residual brick for the first unmasked
+consumer or incomparable cofactors.
+
 ## Model card
 
 | Field | Value |

@@ -367,7 +367,10 @@ Adjacent collision-aware active branch:
                                                                                                                                       <- GATE-004CX (cost brick): realize erasure in the basis
                                                                                                                                          + LEMMA-205 (private comparable cone gives exact descent)
                                                                                                                                          - GATE-004CX-GLOBAL-SPECIALIZATION-ONLY (no-go: shared consumers change)
-                                                                                                                                         <- GATE-004CY (active residual brick): shared or incomparable counterflow
+                                                                                                                                         <- GATE-004CY: shared or incomparable counterflow
+                                                                                                                                            + LEMMA-206 (consumer-masked shared comparable descent)
+                                                                                                                                            - GATE-004CY-TERMINAL-OUTPUT-ONLY (no-go: counterflow can transfer)
+                                                                                                                                            <- GATE-004CZ (active residual brick): unsafe shared or incomparable counterflow
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1236,9 +1239,16 @@ force a satisfying-code resource contradiction.
 LEMMA-205 supplies that realization when the row-zero cofactors are
 comparable and an explicit cofactor-private region exists. A shared consumer
 blocks naive global specialization (NG-149), although it does not rule out
-every edge-local rewrite. GATE-004CY is the active residual brick: charge the
-first shared escape or the two nonzero witness regions of incomparable
+every edge-local rewrite. GATE-004CY splits the residual task between the
+first shared escape and the two nonzero witness regions of incomparable
 cofactors.
+
+LEMMA-206 extends exact descent to a shared comparable output when every
+secondary direct consumer masks the selected specialization. Equality only at
+the parent output can transfer the counted counterflow to another boundary
+(NG-150), so it is insufficient. GATE-004CZ is the active residual brick:
+follow the first unmasked consumer until it is charged or handle both witness
+regions of incomparable cofactors.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

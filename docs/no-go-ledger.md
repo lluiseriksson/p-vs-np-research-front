@@ -3012,3 +3012,25 @@ Model: constant finite non-uniform AND/OR/NOT shared-fanout gadget;
 constant depth, fan-in two/one, `r` fanout two; exact worst-case cofactors;
 no randomness, advice, oracle, promise, distribution, field, or algebraic
 computation.
+
+## NG-150 — infer counterflow descent from parent-output preservation alone
+
+**Label: NO-GO**
+
+Scope: globally specialize a shared comparable counterflow region, verify only
+that the parent output is unchanged, and infer that the counted boundary has
+been removed with strict `R_0` descent.
+
+Failure: GATE-004CY-TERMINAL-OUTPUT-ONLY uses the same comparable signal
+`r=x OR NOT(u OR t)` and adds `q=r OR u`, followed by the direct boundary
+`c=h AND q`. Specializing `r` to `x` preserves the functions at the original
+boundary `b`, at `c`, and at the parent output. It changes the row-zero
+signature of `q` from `(1,1)` to `(x,1)`. Thus `b` leaves `R_0` exactly when
+`c` enters it, and the potential does not descend. All 16 assignments satisfy
+the displayed identities. The witness is nonminimal and not a plateau; it
+refutes only terminal-output-only bookkeeping.
+
+Model: constant finite non-uniform AND/OR/NOT shared-fanout gadget; constant
+depth, fan-in two/one, unrestricted ambient fanout; exact worst-case four-code
+cofactors; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation.

@@ -743,6 +743,10 @@
       "sha256": "d34c99bc9a9a8002aef155ea0b9a76948ab5005e8d99573c228fa2b4dc214fbf"
     },
     {
+      "path": "artifacts/cycle-172-consumer-masked-counterflow-audit.md",
+      "sha256": "e4dfebe3550a04b09ff46c75f559659c12c4d2c35e05be45a2d5470fd1299edc"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -768,7 +772,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "b345e1044bba6645b0c5d4e0f56f3d03417cff4b4193d1b29bce43b32b29f9db"
+      "sha256": "6a1a7696479e578962830c69fa5cea16d455386d26fa84070e0aa3fd2416434d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -776,7 +780,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "95306eb1b78ec95c016ba2e3aef0383ab85aa333cb83ef44e5d80b1b7dc33a07"
+      "sha256": "61e6ac29a02caf4b13c677e4ba04e54b1b7fc687bf88c78ac44503a184fd2d4e"
     },
     {
       "path": "docs/result-labels.md",
@@ -888,11 +892,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "2caa6bdd46f28556b1fd8fab18cead94925c28e88fde76db52708904752938d6"
+      "sha256": "2200cc94781ab7d2bf35d2ab9ccd685187886e9efb46849e47f5c9c70af506d5"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "1215ad8485e1394ed0608786ba1e0f7b01ffe295bfa55dc8f0a7d9d10fb42446"
+      "sha256": "dbb0d5a222b51fddc2b196691a232830f8915b650c0279d41a069e71cc8aa3be"
     },
     {
       "path": "experiments/README.md",
@@ -1608,7 +1612,15 @@
     },
     {
       "path": "proofs/GATE-004CY-shared-or-incomparable-counterflow.md",
-      "sha256": "115f930ae677a50c39ae0f02714f7cad38c76dbede30bd48f670be47caf9986d"
+      "sha256": "b5ee0de597197ca4fa80db463f26756c9fe39826fc88271e1d86f86cb404ce99"
+    },
+    {
+      "path": "proofs/GATE-004CY-terminal-output-only.md",
+      "sha256": "8894105a1cfad6e3b62aebdb19ed8916691437466fb0ecf487c8f84cd423001b"
+    },
+    {
+      "path": "proofs/GATE-004CZ-unsafe-shared-or-incomparable-counterflow.md",
+      "sha256": "bda9c6fd53c5b5814ed4360951504b7d94b7f0df0b87c1c4b7933efeee31e01f"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2587,8 +2599,12 @@
       "sha256": "b3d5e260fe86eacfaa6f883163dc16e87ce609f86d80eb2c0b84c8fa41e1ee40"
     },
     {
+      "path": "proofs/LEMMA-206-consumer-masked-comparable-counterflow-descends.md",
+      "sha256": "bb8a3bb8bb3190cb3e80276b2161001fc0e20de550e64bf2c596eae471b63c6e"
+    },
+    {
       "path": "README.md",
-      "sha256": "b1bae529dfd2ba400feb9a3f3b32b0f9e31d4ae21837c1153fae878543abc753"
+      "sha256": "022beb4f44dfd8d8b9d86b9748c60200147c08ee53601e3ef2a004856e79a8d3"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2600,11 +2616,15 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7a5e80701d225ebbc5f0e12ae5aab88e40cfc214d1c4d4b58685428973679c6c"
+      "sha256": "154bd53db86d8bee834c2e9b597e7bc12d35d73c40f5c9eec86f76929826a62c"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
       "sha256": "38ccd11eb2e2eff26585b3c410f23966b54be2cddd2513e64de79174610e9fab"
+    },
+    {
+      "path": "verification/counterflow_transfer_audit.py",
+      "sha256": "eba4d42000c75be395d636e7a8cabf50a1f1dcc1aac62412ecf76f25446864dd"
     },
     {
       "path": "verification/covering_basis.py",

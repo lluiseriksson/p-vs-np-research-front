@@ -1346,11 +1346,18 @@ earlier potential or `R_0`. A shared-fanout witness makes unaudited global
 specialization `NO-GO`. GATE-004CY now isolates shared comparable cones and
 incomparable cofactors.
 
+The one-hundred-and-seventy-second cycle extends the comparable rewrite to a
+shared output when every secondary direct consumer masks the selected
+specialization. Preserving only the parent output is `NO-GO`: an explicit
+reconvergence gadget transfers the counted counterflow from one `h`-boundary
+to another with no `R_0` decrease. GATE-004CZ now tracks the first unmasked
+consumer or the two incomparable witness regions.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–171 exclude private comparable counterflow; shared or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–172 exclude consumer-masked comparable counterflow; unsafe shared or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
