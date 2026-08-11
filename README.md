@@ -1217,11 +1217,18 @@ Cycle-existence-only charging is therefore `NO-GO`. GATE-004CE now requires a
 specific cycle-space kernel derived from edgewise signatures and the full
 three-equal/one-zero cofactor table.
 
+The one-hundred-and-fifty-second cycle tests that signature-level demand
+against the complete output table. LEMMA-185 proves that every satisfying
+plateau restriction loses exactly two binary gates through rank-neutral
+operations. Yet a nonminimal exact-table circuit retains both cancellation
+arms and their cycle, so table-plus-signatures-only is `NO-GO`. GATE-004CF now
+asks minimum structure to force a third elimination or a noncontractible edge.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–151 reduce the two-excess remainder to a signature-level kernel for the shared-exit cycle before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–152 reduce the two-excess remainder to exceeding an exact two-deletion rank-neutral budget on the shared-exit cycle before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

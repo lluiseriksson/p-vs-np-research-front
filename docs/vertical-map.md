@@ -308,6 +308,9 @@ Adjacent collision-aware active branch:
                                                                                 + LEMMA-184 (a shared exit forces a second cancellation and surviving cycle)
                                                                                 - GATE-004CD-CYCLE-EXISTENCE-ONLY (no-go: cycle existence forces no loss)
                                                                                 <- GATE-004CE (active smallest brick): force a signature-cycle kernel
+                                                                                   + LEMMA-185 (two satisfying losses are binary and rank-neutral)
+                                                                                   - GATE-004CE-FOUR-CODE-SIGNATURES-ONLY (no-go: exact table can retain cycle)
+                                                                                   <- GATE-004CF (active smallest brick): exceed two deletions or expose a noncontractible edge
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1062,6 +1065,14 @@ minor. An explicit double-cancellation gadget confirms that cycle existence
 alone is no loss (NG-129). GATE-004CE is the active signature-level repair:
 use the complete three-equal/one-zero cofactor table to put a named coordinate
 in a satisfying restriction kernel, or recover the private certificate.
+
+LEMMA-185 localizes the plateau budget: each satisfying minor loses exactly
+two binary gates, no NOT or rank, and all cyclic-core changes are contractions.
+Nevertheless an explicit circuit realizes the full `A,A,0,A` table with two
+cancellation fronts and a cycle surviving all satisfying codes (NG-130); it
+is not minimum. GATE-004CF is the active minimum-structure gate: force a third
+elimination or a genuinely noncontractible cycle-edge deletion within the
+two-gate budget, unless the private certificate exists.
 
 ### Parallel constructive audit: GATE-004AF
 

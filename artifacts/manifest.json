@@ -663,6 +663,10 @@
       "sha256": "392be6ae60e6b361b2263aa452080752c92e0e0f57b690c0ee74e1d935ceaad0"
     },
     {
+      "path": "artifacts/cycle-152-four-code-kernel-audit.md",
+      "sha256": "a3cdbd1b2d4b830b26397e84ed23e100b64f4892c81dbfe203231b80d004e0ea"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -688,7 +692,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "3f30bbd59a750f5ab628d04d1e4d1153343d7e3d8542767232332bbe167ce584"
+      "sha256": "c37f8467c5d60b0411e0063e1beac5879868c96957fb773ebc78a3d4c642ffee"
     },
     {
       "path": "docs/problem-statement.md",
@@ -696,7 +700,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "1b8c41ae03d89f0253a12bc46cebb772ea9b36d6cadd8b3cb0f4c8808654fbf2"
+      "sha256": "fd10bfa24a6115fcc3acd68c2922aea2d0c630077b3751fc1a0ac08845b49c69"
     },
     {
       "path": "docs/result-labels.md",
@@ -808,11 +812,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "05c9bc783ae0a9540e2780f90581da72a5b3c67c434a7d338b14ad5a4909dfcd"
+      "sha256": "1837f6ec8b523107c3356dc30ff602168c78e2069c7cc70ca77dfdf1cb30d039"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "553c7fd332abaa300c494d6c6db0b1012867a306ed0236e768fbdb7443c2db80"
+      "sha256": "e9eab3fb5df735859f3478940e4b2fb5702700b48af50f078226bb2140b8a81c"
     },
     {
       "path": "experiments/README.md",
@@ -1367,8 +1371,16 @@
       "sha256": "9459b29a32c78e668316cdf31d54f9b15478fc21a635b01bce009c362601e296"
     },
     {
+      "path": "proofs/GATE-004CE-four-code-signatures-only.md",
+      "sha256": "c57f2a37f1e81947e5bb2ccde579b1da1fea846d05b520dd4c5549b1655355dd"
+    },
+    {
       "path": "proofs/GATE-004CE-signature-cycle-kernel.md",
-      "sha256": "4ca74d7cb23cbb4d1b072c87bb77f912c7dc882c7016ae77e1e60a61316c3d91"
+      "sha256": "91d849683459fc8ec249dc06596d6475f37e06b81a7436ac4501cf9c17ec0be8"
+    },
+    {
+      "path": "proofs/GATE-004CF-two-deletion-cycle-core.md",
+      "sha256": "0ab6c3774ebd054fca202f5e4bd649b42868104a7fac53df10d390a463f25489"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2263,8 +2275,12 @@
       "sha256": "2483ce1713e2fd6eda7e1d50f815b5c6389df6722fa2d6a4d9c9e77cc4d69505"
     },
     {
+      "path": "proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md",
+      "sha256": "fe892cc7c76ae1fd51f6e7b34b73bfa999574acc4b212481f0eff5b692251a03"
+    },
+    {
       "path": "README.md",
-      "sha256": "f817bdacc58c402f1d9f78d05793da64935dcbf8fe38ce240bd504a7ac30a725"
+      "sha256": "72741af18f2b8f4376fe6c87cf5c0f0a9b952e5e4ccd9833f1896ba343d29b1f"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2276,7 +2292,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "526b37d2b9019408b8af487f98f8a136298e068c788deb4dc96e03c167fbf526"
+      "sha256": "6b3ad43337ae729f992be944ee3a84f9bad7b6f06fb12e9cfdfbdfb0c5b99796"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

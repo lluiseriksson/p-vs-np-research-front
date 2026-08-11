@@ -31,6 +31,13 @@ four-code signatures put that coordinate in a specific restriction kernel.
 Merely exhibiting reconvergence is invalid by
 GATE-004CD-CYCLE-EXISTENCE-ONLY.
 
+LEMMA-185 makes the minimum-parent obligation quantitative: every satisfying
+minor loses exactly two binary gates through rank-neutral operations.
+GATE-004CE-FOUR-CODE-SIGNATURES-ONLY gives an exact-table witness showing that
+the four cofactors and local signatures alone do not create a kernel.
+GATE-004CF isolates the remaining task as a three-elimination lower bound or a
+forced noncontractible edge within the exact two-gate budget.
+
 ## Model card
 
 | Field | Value |

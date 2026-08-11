@@ -2624,3 +2624,26 @@ fanout; no minimum-gadget claim, randomness, advice, oracle, promise,
 distribution, or algebraic computation beyond cycle space over `F_2`. This is
 not a plateau counterexample. It closes topology-only charging and leaves
 GATE-004CE to identify a kernel from edgewise four-code signatures.
+
+## NG-130 — infer a cycle kernel from the full four-code table and local signatures
+
+**Label: NO-GO**
+
+Scope: combine two `01/11` cancellation fronts with the exact table
+`F_00=F_01=F_11=A`, `F_10=0`, and infer that their cycle is killed in a
+satisfying minor without using minimum-size structure.
+
+Failure: set `r=x XOR y`, `s=NOT r`,
+`p=(NOT u AND x) OR (u AND y)`, `d=p OR r`, `c=p AND s`,
+`a=d AND NOT c`, `i=t OR NOT u`, and `F=a AND i`, expanding XOR in the
+AND/OR/NOT basis. Then `d=x OR y`, `c=x AND y`, and `a=x XOR y` for both
+values of `u`. With `A=x XOR y`, the four output cofactors are exactly
+`A,A,0,A`, while the two branches from `p` remain nonconstant and cyclic in
+all three satisfying restrictions modulo multiplexer contraction.
+
+Model: explicit constant-size non-uniform AND/OR/NOT circuit with unrestricted
+ambient depth/fanout; no minimum or plateau claim, randomness, advice, oracle,
+promise, distribution, or algebraic computation beyond cycle space over
+`F_2`. This is not a plateau counterexample. It closes full-table/signature-
+only inference and leaves GATE-004CF to use the exact two-binary-deletion
+budget or obtain a private certificate.

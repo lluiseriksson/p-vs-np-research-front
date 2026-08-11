@@ -5466,7 +5466,31 @@
       "computational_model": "Lexicographically extremal minimum unrestricted plateau DAG with two signature-cancellation fronts", "uniformity": "Every individual non-uniform operational shared-exit parent; uniform fresh implication pair",
       "circuit_size": "Same-size private descent or one satisfying restriction loses a cycle coordinate", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean symmetric-difference flow and cycle-space maps over F_2",
       "asymptotic_quantifiers": "Every operational GATE004CD shared-exit parent and all four pair codes", "case_regime": "Exact worst-case signature-kernel gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CE-signature-cycle-kernel.md; proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; artifacts/cycle-151-shared-exit-cancellation-audit.md"
+      "evidence": "proofs/GATE-004CE-signature-cycle-kernel.md; proofs/LEMMA-184-shared-exit-forces-second-cancellation.md; proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md; proofs/GATE-004CF-two-deletion-cycle-core.md; artifacts/cycle-152-four-code-kernel-audit.md"
+    },
+    {
+      "id": "LEMMA185", "label": "PROVED",
+      "statement": "Every satisfying restriction of a two-gate plateau loses exactly two binary gates through cycle-rank-neutral operations; cyclic-core changes are contractions.",
+      "computational_model": "Minimum unrestricted AND/OR/NOT plateau circuits under satisfying restriction and pruning", "uniformity": "Every individual finite non-uniform plateau parent and satisfying code",
+      "circuit_size": "Exactly two binary gates lost; no NOT or rank loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle-space minors over F_2",
+      "asymptotic_quantifiers": "Every nonconstant finite base, minimum two-gate plateau parent, and code in {00,01,11}", "case_regime": "Exact worst-case restriction bookkeeping; not localization of the two gates, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-152-four-code-kernel-audit.md"
+    },
+    {
+      "id": "GATE004CE-FOUR-CODE-SIGNATURES-ONLY", "label": "NO-GO",
+      "statement": "The exact three-equal/one-zero table and two local cancellation signatures do not force their shared cycle into a satisfying restriction kernel.",
+      "computational_model": "Explicit finite AND/OR/NOT circuit computing the exact four-code implication table", "uniformity": "One uniform four-input local family; no minimum-parent realization claim",
+      "circuit_size": "Constant-size nonminimal witness; no lower-bound conclusion", "circuit_depth": "Constant witness; ambient target unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean identities and cycle contraction over F_2; XOR basis-expanded",
+      "asymptotic_quantifiers": "Every assignment to x,y,u,t in the displayed circuit", "case_regime": "Structural no-go for four-code-signatures-only reasoning; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CE-four-code-signatures-only.md; docs/no-go-ledger.md NG-130; artifacts/cycle-152-four-code-kernel-audit.md"
+    },
+    {
+      "id": "GATE004CF", "label": "EXPLORATORY",
+      "statement": "Minimum shared-exit structure requires three binary eliminations or deletion of a noncontractible cycle edge within the exact two-gate budget, unless a private certificate exists.",
+      "computational_model": "Minimum unrestricted plateau DAG with named shared-exit cycle and exact restriction/pruning reductions", "uniformity": "Every individual non-uniform operational GATE004CE parent; uniform fresh implication pair",
+      "circuit_size": "Three required eliminations, forbidden non-bridge deletion within a two-gate budget, or same-size private descent", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor signatures and undirected cycle minors over F_2",
+      "asymptotic_quantifiers": "Every operational shared-exit plateau parent and every reduction under each satisfying code", "case_regime": "Exact worst-case deletion-budget gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CF-two-deletion-cycle-core.md; proofs/LEMMA-185-plateau-two-gate-loss-is-rank-neutral.md; artifacts/cycle-152-four-code-kernel-audit.md"
     }
   ]
 }
