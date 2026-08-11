@@ -2259,3 +2259,22 @@ promise, distribution, or algebraic model. The trace does not refute
 GATE-004BC. It closes scalar-state-only pruning. LEMMA-157 later proves
 GATE-004BC/BB using exact read-once wiring; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE
 remain open.
+
+## NG-112 — derive one-excess pruning from residual integer strata
+
+**Label: NO-GO**
+
+Scope: infer GATE-004BE using only LEMMA-158's possible pairs `(q,rho)` after
+a satisfying-base restriction.
+
+Failure: take an abstract resource set `R` of size `m+1` and declare the
+survival set under every neutral single-clause restriction to be all of `R`.
+The table can be assigned any allowed NOT/cycle partition from LEMMA-158,
+because the integer pair places no constraint on clause-resource incidence or
+survival. No restriction loses a resource.
+
+Model: explicit finite resource/survival tables; no Boolean-circuit
+realizability, depth, fan-in, uniformity, randomness, advice, oracle, promise,
+distribution, or algebraic model. The table does not refute GATE-004BE. It
+closes only stratum-count-only pruning; GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/
+AG/AE remain open.

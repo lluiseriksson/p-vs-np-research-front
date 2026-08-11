@@ -571,6 +571,10 @@
       "sha256": "084e486e929ea2e62c415acf7e658269b10e0d1edf233dcb908e89c286e2e0fb"
     },
     {
+      "path": "artifacts/cycle-129-one-excess-strata.md",
+      "sha256": "4b755ed45e204eabe88b51b958dff5f979216fef76dbae5381853f98dbe12821"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -596,7 +600,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "b3cf115cca1df0d02c7822f5ce0e3c9f5ba8f65671508dee9a156318e1568ee9"
+      "sha256": "357869450652f52426e452b9b890feb7243721b5fa6118e7bf6e95631cac867f"
     },
     {
       "path": "docs/problem-statement.md",
@@ -604,7 +608,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "627ac036799ef1018b9942918c9f2bb3df026bba75647466c07f2b151a35c6d0"
+      "sha256": "4c0967719a89f75d30fae658c1a6941eeb17e5e23b723571676149d718fde622"
     },
     {
       "path": "docs/result-labels.md",
@@ -716,11 +720,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "a2d41d3382b434ea40bba1a74b733b33ee1b840261fd857aec28dda8059065f0"
+      "sha256": "131c019e29929cf5973be989ba9191aebf34db7af6be4d4e3747be81563dde7e"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "a8976013bc4504ed0c24c6300126fb998dc20ba3d4b3a251412fdf322b93c31c"
+      "sha256": "0a04e90b64e07e7ebef174fa798a6ac06718f22223a938d8489312b05ef975f6"
     },
     {
       "path": "experiments/README.md",
@@ -1089,6 +1093,14 @@
     {
       "path": "proofs/GATE-004BD-near-maximal-deficit-localization.md",
       "sha256": "c2c4f35bb5f8ad929032415bd4887c3933a2c99e915171d4fdc860ae66773e32"
+    },
+    {
+      "path": "proofs/GATE-004BE-one-clause-resource-pruning.md",
+      "sha256": "d8c3b53b281c68583b97d440765a8678f373c66ea12bf9be65b783ad28cfef35"
+    },
+    {
+      "path": "proofs/GATE-004BE-stratum-counts-only.md",
+      "sha256": "1061d8d21eff9308915544645f977923cc01fba895607e5e87a7a559f276b701"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1879,8 +1891,12 @@
       "sha256": "b30448df1d8feeb4c1a93472f1ddba5da0533e1e81f117e66186070edde0ccd2"
     },
     {
+      "path": "proofs/LEMMA-158-one-excess-residual-strata.md",
+      "sha256": "7694507ce444d460876e88616c16c474fa9000189edf0ac55ecf3fe6a95eced1"
+    },
+    {
       "path": "README.md",
-      "sha256": "0c6e0bec80c5facdb725c0628246f066924b3d12879398aed18b8112d907df4f"
+      "sha256": "3c76441194a042855af73f89769a6b36e84d36e7174b9488857c4bbbe91358ab"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1892,7 +1908,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "1650649d60f0cdad2b5bb2ec69fd18a4ea43b661fba1f84a92f86f6922847809"
+      "sha256": "c45127430ade64f9b2e7eee2d9cff78f1b57b3963ede858b833811f178b59ee6"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

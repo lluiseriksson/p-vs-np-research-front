@@ -4883,6 +4883,30 @@
       "circuit_size": "Premise Delta_m=sigma-1, equivalently mu_m=m+1; target prefix N+r at most k_1+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean restriction semantics",
       "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance with sigma at least two and Delta_m=sigma-1", "case_regime": "Falsifiable worst-case near-maximal subgate of GATE004BA; not a SAT lower bound or terminal result",
       "evidence": "proofs/GATE-004BD-near-maximal-deficit-localization.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-128-private-clause-NOT-audit.md"
+    },
+    {
+      "id": "LEMMA158", "label": "PROVED",
+      "statement": "At resource excess one, every satisfying-base residual lies in one of four exact NOT-count and cycle-rank strata.",
+      "computational_model": "Minimum pruned unrestricted implication circuits, satisfying-base restrictions, NOT counts, and undirected cycle rank", "uniformity": "Every individual non-uniform endpoint minimum circuit; uniform tail function",
+      "circuit_size": "Exact global N+r=m+1 and exact four-way residual count/rank classification", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean restrictions",
+      "asymptotic_quantifiers": "Every m at least one, every nonconstant base with sigma at least two, every endpoint satisfying Delta_m=sigma-1, and every satisfying base assignment", "case_regime": "Exact worst-case one-excess classification; not resource localization, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-158-one-excess-residual-strata.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; artifacts/cycle-129-one-excess-strata.md"
+    },
+    {
+      "id": "GATE004BE", "label": "EXPLORATORY",
+      "statement": "Some neutral clause restriction lowers N+r from j+1 to at most j in every near-maximal minimum circuit.",
+      "computational_model": "Minimum pruned unrestricted implication circuits under neutral clause restrictions", "uniformity": "Every individual non-uniform one-excess minimum circuit; symmetric uniform clause family",
+      "circuit_size": "Parent N+r=j+1; target restricted N+r at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2, NOT gates, and Boolean restriction semantics",
+      "asymptotic_quantifiers": "Every j at least two in every compatible near-maximal descent stratum with sigma at least two", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BD; not full GATE004BA, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BE-one-clause-resource-pruning.md; proofs/LEMMA-158-one-excess-residual-strata.md; artifacts/cycle-129-one-excess-strata.md"
+    },
+    {
+      "id": "GATE004BE-STRATUM-COUNTS-ONLY", "label": "NO-GO",
+      "statement": "The integer one-excess residual strata do not determine clause-resource survival under neutral restrictions.",
+      "computational_model": "Abstract resource sets and single-clause survival tables", "uniformity": "Explicit finite abstraction; no circuit-realizability or uniformity claim",
+      "circuit_size": "Exactly m+1 abstract resources, all retained by every one-clause restriction", "circuit_depth": "Not represented", "fan_in": "Not represented; target circuit basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite sets and integer resource partitions only",
+      "asymptotic_quantifiers": "Every m at least one in the abstract survival-table class", "case_regime": "Structural worst-case no-go for stratum-count-only pruning; no promise or distributional claim; GATE004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BE-stratum-counts-only.md; docs/no-go-ledger.md NG-112; artifacts/cycle-129-one-excess-strata.md"
     }
   ]
 }

@@ -235,7 +235,10 @@ Adjacent collision-aware active branch:
                                    - GATE-004BC-STATE-COUNTS-ONLY (no-go: constant potential permits label swaps)
                                    + LEMMA-157 (canonical pair subtrees consume all NOTs and force `sigma=0`)
                              <- GATE-004BD (active smallest brick): localize resource excess one `mu_m=m+1`
-                                <- classify one-cycle/one-extra-NOT equality topologies (next attack)
+                                + LEMMA-158 (four exact satisfying-base residual strata)
+                                <- GATE-004BE (active smallest brick): one neutral clause lowers `N+r` by one
+                                   - GATE-004BE-STRATUM-COUNTS-ONLY (no-go: integer pairs omit survival)
+                                   <- exploit clause-resource topology within the four strata (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -858,7 +861,11 @@ apparent positive maximal stratum is empty.
 The current attack is `proofs/GATE-004BD-near-maximal-deficit-localization.md`.
 It isolates `Delta_m=sigma-1`, equivalently `mu_m=m+1`. The satisfying-base
 residual now admits a cycle, an extra NOT, or a higher-rank equality case, so
-read-once uniqueness no longer closes the topology.
+read-once uniqueness no longer closes the topology. LEMMA-158 classifies the
+four exact residual count/rank strata. GATE-004BE is the smallest sufficient
+operation: one neutral clause must lower `N+r` by one. The integer strata
+alone contain no restriction-survival relation; topology or Boolean semantics
+must supply it.
 
 ### Parallel constructive audit: GATE-004AF
 
