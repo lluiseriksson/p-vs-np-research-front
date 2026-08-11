@@ -284,6 +284,9 @@ Adjacent collision-aware active branch:
                                                         + LEMMA-176 (a selector-minimal minimum representation exists)
                                                         - GATE-004BV-UNSPECIFIED-EXCHANGE-ONLY (no-go: naming an exchange proves no normal form)
                                                         <- GATE-004BW (active smallest brick): uniform loss in the selector-minimal form
+                                                           + LEMMA-177 (exact selector-minimal singleton-tail family retains `N+r`)
+                                                           - GATE-004BW-SELECTOR-MINIMALITY-ONLY (no-go: extremality alone forces no loss)
+                                                           <- GATE-004BX (active smallest brick): use all three satisfying implication codes
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -979,6 +982,13 @@ selector-sensitive gates. An unspecified exchange is not a proof of
 exposure (NG-121); GATE-004BW is the exact active gate: absence of uniform
 loss must yield a same-size rewrite strictly decreasing that finite
 potential.
+
+LEMMA-177 proves that even exact total-size and selector-sensitivity
+minimality do not force resource loss for arbitrary singleton tail blocks.
+That inference is NG-122. GATE-004BX is the active implication-specific
+repair: among the three satisfying codes `00,01,11` of some pair, prove that
+one restriction loses a NOT or a cycle-rank unit; the fourth code `10` is the
+unique zero cofactor.
 
 ### Parallel constructive audit: GATE-004AF
 

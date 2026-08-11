@@ -631,6 +631,10 @@
       "sha256": "6d1bbcabed2a2a6dc5d2dd11f69ed306b29c4df30186713d0cc9c634bfdf1d22"
     },
     {
+      "path": "artifacts/cycle-144-selector-extremality-audit.md",
+      "sha256": "be56b8c68c2b8f73969e9a6c2ef126f616e621f844f9b60e490a159e1bcd713d"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -656,7 +660,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "2be9a597cd0fdc737d120a1362381361f282124f3eb04d4e9310dc8c6f24e6f3"
+      "sha256": "36aeda9ac28d7b14aaa69ad763942fc4b407934ad06f7eba65984c7cf6126831"
     },
     {
       "path": "docs/problem-statement.md",
@@ -664,7 +668,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "e9ba028ba17b7088fa20d031b9f22269479f5a01af5af72315e4e56577da13d4"
+      "sha256": "1f6724d46f6392e01cfc5c7b7a7d888a33fb50bdb829686b05ac40e06844966f"
     },
     {
       "path": "docs/result-labels.md",
@@ -776,11 +780,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "70a4b1069321f7f2af57f97b644901d30d8ac5b2aa91f6ca2dfdcaa6beb77829"
+      "sha256": "8ce9b240ca3329ee4e4291d071f0cc62766d8acf92b8d9c31279eb3e1242a3a2"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "de679b3dfc2eb58aa4bef26a7d3594f1570639fa0ec3c86def6a0b36a12cdcf7"
+      "sha256": "0f34a2865b47981eb9860b84cbdad8249ed7ba29327e15c66fccaf8ac8f47afd"
     },
     {
       "path": "experiments/README.md",
@@ -1268,7 +1272,15 @@
     },
     {
       "path": "proofs/GATE-004BW-selector-minimal-normal-form.md",
-      "sha256": "c61556444a8b06217559430b636845485eca2cb2b1624776b01729ca2fd472f2"
+      "sha256": "680e9b299aa255e88624894512a00c48ca0cf3e6b52c3fedd7748b7e97f39efe"
+    },
+    {
+      "path": "proofs/GATE-004BW-selector-minimality-only.md",
+      "sha256": "f55613b5e2d873ef249a7f71d8374e62a8f1fa16c143b7422c2c36b3f2908435"
+    },
+    {
+      "path": "proofs/GATE-004BX-three-satisfying-code-loss.md",
+      "sha256": "5febc689173935ad44a822f627b93185cb680e89ee9e01caa93e9426d9c0ec8b"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2135,8 +2147,12 @@
       "sha256": "0bbc6d3e778ac2fb5d519915b20b6f96d7ec35f7365fe40f803ad9f84ba63afa"
     },
     {
+      "path": "proofs/LEMMA-177-exact-selector-minimal-mixing-family.md",
+      "sha256": "25b9484ea8b801acf9c0311f8748cf78d220fe7e9c91cfc08db072e7aa7f3705"
+    },
+    {
       "path": "README.md",
-      "sha256": "2fadf50be3f7c847a1fd54252dca7670a364bbb31e4c1e0a020370a41f017ffd"
+      "sha256": "de3f08976f7d188d170e34b80c4865671c6ed6813138348556e1063c97b656bc"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2148,7 +2164,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "e8521755b5f21992f99a7df3ba987383d9845d24896b52dedd0441aa3ccba4af"
+      "sha256": "f4b68f73d5fc2306fa1edf45f72fa710712dec9021fe4110b811020f4fad1c4a"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

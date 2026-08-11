@@ -5274,7 +5274,31 @@
       "computational_model": "Selector-minimal members of the minimum unrestricted two-excess implication-circuit class", "uniformity": "Extremal choice inside every finite non-uniform minimum-representation set; uniform tail family",
       "circuit_size": "Minimum size fixed; N+r fixed by LEMMA153; target restriction loses at least one resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational GATE004BU function and every selector-minimal minimum representation", "case_regime": "Exact worst-case sufficient normal-form subgate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BW-selector-minimal-normal-form.md; proofs/LEMMA-176-selector-minimal-representation-exists.md; artifacts/cycle-143-extremal-normal-form-audit.md"
+      "evidence": "proofs/GATE-004BW-selector-minimal-normal-form.md; proofs/LEMMA-176-selector-minimal-representation-exists.md; proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; artifacts/cycle-144-selector-extremality-audit.md"
+    },
+    {
+      "id": "LEMMA177", "label": "PROVED",
+      "statement": "An explicit family has exact size m+2 and selector minimum three while every singleton neutralization preserves N+r=1.",
+      "computational_model": "Exact unrestricted AND/OR/NOT circuit size and selector-sensitive gate functions for an explicit formula family", "uniformity": "Uniform explicit family; lower bounds apply to every non-uniform circuit for each member",
+      "circuit_size": "Exact m+2; selector-minimal value exactly three; resource N+r=1 before and after each u_i=0", "circuit_depth": "Unrestricted; displayed OR tree may have arbitrary binary shape", "fan_in": "AND/OR two; NOT one; fanout unrestricted in lower bounds and one in the witness formula", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors, monotonicity, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every integer m at least one and every singleton index from one through m", "case_regime": "Exact worst-case gadget theorem; tail blocks are not implication pairs and this is not a GATE004BW counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; artifacts/cycle-144-selector-extremality-audit.md"
+    },
+    {
+      "id": "GATE004BW-SELECTOR-MINIMALITY-ONLY", "label": "NO-GO",
+      "statement": "Minimum size and minimum selector sensitivity alone do not force resource loss under one of many tail neutralizations.",
+      "computational_model": "Exact minimum unrestricted AND/OR/NOT formula family under singleton tail restrictions", "uniformity": "Uniform explicit witnesses; selector lower bound covers all non-uniform representations",
+      "circuit_size": "Exact m+2, exact selector minimum three, and unchanged N+r=1 under every declared restriction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted in the lower bound", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every integer m at least one and all m singleton neutralizations", "case_regime": "Structural no-go for selector-minimality alone; not a counterexample to the implication-tail gate, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BW-selector-minimality-only.md; proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; docs/no-go-ledger.md NG-122; artifacts/cycle-144-selector-extremality-audit.md"
+    },
+    {
+      "id": "GATE004BX", "label": "EXPLORATORY",
+      "statement": "One of the three satisfying codes of some implication pair deletes a NOT or lowers cycle rank with the selector free.",
+      "computational_model": "Selector-minimal minimum unrestricted two-excess circuits for a disjoint implication product", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric implication tail",
+      "circuit_size": "Minimum parent resource N+r=j+2; target after one satisfying pair restriction at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Four Boolean pair cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BW instance and all three satisfying codes of every implication pair", "case_regime": "Exact worst-case sufficient weakening of the canonical-neutral gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BX-three-satisfying-code-loss.md; proofs/LEMMA-177-exact-selector-minimal-mixing-family.md; artifacts/cycle-144-selector-extremality-audit.md"
     }
   ]
 }

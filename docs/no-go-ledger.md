@@ -2455,3 +2455,24 @@ depth and fanout; binary AND/OR and unary NOT; no randomness, advice, oracle,
 promise, distribution, or algebraic computation. This does not refute a
 normal form. LEMMA-176 supplies an independent selector-minimal choice, and
 GATE-004BW must prove exposure from that extremality.
+
+## NG-122 — selector minimality alone forces a neutral resource loss
+
+**Label: NO-GO**
+
+Scope: infer from minimum total size and minimum selector-sensitivity count
+that one of arbitrarily many tail-block neutralizations must delete a NOT or
+lower cycle rank.
+
+Failure: LEMMA-177 proves that
+`NOT(v OR (x AND (u_1 OR ... OR u_m)))` has exact circuit size `m+2` and
+minimum selector count three. Its displayed minimum formula has `N+r=1`,
+and every restriction `u_i=0` leaves one NOT and rank zero. Thus every one of
+the `m` singleton neutralizations preserves the resource sum.
+
+Model: uniform explicit minimum AND/OR/NOT formulas; unrestricted competing
+circuits for the exact lower bounds; binary AND/OR, unary NOT, no randomness,
+advice, oracle, promise, distribution, or algebraic computation. The blocks
+are not implication pairs, so this does not refute GATE-004BW. It closes
+extremality-only reasoning and leaves GATE-004BX to use the three satisfying
+and one falsifying codes of each implication clause.

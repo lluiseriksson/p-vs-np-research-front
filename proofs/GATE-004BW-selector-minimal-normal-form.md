@@ -28,6 +28,12 @@ constant propagation and duplicate elimination also give no rewrite in an
 already minimum pruned circuit. A successful exchange must use the disjoint
 implication semantics and the actual shared directed paths.
 
+LEMMA-177 strengthens that boundary: even exact size-minimal and selector-
+minimal representations can retain `N+r` under arbitrarily many singleton
+neutralizations. GATE-004BW-SELECTOR-MINIMALITY-ONLY is therefore `NO-GO`.
+GATE-004BX is the next sufficient gate and uses all three satisfying codes of
+each actual implication pair.
+
 ## Model card
 
 | Field | Value |

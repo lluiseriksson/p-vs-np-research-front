@@ -1163,11 +1163,18 @@ selects one minimizing selector-sensitive gates. Merely invoking an unnamed
 exchange is `NO-GO`. GATE-004BW must derive a same-size strict descent in this
 finite potential whenever uniform loss is absent.
 
+The one-hundred-and-forty-fourth cycle tests that extremality itself.
+LEMMA-177 gives exact minimum, selector-minimal formulas whose arbitrarily
+many singleton neutralizations all preserve `N+r`; selector minimality alone
+is therefore `NO-GO`. GATE-004BX is the active implication-specific repair:
+use the three equal satisfying cofactors `00,01,11` against the unique zero
+cofactor `10`.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–143 reduce the two-excess remainder to uniform loss in a selector-minimal minimum representation. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–144 reduce the two-excess remainder to resource loss under one of three satisfying implication-pair codes. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
