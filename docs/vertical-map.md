@@ -373,7 +373,10 @@ Adjacent collision-aware active branch:
                                                                                                                                             <- GATE-004CZ: unsafe shared or incomparable counterflow
                                                                                                                                                + LEMMA-207 (failed descent localizes a transfer path)
                                                                                                                                                - GATE-004CZ-TRANSFER-PATH-ONLY (no-go: arbitrary path length)
-                                                                                                                                               <- GATE-004DA (active residual brick): charge first transferred boundary
+                                                                                                                                               <- GATE-004DA: charge first transferred boundary
+                                                                                                                                                  + LEMMA-208 (comparable transfer changes one code only)
+                                                                                                                                                  - GATE-004DA-SATISFYING-EXTERIOR-ONLY (no-go: `sigma=0` changes only `10`)
+                                                                                                                                                  <- GATE-004DB (active residual brick): directional transfer charge
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1256,9 +1259,15 @@ cofactors.
 LEMMA-207 localizes every comparable failure of strict `R_0` descent to a
 changed path reaching a newly counted direct `h`-boundary. Such paths can be
 arbitrarily long with unchanged parent and total `R_0` (NG-151), so route
-topology alone is insufficient. GATE-004DA is the active residual brick:
-charge the first transferred boundary with minimum-cost and pruning data, or
-resolve the incomparable branch.
+topology alone is insufficient. GATE-004DA asks for a minimum-cost and pruning
+charge at the first transferred boundary, or a resolution of the incomparable
+branch.
+
+LEMMA-208 localizes every exterior change to one code: `10` for `sigma=0` or
+`00` for `sigma=1`. Satisfying exterior functions cannot observe the first
+direction (NG-152). GATE-004DB is the active residual brick: use physical
+minimum-cost data for unsatisfying-only transfer, exact code-`00` pruning for
+the other direction, or resolve the incomparable branch.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

@@ -751,6 +751,10 @@
       "sha256": "a9db66f61b67ac3da4ea580a92cadd9960d40f4df52a6725a66357c656c76198"
     },
     {
+      "path": "artifacts/cycle-174-single-code-transfer-audit.md",
+      "sha256": "7449577a002dde5cd646f64cacf20be457854c7796d39e98344bfa542bb83c3d"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -776,7 +780,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "3ea0bb2b31d4fb5e7e86dbf37848a369171b87d47575100d790a2bbbd6c54501"
+      "sha256": "8e3672fdcfac7ba7acb4fd3097794c1b1d4345e1878a589b6f9db06704a279e1"
     },
     {
       "path": "docs/problem-statement.md",
@@ -784,7 +788,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "c807e8b6097460193cc64eabb83efbc46fb32a9795eb0ad7b408fffb9997691c"
+      "sha256": "c7a6473569cc7219ae44089ffdca7057941883a0d70d9c3d768594f3866845af"
     },
     {
       "path": "docs/result-labels.md",
@@ -896,11 +900,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "beeb1d414a1ab6d9fd0500c9518e166958408f6a54fc61149c680b1d0006f63a"
+      "sha256": "9b13f428814b45f9313938ce7d18a7edf0c3ef86ad9e3fdb75dc32adf07b3227"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "1194078024958fc19761a74e8218093d90085b8b27fb0efd472ae968b505b257"
+      "sha256": "930302d45ad06a81cfd03d0cc70fbff894e527ed76a84751fd74d0a1355f8e21"
     },
     {
       "path": "experiments/README.md",
@@ -1636,7 +1640,15 @@
     },
     {
       "path": "proofs/GATE-004DA-charge-first-transferred-boundary.md",
-      "sha256": "36c2026405e40a9983ae235d0f6e860013168c30fd2ce931ac414b9540db8c2a"
+      "sha256": "4fe1ac8da4f6fab85c370e8a840c9f1a648e7581f95b23ca2ed446e4e4bdbfb8"
+    },
+    {
+      "path": "proofs/GATE-004DA-satisfying-exterior-only.md",
+      "sha256": "e6da393f7f92d17bf1cddc2f3d67517b53681186377b27e32c50d36cd6860f28"
+    },
+    {
+      "path": "proofs/GATE-004DB-directional-transfer-charge.md",
+      "sha256": "fcce2497a1a11e4b05be6e9e3535046b69e3566a5e715aef483042bfdf344a22"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2619,8 +2631,12 @@
       "sha256": "ebcd8ecdde69bf3d5aa8af50cd2c088dfaa9895d462bca7c4c748925db7f10d2"
     },
     {
+      "path": "proofs/LEMMA-208-comparable-transfer-is-single-code.md",
+      "sha256": "ea0829ce5b64840484d3e4004827c609516f4fa69a8a04156dfea812914cd664"
+    },
+    {
       "path": "README.md",
-      "sha256": "945e52e5f4fa462d66fc89387b074a67e062d38d6d47e0f96d41f8291529e4a4"
+      "sha256": "6da0a90385b0ec8abe7e2d69921ad50c0db8a009e0bbd616aa44e47ea9846720"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2632,7 +2648,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "44ce6c66985bea2e43ebfb77936fd89a4f622e7985c1e648628397b0b6943144"
+      "sha256": "7c932742552e9cfb43d1d83155108c0901ee7d8c9aefe194f9186a0f9f0aff45"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2677,6 +2693,10 @@
     {
       "path": "verification/sat_encoding.py",
       "sha256": "22a4abdc9a2c6dde0b4d4d58e4a6b4b415f624b2b2bd003033bac4a5615a78a0"
+    },
+    {
+      "path": "verification/single_code_transfer_audit.py",
+      "sha256": "310a8f6cf070c68fbc816a33b5b4a4da8daad1fbcb0737d161c9cef8d1b8d013"
     },
     {
       "path": "verification/symbolic_identifier_audit.py",

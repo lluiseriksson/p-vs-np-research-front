@@ -3058,3 +3058,26 @@ linear in `m`; fan-in two/one, shared source fanout two, transfer-chain fanout
 one; exact worst-case four-code cofactors; no randomness, advice, oracle,
 promise, distribution, field, or algebraic computation; every `m>=0` and all
 assignments.
+
+## NG-152 — charge `sigma=0` transfer from satisfying exterior functions
+
+**Label: NO-GO**
+
+Scope: specialize a comparable counterflow to `u=0` and infer a third
+deletion or another resource contradiction using only the three satisfying
+cofactor functions of gates outside the specialized region.
+
+Failure: LEMMA-208 proves generally that every exterior change is confined to
+code `10`; exterior functions at `00`, `01`, and `11` are identical before
+and after. GATE-004DA-SATISFYING-EXTERIOR-ONLY gives a constant explicit
+gadget where this invisible change transfers the counted boundary from `b`
+to `c` while preserving both boundary functions and the parent. The witness
+is nonminimal and not a plateau. It does not rule out a charge using the
+specialized region, physical topology, minimum size, or exact pruning
+correspondence; it rules out satisfying-exterior semantics alone.
+
+Model: general finite non-uniform unrestricted AND/OR/NOT exterior plus a
+constant three-input witness; unrestricted target depth, witness depth
+constant, fan-in two/one and shared fanout two; exact worst-case four-code
+cofactors; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation.

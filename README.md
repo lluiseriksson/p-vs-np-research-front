@@ -1360,11 +1360,18 @@ preserving the parent and total `R_0`, making path-only charges `NO-GO`.
 GATE-004DA now asks for a minimum-cost charge at the first transferred
 boundary or a resolution of the incomparable branch.
 
+The one-hundred-and-seventy-fourth cycle proves that comparable
+specialization changes one exterior code only: `10` when specializing to
+`u=0`, or `00` when specializing to `u=1`. The first direction is invisible
+to all satisfying exterior cofactor tables, so that route is `NO-GO` without
+physical minimum-cost data. GATE-004DB separates unsatisfying-only transfer,
+code-`00` pruning, and incomparable erasure.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–173 localize comparable counterflow transfer but do not charge its minimum cost; transferred or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–174 localize comparable transfer to one code but do not charge its minimum cost; directional or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

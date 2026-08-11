@@ -36,6 +36,16 @@ counterflow between direct `h`-boundaries with zero net potential change and
 within every exact two-gate satisfying budget, or if incomparable erasure has
 the same property.
 
+## Cycle-174 audit
+
+LEMMA-208 proves that every comparable transfer changes one exterior code
+only: `10` for `sigma=0`, or `00` for `sigma=1`.
+GATE-004DA-SATISFYING-EXTERIOR-ONLY shows that the first branch is invisible
+to all satisfying exterior cofactor tables, although minimum-cost topology and
+the specialized region remain available. GATE-004DB is the active directional
+brick: charge unsatisfying-only transfer physically, charge the changed `00`
+pruning exactly, or resolve the incomparable branch.
+
 ## Model card
 
 | Field | Value |
