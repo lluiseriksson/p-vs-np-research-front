@@ -1408,6 +1408,15 @@ NG-172 rather than a class bound. GATE-004DX is active: compare the exact
 physical port region with a minimum shared DAG for the complete four-code
 parent-transfer vector.
 
+LEMMA-236 lower-bounds every multi-output realization by its distinct
+non-input coordinate functions and characterizes equality as having no
+auxiliary-only gates. LEMMA-237 exactly minimizes the diagonal vector: its
+physical exterior cost can equal its joint minimum for arbitrary length, so
+functional joint minimization alone does not force a saving (NG-173).
+GATE-004DY is active: in actual endpoints, split zero-excess vectors into
+zero-overhead coordinate normal forms and positive-overhead shared regions,
+then obtain distinct physical payment, descent, or an endpoint contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

@@ -3511,3 +3511,27 @@ duplicate elimination, plus uniform finite diagnostic AND/OR circuits of size
 `3m+4` retaining at least `m` distinct port classes; unrestricted depth and
 fanout, fan-in two/one; exact global Boolean functions, with no randomness,
 advice, oracle, promise, distribution, or field computation.
+
+## NG-173 — infer a strict gate saving from joint vector minimization alone
+
+**Label: NO-GO**
+
+Scope: replace the deduplicated exterior port region by a minimum shared DAG
+for its complete vector and assume that multi-output sharing or vector length
+always releases at least one physical gate.
+
+Failure: LEMMA-236 counts one unavoidable gate per distinct non-input output
+function. LEMMA-237 gives `m` diagonal outputs `(a AND z_i)_i` whose displayed
+`m`-gate exterior region attains that lower bound exactly. The replacement
+excess `|U|-C_A(P)` is zero for every `m`; adding two code inputs and repeating
+the vector on all four codes does not change the bound. The diagnostic parent
+is nonminimal, so endpoint identities, payments, or descent may still exclude
+the equality case. Those premises cannot be obtained from functional joint
+minimization alone.
+
+Model: uniform finite non-uniform constant-free multi-output AND/OR/NOT
+vectors for every `m>=1`; exterior size and exact supplied-signal joint cost
+both `m`, unrestricted lower-bound depth and fanout, fan-in two/one; exact
+Boolean coordinate functions and a code-independent four-row extension, with
+no randomness, advice, oracle, promise, distribution, field computation,
+minimum endpoint, SAT lower bound, or terminal implication.

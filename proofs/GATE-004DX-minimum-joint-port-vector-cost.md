@@ -46,3 +46,13 @@ signature contradiction.
 | Field/algebraic model | Four-code Boolean vector functions, minimum shared DAGs, physical losses, potentials, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, endpoint, bounded core, port coordinate, admissible signal, and residual branch |
 | Regime | Exact worst-case joint-port-cost gate; not a circuit lower bound for SAT or terminal result |
+
+## Cycle-197 audit
+
+LEMMA-236 separates unavoidable coordinate-output gates from auxiliary-only
+sharing. LEMMA-237 gives an unbounded diagonal vector with exact exterior cost
+`C_A(P)=|U|=m`; generic joint minimization therefore need not save a gate
+(NG-173). This does not falsify the displayed endpoint dichotomy because the
+diagnostic parent is nonminimal and alternatives 2–3 are endpoint-sensitive.
+GATE-004DY now isolates the `e=0` equality cases. GATE-004DX remains
+`EXPLORATORY`.

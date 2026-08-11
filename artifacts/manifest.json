@@ -843,6 +843,10 @@
       "sha256": "d0f837e77bfba02e685d4838a96e17cbf3ae81e8e3092cc1f46e9ce736a89f42"
     },
     {
+      "path": "artifacts/cycle-197-joint-port-cost-audit.md",
+      "sha256": "78d2a201ad95c7b6fc774770fa25fae5255f10e08c56d4100cec92013762b05d"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -868,7 +872,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "45ed55ce65bfcb4d37d7fba4cf8549156542ae5868259d88638aed09913367f4"
+      "sha256": "986baf03c3f5ffcafd335bd8b0130a77b396b478a4829e697298df0e76e7f7ee"
     },
     {
       "path": "docs/problem-statement.md",
@@ -988,11 +992,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "319d40d723c22c06df94b438fb304b8554343517ed496df0ca3f25d4f9e64962"
+      "sha256": "3aee8891a91ad3817d911cf2ea449bfc9096e9b37ea8e8f9972d3d0ed4184578"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "4537c730e3f5aaf89ce8a233272d737da09f8594e7847dccfe72b7eca624f419"
+      "sha256": "7d1681e36d391aa32d3fdb1a505e2368e516bf98d359b915f4950e32c14c2765"
     },
     {
       "path": "experiments/README.md",
@@ -1903,8 +1907,16 @@
       "sha256": "79559f584b2b49014fd2572e41573efd1110457ef214effd7ff6e68d8878fde4"
     },
     {
+      "path": "proofs/GATE-004DX-functional-joint-saving-only.md",
+      "sha256": "46bbca2c7c079ebfd460aab6300424e07e247b90d78b43e238c32e30aa19c76c"
+    },
+    {
       "path": "proofs/GATE-004DX-minimum-joint-port-vector-cost.md",
-      "sha256": "5f6c96a339d83fb5fea095794827e1fd22fe8dad4a636110f26f319383a6d986"
+      "sha256": "f9b2f281b55dcc1fc7439a596d5aada3c61aed089e50e225d49269ea06facb50"
+    },
+    {
+      "path": "proofs/GATE-004DY-zero-excess-port-vector-endpoints.md",
+      "sha256": "13932bbacae10dd5cea310502437ba63f6976dfc65fc04139f08306b36c2c2d8"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2999,8 +3011,16 @@
       "sha256": "8bccb0dc0bab655e5f1cb26cdd2b638095769cc4a5fe61c86667d3a7b133b0c4"
     },
     {
+      "path": "proofs/LEMMA-236-coordinate-output-lower-bound.md",
+      "sha256": "dc65f25599266e7470c8de69d3fa23c1a68e165a685dcc2343042afdb30e2cd4"
+    },
+    {
+      "path": "proofs/LEMMA-237-diagonal-port-vector-has-exact-joint-cost.md",
+      "sha256": "1df4b80ebb766b0358421dc05a61e2ec4e7487c5f412e774c2016f37720ca4ab"
+    },
+    {
       "path": "README.md",
-      "sha256": "2f9b1338604b596a07a70997316c181b325ec443e19db83f4c76d9bdc5d75769"
+      "sha256": "f755716150edd3e9f4161c6f08030c69e95dfd23255e138ca3f989ae3e11e212"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -3024,7 +3044,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "b62dda538e364148130a6a41c8daf4b2aa71a15f13dddce49756bd76bed8eac9"
+      "sha256": "5c2908a23b8c3b7ea52926c0805ea9094860a45cc4e6f86953faa7753e7ede05"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3045,6 +3065,10 @@
     {
       "path": "verification/cycle_support_contraction_audit.py",
       "sha256": "0e86d07b2b8f45b671f589e1587feed54fae12eaddbc7deec012e520666de256"
+    },
+    {
+      "path": "verification/diagonal_joint_port_cost_audit.py",
+      "sha256": "30dca5ab9aad80940f6e22abb27d604e6dbfe6350863fd7ac29ac11dc269e33d"
     },
     {
       "path": "verification/free_basis_two_realization_audit.py",

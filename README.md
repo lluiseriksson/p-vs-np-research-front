@@ -1504,11 +1504,19 @@ distinct port functions, so equality quotienting does not bound classes
 (NG-172). GATE-004DX asks for the exact minimum shared-DAG cost of the complete
 port-transfer vector.
 
+The one-hundred-and-ninety-seventh cycle proves a general coordinate-output
+lower bound for multi-output DAGs and computes the exact cost of the diagonal
+port vector: `m+1` gates from raw inputs and `m` after its shared core signal
+is supplied. Its exterior region therefore has zero replacement excess for
+every `m`, so joint minimization alone need not release a gate (NG-173).
+GATE-004DY now classifies the endpoint-sensitive zero-excess cases by
+coordinate cost, auxiliary overhead, and distinct physical payment.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–196 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, and show that exact global-function quotienting still leaves unbounded classes; minimum joint port-vector cost, contraction-aware classification, matching real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–197 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, show that exact global-function quotienting still leaves unbounded classes, and separate unavoidable coordinate cost from zero-excess joint realizations; endpoint-sensitive zero-excess classification, contraction-aware matching of real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
