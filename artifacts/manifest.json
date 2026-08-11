@@ -835,6 +835,10 @@
       "sha256": "78ad0594cf0b36f18e3e87d8ff2082bd2d039d9bcb3a3b5035784798a153c68f"
     },
     {
+      "path": "artifacts/cycle-195-bounded-core-port-audit.md",
+      "sha256": "b87c884efc9aa5fd6deac4ec3aa2468f873357279a79a9a3946b6ad62bea282b"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -860,7 +864,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "f19133f488f15de1611cf873ea5d2a04fd185d4391eaa0bd1e8825db25867e77"
+      "sha256": "5fb2a6e249565b557ca45312767a8ab00c1d90f90b6319c45a6db5a4c1b8bb87"
     },
     {
       "path": "docs/problem-statement.md",
@@ -980,11 +984,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "69b149b2953de8620e6f6132472e932ce94cb337ef9ce5e5d5e347ec85b0b732"
+      "sha256": "14a7ebfec3a9c2aae1bb8da589525b9b5413964ceee60db0593bda7d4a6333ff"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f4c6e9f8546fbd949f191f77bb5859752ac61a8fc207f60367f7c6bf22fd73bf"
+      "sha256": "4a29402071eda46ed6ed9e81cc9cb9e14aaf646c7e8d8d3310423a4732471d68"
     },
     {
       "path": "experiments/README.md",
@@ -1879,8 +1883,16 @@
       "sha256": "9f3c870af5f1df411c52059db68f2083dfd8ece8f60647c712687a892bbb56de"
     },
     {
+      "path": "proofs/GATE-004DV-bounded-core-enumeration-only.md",
+      "sha256": "6c10947c8e5f8551c96cc68bbf962273b40f7cd061a942cfbbe1d628a137ad81"
+    },
+    {
       "path": "proofs/GATE-004DV-classify-bounded-contraction-cores.md",
-      "sha256": "61a125c7aea2077f0f0c8e6cc3ee197864424f660bd246bdc42d8fc2233f1f3d"
+      "sha256": "153d91212ca5472089cd975996e4dd83989b0e5b18e32973e7b46fd01dbae371"
+    },
+    {
+      "path": "proofs/GATE-004DW-quotient-or-pay-external-port-types.md",
+      "sha256": "596e9dc75a38b48c7b8185fef33e6d9ecb87cbe28bea43fc9df481c321b88e77"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2963,8 +2975,12 @@
       "sha256": "1941f3c0e96d8261bfb9773eb599c9a413d749515308494703cc5708e1304081"
     },
     {
+      "path": "proofs/LEMMA-233-fixed-marked-core-has-unbounded-live-ports.md",
+      "sha256": "d34d919de88172f334db2183a206f12c05d35f347f83c3145b2c0a297956cf38"
+    },
+    {
       "path": "README.md",
-      "sha256": "9fd353ceeaf6758a607c6cdbc13a5d3716d3d6573d873e0d65a27fb9e3c0c0ae"
+      "sha256": "b3eea647269b41daf23e3fbf78e7c3e2669cf9b02c1336266414198b8a134688"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2979,12 +2995,16 @@
       "sha256": "4711093576da713772fe0d29c18d71896bce827daac8f9a42075fe91b9d95911"
     },
     {
+      "path": "verification/bounded_core_unbounded_ports_audit.py",
+      "sha256": "8b379dcfd3e462892d2ddd36e908d4ceaae68b0149c22d510dbdaa97d981e3a8"
+    },
+    {
       "path": "verification/canonical_difference_frontier_audit.py",
       "sha256": "0a22eeba928e2e8040e7ecf29e894412484f39812b574b35db461bc37f898ccd"
     },
     {
       "path": "verification/claims.json",
-      "sha256": "9c3aa5809d20191a6fb0951f17f1bc58bbdb29df9427f13726362f61d5c68e70"
+      "sha256": "def6756e44175a82f891ce97a04f3985e7486e8e475856fd6050566f7cba598a"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

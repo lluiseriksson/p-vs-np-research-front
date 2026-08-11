@@ -1395,6 +1395,12 @@ thresholds, so long-support pigeonhole is NG-170. GATE-004DV is active:
 derive a semantics- and cost-preserving port reduction, then classify marked
 cores of size at most four or six with complete four-code labels.
 
+LEMMA-233 fixes a three-gate marked cyclic core while adding arbitrarily many
+parent-live exterior ports. Therefore bounded-core-only enumeration is NG-171.
+GATE-004DW is active: define complete port records including parent-transfer
+functions and minor behavior, then either merge equivalent ports exactly or
+pay every inequivalent record by a distinct minimum-cost resource.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

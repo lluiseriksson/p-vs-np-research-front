@@ -45,3 +45,11 @@ admissible realizations.
 | Field/algebraic model | Four-code Boolean signatures, labeled loss sets, contraction maps, potentials, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, fully covered swap support, core vertex, and external port |
 | Regime | Exact worst-case bounded-core classification gate; not a finite enumeration claim, SAT lower bound, or terminal result |
+
+## Cycle-195 audit
+
+LEMMA-233 gives a fixed marked cyclic core with arbitrarily many parent-live
+external ports. Finite enumeration of only the core is NG-171. GATE-004DW
+replaces that route with a complete semantic/physical port quotient or a
+distinct minimum-cost payment for each inequivalent record. GATE-004DV remains
+`EXPLORATORY`.

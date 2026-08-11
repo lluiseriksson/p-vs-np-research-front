@@ -3469,3 +3469,24 @@ two losses per satisfying minor, abstract threshold supports of four/six,
 unrestricted target depth and fanout, target fan-in two/one; finite set
 cardinality only, with no randomness, advice, oracle, promise, distribution,
 field computation, or Boolean endpoint realizability claim.
+
+## NG-171 — enumerate a bounded marked core without reducing its ports
+
+**Label: NO-GO**
+
+Scope: after bounding fully covered marked support by four or six gates,
+enumerate only the induced core and assume its exterior fanout and semantic
+contexts are automatically finite or irrelevant.
+
+Failure: LEMMA-233 constructs, for every `m>=1`, a fixed three-gate marked
+cyclic core with `m` distinct consumers of one core gate. Selector slices make
+each port parent-live, and neither incoming port signal is a valid wire
+replacement. Core size therefore does not bound port count or downstream
+context. The family is nonminimal; an exact semantic quotient or minimum-cost
+payment theorem may still reduce the interface, but must be proved.
+
+Model: uniform finite non-uniform constant-free single-output AND/OR DAGs;
+size `3m+4`, fixed three-gate marked core of undirected rank two, `m` exterior
+ports, unrestricted output-tree depth, fan-in two and core fanout `m+1`;
+exact worst-case identities for every `m>=1`, assignment, and port; no
+randomness, advice, oracle, promise, distribution, or field computation.
