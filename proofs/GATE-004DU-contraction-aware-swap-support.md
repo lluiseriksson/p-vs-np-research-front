@@ -45,3 +45,12 @@ and which has no contraction-invariant exchange or potential descent.
 | Field/algebraic model | Four-code path signatures, literal edge supports, contraction maps, potentials, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, swap cycle, satisfying contraction map, and distinct-origin branch |
 | Regime | Exact worst-case contraction-aware support gate; not a SAT lower bound or terminal result |
+
+## Cycle-194 audit
+
+LEMMA-231 proves that oriented loss unions cannot fully cover marked supports
+larger than four in AND→OR or six in OR→AND. LEMMA-232 makes those thresholds
+sharp for abstract loss sets, so long-support pigeonhole alone is NG-170.
+GATE-004DV replaces this route with a semantics-preserving reduction and
+classification of the bounded residual cores. GATE-004DU remains
+`EXPLORATORY`.

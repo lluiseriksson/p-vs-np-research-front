@@ -831,6 +831,10 @@
       "sha256": "2c4033e585bd56baea307e02064d4ee6a3c6238b65304e95dcddab9034afc948"
     },
     {
+      "path": "artifacts/cycle-194-oriented-support-threshold-audit.md",
+      "sha256": "78ad0594cf0b36f18e3e87d8ff2082bd2d039d9bcb3a3b5035784798a153c68f"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -856,7 +860,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "d5f3f5f36472d7b565043cfef8c7a745e8bec49952011d895766afd6ed980f5d"
+      "sha256": "f19133f488f15de1611cf873ea5d2a04fd185d4391eaa0bd1e8825db25867e77"
     },
     {
       "path": "docs/problem-statement.md",
@@ -976,11 +980,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "0e2186cc363068ab38412be22d1b7e2344bae864b9d5943f92bb4155bbc5303f"
+      "sha256": "69b149b2953de8620e6f6132472e932ce94cb337ef9ce5e5d5e347ec85b0b732"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "e35c814a97671b8bff8d1c3738d68dcb1a5243f2e14086c980a9fdbf0589acd9"
+      "sha256": "f4c6e9f8546fbd949f191f77bb5859752ac61a8fc207f60367f7c6bf22fd73bf"
     },
     {
       "path": "experiments/README.md",
@@ -1868,7 +1872,15 @@
     },
     {
       "path": "proofs/GATE-004DU-contraction-aware-swap-support.md",
-      "sha256": "60d5ad5769a3cf5dd54d948c1b2721e06dfc219bafb3976ca757985a41680fbe"
+      "sha256": "c1761abc3f596bb4abf4c854fdc4da1f3b93e3bdf5b52e27783ae8b0d68b10b3"
+    },
+    {
+      "path": "proofs/GATE-004DU-long-support-pigeonhole-only.md",
+      "sha256": "9f3c870af5f1df411c52059db68f2083dfd8ece8f60647c712687a892bbb56de"
+    },
+    {
+      "path": "proofs/GATE-004DV-classify-bounded-contraction-cores.md",
+      "sha256": "61a125c7aea2077f0f0c8e6cc3ee197864424f660bd246bdc42d8fc2233f1f3d"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2943,8 +2955,16 @@
       "sha256": "24e50f58e8e7c01ce9f4b0d85c152abc4fd1175bfce937fcbd4d7cf9fd70d006"
     },
     {
+      "path": "proofs/LEMMA-231-oriented-loss-union-leaves-common-support-gates.md",
+      "sha256": "63a863de2fff5c8e9ce7eab37649c5b7ed5d59700c3e109f5f674faef0c5d5ea"
+    },
+    {
+      "path": "proofs/LEMMA-232-oriented-support-thresholds-are-set-sharp.md",
+      "sha256": "1941f3c0e96d8261bfb9773eb599c9a413d749515308494703cc5708e1304081"
+    },
+    {
       "path": "README.md",
-      "sha256": "e8e3d7eb2e11478aef2174448ae5ddcd9adf4bb06b138c2d8c6c8d937c1b3415"
+      "sha256": "9fd353ceeaf6758a607c6cdbc13a5d3716d3d6573d873e0d65a27fb9e3c0c0ae"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2964,7 +2984,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3c38111acc324aa626cf34beaeb9f386277f97660d317b71316de569ba7adbdc"
+      "sha256": "9c3aa5809d20191a6fb0951f17f1bc58bbdb29df9427f13726362f61d5c68e70"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3025,6 +3045,10 @@
     {
       "path": "verification/oriented_loss_budget_audit.py",
       "sha256": "a07e0966d4ffaf82079bd94aa393ac20206db44fae399f42bae45f694a3c7590"
+    },
+    {
+      "path": "verification/oriented_support_threshold_audit.py",
+      "sha256": "6d68f7bee947bc67b4bde0ee48d043b817ca0b47e0aed7b28759ced0795bb91e"
     },
     {
       "path": "verification/phase_gap_reduction.py",

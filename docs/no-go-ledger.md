@@ -3449,3 +3449,23 @@ two-edge contraction minors; no circuit-depth claim, target fan-in remains
 AND/OR two and NOT one; exact literal supports and cycle ranks over `F_2`; no
 randomness, advice, oracle, promise, distribution, or Boolean endpoint
 realizability claim.
+
+## NG-170 — close contraction support by long-cycle pigeonhole alone
+
+**Label: NO-GO**
+
+Scope: use only the oriented cardinality of satisfying loss unions to obtain a
+physical support gate common to all three minors for every marked swap cycle.
+
+Failure: LEMMA-231 proves a common gate only when the marked support exceeds
+four physical gates in AND→OR or six in OR→AND. LEMMA-232 gives abstract loss
+sets obeying all exact carrier equalities and covering four or six symbols at
+the thresholds. Thus pure pigeonhole leaves bounded cores. The witnesses are
+not Boolean endpoints; four-code signatures, topology, and minimality may
+still exclude them, but those are additional premises.
+
+Model: exact oriented physical loss-set systems; endpoint parent `K+2` with
+two losses per satisfying minor, abstract threshold supports of four/six,
+unrestricted target depth and fanout, target fan-in two/one; finite set
+cardinality only, with no randomness, advice, oracle, promise, distribution,
+field computation, or Boolean endpoint realizability claim.

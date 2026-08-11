@@ -1388,6 +1388,13 @@ common-edge pivot is NG-169. GATE-004DU is active: transport marked support
 through the full contraction maps or use Boolean endpoint identities to rule
 out the covering pattern; distinct origins require a separate host matching.
 
+LEMMA-231 combines marked physical gate support with the exact oriented losses:
+more than four gates in AND→OR or six in OR→AND leaves a gate present in all
+three satisfying minors. LEMMA-232 gives abstract full covers at the two
+thresholds, so long-support pigeonhole is NG-170. GATE-004DV is active:
+derive a semantics- and cost-preserving port reduction, then classify marked
+cores of size at most four or six with complete four-code labels.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base
