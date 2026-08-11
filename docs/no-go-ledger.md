@@ -3081,3 +3081,25 @@ constant three-input witness; unrestricted target depth, witness depth
 constant, fan-in two/one and shared fanout two; exact worst-case four-code
 cofactors; no randomness, advice, oracle, promise, distribution, field, or
 algebraic computation.
+
+## NG-153 — infer a free independent basis-one boundary from comparability
+
+**Label: NO-GO**
+
+Scope: use row-zero cofactor comparability and exact cancellation at a direct
+`h`-boundary to infer that the unchanged boundary function is already a wire,
+NOT, AND, or OR of existing globally `u`-independent nondescendant signals.
+
+Failure: GATE-004DC-COMPARABILITY-BASIS-ONE-ONLY gives a five-input DAG with
+`h=xy OR uz`, `r=z OR uxy NOT t`, and `b=h OR r=xy OR z`. Its `r` cofactors
+are `r_00=z`, `r_10=z OR xy`, and `r_01=r_11=z`, so the defect is comparable
+and confined exactly to the zero row. Before `b`, the independent physical
+signals are precisely raw `x,y,z,t` and `NOT t`. The target `xy OR z` depends
+essentially on three of them and is outside basis radius one of that pool.
+All 32 assignments and all radius-one candidates are checked. The witness is
+nonminimal and does not refute a minimum-cost forcing theorem or LEMMA-210.
+
+Model: constant finite non-uniform constant-free AND/OR/NOT DAG; ten gates,
+constant depth, fan-in two/one; exact worst-case five-input truth table and
+complete basis-radius-one pool; no randomness, advice, oracle, promise,
+distribution, field, or algebraic computation.

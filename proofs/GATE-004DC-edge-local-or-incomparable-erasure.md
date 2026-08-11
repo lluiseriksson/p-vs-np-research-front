@@ -46,3 +46,13 @@ correspondence under every pruning.
 | Field/algebraic model | Four-code Boolean cofactors, meet/join erasure, physical DAG topology, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable-edge-local or incomparable counterflow boundary |
 | Regime | Exact worst-case basis-realization gate; not a circuit lower bound for SAT or a terminal result |
+
+## Cycle-176 audit
+
+LEMMA-210 closes every boundary whose unchanged output function is available
+from existing globally `u`-independent nondescendant signals at basis distance
+zero or one. GATE-004DC-COMPARABILITY-BASIS-ONE-ONLY shows that comparability
+and exact cancellation alone do not force that certificate, even when the
+counterflow is confined to `00/10`. GATE-004DD is the active gate: use minimum
+joint cost or exact pruning to pay for the first missing independent factor,
+or resolve the incomparable branch.

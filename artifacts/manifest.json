@@ -759,6 +759,10 @@
       "sha256": "2ce6c25abb50996ea2faac113151b45fa3c6c1c34252b1115313fbb930ed3e64"
     },
     {
+      "path": "artifacts/cycle-176-free-independent-boundary-audit.md",
+      "sha256": "35a84720ad221e33e2a6cab341607aa3eff2ee17d9987d395d08ec3a0e89b363"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -784,7 +788,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8e3672fdcfac7ba7acb4fd3097794c1b1d4345e1878a589b6f9db06704a279e1"
+      "sha256": "b27e653ae734935c82c5662080e2198d242b76f8325bed0e95e820ef05142490"
     },
     {
       "path": "docs/problem-statement.md",
@@ -904,11 +908,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "ca7964142ff3a75e5293e791e5ee2dd40c3606cd16f306df18e92390a0206ee9"
+      "sha256": "ec47dac2e72702fb76006ae672f0c23d26601d36cd75abdbcc5958edb92b8860"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f77a9e824c09702aeca6e8126c9f48c6fcb8d11fac18e04a44f6c86e11bbdcb8"
+      "sha256": "508c5868186a396443978b76a18a39b9b44e3d39830cc47bee32d0dc06d990ce"
     },
     {
       "path": "experiments/README.md",
@@ -1655,8 +1659,16 @@
       "sha256": "a65baacb05b08d81f3bcfcfd881c14a935ac6a54efeb979921525bf8060ef9b4"
     },
     {
+      "path": "proofs/GATE-004DC-comparability-basis-one-only.md",
+      "sha256": "f068b9b262bab2e3774b3dbf32d3e2e0bf50a7e8e2f546ef36a05ab2f2662d98"
+    },
+    {
       "path": "proofs/GATE-004DC-edge-local-or-incomparable-erasure.md",
-      "sha256": "9289cccdc813fdb1c846ff01f16c4ea4fb7129e9e05645a9b8e3b3d76451ce09"
+      "sha256": "70bb90d65673c79d51d9619a9c570667580e2d8b01cf6f85c8931331c079df27"
+    },
+    {
+      "path": "proofs/GATE-004DD-pay-for-missing-independent-factor.md",
+      "sha256": "977cda820eebf3e33b103ce3e0e3a40c8f82397b7e4882f5c1cd7a7a46aaa872"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2647,8 +2659,12 @@
       "sha256": "ba615b2774d6f8de8676bfe003d66cc01b8070b53161ec2eb68dbde9915da786"
     },
     {
+      "path": "proofs/LEMMA-210-free-independent-basis-one-boundary-descends.md",
+      "sha256": "1d636f8ae9987d44a88b7d44566be63244be43a10aaf88de7b78741a79fa846c"
+    },
+    {
       "path": "README.md",
-      "sha256": "45a721c0da4e09c7e131352f39d9d8f097541506cd94d3a1ae0000e99b505bd1"
+      "sha256": "14ab65ecdf2dc08aea283d30d0a54254f385c31d0caa913c5b05545cfd040733"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2660,7 +2676,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "d149975e096c13d46bcc810a84a780f93da8d664e1712cca67892e4829ebd87b"
+      "sha256": "bd94fc585a54d317f4fafb18ed50cc718ea063f0f261f27baddcafffa25e7476"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2677,6 +2693,10 @@
     {
       "path": "verification/covering_basis.py",
       "sha256": "ddd3f4e4ceb326f8bf660b548707e139bf9aff3245593d12ccf72ef6e37cb631"
+    },
+    {
+      "path": "verification/free_local_realization_audit.py",
+      "sha256": "ceda0e4a3653474a0b03cbc4dd1c737d4eb209a82c46d5a7f8e739256d503966"
     },
     {
       "path": "verification/gap_reduction.py",

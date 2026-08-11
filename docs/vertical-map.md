@@ -1276,6 +1276,12 @@ changed code. GATE-004DC is the active residual brick: realize comparable
 erasure edge-locally when global specialization is unavailable or changes the
 output, or resolve incomparable erasure.
 
+LEMMA-210 proves exact descent whenever the unchanged boundary function is at
+basis distance at most one from existing independent nondescendant signals.
+Comparability does not force this certificate (NG-153). GATE-004DD is the
+active residual brick: minimum joint cost or exact pruning must pay for the
+first missing independent factor, or the incomparable branch must be resolved.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

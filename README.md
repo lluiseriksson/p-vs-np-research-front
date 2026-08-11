@@ -1375,11 +1375,18 @@ minimum cases. GATE-004DC now isolates edge-local comparable erasure where
 global specialization is unavailable or output-changing, and incomparable
 erasure.
 
+The one-hundred-and-seventy-sixth cycle proves that any counted boundary with
+a wire or one-gate realization over existing independent nondescendant signals
+admits strict `R_0` descent. A five-input witness shows that comparable
+counterflow semantics alone do not force this basis-one certificate
+(NG-153). GATE-004DD now asks minimum joint cost or exact pruning to pay for
+the first missing independent factor, while retaining the incomparable branch.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–175 exclude isolated parent-preserving comparable transfer by strict size saving; edge-local or incomparable erasure cost, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–176 exclude isolated parent-preserving specialization and free basis-one boundary rewrites; paying for a missing independent factor, incomparable erasure, the aligned branch, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
