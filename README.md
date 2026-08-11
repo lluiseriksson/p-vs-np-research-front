@@ -998,19 +998,27 @@ The remaining gate is precisely stability under the positive deficit
 `1<=Delta<=K-h+1=o(m)`.
 
 The one-hundred-and-twenty-second cycle turns that stability question into a
-deficit-timing problem. LEMMA-152 proves that adding one implication clause
-changes the deficit by `0,1`, or `2`; at a zero increment, every minimum
+deficit-timing problem. LEMMA-152 initially bounded each increment by two; the
+one-hundred-and-twenty-third cycle sharpens this to exactly `0` or `1` using
+the fresh-literal restriction. At a zero increment, every minimum
 circuit extends with four new quotient classes and no new collision.
 GATE-004AZ would close the positive-deficit case if the last saving occurs by
 `Delta_m+K`. The scalar recurrence alone is `NO-GO`, because it permits a
 single unit saving at the final clause. A structural saving-transport theorem
-is now the smallest active attack.
+is required.
+
+LEMMA-153 identifies the deficit exactly with missing `N+r` resources:
+`Delta_j=sigma+j-min(N+r)`. GATE-004BA is the equivalent smallest brick: every
+final saving must already have a witness on at most `K+Delta_m` clauses. Full
+Hall cardinalities still do not suffice—a cycle incidence system hides one
+saving until the complete set—so circuit realizability and gate semantics are
+now indispensable.
 
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–122 close the standalone tradeoff, give a canonical `o(m)` size gap, close the zero-deficit boundary, and reduce positive-deficit stability to the timing of finitely many savings. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–123 close the standalone tradeoff, give a canonical `o(m)` size gap, close the zero-deficit boundary, and reduce positive-deficit stability to localization of exact negation-cycle resource savings. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

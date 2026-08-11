@@ -46,7 +46,7 @@ boundary: equal size alone cannot select the interleaved representation, so
 the positive deficit must be localized or charged quantitatively.
 
 LEMMA-152 supplies the first localization invariant. Deficit increments are
-in `{0,1,2}`, and every zero increment extends a minimum circuit with four new
+in `{0,1}`, and every zero increment extends a minimum circuit with four new
 classes and no collision. GATE-004AZ is now the smallest sufficient timing
 gate: exclude positive increments after `Delta_m+K`.
 

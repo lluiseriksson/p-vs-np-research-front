@@ -2137,7 +2137,7 @@ closed; GATE-004AY/AX/AW/AV/AU/AG/AE remain open for positive deficit.
 
 **Label: NO-GO**
 
-Scope: combine only `Delta_0=0`, increments in `{0,1,2}`, and
+Scope: combine only `Delta_0=0`, increments in `{0,1}`, and
 `Delta_m<=K` to conclude that the last positive increment occurs by
 `Delta_m+K`.
 
@@ -2148,7 +2148,28 @@ linear margin. The sequence is an arithmetic witness, not a claimed circuit-
 complexity realization.
 
 Model: integer abstraction of nested implication circuit complexities;
-increments zero through two and endpoint at most `K`; circuit topology,
+increments zero or one and endpoint at most `K`; circuit topology,
 uniformity, depth, fanout, randomness, advice, oracle access, promises,
 distributions, and algebraic structure are absent. Recurrence-only timing is
 closed; GATE-004AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+
+## NG-107 — localize final savings from full Hall incidence alone
+
+**Label: NO-GO**
+
+Scope: use only the dependency-cone neighborhood cardinalities
+`|union_{i in I}P_i|>=|I|` for every clause subset to force a saving witness
+of size at most `K+d`.
+
+Failure: take clause indices as vertices of an `m`-cycle and resources as its
+edges, with each index adjacent to its two incident edges. Every proper
+nonempty subset `I` has neighborhood union `|I|+c` for some complement-
+component count `c>=1`; the full set has union exactly `m`. With abstract
+surplus `sigma=1`, the induced deficit is zero on every proper cardinality and
+one only at `m`. All Hall inequalities hold while localization fails.
+
+Model: explicit finite clause-resource incidence systems; no Boolean-circuit
+realizability claim; full Hall expansion but no gate orientation, depth,
+fanout, Boolean semantics, randomness, advice, oracle, promise, distribution,
+or algebraic circuit structure. Hall-cardinality-only localization is closed;
+GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.

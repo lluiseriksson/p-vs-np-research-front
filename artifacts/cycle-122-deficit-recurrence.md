@@ -5,7 +5,7 @@
 **Label: PROVED**
 
 LEMMA-152 proves that each new implication clause increases the deficit by
-zero, one, or two. At a zero increment, every minimum circuit extends to a
+zero or one (sharpened in Cycle 123). At a zero increment, every minimum circuit extends to a
 minimum circuit with four new quotient classes and no new raw collision.
 
 ## Refined gate

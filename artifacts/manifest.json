@@ -544,7 +544,11 @@
     },
     {
       "path": "artifacts/cycle-122-deficit-recurrence.md",
-      "sha256": "85b41281d68ecf2d2cd9b9d0e600735d95bcb8806a57dcdaf35ae8fd1fc20ba7"
+      "sha256": "b88d3f9a8da8535cfed77b6eb216a08b1ba77d7f18128db65690ae44876ab708"
+    },
+    {
+      "path": "artifacts/cycle-123-resource-localization.md",
+      "sha256": "aacb9188830a450292045bc76fb1d322b1b8ac5345872262d3d6a11855b464c0"
     },
     {
       "path": "artifacts/literal-subcube-search-31.json",
@@ -572,7 +576,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "9d49b3b51f5b769d7965e7a91534e32a773405e9b418db7c886f13fe992c36d5"
+      "sha256": "19019407676d115bb3f2832340f089cd3fb725f9a889aaa3fa6545a6c8975b54"
     },
     {
       "path": "docs/problem-statement.md",
@@ -684,11 +688,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "98e532e15ec5c83a7646f796d8cb0939ec5dc5316152915f7f7dbf89f786e0dd"
+      "sha256": "216ce055fcba8dbd6fdb1890dc84cfb34c09ecbc58298084b9aba4286795bbed"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "8895b2e31c28f4a858d31d859e95b73e6a8b9ed5cda4d0d381a7e172759cef4b"
+      "sha256": "c89d1328cb8d5e8b8d00861e1b976010b8cfb90469b289e66c519b210fb2b634"
     },
     {
       "path": "experiments/README.md",
@@ -1000,7 +1004,7 @@
     },
     {
       "path": "proofs/GATE-004AY-selector-penetration-balance.md",
-      "sha256": "17deedb3edaa113fc93cf98c6bf1a4930bae5e8ae2113f676b6517e508d0cc9f"
+      "sha256": "dac378dbe9ac5de6466d79ef5ecb75f145832605c6a48791ffed7fa5b4a3527d"
     },
     {
       "path": "proofs/GATE-004AY-size-only.md",
@@ -1016,11 +1020,19 @@
     },
     {
       "path": "proofs/GATE-004AZ-recurrence-only.md",
-      "sha256": "4acdccbf67058d1942ab08b9706ce9ade8e41f5a56fcff6f8ca9d6a55b2ec99c"
+      "sha256": "6b65bf52348711e03bfa4e8dd2f9ae09314a2abb77cf49a1017ac9c7ff6a601e"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
       "sha256": "e84b1400ad87419d440a35a3675fd7fb19cba50f1c07d145a99d43da74596c8f"
+    },
+    {
+      "path": "proofs/GATE-004BA-Hall-incidence-only.md",
+      "sha256": "1846875eefdc8a1e2ebc9e9e8b5a21af40153216a606e3a7980459b4e1210a57"
+    },
+    {
+      "path": "proofs/GATE-004BA-small-saving-witness.md",
+      "sha256": "38cb80bcabbefdb65bbc905d470c913d4b2f9c34b71230c7559e4c1df111aeb1"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1788,11 +1800,15 @@
     },
     {
       "path": "proofs/LEMMA-152-implication-deficit-recurrence.md",
-      "sha256": "9d26eee9e503b0e466f635a81c2595272b6aaf6197850608040ab47f0400a518"
+      "sha256": "5e2dfa649858a8f5ebc299cac9168476c42a04612bec4d198a83e40facfd05ba"
+    },
+    {
+      "path": "proofs/LEMMA-153-negation-cycle-resource-accounting.md",
+      "sha256": "78c31d95c34df14b89aaaba2914ca469087009759d041e3d62d704a8538c3723"
     },
     {
       "path": "README.md",
-      "sha256": "6eec5378a60d157325119ac0488348ea36d236a3ac2389a508b8e999e8b265bb"
+      "sha256": "056aff8ef1a318248a8f54091ef75613a911c5fb7cec474ebf4e6c3ea4a05710"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1804,7 +1820,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "479a474a6cdce205a1abf6acd75403f8de322c806feabf7af46cb8d07e5299a7"
+      "sha256": "4fd339e6e767559c4dda98b44e3693896cf1adcdd552cfd1794b2ac3ba50be7a"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

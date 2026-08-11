@@ -1,4 +1,4 @@
-# LEMMA-152 — implication deficits grow by zero, one, or two
+# LEMMA-152 — implication deficits grow by zero or one
 
 **Label: PROVED**
 
@@ -11,7 +11,7 @@ distinct nonconstant residuals, and define
 
 for `j>=0`. Then `Delta_0=0` and
 
-`0<=Delta_j-Delta_{j-1}<=2`.
+`Delta_j-Delta_{j-1} in {0,1}`.
 
 Moreover, if `Delta_j=Delta_{j-1}`, every minimum circuit for `J_{j-1}` can
 be extended by the three displayed gates for clause `j` to a minimum circuit
@@ -29,12 +29,18 @@ Appending `NOT u_j`, the OR gate `t_j OR NOT u_j`, and one final AND gives
 hence `Delta_j>=Delta_{j-1}`.
 
 The variable `u_j` is essential in `J_j`: choose a satisfying base input,
-satisfy all earlier clauses, and set `t_j=0`. Fixing `u_j=0` makes the new
-clause identically true. Earliest-dependent-gate elimination therefore gives
+satisfy all earlier clauses, and set `t_j=0`. Fixing `u_j=1` leaves the
+residual `J_{j-1} AND t_j` and eliminates at least one gate. Since `t_j` is a
+fresh positive input, LEMMA-037 gives
 
-`C(J_j)>=C(J_{j-1})+1`,
+`C(J_{j-1} AND t_j)=C(J_{j-1})+1`.
 
-hence `Delta_j<=Delta_{j-1}+2`.
+Consequently
+
+`C(J_j)>=C(J_{j-1})+2`,
+
+hence `Delta_j<=Delta_{j-1}+1`. The circuit sizes are integers, so the
+deficit increment is zero or one.
 
 ## Zero-increment extension
 
@@ -65,7 +71,7 @@ extension adds at least four classes and leaves `b` unchanged.
 |---|---|
 | Computational model | Minimum unrestricted circuits for nested base–implication conjunctions and their two-row quotients |
 | Uniform/non-uniform | Fully non-uniform base/minimum circuits; uniform ordered fresh clauses |
-| Circuit size | `0<=Delta_j-Delta_{j-1}<=2`; exact three-gate extension at zero increment |
+| Circuit size | `Delta_j-Delta_{j-1}` is zero or one; exact three-gate extension at zero increment |
 | Circuit depth | Unrestricted; one appended AND layer in the extension |
 | Fan-in | AND/OR two; NOT one; fanout unrestricted |
 | Randomness | None |

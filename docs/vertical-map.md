@@ -219,9 +219,12 @@ Adjacent collision-aware active branch:
                        + LEMMA-151 (equal-size aggregate/interleaved selector mobility)
                        + GATE-004AY-ZERO-DEFICIT (conditional: `Delta=0` closes the gate)
                        - GATE-004AY-SIZE-ONLY (no-go: equal size permits linear `D_a` variation)
-                       + LEMMA-152 (deficit increments are `0,1,2`; zero increments add four classes)
+                       + LEMMA-152 (deficit increments are `0,1`; zero increments add four classes)
                        <- GATE-004AZ (active smallest brick): exclude savings after `Delta_m+K`
                           - GATE-004AZ-RECURRENCE-ONLY (no-go: a final unit jump is arithmetically allowed)
+                          + LEMMA-153 (`Delta_j=sigma+j-min(N+r)` exact resource identity)
+                          <- GATE-004BA (active equivalent brick): localize every saving to at most `K+d` clauses
+                             - GATE-004BA-HALL-INCIDENCE-ONLY (no-go: cycle incidence hides one saving globally)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -822,15 +825,15 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AZ
+### Current operational brick: GATE-004BA
 
 The exact falsifiable statement and model card are in
-`proofs/GATE-004AZ-late-deficit-exclusion.md`. LEMMA-152 reduces the positive-
-deficit stability problem to the timing of at most `K` increments. If the
-last occurs by `Delta_m+K`, all remaining clauses extend minimum circuits with
-four new quotient classes and GATE-004AX follows exactly. The scalar recurrence
-cannot locate the last saving, so the next attack must transport, replicate,
-or localize any purported late circuit saving.
+`proofs/GATE-004BA-small-saving-witness.md`. LEMMA-153 identifies every
+deficit unit with a plateau of the minimum `N+r` resource count. GATE-004BA
+asks that the final saving `d` already occur on at most `K+d` clauses; this is
+exactly equivalent to GATE-004AZ. Abstract cycle incidence defeats full Hall
+cardinality localization, so the next attack must exploit realizable circuit
+topology, orientation, or Boolean gate semantics.
 
 ### Parallel constructive audit: GATE-004AF
 
