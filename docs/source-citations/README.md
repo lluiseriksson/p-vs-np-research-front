@@ -22,6 +22,7 @@ Access audit date: 2026-08-11.
 | MOR08 | [Morizumi formula inversion complexity](morizumi-2008.md) | NOT-gate lower bounds after a circuit output cone is proved to be a formula |
 | FIS75 | [Fischer negation normalization](fischer-1975.md) | Scope barrier: logarithmically many NOTs can preserve polynomial size |
 | HLS10 | [He-Liang-Sarma bounded-treewidth negations](he-liang-sarma-2010.md) | Primary comparison between formulas, bounded-treewidth circuits, and DAGs |
+| PAUL76 | [Paul on disjoint-variable realization](paul-1976.md) | Failure of generic direct-sum/decomposition intuition in general binary-gate circuits |
 
 Each note records only the claim consumed by this repository. Secondary-source
 summaries are not authoritative when the primary statement is available.

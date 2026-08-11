@@ -77,6 +77,24 @@ general-circuit structural information, but LEMMA-019 proves that counting only
 its top width-16-CNF components has a `3.9n` ceiling. A superlinear use must
 exploit additional component structure through a separately audited theorem.
 
+## Disjoint-support and decomposition failures — B-DSUM
+
+Paul proved that disjoint variable blocks do not generically force additive
+combinational complexity. In his general two-input switching-gate model, for
+every positive `epsilon` there are arbitrarily complex scalar functions `f`
+for which `OR(f(x),f(y))` on disjoint inputs costs at most
+`(1+epsilon)C(f)`. The evident decomposition can therefore be far from
+optimal.
+
+This theorem is not imported into the repository's counted AND/OR/NOT model:
+the gate basis, NOT accounting, composition, and functions differ. It is a
+barrier to basis-agnostic reasoning, not a counterexample to GATE-004BA.
+
+Design constraint: freshness and disjointness never justify direct-sum,
+separator, or resource-survival claims by themselves. Every such step must be
+proved for the exact basis and exact function, with quantitative simulation
+losses recorded if an external model is used.
+
 ## Uniform versus non-uniform complexity — B-UNI
 
 Uniform polynomial time is contained in non-uniform polynomial-size circuits,

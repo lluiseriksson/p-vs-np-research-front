@@ -555,6 +555,10 @@
       "sha256": "c0531196ca24d9d94c34f23197d077d5dd8a6421b2b229b38f5da8deb58bdabd"
     },
     {
+      "path": "artifacts/cycle-125-direct-sum-literature-audit.md",
+      "sha256": "8ef02406ca9f499b44acd2c7f2d76ac45e79bd02447515cfdd13447f50de4beb"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -572,7 +576,7 @@
     },
     {
       "path": "docs/barrier-audit.md",
-      "sha256": "6f434e391227983a4d7540e3aadcdee7b097bbc00d0cd948f19b6285c9f4d2d3"
+      "sha256": "b7516b93519dfa968963c78e0e22b1070b38be443de95e395535622b4551987a"
     },
     {
       "path": "docs/bridge-audit.md",
@@ -580,7 +584,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "42abb94193b3c7ee84e0cb0881aaa28345883062037bc42078ef90abc00116ba"
+      "sha256": "d2cd61157b472bd49a5435d6329762e172383ed8a58c649c89975107df07f54e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -663,12 +667,16 @@
       "sha256": "a66ab381ed827fbc2bcca766ba06fccdffe604b6ffe46cd79b3385a1506f6018"
     },
     {
+      "path": "docs/source-citations/paul-1976.md",
+      "sha256": "2c49a745bac4c087bdc385372433fa2cb098f3966554fc4dd12eda062d8a4ce9"
+    },
+    {
       "path": "docs/source-citations/razborov-rudich.md",
       "sha256": "aa5a95f453c3aee7378746f8a80a92d76854d873c37380c3c414c9e0a2a82533"
     },
     {
       "path": "docs/source-citations/README.md",
-      "sha256": "e233cfa4a4e03f8f9319a1cd9fa0e79f308e38b534f6ecef7db31494d47675c8"
+      "sha256": "c76f6adf8b135c690621f31b3c9888b511f6dd4189d5176edea8ac15c8354109"
     },
     {
       "path": "docs/source-citations/robere-zuiddam-2021.md",
@@ -692,7 +700,7 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "090367b34ba9e607cd8927c6115cf895ffcd685aaa6f4d6bf5de9baa743d5652"
+      "sha256": "0b83a20424a1837c6c755f52e76b7b08f0a5be39065f7281610b453c4762314e"
     },
     {
       "path": "docs/vertical-map.md",
@@ -1033,6 +1041,10 @@
     {
       "path": "proofs/GATE-004BA-cone-membership-only.md",
       "sha256": "ba87ac5dfd472a3ad3e8a4f9fceebb7017c541a799165c0a99c609a0f259cf2b"
+    },
+    {
+      "path": "proofs/GATE-004BA-generic-direct-sum.md",
+      "sha256": "f21aa7ccf750b8ba504b56c7f678dc57b9f094a3369fb05ce5423dc3e60421f5"
     },
     {
       "path": "proofs/GATE-004BA-Hall-incidence-only.md",
@@ -1820,7 +1832,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "cbcac5b204ccacb13af55aeb90f1fccd26fe7a3a90a3d228efa46b0e6aea97d2"
+      "sha256": "5f0c795ee68c79a1694bb8146d485385a5db0c1c31fdb7a210eac7099c9f2ac7"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1832,7 +1844,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "a9a8eec60fa0f50d1cd63c8f89276a8cf5a8c440ed49a033c2bf9d074dbcb05d"
+      "sha256": "eeec934fd0992eccee35b10d1280e6f0f7c13dc5e357018e35f28008f8d5aeca"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

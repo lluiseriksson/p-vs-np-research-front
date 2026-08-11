@@ -4803,6 +4803,22 @@
       "circuit_size": "Linear-size conjunction witness; no saving or minimum-size assertion", "circuit_depth": "Unrestricted with a binary conjunction tree and one NOT", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean dependence and restriction only",
       "asymptotic_quantifiers": "Every m at least two", "case_regime": "Structural no-go for cone-membership-only localization; GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BA-cone-membership-only.md; proofs/LEMMA-154-base-tail-resource-overlap.md; docs/no-go-ledger.md NG-108; artifacts/cycle-124-base-tail-resource-overlap.md"
+    },
+    {
+      "id": "INFRA125", "label": "PROVED",
+      "statement": "The PAUL76 primary-source record verifies failure of generic disjoint-copy additivity in its general binary switching-gate model and records the exact mismatch with counted AND/OR/NOT.",
+      "computational_model": "Primary-source audit of general two-input switching circuits compared with counted AND/OR/NOT circuits", "uniformity": "Non-uniform finite-function source theorem; no uniform-family transfer",
+      "circuit_size": "PAUL76 OR composition at most (1+epsilon)C(f) in its model; no numeric bound imported into the repository model", "circuit_depth": "Unrestricted", "fan_in": "PAUL76 general two-input switching gates; repository AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean switching functions only",
+      "asymptotic_quantifiers": "Every positive epsilon in PAUL76's existence theorem and every attempted source transfer in this audit", "case_regime": "Source-grounded model boundary; not a counterexample to GATE004BA, SAT lower bound, or terminal result",
+      "evidence": "docs/source-citations/paul-1976.md; docs/source-citations/README.md; docs/barrier-audit.md B-DSUM; artifacts/cycle-125-direct-sum-literature-audit.md"
+    },
+    {
+      "id": "GATE004BA-GENERIC-DIRECT-SUM", "label": "NO-GO",
+      "statement": "Disjoint supports alone do not justify a basis-independent additive or decomposition-normal-form theorem.",
+      "computational_model": "Audit comparing general binary switching circuits with the repository's counted AND/OR/NOT basis", "uniformity": "Fully non-uniform finite-function results in both models; no uniform-family transfer",
+      "circuit_size": "PAUL76 permits disjoint-copy OR complexity (1+epsilon)C(f) in its model; no numeric bound imported into the repository model", "circuit_depth": "Unrestricted in both models", "fan_in": "PAUL76 general two-input switching gates; target AND/OR two and NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean switching functions; no algebraic circuit claim",
+      "asymptotic_quantifiers": "Every positive epsilon in PAUL76's theorem and every attempted basis-agnostic promotion in the repository", "case_regime": "Literature-backed no-go for generic direct-sum inference; GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BA-generic-direct-sum.md; docs/source-citations/paul-1976.md; docs/no-go-ledger.md NG-109; artifacts/cycle-125-direct-sum-literature-audit.md"
     }
   ]
 }

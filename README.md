@@ -1022,11 +1022,18 @@ cone. This still does not localize the saving: path membership alone is
 neutralized. The active task is now a minimum-circuit survival or exchange
 theorem for those shared resources.
 
+The one-hundred-and-twenty-fifth cycle adds a primary-source direct-sum audit.
+PAUL76 shows that, in a richer general binary-gate model, two disjoint copies
+under OR can cost only `(1+epsilon)` times one copy. The model does not match
+counted AND/OR/NOT and no counterexample transfers, but basis-agnostic
+direct-sum reasoning is now explicitly `NO-GO`. GATE-004BA must use its exact
+one-negative clauses and negation-cycle resources.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–124 close the standalone tradeoff and zero-deficit boundary, identify exact negation-cycle savings, and force one base-tail shared resource per deficit unit. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and a model-exact direct-sum literature warning exist. Cycles 113–125 close the standalone tradeoff and zero-deficit boundary, identify exact negation-cycle savings, and force one base-tail shared resource per deficit unit. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

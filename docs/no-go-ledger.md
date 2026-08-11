@@ -2195,3 +2195,23 @@ claim; unrestricted depth/fanout; AND/OR fan-in two and NOT fan-in one; no
 randomness, advice, oracle, promise, distribution, or algebraic model.
 Cone-membership-only survival is closed; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE
 remain open.
+
+## NG-109 — import a basis-agnostic direct-sum theorem from disjoint supports
+
+**Label: NO-GO**
+
+Scope: infer additive base-tail cost, an optimal decomposition-respecting
+circuit, or small saving support solely from the disjoint variable blocks.
+
+Failure: PAUL76 proves that in a general two-input switching-gate model there
+are arbitrarily complex scalar functions `f` whose two disjoint copies under
+OR have complexity at most `(1+epsilon)C(f)`. Thus disjointness does not
+support a generic direct-sum principle. The source model counts general binary
+gates and differs from the repository's counted AND/OR/NOT basis, so the paper
+is not a counterexample to GATE-004BA and no numeric bound transfers.
+
+Model: literature comparison between unrestricted general binary switching
+gates and counted fan-in-two AND/OR plus unary NOT; non-uniform exact finite
+functions; unrestricted depth; no randomness, advice, oracle, promise,
+distribution, or algebraic model. Basis-agnostic direct-sum inference is
+closed; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
