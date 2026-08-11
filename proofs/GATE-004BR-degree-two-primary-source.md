@@ -14,11 +14,11 @@ Assume the remaining GATE-004BQ case:
 
 Some neutral tail-clause restriction leaves `N+r<=j+1`.
 
-Each nonzero `x` cofactor has a witness circuit of resource at most `j+1`,
-but separate cofactor minima cannot be glued for free. The next attack must
-use their common downstream graph: either extend LEMMA-171 to a cyclic
-residual with an explicit rank defect, or prove that both outgoing `x` paths
-force a shared tail-private resource.
+LEMMA-172 proves exact resource survival in every nonzero cofactor.
+GATE-004BR-ZERO-COFACTOR closes the case in which the other cofactor vanishes.
+Separate cofactor minima cannot be glued for free, as recorded by
+GATE-004BR-COFACTOR-MINIMA-ONLY. GATE-004BS is the exact remainder: two
+distinct nonzero cofactors on the common cyclic graph.
 
 ## Model card
 

@@ -5146,7 +5146,39 @@
       "computational_model": "Minimum pruned two-excess implication circuits with a degree-two primary base source and positive residual rank", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
       "circuit_size": "Exact parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Two Boolean cofactors, common cyclic downstream graph, and cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational j greater than K+sigma-2, sigma at least three, and remaining parent with rank at least two and source degree two", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BQ; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BR-degree-two-primary-source.md; proofs/GATE-004BQ-formula-residual.md; artifacts/cycle-138-primary-formula-interface.md"
+      "evidence": "proofs/GATE-004BR-degree-two-primary-source.md; proofs/GATE-004BR-zero-cofactor.md; proofs/GATE-004BS-two-nonzero-primary-cofactors.md; artifacts/cycle-139-primary-cofactor-rigidity.md"
+    },
+    {
+      "id": "LEMMA172", "label": "PROVED",
+      "statement": "Every nonzero primary cofactor preserves all exact-parent NOT gates, and at rank at least three preserves residual rank r-1.",
+      "computational_model": "Pruned two-excess implication circuits under a primary-source cofactor and satisfying-base restriction", "uniformity": "Every individual non-uniform GATE004BR parent; uniform tail product",
+      "circuit_size": "Exact surviving q=j+2-r; exact residual rank r-1 for r at least three", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two, r at least two, every nonzero primary cofactor, and every satisfying assignment of it", "case_regime": "Exact worst-case equality rigidity; not neutral-clause pruning, a SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-172-primary-cofactor-resource-rigidity.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-139-primary-cofactor-rigidity.md"
+    },
+    {
+      "id": "GATE004BR-ZERO-COFACTOR", "label": "PROVED",
+      "statement": "A vanishing primary cofactor permits literal-times-cofactor reconstruction and one-resource pruning.",
+      "computational_model": "Pruned two-excess implication circuits with a degree-two primary source and one zero base cofactor", "uniformity": "Every individual non-uniform parent in the stated case; uniform symmetric tail",
+      "circuit_size": "Parent N+r=j+2; reconstructed restricted target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor factorization and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BR parent having exactly one nonzero primary cofactor", "case_regime": "Exact worst-case subgate of GATE004BR; two distinct nonzero cofactors remain open; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BR-zero-cofactor.md; proofs/LEMMA-169-universal-one-excess-descent.md; artifacts/cycle-139-primary-cofactor-rigidity.md"
+    },
+    {
+      "id": "GATE004BR-COFACTOR-MINIMA-ONLY", "label": "NO-GO",
+      "statement": "Separate cofactor resource minima do not imply a shared maximum-plus-one selector realization.",
+      "computational_model": "Abstract pairs of cofactor circuits and resource sets under Shannon selection", "uniformity": "Two independent non-uniform witnesses; no common-parent realizability claim",
+      "circuit_size": "Each cofactor resource at most j; naive union may contain 2j resources plus selector cost", "circuit_depth": "Unrestricted witnesses", "fan_in": "Selector target uses binary AND/OR and at most one unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite resource sets and Boolean Shannon expansion only",
+      "asymptotic_quantifiers": "Every j at least one in the abstract disjoint-witness class", "case_regime": "Structural no-go for cofactor-minimum-only gluing; not a refutation of the common-graph gate or a SAT lower bound",
+      "evidence": "proofs/GATE-004BR-cofactor-minima-only.md; docs/no-go-ledger.md NG-117; artifacts/cycle-139-primary-cofactor-rigidity.md"
+    },
+    {
+      "id": "GATE004BS", "label": "EXPLORATORY",
+      "statement": "A neutral tail restriction prunes one resource with two distinct nonzero primary cofactors on one cyclic downstream graph.",
+      "computational_model": "One common pruned two-excess circuit with a degree-two primary source and two distinct nonzero base cofactors", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
+      "circuit_size": "Exact parent N+r=j+2; target restricted N+r at most j+1; cofactor resources rigid", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Common-graph Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational j greater than K+sigma-2, sigma at least three, and GATE004BR parent with two nonzero cofactors", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BR; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BS-two-nonzero-primary-cofactors.md; proofs/LEMMA-172-primary-cofactor-resource-rigidity.md; artifacts/cycle-139-primary-cofactor-rigidity.md"
     }
   ]
 }

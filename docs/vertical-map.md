@@ -268,6 +268,10 @@ Adjacent collision-aware active branch:
                                          + LEMMA-171 (fixing a degree-`d` primary formula interface hides at most `d` private NOTs)
                                          + GATE-004BQ-FORMULA-RESIDUAL (proved for rank one and `r=2,d=3`)
                                          <- GATE-004BR (active smallest brick): degree-two primary source with cyclic residual
+                                            + LEMMA-172 (nonzero primary cofactors preserve every NOT and, for `r>=3`, exact rank)
+                                            + GATE-004BR-ZERO-COFACTOR (proved by literal-times-cofactor reconstruction)
+                                            - GATE-004BR-COFACTOR-MINIMA-ONLY (no-go: separate minima have no common identity)
+                                            <- GATE-004BS (active smallest brick): two nonzero cofactors on one cyclic graph
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -929,6 +933,13 @@ formula: fixing its `d` unfolded occurrences can hide at most `d`
 clause-private NOTs. The operational margin gives `j>=5`, so a private clause
 survives for `r=1,d=2` and `r=2,d=3`. GATE-004BQ-FORMULA-RESIDUAL closes both.
 GATE-004BR is the remaining degree-two source with positive residual rank.
+
+LEMMA-172 makes that boundary rigid: every nonzero primary cofactor preserves
+all parent NOTs, and for `r>=3` preserves residual rank `r-1`. If one cofactor
+is zero, GATE-004BR-ZERO-COFACTOR factors the base as a literal times the other
+cofactor and closes the case. Separate cofactor minima cannot be glued at
+maximum-plus-one resource without shared identities. GATE-004BS now isolates
+two distinct nonzero cofactors on the same downstream graph.
 
 ### Parallel constructive audit: GATE-004AF
 

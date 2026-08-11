@@ -611,6 +611,10 @@
       "sha256": "5629e07722372c97bab2e2e7e2641f2dee6e57ad146e90be6f5b87d87ea59f2c"
     },
     {
+      "path": "artifacts/cycle-139-primary-cofactor-rigidity.md",
+      "sha256": "7e6cf6642644ee314227cc47f4f7887028e684f52fbb79f375a4a5872eb30542"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -636,7 +640,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "ec9e77d72363b665850ce55f27ea850cfffa29f30dbc23f50694fffe6cbf1712"
+      "sha256": "19cc06b500be9fefa3076331156a4396c67ef51909a76d88ae661892efc93490"
     },
     {
       "path": "docs/problem-statement.md",
@@ -644,7 +648,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "0707ad18c1c7dcbb7c25a141343a1dca8e82b4753ba2a89bf30206bd5ac09ed3"
+      "sha256": "88845f5561b5f5cfdd882a4c67506ca1d60ef714af0477431bcd4cf753a115e1"
     },
     {
       "path": "docs/result-labels.md",
@@ -756,11 +760,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "191b3beae8e51f0a7b4794b45a0d387ec21f1f3a42b448cf48356226c163a733"
+      "sha256": "08139d8046c171211c3a26f5740647957f307d9dc5132973ea8df857599898dd"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ed51fd872f3682d5a45ff0c95dcc2ebb4abb39eb6ce43171014fd79e56e32a31"
+      "sha256": "548d07292762de88b8aa3f562ff221c4fef2ca609c668e6160f3acb8e6696a05"
     },
     {
       "path": "experiments/README.md",
@@ -1203,8 +1207,20 @@
       "sha256": "a0d05d200e6eeda85c164b0430e3d3a9e4b73c0df75c48aad3f18723b578ab69"
     },
     {
+      "path": "proofs/GATE-004BR-cofactor-minima-only.md",
+      "sha256": "a5c801dd4f3a744d482b35e606205b1c5dcef1509c5b720a9b2efd3a5da76db6"
+    },
+    {
       "path": "proofs/GATE-004BR-degree-two-primary-source.md",
-      "sha256": "d6f5831f0b523f12ea89753a99bbccab20bb2950eda4a9e5d1c460c17906fbaa"
+      "sha256": "cae76c6514a43d021e82badd353e5637c766e60da614733df915c6e33662d34a"
+    },
+    {
+      "path": "proofs/GATE-004BR-zero-cofactor.md",
+      "sha256": "b2c31e16388694f875255d618151095f5ffcf2744583fc5c4b7676229c72d8ff"
+    },
+    {
+      "path": "proofs/GATE-004BS-two-nonzero-primary-cofactors.md",
+      "sha256": "ecc678c940270bd9e7e8e2ee533fe75e2119fa656aaa9fff0dce54a99ded5dec"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2051,8 +2067,12 @@
       "sha256": "2f4353b695df1de26e2edbe29cc9b6a6f8d7ed6359369f49636a949a7712c6c4"
     },
     {
+      "path": "proofs/LEMMA-172-primary-cofactor-resource-rigidity.md",
+      "sha256": "177977c6e8afaec55d910cfc68ec8037df2a38cc4fafda0bfb043b2d98be0347"
+    },
+    {
       "path": "README.md",
-      "sha256": "7f7a8a8e44b11e99811ce8200a994deb4159de964592a025dce3a3510b187557"
+      "sha256": "44143de3641153a7513fb0455e83a5c962b0770e45f5de6f15874b021562d978"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2064,7 +2084,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "7d6b13fac873f41b075385aba6b27a1a8e02243ca0f68eef36380cdfaf661575"
+      "sha256": "8d515a0a6f569724f006c2fd66ac4c1f4202d4e80695143312f7ee415f2280f0"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

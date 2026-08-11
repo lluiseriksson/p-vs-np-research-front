@@ -2358,3 +2358,22 @@ Model: exact Boolean variable renaming and integer arity; no minimum-circuit
 counterexample, randomness, advice, oracle, promise, distribution, or
 algebraic model. This does not refute GATE-004BP. It closes arity-only
 induction and leaves GATE-004BQ to exploit cofactor or path structure.
+
+## NG-117 — glue independently minimal primary cofactors
+
+**Label: NO-GO**
+
+Scope: combine separate resource-`j` circuits for `H_0 W_{j-1}` and
+`H_1 W_{j-1}` into a resource-`j+1` circuit for `H(x,Y)W_{j-1}` using only
+their scalar bounds.
+
+Failure: the witnesses need not identify any NOT gate, cycle, or tail
+subgraph. Two disjoint abstract resource sets of size `j` satisfy both bounds,
+but their Shannon-selector union has `2j` resources before selector cost.
+The maximum-plus-one conclusion requires common resource identity not present
+in the premises.
+
+Model: abstract pairs of non-uniform cofactor witnesses and finite resource
+sets; no common-parent realizability, randomness, advice, oracle, promise,
+distribution, or algebraic model. This does not refute GATE-004BR. It closes
+cofactor-minimum-only gluing and leaves GATE-004BS on the actual common graph.
