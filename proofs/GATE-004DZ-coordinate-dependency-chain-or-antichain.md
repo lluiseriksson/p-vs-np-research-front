@@ -47,3 +47,12 @@ through the satisfying contraction maps and pass the independent-cut test.
 | Field/algebraic model | Four-code Boolean coordinate functions, reachability posets, potentials, contraction maps, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, positive deficit, coordinate gate, chain, antichain, and residual branch |
 | Regime | Exact worst-case coordinate-dependency payment gate; not a generic poset payment, SAT lower bound, or terminal result |
+
+## Cycle-199 audit
+
+LEMMA-241 converts every width-`k` common-output antichain into a named tree
+with exactly `k-1` binary reconvergences. LEMMA-242 shows that all those gates
+may remain parent-live and non-substitutable, so reconvergence count alone is
+NG-175. GATE-004EA now attacks independent sealing or physical charging of
+the width branch. The height and bounded-remainder branches of GATE-004DZ
+remain `EXPLORATORY`.

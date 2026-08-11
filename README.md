@@ -1519,11 +1519,18 @@ automatically independent hosts (NG-174). Every coordinate dependency poset
 nevertheless satisfies `q<=HW`; GATE-004DZ must pay a wide antichain or long
 chain in the actual endpoint, or retain the complete bounded remainder.
 
+The one-hundred-and-ninety-ninth cycle proves that a `k`-gate reachability
+antichain with a common output contains a binary reconvergence tree with
+exactly `k−1` merges. A tight family keeps every merge parent-live and blocks
+both direct input substitutions, so merge cardinality alone is not payment
+(NG-175). GATE-004EA now requires independent seals, injective physical
+charges, uncrossing, descent, or a surviving four-code contradiction.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–198 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, separate unavoidable coordinate cost from zero-excess joint realizations, and reduce zero-overhead regions to a dependency height/width split; endpoint-sensitive chain/antichain payment, positive-overhead classification, contraction-aware matching of real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–199 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, separate unavoidable coordinate cost from zero-excess joint realizations, reduce zero-overhead regions to a dependency height/width split, and extract the exact binary reconvergence tree forced by a wide antichain; endpoint-sensitive reconvergence sealing/charging, long-chain payment, positive-overhead classification, contraction-aware matching of real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

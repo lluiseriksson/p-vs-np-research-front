@@ -851,6 +851,10 @@
       "sha256": "7933fa27e8fc896f5e280a34a6c7801df68a41c1362b93b1aecf9d49ff878f9b"
     },
     {
+      "path": "artifacts/cycle-199-antichain-reconvergence-audit.md",
+      "sha256": "856ce122a3d868a18ee99490dd805ceaa2c1ced8d0bcb4048c3183ab03a38827"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -876,7 +880,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "1053f85daffd8fa9f94fad7ce84ef935170b1bc881e715d976244d705dc80b4e"
+      "sha256": "f40cd19f13a18c85ba31b7800abc0525c1ed2f7684285dd595639246034e8e2d"
     },
     {
       "path": "docs/problem-statement.md",
@@ -996,11 +1000,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3db9573906012f1cd12583cba243ce52d8dd9ef99e931889264e4bcb31c0b3da"
+      "sha256": "c67a1c9e3e63c35e284ee8a211f55a93a77b157ce3581e29489a7ae865859c88"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "0c70e0ab03d275a7420107ecd71ac73174315d6dd18d39d3acd06e545247d322"
+      "sha256": "2d51fde736bd8f79d94e3b9c7da481065723eb3abf89afa4e34550c43d8bacf8"
     },
     {
       "path": "experiments/README.md",
@@ -1928,11 +1932,19 @@
     },
     {
       "path": "proofs/GATE-004DZ-coordinate-dependency-chain-or-antichain.md",
-      "sha256": "a5989865da8fa60510208f55eb8781c6bf6e0ac35d32d7b0a16f670b438cf6ee"
+      "sha256": "40afa36257c631c776d92fb048182666fd1cd7149cc16e1aa360edb0acb21501"
+    },
+    {
+      "path": "proofs/GATE-004DZ-reconvergence-count-as-payment.md",
+      "sha256": "802e6c49a95fc1ceeed4ba2961e350c4cde0884c6f30cdd556523f1aa5c00d2a"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
       "sha256": "e8c739153a3c5ad420c9f4e74f4576326b94ca32ee2a82f0c71527e99b68f8cb"
+    },
+    {
+      "path": "proofs/GATE-004EA-seal-or-charge-antichain-reconvergences.md",
+      "sha256": "b58d27e9345f914cce86288f040c488735808cd870421edffb3d8b043b64f9d1"
     },
     {
       "path": "proofs/GATE-004F-same-column-collisions.md",
@@ -3043,8 +3055,16 @@
       "sha256": "5447d078be84fb710f84b73969fc428fbb5aa818b074d810aa89cc3fcfe23fd8"
     },
     {
+      "path": "proofs/LEMMA-241-antichain-forces-binary-reconvergence-tree.md",
+      "sha256": "866855a2991005516ff439695c748a9c5ea60d40793293c16695911476e751a7"
+    },
+    {
+      "path": "proofs/LEMMA-242-antichain-reconvergences-can-all-be-parent-rigid.md",
+      "sha256": "2241e082bbf023d999787687e189bfdf195179ed3ff4d812e1687e7aeefeb653"
+    },
+    {
       "path": "README.md",
-      "sha256": "2e04fedce4c9a9ecb20290f24d4f0a9abe2367118a29ed7b8e83e84c77d84f64"
+      "sha256": "f6063ceea2d06e1e6e70ee14d0a54107e6fe321c9760eafc1d980b890bc3a0e5"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -3053,6 +3073,10 @@
     {
       "path": "verification/aligned_dag_reservoir_audit.py",
       "sha256": "efb7e5a158783f62891e8e44b70f7f9dc3dcffa6c96177c650e650be6f174223"
+    },
+    {
+      "path": "verification/antichain_reconvergence_audit.py",
+      "sha256": "6b5e5156d81ccf15a122ddb81ac1e7864ea190bf6112501612c8ae0bc14e503e"
     },
     {
       "path": "verification/audit.py",
@@ -3068,7 +3092,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "4fc4d697b62e48caf9318b711457fabae2b8cd2effb12901901e61f32b0dd599"
+      "sha256": "97df0ee9554e251bb77953ff23dacc148a3354e606bdf5f65bb6dfa031971b27"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -3559,3 +3559,26 @@ chain length all `m`, depth `m`, fan-in two and fanout explicit; exact Boolean
 functions and DAG reachability, with no randomness, advice, oracle, promise,
 distribution, field computation, endpoint realizability, SAT lower bound, or
 terminal implication.
+
+## NG-175 — count forced antichain reconvergences as payments
+
+**Label: NO-GO**
+
+Scope: use the `k-1` distinct binary merge gates forced downstream of a
+common-output coordinate antichain as free physical hosts or payments solely
+from their existence and cardinality.
+
+Failure: LEMMA-241 proves the exact reconvergence count, but LEMMA-242 attains
+it with a comb in which every merge is parent-live. For each merge, one
+assignment separates it from its left input and another separates it from its
+right input, with the difference reaching the parent output. Thus no merge
+can be deleted or replaced by either input while holding the remaining circuit
+fixed. The family is nonminimal and not an endpoint, so independently equal
+cuts, endpoint losses/origins, or descent remain possible additional premises.
+
+Model: every finite fan-in-at-most-two common-sink DAG for the tree count,
+plus uniform finite non-uniform constant-free AND/OR comb diagnostics for
+every `k>=2`; exactly `k-1` binary merges, diagnostic depth `k`, fanout one,
+exact Boolean functions and physical reachability, with no randomness,
+advice, oracle, promise, distribution, field computation, minimum endpoint,
+SAT lower bound, or terminal implication.

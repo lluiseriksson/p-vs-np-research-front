@@ -1425,6 +1425,13 @@ coordinate-host counting NG-174. LEMMA-240 leaves the exact inequality
 dependency chain into endpoint-valid physical payments, or preserve and
 classify the fewer-than-`D^2` fully labeled remainder.
 
+LEMMA-241 extracts an exact `k-1`-merge binary reconvergence tree from every
+common-output reachability antichain of size `k`. LEMMA-242 attains that count
+while keeping every merge parent-live and non-substitutable, so merge count
+alone is NG-175. GATE-004EA is active on the width branch: independently seal
+selected antichain regions, inject their reconvergences into distinct physical
+resources, uncross overlap, or propagate an exact four-code contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base
