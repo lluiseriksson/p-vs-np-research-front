@@ -783,6 +783,10 @@
       "sha256": "d133edae25501cddc3f39e0f9f568798d8527566b8d225f87644956a9114b5b0"
     },
     {
+      "path": "artifacts/cycle-182-pruning-budget-audit.md",
+      "sha256": "d006dd4c95dd701d7219fb3976b5c4e3031af54091a5bd54112c987ad85cfba0"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -808,7 +812,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "221360205bc9d3022986f2257d16f0ffbde0a5207dfde3a7b898cd9a5e85cad2"
+      "sha256": "f44db79e9ca739b70445072bceb646dee35f6e27fc4919fc065144be91e654b6"
     },
     {
       "path": "docs/problem-statement.md",
@@ -928,11 +932,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "33990f1e8cd05bb6c6c1fe3d718e351fcd9fcd65e281a36fbb325af9d6b8edc2"
+      "sha256": "acfc09619459b5e052c2d06d15108ce912e867c8a2936b487bc9262fc42b329f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "f35e8bf48b1d616cf5aabcc8f366f4987ab2c1a4f40293bf013669a3ba158609"
+      "sha256": "6618adb8831cc6011930c08ab9f0eb308da87f6a597121472638f97f8903768c"
     },
     {
       "path": "experiments/README.md",
@@ -1728,7 +1732,15 @@
     },
     {
       "path": "proofs/GATE-004DI-minimum-endpoint-deficit-coupling.md",
-      "sha256": "748032c8115906fc8eccc09455ce9e52b7876f097882fad5fc9d2653c877ac4a"
+      "sha256": "897f719068113041035f273425b5fffe82669efba07258b0defbb70774db071f"
+    },
+    {
+      "path": "proofs/GATE-004DI-pruning-budget-only.md",
+      "sha256": "7e69f2628c7e17001092216d8c47f0b27d714aa19e40af9585797b4a180c7da9"
+    },
+    {
+      "path": "proofs/GATE-004DJ-bound-deficit-or-force-external-resource.md",
+      "sha256": "5acaa0fc2ffe9cee8288cb4fb8e6db88a0bb2d007e82f0f17ceb530a414714a6"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2743,8 +2755,12 @@
       "sha256": "7f1657ff0483db202d202f7fa483b781fb217de7eaad763915bf01e8f74da755"
     },
     {
+      "path": "proofs/LEMMA-216-three-two-loss-budgets-have-union-at-most-six.md",
+      "sha256": "eb12e8452d997aaf7461c1f06446c0863a9976b47dedf72c84b5a9cc7d9f2d0c"
+    },
+    {
       "path": "README.md",
-      "sha256": "1b8c1a5412912ec8a31f5f5a7f3fbbc01d8ad21a885f7224cbb3c9c9bd35398b"
+      "sha256": "e5df9809195c387a57fffbc35da80b95087741c316a71c0bef46b32fe9b6caa8"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2756,7 +2772,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "015db86403a76cad5cc8736f76c178bd06d09b93f6b662aee1f6240ff2d5a90a"
+      "sha256": "80e3c6c5f9c3e1fb8b7429d8f8b981614f59dd378ddc4b0074f1d892d23f12a3"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2809,6 +2825,10 @@
     {
       "path": "verification/private_reservoir_family_audit.py",
       "sha256": "e06a1c72e862ddd5010decae49a5af828c68c8560ee5ce52600c74b1d010136b"
+    },
+    {
+      "path": "verification/pruning_loss_union_audit.py",
+      "sha256": "92d30bd65e84237b4b0f20239cbff35f0b7e78684a55bab1c89b02b83b5e0e89"
     },
     {
       "path": "verification/quartet_type_audit.py",

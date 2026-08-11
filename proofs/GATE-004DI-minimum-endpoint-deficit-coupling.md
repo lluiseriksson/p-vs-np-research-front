@@ -45,3 +45,10 @@ potential descent. No such parent is claimed or constructed.
 | Field/algebraic model | Minimum joint Boolean circuits, physical DAG resources, lexicographic potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable, unmasked, raw/shared, no-formula, or incomparable boundary |
 | Regime | Exact worst-case global minimum-resource gate; not a SAT lower bound or terminal result |
+
+## Cycle-182 audit
+
+LEMMA-216 caps the globally deduplicated satisfying-loss union at six gates.
+GATE-004DI-PRUNING-BUDGET-ONLY shows that pruning losses alone cannot pay an
+unbounded deficit. GATE-004DJ isolates the necessary endpoint theorem:
+`D_b<=6` or distinct external resources. GATE-004DI remains `EXPLORATORY`.

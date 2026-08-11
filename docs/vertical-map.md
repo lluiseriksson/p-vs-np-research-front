@@ -1316,6 +1316,10 @@ GATE-004DI is the active residual brick: deduplicate all joint savings,
 satisfying-pruning losses, private/non-bridge gates, and potential descents,
 then derive a global payment from endpoint minimality.
 
+LEMMA-216 caps the three exact satisfying-loss sets at six distinct physical
+gates. Pruning-only payment is NG-159. GATE-004DJ is active: prove `D_b<=6`
+after prior charges, or force enough distinct external resources.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

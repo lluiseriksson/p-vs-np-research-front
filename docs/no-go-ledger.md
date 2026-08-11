@@ -3225,3 +3225,18 @@ cofactor size `n+1`, saving one, and deficit `n-2`; depth linear in `n`, fan-in
 two/one and unrestricted fanout; exact worst-case identities and arity lower
 bound for every `n>=3`; no randomness, advice, oracle, promise, distribution,
 field, or algebraic computation.
+
+## NG-159 — pay arbitrary private deficit from satisfying losses alone
+
+**Label: NO-GO**
+
+The three satisfying prunings each lose exactly two binary gates, so
+LEMMA-216 caps their deduplicated physical union at six. Overlap and prior
+carrier charges only reduce that budget. Therefore pruning-only payment of
+`D_b` requires a separate endpoint theorem proving `D_b<=6`. The NG-158 family
+has unbounded diagnostic deficit but is nonminimal and not an endpoint; it
+shows only that local semantics do not supply the missing bound.
+
+Model: exact-plateau non-uniform unrestricted AND/OR/NOT physical loss sets;
+three sets of size two, union at most six, unrestricted depth/fanout, no
+randomness, advice, oracle, promise, distribution, field, or algebraic model.
