@@ -1339,6 +1339,13 @@ first exterior frontier is functionally sealed. A fixed consumer radius cannot
 find every seal (NG-162). GATE-004DN is active: force a sealed host region from
 endpoint minimality or turn an unsealed path into an exact contradiction.
 
+LEMMA-221 proves that the canonical semantic difference frontier is sealed
+only a posteriori: excluding the output from the difference set is exactly
+parent-function equality. Using that canonical frontier to prove the same
+equality is NG-163. GATE-004DO is active: produce a paid directed cut whose
+full four-code equality is derived independently of the output, or trace an
+uncut signature to a named endpoint contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

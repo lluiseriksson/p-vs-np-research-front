@@ -3286,3 +3286,27 @@ Model: uniform family of finite non-uniform constant-free AND/OR/NOT DAGs;
 size `m+4`, depth linear in `m`, fan-in two/one and fanout two at the last chain
 gate; exact worst-case identities for every `m>=1`; no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation.
+
+## NG-163 — use the canonical difference frontier to prove parent preservation
+
+**Label: NO-GO**
+
+Scope: define a proposed host rewrite's complete region as all gates whose
+Boolean functions change, call the first unchanged exterior gates a sealed
+frontier, and use that frontier to prove that the parent is unchanged.
+
+Failure: LEMMA-221 proves that the named output lies outside this canonical
+difference region if and only if the old and new parent functions are equal.
+Moreover, frontier membership already asserts exact old/new function equality
+at each frontier gate. The construction is therefore a valid a posteriori
+audit but a circular preservation proof. A function-preserving retargeted gate
+can also lie outside the semantic difference set, so that set need not be the
+physical region required by LEMMA-220. This does not rule out an independently
+selected cut whose equality follows from local four-code identities and exact
+pruning data without consulting the output.
+
+Model: every pair of finite non-uniform constant-free AND/OR/NOT DAGs on
+common raw inputs and named vertices; arbitrary finite size and depth, fan-in
+two/one, unrestricted fanout, exact worst-case Boolean functions and union-DAG
+reachability; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation.

@@ -36,3 +36,12 @@ joint replacement saving and no exact contradiction.
 | Field/algebraic model | Four-code Boolean functions, DAG reachability, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and residual comparable, raw, unsealed, no-DAG, or incomparable boundary |
 | Regime | Exact worst-case sealed-region gate; not a SAT lower bound or terminal result |
+
+## Cycle-187 audit
+
+LEMMA-221 proves that the canonical full semantic difference frontier is
+sealed exactly a posteriori: excluding the output from that region is the
+parent-equality statement itself. Using it as the preservation proof is
+NG-163. GATE-004DO replaces this operational route with an independently
+chosen cut whose four-code equality is derived without assuming the output
+equality. GATE-004DN remains `EXPLORATORY`.
