@@ -219,7 +219,9 @@ Adjacent collision-aware active branch:
                        + LEMMA-151 (equal-size aggregate/interleaved selector mobility)
                        + GATE-004AY-ZERO-DEFICIT (conditional: `Delta=0` closes the gate)
                        - GATE-004AY-SIZE-ONLY (no-go: equal size permits linear `D_a` variation)
-                       <- stabilize the interleaved quotient under positive deficit (next attack)
+                       + LEMMA-152 (deficit increments are `0,1,2`; zero increments add four classes)
+                       <- GATE-004AZ (active smallest brick): exclude savings after `Delta_m+K`
+                          - GATE-004AZ-RECURRENCE-ONLY (no-go: a final unit jump is arithmetically allowed)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -820,19 +822,15 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004AY
+### Current operational brick: GATE-004AZ
 
 The exact falsifiable statement and model card are in
-`proofs/GATE-004AY-selector-penetration-balance.md`. LEMMA-150 rewrites the
-single quantity `Q_J-b` required by GATE-004AX as the exact balance
-`D_a-E_row-b>=m-Delta-3K`. GATE-004AX-ARBITRARY-BASE proves that identical
-nonconstant row residuals fail this balance, so GATE-004AY must exploit the
-specific canonical row transition. LEMMA-147 and LEMMA-148 remain the audited
-collision and local-exchange inputs.
-LEMMA-151 closes the exact-additivity boundary: if `Delta=0`, an interleaved
-minimum circuit has `Q>=4m` and `b=0`. Equal-size aggregation can nevertheless
-have only `K+1` selector-dependent gates, so the positive-deficit attack must
-stabilize a representation rather than infer penetration from size.
+`proofs/GATE-004AZ-late-deficit-exclusion.md`. LEMMA-152 reduces the positive-
+deficit stability problem to the timing of at most `K` increments. If the
+last occurs by `Delta_m+K`, all remaining clauses extend minimum circuits with
+four new quotient classes and GATE-004AX follows exactly. The scalar recurrence
+cannot locate the last saving, so the next attack must transport, replicate,
+or localize any purported late circuit saving.
 
 ### Parallel constructive audit: GATE-004AF
 

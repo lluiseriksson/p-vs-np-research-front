@@ -2132,3 +2132,23 @@ with disjoint implication clauses; equal size `K+3m`; unrestricted depth and
 fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
 promise, distribution, or algebraic model. Size-only selector inference is
 closed; GATE-004AY/AX/AW/AV/AU/AG/AE remain open for positive deficit.
+
+## NG-106 — locate the last circuit saving from the scalar deficit recurrence
+
+**Label: NO-GO**
+
+Scope: combine only `Delta_0=0`, increments in `{0,1,2}`, and
+`Delta_m<=K` to conclude that the last positive increment occurs by
+`Delta_m+K`.
+
+Failure: the abstract sequence staying zero through `m-1` and jumping to one
+at `m` satisfies all those constraints whenever `K>=1`, yet has last increase
+`r=m`. In the canonical regime `m>>K`, it violates the required timing by a
+linear margin. The sequence is an arithmetic witness, not a claimed circuit-
+complexity realization.
+
+Model: integer abstraction of nested implication circuit complexities;
+increments zero through two and endpoint at most `K`; circuit topology,
+uniformity, depth, fanout, randomness, advice, oracle access, promises,
+distributions, and algebraic structure are absent. Recurrence-only timing is
+closed; GATE-004AZ/AY/AX/AW/AV/AU/AG/AE remain open.

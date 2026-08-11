@@ -4739,6 +4739,30 @@
       "circuit_size": "Equal exact displayed size K+3m; selector penetration ranges from at most K+1 to at least m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean associativity and semantic row dependence only",
       "asymptotic_quantifiers": "Every m at least one and every base with two distinct nonconstant row residuals", "case_regime": "Structural no-go for size-only selector accounting; GATE004AY/AX/AW/AV/AU/AG/AE remain open for positive deficit",
       "evidence": "proofs/GATE-004AY-size-only.md; proofs/LEMMA-151-selector-mobility-at-fixed-size.md; docs/no-go-ledger.md NG-105; artifacts/cycle-121-selector-mobility.md"
+    },
+    {
+      "id": "LEMMA152", "label": "PROVED",
+      "statement": "Nested implication deficits increase by zero, one, or two; a zero increment extends every minimum circuit by four quotient classes without a new collision.",
+      "computational_model": "Minimum unrestricted circuits for nested base-implication conjunctions and their two-row quotients", "uniformity": "Fully non-uniform base and minimum circuits; uniform ordered fresh clauses",
+      "circuit_size": "Deficit increments between zero and two; exact three-gate extension at zero increment", "circuit_depth": "Unrestricted with one appended AND layer in the extension", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions, essential variables, and semantic row cofactors only",
+      "asymptotic_quantifiers": "Every j at least one, every nonconstant finite H, and every pair of distinct nonconstant compatible row residuals", "case_regime": "Exact worst-case recurrence and zero-increment stability; not a late-savings theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-152-implication-deficit-recurrence.md; artifacts/cycle-122-deficit-recurrence.md"
+    },
+    {
+      "id": "GATE004AZ", "label": "EXPLORATORY",
+      "statement": "The last positive canonical implication-deficit increment occurs by Delta_m+K.",
+      "computational_model": "Minimum unrestricted canonical circuits along the nested implication-clause sequence", "uniformity": "Uniform canonical base and rows with symmetric fresh clauses; fully non-uniform minimum circuit at each size",
+      "circuit_size": "Deficits Delta_j=K+3j-C(J_j); target last increase r at most Delta_m+K", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Integer deficit recurrence and Boolean quotient extensions only",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and every prefix length from zero through m", "case_regime": "Exact sufficient positive-deficit subgate for GATE004AX; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AZ-late-deficit-exclusion.md; proofs/LEMMA-152-implication-deficit-recurrence.md; artifacts/cycle-122-deficit-recurrence.md"
+    },
+    {
+      "id": "GATE004AZ-RECURRENCE-ONLY", "label": "NO-GO",
+      "statement": "The scalar deficit recurrence and final O(K) budget do not bound the location of the last positive increment.",
+      "computational_model": "Integer sequences satisfying only the proved implication-deficit recurrence", "uniformity": "No circuit uniformity claim; numerical abstraction of non-uniform minima",
+      "circuit_size": "Delta_0=0, increments in zero through two, endpoint at most K; a late unit jump remains allowed", "circuit_depth": "Not represented by the scalar abstraction", "fan_in": "Underlying circuit model has AND/OR fan-in two and NOT fan-in one, but topology is discarded", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Integer recurrence only",
+      "asymptotic_quantifiers": "Every m greater than K at least one in the abstract recurrence class", "case_regime": "Quantitative no-go for recurrence-only timing; GATE004AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AZ-recurrence-only.md; docs/no-go-ledger.md NG-106; artifacts/cycle-122-deficit-recurrence.md"
     }
   ]
 }
