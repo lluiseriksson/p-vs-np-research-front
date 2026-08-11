@@ -1309,6 +1309,13 @@ raw-`u` entry gate. One live masked entry can still hide deficit `n-2`
 minimum joint circuit for its complete selected cofactor vector, including
 constant propagation at every named consumer.
 
+LEMMA-215 proves that `N` essential source signals require at least `N-1`
+binary gates in any one output cone. It makes the NG-157 joint cofactor circuit
+exactly minimum, yet its saving remains one against deficit `n-2` (NG-158).
+GATE-004DI is the active residual brick: deduplicate all joint savings,
+satisfying-pruning losses, private/non-bridge gates, and potential descents,
+then derive a global payment from endpoint minimality.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

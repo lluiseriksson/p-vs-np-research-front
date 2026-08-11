@@ -3201,3 +3201,27 @@ AND/OR/NOT DAGs with a marked two-output region; size `3n+11`, depth linear in
 `n`, fan-in two/one, one raw-`u` entry and two live masked consumers; exact
 worst-case identities for every `n>=3` and every assignment; no randomness,
 advice, oracle, promise, distribution, field, or algebraic computation.
+
+## NG-158 — pay private deficit by one region's exact joint cofactor saving
+
+**Label: NO-GO**
+
+Scope: replace raw entry counting by the full minimum constant-free joint
+circuit saving for the selected cofactor vector of one canonical masked escape
+region, and infer that this saving covers `D_b`.
+
+Failure: GATE-004DH-JOINT-SAVING-ONLY computes the quantity exactly in the
+NG-157 family. The region `{q_1,...,q_n,k,r}` has size `n+2`. Its `u=1`
+cofactor vector is `(X AND NOT t, w OR X AND NOT t)` and has a shared circuit
+of `n+1` gates. The second output depends essentially on the `n+2` available
+sources `x_1,...,x_n,NOT t,w`; LEMMA-215 proves that no smaller fan-in-two
+circuit exists. Thus the exact joint saving is one, while `D_b=n-2`. The
+uniform family is nonminimal and does not refute a global resource charge
+derived from endpoint minimality; it refutes one local joint-saving quantity.
+
+Model: uniform family of finite non-uniform single-output constant-free
+AND/OR/NOT DAGs with a marked two-output region; region size `n+2`, exact joint
+cofactor size `n+1`, saving one, and deficit `n-2`; depth linear in `n`, fan-in
+two/one and unrestricted fanout; exact worst-case identities and arity lower
+bound for every `n>=3`; no randomness, advice, oracle, promise, distribution,
+field, or algebraic computation.

@@ -1411,11 +1411,17 @@ has a live two-output masking certificate but only one such entry gate against
 deficit `n-2` (NG-157). GATE-004DH now asks for the complete minimum joint
 cofactor-circuit saving, not an interface cardinality.
 
+The one-hundred-and-eighty-first cycle proves the exact fan-in-two
+essential-source lower bound and uses it to certify that the family’s minimum
+joint cofactor circuit saves exactly one gate against deficit `n-2` (NG-158).
+GATE-004DI now requires a globally deduplicated payment derived from minimum
+endpoint structure and the exact satisfying-pruning budgets.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–180 exclude isolated specialization, every aligned-formula rewrite with sufficient private budget, escape-cardinality payment, and raw-entry counting; full joint cofactor saving, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–181 exclude isolated specialization, every aligned-formula rewrite with sufficient private budget, escape or entry counting, and a single local joint-cofactor saving; global minimum-resource coupling, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

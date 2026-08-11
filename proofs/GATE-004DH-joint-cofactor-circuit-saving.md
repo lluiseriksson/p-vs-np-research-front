@@ -43,3 +43,12 @@ boundary formula, and incomparable cofactors remain explicit branches.
 | Field/algebraic model | Minimum joint Boolean cofactor circuits, physical DAG interfaces, and satisfying cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable, unmasked, raw/shared, no-formula, or incomparable boundary |
 | Regime | Exact worst-case joint-saving gate; not a SAT lower bound or terminal result |
+
+## Cycle-181 audit
+
+LEMMA-215 supplies an exact essential-source lower bound, making the selected
+joint circuit in the NG-157 family minimum. GATE-004DH-JOINT-SAVING-ONLY then
+has `J_1=1` against `D_b=n-2`. GATE-004DI replaces any one local saving by a
+globally deduplicated charge derived from endpoint minimality and exact pruning
+budgets. GATE-004DH retains its `EXPLORATORY` label; no automatic promotion is
+made.
