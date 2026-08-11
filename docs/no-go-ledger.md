@@ -3405,3 +3405,25 @@ depth at most six, fan-in two/one and shared-control fanout; exact worst-case
 identities for all assignments to four raw inputs and both symmetric binary
 operations; no randomness, advice, oracle, promise, distribution, field, or
 algebraic computation beyond analytical `F_2` defect notation.
+
+## NG-168 — charge a common-origin provenance cycle as lost
+
+**Label: NO-GO**
+
+Scope: after LEMMA-228 extracts an undirected cycle from two swap routes with
+one physical origin, count that cycle as a destroyed coordinate or satisfying
+restriction payment merely because it exists.
+
+Failure: LEMMA-229 applies the exact rank-neutral plateau theorem. Every
+parent-to-satisfying-minor cycle-space map is an isomorphism, so the nonzero
+provenance coordinate remains nonzero at `00,01,11`; only its representative
+may contract. LEMMA-202's subdivision witness already shows that two physical
+vertices can disappear while a coordinate survives. The cycle may support a
+separate marked-edge exchange, but its existence is not a lost resource.
+
+Model: every finite non-uniform exact-plateau unrestricted AND/OR/NOT parent
+with a supplied common-origin cycle; parent size `K+2`, exactly two
+rank-neutral binary losses in each satisfying minor, unrestricted depth and
+fanout, fan-in two/one; exact cycle-space isomorphisms over `F_2`; no
+randomness, advice, oracle, promise, distribution, or alternative algebraic
+computation.

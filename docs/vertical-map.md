@@ -1374,6 +1374,13 @@ while changing the ledger, so table-only resource attribution is NG-167.
 GATE-004DS is active: retain named
 divergence/reconvergence provenance and prove an exact minimum-cost payment.
 
+LEMMA-228 proves that two coexisting physical swap routes have distinct marked
+origins or a common-origin undirected cycle. LEMMA-229 applies exact plateau
+rank neutrality: the common-origin coordinate survives all satisfying minors
+modulo contraction, so charging it as lost is NG-168. GATE-004DT is active:
+pay genuinely distinct origins or use marked support of the surviving cycle
+in an explicit size/potential exchange.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

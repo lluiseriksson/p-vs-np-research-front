@@ -40,3 +40,12 @@ real hosts, and no exact exchange or potential descent.
 | Field/algebraic model | Exact four-code defect supports, physical DAG paths, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, overlap assignment region, path pair, and residual branch |
 | Regime | Exact worst-case swap-provenance gate; not a SAT lower bound or terminal result |
+
+## Cycle-192 audit
+
+LEMMA-228 turns coexisting physical routes into distinct origins or a
+common-origin cycle. LEMMA-229 proves that the latter survives every
+satisfying minor by contraction; charging it as a destroyed coordinate is
+NG-168. GATE-004DT replaces this gate with distinct-origin certification or a
+marked-support exchange on the surviving cycle. GATE-004DS remains
+`EXPLORATORY`.
