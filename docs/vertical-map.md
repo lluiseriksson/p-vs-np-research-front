@@ -317,6 +317,9 @@ Adjacent collision-aware active branch:
                                                                                          + LEMMA-187 (difference carriers and binary boundaries are canonical)
                                                                                          - GATE-004CG-CARRIER-COVERAGE-ONLY (no-go: carriers can survive as base)
                                                                                          <- GATE-004CH (active smallest brick): cross-code absorption incompatibility
+                                                                                            + LEMMA-188 (three minors share at least `K-4` gates and every NOT)
+                                                                                            - GATE-004CH-OVERLAP-ONLY (no-go: physical overlap does not align functions)
+                                                                                            <- GATE-004CI (active smallest brick): common-backbone alignment descent
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1095,6 +1098,14 @@ pair-sensitive carrier gates alive as essential base computation (NG-132),
 matching LEMMA-178's mandatory survivor. GATE-004CH is the active repair: for
 every triple of minimum satisfying prunings, prove cross-code carrier
 absorption incompatible or convert the alignment into the private/non-bridge
+contradiction.
+
+LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
+share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
+common. An exact-table witness has a common gate computing different base
+functions across codes, so cardinal overlap alone is NG-133. GATE-004CI adds
+the finite potential `W` counting such misaligned common gates and asks for a
+same-size descent, three distinct exposed classes, or the private/non-bridge
 contradiction.
 
 ### Parallel constructive audit: GATE-004AF

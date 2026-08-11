@@ -2691,3 +2691,24 @@ oracle, promise, distribution, or algebraic computation. This is not a
 plateau counterexample. It closes single-code carrier-coverage counting and
 leaves GATE-004CH to compare absorption across all three minimum satisfying
 prunings.
+
+## NG-133 — promote physical overlap to semantic alignment
+
+**Label: NO-GO**
+
+Scope: use the `K-4` three-way survivor intersection from LEMMA-188 as though
+each common physical gate computed the same base function under `00,01,11`.
+
+Failure: let `r=x XOR y`,
+`p=(NOT u AND x) OR (u AND y)`, `g=p OR z`, `a=g OR r`,
+`i=t OR NOT u`, and `F=a AND i`, expanding XOR and the multiplexer in the
+AND/OR/NOT basis. With `A=x OR y OR z`, the output cofactors are exactly
+`F_00=F_01=F_11=A`, `F_10=0`. The same physical binary gate `g` survives all
+three satisfying restrictions, but `g_00=g_01=x OR z` and `g_11=y OR z`.
+
+Model: explicit constant-size non-uniform AND/OR/NOT exact-table circuit;
+unrestricted ambient depth/fanout, fan-in two/one; no minimum or plateau claim,
+randomness, advice, oracle, promise, distribution, or algebraic computation.
+This is not a plateau counterexample. It closes overlap-cardinality-only
+alignment and leaves GATE-004CI to prove a strict descent in the common-
+backbone misalignment potential or expose three distinct classes.

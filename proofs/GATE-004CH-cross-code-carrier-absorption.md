@@ -32,6 +32,12 @@ The quantifier over every pruning triple is essential. Canonical carrier
 regions can survive as base computation, so single-code carrier counting is
 invalid by GATE-004CG-CARRIER-COVERAGE-ONLY.
 
+LEMMA-188 supplies a large physically common backbone across every pruning
+triple, including every NOT. Physical overlap alone does not align the gate
+functions (GATE-004CH-OVERLAP-ONLY). GATE-004CI adds an explicit finite
+misalignment potential `W` and asks for strict descent or three distinct
+exposed classes.
+
 ## Model card
 
 | Field | Value |

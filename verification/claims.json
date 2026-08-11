@@ -5538,7 +5538,31 @@
       "computational_model": "Minimum unrestricted plateau DAG and three rank-neutral pruning maps to minimum base circuits", "uniformity": "Every individual non-uniform operational GATE004CG parent; uniform fresh implication pair",
       "circuit_size": "One code with three exposed regions versus exactly two binary eliminations, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Canonical Boolean-difference carriers and cycle minors over F_2",
       "asymptotic_quantifiers": "Every operational parent and every triple of minimum prunings for 00,01,11", "case_regime": "Exact worst-case cross-code absorption gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CH-cross-code-carrier-absorption.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; artifacts/cycle-154-carrier-absorption-audit.md"
+      "evidence": "proofs/GATE-004CH-cross-code-carrier-absorption.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; proofs/LEMMA-188-three-minor-physical-overlap.md; proofs/GATE-004CI-common-backbone-alignment-descent.md; artifacts/cycle-155-three-minor-overlap-audit.md"
+    },
+    {
+      "id": "LEMMA188", "label": "PROVED",
+      "statement": "For three satisfying minimum prunings of a two-gate plateau, pairwise physical survivor overlap is at least K-2, triple overlap at least K-4, and every NOT is common.",
+      "computational_model": "Minimum unrestricted AND/OR/NOT plateau parent with three fixed minimum pruning maps", "uniformity": "Every individual finite non-uniform plateau parent and pruning triple",
+      "circuit_size": "Parent K+2; pairwise survivor overlap at least K-2; triple overlap at least K-4", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set intersection plus rank-neutral contraction bookkeeping",
+      "asymptotic_quantifiers": "Every nonconstant finite base, hypothetical minimum plateau parent, and valid satisfying pruning triple", "case_regime": "Exact worst-case physical-overlap theorem; not semantic alignment, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-188-three-minor-physical-overlap.md; proofs/LEMMA-178-two-gate-plateau-forces-interleaving.md; artifacts/cycle-155-three-minor-overlap-audit.md"
+    },
+    {
+      "id": "GATE004CH-OVERLAP-ONLY", "label": "NO-GO",
+      "statement": "A common physical parent gate can survive all three satisfying restrictions while computing unequal base functions across them.",
+      "computational_model": "Explicit finite AND/OR/NOT circuit with the exact four-code implication table", "uniformity": "One uniform five-input witness; no minimum-parent claim",
+      "circuit_size": "Constant-size nonminimal witness; one common surviving gate has unequal satisfying cofactors", "circuit_depth": "Constant witness; ambient target unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor identities only; XOR basis-expanded",
+      "asymptotic_quantifiers": "Every assignment to x,y,z,u,t in the displayed circuit", "case_regime": "Structural no-go for overlap-only alignment; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CH-overlap-only.md; docs/no-go-ledger.md NG-133; artifacts/cycle-155-three-minor-overlap-audit.md"
+    },
+    {
+      "id": "GATE004CI", "label": "EXPLORATORY",
+      "statement": "An extremal common-backbone tuple admits strict semantic-misalignment descent, exposes three distinct elimination classes, or yields a private/non-bridge contradiction.",
+      "computational_model": "Extremal minimum unrestricted plateau parent plus three minimum satisfying pruning maps", "uniformity": "Every individual non-uniform operational GATE004CH tuple; uniform fresh implication pair",
+      "circuit_size": "Same-size strict W descent, three distinct eliminations versus budget two, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and preserved by rewrite", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor equality, finite extremal potentials, and cycle minors over F_2",
+      "asymptotic_quantifiers": "Every operational minimum parent/pruning triple under the exact two-gate plateau hypothesis", "case_regime": "Exact worst-case common-backbone alignment gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CI-common-backbone-alignment-descent.md; proofs/LEMMA-188-three-minor-physical-overlap.md; artifacts/cycle-155-three-minor-overlap-audit.md"
     }
   ]
 }
