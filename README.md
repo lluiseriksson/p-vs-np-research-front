@@ -1251,11 +1251,19 @@ because the earliest mixed NOT survives all three minors with unequal
 `01/11` cofactors. Normalizing to `W=0` is therefore `NO-GO`. GATE-004CJ now
 asks for descent above one and unique-NOT localization at `W=1`.
 
+The one-hundred-and-fifty-seventh cycle bounds the remaining carrier if that
+floor case is reached. LEMMA-190 proves `2<=|H_{01,11}|<=7`; every carrier
+gate other than the mandatory NOT lies in the six satisfying deletion slots.
+An abstract seven-label incidence witness makes the count tight, so
+cardinality-only reasoning is `NO-GO`. GATE-004CK now asks for the complete
+bounded directed topology/incidence classification with symbolic Boolean
+labels; no numerical enumeration is credited as that proof.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–156 reduce the two-excess remainder to descending common-backbone misalignment to its mandatory mixed-NOT floor before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–157 reduce the two-excess remainder, conditionally at the mandatory misalignment floor, to a bounded two-to-seven-gate symbolic carrier/incidence classification before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

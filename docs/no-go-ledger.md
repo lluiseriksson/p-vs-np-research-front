@@ -2732,3 +2732,24 @@ oracle, promise, distribution, or algebraic computation. This is not a
 plateau counterexample and does not refute a rewrite that itself leaves the
 branch. It closes zero-alignment-only normalization and leaves GATE-004CJ to
 descend above the mandatory floor and analyze the case `W=1` if reached.
+
+## NG-135 — derive a contradiction from carrier cardinality alone
+
+**Label: NO-GO**
+
+Scope: combine `|H|<=7` with the three two-element satisfying deletion sets
+and infer that some code must delete at least three carrier gates.
+
+Failure: the abstract set
+`H={n,a_00,b_00,a_01,b_01,a_11,b_11}` with
+`E_s={a_s,b_s}` for `s in {00,01,11}` meets every cardinality conclusion of
+LEMMA-190. The deletion pairs are disjoint and cover exactly `H minus {n}`.
+Thus the counting bound is tight and no pigeonhole contradiction follows.
+
+Model: one finite non-uniform abstract incidence witness, explicitly not a
+Boolean circuit or plateau realization; seven labels, no circuit depth or
+fan-in claim; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation. It closes carrier-cardinality-only reasoning. The
+remaining GATE-004CK obligation must use directed topology, the distinguished
+`h->n` edge, cancellation boundaries, full cofactor identities, or cycle-rank
+preservation.

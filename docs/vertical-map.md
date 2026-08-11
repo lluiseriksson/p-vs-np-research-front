@@ -323,6 +323,9 @@ Adjacent collision-aware active branch:
                                                                                                + LEMMA-189 (switching forces common misalignment `W>=1`)
                                                                                                - GATE-004CI-ZERO-ALIGNMENT-ONLY (no-go: `W=0` assumes away the branch)
                                                                                                <- GATE-004CJ (active smallest brick): descend to the unique misaligned NOT
+                                                                                                  + LEMMA-190 (`W=1` carrier has two through seven gates)
+                                                                                                  - GATE-004CJ-CARRIER-CARDINALITY-ONLY (no-go: the counts are tight)
+                                                                                                  <- GATE-004CK (active smallest brick): bounded carrier/incidence classification
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1109,6 +1112,14 @@ unequal `01/11` cofactors. Treating `W=0` as a normal form is NG-134.
 GATE-004CJ is the active refinement: descend while `W>1`; if `W=1`, use
 the unique mandatory-NOT misalignment to force three distinct exposed classes
 or the private/non-bridge contradiction.
+
+Conditioned on the unresolved `W=1` case, LEMMA-190 compresses the canonical
+`01/11` carrier to between two and seven gates: every carrier gate other than
+the mandatory NOT occupies one of six satisfying-deletion slots. The bound is
+tight as an abstract incidence system (NG-135), so cardinality alone cannot
+close GATE-004CJ. GATE-004CK is the active refinement: classify the bounded
+directed carrier/deletion incidences with symbolic four-code Boolean labels
+and the named cycle constraints.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

@@ -28,6 +28,12 @@ normal form `W=0`.
 Every rewrite must preserve fanout and basis cost, and the `W=1` argument must
 identify the three distinct eliminated classes for every valid pruning triple.
 
+LEMMA-190 makes the `W=1` branch finite at the carrier level:
+`2<=|H_{01,11}|<=7`, with every gate except `n` covered by the six available
+deletion slots. Cardinality alone is tight and gives no contradiction
+(GATE-004CJ-CARRIER-CARDINALITY-ONLY). GATE-004CK isolates the required
+directed-topology and symbolic-cofactor classification.
+
 ## Model card
 
 | Field | Value |

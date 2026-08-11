@@ -5586,7 +5586,31 @@
       "computational_model": "Extremal minimum unrestricted switching plateau parent with earliest mixed NOT and three pruning maps", "uniformity": "Every individual non-uniform operational GATE004CI tuple; uniform fresh implication pair",
       "circuit_size": "Same-size strict descent above W one, or three distinct eliminations/private/non-bridge contradiction at W one", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and preserved by rewrite", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor equality, finite lexicographic potential, and cycle minors over F_2",
       "asymptotic_quantifiers": "Every operational extremal tuple and every satisfying minimum pruning triple", "case_regime": "Exact worst-case unique-misalignment gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CJ-unique-misaligned-NOT-localization.md; proofs/LEMMA-189-switching-forces-common-misalignment.md; artifacts/cycle-156-misalignment-floor-audit.md"
+      "evidence": "proofs/GATE-004CJ-unique-misaligned-NOT-localization.md; proofs/LEMMA-189-switching-forces-common-misalignment.md; proofs/LEMMA-190-seven-gate-switching-carrier-cover.md; proofs/GATE-004CK-bounded-carrier-incidence-classification.md; artifacts/cycle-156-misalignment-floor-audit.md; artifacts/cycle-157-seven-gate-carrier-audit.md"
+    },
+    {
+      "id": "LEMMA190", "label": "PROVED",
+      "statement": "Conditional on W equal to one, the canonical 01/11 Boolean-difference carrier has between two and seven gates, and equality uses all six satisfying deletion slots distinctly.",
+      "computational_model": "Extremal minimum unrestricted switching plateau parent at W one with three satisfying pruning maps", "uniformity": "Every individual finite non-uniform operational tuple at the stated conditional floor case",
+      "circuit_size": "Carrier size two through seven; equality rigidly uses all six binary deletion slots", "circuit_depth": "Unrestricted ambient depth; carrier depth at most seven", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean-difference carrier plus finite set-cover counting",
+      "asymptotic_quantifiers": "Every active extremal parent with W one and every associated satisfying pruning triple", "case_regime": "Exact worst-case conditional bounded-carrier theorem; not a topology classification, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-190-seven-gate-switching-carrier-cover.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; proofs/LEMMA-188-three-minor-physical-overlap.md; artifacts/cycle-157-seven-gate-carrier-audit.md"
+    },
+    {
+      "id": "GATE004CJ-CARRIER-CARDINALITY-ONLY", "label": "NO-GO",
+      "statement": "Carrier and deletion-set cardinalities alone do not contradict the two-gate budget because a seven-label abstract incidence system attains every bound.",
+      "computational_model": "Abstract finite carrier/deletion incidence system audited against unrestricted plateau obligations", "uniformity": "One finite tight set-system witness; no circuit realization claim",
+      "circuit_size": "Seven carrier labels covered by three disjoint two-element deletion sets except one common label", "circuit_depth": "Not applicable to the abstract witness; target circuit depth unrestricted", "fan_in": "Not applicable to the set system; target AND/OR fan-in two and NOT fan-in one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set cover only",
+      "asymptotic_quantifiers": "Every argument using only the cardinality constraints of LEMMA190", "case_regime": "Structural no-go for carrier-cardinality-only reasoning; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CJ-carrier-cardinality-only.md; proofs/LEMMA-190-seven-gate-switching-carrier-cover.md; docs/no-go-ledger.md NG-135; artifacts/cycle-157-seven-gate-carrier-audit.md"
+    },
+    {
+      "id": "GATE004CK", "label": "EXPLORATORY",
+      "statement": "Every bounded W-one carrier topology and satisfying-deletion incidence either yields a same-size descent, a private certificate, a forbidden non-bridge deletion, or symbolic cofactor unrealizability.",
+      "computational_model": "Extremal minimum unrestricted switching plateau parent at conditional W one with canonical carrier and three pruning maps", "uniformity": "Every individual finite non-uniform operational tuple; uniform finite topology and incidence split",
+      "circuit_size": "Carrier size two through seven; ambient size unrestricted; rewrites preserve basis cost", "circuit_depth": "Unrestricted ambient depth; carrier depth at most seven", "fan_in": "AND/OR two; NOT one; fanout unrestricted and preserved by rewrites", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor identities and undirected cycle minors over F_2",
+      "asymptotic_quantifiers": "Every active extremal W-one tuple and every valid satisfying pruning triple", "case_regime": "Exact worst-case bounded symbolic classification gate; not a numerical certificate, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CK-bounded-carrier-incidence-classification.md; proofs/LEMMA-190-seven-gate-switching-carrier-cover.md; artifacts/cycle-157-seven-gate-carrier-audit.md"
     }
   ]
 }
