@@ -5418,7 +5418,31 @@
       "computational_model": "Lexicographically extremal minimum unrestricted AND/OR/NOT plateau circuits", "uniformity": "Every individual non-uniform operational one-sided parent; uniform fresh implication pair",
       "circuit_size": "Exact same-size rewrite with nonincreasing T_j and strictly decreasing V_j, or one-unit resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and must be audited", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors plus undirected N+r accounting over F_2",
       "asymptotic_quantifiers": "Every operational GATE004CB parent under the exact two-gate hypothesis", "case_regime": "Exact worst-case realization gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CC-size-preserving-mask-realization.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; artifacts/cycle-149-one-sided-mask-erasure.md"
+      "evidence": "proofs/GATE-004CC-size-preserving-mask-realization.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; proofs/LEMMA-183-private-cone-substitution-certificate.md; proofs/GATE-004CD-private-budget-or-shared-exit.md; artifacts/cycle-150-private-cone-budget-audit.md"
+    },
+    {
+      "id": "LEMMA183", "label": "PROVED",
+      "statement": "An explicit realization of the erased mask signal within a private cone's size and sensitivity budget contradicts minimum size or lexicographic extremality.",
+      "computational_model": "Unrestricted AND/OR/NOT DAG with an explicitly private replaceable sub-DAG", "uniformity": "Every individual finite non-uniform one-sided parent and every supplied substitution certificate",
+      "circuit_size": "Replacement uses at most the private-region gate count; strict saving or equal-size lexicographic descent", "circuit_depth": "Unrestricted; replacement must remain acyclic", "fan_in": "AND/OR two; NOT one; arbitrary ambient fanout, replaced region has one outgoing edge", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and DAG substitution only",
+      "asymptotic_quantifiers": "Every operational GATE004CC parent admitting the stated finite certificate", "case_regime": "Exact worst-case conditional exchange lemma; not existence of a certificate, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-183-private-cone-substitution-certificate.md; proofs/LEMMA-182-one-sided-mask-semantic-erasure.md; artifacts/cycle-150-private-cone-budget-audit.md"
+    },
+    {
+      "id": "GATE004CC-FANOUT-ONE-ONLY", "label": "NO-GO",
+      "statement": "Fanout one alone does not fund the canonical erasure: a one-gate masked signal can have an exact three-gate replacement.",
+      "computational_model": "Explicit finite AND/OR/NOT masking DAG and exact basis-size comparison", "uniformity": "One uniform three-input local identity; no minimum-parent realization claim",
+      "circuit_size": "Original p has size one; canonical p-dagger has exact size three", "circuit_depth": "Constant witness; ambient target unrestricted", "fan_in": "AND/OR two; NOT one; p has fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean basis complexity only",
+      "asymptotic_quantifiers": "Every Boolean assignment to x,u,t in the displayed witness", "case_regime": "Structural quantitative no-go for fanout-one-only realization; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CC-fanout-one-only.md; docs/no-go-ledger.md NG-128; artifacts/cycle-150-private-cone-budget-audit.md"
+    },
+    {
+      "id": "GATE004CD", "label": "EXPLORATORY",
+      "statement": "Every one-sided extremal plateau parent supplies a budgeted maximal private realization or a shared exit causing satisfying-minor resource loss.",
+      "computational_model": "Lexicographically extremal minimum unrestricted plateau DAG with maximal private predecessor region", "uniformity": "Every individual non-uniform operational one-sided parent; uniform fresh implication pair",
+      "circuit_size": "Private realization within the region size with strict lexicographic descent, or one-unit satisfying-minor resource loss", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted and partitioned into private versus shared exits", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004CC parent under the exact two-gate plateau hypothesis", "case_regime": "Exact worst-case topological and cost dichotomy gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CD-private-budget-or-shared-exit.md; proofs/LEMMA-183-private-cone-substitution-certificate.md; artifacts/cycle-150-private-cone-budget-audit.md"
     }
   ]
 }

@@ -25,6 +25,12 @@ LEMMA-178. Proving this theorem therefore excludes the one-sided branch of
 GATE-004CA. A proof must explicitly account for every consumer of `p` and for
 the basis cost of the replacement signal; LEMMA-182 alone is insufficient.
 
+LEMMA-183 supplies an exact sufficient certificate: replace a private cone by
+an explicit realization within its gate and lexicographic budget. Fanout one
+does not itself supply that budget (GATE-004CC-FANOUT-ONE-ONLY). GATE-004CD
+therefore separates the remaining cases into a budgeted maximal private cone
+or a shared exit that must be charged to satisfying-minor resource loss.
+
 ## Model card
 
 | Field | Value |

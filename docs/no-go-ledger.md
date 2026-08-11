@@ -2580,3 +2580,24 @@ depth and fanout; no randomness, advice, oracle, promise, distribution, or
 algebraic computation. This does not refute the one-sided exchange. It closes
 semantic-erasure-only reasoning and leaves GATE-004CC to provide an explicit
 same-size basis realization or force satisfying-code resource loss.
+
+## NG-128 — infer a replacement budget from fanout one
+
+**Label: NO-GO**
+
+Scope: assume the masked path signal `p` has only the consumer `d`, and infer
+that LEMMA-182's canonical signal can replace it without increasing the gate
+count.
+
+Failure: for raw `x,u,t`, take `p=u OR x`, `q=t AND NOT x`, and `d=p OR q`.
+At codes `01,11`, the stable `q=NOT x` masks `p_01=x` versus `p_11=1`.
+The canonical replacement is `x OR (u AND NOT t)`. It has exact size three:
+three essential inputs require at least two binary gates and nonmonotonicity in
+`t` requires a NOT. The private signal `p` itself uses one gate.
+
+Model: explicit constant-size non-uniform AND/OR/NOT gadget; exact local sizes
+one and three; unrestricted ambient depth, fan-in two/one, and fanout-one at
+`p`; no minimum-parent claim, randomness, advice, oracle, promise,
+distribution, or algebraic computation. This is not a plateau counterexample.
+It closes fanout-one-only budgeting and leaves GATE-004CD to obtain an actual
+private-cone realization or charge a shared exit to resource loss.

@@ -655,6 +655,10 @@
       "sha256": "9613a81cdf3e3cbdcac12c0aceeb4ecd88b696cdadb18eee4285aff8f1b42dc6"
     },
     {
+      "path": "artifacts/cycle-150-private-cone-budget-audit.md",
+      "sha256": "12f8449797e847d47d337240594ffd0ee67e7e5d35050d04b1d62f0b5f4f6533"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -680,7 +684,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8bb6ee5fad35360b7deaf94b57fada4ccbca3980088ec535b1ee4486e0da7516"
+      "sha256": "4392ea9a4dfa65cefd14b9efbf9799cb4f72ce8054095f3c652255b00910c19f"
     },
     {
       "path": "docs/problem-statement.md",
@@ -688,7 +692,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "f40b7a25d09a93e0de0645838b3334812c745998d62779a41e0a5f5bd8eb85c0"
+      "sha256": "205c4e47acf4731eb361e5297704b94db72d4c0c4adf8e53e395ec3308f744e7"
     },
     {
       "path": "docs/result-labels.md",
@@ -800,11 +804,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "2fb944e123522e9685bb9bb063f9935646f7de356286bac910e6823c1341f106"
+      "sha256": "0e57b8d3cc6954e59a16925bfc7f5513b0446f8e454cbb9f09c57e1ad6a3b103"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "80803e9902000a9506779dfca1fe43ea0a3c3f9ed6024d75988d92b4f839a2d0"
+      "sha256": "f04d2883ead44fb3d5805a3a986e76a2a7ff05dc5f9d2cf37e0991d2464bb50e"
     },
     {
       "path": "experiments/README.md",
@@ -1343,8 +1347,16 @@
       "sha256": "e06d6e00036e718f4eba188094af14f974fe2f8d914f34df978a2093a44c92c9"
     },
     {
+      "path": "proofs/GATE-004CC-fanout-one-only.md",
+      "sha256": "3c430eaeeba6ba7cd80e510c0f9316d8ac5a808c2b2bef07cae29498d2a5d10a"
+    },
+    {
       "path": "proofs/GATE-004CC-size-preserving-mask-realization.md",
-      "sha256": "b80a6806092be8188740e4ca1e8ac4e13c8bf69857e65e6ed2a9c10cbfd7b74f"
+      "sha256": "50ab3690133ab3e441cf1d5ead4aaee3f8aeb3d33323f4fa70950a34dbda9f4b"
+    },
+    {
+      "path": "proofs/GATE-004CD-private-budget-or-shared-exit.md",
+      "sha256": "088ce78fcb5918df609d6585a49b7bc41e64913398437a2bd8741a4162ae94e3"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2231,8 +2243,12 @@
       "sha256": "f3ffa5ba073949c8ef19cddb010b53f1fc25eeb370ac3cf9e7842dd5f7bc2ca5"
     },
     {
+      "path": "proofs/LEMMA-183-private-cone-substitution-certificate.md",
+      "sha256": "5b151c2f6a27dca83c45ea7aa41819308cc8e3bdf84f0f26b55bc375f760c2a7"
+    },
+    {
       "path": "README.md",
-      "sha256": "79d11040b65ea9d0adabc2951d6e75bae6f312403cfcc0e251e7e472897ad1cb"
+      "sha256": "7ea56aa9d2f8d599d0a97e8c902a5e069c5f8d0bb3d49b2908c50b72fe8185af"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2244,7 +2260,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "fb035da3fa5a86040c7fa72b3f0bab210474460aa8efe02418debd016229954f"
+      "sha256": "0de47703200cc75c1146ec882f216089d975b30c94e4334722c0afc974c54a01"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

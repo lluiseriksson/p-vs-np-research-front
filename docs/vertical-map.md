@@ -302,6 +302,9 @@ Adjacent collision-aware active branch:
                                                                           + LEMMA-182 (meet/join erases the masked edge difference semantically)
                                                                           - GATE-004CB-SEMANTIC-ERASURE-ONLY (no-go: no free basis realization or fanout repair)
                                                                           <- GATE-004CC (active smallest brick): realize the erasure at equal size
+                                                                             + LEMMA-183 (a budgeted private cone certifies an exact exchange)
+                                                                             - GATE-004CC-FANOUT-ONE-ONLY (no-go: privacy alone supplies no budget)
+                                                                             <- GATE-004CD (active smallest brick): private budget or shared-exit charge
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1040,6 +1043,14 @@ mask; all four cofactors at the cancellation gate are preserved. This does
 not construct the replacement signal at equal size or protect other fanout
 consumers (NG-127). GATE-004CC is the active basis-level realization gate,
 using a lexicographic `(T_j,V_j)` extremal parent.
+
+LEMMA-183 proves the precise DAG substitution criterion: an explicit
+realization of the erased signal inside a private cone's gate and sensitivity
+budget contradicts size or lexicographic minimality. A three-input mask shows
+that even fanout one can turn a one-gate `p` into an exact three-gate
+`p^dagger` (NG-128). GATE-004CD is the active topological/cost dichotomy:
+obtain the private budget or charge the first shared exit to a resource lost
+by a satisfying restriction.
 
 ### Parallel constructive audit: GATE-004AF
 
