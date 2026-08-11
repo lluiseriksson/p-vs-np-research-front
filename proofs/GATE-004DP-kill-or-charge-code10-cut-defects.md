@@ -45,3 +45,11 @@ noncontractible cycle change, or strict potential descent. Equality on only
 | Field/algebraic model | Exact four-code cofactors, `F_2` difference signatures, physical losses, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, candidate host rewrite, cut gate, nonzero defect, and residual branch |
 | Regime | Exact worst-case code-10 defect gate; not a SAT lower bound or terminal result |
+
+## Cycle-189 audit
+
+LEMMA-224 classifies the first cancellation algebraically into a one-sided
+mask or a two-changing-input interaction. NG-165 shows that the local event is
+not itself a physical payment. GATE-004DQ replaces this gate with the exact
+minimum-cost mask-region or two-path reconvergence obligation. GATE-004DP
+remains `EXPLORATORY`.

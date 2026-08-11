@@ -1353,6 +1353,13 @@ directional localization. The defect `d` is arbitrary (NG-164), so
 GATE-004DP is active: kill every code-`10` cut defect or charge its first
 physical cancellation without double counting.
 
+LEMMA-224 gives the exact local defect laws. NOT preserves the defect; an AND
+or OR with one unchanged input cancels exactly by support masking, while two
+changed inputs carry explicit interaction terms. A first cancellation gate is
+not automatically a payment (NG-165). GATE-004DQ is active: pay the exact
+one-sided masked region or extract a physical contradiction from two-path
+defect reconvergence.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

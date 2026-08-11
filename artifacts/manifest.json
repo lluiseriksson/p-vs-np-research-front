@@ -811,6 +811,10 @@
       "sha256": "9d230f2482fa4b4027b531cd4fb15bab71165e39541de0cc7e5cfb34632f9bc3"
     },
     {
+      "path": "artifacts/cycle-189-local-defect-cancellation-audit.md",
+      "sha256": "3abf215fac7e187e97ae0f8509b8f3663c33602001d9e9c1c13e1e211243a0bc"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -836,7 +840,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "ed41e92fa618fdadc2616cb36973b826bec510fbfc87ed9375165a1da081d0e5"
+      "sha256": "da090d537d17c660a9cf29d70a36384710142b651fc6a424c90f9d5e12033f91"
     },
     {
       "path": "docs/problem-statement.md",
@@ -956,11 +960,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "4eda55c7db2f74f08eb308edfa267c53946eccc615023f40217218ab9b1c567e"
+      "sha256": "d3b25352187384f981daa746ac8a14321850d054de62f8cf6f8215d10f9468ff"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "ec4d738adbd401acf4e8325686c9d3f86b77b85dc542fe9fbf736b4c81247036"
+      "sha256": "8795ac70375426b9e440a05ae5f160a1807470aeceba8082b91ccf8212969ad5"
     },
     {
       "path": "experiments/README.md",
@@ -1807,8 +1811,16 @@
       "sha256": "a5844c9cba022c59d5e577885b2b8cea2d2dca222b2acba9586d1f02b2f2627c"
     },
     {
+      "path": "proofs/GATE-004DP-cancellation-gate-only.md",
+      "sha256": "447bd143017a67bcbb92b0a64375e76a2e9710225124f557c2d77b6f2939cd0d"
+    },
+    {
       "path": "proofs/GATE-004DP-kill-or-charge-code10-cut-defects.md",
-      "sha256": "7ac02e8f8e335d1e86534e5477fe2bb34a29baa07dba4a069c5268f49961f113"
+      "sha256": "159e97600494239e1d847085fa0a1d17bdf69304447aa451791c2e962b16f0b8"
+    },
+    {
+      "path": "proofs/GATE-004DQ-pay-one-sided-masks-or-two-sided-reconvergence.md",
+      "sha256": "99a318378649687236e0596d8a1e857f29be474bfd26fd2ff6eded05e1e083db"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2855,8 +2867,12 @@
       "sha256": "ef75d79bcd8fa290b4dbea721ecdffc549b426e5c1eda0524faab4c87833fa39"
     },
     {
+      "path": "proofs/LEMMA-224-local-code10-defect-propagation.md",
+      "sha256": "9177807684feb0d7373ded321c2785991b431e44ac0a70efa985c1480310c7c4"
+    },
+    {
       "path": "README.md",
-      "sha256": "425b423e1eb33597702a44e334038a76a80eae8fdbf2e69fc87f5889c7e9e0dc"
+      "sha256": "4063bd5fbcfe8e6a28783f47e08f7cbca161ac67e7430c9bbaa4499f8e029a60"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2876,7 +2892,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "98f1468775e13cf70fddb9fde30abc1715853739b4b589315d09bd4ee05bf3c1"
+      "sha256": "4bff31cb495a6c531cbc07858e133fed8e8b2235094f5e0d086c45e1151232ac"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2917,6 +2933,10 @@
     {
       "path": "verification/joint_cofactor_saving_audit.py",
       "sha256": "913e1448819da77ef767fc1aa35612eaa6ff9c359d0a45dc1afa3f1e041eb86a"
+    },
+    {
+      "path": "verification/local_defect_cancellation_audit.py",
+      "sha256": "ce9a7d03e36144d9da4f8d439233f052ab7fc9eaef205e50ff3616c5fcdbab03"
     },
     {
       "path": "verification/multi_output_masked_audit.py",

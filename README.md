@@ -1452,11 +1452,17 @@ interface and factors every residual cut difference as
 GATE-004DP must kill each code-`10` defect or charge its first cancellation to
 a distinct physical resource or strict endpoint descent.
 
+The one-hundred-and-eighty-ninth cycle gives the exact local propagation laws
+for a code-`10` defect. NOT preserves it; a one-sided binary cancellation is
+precisely support masking, while two changed inputs retain interaction terms.
+A first cancellation is not automatically a physical payment (NG-165).
+GATE-004DQ separates minimum-cost mask regions from two-path reconvergence.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–188 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, and isolate the exact code-10 defect left by satisfying-row data; physically killing or charging those defects, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–189 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the exact code-10 defect, and classify its first local cancellation; physically paying masked regions or two-path reconvergence, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

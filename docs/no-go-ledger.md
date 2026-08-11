@@ -3332,3 +3332,26 @@ two/one and unrestricted ambient fanout; exact worst-case four-code cofactors
 for every base assignment; no randomness, advice, oracle, promise,
 distribution, field, or algebraic computation beyond analytical `F_2`
 difference notation.
+
+## NG-165 — count a first code-10 cancellation gate as a physical payment
+
+**Label: NO-GO**
+
+Scope: locate the first binary gate whose old/new code-`10` defect becomes
+zero and count that local event automatically as a free host, satisfying loss,
+non-bridge deletion, or strict potential descent.
+
+Failure: GATE-004DP-CANCELLATION-GATE-ONLY uses
+`a=x OR (u AND NOT t)` versus `a'=x` and the common OR-mask `NOT x`.
+LEMMA-224 proves that the mask cancels the exact defect
+`u AND NOT t AND NOT x`; both versions of the cancellation gate compute one,
+and the nonconstant parent remains `y`. The displayed circuit is deliberately
+redundant and nonminimal, so the local cancellation supplies no automatic
+endpoint resource. It does not refute a minimum-cost theorem constructing a
+joint replacement of the changed cone and mask.
+
+Model: one finite non-uniform single-output constant-free AND/OR/NOT
+diagnostic circuit; six old gates, depth at most five, fan-in two/one and
+fanout one in the fragment; exact worst-case identity for every assignment to
+four raw inputs; no randomness, advice, oracle, promise, distribution, field,
+or algebraic computation beyond analytical `F_2` defect notation.
