@@ -3582,3 +3582,28 @@ every `k>=2`; exactly `k-1` binary merges, diagnostic depth `k`, fanout one,
 exact Boolean functions and physical reachability, with no randomness,
 advice, oracle, promise, distribution, field computation, minimum endpoint,
 SAT lower bound, or terminal implication.
+
+## NG-176 — multiply a shared equal seal by its covered leaves
+
+**Label: NO-GO**
+
+Scope: count one independently equal cut gate once for each antichain branch
+whose path it seals, converting leaf multiplicity into multiple physical hosts
+or payments.
+
+Failure: LEMMA-243 shows that an irredundant tree cut partitions its leaves
+into blocks, one block per physical cut vertex. The block size is coverage,
+not capacity. LEMMA-244 cyclically retargets arbitrarily many independent
+terms: every proper comb prefix changes, the total aggregate agrees, and one
+structurally unchanged NOT gate is the only available equal nonoutput seal
+after the changed comb. That gate has one physical identity despite covering
+all branches. The circuit pair is nonminimal, so heavy-block replacement or
+endpoint-specific additional resources remain open.
+
+Model: every finite rooted-tree irredundant cut, plus uniform finite
+non-uniform constant-free named AND/OR/NOT circuit pairs for every `k>=3`;
+`k` term branches, `k-1` changed comb gates, one equal seal, depth linear in
+`k`, fan-in two/one and fanout one in the suffix; exact Boolean functions,
+named structural changes, and directed cuts, with no randomness, advice,
+oracle, promise, distribution, field computation, minimum endpoint, SAT lower
+bound, or terminal implication.

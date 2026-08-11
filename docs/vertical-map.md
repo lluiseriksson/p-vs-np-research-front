@@ -1432,6 +1432,13 @@ alone is NG-175. GATE-004EA is active on the width branch: independently seal
 selected antichain regions, inject their reconvergences into distinct physical
 resources, uncross overlap, or propagate an exact four-code contradiction.
 
+LEMMA-243 proves that an irredundant reconvergence-tree cut partitions its
+leaves into nonempty blocks, one per physical cut vertex. LEMMA-244 makes all
+`k` retargeted branches meet one available equal nonoutput seal, so shared-seal
+leaf multiplicity is NG-176. GATE-004EB is active: either the equal cut has
+enough distinct gates, or a heavy block must yield a joint replacement,
+uncrossing, physical charge, descent, or an unsealed four-code contradiction.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

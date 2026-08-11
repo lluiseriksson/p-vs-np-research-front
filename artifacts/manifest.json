@@ -855,6 +855,10 @@
       "sha256": "856ce122a3d868a18ee99490dd805ceaa2c1ced8d0bcb4048c3183ab03a38827"
     },
     {
+      "path": "artifacts/cycle-200-shared-seal-cut-audit.md",
+      "sha256": "562e8016b25a032877d5e305dcce1e24aca847ae6a43f21aa5ec5928834e5971"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -880,7 +884,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "f40cd19f13a18c85ba31b7800abc0525c1ed2f7684285dd595639246034e8e2d"
+      "sha256": "ba846b9c020b9e39850fbc6252f58b7ace79636123d60706108215663294ee6e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -1000,11 +1004,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "c67a1c9e3e63c35e284ee8a211f55a93a77b157ce3581e29489a7ae865859c88"
+      "sha256": "750429c0e6f8d57e8bd5d747ebe7e977626137c8bc3defd1aec8d83441407fcf"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2d51fde736bd8f79d94e3b9c7da481065723eb3abf89afa4e34550c43d8bacf8"
+      "sha256": "25f1d0a29f57f2574a58e1648870020f08e6e4b088b584de67fbca8c57f207ee"
     },
     {
       "path": "experiments/README.md",
@@ -1944,7 +1948,15 @@
     },
     {
       "path": "proofs/GATE-004EA-seal-or-charge-antichain-reconvergences.md",
-      "sha256": "b58d27e9345f914cce86288f040c488735808cd870421edffb3d8b043b64f9d1"
+      "sha256": "81d9aa22d5baebda38a962ffb65daccadb7e9207a0de214e05eed7755ec419cd"
+    },
+    {
+      "path": "proofs/GATE-004EA-shared-seal-leaf-multiplicity.md",
+      "sha256": "2767217e4151e2abb0d84c67c18a9b2076b38d8115cd134243da4dae98cf0bb9"
+    },
+    {
+      "path": "proofs/GATE-004EB-cut-capacity-or-heavy-seal.md",
+      "sha256": "4732ac0ffd9bf57e3ead429499de83d481082b0f75633d421329d313b501c3b3"
     },
     {
       "path": "proofs/GATE-004F-same-column-collisions.md",
@@ -3063,8 +3075,16 @@
       "sha256": "2241e082bbf023d999787687e189bfdf195179ed3ff4d812e1687e7aeefeb653"
     },
     {
+      "path": "proofs/LEMMA-243-irredundant-tree-cuts-partition-antichain-leaves.md",
+      "sha256": "4ddf47dc9294f144347e6871b8ca2367666771372893c2d1b6772a46348ff333"
+    },
+    {
+      "path": "proofs/LEMMA-244-one-equal-seal-can-cover-arbitrarily-many-retargeted-branches.md",
+      "sha256": "70409728f8a0a256a0f558673be5bd7144cba5cec48d59085c2584962d138289"
+    },
+    {
       "path": "README.md",
-      "sha256": "f6063ceea2d06e1e6e70ee14d0a54107e6fe321c9760eafc1d980b890bc3a0e5"
+      "sha256": "1a63548cef5df306303b1bdb2e8661c43d97347c123dbbbcf513cced6507a680"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -3092,7 +3112,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "97df0ee9554e251bb77953ff23dacc148a3354e606bdf5f65bb6dfa031971b27"
+      "sha256": "e95eab6adb3e15d2c8c1ec0c1b96c378936434dbee3cdf3087faa389495516a7"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3205,6 +3225,10 @@
     {
       "path": "verification/sealed_frontier_depth_audit.py",
       "sha256": "4d9da4e6be1d141527f36126853d15c4b889c1a23a1f52b13ab499baa4004098"
+    },
+    {
+      "path": "verification/shared_seal_cut_audit.py",
+      "sha256": "3decd810bc8db2a43d06a29563542952e29642a84d75c38a30f44c9b9cc1a46f"
     },
     {
       "path": "verification/single_code_transfer_audit.py",

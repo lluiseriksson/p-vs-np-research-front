@@ -44,3 +44,12 @@ a payment.
 | Field/algebraic model | Four-code Boolean path functions, physical cuts, potentials, contraction maps, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, qualifying antichain, selected tree, merge gate, and residual branch |
 | Regime | Exact worst-case antichain-reconvergence payment gate; not a generic graph payment, SAT lower bound, or terminal result |
+
+## Cycle-200 audit
+
+LEMMA-243 proves that an irredundant tree cut partitions the selected leaves,
+so physical cut capacity is its number of gates rather than covered paths.
+LEMMA-244 gives arbitrary leaf multiplicity behind one independently equal
+seal; repeated charging is NG-176. GATE-004EB now separates sufficiently
+large cut capacity from heavy shared-seal blocks. GATE-004EA remains
+`EXPLORATORY`.
