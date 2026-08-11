@@ -1104,11 +1104,18 @@ GATE-004BE, whose iteration proves GATE-004BD. GATE-004BM opens the exact
 two-excess stratum. A degree-two no-cut source can now meet the known bounds
 with equality, so equality topology is the next falsifiable brick.
 
+The one-hundred-and-thirty-fifth cycle audits that equality topology.
+LEMMA-166 excludes formula parents, proves every sole-cut case prunes, and
+reduces the no-cut remainder to three exact degree/rank regimes. The scalar
+source/rank equalities alone are `NO-GO`: an abstract survival table can obey
+all of them while retaining every resource. GATE-004BN is therefore the next
+brick and must use Boolean equality structure or a second no-bypass interface.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–134 close the standalone/extreme-deficit boundaries and all one-excess parent ranks, opening the two-excess equality stratum. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–135 close all one-excess ranks and reduce two-excess to three no-cut equality regimes. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

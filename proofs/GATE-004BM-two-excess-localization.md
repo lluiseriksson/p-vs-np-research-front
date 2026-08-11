@@ -17,15 +17,20 @@ A sufficient local operation would be: whenever a minimum circuit for `J_j`
 has `N+r=j+2`, some neutral clause restriction leaves a circuit for `J_{j-1}`
 with `N+r<=j+1`.
 
-## First audited obstruction
+## First attack
 
 The source-rank argument that proves GATE-004BL has one unit of slack here.
 For a degree-two core source with no cut clause and residual rank `r-1`, the
 LEMMA-119/139 accounting can meet `N+r=j+2` with equality. Thus the strict
 contradiction used at resource excess one does not repeat automatically.
-The next brick must classify this equality case or produce a second
-independent interface/rank reduction. This observation is not a no-go theorem
-and does not promote GATE-004BM.
+LEMMA-166 proves the exact surviving cases. Rank zero is impossible and every
+sole-cut case prunes. The no-cut remainder is: rank one with one unit of
+slack, degree two with exact regional equality, or `r=2,d=3` with exact
+regional equality.
+
+GATE-004BM-SOURCE-RANK-COUNTS-ONLY is `NO-GO`: those scalar data admit an
+abstract survival table retaining every resource. GATE-004BN is the next
+smallest gate and requires Boolean equality structure or a second interface.
 
 ## Model card
 

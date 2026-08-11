@@ -2321,3 +2321,23 @@ advice, oracle, promise, distribution, or algebraic model. NOT-split-only
 survival is closed. Tree wiring and LEMMA-163 later prove GATE-004BG/BF, and
 LEMMA-164/165 later prove GATE-004BE/BD; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE
 remain open.
+
+## NG-115 — derive two-excess pruning from source/rank equality data
+
+**Label: NO-GO**
+
+Scope: infer GATE-004BM from only the source degree, parent and residual
+ranks, regional clause counts, regional NOT bounds, and equality/slack status
+isolated by LEMMA-166.
+
+Failure: the abstract assignment `r=2,d=2,a=0,b=j,p=0,N=j` meets the exact
+residual-rank and NOT equalities and has total resource `j+2`. A formal
+survival table may nevertheless retain all `j+2` resource labels under every
+neutral one-clause restriction, because none of the scalar fields constrains
+resource identity or survival.
+
+Model: explicit integer/source data and finite survival sets; no Boolean
+circuit realizability, depth, fan-in, uniformity, randomness, advice, oracle,
+promise, distribution, or algebraic computation. This does not refute
+GATE-004BM. It closes source-rank-count-only pruning and leaves GATE-004BN as
+the Boolean/topological equality gate.

@@ -5026,7 +5026,31 @@
       "computational_model": "Minimum pruned unrestricted canonical implication circuits under neutral clause restrictions", "uniformity": "Uniform symmetric clause family; fully non-uniform endpoint and prefix minima",
       "circuit_size": "Premise Delta_m=sigma-2, equivalently mu_m=m+2; target prefix N+r at most k_2+2", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean restriction semantics",
       "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance with sigma at least three and Delta_m=sigma-2", "case_regime": "Falsifiable worst-case two-excess subgate of GATE004BA; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BM-two-excess-localization.md; proofs/LEMMA-164-cycle-source-rank-reduction.md; artifacts/cycle-134-higher-rank-one-excess-closure.md"
+      "evidence": "proofs/GATE-004BM-two-excess-localization.md; proofs/LEMMA-166-two-excess-source-equality.md; proofs/GATE-004BN-two-excess-no-cut-equality.md; artifacts/cycle-135-two-excess-equality-audit.md"
+    },
+    {
+      "id": "LEMMA166", "label": "PROVED",
+      "statement": "At resource excess two, rank zero is impossible, every sole-cut source prunes, and exactly three no-cut degree/rank regimes survive.",
+      "computational_model": "Minimum pruned unrestricted implication circuits, cyclic core sources, and one-bit residual partitions", "uniformity": "Every individual non-uniform two-excess parent; uniform symmetric tail family",
+      "circuit_size": "Exact parent N+r=j+2; sole-cut target at most j+1; exact surviving no-cut cases", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2, Boolean cofactors, and integer resource inequalities",
+      "asymptotic_quantifiers": "Every j at least two, sigma at least three, and compatible minimum two-excess parent", "case_regime": "Exact worst-case necessary classification for GATE004BM; not pruning of every no-cut case, a SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-166-two-excess-source-equality.md; proofs/LEMMA-159-formula-excess-bounds-base-surplus.md; proofs/LEMMA-164-cycle-source-rank-reduction.md; proofs/LEMMA-165-general-one-bit-tail-dichotomy.md; artifacts/cycle-135-two-excess-equality-audit.md"
+    },
+    {
+      "id": "GATE004BM-SOURCE-RANK-COUNTS-ONLY", "label": "NO-GO",
+      "statement": "Source degree, ranks, and regional equality counts do not determine neutral-clause resource survival.",
+      "computational_model": "Abstract source-degree, rank, NOT-count, and clause-restriction survival data", "uniformity": "Explicit finite abstraction; no circuit-realizability or uniformity claim",
+      "circuit_size": "Formal total j+2 resource labels, all retained under each declared one-clause restriction", "circuit_depth": "Not represented", "fan_in": "Not represented; target circuit basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Integer ranks and finite resource sets only",
+      "asymptotic_quantifiers": "Every integer j at least two in the abstract equality-data class", "case_regime": "Structural no-go for source-rank-count-only pruning; no promise or distributional claim and no refutation of GATE004BM",
+      "evidence": "proofs/GATE-004BM-source-rank-counts-only.md; docs/no-go-ledger.md NG-115; artifacts/cycle-135-two-excess-equality-audit.md"
+    },
+    {
+      "id": "GATE004BN", "label": "EXPLORATORY",
+      "statement": "Some neutral clause restriction prunes one resource in every surviving two-excess no-cut source regime.",
+      "computational_model": "Minimum pruned unrestricted implication circuits in the no-cut LEMMA166 equality and slack cases", "uniformity": "Every individual non-uniform surviving two-excess parent; uniform symmetric tail family",
+      "circuit_size": "Parent N+r=j+2; target restricted N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two, sigma at least three, and no-cut parent in one of the three LEMMA166 regimes", "case_regime": "Falsifiable worst-case remaining local subgate for GATE004BM; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BN-two-excess-no-cut-equality.md; proofs/LEMMA-166-two-excess-source-equality.md; artifacts/cycle-135-two-excess-equality-audit.md"
     }
   ]
 }

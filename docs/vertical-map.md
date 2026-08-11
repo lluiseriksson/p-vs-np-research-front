@@ -253,7 +253,9 @@ Adjacent collision-aware active branch:
                                    + LEMMA-164 (a core formula source lowers rank by its degree minus one)
                                    + LEMMA-165 (general one-bit zero/one-cut and sole-cut base exclusion)
                              <- GATE-004BM (active smallest brick): localize resource excess two `mu_m=m+2`
-                                <- classify degree-two no-cut equality or find a second interface reduction
+                                + LEMMA-166 (rank zero and sole-cut close; three no-cut cases survive)
+                                - GATE-004BM-SOURCE-RANK-COUNTS-ONLY (no-go: equality data omit survival)
+                                <- GATE-004BN (active smallest brick): prune the surviving no-cut cases
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -885,9 +887,13 @@ GATE-004BE, and iterates to GATE-004BD.
 
 The current attack is `proofs/GATE-004BM-two-excess-localization.md`. It
 isolates `Delta_m=sigma-2`, equivalently `mu_m=m+2`. The previous source-rank
-calculation now has one unit of slack: a degree-two no-cut source can meet all
-known inequalities with equality. The smallest brick is to classify that
-equality topology or prove a second independent interface/rank reduction.
+calculation now has one unit of slack. LEMMA-166 proves that rank zero is
+impossible and every sole-cut case prunes. Exactly three no-cut regimes remain:
+rank one with one slack unit, degree two with regional equality, and the
+exceptional `r=2,d=3` equality case. Source/rank/count equality alone is
+`NO-GO` because it contains no restriction-survival relation. The smallest
+brick is now GATE-004BN: use Boolean equality structure to expose a private
+resource, or find a second no-bypass interface.
 
 ### Parallel constructive audit: GATE-004AF
 
