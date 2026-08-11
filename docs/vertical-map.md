@@ -353,7 +353,10 @@ Adjacent collision-aware active branch:
                                                                                                                           <- GATE-004CT (active `Q=0` brick): global `u`-cancellation boundaries
                                                                                                                              + LEMMA-200 (exact rowwise mask/counterflow identities)
                                                                                                                              - GATE-004CT-COUNTERFLOW-LOCAL-ONLY (no-go: local counterflow cancels exactly)
-                                                                                                                             <- GATE-004CU (active counterflow brick): minimum reconvergence cost
+                                                                                                                             <- GATE-004CU (counterflow brick): minimum reconvergence cost
+                                                                                                                                + LEMMA-201 (counterflow cycle survives all satisfying minors)
+                                                                                                                                - GATE-004CU-CYCLE-EXISTENCE-ONLY (no-go: existence does not force loss)
+                                                                                                                                <- GATE-004CV (active coordinate brick): independence or factoring
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1199,6 +1202,12 @@ masks and counterflows. A local two-route gadget realizes exact global
 cancellation (NG-144), so reconvergence existence is not a cost or rank loss.
 GATE-004CU is the active minimum-counterflow branch; the all-aligned branch
 and GATE-004CS descent remain open.
+
+LEMMA-201 now names the counterflow reconvergence coordinate and proves that
+all three satisfying minors preserve it modulo contraction. This makes cycle
+existence alone NG-145 rather than a rank contradiction. GATE-004CV is the
+active counterflow-coordinate brick: either separate that coordinate from
+common base topology or factor its reuse into a strict extremal descent.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

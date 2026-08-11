@@ -2913,3 +2913,22 @@ not a full table or plateau. GATE-004CU must use minimum cost or minor loss.
 Model: constant-size unrestricted non-uniform AND/OR/NOT two-route gadget;
 constant depth, fan-in two/one, fanout unrestricted; no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation.
+
+## NG-145 — infer cycle loss from the existence of a counterflow cycle
+
+**Label: NO-GO**
+
+Scope: use the named reconvergence cycle at a counterflow boundary as though
+some satisfying restriction must kill that coordinate.
+
+Failure: LEMMA-201 constructs the nonzero coordinate `gamma_b`, but
+LEMMA-174 and LEMMA-185 imply that every satisfying restriction preserves the
+entire parent cycle space modulo contraction. Hence the image of `gamma_b` is
+nonzero in `00`, `01`, and `11`. Its edge support may change. A contradiction
+requires a separate theorem forcing independence, a third deletion, or a
+non-bridge deletion; existence alone supplies none of these.
+
+Model: minimum unrestricted non-uniform AND/OR/NOT plateau endpoint; parent
+size `K+2`, unrestricted depth, fan-in two/one, fanout unrestricted; cycle
+spaces over `F_2`; every satisfying code; no randomness, advice, oracle,
+promise, or distributional qualification.

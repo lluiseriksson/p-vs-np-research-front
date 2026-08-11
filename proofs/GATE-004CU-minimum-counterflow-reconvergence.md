@@ -22,6 +22,15 @@ If no counterflow exists, all boundaries satisfy aligned mask identities on
 both rows and form a separate two-row factoring branch. The local gadget in
 GATE-004CT-COUNTERFLOW-LOCAL-ONLY forbids using reconvergence existence alone.
 
+## Cycle-168 audit
+
+LEMMA-201 proves the reconvergence part precisely: every counterflow boundary
+creates a named nonzero cycle coordinate, and equal-rank satisfying minors
+preserve it modulo contraction. This does not prove item 4. On the contrary,
+GATE-004CU-CYCLE-EXISTENCE-ONLY records that cycle existence alone cannot
+force cycle loss. GATE-004CV is the active quantitative coordinate/factoring
+brick.
+
 ## Model card
 
 | Field | Value |
