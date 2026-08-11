@@ -3240,3 +3240,16 @@ shows only that local semantics do not supply the missing bound.
 Model: exact-plateau non-uniform unrestricted AND/OR/NOT physical loss sets;
 three sets of size two, union at most six, unrestricted depth/fanout, no
 randomness, advice, oracle, promise, distribution, field, or algebraic model.
+
+## NG-160 — treat all six satisfying-loss positions as uncharged
+
+**Label: NO-GO**
+
+LEMMA-193 fixes `{g,h}` as the exact loss set in codes `00,01` for AND→OR or
+code `11` for OR→AND. LEMMA-218 therefore leaves at most two or four distinct
+uncharged gates, respectively. Six-position accounting double-charges the
+carrier and cannot fund `D_b^DAG`. This does not exclude external resources.
+
+Model: size-three minimum non-uniform unrestricted AND/OR/NOT plateau; exact
+two-gate physical loss sets, unrestricted depth/fanout, no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation.

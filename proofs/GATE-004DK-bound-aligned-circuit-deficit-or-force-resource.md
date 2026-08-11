@@ -40,3 +40,9 @@ incomparable branches remain explicit.
 | Field/algebraic model | Minimum aligned Boolean DAGs, physical loss sets, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and residual comparable, raw, unmasked, no-DAG, or incomparable boundary |
 | Regime | Exact worst-case aligned-circuit-deficit gate; not a SAT lower bound or terminal result |
+
+## Cycle-184 audit
+
+LEMMA-218 deducts `{g,h}` and leaves at most two or four pruning resources,
+not six. GATE-004DL replaces this gate with the orientation-specific bound.
+GATE-004DK remains `EXPLORATORY`; no resource is counted twice.

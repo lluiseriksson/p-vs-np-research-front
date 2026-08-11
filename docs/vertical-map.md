@@ -1325,6 +1325,10 @@ shared aligned DAG certificate and defines `D_b^DAG<=D_b`. GATE-004DK is the
 active residual brick: bound this tighter circuit deficit by the uncharged
 six-gate loss union or force distinct external resources.
 
+LEMMA-218 deducts `{g,h}` from the loss union, leaving at most two resources
+in AND→OR and four in OR→AND. Six uncharged losses are NG-160. GATE-004DL is
+active: fit `D_b^DAG` inside the oriented residual or force external payment.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base
