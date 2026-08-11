@@ -4787,6 +4787,22 @@
       "circuit_size": "Abstract surplus one and saving profile zero until a final unit jump", "circuit_depth": "Not represented", "fan_in": "Not represented; underlying target circuit model remains fan-in-two AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set incidence only",
       "asymptotic_quantifiers": "Every m at least three", "case_regime": "Structural no-go for Hall-cardinality-only localization; GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BA-Hall-incidence-only.md; docs/no-go-ledger.md NG-107; artifacts/cycle-123-resource-localization.md"
+    },
+    {
+      "id": "LEMMA154", "label": "PROVED",
+      "statement": "Every canonical implication deficit unit forces a Hall-matched tail resource that also lies in the base dependency cone.",
+      "computational_model": "Minimum pruned unrestricted circuits, dependency cones, Hall matchings, and NOT/non-tree-edge resources", "uniformity": "Every individual non-uniform minimum circuit and every spanning tree; uniform implication clauses",
+      "circuit_size": "Resource universe sigma+m-d; overlap of tail matching and base cone at least d", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Fundamental cycle resources over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every nonconstant finite base, every minimum pruned J_m circuit, and every spanning tree", "case_regime": "Exact worst-case overlap theorem; not saving survival, quotient stability, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-154-base-tail-resource-overlap.md; artifacts/cycle-124-base-tail-resource-overlap.md"
+    },
+    {
+      "id": "GATE004BA-CONE-MEMBERSHIP-ONLY", "label": "NO-GO",
+      "statement": "Base-tail dependency-path membership does not imply survival after unrelated clauses are neutralized.",
+      "computational_model": "Boolean gate functions and syntactic base-tail dependency cones", "uniformity": "Explicit non-uniform semantic witness; no minimum-circuit claim",
+      "circuit_size": "Linear-size conjunction witness; no saving or minimum-size assertion", "circuit_depth": "Unrestricted with a binary conjunction tree and one NOT", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean dependence and restriction only",
+      "asymptotic_quantifiers": "Every m at least two", "case_regime": "Structural no-go for cone-membership-only localization; GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004BA-cone-membership-only.md; proofs/LEMMA-154-base-tail-resource-overlap.md; docs/no-go-ledger.md NG-108; artifacts/cycle-124-base-tail-resource-overlap.md"
     }
   ]
 }

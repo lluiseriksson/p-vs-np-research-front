@@ -2173,3 +2173,25 @@ realizability claim; full Hall expansion but no gate orientation, depth,
 fanout, Boolean semantics, randomness, advice, oracle, promise, distribution,
 or algebraic circuit structure. Hall-cardinality-only localization is closed;
 GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+
+## NG-108 — promote base-tail cone overlap to restriction survival
+
+**Label: NO-GO**
+
+Scope: infer from LEMMA-154's shared dependency-path membership that each
+matched resource survives after all unmatched clauses are set to their
+neutral value one.
+
+Failure: the NOT gate computing
+`NOT(H AND q_1 AND NOT q_2 AND ... AND NOT q_m)` lies on paths from the base
+and every clause signal and depends essentially on all of them. Setting any
+`q_i=1` for `i>=2` makes the inner conjunction zero and the NOT output
+constant. Thus path membership does not bound the clause set needed for
+semantic survival.
+
+Model: explicit unrestricted Boolean gate function in a mixed base-tail
+dependency cone; non-uniform linear-size witness; no minimum-circuit or saving
+claim; unrestricted depth/fanout; AND/OR fan-in two and NOT fan-in one; no
+randomness, advice, oracle, promise, distribution, or algebraic model.
+Cone-membership-only survival is closed; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE
+remain open.

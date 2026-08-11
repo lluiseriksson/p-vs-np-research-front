@@ -1014,11 +1014,19 @@ Hall cardinalities still do not suffice—a cycle incidence system hides one
 saving until the complete set—so circuit realizability and gate semantics are
 now indispensable.
 
+The one-hundred-and-twenty-fourth cycle forces the first genuinely joint
+resource structure. LEMMA-154 shows that every one of the `d` deficit units
+produces a Hall-matched tail resource that also lies in the base dependency
+cone. This still does not localize the saving: path membership alone is
+`NO-GO`, because a mixed gate can collapse when any unrelated clause is
+neutralized. The active task is now a minimum-circuit survival or exchange
+theorem for those shared resources.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–123 close the standalone tradeoff, give a canonical `o(m)` size gap, close the zero-deficit boundary, and reduce positive-deficit stability to localization of exact negation-cycle resource savings. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–124 close the standalone tradeoff and zero-deficit boundary, identify exact negation-cycle savings, and force one base-tail shared resource per deficit unit. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

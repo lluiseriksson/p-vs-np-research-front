@@ -225,6 +225,9 @@ Adjacent collision-aware active branch:
                           + LEMMA-153 (`Delta_j=sigma+j-min(N+r)` exact resource identity)
                           <- GATE-004BA (active equivalent brick): localize every saving to at most `K+d` clauses
                              - GATE-004BA-HALL-INCIDENCE-ONLY (no-go: cycle incidence hides one saving globally)
+                             + LEMMA-154 (each deficit unit forces a base-tail shared resource)
+                             - GATE-004BA-CONE-MEMBERSHIP-ONLY (no-go: path membership does not imply survival)
+                             <- prove minimum-circuit survival/exchange for the shared resources (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -833,7 +836,10 @@ deficit unit with a plateau of the minimum `N+r` resource count. GATE-004BA
 asks that the final saving `d` already occur on at most `K+d` clauses; this is
 exactly equivalent to GATE-004AZ. Abstract cycle incidence defeats full Hall
 cardinality localization, so the next attack must exploit realizable circuit
-topology, orientation, or Boolean gate semantics.
+topology, orientation, or Boolean gate semantics. LEMMA-154 now forces `d`
+base-tail shared resources in every minimum circuit, but cone membership alone
+does not keep them alive under restriction; survival or exchange is the next
+obligation.
 
 ### Parallel constructive audit: GATE-004AF
 
