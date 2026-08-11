@@ -4619,6 +4619,30 @@
       "circuit_size": "Each row needs at least 6m, but the class intersection may contain 6m-1 shared tail functions", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set union/intersection and Boolean semantic restriction only",
       "asymptotic_quantifiers": "Every m at least one and every canonical base with two nonconstant row residuals", "case_regime": "Quantitative no-go for separate-row addition; GATE004AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004AV-separate-row-sizes-only.md; docs/no-go-ledger.md NG-100; artifacts/cycle-116-two-row-quotient-baseline.md"
+    },
+    {
+      "id": "LEMMA146", "label": "PROVED",
+      "statement": "The width-five base extension has exact size 3m plus its implication extension and transfers at least 3m-b quotient classes.",
+      "computational_model": "Minimum unrestricted base-tail circuits, fresh implication inputs, exact OR substitutions, restrictions, and two-row semantic quotients", "uniformity": "Fully non-uniform base and minimum implication circuit; uniform disjoint substitutions",
+      "circuit_size": "Exact C(F)=C(J)+3m and quotient transfer at least 3m-b", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean functional substitution and semantic row cofactors only",
+      "asymptotic_quantifiers": "Every nonconstant finite H, every m at least one, every qualifying disjoint input family, and every base-only row pair", "case_regime": "Exact size reduction and bounded quotient-transfer loss; not implication stability, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-146-width-five-derived-implication-reduction.md; artifacts/cycle-117-derived-implication-reduction.md"
+    },
+    {
+      "id": "GATE004AW", "label": "EXPLORATORY",
+      "statement": "Some minimum implication circuit has quotient at least 4m-(Delta+K) and at most Delta+K raw-input row collisions.",
+      "computational_model": "Minimum unrestricted canonical implication circuits, two-row semantic quotients, and raw-input cofactor collisions", "uniformity": "Uniform canonical rows and implication tail; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Parent K+3m-Delta; targets quotient 4m-(Delta+K) and collision count at most Delta+K", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and exact functional substitution",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum implication circuit for each instance", "case_regime": "Exact implication-collision subgate for GATE004AU; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AW-implication-surplus-and-derived-output-collisions.md; proofs/LEMMA-146-width-five-derived-implication-reduction.md; artifacts/cycle-117-derived-implication-reduction.md"
+    },
+    {
+      "id": "GATE004AW-PREFIXES-ONLY", "label": "NO-GO",
+      "statement": "Exact derived OR substitution guarantees only 2m new prefix classes and leaves two independent one-m quotient gaps.",
+      "computational_model": "Exact OR substitution into minimum implication circuits and two-row semantic quotient transfer", "uniformity": "Uniform derived-input gadgets; fully non-uniform inherited minimum circuit",
+      "circuit_size": "Exact plus 3m parent size, but only plus 2m unconditional quotient transfer and 3m implication baseline", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean functional substitution and row-cofactor equality only",
+      "asymptotic_quantifiers": "Every m at least one, every nonconstant base, and every minimum implication circuit under the prefix-only method", "case_regime": "Quantitative no-go for prefix-only transfer; GATE004AW/AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AW-prefixes-only.md; docs/no-go-ledger.md NG-101; artifacts/cycle-117-derived-implication-reduction.md"
     }
   ]
 }

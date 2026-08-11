@@ -954,11 +954,20 @@ the two row lower bounds is `NO-GO`, because a compute-tail-first architecture
 can share all `6m-1` tail classes across the rows. The next brick is an
 explicit charge of shared row classes to parent slack or base complexity.
 
+The one-hundred-and-seventeenth cycle reduces the width-five tail exactly to
+the earlier implication bottleneck. LEMMA-146 proves
+`C(F)=C(J)+3m` under four-input-OR substitution and transfers at least
+`3m-b` quotient classes. GATE-004AW splits the remaining task into two
+falsifiable inequalities: implication quotient `4m-(Delta+K)` and at most
+`Delta+K` inherited raw-`t_i` cofactors. The two proper OR prefixes contribute
+`2m` classes unconditionally, but prefix-only transfer is `NO-GO` because
+both residual one-`m` gaps remain.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–116 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce semantic stability to a quantified cross-row surplus. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–117 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce width-five stability to two quantified implication/collision inequalities. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

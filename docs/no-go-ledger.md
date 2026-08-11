@@ -2031,3 +2031,23 @@ restrictions; unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in
 one; finite semantic class unions; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Separate-row addition is closed;
 GATE-004AV/AU/AT/AG/AE remain open.
+
+## NG-101 — exact derived OR prefixes close width-five quotient stability
+
+**Label: NO-GO**
+
+Scope: substitute a three-gate four-input OR chain for every implication input
+`t_i`, use the exact size identity of LEMMA-146, and count the derived gates
+as automatically new diagonal quotient classes.
+
+Failure: only the two proper OR prefixes per block are guaranteed not to be
+inherited row cofactors. The full OR `P_i` can collide with an inherited gate
+whose selected-row cofactor is raw `t_i`, losing up to `m` classes. Separately,
+the implication quotient baseline is only `3m`, another `m` below its target.
+The unconditional combination gives `5m`, not `7m-o(m)`.
+
+Model: exact functional substitution into minimum unrestricted non-uniform
+implication circuits and two-row semantic quotients; unrestricted depth and
+fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
+promise, distribution, or algebraic circuit model. Prefix-only transfer is
+closed; GATE-004AW/AV/AU/AT/AG/AE remain open.

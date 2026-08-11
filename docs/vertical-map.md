@@ -204,7 +204,10 @@ Adjacent collision-aware active branch:
            + LEMMA-145 (each row forces quotient size at least `6m`)
            <- GATE-004AV (active collision brick): force `m-2(Delta+K)` cross-row surplus
               - GATE-004AV-SEPARATE-ROW-SIZES-ONLY (no-go: intersection may contain `6m-1` tail classes)
-              <- charge shared row classes to `Delta+K` slack (next brick)
+              + LEMMA-146 (width five = implication tail + exact `3m` OR substitution)
+              <- GATE-004AW (active refined brick): implication surplus plus raw-input collision bound
+                 - GATE-004AW-PREFIXES-ONLY (no-go: two independent one-`m` deficits remain)
+                 <- bound implication row surplus and raw-`t_i` cofactors (next brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
