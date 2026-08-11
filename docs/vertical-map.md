@@ -1401,6 +1401,13 @@ GATE-004DW is active: define complete port records including parent-transfer
 functions and minor behavior, then either merge equivalent ports exactly or
 pay every inequivalent record by a distinct minimum-cost resource.
 
+LEMMA-234 records LEMMA-005's unrestricted consequence: minimum circuits are
+injective on reachable global gate functions. LEMMA-235 gives `m` pairwise
+distinct port functions on one fixed core, so global equality quotienting is
+NG-172 rather than a class bound. GATE-004DX is active: compare the exact
+physical port region with a minimum shared DAG for the complete four-code
+parent-transfer vector.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

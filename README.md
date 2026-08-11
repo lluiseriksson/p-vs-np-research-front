@@ -1497,11 +1497,18 @@ Thus bounded core size is not a finite classification. GATE-004DW requires a
 complete semantic/physical port quotient or a distinct minimum-cost payment
 for every inequivalent port record.
 
+The one-hundred-and-ninety-sixth cycle records the unrestricted corollary of
+the semantic quotient: minimum circuits contain no duplicate global gate
+functions. Nevertheless the fixed-core family has arbitrarily many pairwise
+distinct port functions, so equality quotienting does not bound classes
+(NG-172). GATE-004DX asks for the exact minimum shared-DAG cost of the complete
+port-transfer vector.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–195 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, prove provenance-cycle survival, reduce full loss coverage to marked cores of size at most four/six, and show those cores retain unbounded live port interfaces; semantic/physical port quotienting, contraction-aware classification, matching real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–196 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, and show that exact global-function quotienting still leaves unbounded classes; minimum joint port-vector cost, contraction-aware classification, matching real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

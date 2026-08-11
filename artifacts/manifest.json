@@ -839,6 +839,10 @@
       "sha256": "b87c884efc9aa5fd6deac4ec3aa2468f873357279a79a9a3946b6ad62bea282b"
     },
     {
+      "path": "artifacts/cycle-196-global-port-quotient-audit.md",
+      "sha256": "d0f837e77bfba02e685d4838a96e17cbf3ae81e8e3092cc1f46e9ce736a89f42"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -864,7 +868,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "5fb2a6e249565b557ca45312767a8ab00c1d90f90b6319c45a6db5a4c1b8bb87"
+      "sha256": "45ed55ce65bfcb4d37d7fba4cf8549156542ae5868259d88638aed09913367f4"
     },
     {
       "path": "docs/problem-statement.md",
@@ -984,11 +988,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "14a7ebfec3a9c2aae1bb8da589525b9b5413964ceee60db0593bda7d4a6333ff"
+      "sha256": "319d40d723c22c06df94b438fb304b8554343517ed496df0ca3f25d4f9e64962"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "4a29402071eda46ed6ed9e81cc9cb9e14aaf646c7e8d8d3310423a4732471d68"
+      "sha256": "4537c730e3f5aaf89ce8a233272d737da09f8594e7847dccfe72b7eca624f419"
     },
     {
       "path": "experiments/README.md",
@@ -1891,8 +1895,16 @@
       "sha256": "153d91212ca5472089cd975996e4dd83989b0e5b18e32973e7b46fd01dbae371"
     },
     {
+      "path": "proofs/GATE-004DW-global-function-quotient-only.md",
+      "sha256": "ae830d3dcb4b36a758e7818009237aef709cad0254afa673466fabf368957591"
+    },
+    {
       "path": "proofs/GATE-004DW-quotient-or-pay-external-port-types.md",
-      "sha256": "596e9dc75a38b48c7b8185fef33e6d9ecb87cbe28bea43fc9df481c321b88e77"
+      "sha256": "79559f584b2b49014fd2572e41573efd1110457ef214effd7ff6e68d8878fde4"
+    },
+    {
+      "path": "proofs/GATE-004DX-minimum-joint-port-vector-cost.md",
+      "sha256": "5f6c96a339d83fb5fea095794827e1fd22fe8dad4a636110f26f319383a6d986"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2979,8 +2991,16 @@
       "sha256": "d34d919de88172f334db2183a206f12c05d35f347f83c3145b2c0a297956cf38"
     },
     {
+      "path": "proofs/LEMMA-234-minimum-circuits-are-gate-function-injective.md",
+      "sha256": "82c5b4379fb012495cdb8b42d9eb560d6f1268165b1b0749089090c0c98e768b"
+    },
+    {
+      "path": "proofs/LEMMA-235-global-port-quotient-can-leave-unbounded-classes.md",
+      "sha256": "8bccb0dc0bab655e5f1cb26cdd2b638095769cc4a5fe61c86667d3a7b133b0c4"
+    },
+    {
       "path": "README.md",
-      "sha256": "b3eea647269b41daf23e3fbf78e7c3e2669cf9b02c1336266414198b8a134688"
+      "sha256": "2f9b1338604b596a07a70997316c181b325ec443e19db83f4c76d9bdc5d75769"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -3004,7 +3024,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "def6756e44175a82f891ce97a04f3985e7486e8e475856fd6050566f7cba598a"
+      "sha256": "b62dda538e364148130a6a41c8daf4b2aa71a15f13dddce49756bd76bed8eac9"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3041,6 +3061,10 @@
     {
       "path": "verification/generate_manifest.py",
       "sha256": "d15b059b86ceaace7a04937755943c13ac9610f880212c1d5132e957884a7c54"
+    },
+    {
+      "path": "verification/global_port_quotient_audit.py",
+      "sha256": "6162823d8d7d615531b7abdc69967eb5de8e798b4c9bb454e55d9af46111d787"
     },
     {
       "path": "verification/independent_cut_code10_audit.py",

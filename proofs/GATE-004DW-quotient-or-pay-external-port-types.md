@@ -49,3 +49,11 @@ and preserve acyclicity and all fanouts.
 | Field/algebraic model | Four-code Boolean transfer functions, physical loss/contraction data, potentials, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, endpoint, bounded core, external port, record class, and merge candidate |
 | Regime | Exact worst-case port-quotient/payment gate; not a finite enumeration claim, SAT lower bound, or terminal result |
+
+## Cycle-196 audit
+
+LEMMA-234 makes global gate-function equality impossible in a minimum endpoint.
+LEMMA-235 shows that the remaining distinct port classes are still unbounded;
+global quotient alone is NG-172. GATE-004DX replaces this route with the exact
+minimum shared-DAG cost of the complete port-transfer vector. GATE-004DW
+remains `EXPLORATORY`.

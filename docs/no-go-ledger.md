@@ -3490,3 +3490,24 @@ size `3m+4`, fixed three-gate marked core of undirected rank two, `m` exterior
 ports, unrestricted output-tree depth, fan-in two and core fanout `m+1`;
 exact worst-case identities for every `m>=1`, assignment, and port; no
 randomness, advice, oracle, promise, distribution, or field computation.
+
+## NG-172 — bound external ports by global gate-function quotient alone
+
+**Label: NO-GO**
+
+Scope: use LEMMA-005/234 to merge globally equal port gates and infer that a
+bounded marked core has boundedly many residual port classes or corresponding
+free hosts.
+
+Failure: a minimum endpoint already contains no duplicate global gate
+functions. LEMMA-235 shows that the LEMMA-233 fixed-core family has `m`
+pairwise distinct functions `p_i=(x AND y) AND z_i` for arbitrary `m`; the
+global equality quotient cannot merge them. The family is nonminimal and does
+not establish an endpoint. It shows that distinct-function cardinality must be
+replaced by an exact joint-circuit cost or parent-transfer argument.
+
+Model: every finite non-uniform minimum unrestricted AND/OR/NOT circuit for
+duplicate elimination, plus uniform finite diagnostic AND/OR circuits of size
+`3m+4` retaining at least `m` distinct port classes; unrestricted depth and
+fanout, fan-in two/one; exact global Boolean functions, with no randomness,
+advice, oracle, promise, distribution, or field computation.
