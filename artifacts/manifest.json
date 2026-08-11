@@ -567,6 +567,10 @@
       "sha256": "bbdc49fa7f1aa1976c9697f3b7b62f188cee631d5ab202c13be50be0b2a46a89"
     },
     {
+      "path": "artifacts/cycle-128-private-clause-NOT-audit.md",
+      "sha256": "084e486e929ea2e62c415acf7e658269b10e0d1edf233dcb908e89c286e2e0fb"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -592,7 +596,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "69507654e02f94ba840c0bf09587adbede90492a0a3d988d0af1449a6d6cea6c"
+      "sha256": "b3cf115cca1df0d02c7822f5ce0e3c9f5ba8f65671508dee9a156318e1568ee9"
     },
     {
       "path": "docs/problem-statement.md",
@@ -600,7 +604,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "f4b9a17bd8ab0d3d8e0a78310b600000989731fa783af90623d27a7a8321c003"
+      "sha256": "627ac036799ef1018b9942918c9f2bb3df026bba75647466c07f2b151a35c6d0"
     },
     {
       "path": "docs/result-labels.md",
@@ -655,6 +659,10 @@
       "sha256": "d6126e4f273a1b1ea816fa3d940da564f147a2cde588cfd02bf47ce2058086fc"
     },
     {
+      "path": "docs/source-citations/karchmer-et-al-1993.md",
+      "sha256": "56761b7d814172caf4eb85151f8f2e1893a68bd70fd620f1b4122ec5f17de3b6"
+    },
+    {
       "path": "docs/source-citations/karp-lipton.md",
       "sha256": "c0951947c984eb2479d77215ffb6c2103f43753d24952bc9a747bf391e5d81ba"
     },
@@ -684,7 +692,7 @@
     },
     {
       "path": "docs/source-citations/README.md",
-      "sha256": "c76f6adf8b135c690621f31b3c9888b511f6dd4189d5176edea8ac15c8354109"
+      "sha256": "bc19ba577de1bd8a97ad8d8053faa5ec8daf5915671812201def84f0465de419"
     },
     {
       "path": "docs/source-citations/robere-zuiddam-2021.md",
@@ -708,11 +716,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "977de3a222554ce5f2bc2656aaa08b7c8f7128f464b6e7b5004701352c882cf9"
+      "sha256": "a2d41d3382b434ea40bba1a74b733b33ee1b840261fd857aec28dda8059065f0"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "00e4bb87318f052f96d11d72e5df149f35fd31d81168058b337e7108b0201b28"
+      "sha256": "a8976013bc4504ed0c24c6300126fb998dc20ba3d4b3a251412fdf322b93c31c"
     },
     {
       "path": "experiments/README.md",
@@ -1064,19 +1072,23 @@
     },
     {
       "path": "proofs/GATE-004BB-endpoint-counts-only.md",
-      "sha256": "aa4bec4923c4584d1ff77e17285a87a502e3c99581dca4ca271c78959fa99afb"
+      "sha256": "6be2fe31d63358546c41ede4561a5c9692a3045e8bb4982b1f86c36349d43f47"
     },
     {
       "path": "proofs/GATE-004BB-maximal-deficit-localization.md",
-      "sha256": "43a943bde9ffb492447779c1d09a6e5670d4c7f64cb04f059b25f79638a4f93e"
+      "sha256": "33e44ee49f43f51f012ccf808b0b993d378784ee7e14c9010f7e25699f383be4"
     },
     {
       "path": "proofs/GATE-004BC-one-clause-NOT-pruning.md",
-      "sha256": "e00d1d80b22425923a84f03d50e6e254c605ebdd18b8f071b08cdcf9242930f0"
+      "sha256": "52c3b0cb366991b1c4d79f45135b304c14642d3aee8b41a0540e8f57bf94c8f3"
     },
     {
       "path": "proofs/GATE-004BC-state-counts-only.md",
-      "sha256": "0625a86010fd0adb7c889b93db9a4d07d99770a5a0a9a9b3d39febf22e384e89"
+      "sha256": "3af9990328077ea0fa7b09c83bad3aa9caab6c982a9329579d8d3cdf98ec3fab"
+    },
+    {
+      "path": "proofs/GATE-004BD-near-maximal-deficit-localization.md",
+      "sha256": "c2c4f35bb5f8ad929032415bd4887c3933a2c99e915171d4fdc860ae66773e32"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1863,8 +1875,12 @@
       "sha256": "7c07f995fdf625fa37fdc13e5573051d4a01270f1e8b455b926defff81f67732"
     },
     {
+      "path": "proofs/LEMMA-157-private-clause-NOTs.md",
+      "sha256": "b30448df1d8feeb4c1a93472f1ddba5da0533e1e81f117e66186070edde0ccd2"
+    },
+    {
       "path": "README.md",
-      "sha256": "9b07b9a7cb4f488cfc527dd61aa5ae674d3028dba134e7b4f471a9c1256aefcc"
+      "sha256": "0c6e0bec80c5facdb725c0628246f066924b3d12879398aed18b8112d907df4f"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1876,7 +1892,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "216f21e7a2f1a56b9793e70c568083c96a456f86c328322c20b5db8243c3c676"
+      "sha256": "1650649d60f0cdad2b5bb2ec69fd18a4ea43b661fba1f84a92f86f6922847809"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

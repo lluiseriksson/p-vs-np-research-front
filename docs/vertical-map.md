@@ -228,12 +228,14 @@ Adjacent collision-aware active branch:
                              + LEMMA-154 (each deficit unit forces a base-tail shared resource)
                              - GATE-004BA-CONE-MEMBERSHIP-ONLY (no-go: path membership does not imply survival)
                              + LEMMA-155 (maximal deficit forces a formula with exactly `m` surviving NOTs)
-                             <- GATE-004BB (active boundary brick): localize maximal deficit by `K+sigma`
+                             + GATE-004BB (proved: the maximal stratum collapses to `sigma=0`)
                                 - GATE-004BB-ENDPOINT-COUNTS-ONLY (no-go: rank/count/base survival omit polarity)
                                 + LEMMA-156 (exact NOT-state potential and variable-read-once endpoint)
-                                <- GATE-004BC (active smallest brick): one neutral clause prunes one NOT
+                                + GATE-004BC (proved: every neutral clause prunes its private NOT)
                                    - GATE-004BC-STATE-COUNTS-ONLY (no-go: constant potential permits label swaps)
-                                   <- exploit formula wiring to forbid all-clause pruning failure (next attack)
+                                   + LEMMA-157 (canonical pair subtrees consume all NOTs and force `sigma=0`)
+                             <- GATE-004BD (active smallest brick): localize resource excess one `mu_m=m+1`
+                                <- classify one-cycle/one-extra-NOT equality topologies (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -834,7 +836,7 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004BC inside GATE-004BB
+### Current operational brick: GATE-004BD inside GATE-004BA
 
 The exact falsifiable statement and model card are in
 `proofs/GATE-004BA-small-saving-witness.md`. LEMMA-153 identifies every
@@ -845,19 +847,18 @@ cardinality localization. LEMMA-154 forces `d` base-tail shared resources in
 every minimum circuit, but cone membership alone does not keep them alive
 under restriction.
 
-The current boundary attack is `proofs/GATE-004BB-maximal-deficit-localization.md`.
-LEMMA-155 proves that the extreme case `d=sigma` forces every endpoint minimum
-circuit to be a rank-zero formula with exactly `m` NOT gates, all surviving
-every satisfying-base restriction. GATE-004BB asks whether equality can be
-localized by `K+sigma` clauses. Endpoint rank/count data alone remain
-insufficient.
+LEMMA-155 makes the extreme case `d=sigma` a variable-read-once formula with
+exactly `m` NOT gates. LEMMA-156 proves that Morizumi's state potential has no
+scalar slack. LEMMA-157 then uses exact read-once wiring: every implication
+pair is a canonical two-leaf OR subtree and consumes a private NOT. The `m`
+pairs exhaust all NOTs, leaving a monotone read-once base and forcing
+`sigma=0`. Thus GATE-004BC and GATE-004BB are proved, but only because the
+apparent positive maximal stratum is empty.
 
-LEMMA-156 now proves that the endpoint is variable-read-once and that
-Morizumi's NOT-state potential has no scalar slack on the canonical tail
-chain. GATE-004BC is the smallest sufficient operation: find one neutral
-clause restriction that prunes one NOT. It iterates to prove GATE-004BB.
-Scalar potential alone permits paired label swaps, so the next attack must use
-formula wiring and exact implication semantics.
+The current attack is `proofs/GATE-004BD-near-maximal-deficit-localization.md`.
+It isolates `Delta_m=sigma-1`, equivalently `mu_m=m+1`. The satisfying-base
+residual now admits a cycle, an extra NOT, or a higher-rank equality case, so
+read-once uniqueness no longer closes the topology.
 
 ### Parallel constructive audit: GATE-004AF
 

@@ -4829,19 +4829,19 @@
       "evidence": "proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; artifacts/cycle-126-maximal-deficit-rigidity.md"
     },
     {
-      "id": "GATE004BB", "label": "EXPLORATORY",
+      "id": "GATE004BB", "label": "PROVED",
       "statement": "Maximal canonical implication deficit is already attained by min(m,K+sigma) clauses.",
       "computational_model": "Minimum unrestricted canonical base-implication circuits with a rank-zero endpoint supplied by LEMMA155", "uniformity": "Uniform symmetric clause family; fully non-uniform circuit minima and prefix circuits",
       "circuit_size": "Premise Delta_m=sigma; target Delta_min(m,K+sigma)=sigma, equivalently prefix N+r at most k_max", "circuit_depth": "Unrestricted; endpoint minimum circuits are formulas by LEMMA155", "fan_in": "AND/OR two; NOT one; fanout unrestricted in prefix competitors", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean formula semantics and undirected cycle rank over F_2 only",
-      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance satisfying Delta_m=sigma", "case_regime": "Falsifiable worst-case maximal-deficit subgate of GATE004BA; not the full positive-deficit theorem, a SAT lower bound, or a terminal result",
-      "evidence": "proofs/GATE-004BB-maximal-deficit-localization.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; artifacts/cycle-126-maximal-deficit-rigidity.md"
+      "asymptotic_quantifiers": "Every compatible canonical instance satisfying Delta_m=sigma", "case_regime": "Exact worst-case maximal-deficit subgate; LEMMA157 forces sigma=0; not intermediate-deficit GATE004BA, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BB-maximal-deficit-localization.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-128-private-clause-NOT-audit.md"
     },
     {
       "id": "GATE004BB-ENDPOINT-COUNTS-ONLY", "label": "NO-GO",
       "statement": "Rank zero, m displayed NOT gates, and their survival under a base restriction alone do not determine clause-signal restriction behavior.",
       "computational_model": "Explicit fanout-one AND/OR/NOT formulas under base and clause-signal restrictions", "uniformity": "Explicit non-uniform witness family; no minimum-circuit or canonical-function claim",
       "circuit_size": "Exactly m displayed NOT gates and cycle rank zero; no minimum-size assertion", "circuit_depth": "Unrestricted binary conjunction-tree depth", "fan_in": "AND two; NOT one; formula fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction semantics only",
-      "asymptotic_quantifiers": "Every m at least one", "case_regime": "Structural worst-case no-go for endpoint-count-only inference; no promise or distributional claim; GATE004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "asymptotic_quantifiers": "Every m at least one", "case_regime": "Structural worst-case no-go for endpoint-count-only inference; no promise or distributional claim; GATE004BB is later proved using LEMMA157 while GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BB-endpoint-counts-only.md; docs/no-go-ledger.md NG-110; artifacts/cycle-126-maximal-deficit-rigidity.md"
     },
     {
@@ -4853,20 +4853,36 @@
       "evidence": "proofs/LEMMA-156-maximal-deficit-state-potential.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; docs/source-citations/morizumi-2008.md; artifacts/cycle-127-equality-state-audit.md"
     },
     {
-      "id": "GATE004BC", "label": "EXPLORATORY",
-      "statement": "Some neutral clause restriction prunes at least one NOT from every maximal-deficit equality-stratum formula.",
+      "id": "GATE004BC", "label": "PROVED",
+      "statement": "Every neutral clause restriction prunes its private NOT from every equality-stratum read-once implication formula.",
       "computational_model": "Variable-read-once AND/OR/NOT formulas for a base conjoined with disjoint implication clauses under neutral restrictions", "uniformity": "Every individual non-uniform equality-stratum formula; symmetric uniform clause family",
       "circuit_size": "Premise exactly j NOTs and rank zero; target a restricted formula with at most j-1 NOTs and rank zero", "circuit_depth": "Unrestricted read-once formula depth", "fan_in": "AND/OR two; NOT one; fanout one in the output cone", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions, formula trees, and integer NOT-state potential",
-      "asymptotic_quantifiers": "Every j at least two in every compatible maximal-deficit descent stratum", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BB; not full GATE004BA, a SAT lower bound, or a terminal result",
-      "evidence": "proofs/GATE-004BC-one-clause-NOT-pruning.md; proofs/LEMMA-155-maximal-deficit-formula-rigidity.md; proofs/LEMMA-156-maximal-deficit-state-potential.md; artifacts/cycle-127-equality-state-audit.md"
+      "asymptotic_quantifiers": "Every j at least two and every variable-read-once formula meeting the exact j-NOT premise", "case_regime": "Exact worst-case universal pruning theorem closing GATE004BB; not intermediate-deficit GATE004BA, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/GATE-004BC-one-clause-NOT-pruning.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-128-private-clause-NOT-audit.md"
     },
     {
       "id": "GATE004BC-STATE-COUNTS-ONLY", "label": "NO-GO",
       "statement": "The exact scalar NOT-state potential permits paired label swaps and does not imply syntactic one-clause pruning.",
       "computational_model": "Abstract NOT-state sets satisfying the exact scalar potential constraints from a formula lower-bound proof", "uniformity": "Explicit finite abstract trace; no formula-realizability or uniformity claim",
       "circuit_size": "Two labels suffice for the first swap; extensible to m labels with the exact cardinality trajectory", "circuit_depth": "Not represented", "fan_in": "Not represented; target formula basis remains binary AND/OR and unary NOT", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite sets and integer cardinality only",
-      "asymptotic_quantifiers": "Every m at least two in the abstract trace class", "case_regime": "Structural worst-case no-go for scalar-state-only pruning; no promise or distributional claim; GATE004BC/BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
+      "asymptotic_quantifiers": "Every m at least two in the abstract trace class", "case_regime": "Structural worst-case no-go for scalar-state-only pruning; no promise or distributional claim; GATE004BC/BB are later proved using LEMMA157 while GATE004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BC-state-counts-only.md; docs/no-go-ledger.md NG-111; artifacts/cycle-127-equality-state-audit.md"
+    },
+    {
+      "id": "LEMMA157", "label": "PROVED",
+      "statement": "Every read-once implication pair consumes a private NOT; exactly j NOTs force a monotone read-once base and sigma zero.",
+      "computational_model": "Variable-read-once AND/OR/NOT formulas, De Morgan normalization, and monotone minterm co-occurrence trees", "uniformity": "Every individual non-uniform read-once formula for the uniform disjoint implication family",
+      "circuit_size": "Exactly one private NOT per implication pair; exact base complexity h-1; positive maximal deficit excluded", "circuit_depth": "Unrestricted read-once formula depth", "fan_in": "AND/OR two; NOT one; fanout one in the output cone", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean unateness, minterms, and tree LCA only",
+      "asymptotic_quantifiers": "Every j at least one, every nonconstant essential base H, and every variable-read-once formula with exactly j NOT gates computing J_j", "case_regime": "Exact worst-case equality-stratum theorem; not intermediate-deficit localization, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-157-private-clause-NOTs.md; docs/source-citations/karchmer-et-al-1993.md; artifacts/cycle-128-private-clause-NOT-audit.md"
+    },
+    {
+      "id": "GATE004BD", "label": "EXPLORATORY",
+      "statement": "A near-maximal canonical implication deficit sigma-1 is attained by min(m,K+sigma-1) clauses.",
+      "computational_model": "Minimum unrestricted canonical implication circuits with exact NOT-plus-cycle-rank resource excess one", "uniformity": "Uniform symmetric clause family; fully non-uniform endpoint and prefix minima",
+      "circuit_size": "Premise Delta_m=sigma-1, equivalently mu_m=m+1; target prefix N+r at most k_1+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean restriction semantics",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance with sigma at least two and Delta_m=sigma-1", "case_regime": "Falsifiable worst-case near-maximal subgate of GATE004BA; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BD-near-maximal-deficit-localization.md; proofs/LEMMA-153-negation-cycle-resource-accounting.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-128-private-clause-NOT-audit.md"
     }
   ]
 }

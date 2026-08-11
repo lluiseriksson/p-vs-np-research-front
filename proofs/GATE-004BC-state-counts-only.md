@@ -40,4 +40,4 @@ gate-function semantics.
 | Oracle access | None |
 | Field/algebraic model | Finite sets and integer cardinality only |
 | Asymptotic quantifiers | Every `m>=2` in the abstract trace class |
-| Regime | Structural no-go for scalar-state-only pruning; GATE-004BC/BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
+| Regime | Structural no-go for scalar-state-only pruning; GATE-004BC/BB are later proved using LEMMA-157, while GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |

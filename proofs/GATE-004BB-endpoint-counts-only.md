@@ -43,4 +43,4 @@ exchange theorem.
 | Oracle access | None |
 | Field/algebraic model | Boolean restriction semantics only |
 | Asymptotic quantifiers | Every `m>=1` |
-| Regime | Structural no-go for endpoint-count-only inference; GATE-004BB/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
+| Regime | Structural no-go for endpoint-count-only inference; GATE-004BB is later proved using LEMMA-157, while GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
