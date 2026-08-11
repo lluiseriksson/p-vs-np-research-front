@@ -5346,7 +5346,31 @@
       "computational_model": "Pair-minimal minimum unrestricted plateau circuits localized at an earliest mixed u-sensitive NOT", "uniformity": "Every individual non-uniform operational plateau parent; uniform fresh implication pair",
       "circuit_size": "Same-size rewrite lowering pair sensitivity, or one satisfying restriction loses a NOT resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean gate identities, four pair cofactors, and N+r accounting over F_2 cycle rank",
       "asymptotic_quantifiers": "Every operational GATE004BY parent under the two-gate equality", "case_regime": "Exact worst-case sufficient local uncrossing gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BZ-mixed-NOT-uncrossing.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; artifacts/cycle-146-mixed-NOT-localization.md"
+      "evidence": "proofs/GATE-004BZ-mixed-NOT-uncrossing.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; artifacts/cycle-147-earliest-NOT-dichotomy.md"
+    },
+    {
+      "id": "LEMMA180", "label": "PROVED",
+      "statement": "Earliest u-sensitive NOT cofactors are ordered and split into satisfying-signature stability or first binary cancellation.",
+      "computational_model": "Minimum unrestricted plateau circuits localized before and after an earliest u-sensitive NOT", "uniformity": "Every individual finite non-uniform GATE004BZ parent",
+      "circuit_size": "No new size bound; exact ordered cofactor and first-cancellation classification", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean pointwise order and cofactors only",
+      "asymptotic_quantifiers": "Every operational two-gate plateau and every topologically earliest u-sensitive NOT in it", "case_regime": "Exact local structural dichotomy; not an uncrossing theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; proofs/LEMMA-179-plateau-forces-mixed-surviving-NOT.md; artifacts/cycle-147-earliest-NOT-dichotomy.md"
+    },
+    {
+      "id": "GATE004BZ-COFACTOR-ORDER-ONLY", "label": "NO-GO",
+      "statement": "An ordered earliest-NOT signature difference and equal downstream cofactors do not force a deletion or local rewrite.",
+      "computational_model": "Explicit unrestricted AND/OR/NOT masking gadget and abstract ordered-cofactor inference", "uniformity": "Uniform finite local identity; no minimum-parent realization claim",
+      "circuit_size": "Constant-size masking cone; no parent or resource lower bound", "circuit_depth": "Constant in the witness; target model unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean identities and pointwise order only",
+      "asymptotic_quantifiers": "Every choice of independent Boolean variables in the displayed identity", "case_regime": "Structural no-go for cofactor-order-only rewriting; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BZ-cofactor-order-only.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; docs/no-go-ledger.md NG-125; artifacts/cycle-147-earliest-NOT-dichotomy.md"
+    },
+    {
+      "id": "GATE004CA", "label": "EXPLORATORY",
+      "statement": "Pair minimality and the fourth zero code exclude switching between the 01 and 11 signatures of the earliest mixed NOT.",
+      "computational_model": "Pair-minimal minimum plateau circuits with a first binary cancellation after an earliest mixed NOT", "uniformity": "Every individual non-uniform operational plateau parent; uniform fresh implication pair",
+      "circuit_size": "Same-size pair-sensitivity descent or one-unit satisfying-code resource loss in the switching branch", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Ordered Boolean cofactors and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BZ parent whose earliest mixed NOT has distinct 01 and 11 signatures", "case_regime": "Exact worst-case switching-branch subgate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CA-exclude-satisfying-signature-cancellation.md; proofs/LEMMA-180-earliest-NOT-signature-dichotomy.md; artifacts/cycle-147-earliest-NOT-dichotomy.md"
     }
   ]
 }

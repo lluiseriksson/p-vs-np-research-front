@@ -2519,3 +2519,23 @@ Model: finite non-uniform minimum AND/OR/NOT circuits at exact
 advice, oracle, promise, distribution, or algebraic computation. This does
 not refute the plateau. It closes literal-NOT-only pruning and leaves
 GATE-004BZ to uncross the earliest mixed surviving NOT.
+
+## NG-125 — infer uncrossing from ordered earliest-NOT cofactors
+
+**Label: NO-GO**
+
+Scope: combine the pointwise order `n_01>=n_11` with equality of the final
+`01,11` output cofactors and conclude that the switching cone contains a
+deletable gate or a size-preserving simplification.
+
+Failure: with independent `u,v,w`, let
+`n=NOT(v OR (u AND w))`, `q=NOT v AND w`, and `d=n OR q`. Then the two
+cofactors of `n` are the distinct ordered functions `NOT v` and
+`NOT v AND NOT w`, while `d=NOT v` for both values of `u`. One OR gate masks
+the ordered difference without a generic local deletion.
+
+Model: explicit constant-size non-uniform AND/OR/NOT gadget; unrestricted
+ambient depth/fanout; no minimum-parent claim, randomness, advice, oracle,
+promise, distribution, or algebraic computation. This is not a plateau
+counterexample. It closes cofactor-order-only rewriting and leaves
+GATE-004CA to use pair minimality, exact resource survival, or the zero code.

@@ -293,6 +293,9 @@ Adjacent collision-aware active branch:
                                                                  + LEMMA-179 (the negative polarity uses a mixed NOT surviving all three codes)
                                                                  - GATE-004BY-PURE-LITERAL-NOT-ONLY (no-go: plateau forbids a pair-only NOT)
                                                                  <- GATE-004BZ (active smallest brick): uncross the earliest mixed surviving NOT
+                                                                    + LEMMA-180 (ordered earliest-NOT signatures: stable or first binary cancellation)
+                                                                    - GATE-004BZ-COFACTOR-ORDER-ONLY (no-go: one OR can mask an ordered difference)
+                                                                    <- GATE-004CA (active smallest brick): exclude satisfying-signature cancellation
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1010,6 +1013,13 @@ base variables, and is fed by an internal pair-sensitive binary gate with no
 direct `u_j` or `t_j` input. Thus the canonical literal NOT cannot be assumed
 (NG-124). GATE-004BZ is the active local rewrite at the earliest such mixed
 NOT.
+
+LEMMA-180 uses earliest-NOT monotonicity to order its `u_j` cofactors. At
+`t_j=1`, the signature is either stable or its difference disappears at a
+first binary cancellation gate. A local OR gadget shows that order plus final
+equality alone cannot justify an exchange (NG-125). GATE-004CA is the active
+switching-branch gate and must use pair minimality, exact resource survival,
+or the falsifying `10` code.
 
 ### Parallel constructive audit: GATE-004AF
 

@@ -25,6 +25,12 @@ equal; LEMMA-173/NG-118 already forbids that inference. The rewrite must use
 the full three-equal/one-zero output table and the fact that all three
 restricted parents are minimum circuits for the same `A`.
 
+LEMMA-180 splits the cone into stable and switching signatures at `t_j=1`.
+In the switching case a first binary gate cancels an ordered difference.
+Order alone is `NO-GO` by an explicit masking gadget. GATE-004CA is the active
+subgate: use pair minimality and the fourth zero code to exclude that
+cancellation branch.
+
 ## Model card
 
 | Field | Value |
