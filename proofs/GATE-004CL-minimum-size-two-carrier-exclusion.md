@@ -1,6 +1,6 @@
 # GATE-004CL — exclude the two-gate carrier using the plateau budget
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Assume a genuine extremal `W=1` plateau tuple whose canonical carrier is the
 minimum case `H_{01,11}={h,n}` with `n=NOT h`. By LEMMA-190, `h` is deleted by
@@ -22,9 +22,15 @@ For every such tuple and pruning triple, at least one of the following holds.
 4. The three pruning maps and their symbolic cofactor identities are jointly
    unrealizable.
 
-The proof must use the actual predecessor substitution at `n`, every first
-binary cancellation boundary, and all shared fanout exits. LEMMA-191 rules out
-an argument from the two-vertex carrier topology and output table alone.
+## Resolution
+
+Alternative 4 always holds. LEMMA-192 proves that carrier canonicity would
+force a direct raw-`u` input to `h`, while LEMMA-179 forbids that input in a
+minimum plateau. Hence the size-two carrier is unrealizable under the full
+minimum-plateau hypotheses. No rewiring or cycle argument is needed.
+
+LEMMA-191 remains the necessary audit: it shows why minimum-plateau mixing,
+not the two-vertex topology and output table alone, supplies the contradiction.
 
 ## Model card
 
@@ -40,4 +46,4 @@ an argument from the two-vertex carrier topology and output table alone.
 | Oracle access | None |
 | Field/algebraic model | Boolean cofactor substitution and undirected cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, every hypothetical minimum size-two-carrier parent, and every valid satisfying pruning triple |
-| Regime | Exact worst-case first case of the bounded carrier classification; not a SAT lower bound or terminal result |
+| Regime | Exact worst-case exclusion of the first bounded-carrier case; not exclusion of the plateau, a SAT lower bound, or terminal result |

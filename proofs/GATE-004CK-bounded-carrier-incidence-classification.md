@@ -34,8 +34,9 @@ symbolic identity or contradiction.
 LEMMA-191 realizes the minimum directed carrier `{h,n}` together with the
 full output table in a nonminimal six-gate extension. Hence
 GATE-004CK-SIZE-TWO-TOPOLOGY-ONLY closes topology/table-only reasoning for
-that class. GATE-004CL isolates the remaining minimum-budget exclusion of the
-two-gate carrier before sizes three through seven are considered.
+that class. LEMMA-192 and GATE-004CL use the minimum-plateau mixing theorem to
+exclude that class. GATE-004CM is the active classification of carrier sizes
+three through seven.
 
 ## Model card
 

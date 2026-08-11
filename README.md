@@ -1266,11 +1266,17 @@ and the output table alone are `NO-GO`; they do not realize a two-gate
 plateau. GATE-004CL now isolates the real size-two case: predecessor rewiring
 and the exact two-binary-deletion budget.
 
+The one-hundred-and-fifty-ninth cycle closes that minimum case. LEMMA-192
+proves that a switching plateau carrier has at least three gates: otherwise
+carrier canonicity forces raw `u` directly into `h`, contradicting the mixed
+surviving-NOT theorem. Together with the conditional upper bound, the `W=1`
+range is now `3<=|H|<=7`. GATE-004CM is the next falsifiable classification.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–158 reduce the two-excess remainder, conditionally at the mandatory misalignment floor, to minimum-budget exclusion of a size-two carrier before sizes three through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–159 reduce the two-excess remainder, conditionally at the mandatory misalignment floor, to symbolic classification of carrier sizes three through seven before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

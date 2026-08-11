@@ -328,7 +328,8 @@ Adjacent collision-aware active branch:
                                                                                                   <- GATE-004CK (active smallest brick): bounded carrier/incidence classification
                                                                                                      + LEMMA-191 (exact table admits carrier `{h,n}` nonminimally)
                                                                                                      - GATE-004CK-SIZE-TWO-TOPOLOGY-ONLY (no-go: topology/table are realizable)
-                                                                                                     <- GATE-004CL (active smallest brick): minimum size-two carrier exclusion
+                                                                                                     + GATE-004CL / LEMMA-192 (proved: plateau carrier size is at least three)
+                                                                                                     <- GATE-004CM (active smallest brick): classify carrier sizes three through seven
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1127,10 +1128,10 @@ and the named cycle constraints.
 LEMMA-191 handles the first carrier size adversarially: a uniform redundant
 extension realizes exactly `{h,n}`, the earliest switching NOT, a binary
 cancellation boundary, and the complete output table. This is NG-136 because
-it costs six new gates and supplies no plateau. GATE-004CL is the active
-minimum-budget case: use deletion of `h`, mandatory survival and rewiring of
-`n`, and the two-binary-gate budget to exclude the size-two carrier or obtain
-an existing private/non-bridge contradiction.
+it costs six new gates and supplies no plateau. LEMMA-192 closes GATE-004CL:
+canonicity would force a direct raw-`u` input to `h` in a two-gate carrier,
+contradicting LEMMA-179. Thus the conditional range is `3<=|H|<=7`.
+GATE-004CM is the active symbolic classification of those remaining sizes.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
