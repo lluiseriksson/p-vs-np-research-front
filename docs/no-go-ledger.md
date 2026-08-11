@@ -3535,3 +3535,27 @@ both `m`, unrestricted lower-bound depth and fanout, fan-in two/one; exact
 Boolean coordinate functions and a code-independent four-row extension, with
 no randomness, advice, oracle, promise, distribution, field computation,
 minimum endpoint, SAT lower bound, or terminal implication.
+
+## NG-174 — count zero-overhead coordinate gates as independent hosts
+
+**Label: NO-GO**
+
+Scope: from `e=0,h=0`, use the fact that every minimum-region gate computes a
+coordinate function to count all such gates as mutually independent,
+retargetable physical payments.
+
+Failure: LEMMA-238 gives only a coordinate straight-line ordering. LEMMA-239
+constructs, for every `m>=1`, an exact `m`-gate zero-overhead vector whose
+coordinate dependency graph is the chain `p_1->...->p_m`. Every proper-prefix
+coordinate is also an input to later coordinates, and neither input of its
+AND gate computes that coordinate. Thus coordinate designation does not imply
+reachability independence, safe wire substitution, or parent preservation.
+The diagnostic is not an endpoint; antichain seals or chain-specific endpoint
+identities remain possible but require additional proofs.
+
+Model: uniform finite non-uniform constant-free multi-output AND/OR/NOT
+nested-conjunction vectors for every `m>=1`; exact cost, coordinate count, and
+chain length all `m`, depth `m`, fan-in two and fanout explicit; exact Boolean
+functions and DAG reachability, with no randomness, advice, oracle, promise,
+distribution, field computation, endpoint realizability, SAT lower bound, or
+terminal implication.

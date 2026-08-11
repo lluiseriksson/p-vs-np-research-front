@@ -1417,6 +1417,14 @@ GATE-004DY is active: in actual endpoints, split zero-excess vectors into
 zero-overhead coordinate normal forms and positive-overhead shared regions,
 then obtain distinct physical payment, descent, or an endpoint contradiction.
 
+LEMMA-238 identifies every zero-overhead realization with a coordinate
+straight-line ordering. LEMMA-239 gives minimum zero-overhead vectors whose
+coordinate gates form an arbitrary full dependency chain, making independent
+coordinate-host counting NG-174. LEMMA-240 leaves the exact inequality
+`q<=HW`. GATE-004DZ is active: convert a wide reachability antichain or a long
+dependency chain into endpoint-valid physical payments, or preserve and
+classify the fewer-than-`D^2` fully labeled remainder.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

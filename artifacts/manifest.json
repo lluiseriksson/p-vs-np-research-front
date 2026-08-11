@@ -847,6 +847,10 @@
       "sha256": "78d2a201ad95c7b6fc774770fa25fae5255f10e08c56d4100cec92013762b05d"
     },
     {
+      "path": "artifacts/cycle-198-zero-overhead-dependency-audit.md",
+      "sha256": "7933fa27e8fc896f5e280a34a6c7801df68a41c1362b93b1aecf9d49ff878f9b"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -872,7 +876,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "986baf03c3f5ffcafd335bd8b0130a77b396b478a4829e697298df0e76e7f7ee"
+      "sha256": "1053f85daffd8fa9f94fad7ce84ef935170b1bc881e715d976244d705dc80b4e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -992,11 +996,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "3aee8891a91ad3817d911cf2ea449bfc9096e9b37ea8e8f9972d3d0ed4184578"
+      "sha256": "3db9573906012f1cd12583cba243ce52d8dd9ef99e931889264e4bcb31c0b3da"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "7d1681e36d391aa32d3fdb1a505e2368e516bf98d359b915f4950e32c14c2765"
+      "sha256": "0c70e0ab03d275a7420107ecd71ac73174315d6dd18d39d3acd06e545247d322"
     },
     {
       "path": "experiments/README.md",
@@ -1916,7 +1920,15 @@
     },
     {
       "path": "proofs/GATE-004DY-zero-excess-port-vector-endpoints.md",
-      "sha256": "13932bbacae10dd5cea310502437ba63f6976dfc65fc04139f08306b36c2c2d8"
+      "sha256": "d86385735503cf354667d344faf515ca7006a6c6bf322038b5c059d9f052b7ae"
+    },
+    {
+      "path": "proofs/GATE-004DY-zero-overhead-as-independent-hosts.md",
+      "sha256": "eb71ee18e6f4558c47a5af224cc84b7a395058b3aa6ec0a7f277997ea5a621c8"
+    },
+    {
+      "path": "proofs/GATE-004DZ-coordinate-dependency-chain-or-antichain.md",
+      "sha256": "a5989865da8fa60510208f55eb8781c6bf6e0ac35d32d7b0a16f670b438cf6ee"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -3019,8 +3031,20 @@
       "sha256": "1df4b80ebb766b0358421dc05a61e2ec4e7487c5f412e774c2016f37720ca4ab"
     },
     {
+      "path": "proofs/LEMMA-238-zero-overhead-is-a-coordinate-ordering.md",
+      "sha256": "dedc95cbe67ab5a826137c138c41cff39ec8d201b11a29b2b5ef6c8e7e67d1d7"
+    },
+    {
+      "path": "proofs/LEMMA-239-zero-overhead-coordinates-can-form-a-chain.md",
+      "sha256": "a29245f9b5d34ca8eceb4d7afea6c5e9011f3d19a633cafb351d449b79daa5b0"
+    },
+    {
+      "path": "proofs/LEMMA-240-coordinate-dependency-height-width-bound.md",
+      "sha256": "5447d078be84fb710f84b73969fc428fbb5aa818b074d810aa89cc3fcfe23fd8"
+    },
+    {
       "path": "README.md",
-      "sha256": "f755716150edd3e9f4161c6f08030c69e95dfd23255e138ca3f989ae3e11e212"
+      "sha256": "2e04fedce4c9a9ecb20290f24d4f0a9abe2367118a29ed7b8e83e84c77d84f64"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -3044,7 +3068,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "5c2908a23b8c3b7ea52926c0805ea9094860a45cc4e6f86953faa7753e7ede05"
+      "sha256": "4fc4d697b62e48caf9318b711457fabae2b8cd2effb12901901e61f32b0dd599"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3213,6 +3237,10 @@
     {
       "path": "verification/two_sided_swap_audit.py",
       "sha256": "52a7715e706ccdc197f1802330a870b2aa5b82a41d3284f673b3c901dfb5e53a"
+    },
+    {
+      "path": "verification/zero_overhead_dependency_audit.py",
+      "sha256": "014a417961b607260647144cd1b7a1eef7bb754a256e8296e1bdc9623a995079"
     }
   ]
 }

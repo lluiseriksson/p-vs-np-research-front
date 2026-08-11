@@ -51,3 +51,12 @@ acyclicity, parent preservation, and all fanouts must be recorded explicitly.
 | Field/algebraic model | Four-code Boolean vector functions, exact shared-DAG cost, potentials, contraction maps, and cycle spaces over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, admissible signal, vector coordinate, minimum realization, and residual branch |
 | Regime | Exact worst-case zero-excess endpoint gate; not a generic vector theorem, SAT lower bound, or terminal result |
+
+## Cycle-198 audit
+
+LEMMA-238 exactly characterizes the `e=0,h=0` minimum realization as a
+coordinate straight-line ordering. LEMMA-239 shows that its coordinate gates
+may form an arbitrary full dependency chain, so treating all of them as
+independent hosts is NG-174. LEMMA-240 gives `q<=HW` for dependency height and
+width. GATE-004DZ now asks for endpoint-sensitive payment of the resulting
+chain/antichain split. The `h>0` branch and GATE-004DY remain `EXPLORATORY`.

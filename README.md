@@ -1512,11 +1512,18 @@ every `m`, so joint minimization alone need not release a gate (NG-173).
 GATE-004DY now classifies the endpoint-sensitive zero-excess cases by
 coordinate cost, auxiliary overhead, and distinct physical payment.
 
+The one-hundred-and-ninety-eighth cycle characterizes zero overhead exactly
+as a straight-line ordering of coordinate functions. Such an ordering can be
+one dependency chain of arbitrary length, so coordinate gates are not
+automatically independent hosts (NG-174). Every coordinate dependency poset
+nevertheless satisfies `q<=HW`; GATE-004DZ must pay a wide antichain or long
+chain in the actual endpoint, or retain the complete bounded remainder.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–197 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, show that exact global-function quotienting still leaves unbounded classes, and separate unavoidable coordinate cost from zero-excess joint realizations; endpoint-sensitive zero-excess classification, contraction-aware matching of real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–198 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, classify code-10 masks and swaps, reduce full loss coverage to marked cores of size at most four/six, expose unbounded live port interfaces, separate unavoidable coordinate cost from zero-excess joint realizations, and reduce zero-overhead regions to a dependency height/width split; endpoint-sensitive chain/antichain payment, positive-overhead classification, contraction-aware matching of real hosts, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
