@@ -1458,11 +1458,17 @@ precisely support masking, while two changed inputs retain interaction terms.
 A first cancellation is not automatically a physical payment (NG-165).
 GATE-004DQ separates minimum-cost mask regions from two-path reconvergence.
 
+The one-hundred-and-ninetieth cycle proves that a one-sided support mask is an
+independent full-function seal. A uniform family separates certification from
+payment: `m` real hosts feed `m` parent-live seals through one shared mask, so
+masks and seals cannot be counted again (NG-166). GATE-004DR requires
+path-complete mask cuts on actual hosts or a two-sided physical contradiction.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–189 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the exact code-10 defect, and classify its first local cancellation; physically paying masked regions or two-path reconvergence, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–190 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the exact code-10 defect, classify its cancellation, and close the one-sided semantic mask branch without double-counting masks or seals; path-complete certification of enough real hosts, two-path reconvergence, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

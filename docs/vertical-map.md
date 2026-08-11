@@ -1360,6 +1360,13 @@ not automatically a payment (NG-165). GATE-004DQ is active: pay the exact
 one-sided masked region or extract a physical contradiction from two-path
 defect reconvergence.
 
+LEMMA-225 proves that an exact one-sided support mask independently seals its
+binary cut gate on all four codes. LEMMA-226 separates this certificate from
+payment: `m` real hosts may feed `m` parent-live seals through one shared
+mask, so seals and masks cannot be counted again (NG-166). GATE-004DR is
+active: obtain path-complete mask cuts on enough actual hosts, or force a
+physical contradiction at the first two-sided reconvergence.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

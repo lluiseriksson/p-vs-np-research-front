@@ -42,3 +42,12 @@ saving, all cycle changes are contractions, and no potential descends.
 | Field/algebraic model | Exact code-10 Boolean defects, physical DAG topology, lexicographic potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, nonzero cut defect, first cancellation, and branch |
 | Regime | Exact worst-case cancellation-payment gate; not a SAT lower bound or terminal result |
+
+## Cycle-190 audit
+
+LEMMA-225 closes the semantic one-sided branch with an independently certified
+full-function cut. LEMMA-226 and NG-166 show that neither the mask nor the
+sealed gate is an extra host; only the actually retargeted upstream gate is a
+payment unless a separate exchange proves more. GATE-004DR replaces this gate
+with path-complete mask certification on real hosts or a two-sided physical
+reconvergence contradiction. GATE-004DQ remains `EXPLORATORY`.

@@ -3355,3 +3355,27 @@ diagnostic circuit; six old gates, depth at most five, fan-in two/one and
 fanout one in the fragment; exact worst-case identity for every assignment to
 four raw inputs; no randomness, advice, oracle, promise, distribution, field,
 or algebraic computation beyond analytical `F_2` defect notation.
+
+## NG-166 — count a one-sided mask or sealed gate as an extra host
+
+**Label: NO-GO**
+
+Scope: after a support mask independently certifies equality at a cut gate,
+count the mask or cut gate as another physical payment beyond the upstream
+gate actually retargeted.
+
+Failure: LEMMA-226 constructs, for every `m>=1`, `m` changed gates `a_i`,
+`m` sealed gates `c_i`, and one shared mask signal `b`. Each `c_i` retains its
+exact old function after replacing `a_i` by a wire. Selector `s_i` exposes an
+unmasked parent slice, and neither incoming signal can replace `c_i` on that
+slice. Thus the `m` actual hosts may be counted once; the `m` seals are not
+automatically free, and the single mask cannot be charged `m` times. The
+family is nonminimal and does not exclude a separate selector-dependent or
+minimum-cost exchange that frees an additional gate.
+
+Model: uniform family of finite non-uniform single-output constant-free
+AND/OR/NOT DAGs; old size `4m+2`, exactly `m` displayed real hosts, `m` live
+seals, one mask of fanout `m`, unrestricted OR-tree depth and fan-in two/one;
+exact worst-case identities for every `m>=1`, assignment, and seal index; no
+randomness, advice, oracle, promise, distribution, field, or algebraic
+computation.
