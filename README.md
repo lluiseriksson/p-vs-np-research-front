@@ -1295,11 +1295,17 @@ LEMMA-196 gives a boundary aligned under `01/11` but switching under `00/10`.
 Factoring from satisfying masks alone is therefore `NO-GO`. GATE-004CQ now
 requires complete four-code boundary signatures before a global rewrite.
 
+The one-hundred-and-sixty-fourth cycle strengthens the audit to a complete
+single-output realization. LEMMA-197 simultaneously realizes the exact table,
+the size-three carrier, and a cross-row handoff, but only redundantly. Hence
+four-code signatures plus the table are still `NO-GO` without minimality.
+GATE-004CR now targets the minimum cost of a handoff.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–163 reduce the size-three carrier to a full four-code boundary-signature audit before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–164 reduce the size-three carrier to charging a cross-row handoff by minimum cost before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

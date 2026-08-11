@@ -711,6 +711,10 @@
       "sha256": "333c97587cf86396cd50289a40184dcde7b6fd953c2da47a5efa0646ad285057"
     },
     {
+      "path": "artifacts/cycle-164-exact-table-handoff-audit.md",
+      "sha256": "a44a76177ecfd4f0d96725fbde0f81161fdaf041d22d052e81df7c52e514680f"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -736,7 +740,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "eb82490ccf5e81430f3ec187a22dfd235dd69bb47b421dbf400ed6873876cf3b"
+      "sha256": "15cbb0edff67277717be2b40b0e2e3991cc1f17b01faf6d6fec87a58a4867226"
     },
     {
       "path": "docs/problem-statement.md",
@@ -744,7 +748,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "9325713d2a57367bb67cef830358b596a38c45b526153dbe455817f102079dfc"
+      "sha256": "239fb5a5a12a9e07d6b7839e37439d199d38c6cea7ae890c9656f66fff329b3a"
     },
     {
       "path": "docs/result-labels.md",
@@ -856,11 +860,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "163170015d96373c6564511d2745a3347352f105a782292d5bf8d006b584b7a2"
+      "sha256": "3aa86b1a586684432213a675badc544662cd2b18c78682753ec5a901f35752ae"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "d353e9f73d1c8d0a303b808feaa6272e6112dcf19f4fa4b6a5e9ec0f83b169b8"
+      "sha256": "bd36782e26bfc59311651229ac844297e7b84b00a30e5bad433a2d2338d37cec"
     },
     {
       "path": "experiments/README.md",
@@ -1508,7 +1512,15 @@
     },
     {
       "path": "proofs/GATE-004CQ-four-code-boundary-signatures.md",
-      "sha256": "27c2bf7a150feb08029768e625a73a2f3baf35c0c034bf7b90e288de2babab84"
+      "sha256": "e1ddc2bc9e7c8a9e10527b3338a8c678cab691adb0b08c762f206003ee90e65e"
+    },
+    {
+      "path": "proofs/GATE-004CQ-four-code-signatures-only.md",
+      "sha256": "86c90d2299f2cf430b3bca860a13c658c95e37dc6683f2f3d5e7472d2451c2e4"
+    },
+    {
+      "path": "proofs/GATE-004CR-minimum-handoff-cost.md",
+      "sha256": "f9d757e5ebed18f7728bcba567a28f977a6b8331b5177ad3126b3d0b6039d99b"
     },
     {
       "path": "proofs/GATE-004D-sat-residual-collisions.md",
@@ -2451,8 +2463,12 @@
       "sha256": "9668a41cd581d0138099afcf0da4706265f122191909c993b098b4e89f301563"
     },
     {
+      "path": "proofs/LEMMA-197-exact-table-three-gate-carrier-handoff.md",
+      "sha256": "d05de8a2f50e83e7709a22f59552185209d7057a995f877614a9745d8e2cf236"
+    },
+    {
       "path": "README.md",
-      "sha256": "9c32f30cb10da6d641857fcc669e8791f23483d67158fa2f2e6a35eb6de7367d"
+      "sha256": "07498066a129dad674a2f4ac8d8561a3e1d16878336f72bba1a34789617df164"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2464,7 +2480,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "61c0b84ff668c0040b7566f1244d5e94fe76e132944803e1ae03c6aa6561fd3c"
+      "sha256": "3ebfc1b08598f4e3850ec4eec99de18bdb6c6c26fac56b286025c45599a5d075"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

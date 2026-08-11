@@ -26,6 +26,11 @@ parent, one of the following holds:
 
 No rewrite may be certified from only the satisfying-row coordinates.
 
+LEMMA-197 realizes the complete output table, a size-three `01/11` carrier,
+and a switching `00/10` handoff in one nonminimal single-output circuit. Thus
+four-code signature consistency alone is `NO-GO`. GATE-004CR is the active
+minimum-cost and cycle-minor audit for such handoffs.
+
 ## Model card
 
 | Field | Value |

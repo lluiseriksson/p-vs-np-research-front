@@ -342,6 +342,9 @@ Adjacent collision-aware active branch:
                                                                                                                  + LEMMA-196 (an aligned boundary can switch on `00/10`)
                                                                                                                  - GATE-004CP-SATISFYING-MASKS-ONLY (no-go: row projection loses behavior)
                                                                                                                  <- GATE-004CQ (active smallest brick): full four-code boundary signatures
+                                                                                                                    + LEMMA-197 (exact table admits a nonminimal cross-row handoff)
+                                                                                                                    - GATE-004CQ-FOUR-CODE-SIGNATURES-ONLY (no-go: signatures/table coexist)
+                                                                                                                    <- GATE-004CR (active smallest brick): minimum handoff cost
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1165,6 +1168,11 @@ LEMMA-196 shows that satisfying-row alignment does not extend globally: a
 boundary equal under `01/11` can differ under `00/10`. Factoring from the
 satisfying mask alone is NG-140. GATE-004CQ now records complete four-code
 boundary signatures before any uncrossing.
+
+LEMMA-197 embeds the full table, size-three carrier, and a cross-row handoff in
+one redundant single-output circuit. Thus complete signature consistency is
+NG-141 unless minimum cost is used. GATE-004CR is the active handoff-cost,
+extra-deletion, private-certificate, or cycle-minor gate.
 
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is

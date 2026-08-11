@@ -2844,3 +2844,21 @@ or a plateau. GATE-004CQ must preserve complete four-code vectors.
 Model: unrestricted constant-depth AND/OR/NOT local gadget; fan-in two/one,
 fanout unrestricted; no randomness, advice, oracle, promise, distribution,
 field, or algebraic computation; every assignment to `x,y,u,t`.
+
+## NG-141 — contradict a handoff from full signatures and output table
+
+**Label: NO-GO**
+
+Scope: combine a size-three `01/11` carrier, a complete four-code switching
+boundary, and the exact `A,A,0,A` output table without minimum-cost input.
+
+Failure: LEMMA-197 takes `A=x AND NOT y`, computes the exact implication via
+`g=u AND x`, `h=g OR y`, `n=NOT h`, and embeds the switching boundary through
+`c=b OR NOT b=1` before the final output. The canonical `01/11` carrier remains
+exactly `{g,h,n}` and the boundary has the LEMMA-196 four-vector. The circuit
+is deliberately redundant, not minimum or a plateau. GATE-004CR must use
+minimum cost, exact losses, a private certificate, or a cycle-minor conflict.
+
+Model: one finite non-uniform constant-size AND/OR/NOT single-output circuit;
+constant depth, fan-in two/one, fanout unrestricted; no randomness, advice,
+oracle, promise, distribution, field, or algebraic computation.
