@@ -216,6 +216,10 @@ Adjacent collision-aware active branch:
                     + LEMMA-150 (`Q=s+D_a-E_row` selector accounting)
                     - GATE-004AX-ARBITRARY-BASE (no-go: identical nonconstant rows give `Q<=3m`)
                     <- GATE-004AY (active equivalent brick): canonical selector-penetration balance
+                       + LEMMA-151 (equal-size aggregate/interleaved selector mobility)
+                       + GATE-004AY-ZERO-DEFICIT (conditional: `Delta=0` closes the gate)
+                       - GATE-004AY-SIZE-ONLY (no-go: equal size permits linear `D_a` variation)
+                       <- stabilize the interleaved quotient under positive deficit (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -825,6 +829,10 @@ single quantity `Q_J-b` required by GATE-004AX as the exact balance
 nonconstant row residuals fail this balance, so GATE-004AY must exploit the
 specific canonical row transition. LEMMA-147 and LEMMA-148 remain the audited
 collision and local-exchange inputs.
+LEMMA-151 closes the exact-additivity boundary: if `Delta=0`, an interleaved
+minimum circuit has `Q>=4m` and `b=0`. Equal-size aggregation can nevertheless
+have only `K+1` selector-dependent gates, so the positive-deficit attack must
+stabilize a representation rather than infer penetration from size.
 
 ### Parallel constructive audit: GATE-004AF
 

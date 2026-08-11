@@ -4715,6 +4715,30 @@
       "circuit_size": "Parent K+3m-Delta; target balance D_a-E_row-b at least m-Delta-3K", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic selector dependence; no algebraic circuit model",
       "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum circuit for each instance", "case_regime": "Exact reformulation of GATE004AX; not a SAT lower bound or terminal result",
       "evidence": "proofs/GATE-004AY-selector-penetration-balance.md; proofs/LEMMA-150-row-selector-quotient-accounting.md; artifacts/cycle-120-selector-penetration-audit.md"
+    },
+    {
+      "id": "LEMMA151", "label": "PROVED",
+      "statement": "Equal-size aggregate and interleaved implication circuits have selector penetration at most K+1 and at least m; the interleaved quotient has at least 4m classes and b=0.",
+      "computational_model": "Explicit unrestricted circuits for a base conjoined with disjoint implication clauses", "uniformity": "Fully non-uniform minimum base circuit and uniform two equal-size tail architectures",
+      "circuit_size": "Both architectures have exactly K+3m gates; selector counts at most K+1 and at least m respectively", "circuit_depth": "Unrestricted aggregate tree or interleaved chain", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic selector dependence only",
+      "asymptotic_quantifiers": "Every m at least one, every nonconstant finite H, and every pair of distinct nonconstant compatible row residuals", "case_regime": "Exact worst-case displayed-circuit theorem; minimum-circuit conclusion only when the displayed upper bound is exact",
+      "evidence": "proofs/LEMMA-151-selector-mobility-at-fixed-size.md; artifacts/cycle-121-selector-mobility.md"
+    },
+    {
+      "id": "GATE004AY-ZERO-DEFICIT", "label": "CONDITIONAL",
+      "statement": "If the canonical implication conjunction has exact size K+3m, the interleaved minimum circuit closes GATE004AY and GATE004AX.",
+      "computational_model": "Minimum unrestricted canonical implication circuits under the exact-additivity premise", "uniformity": "Uniform canonical rows and tail; fully non-uniform base and minimizing circuit",
+      "circuit_size": "Conditional equality C(J)=K+3m and Delta=0; quotient at least 4m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean semantic row cofactors only",
+      "asymptotic_quantifiers": "Every compatible canonical implication instance satisfying the exact-additivity premise", "case_regime": "Conditional zero-deficit closure of GATE004AY/AX; not an unconditional canonical theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AY-zero-deficit.md; proofs/LEMMA-151-selector-mobility-at-fixed-size.md; artifacts/cycle-121-selector-mobility.md"
+    },
+    {
+      "id": "GATE004AY-SIZE-ONLY", "label": "NO-GO",
+      "statement": "Equal-size circuits for one implication function can differ linearly in selector penetration.",
+      "computational_model": "Two explicit unrestricted circuits for the same base-implication conjunction", "uniformity": "Fully non-uniform base circuit and uniform aggregate/interleaved comparison",
+      "circuit_size": "Equal exact displayed size K+3m; selector penetration ranges from at most K+1 to at least m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean associativity and semantic row dependence only",
+      "asymptotic_quantifiers": "Every m at least one and every base with two distinct nonconstant row residuals", "case_regime": "Structural no-go for size-only selector accounting; GATE004AY/AX/AW/AV/AU/AG/AE remain open for positive deficit",
+      "evidence": "proofs/GATE-004AY-size-only.md; proofs/LEMMA-151-selector-mobility-at-fixed-size.md; docs/no-go-ledger.md NG-105; artifacts/cycle-121-selector-mobility.md"
     }
   ]
 }

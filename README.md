@@ -989,11 +989,19 @@ GATE-004AX exactly as `D_a-E_row-b>=m-Delta-3K`; any witness therefore needs
 `NO-GO`: `H(a,z)=z` gives exact size and quotient `3m`, failing the target by
 `m`. GATE-004AY now isolates the canonical selector-penetration balance.
 
+The one-hundred-and-twenty-first cycle proves selector mobility at fixed
+size. LEMMA-151 builds two `K+3m` circuits for the same implication function:
+an aggregated tail with `D_a<=K+1`, and an interleaved tail with `D_a>=m`,
+`Q>=4m`, and `b=0`. Therefore the `Delta=0` case closes conditionally—then
+the interleaved circuit is minimum—but size-only penetration is `NO-GO`.
+The remaining gate is precisely stability under the positive deficit
+`1<=Delta<=K-h+1=o(m)`.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–120 close the standalone tradeoff, give a canonical `o(m)` size gap, reduce width-five stability to an exact selector-penetration balance, and prove the first local collision exchange. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–121 close the standalone tradeoff, give a canonical `o(m)` size gap, reduce width-five stability to an exact selector-penetration balance, and close its zero-deficit boundary. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

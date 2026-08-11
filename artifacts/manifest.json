@@ -539,6 +539,10 @@
       "sha256": "f0108973036e62af4dd62d46f70de9e87969682623757ac7f639a508bb0907e4"
     },
     {
+      "path": "artifacts/cycle-121-selector-mobility.md",
+      "sha256": "8432b23d1cc18c86f2be50f42fafe5310bb5602b58714298f62f950cae197e46"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -564,7 +568,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "48e915e972ac91d6d4cda6f3b520dc7baca9a869cfba02521783ff9530b7fe6b"
+      "sha256": "c02aeaa16d8680ad31d842a88ca15f029901e0c98881f6638ebec4f6343d7e9a"
     },
     {
       "path": "docs/problem-statement.md",
@@ -676,11 +680,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "20c6fd2c267386f6de6fb0dc0c6deb509aedf9f3613542b85ac0c53230881e79"
+      "sha256": "f8de1091c984c2667dcc7dc3fcaf50f4f95026dc5f79a8ed4498afdb5fdef7f7"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "bad417aeb67ea04035bffe012f81d44bd7b2e7cc48f21e3f778498387f30d84b"
+      "sha256": "8504c6733f3302e2a7b4097a47b3f908b6f855f70bd3e44636cf260207cc9446"
     },
     {
       "path": "experiments/README.md",
@@ -992,7 +996,15 @@
     },
     {
       "path": "proofs/GATE-004AY-selector-penetration-balance.md",
-      "sha256": "c14407d5f7f6d1a7f44dd184af0a827a3321e9fec972866973a8f4058f21b36c"
+      "sha256": "9a936e38415a164efb5e0f903992f95783a6d25218bf631e4b6940998533c9fa"
+    },
+    {
+      "path": "proofs/GATE-004AY-size-only.md",
+      "sha256": "569d8b91e7e138f3794d5c1a2162a947d7936138f4d89e45de484aaecd167efe"
+    },
+    {
+      "path": "proofs/GATE-004AY-zero-deficit.md",
+      "sha256": "f2574fe3e01128fa44d0f8fbe27ee7ed6e0d9e625b4573968f1d406cbf7661ab"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1759,8 +1771,12 @@
       "sha256": "dcbdcbb843020d7565352e56e3f687da899ca37374a3dd435cd7e71a88758bd6"
     },
     {
+      "path": "proofs/LEMMA-151-selector-mobility-at-fixed-size.md",
+      "sha256": "3edd4cae03e45f5390db798e8260bf04ce29847c85dcc362f392a2560b4c5d30"
+    },
+    {
       "path": "README.md",
-      "sha256": "46d57cbb86a0de2fa82e1f54375f5154b505520ff6d7b2ddcce47db23b79e3f5"
+      "sha256": "43084dc6d122f4ba3192bf050e726ab9e96ed148c1ecbe30013c8f83883e99e2"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1772,7 +1788,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "3097292e15258f50f1ddbaf7eb695d635847865a0df7fe8ea3ea76732a0eafa5"
+      "sha256": "467de913f9ae06673570822d69ab40cb6051499d339fff099ec31baeabc4d0ad"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

@@ -2112,3 +2112,23 @@ unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in one; no
 randomness, advice, oracle, promise, distribution, or algebraic model.
 Arbitrary-base promotion is closed; canonical GATE-004AY/AX/AW/AV/AU/AG/AE
 remain open.
+
+## NG-105 — infer selector penetration from displayed parent size
+
+**Label: NO-GO**
+
+Scope: use the common size `K+3m`, or the deficit relative to that number, as
+if it determined how many gates depend on the interpolating row selector.
+
+Failure: LEMMA-151 constructs two circuits for the same function with exactly
+`K+3m` gates. Aggregating the implication tail before one final AND gives
+`D_a<=K+1`; interleaving the same `m` conjunctions above `H` gives `D_a>=m`,
+`Q>=4m`, and `b=0`. Associativity moves a linear selector-dependent region
+without changing size. Hence size data do not select the high-penetration
+representation.
+
+Model: two explicit unrestricted non-uniform circuits for one base conjoined
+with disjoint implication clauses; equal size `K+3m`; unrestricted depth and
+fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
+promise, distribution, or algebraic model. Size-only selector inference is
+closed; GATE-004AY/AX/AW/AV/AU/AG/AE remain open for positive deficit.

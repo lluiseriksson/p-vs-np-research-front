@@ -38,6 +38,13 @@ residuals alone. The next attack must exploit the exact canonical row
 transition to force selector dependence through the implication-tail
 computation, or produce a canonical counterexample.
 
+LEMMA-151 proves that the displayed interleaved circuit has the required
+linear penetration, `Q>=4m`, and `b=0` without any size premium over the
+aggregated architecture. Consequently GATE-004AY-ZERO-DEFICIT closes this
+gate under exact additivity. GATE-004AY-SIZE-ONLY records the remaining
+boundary: equal size alone cannot select the interleaved representation, so
+the positive deficit must be localized or charged quantitatively.
+
 ## Model card
 
 | Field | Value |
