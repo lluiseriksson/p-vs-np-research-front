@@ -583,6 +583,10 @@
       "sha256": "f22b0dd773b23702ab27cb107a7add41bf9fe89d520eab1d14d5051d43d16300"
     },
     {
+      "path": "artifacts/cycle-132-external-leaf-defect.md",
+      "sha256": "c30a22abf56499ab10dc4e6e7bcca6a3de35fafe3e6091630922d4c819f5d837"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -616,7 +620,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "d7b513ff7007df24737f41f4eba47104da9aafc00bab2f8fa3ef6b45ab0fd57e"
+      "sha256": "b5ba9d22752d59f2a6174734e5e8098a8a8933b6e20b8ec17d6fd6d34e9ac3e8"
     },
     {
       "path": "docs/result-labels.md",
@@ -728,11 +732,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "e8e354159e993670a6958fdc35e49ada74e8b11242c75930d5faf9b1e9371f6f"
+      "sha256": "b8ccec5ac25c6a459d3fc6d816f433f04eb06a722a175dedb353ebd8062660ab"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "2b01ee04928785b0a520d3ab5fd4f22e9a361f966aec597d519b7514f7dda6f0"
+      "sha256": "f772f37b19be537c5ef17363f01747e9a371127c961e63e0cd9a63541981a776"
     },
     {
       "path": "experiments/README.md",
@@ -1119,12 +1123,20 @@
       "sha256": "638bf71f7c154091d8d042e7985edfda36ebe212f6a7eac8fc77e452efe0b595"
     },
     {
+      "path": "proofs/GATE-004BG-no-cut.md",
+      "sha256": "a2b873e247658ca34cdb4cdda92a8b7cf2c0724699b37f6827058d178190a40a"
+    },
+    {
       "path": "proofs/GATE-004BG-NOT-split-only.md",
       "sha256": "c8a5c83f88461374d6fa90c1bb5816c9937c666f1db92e32bbd09e5a8aad8d1a"
     },
     {
       "path": "proofs/GATE-004BG-unicyclic-split-survival.md",
       "sha256": "648947beaf9613c9eafafbad38bc6c47f745108d64bdf36cdfa4e4d3267f16bc"
+    },
+    {
+      "path": "proofs/GATE-004BI-sole-cut-unicyclic-pruning.md",
+      "sha256": "41cb4c52db30bef03ec715c19b4248dc28af3412aa344f78e4c9d6415c224d98"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1927,8 +1939,16 @@
       "sha256": "6205f2bbb2d2c6bdec7becf7611e11d9d494f5d67c4ed670cddd3ad8515b9742"
     },
     {
+      "path": "proofs/LEMMA-161-external-leaf-defect-bound.md",
+      "sha256": "f81fa15fa9147dc52f1401b6a156c959aa572dac87b0183e40819d2fcc83706f"
+    },
+    {
+      "path": "proofs/LEMMA-162-sole-cut-large-margin.md",
+      "sha256": "2ed787e733152621b1bfb0999ee6f296684dc6459d103f6f7fa2b16a5e098171"
+    },
+    {
       "path": "README.md",
-      "sha256": "636505da3f09cbf93b93b46b9cec076b3ced6264bbfd46fb6ec3810f35ab48f9"
+      "sha256": "0038f6b8d9c4a2d75f5ea102bd604b6496c1f798f0f92aa9e7fe6747e39666f5"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1940,7 +1960,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "4924533a51a26a9363ab6e360f889a9e85c306fbb2e8cb3f24b86de8e7c4507c"
+      "sha256": "3e8533172051e38ddea5a59e0d8f039ed0b9fdfeadf6c5cb95b2bce36a983344"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

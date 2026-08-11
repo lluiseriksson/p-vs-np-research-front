@@ -4955,6 +4955,38 @@
       "circuit_size": "Exact LEMMA160 regional counts; no parent total-size assertion beyond the abstraction", "circuit_depth": "Unrestricted ambient formulas", "fan_in": "OR two; NOT one; target circuit otherwise binary AND/OR", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and integer regional counts only",
       "asymptotic_quantifiers": "Every permitted no-cut or sole-cut count split", "case_regime": "Structural worst-case no-go for NOT-split-only survival; no promise or distributional claim; GATE004BG/BF/BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open",
       "evidence": "proofs/GATE-004BG-NOT-split-only.md; docs/no-go-ledger.md NG-114; artifacts/cycle-131-unicyclic-tail-partition.md"
+    },
+    {
+      "id": "LEMMA161", "label": "PROVED",
+      "statement": "Fixing L external leaves can hide at most L clause-private NOT gates visible in a residual implication formula.",
+      "computational_model": "Fanout-one AND/OR/NOT formulas under constant restrictions of counted external leaf occurrences", "uniformity": "Every individual non-uniform formula with a uniform implication-tail variable set",
+      "circuit_size": "At least b-L original clause-private NOT gates", "circuit_depth": "Unrestricted formula depth", "fan_in": "AND/OR two; NOT one; fanout one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Formula-tree ancestry, Boolean cofactors, and minterm LCA geometry",
+      "asymptotic_quantifiers": "Every b at least one, every L at least zero, and every external restriction satisfying the residual premise", "case_regime": "Exact worst-case defect bound; not a general circuit theorem, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-161-external-leaf-defect-bound.md; proofs/LEMMA-157-private-clause-NOTs.md; artifacts/cycle-132-external-leaf-defect.md"
+    },
+    {
+      "id": "GATE004BG-NO-CUT", "label": "PROVED",
+      "statement": "Every operational no-cut unicyclic parent has a neutral clause restriction that prunes one resource.",
+      "computational_model": "Minimum unicyclic implication circuits in the no-cut one-bit factorization and formula external-leaf restrictions", "uniformity": "Every individual non-uniform no-cut parent in the uniform clause family",
+      "circuit_size": "Exact parent N=j,r=1; restricted N+r at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted globally and one in each factor formula region", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors, formula-tree ancestry, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every sigma at least two and every integer j greater than K+sigma-1 in the no-cut unicyclic stratum", "case_regime": "Exact worst-case closure of the no-cut branch of GATE004BG; sole-cut branch and GATE004BF remain open",
+      "evidence": "proofs/GATE-004BG-no-cut.md; proofs/LEMMA-160-unicyclic-tail-partition.md; proofs/LEMMA-161-external-leaf-defect-bound.md; artifacts/cycle-132-external-leaf-defect.md"
+    },
+    {
+      "id": "GATE004BI", "label": "EXPLORATORY",
+      "statement": "Every operational sole-cut unicyclic parent has a neutral clause restriction that prunes one resource.",
+      "computational_model": "Minimum unicyclic implication circuits in the sole-cut one-bit factorization", "uniformity": "Every individual non-uniform sole-cut parent; uniform clause family",
+      "circuit_size": "Exact N=j,r=1; downstream j-1 whole clauses; target restricted N+r at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted with one cycle", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors, formula external-leaf defects, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every sigma at least two and every j greater than K+sigma-1 in the sole-cut stratum", "case_regime": "Falsifiable worst-case remaining branch of GATE004BG; not full GATE004BE/BD/BA, a SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004BI-sole-cut-unicyclic-pruning.md; proofs/LEMMA-160-unicyclic-tail-partition.md; proofs/LEMMA-161-external-leaf-defect-bound.md; artifacts/cycle-132-external-leaf-defect.md"
+    },
+    {
+      "id": "LEMMA162", "label": "PROVED",
+      "statement": "Sole-cut unicyclic pruning holds whenever j-1 exceeds h_Y+3.",
+      "computational_model": "Sole-cut unicyclic implication circuits and downstream formula external-leaf restrictions", "uniformity": "Every individual non-uniform sole-cut parent satisfying the margin",
+      "circuit_size": "Exact parent N=j,r=1; target restricted N+r at most j", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted globally and one downstream", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors, tree ancestry, and undirected cycle rank over F_2",
+      "asymptotic_quantifiers": "Every j at least two and every sole-cut factorization with j-1 greater than h_Y+3", "case_regime": "Exact worst-case large-margin sole-cut closure; boundary cases and full GATE004BI remain open",
+      "evidence": "proofs/LEMMA-162-sole-cut-large-margin.md; proofs/LEMMA-161-external-leaf-defect-bound.md; artifacts/cycle-132-external-leaf-defect.md"
     }
   ]
 }

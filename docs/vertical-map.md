@@ -244,7 +244,11 @@ Adjacent collision-aware active branch:
                                       + LEMMA-160 (zero/one cut dichotomy and exact regional NOT split)
                                       <- GATE-004BG (active smallest brick): convert the split into survival
                                          - GATE-004BG-NOT-SPLIT-ONLY (no-go: regional counts omit gate functions)
-                                         <- use the two unique-cycle paths under neutral restriction (next attack)
+                                         + LEMMA-161 (at most one hidden private NOT per external leaf)
+                                         + GATE-004BG-NO-CUT (proved throughout the operational range)
+                                         <- GATE-004BI (active sole-cut brick)
+                                            + LEMMA-162 (proved when `j-1>h_Y+3`)
+                                            <- close the constant-width sole-cut boundary (next attack)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -877,7 +881,10 @@ GATE-004BF now isolates that unicyclic parent. Residual private-NOT locality
 does not lift through one cofactor. LEMMA-160 proves that the one-bit
 factorization cuts zero clauses, or exactly one with no upstream whole clause,
 and fixes the regional NOT counts. GATE-004BG must now turn that equality
-split into actual pruning using the two unique-cycle output paths.
+split into actual pruning. LEMMA-161 charges every nonprivate residual NOT to
+a distinct external leaf. This closes the no-cut branch throughout the
+operational range and, by LEMMA-162, the sole-cut branch whenever
+`j-1>h_Y+3`. GATE-004BI is the remaining constant-width sole-cut boundary.
 
 ### Parallel constructive audit: GATE-004AF
 
