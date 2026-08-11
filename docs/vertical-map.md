@@ -1367,6 +1367,13 @@ mask, so seals and masks cannot be counted again (NG-166). GATE-004DR is
 active: obtain path-complete mask cuts on enough actual hosts, or force a
 physical contradiction at the first two-sided reconvergence.
 
+LEMMA-227 partitions a two-sided zero-defect gate into exclusive one-sided
+masks and an overlap `01<->10` swap. A code-`10` crossbar preserves both AND
+and OR while realizing that table; physical padding leaves the table fixed
+while changing the ledger, so table-only resource attribution is NG-167.
+GATE-004DS is active: retain named
+divergence/reconvergence provenance and prove an exact minimum-cost payment.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

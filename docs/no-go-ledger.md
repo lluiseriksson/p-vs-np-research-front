@@ -3379,3 +3379,29 @@ seals, one mask of fanout `m`, unrestricted OR-tree depth and fan-in two/one;
 exact worst-case identities for every `m>=1`, assignment, and seal index; no
 randomness, advice, oracle, promise, distribution, field, or algebraic
 computation.
+
+## NG-167 — infer a physical resource from a two-sided overlap swap
+
+**Label: NO-GO**
+
+Scope: on the common support of two input defects, use only the `01<->10`
+function table from LEMMA-227 to name and charge a satisfying loss, non-bridge
+deletion, cycle coordinate, free host, or strict potential descent.
+
+Failure: GATE-004DR-TWO-SIDED-SWAP-ONLY builds a constant-free crossbar with
+control `q=u AND NOT t`. It is the identity on the three satisfying codes and
+swaps `(x,y)` at `10`; both input defects equal `q AND (x xor y)`. Nevertheless
+both `A OR B=x OR y` and `A AND B=x AND y` on every assignment. The ten-gate
+OR-output witness can be padded by double NOTs or by the constant-free identity
+`(z AND r) OR (z AND NOT r)=z`. Iteration changes gate identities, counts, and
+reconvergent cycle structure without changing the swap table. Thus the table
+does not determine a named, deduplicable physical resource. These realizations
+are highly nonminimal and do not refute an endpoint theorem using minimum cost,
+marked path provenance, and exact pruning maps.
+
+Model: one finite non-uniform single-output constant-free unrestricted
+AND/OR/NOT crossbar DAG; OR-output size ten versus a one-gate replacement,
+depth at most six, fan-in two/one and shared-control fanout; exact worst-case
+identities for all assignments to four raw inputs and both symmetric binary
+operations; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation beyond analytical `F_2` defect notation.

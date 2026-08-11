@@ -1464,11 +1464,18 @@ payment: `m` real hosts feed `m` parent-live seals through one shared mask, so
 masks and seals cannot be counted again (NG-166). GATE-004DR requires
 path-complete mask cuts on actual hosts or a two-sided physical contradiction.
 
+The one-hundred-and-ninety-first cycle classifies every two-sided zero-defect
+binary gate into exclusive support masks and an overlap swap `01↔10`. A
+constant-free code-`10` crossbar realizes the swap while preserving both AND
+and OR; function-preserving padding shows that the table alone determines no
+named, deduplicable physical resource (NG-167).
+GATE-004DS now requires marked divergence/reconvergence provenance and cost.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–190 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the exact code-10 defect, classify its cancellation, and close the one-sided semantic mask branch without double-counting masks or seals; path-complete certification of enough real hosts, two-path reconvergence, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–191 replace formula cost by shared-DAG cost, reject loss membership as expendability, formalize the noncircular cut interface, isolate the code-10 defect, close its one-sided semantic branch, and classify the two-sided overlap as a functional swap without double-counting it; path-complete certification of enough real hosts, physical swap provenance, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

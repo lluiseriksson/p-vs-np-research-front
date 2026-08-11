@@ -819,6 +819,10 @@
       "sha256": "0cad163f8c1faa62f6db15ee160584f9196b2b6e9fb35d6423f4fae80db429aa"
     },
     {
+      "path": "artifacts/cycle-191-two-sided-swap-audit.md",
+      "sha256": "c326cd0ec3af2eb15707dcddf34c3911fcf7e08e21e3e47b80906df72788de0a"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -844,7 +848,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "908754985591fcf8d1d06c1da2434e4a5719b7c2e1955587f73419468c8df645"
+      "sha256": "864a61e3415c229294f9aa38310724d348d7e0be7848cbdc549fdd634ca3438e"
     },
     {
       "path": "docs/problem-statement.md",
@@ -964,11 +968,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "d2ed592fcefb96e1ee7c189d111b4b696f8f008e5f0ba92e83b40e01e734d52f"
+      "sha256": "6ace7cb0211488c7e5f82659598cbb3686e618317a998b29b07f52a047f0c5a9"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "a55328ad630a4a62f6d147c5f9d45aa3a5daf6fc8c551f63b3b7aa937349c0cc"
+      "sha256": "60b0438b90e8dd58faa1c88f918296b90091dbc0705d09762e49223c0148613c"
     },
     {
       "path": "experiments/README.md",
@@ -1832,7 +1836,15 @@
     },
     {
       "path": "proofs/GATE-004DR-path-complete-mask-cuts-or-two-sided-reconvergence.md",
-      "sha256": "81de2372156e8e6e9a0478bc776de64c213b780f919c40e8c3eb716eb84a13e2"
+      "sha256": "c3e4661d878864841c158c9c9fb3a1524fefe59dde02ad8b0fdec05cb27d12cc"
+    },
+    {
+      "path": "proofs/GATE-004DR-two-sided-swap-only.md",
+      "sha256": "f84270c42edb6fdcb08836de3f9d8759bbe387998edd54cc4c90e32aee57c2cc"
+    },
+    {
+      "path": "proofs/GATE-004DS-physical-provenance-of-overlap-swaps.md",
+      "sha256": "be3f3e3fec7ee187e769067b1b5cb8bed5186263d6dbc44d24d3022b5118970f"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2891,8 +2903,12 @@
       "sha256": "68925f7fbdf4db09e912182dc84c8dc7dad339d4c8e32a763751ee9fb30e3818"
     },
     {
+      "path": "proofs/LEMMA-227-zero-defect-binary-gate-is-masks-plus-swap.md",
+      "sha256": "74489bff51e4811a288f08d64fe888a6397e2f8e61e7970540932e5d803f9842"
+    },
+    {
       "path": "README.md",
-      "sha256": "fd7ce1c1461bf58038dc769c1392100ef7e4b9db53a3561da868b692cc6d7226"
+      "sha256": "9fb496d8a7f4c2df3962d70330ae1505939d34899a4c6615c37e20e1cf0b264a"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2912,7 +2928,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "9b692f584d41809425b337c4141f542fffe159f469871d440fa504bd69cf87b3"
+      "sha256": "c23315a6cd98e8bd9a18ab144449af960c4d288a78c768595e168e66de98b509"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -3057,6 +3073,10 @@
     {
       "path": "verification/triple_component_audit.py",
       "sha256": "80403e3bf42570d4d8c33a7961e44852ab1c88af1d5096bf857bfbcb466e8d6a"
+    },
+    {
+      "path": "verification/two_sided_swap_audit.py",
+      "sha256": "52a7715e706ccdc197f1802330a870b2aa5b82a41d3284f673b3c901dfb5e53a"
     }
   ]
 }

@@ -42,3 +42,11 @@ no descent.
 | Field/algebraic model | Exact four-code cofactors, directed cuts, physical host sets, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base, refined endpoint, proposed host, cut path, mask, and two-sided cancellation branch |
 | Regime | Exact worst-case path-complete host-certification gate; not a SAT lower bound or terminal result |
+
+## Cycle-191 audit
+
+LEMMA-227 partitions the two-sided branch into exclusive one-sided masks and
+an overlap swap. NG-167 shows that the functional swap is not itself a lost
+gate or cycle coordinate. GATE-004DS replaces this branch with marked physical
+divergence/reconvergence provenance and exact minimum-cost payment. GATE-004DR
+remains `EXPLORATORY`.
