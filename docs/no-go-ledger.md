@@ -2377,3 +2377,22 @@ Model: abstract pairs of non-uniform cofactor witnesses and finite resource
 sets; no common-parent realizability, randomness, advice, oracle, promise,
 distribution, or algebraic model. This does not refute GATE-004BR. It closes
 cofactor-minimum-only gluing and leaves GATE-004BS on the actual common graph.
+
+## NG-118 — infer clause identity from common NOT survival
+
+**Label: NO-GO**
+
+Scope: use LEMMA-172's survival of every NOT under both nonzero primary
+cofactors to infer a tail clause whose private NOT has the same identity in
+both codes.
+
+Failure: the physical gate `NOT(u_i OR (x AND u_k))` survives both codes but
+is `NOT u_i` at `x=0` and `NOT(u_i OR u_k)` at `x=1`. Neutralizing clause
+`i` makes the first specialization constant while the second remains
+`NOT u_k`. No `NOT x` is used.
+
+Model: one explicit non-uniform local gate; no exact-parent minimum,
+resource-total, randomness, advice, oracle, promise, distribution, or
+algebraic model. This does not refute GATE-004BS. It closes survival-only
+identity and leaves GATE-004BT to prove uniform neutralization from the common
+minimum graph.

@@ -272,6 +272,9 @@ Adjacent collision-aware active branch:
                                             + GATE-004BR-ZERO-COFACTOR (proved by literal-times-cofactor reconstruction)
                                             - GATE-004BR-COFACTOR-MINIMA-ONLY (no-go: separate minima have no common identity)
                                             <- GATE-004BS (active smallest brick): two nonzero cofactors on one cyclic graph
+                                               + LEMMA-173 (one surviving NOT can change tail signature across codes)
+                                               - GATE-004BS-COMMON-SURVIVAL-ONLY (no-go: survival omits uniform neutralization)
+                                               <- GATE-004BT (active smallest brick): same NOT constant or cycle loss in both codes
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -940,6 +943,12 @@ is zero, GATE-004BR-ZERO-COFACTOR factors the base as a literal times the other
 cofactor and closes the case. Separate cofactor minima cannot be glued at
 maximum-plus-one resource without shared identities. GATE-004BS now isolates
 two distinct nonzero cofactors on the same downstream graph.
+
+LEMMA-173 shows that even a physical NOT surviving both codes can change from
+`NOT u_i` to `NOT(u_i OR u_k)` without any `NOT x`. Thus common survival does
+not imply a stable clause resource. GATE-004BT replaces that failed inference
+with the exact sufficient condition: one neutral clause must give the same
+NOT constant, or destroy the same cycle coordinate, in both primary codes.
 
 ### Parallel constructive audit: GATE-004AF
 

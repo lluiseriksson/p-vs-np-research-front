@@ -13,9 +13,10 @@ Some neutral tail-clause restriction in the common parent graph leaves
 `N+r<=j+1`.
 
 Separate minimum circuits for `H_0 W_{j-1}` and `H_1 W_{j-1}` do not suffice,
-by GATE-004BR-COFACTOR-MINIMA-ONLY. The proof must identify a tail resource
-that survives with the same identity in both cofactor codes, or show that a
-neutral tail restriction breaks one of the two shared `x` paths.
+by GATE-004BR-COFACTOR-MINIMA-ONLY. LEMMA-173 further shows that common gate
+survival does not preserve clause signature. GATE-004BT is the next sufficient
+brick: find a NOT with the same neutral constant in both codes, or a common
+cycle coordinate lost in both.
 
 ## Model card
 

@@ -1139,11 +1139,17 @@ literal-times-cofactor reconstruction. Independently minimal cofactor circuits
 cannot be glued from their scalar bounds alone. GATE-004BS now isolates two
 distinct nonzero cofactors on their common cyclic graph.
 
+The one-hundred-and-fortieth cycle tests whether common survival supplies a
+common clause identity. LEMMA-173 gives a one-NOT gadget that survives both
+primary codes while changing from clause-private to mixed-tail. That route is
+`NO-GO`. GATE-004BT now asks for the exact stronger event: the same NOT
+constant or the same cycle loss under one neutral clause in both codes.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–139 reduce the two-excess remainder to two distinct nonzero primary cofactors on one cyclic graph. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–140 reduce the two-excess remainder to uniform neutralization across two nonzero primary cofactors. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

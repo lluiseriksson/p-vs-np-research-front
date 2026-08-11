@@ -5178,7 +5178,31 @@
       "computational_model": "One common pruned two-excess circuit with a degree-two primary source and two distinct nonzero base cofactors", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
       "circuit_size": "Exact parent N+r=j+2; target restricted N+r at most j+1; cofactor resources rigid", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Common-graph Boolean cofactors and undirected cycle rank over F_2",
       "asymptotic_quantifiers": "Every operational j greater than K+sigma-2, sigma at least three, and GATE004BR parent with two nonzero cofactors", "case_regime": "Falsifiable worst-case remaining subgate of GATE004BR; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BS-two-nonzero-primary-cofactors.md; proofs/LEMMA-172-primary-cofactor-resource-rigidity.md; artifacts/cycle-139-primary-cofactor-rigidity.md"
+      "evidence": "proofs/GATE-004BS-two-nonzero-primary-cofactors.md; proofs/GATE-004BS-common-survival-only.md; proofs/GATE-004BT-uniform-neutral-resource.md; artifacts/cycle-140-common-survival-audit.md"
+    },
+    {
+      "id": "LEMMA173", "label": "PROVED",
+      "statement": "A physical NOT can survive both primary cofactors while changing from a clause-private to a mixed-tail signature.",
+      "computational_model": "One explicit non-uniform AND/OR/NOT gate gadget under a primary-input cofactor", "uniformity": "Explicit non-uniform gadget; no minimum-parent realization claim",
+      "circuit_size": "One outer NOT, one OR, and one AND; no global resource assertion", "circuit_depth": "Three in the displayed basis", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean substitution only",
+      "asymptotic_quantifiers": "Every pair of distinct tail variables and both values of the primary bit", "case_regime": "Exact semantic witness; not a GATE004BS counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-173-surviving-NOT-can-change-tail-signature.md; artifacts/cycle-140-common-survival-audit.md"
+    },
+    {
+      "id": "GATE004BS-COMMON-SURVIVAL-ONLY", "label": "NO-GO",
+      "statement": "Common physical NOT survival does not imply common clause identity or uniform neutralization.",
+      "computational_model": "Explicit mixed primary-tail NOT gadget and abstract common-survival inference", "uniformity": "Non-uniform local witness; no minimum-circuit realization claim",
+      "circuit_size": "One surviving NOT gadget; no parent resource assertion", "circuit_depth": "Constant", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and gate support only",
+      "asymptotic_quantifiers": "Every tail with at least two distinct negative variables", "case_regime": "Structural no-go for common-survival-only identity; not a refutation of GATE004BS or a SAT lower bound",
+      "evidence": "proofs/GATE-004BS-common-survival-only.md; proofs/LEMMA-173-surviving-NOT-can-change-tail-signature.md; docs/no-go-ledger.md NG-118; artifacts/cycle-140-common-survival-audit.md"
+    },
+    {
+      "id": "GATE004BT", "label": "EXPLORATORY",
+      "statement": "One neutral clause makes the same NOT constant or destroys the same cycle coordinate in both primary codes.",
+      "computational_model": "One common minimum two-excess circuit under both nonzero primary cofactors and neutral tail restrictions", "uniformity": "Every individual non-uniform GATE004BS parent; uniform symmetric tail",
+      "circuit_size": "Exact parent N+r=j+2; one uniform resource loss implies target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean two-code equality and common undirected cycle space over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BS parent with two distinct nonzero cofactors", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BS; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BT-uniform-neutral-resource.md; proofs/LEMMA-173-surviving-NOT-can-change-tail-signature.md; artifacts/cycle-140-common-survival-audit.md"
     }
   ]
 }

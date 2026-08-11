@@ -615,6 +615,10 @@
       "sha256": "7e6cf6642644ee314227cc47f4f7887028e684f52fbb79f375a4a5872eb30542"
     },
     {
+      "path": "artifacts/cycle-140-common-survival-audit.md",
+      "sha256": "5bb77a139cacfd81854206e471c828d026374c3b2535f2d5ce7bf3912897deec"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -640,7 +644,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "19cc06b500be9fefa3076331156a4396c67ef51909a76d88ae661892efc93490"
+      "sha256": "d0fe5818041ee2861719511f9548d6cae94dec52382815e544354fc2ef0f03f1"
     },
     {
       "path": "docs/problem-statement.md",
@@ -648,7 +652,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "88845f5561b5f5cfdd882a4c67506ca1d60ef714af0477431bcd4cf753a115e1"
+      "sha256": "36e8c3383c802854d7efb02c67c5f7bde823ad325ed9d45926ccffefdd5ae783"
     },
     {
       "path": "docs/result-labels.md",
@@ -760,11 +764,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "08139d8046c171211c3a26f5740647957f307d9dc5132973ea8df857599898dd"
+      "sha256": "cc7da6c98b9921101bf0a111311f8d11e13e4693b53168b552fe2dc183d00751"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "548d07292762de88b8aa3f562ff221c4fef2ca609c668e6160f3acb8e6696a05"
+      "sha256": "b88640951a8917c6824079a99fa06adbb3dba037725b167dd2d2dd709bef83dd"
     },
     {
       "path": "experiments/README.md",
@@ -1219,8 +1223,16 @@
       "sha256": "b2c31e16388694f875255d618151095f5ffcf2744583fc5c4b7676229c72d8ff"
     },
     {
+      "path": "proofs/GATE-004BS-common-survival-only.md",
+      "sha256": "e71c30d46e4d48612045a44afbcdca2c3a1005694f2300241389541a2220e229"
+    },
+    {
       "path": "proofs/GATE-004BS-two-nonzero-primary-cofactors.md",
-      "sha256": "ecc678c940270bd9e7e8e2ee533fe75e2119fa656aaa9fff0dce54a99ded5dec"
+      "sha256": "efdd599659f2a42c75e1abdecffdef8cf44a021f806a88a510e01bcb74306825"
+    },
+    {
+      "path": "proofs/GATE-004BT-uniform-neutral-resource.md",
+      "sha256": "255756c96de3cf7a4bc8b217cb9ccc703f534a3b2810a4f855275f0ef0ad9489"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2071,8 +2083,12 @@
       "sha256": "177977c6e8afaec55d910cfc68ec8037df2a38cc4fafda0bfb043b2d98be0347"
     },
     {
+      "path": "proofs/LEMMA-173-surviving-NOT-can-change-tail-signature.md",
+      "sha256": "abc637f0f480a683738ec01e108e67ad3875ccea066232c37472da25a0ebd6a9"
+    },
+    {
       "path": "README.md",
-      "sha256": "44143de3641153a7513fb0455e83a5c962b0770e45f5de6f15874b021562d978"
+      "sha256": "84e380afb7392b9cb1067deed720d0f8f28228aa25bff0c7b1b9b3d04489ed77"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2084,7 +2100,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "8d515a0a6f569724f006c2fd66ac4c1f4202d4e80695143312f7ee415f2280f0"
+      "sha256": "3b069f7d276a33007dedd0eb9363cff19ebea8fe5516c4a83f7011f9a6c1dc5d"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
