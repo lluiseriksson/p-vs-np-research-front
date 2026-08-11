@@ -795,6 +795,10 @@
       "sha256": "d5c1e9aa00ecfcc26c083656f4802a5d7321ea4661b94888d8a6c1a0fa31277c"
     },
     {
+      "path": "artifacts/cycle-185-restriction-loss-interface-audit.md",
+      "sha256": "4e266fa3bea7dba0d443077bbf18ab42476f45703593136fc3396a491f24b004"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -820,7 +824,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8c27e06f67951ccfca9f2cf8a7d390e1d86f8896b6ff0379916213abdbe43744"
+      "sha256": "90ae9f1c1b0cbfe5a29512e90ae0892d3d001df6337ff6d64f8f02f3e23be613"
     },
     {
       "path": "docs/problem-statement.md",
@@ -940,11 +944,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "1ca5cec66635aeb4cd31c8f5b9b55c82d37338d032775e52cb986ab211d0654c"
+      "sha256": "7d68fc5efda81f03fe1d24f23ac16821e7082f12edb16e5219127a7d536c1595"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "71cc15f6e3565fe9d3a690cd061a25a4ed115e186325540f110c9450aeabe8c8"
+      "sha256": "a04aef7f011b7d1c7ea22d5e29fb3aae4b163480c282d13cdf37d8226483d238"
     },
     {
       "path": "experiments/README.md",
@@ -1760,7 +1764,15 @@
     },
     {
       "path": "proofs/GATE-004DL-bound-circuit-deficit-by-oriented-residual.md",
-      "sha256": "3e2c55353de7abc119d63e323db353b3d3d77ba6ea72e90f4eea89520a8ee443"
+      "sha256": "c3c819420b9f960ae3ba27855a203d7bece5aad29869cac34778e9b8b2311773"
+    },
+    {
+      "path": "proofs/GATE-004DL-restriction-loss-as-free-host.md",
+      "sha256": "e3a2fd867c99e9dc419acf7044475d07bfaaf7fde18fa7ed5f6529a132db9eab"
+    },
+    {
+      "path": "proofs/GATE-004DM-certify-parent-preserving-loss-hosts.md",
+      "sha256": "5cf9db309928a4cc6b56c1e0608fed55ca78d18e2acd066bb69765da238399ed"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2787,8 +2799,12 @@
       "sha256": "eb43bfc8c22e8be538c796dda85ef90c0e2a469faaae618c72e9901bec6656ed"
     },
     {
+      "path": "proofs/LEMMA-219-restriction-lost-gates-can-remain-parent-essential.md",
+      "sha256": "c632a95ae7fbb5cc099b0d2848e958abb6e0766d3aa6642273e2c4e250c43590"
+    },
+    {
       "path": "README.md",
-      "sha256": "c7d878851dde85b20459802e42039a729d9e9db5fe9698be9451c38ed1da2cea"
+      "sha256": "4e6a8a600b372bbdb11c41ee27b072e239d5313e2137bc8a043d8e8d8be5319f"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2804,7 +2820,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "25a72d98db6e5edfb47b6bb1dec978cf5b6f4fe2a7f63fd35453aee0e769bb13"
+      "sha256": "7e8ad13bc487341288d6329ad2e5b034f093eb52ce247876c0470c2f738476ac"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
@@ -2877,6 +2893,10 @@
     {
       "path": "verification/quintet_type_audit.py",
       "sha256": "4029292bc06686074e262a4d53384d1929a935562d45d7d0d2fdad12fb7bf2c9"
+    },
+    {
+      "path": "verification/restriction_lost_parent_essential_audit.py",
+      "sha256": "5bad3d3657340d4396eede51d38aebe2b379fc3ba0fab2aede70b43261766a7a"
     },
     {
       "path": "verification/sat_encoding.py",

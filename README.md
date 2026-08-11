@@ -1430,11 +1430,16 @@ The one-hundred-and-eighty-fourth cycle deducts the carrier gates `{g,h}` from
 the pruning ledger. Only two residual losses remain in AND→OR and at most four
 in OR→AND (NG-160). GATE-004DL uses these orientation-specific caps.
 
+The one-hundred-and-eighty-fifth cycle shows that even an exact two-gate
+restriction loss need not provide a parent-level host: both lost gates can be
+essential outside the restriction (NG-161). GATE-004DM requires a complete
+four-code consumer-interface certificate before charging a lost gate.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–184 replace formula cost by shared-DAG cost and reduce the uncharged pruning budget to two/four by carrier orientation; the aligned-circuit deficit bound or external resources, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–185 replace formula cost by shared-DAG cost, reduce the pruning budget to two/four, and reject loss membership as automatic parent expendability; four-code host certification, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

@@ -3253,3 +3253,20 @@ carrier and cannot fund `D_b^DAG`. This does not exclude external resources.
 Model: size-three minimum non-uniform unrestricted AND/OR/NOT plateau; exact
 two-gate physical loss sets, unrestricted depth/fanout, no randomness, advice,
 oracle, promise, distribution, field, or algebraic computation.
+
+## NG-161 — infer a free parent host from restriction loss
+
+**Label: NO-GO**
+
+LEMMA-219 constructs, for every `m>=1`, a single-output circuit in which
+exactly `m` named binary gates disappear at `v=0`, while replacing them by
+their zero-cofactor wires changes the unrestricted parent. At `m=2` this is an
+exact two-gate restriction loss. Thus membership in a physical loss set does
+not prove parent expendability; every unrestricted consumer must be preserved
+or jointly replaced. The family is nonminimal and not an endpoint.
+
+Model: uniform family of finite non-uniform constant-free AND/OR circuits;
+size `4m-1`, exactly `m` lost binary gates, arbitrary OR-tree depth, fan-in two
+and fanout one in the witness; exact worst-case restrictions for every
+`m>=1`; no randomness, advice, oracle, promise, distribution, field, or
+algebraic computation.

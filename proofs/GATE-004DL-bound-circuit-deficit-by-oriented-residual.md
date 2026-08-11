@@ -41,3 +41,10 @@ incomparable branches remain explicit.
 | Field/algebraic model | Minimum aligned Boolean DAGs, oriented physical loss sets, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and residual boundary in either carrier orientation |
 | Regime | Exact worst-case oriented-deficit gate; not a SAT lower bound or terminal result |
+
+## Cycle-185 audit
+
+LEMMA-219 shows that restriction deletion does not imply parent-level
+expendability, even for an exact two-gate loss. GATE-004DM therefore replaces
+raw injection from the `2/4` sets by four-code consumer-interface
+certification. GATE-004DL remains `EXPLORATORY`.
