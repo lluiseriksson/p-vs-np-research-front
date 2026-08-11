@@ -314,6 +314,9 @@ Adjacent collision-aware active branch:
                                                                                       + LEMMA-186 (arbitrarily many fronts can have signature rank one)
                                                                                       - GATE-004CF-FRONT-COUNT-ONLY (no-go: fronts do not charge injectively)
                                                                                       <- GATE-004CG (active smallest brick): separate three neutralization regions
+                                                                                         + LEMMA-187 (difference carriers and binary boundaries are canonical)
+                                                                                         - GATE-004CG-CARRIER-COVERAGE-ONLY (no-go: carriers can survive as base)
+                                                                                         <- GATE-004CH (active smallest brick): cross-code absorption incompatibility
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -1084,6 +1087,15 @@ GATE-004CG is the active refinement: define path-level obligations for raw
 `t`, the earliest mixed NOT, and the shared exit, then prove that no one rank-
 neutral contraction event covers two of their regions unless it yields the
 private certificate or a forbidden non-bridge deletion.
+
+LEMMA-187 canonically defines the gate-function carrier for any cofactor pair
+and proves that equal-output boundaries are binary. Canonical support still
+does not imply deletion: one upstream contraction can leave arbitrarily many
+pair-sensitive carrier gates alive as essential base computation (NG-132),
+matching LEMMA-178's mandatory survivor. GATE-004CH is the active repair: for
+every triple of minimum satisfying prunings, prove cross-code carrier
+absorption incompatible or convert the alignment into the private/non-bridge
+contradiction.
 
 ### Parallel constructive audit: GATE-004AF
 

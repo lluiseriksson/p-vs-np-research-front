@@ -5514,7 +5514,31 @@
       "computational_model": "Minimum unrestricted plateau DAG with earliest mixed NOT, shared-exit cycle, and exact pruning events", "uniformity": "Every individual non-uniform operational GATE004CF parent; uniform fresh implication pair",
       "circuit_size": "Three event-disjoint obligations versus exactly two binary eliminations, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor obligations and undirected cycle minors over F_2",
       "asymptotic_quantifiers": "Every operational shared-exit plateau parent and every minimum satisfying pruning", "case_regime": "Exact worst-case neutralization-separator gate; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004CG-three-region-neutralization-separator.md; proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; artifacts/cycle-153-front-rank-audit.md"
+      "evidence": "proofs/GATE-004CG-three-region-neutralization-separator.md; proofs/LEMMA-186-many-cancellation-fronts-have-signature-rank-one.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; proofs/GATE-004CH-cross-code-carrier-absorption.md; artifacts/cycle-154-carrier-absorption-audit.md"
+    },
+    {
+      "id": "LEMMA187", "label": "PROVED",
+      "statement": "For any two restrictions, the Boolean-difference carrier is pruning-independent, is sourced at differing raw inputs, and has only binary equal-output boundary gates.",
+      "computational_model": "Finite unrestricted AND/OR/NOT DAG under two fixed input restrictions", "uniformity": "Every individual finite non-uniform circuit and restriction pair",
+      "circuit_size": "No bound; exact canonical carrier and binary-boundary statement", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Equality and symmetric difference of Boolean cofactor functions",
+      "asymptotic_quantifiers": "Every finite circuit, every pair of restrictions, and every carrier-to-output path", "case_regime": "Exact worst-case support theorem; not an elimination lower bound, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; artifacts/cycle-154-carrier-absorption-audit.md"
+    },
+    {
+      "id": "GATE004CG-CARRIER-COVERAGE-ONLY", "label": "NO-GO",
+      "statement": "Canonical carrier regions need not meet distinct eliminated gates because arbitrarily many pair-sensitive gates can survive as essential base computation after one upstream contraction.",
+      "computational_model": "Explicit unrestricted AND/OR/NOT fanout DAG under restriction and surviving base absorption", "uniformity": "Uniform finite family for every m at least one; no minimum-parent claim",
+      "circuit_size": "O(m) pair-sensitive carrier gates survive after one upstream contraction", "circuit_depth": "Unrestricted target; logarithmic output-tree depth in the family", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactor carriers only",
+      "asymptotic_quantifiers": "Every positive integer m and every assignment to the displayed inputs", "case_regime": "Structural no-go for carrier-coverage-only charging; not a plateau counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004CG-carrier-coverage-only.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; docs/no-go-ledger.md NG-132; artifacts/cycle-154-carrier-absorption-audit.md"
+    },
+    {
+      "id": "GATE004CH", "label": "EXPLORATORY",
+      "statement": "Across every triple of minimum satisfying prunings, one code exposes three canonical carrier regions in distinct elimination classes, or shared absorption/exposure yields a private or non-bridge contradiction.",
+      "computational_model": "Minimum unrestricted plateau DAG and three rank-neutral pruning maps to minimum base circuits", "uniformity": "Every individual non-uniform operational GATE004CG parent; uniform fresh implication pair",
+      "circuit_size": "One code with three exposed regions versus exactly two binary eliminations, or private/non-bridge contradiction", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Canonical Boolean-difference carriers and cycle minors over F_2",
+      "asymptotic_quantifiers": "Every operational parent and every triple of minimum prunings for 00,01,11", "case_regime": "Exact worst-case cross-code absorption gate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004CH-cross-code-carrier-absorption.md; proofs/LEMMA-187-canonical-Boolean-difference-carrier.md; artifacts/cycle-154-carrier-absorption-audit.md"
     }
   ]
 }

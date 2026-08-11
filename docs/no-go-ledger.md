@@ -2668,3 +2668,26 @@ oracle, promise, distribution, or algebraic computation beyond the Boolean
 function vector space over `F_2`. This is not a plateau counterexample. It
 closes front-count-only charging and leaves GATE-004CG to prove three event-
 separated path regions using minimum-parent structure.
+
+## NG-132 — require one eliminated gate per canonical carrier region
+
+**Label: NO-GO**
+
+Scope: after defining pruning-independent Boolean-difference carriers, infer
+that every such region must meet a distinct eliminated binary gate in a
+satisfying restriction.
+
+Failure: let `h=u OR x`, let `g_i=h OR z_i`, and combine all `g_i` in a binary
+AND tree. Every `g_i` depends on `u` in the parent. Under `u=0`, the single
+upstream `h` contracts to `x`, while every `g_i` survives as the essential
+binary base gate `x OR z_i`. Thus arbitrarily many carrier routes are absorbed
+into surviving base computation after one upstream event. LEMMA-178 likewise
+forces at least one pair-sensitive survivor in every hypothetical plateau
+minor.
+
+Model: uniform `O(m)`-size non-uniform AND/OR/NOT family; unrestricted target
+depth/fanout, fan-in two/one; no minimum or plateau claim, randomness, advice,
+oracle, promise, distribution, or algebraic computation. This is not a
+plateau counterexample. It closes single-code carrier-coverage counting and
+leaves GATE-004CH to compare absorption across all three minimum satisfying
+prunings.

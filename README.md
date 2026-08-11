@@ -1231,11 +1231,18 @@ injective front-to-deletion charge is therefore `NO-GO`. GATE-004CG now asks
 for three path-defined neutralization regions that no contraction event can
 cover twice.
 
+The one-hundred-and-fifty-fourth cycle makes the regions canonical but rejects
+single-code coverage. LEMMA-187 defines pruning-independent Boolean-difference
+carriers and binary cancellation boundaries. Nevertheless arbitrarily many
+carrier gates may survive as base computation after one contraction, so one-
+elimination-per-region is `NO-GO`. GATE-004CH now compares absorption across
+all three minimum satisfying prunings.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–153 reduce the two-excess remainder to separating three path-defined neutralization regions within an exact two-deletion budget before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–154 reduce the two-excess remainder to cross-code incompatibility of carrier absorption across three minimum minors before the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

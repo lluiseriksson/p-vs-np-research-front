@@ -31,6 +31,12 @@ the parent, and coverage must be proved for every valid pruning to a minimum
 `A` circuit. Merely counting cancellation fronts is invalid by
 GATE-004CF-FRONT-COUNT-ONLY.
 
+LEMMA-187 supplies pruning-independent carrier regions, but carrier membership
+does not imply elimination. GATE-004CG-CARRIER-COVERAGE-ONLY shows that many
+pair-sensitive carrier gates may survive after one upstream contraction.
+GATE-004CH therefore moves the missing assertion to cross-code incompatibility
+among all three minimum pruning maps.
+
 ## Model card
 
 | Field | Value |
