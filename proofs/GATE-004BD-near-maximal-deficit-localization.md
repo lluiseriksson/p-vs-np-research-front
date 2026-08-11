@@ -1,6 +1,6 @@
 # GATE-004BD — localize the near-maximal deficit
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Use the notation of LEMMA-153 and assume
 
@@ -10,9 +10,9 @@ Put
 
 `k_1=min(m,K+sigma-1)`.
 
-## Falsifiable theorem
+## Theorem
 
-Prove
+Then
 
 `Delta_{k_1}=sigma-1`.
 
@@ -20,10 +20,11 @@ Equivalently, prove that `J_{k_1}` has a circuit with
 
 `N+r<=k_1+1`.
 
-A compatible canonical instance whose deficit first reaches `sigma-1` after
-`K+sigma-1` clauses falsifies the theorem.
+GATE-004BE proves that whenever `Delta_j=sigma-1` above the target prefix,
+some neutral clause restriction gives `mu_{j-1}<=j`. LEMMA-153 and monotonicity
+of deficits force `Delta_{j-1}=sigma-1`. Iterating reaches `k_1`.
 
-## Why this is the next stratum
+## Relation to the next stratum
 
 GATE-004BB and LEMMA-157 close the apparent maximal endpoint by proving it
 collapses to `sigma=0`. The first unresolved resource excess is therefore
@@ -32,9 +33,9 @@ collapses to `sigma=0`. The first unresolved resource excess is therefore
 
 Unlike the maximal case, a satisfying-base restriction with resource budget
 `m+1` need not be a formula with exactly `m` NOT gates: rank one, an extra
-NOT, or a higher-rank equality case of LEMMA-139 remain possible. The next
-attack must classify these one-excess topologies or prove a one-excess
-restriction/exchange theorem.
+NOT, or a higher-rank equality case of LEMMA-139 remain possible.
+GATE-004BE and LEMMA-164/165 now supply that one-excess restriction theorem.
+The next unresolved level is resource excess two, isolated as GATE-004BM.
 
 ## Model card
 
@@ -50,4 +51,4 @@ restriction/exchange theorem.
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle rank over `F_2` and Boolean restriction semantics |
 | Asymptotic quantifiers | Every sufficiently large compatible canonical instance with `sigma>=2` and `Delta_m=sigma-1` |
-| Regime | Falsifiable worst-case near-maximal subgate of GATE-004BA; not a SAT lower bound or terminal result |
+| Regime | Exact worst-case near-maximal subgate of GATE-004BA; not a SAT lower bound or terminal result |

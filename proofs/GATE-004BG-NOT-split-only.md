@@ -32,4 +32,4 @@ from LEMMA-120.
 | Oracle access | None |
 | Field/algebraic model | Boolean cofactors and integer regional counts only |
 | Asymptotic quantifiers | Every permitted no-cut or sole-cut count split |
-| Regime | Structural no-go for NOT-split-only survival; GATE-004BG/BF are later proved using tree wiring and LEMMA-163, while GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
+| Regime | Structural no-go for NOT-split-only survival; GATE-004BG/BF were later proved using tree wiring and LEMMA-163 and GATE-004BE/BD using LEMMA-164/165, while GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |

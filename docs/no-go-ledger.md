@@ -2276,8 +2276,9 @@ survival. No restriction loses a resource.
 Model: explicit finite resource/survival tables; no Boolean-circuit
 realizability, depth, fan-in, uniformity, randomness, advice, oracle, promise,
 distribution, or algebraic model. The table does not refute GATE-004BE. It
-closes only stratum-count-only pruning; GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/
-AG/AE remain open.
+closes only stratum-count-only pruning. LEMMA-164/165 later prove
+GATE-004BE/BD using topology and Boolean residuals; GATE-004BA/AZ/AY/AX/AW/
+AV/AU/AG/AE remain open.
 
 ## NG-113 — lift a residual private NOT directly to the parent
 
@@ -2297,7 +2298,8 @@ unicyclic-parent, or full-neutral-restriction survival claim; OR fan-in two,
 NOT fan-in one, unrestricted ambient depth/fanout; no randomness, advice,
 oracle, promise, distribution, or algebraic model. Residual-locality-only
 lifting is closed. LEMMA-160/163 later prove GATE-004BF using the full
-factorization; GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+factorization; LEMMA-164/165 later prove GATE-004BE/BD; GATE-004BA/AZ/AY/AX/
+AW/AV/AU/AG/AE remain open.
 
 ## NG-114 — infer unicyclic survival from regional NOT counts
 
@@ -2316,5 +2318,6 @@ Model: abstract regional NOT allocations decorated by explicit non-uniform
 mixed Boolean gate functions; no minimum unicyclic realization claim;
 unrestricted ambient depth, OR fan-in two and NOT fan-in one; no randomness,
 advice, oracle, promise, distribution, or algebraic model. NOT-split-only
-survival is closed. Tree wiring and LEMMA-163 later prove GATE-004BG/BF;
-GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open.
+survival is closed. Tree wiring and LEMMA-163 later prove GATE-004BG/BF, and
+LEMMA-164/165 later prove GATE-004BE/BD; GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE
+remain open.

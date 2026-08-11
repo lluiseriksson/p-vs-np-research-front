@@ -1,13 +1,13 @@
 # GATE-004BE — one neutral clause prunes one resource
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 Assume `sigma>=2`, `Delta_j=sigma-1`, and let `C` be a minimum pruned circuit
 for `J_j`. LEMMA-153 gives `N(C)+r(C)=j+1`.
 
-## Falsifiable theorem
+## Theorem
 
-Prove that some clause `i` has the following property: after the neutral
+Some clause `i` has the following property: after the neutral
 restriction
 
 `(u_i,t_i)=(0,1)`,
@@ -16,8 +16,9 @@ constant propagation and pruning leave a circuit for `J_{j-1}` with
 
 `N+r<=j`.
 
-A compatible minimum circuit for which every neutral clause restriction
-retains all `j+1` resources falsifies this circuit-level statement.
+LEMMA-159 excludes rank zero under `sigma>=2`. GATE-004BF closes rank one,
+and GATE-004BL closes every rank at least two. These cases exhaust the parent
+cycle rank.
 
 ## Sufficiency for GATE-004BD
 
@@ -30,10 +31,10 @@ Deficits are nondecreasing by LEMMA-152, so
 to `min(m,K+sigma-1)` proves GATE-004BD. Clause symmetry identifies the
 surviving set with the canonical prefix.
 
-LEMMA-158 supplies the complete satisfying-base count strata. The unresolved
-step is to attach the single excess resource to circuit topology strongly
-enough that some neutral clause restriction deletes it or one private tail
-resource.
+LEMMA-158 supplies the complete satisfying-base count strata. The proof above
+does not follow from those counts alone: LEMMA-164 supplies the required core
+source and rank drop, while LEMMA-165 supplies the Boolean interface
+dichotomy.
 
 ## Model card
 
@@ -49,4 +50,4 @@ resource.
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle rank over `F_2`, NOT gates, and Boolean restriction semantics |
 | Asymptotic quantifiers | Every `j>=2` in every compatible near-maximal descent stratum with `sigma>=2` |
-| Regime | Falsifiable worst-case sufficient subgate for GATE-004BD; not full GATE-004BA, a SAT lower bound, or a terminal result |
+| Regime | Exact worst-case sufficient subgate proving GATE-004BD; not full GATE-004BA, a SAT lower bound, or a terminal result |

@@ -1095,11 +1095,20 @@ the duplicated source constant and destroys the unique cycle. GATE-004BI,
 GATE-004BG, and GATE-004BF are promoted manually to `PROVED`. GATE-004BL now
 isolates the remaining one-excess parents of cycle rank at least two.
 
+The one-hundred-and-thirty-fourth cycle closes every higher parent rank.
+LEMMA-164 finds a no-bypass formula source in any cyclic core and proves that
+fixing its bit lowers rank by at least one. LEMMA-165 extends the zero/one-cut
+dichotomy and sole-cut base exclusion to that source. Their resource audit
+proves GATE-004BL; together with the rank-zero and rank-one cases this proves
+GATE-004BE, whose iteration proves GATE-004BD. GATE-004BM opens the exact
+two-excess stratum. A degree-two no-cut source can now meet the known bounds
+with equality, so equality topology is the next falsifiable brick.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–133 close the standalone/extreme-deficit boundaries and the full rank-one one-excess parent, leaving rank at least two. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–134 close the standalone/extreme-deficit boundaries and all one-excess parent ranks, opening the two-excess equality stratum. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

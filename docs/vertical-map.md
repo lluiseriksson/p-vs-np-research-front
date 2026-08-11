@@ -234,9 +234,9 @@ Adjacent collision-aware active branch:
                                 + GATE-004BC (proved: every neutral clause prunes its private NOT)
                                    - GATE-004BC-STATE-COUNTS-ONLY (no-go: constant potential permits label swaps)
                                    + LEMMA-157 (canonical pair subtrees consume all NOTs and force `sigma=0`)
-                             <- GATE-004BD (active smallest brick): localize resource excess one `mu_m=m+1`
+                             + GATE-004BD (proved): localize resource excess one `mu_m=m+1`
                                 + LEMMA-158 (four exact satisfying-base residual strata)
-                                <- GATE-004BE (active smallest brick): one neutral clause lowers `N+r` by one
+                                + GATE-004BE (proved): one neutral clause lowers `N+r` by one
                                    - GATE-004BE-STRATUM-COUNTS-ONLY (no-go: integer pairs omit survival)
                                    + LEMMA-159 (global formula excess one is impossible when `sigma>=2`)
                                    + GATE-004BF (proved: every unicyclic parent prunes)
@@ -249,8 +249,11 @@ Adjacent collision-aware active branch:
                                          + GATE-004BI (proved: neutralizing the cut destroys the cycle)
                                             + LEMMA-162 (proved when `j-1>h_Y+3`)
                                             + LEMMA-163 (sole-cut upstream contains no base input)
-                                <- GATE-004BL (active smallest brick): prune higher-rank one-excess parents
-                                   <- generalize one-bit residual partitions to multiple cycle sources (next attack)
+                                + GATE-004BL (proved): prune higher-rank one-excess parents
+                                   + LEMMA-164 (a core formula source lowers rank by its degree minus one)
+                                   + LEMMA-165 (general one-bit zero/one-cut and sole-cut base exclusion)
+                             <- GATE-004BM (active smallest brick): localize resource excess two `mu_m=m+2`
+                                <- classify degree-two no-cut equality or find a second interface reduction
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -851,7 +854,7 @@ clause family has at most `6s<K` clauses and cannot make the established
 `K-m` certificate negative. The next audit concerns signed clauses,
 overlapping clauses, and non-clausal slot predicates.
 
-### Current operational brick: GATE-004BD inside GATE-004BA
+### Current operational brick: GATE-004BM inside GATE-004BA
 
 The exact falsifiable statement and model card are in
 `proofs/GATE-004BA-small-saving-witness.md`. LEMMA-153 identifies every
@@ -870,27 +873,21 @@ pairs exhaust all NOTs, leaving a monotone read-once base and forcing
 `sigma=0`. Thus GATE-004BC and GATE-004BB are proved, but only because the
 apparent positive maximal stratum is empty.
 
-The current attack is `proofs/GATE-004BD-near-maximal-deficit-localization.md`.
-It isolates `Delta_m=sigma-1`, equivalently `mu_m=m+1`. The satisfying-base
-residual now admits a cycle, an extra NOT, or a higher-rank equality case, so
-read-once uniqueness no longer closes the topology. LEMMA-158 classifies the
-four exact residual count/rank strata. GATE-004BE is the smallest sufficient
-operation: one neutral clause must lower `N+r` by one. The integer strata
-alone contain no restriction-survival relation; topology or Boolean semantics
-must supply it. LEMMA-159 excludes the global formula with one extra NOT and
-forces every exact-formula residual to come from a parent with `N=m,r=1`.
-GATE-004BF now isolates that unicyclic parent. Residual private-NOT locality
-does not lift through one cofactor. LEMMA-160 proves that the one-bit
-factorization cuts zero clauses, or exactly one with no upstream whole clause,
-and fixes the regional NOT counts. GATE-004BG must now turn that equality
-split into actual pruning. LEMMA-161 charges every nonprivate residual NOT to
-a distinct external leaf. This closes the no-cut branch throughout the
-operational range and, by LEMMA-162, the sole-cut branch whenever
-`j-1>h_Y+3`. LEMMA-163 closes the remaining sole-cut edge: any upstream base
-bit would create at least three residual functions, impossible through one
-bit. Neutralizing the cut makes `z` constant and destroys the cycle. Thus the
-entire rank-one parent is closed. GATE-004BL is now exactly the remaining
-rank-`r>=2` range of GATE-004BE.
+GATE-004BD, at `Delta_m=sigma-1` or `mu_m=m+1`, is now proved. LEMMA-158
+classifies the residual strata, LEMMA-159 excludes the global formula parent,
+and LEMMA-160/163 close rank one. LEMMA-164 then finds a no-bypass formula
+source in every higher-rank core whose attained-bit restriction lowers rank
+by at least one. LEMMA-165 applies the same zero/one-cut Boolean dichotomy to
+that source. The no-cut resource inequalities contradict one-excess
+minimality, while in the sole-cut case neutralizing the cut makes the source
+constant and lowers rank. This proves GATE-004BL, exhausts every rank in
+GATE-004BE, and iterates to GATE-004BD.
+
+The current attack is `proofs/GATE-004BM-two-excess-localization.md`. It
+isolates `Delta_m=sigma-2`, equivalently `mu_m=m+2`. The previous source-rank
+calculation now has one unit of slack: a degree-two no-cut source can meet all
+known inequalities with equality. The smallest brick is to classify that
+equality topology or prove a second independent interface/rank reduction.
 
 ### Parallel constructive audit: GATE-004AF
 

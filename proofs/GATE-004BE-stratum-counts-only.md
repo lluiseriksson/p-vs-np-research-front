@@ -32,4 +32,4 @@ relation between clauses and resources.
 | Oracle access | None |
 | Field/algebraic model | Finite sets and integer resource partitions only |
 | Asymptotic quantifiers | Every `m>=1` in the abstract survival-table class |
-| Regime | Structural no-go for stratum-count-only pruning; GATE-004BE/BD/BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |
+| Regime | Structural no-go for stratum-count-only pruning; GATE-004BE/BD were later proved using LEMMA-164/165, while GATE-004BA/AZ/AY/AX/AW/AV/AU/AG/AE remain open |

@@ -591,6 +591,10 @@
       "sha256": "d97b4bfff9c0e9c5e794e3a8d04ec2d7dc7b97c27c6c6bbbe8edc4eb36df11c1"
     },
     {
+      "path": "artifacts/cycle-134-higher-rank-one-excess-closure.md",
+      "sha256": "eb424d119a0807fa721d898baff49105fedd7d05dd4ba9a3e94612ecb740e2d8"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -616,7 +620,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "a2d7c5846fd0c3f557f21a2dec65b651d946516f7b0795c74a4ad1e798294bd0"
+      "sha256": "b22ec819ce374fd982dfcd27b90305b2022e7ecea7c59c861c80fba1e68a4fe9"
     },
     {
       "path": "docs/problem-statement.md",
@@ -624,7 +628,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "14172179ab33a7777db09c29d4581eb7c76baab45db8e4d606bdf9dfb4620e29"
+      "sha256": "70a0a98882957e2466d8fc2ef5d7cbf76b3782c6cedd4160b2d38150490c072a"
     },
     {
       "path": "docs/result-labels.md",
@@ -736,11 +740,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "05fda95b99a08917854bad6e1c3abf28d700d8f070e489c74cfd57e766c443c4"
+      "sha256": "5bafc29077c65476bd518905e82c0333c486c7e34ff790fda2b533ac893bdbf5"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "365ce8b10f7de71e931256eace20c6bcc826353225a282b0fb1a1cc5e9df639d"
+      "sha256": "c7f9c65dcb5edc1d618e193a76e9b08e46d4a87e5eb8931c11b40e5ae8a887b1"
     },
     {
       "path": "experiments/README.md",
@@ -1108,19 +1112,19 @@
     },
     {
       "path": "proofs/GATE-004BD-near-maximal-deficit-localization.md",
-      "sha256": "c2c4f35bb5f8ad929032415bd4887c3933a2c99e915171d4fdc860ae66773e32"
+      "sha256": "405c336025d203d5ba00378432b168640df073fc97c892cf2b7fba759dc3aa99"
     },
     {
       "path": "proofs/GATE-004BE-one-clause-resource-pruning.md",
-      "sha256": "d8c3b53b281c68583b97d440765a8678f373c66ea12bf9be65b783ad28cfef35"
+      "sha256": "83e5b2de8ba711d29f62143bf7e2962276ec6a2b1021e0771c5868515a83b5ed"
     },
     {
       "path": "proofs/GATE-004BE-stratum-counts-only.md",
-      "sha256": "1061d8d21eff9308915544645f977923cc01fba895607e5e87a7a559f276b701"
+      "sha256": "32ca710410bbf71bd74b212b71ae75add44b59e819994c0234875d9248ec9bb1"
     },
     {
       "path": "proofs/GATE-004BF-residual-locality-only.md",
-      "sha256": "270fa06ed3bc706b7fd3705b6352c3ecf1708be81bae7b4539d19e9adf21829a"
+      "sha256": "d14752aab920e3c08e3b1b61544a00257f9bd5f43f1dee9e0aaf135c5db6e169"
     },
     {
       "path": "proofs/GATE-004BF-unicyclic-parent-pruning.md",
@@ -1132,7 +1136,7 @@
     },
     {
       "path": "proofs/GATE-004BG-NOT-split-only.md",
-      "sha256": "dc470d0264763c8b3ba9f52f7feb356cc59881c0ac3f9a01a54116227ccbd820"
+      "sha256": "7c2453032f005e58154ed6e27c881b2045fd207a33983b1df752954e75ffd2cc"
     },
     {
       "path": "proofs/GATE-004BG-unicyclic-split-survival.md",
@@ -1144,7 +1148,11 @@
     },
     {
       "path": "proofs/GATE-004BL-higher-rank-one-excess-pruning.md",
-      "sha256": "7f9c0bd41eeb8cbbf9a3214035d5340332139f720bb0505c7b895a312d325374"
+      "sha256": "a2e1ebed97cf8bf41085e3ee94f6cab3e5bd36bd6ec4c5c75d9382429751504c"
+    },
+    {
+      "path": "proofs/GATE-004BM-two-excess-localization.md",
+      "sha256": "ebe71bc735e9782138ce1bb8878709765fa3bec2efd5e5bd9fe9e37d857e3fcc"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -1959,8 +1967,16 @@
       "sha256": "1dbae3c9079e668b0ac2ff3ec7c000c58346eba8ddfe25891196b30126b358db"
     },
     {
+      "path": "proofs/LEMMA-164-cycle-source-rank-reduction.md",
+      "sha256": "1b36cbca1342ad166995543477d2c63ce5b59414c06edf9d98ff0013d554caf2"
+    },
+    {
+      "path": "proofs/LEMMA-165-general-one-bit-tail-dichotomy.md",
+      "sha256": "9c7de9aaf9b070a8f5accce9034412a0830512b15f4ed05cb890a940874d8fd3"
+    },
+    {
       "path": "README.md",
-      "sha256": "3a8006f7f615faf73fbc710a2e65201d997f4f0e5fabdfc0bfdc60d764943cc9"
+      "sha256": "0a9a40aac4dcd34695238330c92b71cb93bc11072ffb47260a8f6a85794327cc"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1972,7 +1988,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "6e6ed603f84af73d8b5ae6969bb928cc1f71b4747e53b1532b0ce2a12fff3831"
+      "sha256": "e4289ddb31d50abddd907b28c1569b7487028f43320024e7baa03758c121c9fb"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
