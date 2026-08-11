@@ -1,71 +1,42 @@
 # GATE-004AI — inject clause indices into negations or cycle coordinates
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
-## Falsifiable theorem
+Let `C` be a pruned circuit for `W_m`, with `N` NOT gates and cycle rank
+`t=B-5m+1`. The `m` clause indices admit an injection into the disjoint union
+of the `N` NOT gates and `t` coordinates of a cycle-space basis. Consequently
 
-Let `C` be a pruned unrestricted circuit for the four-positive/one-negative
-product `W_m`. Let `N` be its number of NOT gates and let
+`m<=N+t`.
 
-`t=B-5m+1`
+## Proof and exact bridge
 
-be the cycle-space dimension of its connected undirected output cone, where
-`B` is its number of binary gates. Prove that the `m` clause indices admit an
-injection into a disjoint union of the `N` NOT gates and `t` coordinates of
-some cycle-space basis. In particular,
+Fix any spanning tree of the connected output cone. LEMMA-141 proves Hall
+expansion for the dependency-cone neighborhoods of all clause-index subsets.
+Hall's theorem gives an injection into the NOT gates and non-tree edges. The
+fundamental cycles indexed by those non-tree edges form a cycle-space basis,
+so the targets have the required form.
 
-`m <= N+t`.
+Since `t=B-5m+1`,
 
-The theorem is falsified by any circuit for `W_m` with `N+t<m`; an alleged
-injection is also falsified by two clause indices receiving the same target.
+`N+t>=m iff B+N>=6m-1`.
 
-## Exact bridge to GATE-004AH
-
-The output cone has `5m+B+N` vertices and `2B+N` edges, so its cycle rank is
-exactly `t=B-5m+1`. Thus
-
-`N+t>=m  iff  B+N>=6m-1`.
-
-GATE-004AI is therefore a witness-level formulation of GATE-004AH, not a
-weaker surrogate. A proof would establish the standalone size of `W_m`; it
-would still not prove additivity over the canonical base, a SAT circuit lower
-bound, or P versus NP.
-
-## Attempted witness source
-
-LEMMA-113 provides one transition for each pair `(S,i)`:
-
-`R_S -> R_{S union {i}} = R_S AND NOT u_i`.
-
-The intended proof would trace a transition backward from the output to its
-first internal divergence and charge clause index `i` either to a NOT gate or
-to an independent reconvergence. The missing step is a representation-
-independent rule proving that different clause indices receive different
-charges. Raw output transitions do not supply it, because the same output
-node witnesses every edge of the restriction cube.
-
-LEMMA-114 now supplies a first internal binary birth event for every clause
-index. GATE-004AJ asks to trace those events nonlocally to NOT gates or cycle
-coordinates with no collisions. The birth node itself cannot be the NOT
-witness.
-
-GATE-004AK makes the collision condition explicit as Hall expansion of
-sensitive NOT-or-chord neighborhoods. LEMMA-115 closes singleton subsets;
-larger subsets remain open, and a De Morgan formula refutes any range-free
-semantic proof of that expansion.
+Thus this is the witness-level version of the proved GATE-004AH. Earlier raw
+output transitions and the narrower sensitive neighborhoods did not yield an
+injection; full dependency cones do. The theorem does not prove additivity
+over an external base, a SAT lower bound, or P versus NP.
 
 ## Model card
 
 | Field | Value |
 |---|---|
-| Computational model | Pruned unrestricted Boolean circuits for the fixed four-positive/one-negative read-once clause product; output-cone cycle space |
-| Uniform/non-uniform | Every individual non-uniform circuit; uniform function family |
-| Circuit size | Target witness inequality `N+t>=m`, exactly equivalent to `B+N>=6m-1` |
+| Computational model | Pruned unrestricted Boolean circuits for `W_m`, dependency cones, and output-cone cycle-space coordinates |
+| Uniform/non-uniform | Every individual non-uniform circuit; uniform clause-indexed matching rule |
+| Circuit size | Proved witness inequality `N+t>=m`, equivalent to `B+N>=6m-1` |
 | Circuit depth | Unrestricted |
-| Fan-in | AND/OR two; NOT one |
+| Fan-in | AND/OR two; NOT one; fanout unrestricted |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
-| Field/algebraic model | Undirected cycle space over `F_2`; Boolean restriction cube |
-| Asymptotic quantifiers | Every `m>=5` and every pruned circuit for `W_m` in the unresolved inversion range |
-| Regime | Exact worst-case witness gate for standalone size; not a base direct sum, SAT lower bound, or terminal result |
+| Field/algebraic model | Fundamental cycle basis over `F_2`; finite Hall matching |
+| Asymptotic quantifiers | Every `m>=1` and every pruned circuit for `W_m` |
+| Regime | Exact worst-case witness theorem for standalone size; not a base direct sum, SAT lower bound, or terminal result |

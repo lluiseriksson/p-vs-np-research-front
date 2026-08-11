@@ -1702,7 +1702,8 @@ Model: every unrestricted non-uniform AND/OR/NOT parent circuit; all canonical
 full assignments of positive tail variables; exact residual circuit size;
 worst-case and uniform average over subsets; no randomness, advice, oracle,
 promise, distribution, or algebraic model. Independent cofactor charging is
-closed, while GATE-004AH, GATE-004AG, GATE-004AE, and P versus NP remain open.
+closed. GATE-004AH was later proved by dependency Hall; GATE-004AG/AE and P
+versus NP remain open.
 
 ## NG-086 — output cofactor transitions yield distinct internal charges
 
@@ -1724,7 +1725,8 @@ Model: every unrestricted non-uniform AND/OR/NOT parent circuit; canonical
 positive restriction cube; exact output cofactor profiles; unrestricted
 depth; AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle,
 promise, distribution, or algebraic circuit model. Raw output-transition
-counting is closed, while GATE-004AI/AH/AG/AE and P versus NP remain open.
+counting is closed. GATE-004AI/AH were later proved by dependency Hall;
+GATE-004AG/AE and P versus NP remain open.
 
 ## NG-087 — first cofactor-difference birth nodes are NOT gates
 
@@ -1790,7 +1792,8 @@ restriction; dependency-cone NOT and non-tree-edge resources; unrestricted
 depth; AND/OR fan-in two and NOT fan-in one; binary cycle spaces over `F_2`;
 no randomness, advice, oracle, promise, distribution, or algebraic circuit
 model. LEMMA-111-only quintet Hall is closed, while function-specific
-GATE-004AL and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+GATE-004AL/AI/AH were later proved by the general rank theorem; the sensitive
+GATE-004AK, optional GATE-004AJ, and GATE-004AG/AE remain open.
 
 ## NG-090 — unfolded NOT-occurrence count excludes the deficient quintet
 
@@ -1812,7 +1815,8 @@ two and NOT fan-in one; directed path multiplicity, formula unfolding, and
 Boolean-lattice inversion; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Occurrence counting is closed,
 while GATE-004AM was later proved by a different factorization argument;
-GATE-004AL beyond size five and GATE-004AK/AJ/AI/AH/AG/AE remain open.
+GATE-004AL/AI/AH were later proved by the general rank theorem; the sensitive
+and base-tail gates remain open.
 
 ## NG-091 — total path multiplicity excludes the deficient sextet
 
@@ -1922,8 +1926,8 @@ gates, three NOT gates, and cycle rank three; unrestricted depth; AND/OR
 fan-in two and NOT fan-in one; formula unfolding and Boolean-lattice
 inversion; no randomness, advice, oracle, promise, distribution, or algebraic
 circuit model. Path multiplicity alone is closed. GATE-004AR was later proved
-by the structural rank-three reduction LEMMA-135; Hall beyond size eight and
-the larger gates remain open.
+by the structural rank-three reduction LEMMA-135 and later fully by
+LEMMA-139/141; the base-tail and larger SAT gates remain open.
 
 ## NG-096 — total path multiplicity for the tetracyclic nonet stratum
 
@@ -1942,5 +1946,26 @@ Model: every pruned non-uniform candidate for fixed `W_9` with 48 binary
 gates, four NOT gates, and cycle rank four; unrestricted depth; AND/OR fan-in
 two and NOT fan-in one; formula unfolding and Boolean-lattice inversion; no
 randomness, advice, oracle, promise, distribution, or algebraic circuit
-model. Path multiplicity alone is closed, while GATE-004AS and Hall beyond
-size eight remain open.
+model. Path multiplicity alone is closed. GATE-004AS and full dependency Hall
+were later proved by LEMMA-139/141; base-tail GATE-004AG remains open.
+
+## NG-097 — promote exact standalone tail size to base-tail additivity
+
+**Label: NO-GO**
+
+Scope: use the exact theorem `C(W_m)=6m-1` as if it implied an additive lower
+bound for `C(H AND W_m)` or forced the displayed tail's diagonal semantic
+classes to survive in every minimum circuit.
+
+Failure: unrestricted circuits may share gates across base and tail variables.
+Restricting `H` to a satisfying assignment recovers the standalone lower but
+does not charge computation on other base assignments. Circuit size alone
+also says nothing about which semantic quotient classes occur in a different
+minimum representation. The proposed promotion therefore assumes precisely
+the direct-sum or quotient-survival statement required by GATE-004AG.
+
+Model: minimum unrestricted non-uniform circuits for the canonical base `H`
+conjoined with `m` disjoint four-positive/one-negative clauses; unrestricted
+depth and fanout; AND/OR fan-in two and NOT fan-in one; no randomness, advice,
+oracle, promise, distribution, or algebraic circuit model. The standalone
+promotion is closed; GATE-004AG/AE and every SAT/terminal bridge remain open.

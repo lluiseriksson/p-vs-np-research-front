@@ -139,19 +139,19 @@ Adjacent collision-aware active branch:
         + LEMMA-111 (all-DAG cycle-rank/inversion tradeoff)
         - GATE-004AG-CYCLE-RANK-UNFOLDING-ONLY (no-go: `m-Theta(log m)` gap)
         + LEMMA-112 (all canonical positive cofactors have exact size `|S|`)
-        <- GATE-004AH (active smallest structural brick): exact binary/NOT tradeoff
+        + GATE-004AH (proved: exact standalone binary/NOT tradeoff)
            - GATE-004AH-SINGLE-COFACTOR-ONLY (no-go: maximum `m`, average `m/2`)
            + LEMMA-113 (full output cofactor lattice and edge transitions)
-           <- GATE-004AI (active witness brick): inject clauses into NOTs or cycles
+           + GATE-004AI (proved: inject clauses into NOTs or cycles)
               - GATE-004AI-OUTPUT-TRANSITION-COUNTING-ONLY (no-go: one output witnesses all edges)
               + LEMMA-114 (first `u_i`-dependent cofactor difference is born at a binary gate)
-              <- GATE-004AJ (active internal brick): match birth events to NOTs or cycles
+              <- GATE-004AJ (optional unresolved witness refinement): match birth events to resources
                  - GATE-004AJ-DIRECT-BIRTH-TO-NOT (no-go: NOT preserves paired XOR)
                  + LEMMA-115 (each canonical witness has a sensitive odd-NOT path)
-                 <- GATE-004AK (active collision brick): low-N Hall expansion
+                 <- GATE-004AK (optional unresolved sensitive-neighborhood refinement)
                     - GATE-004AK-RANGE-FREE-SENSITIVE-HALL (no-go: all neighborhoods can share the top NOT)
                     + LEMMA-116 (dependency-cone Hall expansion for every subset of size at most four)
-                    <- GATE-004AL (active refined brick): full dependency-cone Hall expansion
+                    + GATE-004AL (proved: full dependency-cone Hall expansion)
                        - GATE-004AL-LEMMA111-ONLY (no-go: quintet lower bound four versus five)
                        + LEMMA-117 (a deficient quintet is exactly unicyclic with three NOTs)
                        + LEMMA-118 (at least two of those NOTs must be duplicated)
@@ -187,9 +187,13 @@ Adjacent collision-aware active branch:
                        + LEMMA-136 (dependency-cone Hall expansion through size seven)
                        + LEMMA-137 (dependency-cone Hall expansion through size eight)
                        + LEMMA-138 (a deficient nonet is exactly tetracyclic with four NOTs)
-                       <- GATE-004AS (active nonet brick): exclude tetracyclic four-NOT `W_9`
+                       + GATE-004AS (proved: no tetracyclic four-NOT `W_9`)
                           - GATE-004AS-PATH-MULTIPLICITY-ONLY (no-go: nine unfolded occurrences are feasible)
-                          <- rank-four block/source reduction (next attackable brick)
+                       + LEMMA-139 (all ranks: `q>=m-max(r-1,0)`)
+                       + LEMMA-140 (exact standalone `C(W_m)=(p+2)m-1`)
+                       + LEMMA-141 (full Hall for every subset and spanning tree)
+        - GATE-004AG-STANDALONE-WM-ONLY (no-go: standalone exactness is not base additivity)
+        <- base-tail additivity or semantic-quotient survival (next attackable brick)
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)

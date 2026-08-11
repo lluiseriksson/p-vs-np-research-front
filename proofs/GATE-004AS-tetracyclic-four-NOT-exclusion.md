@@ -1,21 +1,21 @@
 # GATE-004AS — exclude tetracyclic four-NOT circuits for `W_9`
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
-## Falsifiable theorem
+No pruned AND/OR/NOT circuit computing `W_9` has cycle rank four and exactly
+four NOT gates.
 
-Prove that no pruned AND/OR/NOT circuit computing `W_9` has cycle rank four
-and exactly four NOT gates. One explicit circuit with these parameters
-falsifies the theorem.
+LEMMA-139 gives the rank-four lower bound
 
-LEMMA-138 proves that every deficient nine-index dependency-cone Hall set
-would restrict to exactly this stratum. Proving this gate would extend local
-Hall through size nine, but would not establish full Hall, a SAT circuit lower
-bound, or P versus NP.
+`q>=9-4+1=6`,
 
-Generic path multiplicity is insufficient by
-GATE-004AS-PATH-MULTIPLICITY-ONLY. The next attack is a rank-four
-block-cut/2-connected source reduction extending LEMMA-135.
+contradicting four. Thus the exact obstruction isolated by LEMMA-138 is empty.
+Generic path multiplicity remains insufficient by
+GATE-004AS-PATH-MULTIPLICITY-ONLY; the proof instead uses the structural
+block-cut/source induction.
+
+The result is subsumed by full Hall LEMMA-141 and does not establish a SAT
+circuit lower bound or P versus NP.
 
 ## Model card
 
@@ -23,12 +23,12 @@ block-cut/2-connected source reduction extending LEMMA-135.
 |---|---|
 | Computational model | Pruned unrestricted Boolean circuits for fixed `W_9` with exact cycle rank four and four NOT gates |
 | Uniform/non-uniform | Every individual non-uniform nine-block circuit in the exact stratum |
-| Circuit size | Target exclusion of `c=4,q=4`; 48 binary and 52 total gates |
+| Circuit size | Excludes `c=4,q=4`; a candidate would have 48 binary and 52 total gates |
 | Circuit depth | Unrestricted |
-| Fan-in | AND/OR two; NOT one |
+| Fan-in | AND/OR two; NOT one; fanout unrestricted |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
-| Field/algebraic model | Undirected cycle space over `F_2`; Boolean source and articulation cofactors |
+| Field/algebraic model | Undirected cycle rank over `F_2`; Boolean source and articulation cofactors |
 | Asymptotic quantifiers | Fixed `W_9` and every pruned circuit with `c=4,q=4` |
-| Regime | Exact finite structural gate for nonet Hall; not a full family lower bound or terminal result |
+| Regime | Exact finite structural exclusion for nonet Hall; not a full SAT family lower bound or terminal result |

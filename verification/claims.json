@@ -4109,19 +4109,19 @@
       "evidence": "proofs/LEMMA-112-canonical-positive-cofactors.md; docs/source-citations/markov-1958.md; artifacts/cycle-099-canonical-cofactor-audit.md"
     },
     {
-      "id": "GATE004AH", "label": "EXPLORATORY",
-      "statement": "Every circuit for the four-positive one-negative product in the unresolved intermediate-NOT range satisfies B+N at least 6m-1.",
+      "id": "GATE004AH", "label": "PROVED",
+      "statement": "Every circuit for the four-positive one-negative product satisfies B+N at least 6m-1.",
       "computational_model": "Pruned unrestricted Boolean circuits for the fixed four-positive one-negative read-once clause product with exact binary and NOT counts", "uniformity": "Every individual non-uniform circuit; uniform function family",
-      "circuit_size": "Target tradeoff B+N>=6m-1 in the unresolved NOT range; current cycle-rank lower is weaker", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits and restrictions only",
-      "asymptotic_quantifiers": "Every m at least five and every pruned circuit with ceil(log2(m+1))<=N<=m-1", "case_regime": "Exact worst-case standalone-size gate; not a base direct sum, SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AH-function-specific-negation-tradeoff.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-112-canonical-positive-cofactors.md"
+      "circuit_size": "Proved B+N>=6m-1 and exact standalone C(W_m)=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean cofactors",
+      "asymptotic_quantifiers": "Every m at least one and every pruned circuit for W_m", "case_regime": "Exact worst-case standalone-size theorem; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AH-function-specific-negation-tradeoff.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-140-exact-circuit-size-of-Wm.md; proofs/LEMMA-141-full-dependency-cone-Hall.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
       "id": "GATE004AH-SINGLE-COFACTOR-ONLY", "label": "NO-GO",
       "statement": "Independent canonical cofactor size bounds cannot prove GATE004AH because their maximum is m and average is m/2, and summing mutually exclusive restrictions double counts parent gates.",
       "computational_model": "Full positive-variable cofactors of unrestricted circuits and exact residual circuit size", "uniformity": "Uniform canonical restrictions; fully non-uniform parent circuit",
       "circuit_size": "Individual residual at most m and average exactly m/2 versus parent target 6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restrictions and subset incidence only",
-      "asymptotic_quantifiers": "Every m at least one and all 2^m canonical positive cofactors", "case_regime": "Structural no-go for independent single-cofactor charging; GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "asymptotic_quantifiers": "Every m at least one and all 2^m canonical positive cofactors", "case_regime": "Structural no-go for independent single-cofactor charging; GATE004AH was proved by another route, while GATE004AG/AE remain open",
       "evidence": "proofs/GATE-004AH-single-cofactor-only.md; proofs/LEMMA-112-canonical-positive-cofactors.md; docs/no-go-ledger.md NG-085; artifacts/cycle-099-canonical-cofactor-audit.md"
     },
     {
@@ -4133,19 +4133,19 @@
       "evidence": "proofs/LEMMA-113-canonical-cofactor-lattice.md; proofs/LEMMA-112-canonical-positive-cofactors.md; artifacts/cycle-100-cofactor-transition-audit.md"
     },
     {
-      "id": "GATE004AI", "label": "EXPLORATORY",
+      "id": "GATE004AI", "label": "PROVED",
       "statement": "Every pruned circuit for the four-positive one-negative product admits an injection of its m clause indices into its N NOT gates and t output-cone cycle coordinates, implying m<=N+t.",
       "computational_model": "Pruned unrestricted Boolean circuits for the fixed four-positive one-negative read-once clause product and the output-cone cycle space", "uniformity": "Every individual non-uniform circuit; uniform function family",
-      "circuit_size": "Target witness inequality N+t>=m, exactly equivalent to B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restriction cube",
-      "asymptotic_quantifiers": "Every m at least five and every pruned circuit for W_m in the unresolved inversion range", "case_regime": "Exact worst-case witness gate for standalone size; not a base direct sum, SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AI-clause-cover-injection.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; proofs/LEMMA-113-canonical-cofactor-lattice.md"
+      "circuit_size": "Proved witness inequality N+t>=m, exactly equivalent to B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Fundamental cycle bases over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one and every pruned circuit for W_m", "case_regime": "Exact worst-case witness theorem for standalone size; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AI-clause-cover-injection.md; proofs/LEMMA-141-full-dependency-cone-Hall.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
       "id": "GATE004AI-OUTPUT-TRANSITION-COUNTING-ONLY", "label": "NO-GO",
       "statement": "Counting distinct output cofactors or changing canonical cube edges cannot yield distinct internal gate charges because one fixed output node realizes the entire profile.",
       "computational_model": "Canonical cofactor profiles of nodes in unrestricted AND/OR/NOT parent circuits", "uniformity": "Uniform restriction cube; every individual non-uniform parent circuit",
       "circuit_size": "No lower bound from 2^m profiles or m*2^(m-1) changing output edges alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean restriction cube; no algebraic circuit model",
-      "asymptotic_quantifiers": "Every m at least one, every canonical cube edge, and every circuit computing W_m", "case_regime": "Structural no-go for raw output-transition counting; GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "asymptotic_quantifiers": "Every m at least one, every canonical cube edge, and every circuit computing W_m", "case_regime": "Structural no-go for raw output-transition counting; GATE004AI/AH were proved by dependency Hall, while GATE004AG/AE remain open",
       "evidence": "proofs/GATE-004AI-output-transition-counting-only.md; proofs/LEMMA-113-canonical-cofactor-lattice.md; docs/no-go-ledger.md NG-086; artifacts/cycle-100-cofactor-transition-audit.md"
     },
     {
@@ -4169,7 +4169,7 @@
       "statement": "A first cofactor-difference birth node cannot itself be charged as a NOT because complementing both compared cofactors preserves their XOR difference exactly.",
       "computational_model": "Paired canonical cofactor profiles at nodes of unrestricted AND/OR/NOT circuits", "uniformity": "Every individual non-uniform parent circuit; uniform clause-indexed comparison",
       "circuit_size": "No lower bound; direct identification of each first birth node with a NOT is impossible", "circuit_depth": "Unrestricted finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean XOR comparison only",
-      "asymptotic_quantifiers": "Every m at least one, every clause index, and every first birth node from LEMMA114", "case_regime": "Structural no-go for direct birth-to-NOT charging; GATE004AJ, GATE004AI, GATE004AH, GATE004AG, GATE004AE, and P versus NP remain open",
+      "asymptotic_quantifiers": "Every m at least one, every clause index, and every first birth node from LEMMA114", "case_regime": "Structural no-go for direct birth-to-NOT charging; GATE004AJ remains optional, GATE004AI/AH were proved by another route, and GATE004AG/AE remain open",
       "evidence": "proofs/GATE-004AJ-direct-birth-to-NOT.md; proofs/LEMMA-114-first-cofactor-difference-birth.md; docs/no-go-ledger.md NG-087; artifacts/cycle-101-first-birth-audit.md"
     },
     {
@@ -4193,23 +4193,23 @@
       "statement": "Sensitivity semantics alone cannot prove Hall expansion: an explicit De Morgan formula makes every sensitive resource neighborhood the same final-NOT singleton.",
       "computational_model": "Explicit fan-out-one De Morgan AND/OR/NOT formula and its assignment-sensitive subgraphs", "uniformity": "Uniform explicit circuit family; range-free method audit",
       "circuit_size": "B=5m-1, N=4m+1, t=0; all m neighborhoods equal one singleton", "circuit_depth": "Unrestricted; displayed balanced or unbalanced formula allowed", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean sensitivity incidence; no algebraic circuit model",
-      "asymptotic_quantifiers": "Every m at least two; Hall fails on every index subset of size at least two", "case_regime": "Explicit no-go outside the low-N target range; GATE004AK, GATE004AJ, GATE004AI, GATE004AH, GATE004AG, and GATE004AE remain open",
+      "asymptotic_quantifiers": "Every m at least two; Hall fails on every index subset of size at least two", "case_regime": "Explicit no-go for sensitive Hall; dependency Hall proved GATE004AI/AH, while GATE004AG/AE remain open",
       "evidence": "proofs/GATE-004AK-range-free-sensitive-Hall.md; docs/no-go-ledger.md NG-088; artifacts/cycle-102-sensitive-Hall-audit.md"
     },
     {
-      "id": "GATE004AL", "label": "EXPLORATORY",
-      "statement": "For some output-cone spanning tree, the NOT gates and non-tree edges in full clause-block dependency cones satisfy every Hall inequality.",
-      "computational_model": "Pruned unrestricted Boolean circuits, directed dependency cones, spanning trees, and non-tree-edge cycle resources", "uniformity": "Every individual non-uniform circuit; uniform clause-block neighborhoods",
-      "circuit_size": "Full Hall expansion would imply m<=N+t and B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite bipartite matching",
-      "asymptotic_quantifiers": "Every m at least five, every pruned circuit for W_m, and every subset of clause indices", "case_regime": "Exact worst-case dependency-cone Hall gate; not a base direct sum, SAT lower bound, or terminal result",
-      "evidence": "proofs/GATE-004AL-dependency-cone-Hall.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/GATE-004AJ-birth-resource-matching.md"
+      "id": "GATE004AL", "label": "PROVED",
+      "statement": "For every output-cone spanning tree, the NOT gates and non-tree edges in full clause-block dependency cones satisfy every Hall inequality.",
+      "computational_model": "Pruned unrestricted Boolean circuits, directed dependency cones, spanning trees, and non-tree-edge cycle resources", "uniformity": "Every individual non-uniform circuit, every spanning tree, and uniform clause-block neighborhoods",
+      "circuit_size": "Full Hall expansion proves m<=N+t and B+N>=6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Fundamental cycle bases over F_2 and finite bipartite matching",
+      "asymptotic_quantifiers": "Every m at least one, every pruned circuit for W_m, every spanning tree, and every subset", "case_regime": "Exact worst-case dependency-cone Hall theorem; not a base direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/GATE-004AL-dependency-cone-Hall.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-141-full-dependency-cone-Hall.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
       "id": "LEMMA116", "label": "PROVED",
       "statement": "For every parent circuit, every spanning tree, and every clause-index subset of size one through four, the union of full dependency-cone NOT and non-tree-edge resources has size at least the subset.",
       "computational_model": "Full block restrictions of unrestricted AND/OR/NOT circuits, dependency cones, and output-cone cycle rank", "uniformity": "Every individual non-uniform parent circuit; every selected block set of size at most four",
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=4", "circuit_depth": "Unrestricted; restriction and pruning preserve a finite DAG", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean restrictions",
-      "asymptotic_quantifiers": "Every m at least one, every circuit for W_m, every spanning tree, and every I with 1<=|I|<=min(4,m)", "case_regime": "Exact worst-case local Hall theorem, extended through five by LEMMA122; full matching and terminal bounds remain open",
+      "asymptotic_quantifiers": "Every m at least one, every circuit for W_m, every spanning tree, and every I with 1<=|I|<=min(4,m)", "case_regime": "Exact local Hall theorem later subsumed by full LEMMA141; terminal bounds are not implied",
       "evidence": "proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; artifacts/cycle-103-dependency-Hall-through-four.md"
     },
     {
@@ -4217,7 +4217,7 @@
       "statement": "At dependency-cone subset size five, restriction plus the generic cycle-rank inversion theorem certifies only four resources and cannot prove the Hall target five.",
       "computational_model": "Five-block restrictions of unrestricted circuits followed by generic cycle-rank unfolding and inversion bounds", "uniformity": "Every individual non-uniform parent circuit; method audit for arbitrary five-index subsets",
       "circuit_size": "Generic resource lower bound four versus Hall target five", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and Boolean-lattice inversion",
-      "asymptotic_quantifiers": "Every parent size m at least five and every selected set of exactly five clause indices", "case_regime": "Quantitative no-go for LEMMA111 alone; GATE004AL and all larger gates remain open",
+      "asymptotic_quantifiers": "Every parent size m at least five and every selected set of exactly five clause indices", "case_regime": "Quantitative no-go for LEMMA111 alone; GATE004AL was later proved by LEMMA139/141",
       "evidence": "proofs/GATE-004AL-LEMMA111-only.md; proofs/LEMMA-111-cycle-rank-inversion-tradeoff.md; docs/no-go-ledger.md NG-089; artifacts/cycle-103-dependency-Hall-through-four.md"
     },
     {
@@ -4281,7 +4281,7 @@
       "statement": "For every parent circuit and spanning tree, dependency-cone Hall expansion holds for every clause-index subset of size one through five.",
       "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most five",
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=5", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
-      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(5,m)", "case_regime": "Exact worst-case local Hall theorem; size six, full matching, SAT lower bounds, and P versus NP remain open",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(5,m)", "case_regime": "Exact local Hall theorem later subsumed by full LEMMA141; SAT and terminal bounds are not implied",
       "evidence": "proofs/LEMMA-122-dependency-cone-Hall-through-five.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-117-deficient-quintet-exact-stratum.md; proofs/GATE-004AM-unicyclic-three-NOT-exclusion.md; artifacts/cycle-105-unicyclic-quintet-exclusion.md"
     },
     {
@@ -4425,7 +4425,7 @@
       "statement": "For every parent circuit and spanning tree, dependency-cone Hall expansion holds for every clause-index subset of size one through six.",
       "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most six",
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=6", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2 and finite Hall matching",
-      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(6,m)", "case_regime": "Exact worst-case local Hall theorem; size seven, full matching, SAT lower bounds, and P versus NP remain open",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(6,m)", "case_regime": "Exact local Hall theorem later subsumed by full LEMMA141; SAT and terminal bounds are not implied",
       "evidence": "proofs/LEMMA-132-dependency-cone-Hall-through-six.md; proofs/LEMMA-124-deficient-sextet-exact-stratum.md; proofs/GATE-004AN-bicyclic-three-NOT-exclusion.md; artifacts/cycle-110-nested-theta-exclusion.md"
     },
     {
@@ -4481,7 +4481,7 @@
       "statement": "Dependency-cone Hall expansion holds for every clause-index subset of size one through eight.",
       "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods and restricted W_8 circuits", "uniformity": "Every individual non-uniform parent circuit and every selected block set of size at most eight",
       "circuit_size": "Hall union lower bound exactly |I| for 1<=|I|<=8", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2, Boolean restrictions, and finite Hall matching",
-      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(8,m)", "case_regime": "Exact worst-case local Hall theorem; size nine and terminal bridges remain open",
+      "asymptotic_quantifiers": "Every m at least one, every spanning tree, and every I with 1<=|I|<=min(8,m)", "case_regime": "Exact local Hall theorem later subsumed by full LEMMA141; terminal bridges remain open",
       "evidence": "proofs/LEMMA-137-dependency-cone-Hall-through-eight.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
     },
     {
@@ -4493,20 +4493,52 @@
       "evidence": "proofs/LEMMA-138-deficient-nonet-exact-stratum.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; proofs/LEMMA-133-bicyclic-negation-lower-bound.md; proofs/LEMMA-135-tricyclic-negation-lower-bound.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
     },
     {
-      "id": "GATE004AS", "label": "EXPLORATORY",
+      "id": "GATE004AS", "label": "PROVED",
       "statement": "No cycle-rank-four circuit with exactly four NOT gates computes fixed W_9.",
       "computational_model": "Pruned unrestricted Boolean circuits for fixed W_9 with exact cycle rank four and four NOT gates", "uniformity": "Every individual non-uniform nine-block circuit in the exact stratum",
-      "circuit_size": "Target exclusion of c=4,q=4; 48 binary and 52 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean source and articulation cofactors",
-      "asymptotic_quantifiers": "Fixed W_9 and every pruned circuit with c=4,q=4", "case_regime": "Exact finite structural gate for nonet Hall; not a full family lower bound or terminal result",
-      "evidence": "proofs/GATE-004AS-tetracyclic-four-NOT-exclusion.md; proofs/LEMMA-138-deficient-nonet-exact-stratum.md; artifacts/cycle-112-tricyclic-reduction-audit.md"
+      "circuit_size": "Excludes c=4,q=4; a candidate would have 48 binary and 52 total gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle space over F_2; Boolean source and articulation cofactors",
+      "asymptotic_quantifiers": "Fixed W_9 and every pruned circuit with c=4,q=4", "case_regime": "Exact finite structural exclusion for nonet Hall; not a full SAT family lower bound or terminal result",
+      "evidence": "proofs/GATE-004AS-tetracyclic-four-NOT-exclusion.md; proofs/LEMMA-138-deficient-nonet-exact-stratum.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     },
     {
       "id": "GATE004AS-PATH-MULTIPLICITY-ONLY", "label": "NO-GO",
       "statement": "Generic tetracyclic unfolding permits path-multiplicity patterns meeting the nine-NOT formula lower bound.",
       "computational_model": "Tetracyclic formula unfolding and NOT path multiplicities for fixed W_9", "uniformity": "Every individual non-uniform candidate in the exact c=4,q=4 stratum",
       "circuit_size": "Four parent NOT gates, each unfolding at most sixteen times, while only nine total occurrences are required", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Binary cycle space and Boolean-lattice inversion; no algebraic circuit model",
-      "asymptotic_quantifiers": "Fixed W_9 and every cycle-rank-four candidate with four NOT gates", "case_regime": "Quantitative no-go for path multiplicity alone; GATE004AS remains open",
+      "asymptotic_quantifiers": "Fixed W_9 and every cycle-rank-four candidate with four NOT gates", "case_regime": "Quantitative no-go for path multiplicity alone; GATE004AS was proved separately by LEMMA139",
       "evidence": "proofs/GATE-004AS-path-multiplicity-only.md; docs/no-go-ledger.md NG-096; artifacts/cycle-112-tricyclic-reduction-audit.md"
+    },
+    {
+      "id": "LEMMA139", "label": "PROVED",
+      "statement": "A rank-r circuit computing either polarity of W_m has at least m-max(r-1,0) NOT gates.",
+      "computational_model": "Pruned unrestricted AND/OR/NOT circuits, undirected 2-cores, block-cut trees, and one-bit cofactors", "uniformity": "Every individual non-uniform circuit for either polarity of W_m",
+      "circuit_size": "NOT lower m-max(r-1,0) at exact cycle rank r; binary count otherwise unrestricted", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2, vertex sums, and Boolean cofactor partitions",
+      "asymptotic_quantifiers": "Every fixed p at least one, every m at least one, every r at least zero, and every pruned circuit of exact rank r", "case_regime": "Exact worst-case function-specific tradeoff; not external-base additivity, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; proofs/LEMMA-119-bipolar-formula-inversion.md; proofs/LEMMA-121-one-bit-cofactor-dichotomy.md; proofs/LEMMA-123-unicyclic-no-negation-saving.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
+    },
+    {
+      "id": "LEMMA140", "label": "PROVED",
+      "statement": "The unrestricted De Morgan circuit size of W_m is exactly (p+2)m-1.",
+      "computational_model": "Unrestricted pruned De Morgan circuits for a disjoint fixed-sign clause product", "uniformity": "Every individual non-uniform circuit; uniform explicit function family",
+      "circuit_size": "Exact (p+2)m-1; for p=4 exact 6m-1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Undirected cycle rank over F_2 and Boolean cofactor partitions",
+      "asymptotic_quantifiers": "Every fixed p at least one and every m at least one", "case_regime": "Exact worst-case standalone size; not a direct sum, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-140-exact-circuit-size-of-Wm.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
+    },
+    {
+      "id": "LEMMA141", "label": "PROVED",
+      "statement": "Dependency-cone Hall expansion holds for every clause-index subset and every output-cone spanning tree.",
+      "computational_model": "Dependency-cone NOT/non-tree-edge neighborhoods in unrestricted parent circuits", "uniformity": "Every individual non-uniform parent circuit and every spanning tree",
+      "circuit_size": "Full Hall expansion and injection into N+r resources, implying N+r>=m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Fundamental cycle bases over F_2 and finite Hall matching",
+      "asymptotic_quantifiers": "Every m at least one, every pruned circuit for W_m, every spanning tree, and every index subset", "case_regime": "Exact worst-case full Hall theorem for W_m; not base additivity, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-141-full-dependency-cone-Hall.md; proofs/LEMMA-116-dependency-cone-Hall-through-four.md; proofs/LEMMA-139-general-cycle-rank-negation-tradeoff.md; artifacts/cycle-113-general-rank-tradeoff-audit.md"
+    },
+    {
+      "id": "GATE004AG-STANDALONE-WM-ONLY", "label": "NO-GO",
+      "statement": "Exact standalone size of W_m does not imply additivity over the canonical base or survival of tail quotient classes.",
+      "computational_model": "Minimum unrestricted circuits for an external base conjoined with the disjoint fixed-sign tail W_m", "uniformity": "Canonical uniform base-tail construction and fully non-uniform minimizing circuits",
+      "circuit_size": "Standalone exact C(W_m)=(p+2)m-1; no proved additive lower for C(H AND W_m)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean circuits and semantic quotients; no algebraic circuit model",
+      "asymptotic_quantifiers": "Every canonical base-tail instance in GATE004AG and every minimum circuit for its conjunction", "case_regime": "Structural no-go for standalone-to-direct-sum promotion; GATE004AG remains open",
+      "evidence": "proofs/GATE-004AG-standalone-Wm-only.md; docs/no-go-ledger.md NG-097; artifacts/cycle-113-general-rank-tradeoff-audit.md"
     }
   ]
 }

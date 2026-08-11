@@ -18,7 +18,8 @@ for a quintet, one below Hall's requirement.
 This is a quantitative method no-go, not a circuit counterexample. It does
 not show that a deficient quintet exists. A proof of the size-five inequality
 must use dependency-cone incidence beyond total residual cycle rank and
-inversion complexity. GATE-004AL and all larger gates remain open.
+inversion complexity. GATE-004AL was later proved by LEMMA-139/141; this
+generic-unfolding method remains insufficient.
 
 LEMMA-117 records the equality case forced by any actual deficient quintet:
 `c=1,q=3`. GATE-004AM subsequently excludes that exact stratum by a

@@ -31,4 +31,4 @@ full Hall expansion for unbounded subsets.
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle space over `F_2`; finite Hall matching |
 | Asymptotic quantifiers | Every `m>=1`, every spanning tree, and every `I` with `1<=|I|<=min(6,m)` |
-| Regime | Exact worst-case local Hall theorem; size seven, full matching, SAT lower bounds, and P versus NP remain open |
+| Regime | Exact local Hall theorem later subsumed by LEMMA-141; SAT and terminal bounds are not implied |

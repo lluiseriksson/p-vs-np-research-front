@@ -12,8 +12,8 @@ The inequalities admit, for example, `(1,1,1,6)` and `(2,2,2,3)`. Markov's
 circuit inversion bound is exactly four. Thus generic unfolding and inversion
 do not contradict `c=4,q=4`.
 
-This no-go does not construct a circuit or refute GATE-004AS. It requires a
-topology-sensitive rank-four reduction.
+This no-go does not construct a circuit or refute GATE-004AS. GATE-004AS was
+later proved by the topology-sensitive general reduction LEMMA-139.
 
 ## Model card
 
@@ -29,4 +29,4 @@ topology-sensitive rank-four reduction.
 | Oracle access | None |
 | Field/algebraic model | Binary cycle space and Boolean-lattice inversion; no algebraic circuit model |
 | Asymptotic quantifiers | Fixed `W_9` and every cycle-rank-four candidate with four NOT gates |
-| Regime | Quantitative no-go for path multiplicity alone; GATE-004AS remains open |
+| Regime | Quantitative no-go for path multiplicity alone; GATE-004AS was proved separately by LEMMA-139 |

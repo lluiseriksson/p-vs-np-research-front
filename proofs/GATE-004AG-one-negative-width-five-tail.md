@@ -68,6 +68,14 @@ equivalent to assigning every clause index to a distinct NOT gate or cycle
 coordinate. The output cofactor lattice alone cannot perform this assignment,
 because its single output node witnesses all adjacent restriction changes.
 
+LEMMA-139/140 and the dependency-cone proof now close that standalone branch:
+`C(W_m)=6m-1` for the isolated tail. This still proves neither alternative in
+the falsifiable theorem above. A minimum circuit for `H AND W_m` may share
+gates across base and tail variables, and standalone size does not preserve
+the tail's diagonal semantic classes under minimization.
+GATE-004AG-STANDALONE-WM-ONLY records the circular promotion as `NO-GO`.
+Base-tail additivity or quotient survival is the active brick.
+
 ## Model card
 
 | Field | Value |

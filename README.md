@@ -918,15 +918,24 @@ three: an articulation splits rank `1+2`, while deleting a source from a
 2-connected core leaves rank at most two. This proves GATE-004AR and Hall
 through seven; with Markov it also proves Hall through eight. LEMMA-138
 isolates the first remaining local obstruction at size nine as exact
-`c=4,q=4`. GATE-004AS is active, and path multiplicity alone is `NO-GO`.
+`c=4,q=4`. At that cycle boundary GATE-004AS was active, and path
+multiplicity alone was `NO-GO`.
+
+The one-hundred-and-thirteenth cycle proves the all-rank induction
+`q>=m-max(r-1,0)` in LEMMA-139. It yields the exact standalone size
+`C(W_m)=(p+2)m-1`, full dependency-cone Hall for every subset and spanning
+tree, and closes GATE-004AS/AL/AI/AH. This is not promoted to the canonical
+base-tail conjunction: GATE-004AG-STANDALONE-WM-ONLY records that doing so
+would assume the missing direct sum or semantic-quotient survival theorem.
+GATE-004AG/AE and all SAT/terminal lower bounds remain open.
 
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 93% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 091–112 prove dependency-cone Hall through eight indices and isolate the exact tetracyclic obstruction at size nine. Formal foundations and broader independent review remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycle 113 closes the all-rank standalone `W_m` tradeoff and full dependency Hall. Formal foundations, independent mathematical review, and base-tail/SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
-| Real progress toward P vs NP | 0.00% | Three-block contexts have an audited width-four sparsity proof and a fixed-sign width-five obstruction, but GATE-004AG/AE minimum-circuit rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
+| Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 
 These values are judgment calls, not metrics derived from files, tests, commits,
 or special cases.

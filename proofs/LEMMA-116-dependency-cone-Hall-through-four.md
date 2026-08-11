@@ -55,4 +55,4 @@ inequality.
 | Oracle access | None |
 | Field/algebraic model | Undirected cycle space over `F_2`; Boolean restrictions |
 | Asymptotic quantifiers | Every `m>=1`, every circuit for `W_m`, every spanning tree, and every `I` with `1<=|I|<=min(4,m)` |
-| Regime | Exact worst-case local Hall theorem; quintets, full matching, SAT lower bounds, and the terminal problem remain open |
+| Regime | Exact local Hall theorem later subsumed by LEMMA-141; SAT and terminal bounds are not implied |

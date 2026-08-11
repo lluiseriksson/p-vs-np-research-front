@@ -1,67 +1,46 @@
 # GATE-004AL — Hall expansion of dependency-cone resources
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
-## Resource neighborhoods
+Fix a pruned circuit `C` for `W_m` and any spanning tree `T` of its connected
+undirected output cone. The resource set consists of all `N` NOT gates and the
+`t=B-5m+1` non-tree edges. For clause index `i`, let `P_i(T)` contain every
+resource on a directed path from one of that block's five inputs to the
+output.
 
-Fix a pruned circuit `C` for the four-positive/one-negative product `W_m` and
-a spanning tree `T` of its connected undirected output cone. The resource set
-consists of all `N` NOT gates and the `t=B-5m+1` non-tree edges of `T`.
+For every subset `I subseteq [m]`,
 
-For clause index `i`, let `P_i(T)` contain every resource lying on at least one
-directed path from one of the five inputs
-`{u_i,v_{i,1},...,v_{i,4}}` to the output. A non-tree edge is included when
-that directed circuit edge lies on such a path.
+`|union_{i in I} P_i(T)|>=|I|`.
 
-## Falsifiable theorem
+## Proof
 
-Prove that some spanning tree `T` satisfies
+LEMMA-116 establishes the restriction-and-lifting inequality: after setting
+all blocks outside `I` true and pruning, the residual `W_k` circuit, where
+`k=|I|`, has NOT count `q`, cycle rank `r`, and
 
-`|union_{i in I} P_i(T)| >= |I|`
+`q+r<=|union_{i in I}P_i(T)|`.
 
-for every subset `I subseteq [m]`. One circuit for which every spanning tree
-has a deficient subset falsifies the theorem.
+LEMMA-139 gives `q+r>=k` at every rank. Therefore every dependency-cone Hall
+inequality holds. LEMMA-141 records the full theorem and its matching
+consequence. This closes the finite ladder through LEMMA-138 and proves the
+resource injection GATE-004AI.
 
-Hall's theorem would inject the `m` clause indices into the `N+t` resources,
-giving `m<=N+t` and exactly GATE-004AJ/AI/AH. Unlike the narrower sensitive
-neighborhoods of GATE-004AK, dependency cones retain NOT gates whose values
-do not change on a particular witness pair but which are required to process
-that block's positive variables.
-
-LEMMA-116 proves every Hall inequality with `|I|<=4`. The smallest unresolved
-subset has size five.
-
-LEMMA-117 reduces any deficient quintet to a residual circuit with exactly one
-cycle and three NOT gates; GATE-004AM excludes that stratum using the
-one-bit-factorization LEMMA-120 and cofactor dichotomy LEMMA-121. LEMMA-122
-therefore closes Hall through subset size five. Size six is the first open
-case of this gate.
-
-LEMMA-123 generalizes the unicyclic exclusion to every block count, and
-LEMMA-124 uses it to force any deficient sextet into the exact bicyclic
-three-NOT stratum. GATE-004AN excludes that stratum after the core/orientation
-analysis through LEMMA-131. LEMMA-132 therefore closes size six; size seven is
-the first open case of this gate.
-
-LEMMA-133 proves the general bicyclic NOT lower bound `q>=m-1`. LEMMA-134
-therefore forces any deficient septet into the exact tricyclic three-NOT
-stratum. LEMMA-135 excludes it, proving GATE-004AR and LEMMA-136. The same
-rank-three bound plus Markov proves size eight directly in LEMMA-137.
-LEMMA-138 forces any deficient nonet into exact `c=4,q=4`; GATE-004AS is the
-active size-nine exclusion. Path multiplicity alone is recorded as a no-go.
+Unlike GATE-004AK's narrower assignment-sensitive neighborhoods, dependency
+cones retain resources needed to process a block even when their values do
+not change on one selected witness pair.
 
 ## Model card
 
 | Field | Value |
 |---|---|
-| Computational model | Pruned unrestricted Boolean circuits, directed dependency cones, spanning trees, and non-tree-edge cycle resources |
-| Uniform/non-uniform | Every individual non-uniform circuit; uniform clause-block neighborhoods |
-| Circuit size | Full Hall expansion would imply `m<=N+t` and `B+N>=6m-1` |
+| Computational model | Pruned unrestricted Boolean circuits, directed dependency cones, spanning trees, and non-tree-edge resources |
+| Uniform/non-uniform | Every individual non-uniform circuit, every spanning tree, and uniform clause-block neighborhoods |
+| Circuit size | Full Hall expansion proves `m<=N+t` and `B+N>=6m-1` |
 | Circuit depth | Unrestricted |
-| Fan-in | AND/OR two; NOT one |
+| Fan-in | AND/OR two; NOT one; fanout unrestricted |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
-| Field/algebraic model | Undirected cycle space over `F_2`; finite bipartite matching |
-| Asymptotic quantifiers | Every `m>=5`, every pruned circuit for `W_m`, and every subset of clause indices |
-| Regime | Exact worst-case dependency-cone Hall gate; not a base direct sum, SAT lower bound, or terminal result |
+| Field/algebraic model | Fundamental cycle bases over `F_2`; finite bipartite matching |
+| Asymptotic quantifiers | Every `m>=1`, every pruned circuit for `W_m`, every spanning tree, and every clause-index subset |
+| Regime | Exact worst-case dependency-cone Hall theorem; not a base direct sum, SAT lower bound, or terminal result |

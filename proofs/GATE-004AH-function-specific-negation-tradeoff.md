@@ -1,60 +1,43 @@
 # GATE-004AH — function-specific binary/NOT tradeoff
 
-**Label: EXPLORATORY**
+**Label: PROVED**
 
 ## Falsifiable theorem
 
-For the four-positive/one-negative product `W_m`, let a pruned unrestricted
-circuit contain `B` binary gates and `N` NOT gates. Prove that throughout the
-only unresolved inversion range
+For the four-positive/one-negative product `W_m`, every pruned unrestricted
+circuit with `B` binary gates and `N` NOT gates satisfies
 
-`ceil(log_2(m+1)) <= N <= m-1`,
+`B+N>=6m-1`.
 
-one has
+In particular, throughout the formerly unresolved range
+`ceil(log_2(m+1))<=N<=m-1`, one has `B>=6m-1-N`.
 
-`B >= 6m-1-N`.
+## Proof
 
-The theorem is falsified by one explicit circuit in this range violating the
-inequality.
+Put `t=B-5m+1`, the exact output-cone cycle rank. LEMMA-139 gives `N>=m`
+when `t=0` and `N>=m-t+1` when `t>=1`. Therefore
 
-Essential-input connectivity already gives `B>=5m-1`. If `N>=m`, that bound
-alone gives total size at least `6m-1`; if `N` is below the displayed range,
-Markov rules the circuit out. Thus GATE-004AH would prove
-`C(W_m)=6m-1`, settling the standalone prerequisite to the displayed-
-minimality branch of GATE-004AG. It would not by itself prove additivity over
-the canonical base or minimum-circuit quotient survival.
+`B+N = 5m-1+t+N >= 6m-1`.
 
-LEMMA-111 currently gives only the cycle-rank consequence
+LEMMA-140 matches this lower bound with the displayed circuit and proves
+`C(W_m)=6m-1`. LEMMA-141 also supplies the witness form `N+t>=m` by full
+dependency-cone Hall matching.
 
-`B >= 5m-1+ceil(log_2(m/N))`,
-
-which is far below `6m-1-N` across the middle range. A successful proof must
-use the clause-indexed distribution of the negative variables, not only total
-decrease or generic graph topology.
-
-GATE-004AI rewrites the target with output-cone cycle rank
-`t=B-5m+1`: prove `N+t>=m` by injecting clause indices into NOT gates or
-independent cycle coordinates. LEMMA-113 shows that raw output cofactor
-transitions cannot supply distinct witnesses; an internal bounded-reuse
-theorem remains missing.
-
-LEMMA-114 localizes every clause-index transition to a first binary birth
-node. GATE-004AJ is the active refinement: trace those birth events to
-distinct nonlocal NOT or cycle resources. Direct birth-to-NOT charging is
-impossible because NOT preserves the paired-cofactor XOR.
+This closes only the standalone prerequisite to GATE-004AG. It does not prove
+additivity over the canonical base or minimum-circuit quotient survival.
 
 ## Model card
 
 | Field | Value |
 |---|---|
-| Computational model | Pruned unrestricted Boolean circuits for the fixed four-positive/one-negative read-once clause product; exact binary/NOT gate counts |
+| Computational model | Pruned unrestricted Boolean circuits for the fixed four-positive/one-negative read-once clause product; exact binary/NOT counts |
 | Uniform/non-uniform | Every individual non-uniform circuit; uniform function family |
-| Circuit size | Target tradeoff `B+N>=6m-1` in the unresolved NOT range; current cycle-rank lower is weaker |
+| Circuit size | Proved `B+N>=6m-1`; exact standalone size `C(W_m)=6m-1` |
 | Circuit depth | Unrestricted |
-| Fan-in | AND/OR two; NOT one |
+| Fan-in | AND/OR two; NOT one; fanout unrestricted |
 | Randomness | None |
 | Advice | None |
 | Oracle access | None |
-| Field/algebraic model | Boolean circuits and restrictions only |
-| Asymptotic quantifiers | Every `m>=5` and every pruned circuit with `ceil(log2(m+1))<=N<=m-1` |
-| Regime | Exact worst-case standalone-size gate; not a base direct sum, SAT lower bound, or terminal result |
+| Field/algebraic model | Undirected output-cone cycle rank over `F_2` and Boolean cofactors |
+| Asymptotic quantifiers | Every `m>=1` and every pruned circuit for `W_m` |
+| Regime | Exact worst-case standalone-size theorem; not a base direct sum, SAT lower bound, or terminal result |
