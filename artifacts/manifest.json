@@ -516,7 +516,11 @@
     },
     {
       "path": "artifacts/cycle-115-base-tail-Hall-and-stability.md",
-      "sha256": "10475baf76d4a30cd2ecec150537571a547a6461afeaf8995d9e8dfe22ed6959"
+      "sha256": "4e58e02857690daed24665d9a93bdd0ec0a5905d9463501b9b182b4c7120d6a8"
+    },
+    {
+      "path": "artifacts/cycle-116-two-row-quotient-baseline.md",
+      "sha256": "4ee7a93046fd2e7c47c249f28ecd03888d049c36c4b966346345be84d7e4c027"
     },
     {
       "path": "artifacts/literal-subcube-search-31.json",
@@ -544,7 +548,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "a00dcfb6e739a45955ffbc9d338cbc4c13f4bbf077cad0ac8d9d6059ec45f6cd"
+      "sha256": "b7f4c12fe53525881cc2b68fea53687579fbfa7f2c73c90d506c4fec0e4de12b"
     },
     {
       "path": "docs/problem-statement.md",
@@ -552,7 +556,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "6c415e27520514848eed2b2039d2ba878c7a874eba8b8879aa85fb92c69ac319"
+      "sha256": "e2211ff8ea6e5750dc2b7f9ecbf223e9e8174b6671de66fa5bf21306caacc3c5"
     },
     {
       "path": "docs/result-labels.md",
@@ -656,11 +660,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "6b316c0f7ed692598c7f8e6f0a1447c07d58c44cc16225b901a49070aa325311"
+      "sha256": "defc850925eababd51cd285398e9aa196e593864828cf3c9bd1fb83535ce9067"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "c536c32fa86ceba0b13d7eaa7f6f245790fb79ea41074767ca1e9fcbf123fb7e"
+      "sha256": "3deaa95423d393688c4d3df34349154811ffb3c2f94bf4309178bdf36998ad0e"
     },
     {
       "path": "experiments/README.md",
@@ -936,7 +940,15 @@
     },
     {
       "path": "proofs/GATE-004AU-near-minimum-quotient-stability.md",
-      "sha256": "711c160a6cdf3dc07359d210942b5121d3671f3236ff6aae8bff6162ce4229f3"
+      "sha256": "93b17937a0300fd6635a368c5f5cbf9f41d0dee6d2b3493a56dfa0b7f5f3f9ae"
+    },
+    {
+      "path": "proofs/GATE-004AV-cross-row-quotient-surplus.md",
+      "sha256": "22634ee6a99514beb881b5060f2b855f214ef016a1333462297b5e416815e0be"
+    },
+    {
+      "path": "proofs/GATE-004AV-separate-row-sizes-only.md",
+      "sha256": "a100ed477e90d98118a764ad05c9f363d72dfb83c1b6c3ed5339b0552fe825b5"
     },
     {
       "path": "proofs/GATE-004B-block-restriction.md",
@@ -1679,8 +1691,12 @@
       "sha256": "96ebf65688c0c272b447712d1d547eb459cc8a6d41fa9340cc34965ad71a9585"
     },
     {
+      "path": "proofs/LEMMA-145-two-row-quotient-baseline.md",
+      "sha256": "8abbf0781459edff1f6ebd5d3baae2fc099a68129d2f35d0560929f8019c1542"
+    },
+    {
       "path": "README.md",
-      "sha256": "7a00fc8d0d07eb7c7bd430dd2700ce370142db807a5dac3c62bbd518a66c10e3"
+      "sha256": "8419fcec5565d7619bcb5f7f8735d7e831425f2fc0befcba7f62ec7aeb992c1c"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -1692,7 +1708,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "4c1a4ec4542359435abfee3510b99d1587cda6a7b091c9f7eb283f5691cc73bb"
+      "sha256": "eddfad25ea9888fe0e83e7354f7c77e5b428e49544ddb69e1cb777af44bb8623"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

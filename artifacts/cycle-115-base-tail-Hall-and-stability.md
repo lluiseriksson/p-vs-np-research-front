@@ -12,7 +12,7 @@ canonical deficit from the displayed circuit by `K-h+1<=K=o(m)`.
 
 **Label: EXPLORATORY**
 
-GATE-004AU asks for at least `7m-2(Delta+K)` tail-dependent diagonal classes
+GATE-004AU asks for total diagonal quotient at least `7m-2(Delta+K)`
 in some minimum circuit. Together with LEMMA-144 this would give negative
 loss for sufficiently large canonical parameters without exact additivity.
 

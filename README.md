@@ -946,11 +946,19 @@ negative diagonal loss. Global near-minimality alone is `NO-GO`: distinct
 gate functions can collide or become inactive after the two row restrictions.
 The next brick must charge those collisions to the `Delta+K` slack budget.
 
+The one-hundred-and-sixteenth cycle proves the exact two-row baseline:
+LEMMA-145 shows that any diagonal quotient has at least the complexity of its
+harder row residual, hence at least `6m` classes canonically. GATE-004AV
+isolates the remaining surplus `m-2(Delta+K)` needed for GATE-004AU. Adding
+the two row lower bounds is `NO-GO`, because a compute-tail-first architecture
+can share all `6m-1` tail classes across the rows. The next brick is an
+explicit charge of shared row classes to parent slack or base complexity.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–115 close the standalone tradeoff and give a canonical `o(m)` base-tail size gap while isolating the missing semantic stability theorem. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, and cold-clone evidence exist. Cycles 113–116 close the standalone tradeoff, give a canonical `o(m)` size gap, and reduce semantic stability to a quantified cross-row surplus. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

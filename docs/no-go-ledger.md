@@ -2010,3 +2010,24 @@ and their two designated row restrictions; unrestricted depth and fanout;
 AND/OR fan-in two and NOT fan-in one; no randomness, advice, oracle, promise,
 distribution, or algebraic circuit model. Size-only promotion is closed;
 GATE-004AU/AT/AG/AE remain open.
+
+## NG-100 — add the two canonical row-size lower bounds
+
+**Label: NO-GO**
+
+Scope: apply LEMMA-145 separately to the two canonical row residuals and add
+their circuit-complexity lower bounds as if the corresponding quotient class
+sets were disjoint.
+
+Failure: the quotient is a union, so the class-set intersection must be
+subtracted. A size-`K+6m` architecture may compute `W_m` first and conjoin it
+with `H` only at the output; all `6m-1` tail-gate functions are then shared
+between the two row restrictions. The construction does not establish
+minimum size when `Delta>0`, but it proves that separate row sizes contain no
+intersection bound.
+
+Model: unrestricted non-uniform base-tail circuits under two canonical row
+restrictions; unrestricted depth and fanout; AND/OR fan-in two and NOT fan-in
+one; finite semantic class unions; no randomness, advice, oracle, promise,
+distribution, or algebraic circuit model. Separate-row addition is closed;
+GATE-004AV/AU/AT/AG/AE remain open.

@@ -4582,9 +4582,9 @@
     },
     {
       "id": "GATE004AU", "label": "EXPLORATORY",
-      "statement": "Some minimum canonical base-tail circuit retains at least 7m-2(Delta+K) active tail-dependent diagonal quotient classes.",
+      "statement": "Some minimum canonical base-tail circuit has total diagonal quotient size at least 7m-2(Delta+K).",
       "computational_model": "Globally minimum unrestricted canonical base-tail circuits and two-row semantic diagonal quotients", "uniformity": "Uniform canonical rows and tail; fully non-uniform minimum-circuit adversary",
-      "circuit_size": "Parent S=K+6m-Delta with 0<=Delta<=K; target tail quotient at least 7m-2(Delta+K)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic equivalence classes; inherited affine row geometry only",
+      "circuit_size": "Parent S=K+6m-Delta with 0<=Delta<=K; target total diagonal quotient at least 7m-2(Delta+K)", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean row cofactors and semantic equivalence classes; inherited affine row geometry only",
       "asymptotic_quantifiers": "Every sufficiently large compatible canonical parameter choice and some minimum circuit for each instance", "case_regime": "Exact quantitative quotient-stability gate; not a SAT circuit lower bound or terminal result",
       "evidence": "proofs/GATE-004AU-near-minimum-quotient-stability.md; proofs/LEMMA-144-base-tail-Hall-size-lower-bound.md; artifacts/cycle-115-base-tail-Hall-and-stability.md"
     },
@@ -4595,6 +4595,30 @@
       "circuit_size": "Near-minimum deficit Delta=o(m) but no class-count lower from size alone", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean semantic equivalence under restriction only",
       "asymptotic_quantifiers": "Every canonical base-tail instance and every minimum circuit considered by the size-only method", "case_regime": "Structural no-go for size-only quotient promotion; GATE004AU/AT/AG/AE remain open",
       "evidence": "proofs/GATE-004AU-global-size-only.md; docs/no-go-ledger.md NG-099; artifacts/cycle-115-base-tail-Hall-and-stability.md"
+    },
+    {
+      "id": "LEMMA145", "label": "PROVED",
+      "statement": "Every two-row diagonal quotient has size at least max(C(F_0),C(F_1)); canonically this is at least 6m.",
+      "computational_model": "Arbitrary circuits under two fixed row restrictions and semantic merging of residual gates", "uniformity": "Every individual non-uniform parent circuit; uniform designated canonical rows in the application",
+      "circuit_size": "Quotient lower max(C(F_0),C(F_1)); canonical consequence at least 6m", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean semantic equivalence under restriction only",
+      "asymptotic_quantifiers": "Every finite parent circuit and every pair of row restrictions; every sufficiently large canonical instance in the application", "case_regime": "Exact quotient baseline; not the required cross-row surplus, a SAT lower bound, or a terminal result",
+      "evidence": "proofs/LEMMA-145-two-row-quotient-baseline.md; proofs/LEMMA-144-base-tail-Hall-size-lower-bound.md; artifacts/cycle-116-two-row-quotient-baseline.md"
+    },
+    {
+      "id": "GATE004AV", "label": "EXPLORATORY",
+      "statement": "Some minimum canonical circuit has cross-row quotient surplus at least m-2(Delta+K) above the harder single-row complexity.",
+      "computational_model": "Minimum unrestricted canonical base-tail circuits and unions of two semantic row quotients", "uniformity": "Uniform canonical rows; fully non-uniform minimum-circuit adversary",
+      "circuit_size": "Target surplus m-2(Delta+K) above max(C(F_0),C(F_1))", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean semantic row cofactors and class intersections",
+      "asymptotic_quantifiers": "Every sufficiently large compatible canonical instance and some minimum circuit for each instance", "case_regime": "Exact cross-row stability subgate for GATE004AU; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004AV-cross-row-quotient-surplus.md; proofs/LEMMA-145-two-row-quotient-baseline.md; artifacts/cycle-116-two-row-quotient-baseline.md"
+    },
+    {
+      "id": "GATE004AV-SEPARATE-ROW-SIZES-ONLY", "label": "NO-GO",
+      "statement": "Separate row-complexity lower bounds do not control the intersection of their semantic class sets.",
+      "computational_model": "Two restricted circuits, their semantic class sets, and an explicit shared-tail parent architecture", "uniformity": "Every individual non-uniform circuit under the size-only method; uniform two rows",
+      "circuit_size": "Each row needs at least 6m, but the class intersection may contain 6m-1 shared tail functions", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Finite set union/intersection and Boolean semantic restriction only",
+      "asymptotic_quantifiers": "Every m at least one and every canonical base with two nonconstant row residuals", "case_regime": "Quantitative no-go for separate-row addition; GATE004AV/AU/AG/AE remain open",
+      "evidence": "proofs/GATE-004AV-separate-row-sizes-only.md; docs/no-go-ledger.md NG-100; artifacts/cycle-116-two-row-quotient-baseline.md"
     }
   ]
 }
