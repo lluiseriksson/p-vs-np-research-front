@@ -5226,7 +5226,31 @@
       "computational_model": "One common minimum two-excess circuit and its two equal-rank primary cofactors", "uniformity": "Every individual non-uniform remaining parent; uniform symmetric tail",
       "circuit_size": "Exact parent N+r=j+2; one common cycle or NOT loss gives target N+r at most j+1", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; primary source fanout two", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "One identified residual cycle space over F_2 plus Boolean restriction semantics",
       "asymptotic_quantifiers": "Every operational GATE004BT parent with residual cycle rank at least two", "case_regime": "Falsifiable worst-case sufficient subgate for GATE004BT; not a SAT lower bound or terminal result",
-      "evidence": "proofs/GATE-004BU-common-clause-cycle-incidence.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; artifacts/cycle-141-common-cycle-space.md"
+      "evidence": "proofs/GATE-004BU-common-clause-cycle-incidence.md; proofs/LEMMA-174-equal-rank-restrictions-preserve-cycle-space.md; proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; artifacts/cycle-142-signature-compression-audit.md"
+    },
+    {
+      "id": "LEMMA175", "label": "PROVED",
+      "statement": "One surviving NOT can mix arbitrarily many tail blocks between primary cofactors while only three gates depend on the selector.",
+      "computational_model": "Explicit AND/OR/NOT formula gadget under a primary-selector cofactor", "uniformity": "Uniform gadget family in m; no minimum-parent realization claim",
+      "circuit_size": "One NOT, one selector AND, one final OR, and an m-1 gate selector-independent OR tree", "circuit_depth": "Unrestricted OR-tree depth plus three", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and essential dependence only",
+      "asymptotic_quantifiers": "Every integer m at least one", "case_regime": "Exact semantic compression witness; not an exact-parent counterexample, SAT lower bound, or terminal result",
+      "evidence": "proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; artifacts/cycle-142-signature-compression-audit.md"
+    },
+    {
+      "id": "GATE004BU-SIGNATURE-COUNT-ONLY", "label": "NO-GO",
+      "statement": "Changed tail signatures do not inject into selector-dependent resources.",
+      "computational_model": "Explicit selector-tail mixing gadgets and abstract signature-to-resource charging", "uniformity": "Uniform local gadget family; no minimum-circuit realization claim",
+      "circuit_size": "m mixed tail variables with only three selector-dependent gates", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean cofactors and integer incidence counts only",
+      "asymptotic_quantifiers": "Every integer m at least one", "case_regime": "Structural no-go for signature-count-only selector charging; not a refutation of GATE004BU or a SAT lower bound",
+      "evidence": "proofs/GATE-004BU-signature-count-only.md; proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; docs/no-go-ledger.md NG-120; artifacts/cycle-142-signature-compression-audit.md"
+    },
+    {
+      "id": "GATE004BV", "label": "EXPLORATORY",
+      "statement": "A size-preserving minimum-circuit exchange exposes one uniformly neutral NOT or common cycle path.",
+      "computational_model": "Minimum unrestricted two-excess implication circuits under size-preserving Boolean and graph exchanges", "uniformity": "Existential minimum representation for every non-uniform GATE004BU parent; uniform tail",
+      "circuit_size": "Exchange preserves minimum size and N+r; exposed neutralization loses at least one resource", "circuit_depth": "Unrestricted", "fan_in": "AND/OR two; NOT one; fanout unrestricted", "randomness": "None", "advice": "None", "oracle_access": "None", "field_or_algebraic_model": "Boolean gate identities and common cycle space over F_2",
+      "asymptotic_quantifiers": "Every operational GATE004BU instance", "case_regime": "Exact worst-case sufficient normal-form subgate; not a SAT lower bound or terminal result",
+      "evidence": "proofs/GATE-004BV-exposed-uniform-neutral-form.md; proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md; artifacts/cycle-142-signature-compression-audit.md"
     }
   ]
 }

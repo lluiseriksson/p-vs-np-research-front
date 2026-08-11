@@ -2414,3 +2414,24 @@ realizability, depth, fan-in, randomness, advice, oracle, promise,
 distribution, or algebraic-computation claim. This does not refute
 GATE-004BT. It closes dimension/vector-only alignment and leaves GATE-004BU
 to use actual directed paths and Boolean semantics.
+
+## NG-120 — charge every changed tail signature to a selector gate
+
+**Label: NO-GO**
+
+Scope: if uniform neutralization fails, inject each affected tail clause into
+a distinct selector-dependent gate and derive linear selector penetration or
+a resource contradiction.
+
+Failure: LEMMA-175's gate
+`NOT(v OR (x AND (u_1 OR ... OR u_m)))` changes from `NOT v` to a function
+depending on every `u_i`, while only the final AND, OR, and NOT gates depend
+on `x`. One constant-size selector-dependent region therefore mixes an
+arbitrarily large tail. LEMMA-151/NG-105 also show no size premium follows
+from selector penetration alone.
+
+Model: explicit non-uniform local gadget family and integer signature counts;
+no exact minimum-parent, randomness, advice, oracle, promise, distribution,
+or algebraic model. This does not refute GATE-004BU. It closes
+signature-count-only charging and leaves GATE-004BV to prove an exposed form
+by exact exchange.

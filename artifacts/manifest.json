@@ -623,6 +623,10 @@
       "sha256": "6bb07fa0cb2a7bb22661e454860cfc480d7f66b507349944a7f306f4152d4841"
     },
     {
+      "path": "artifacts/cycle-142-signature-compression-audit.md",
+      "sha256": "379cf22a418160b58f10e36f8f8a34a534b2cd093ee8ae7aad2d66a1f6220d55"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -648,7 +652,7 @@
     },
     {
       "path": "docs/no-go-ledger.md",
-      "sha256": "8a1928cd4258d94e3286d657720851136aea0d5e081135099b2abd5be1c6de6e"
+      "sha256": "265d6f8dcbeeb198b9f0858133321e099e75aa555b532dc0fc3c5cd1fc62a694"
     },
     {
       "path": "docs/problem-statement.md",
@@ -656,7 +660,7 @@
     },
     {
       "path": "docs/progress.md",
-      "sha256": "125d3384819247f61a1c4e48d006f0ffedd48cb03f41680f9c82ec0b6d591940"
+      "sha256": "6c97db71bc36ff0fdd21822885f26cf0f744314240a145a5e756c4ef83998fc9"
     },
     {
       "path": "docs/result-labels.md",
@@ -768,11 +772,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "d780dc90287c825c244166b79b236bfc1a464d44cf0cab04b192b0b8497ba731"
+      "sha256": "8179e4568bdc8741ce8f64f52a13ef26173e652dea80cec47e52e6509ac2038f"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "3539b30b8bc15011eca5369154b6c12aeb5b358f3f23bdf7c3833b8766087e55"
+      "sha256": "7d8a4c370c573502ba648d8505cc5ce97eb83d644599a261da64280c39361755"
     },
     {
       "path": "experiments/README.md",
@@ -1244,7 +1248,15 @@
     },
     {
       "path": "proofs/GATE-004BU-common-clause-cycle-incidence.md",
-      "sha256": "5c2c6e4be32c191a4b929666707dfe02b48d382b5ae15afeb8f75afb24568b08"
+      "sha256": "e6c4e9cee0dd75d5a67ed955bc7983cb7d72b79fbf936310c1f7a381a5560e61"
+    },
+    {
+      "path": "proofs/GATE-004BU-signature-count-only.md",
+      "sha256": "9f0624b1d24e9d9736e935896b95fdf7f9a8c4733ebe8dd60bee993b390f4442"
+    },
+    {
+      "path": "proofs/GATE-004BV-exposed-uniform-neutral-form.md",
+      "sha256": "0eaf09453d273474e1a77164a1d3985999486cf5460bbeb8f2cc234f227933a3"
     },
     {
       "path": "proofs/GATE-004C-context-semantic-loss.md",
@@ -2103,8 +2115,12 @@
       "sha256": "2e48f1d111d3c4a2d6d369b94a7dd9b35bc1ad1a9b562a346579f7d8cffa8ad2"
     },
     {
+      "path": "proofs/LEMMA-175-one-NOT-mixes-arbitrarily-many-tail-blocks.md",
+      "sha256": "e2d5831fb97ffa04599b81f4a49ffecd0ee47c4b75ff63a010efd58e129786d3"
+    },
+    {
       "path": "README.md",
-      "sha256": "4d358df9fef22c9cadb8041d16659c811be9793021e6ae0dee782ecda3b161e1"
+      "sha256": "ef670f2227c8f306f34c86402ac2faaddd79fae0a1e648685b15d213c1139f01"
     },
     {
       "path": "verification/affine_index_extension.py",
@@ -2116,7 +2132,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "e4f088f2927993724fe4b615bfe0852eaf8a081e80d62f4c8be8334edcef1742"
+      "sha256": "eb5e503f61dfa0c4836d443ba69f217b91adb42658d47017388bda7076be6a70"
     },
     {
       "path": "verification/corrected_quartet_shards.py",

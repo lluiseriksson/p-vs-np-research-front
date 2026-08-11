@@ -278,6 +278,9 @@ Adjacent collision-aware active branch:
                                                   + LEMMA-174 (equal-rank restrictions preserve the cycle space modulo contraction)
                                                   - GATE-004BT-CYCLE-SPACE-ONLY (no-go: common vectors need not share clause labels)
                                                   <- GATE-004BU (active smallest brick): common clause-cycle incidence
+                                                     + LEMMA-175 (one NOT mixes arbitrarily many tail blocks with constant selector penetration)
+                                                     - GATE-004BU-SIGNATURE-COUNT-ONLY (no-go: changed signatures do not inject into gates)
+                                                     <- GATE-004BV (active smallest brick): expose a uniform neutral form by exchange
   <- GATE-004AF (active constructive audit): four-block sparsity through width five
      - GATE-004AF-LEMMA075-ALPHABET-ONLY (no-go by LEMMA-077)
      - GATE-004AF-TWO-ID-REPAIR-ONLY (no-go by LEMMA-078)
@@ -959,6 +962,13 @@ contraction. Both nonzero codes therefore share one identified space for
 `r>=3`. Dimension and even a common lost vector still do not align its clause
 label; a two-code incidence table separates them. GATE-004BU is now the
 active common clause-vector gate.
+
+LEMMA-175 then closes the obvious quantitative repair: one surviving NOT can
+mix arbitrarily many tail variables while only three gates depend on the
+primary selector. Changed signatures therefore do not inject into selector
+resources, consistent with LEMMA-151/NG-105. GATE-004BV is the active
+normal-form gate: use exact minimality to expose one uniformly neutral NOT or
+cycle path by a size-preserving exchange.
 
 ### Parallel constructive audit: GATE-004AF
 

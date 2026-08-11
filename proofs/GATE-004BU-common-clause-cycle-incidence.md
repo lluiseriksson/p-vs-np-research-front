@@ -16,6 +16,11 @@ the dimension and separate existence of loss pairs do not suffice. The proof
 must use the actual common directed paths, Boolean gate functions, or exact
 minimum-circuit exchange to align the clause labels.
 
+LEMMA-175 and GATE-004BU-SIGNATURE-COUNT-ONLY exclude a linear charge from
+mixed signatures to selector-dependent gates. GATE-004BV is the next
+smallest route: expose one uniform neutral resource by a size-preserving
+minimum-circuit exchange.
+
 ## Model card
 
 | Field | Value |
