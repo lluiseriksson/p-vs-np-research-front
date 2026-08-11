@@ -1421,11 +1421,16 @@ The one-hundred-and-eighty-second cycle caps the union of the three exact
 two-gate satisfying losses at six physical gates (NG-159 for pruning-only
 payment). GATE-004DJ now requires `D_b<=6` or distinct external resources.
 
+The one-hundred-and-eighty-third cycle generalizes the reservoir exchange from
+formulas to shared aligned DAGs. The residual `D_b^DAG` is no larger than the
+former formula deficit. GATE-004DK asks for its six-gate bound or distinct
+external resources without an unjustified circuit-to-formula conversion.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–182 exclude isolated specialization, sufficient-private-budget rewrites, local cardinality/joint-saving payments, and pruning-only payment beyond six gates; the endpoint deficit bound or external resources, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–183 exclude isolated specialization, insufficiently paid local routes, and pruning-only payment beyond six gates, while replacing formula cost by the tighter shared-DAG cost; the aligned-circuit deficit bound or external resources, missing alignment, raw/shared inputs, incomparable erasure, and handoff descent remain open. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

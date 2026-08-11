@@ -1320,6 +1320,11 @@ LEMMA-216 caps the three exact satisfying-loss sets at six distinct physical
 gates. Pruning-only payment is NG-159. GATE-004DJ is active: prove `D_b<=6`
 after prior charges, or force enough distinct external resources.
 
+LEMMA-217 replaces the formula certificate by the physically sufficient
+shared aligned DAG certificate and defines `D_b^DAG<=D_b`. GATE-004DK is the
+active residual brick: bound this tighter circuit deficit by the uncharged
+six-gate loss union or force distinct external resources.
+
 LEMMA-188 quantifies the shared parent backbone: any two satisfying minors
 share at least `K-2` physical gates, all three at least `K-4`, and every NOT is
 common. An exact-table witness has a common gate computing different base

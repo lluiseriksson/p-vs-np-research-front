@@ -41,3 +41,10 @@ proof. Raw, unmasked, no-formula, and incomparable branches remain explicit.
 | Field/algebraic model | Physical loss-set union, minimum joint Boolean circuits, potentials, and cycle minors over `F_2` |
 | Asymptotic quantifiers | Every nonconstant base and hypothetical residual comparable, raw, unmasked, no-formula, or incomparable boundary |
 | Regime | Exact worst-case bounded-deficit/external-resource gate; not a SAT lower bound or terminal result |
+
+## Cycle-183 audit
+
+LEMMA-217 shows that a shared aligned DAG, not a formula tree, is the exact
+physical replacement object. GATE-004DK therefore supersedes this operational
+gate with the tighter deficit `D_b^DAG<=D_b`. GATE-004DJ retains its
+`EXPLORATORY` label; no formula-to-circuit equality is assumed.

@@ -787,6 +787,10 @@
       "sha256": "d006dd4c95dd701d7219fb3976b5c4e3031af54091a5bd54112c987ad85cfba0"
     },
     {
+      "path": "artifacts/cycle-183-aligned-dag-reservoir-audit.md",
+      "sha256": "a9d5279ae5e8d5718101329d6940630e434a4acfbacffd7ee74bfe0bd64ada46"
+    },
+    {
       "path": "artifacts/literal-subcube-search-31.json",
       "sha256": "750611c259fe4769a3d9409c6ca185ed09ed6e9f6fbcb4699decde4875778b63"
     },
@@ -932,11 +936,11 @@
     },
     {
       "path": "docs/verification-ledger.md",
-      "sha256": "acfc09619459b5e052c2d06d15108ce912e867c8a2936b487bc9262fc42b329f"
+      "sha256": "ab5bbe4a7861b95360da062067c73479bc51b1d86c941ab6f3ad98efd26554a1"
     },
     {
       "path": "docs/vertical-map.md",
-      "sha256": "6618adb8831cc6011930c08ab9f0eb308da87f6a597121472638f97f8903768c"
+      "sha256": "015ea55676de88b61a98a1c87cf6f39f584e6fea6a805b0c4189311544ab0889"
     },
     {
       "path": "experiments/README.md",
@@ -1740,7 +1744,11 @@
     },
     {
       "path": "proofs/GATE-004DJ-bound-deficit-or-force-external-resource.md",
-      "sha256": "5acaa0fc2ffe9cee8288cb4fb8e6db88a0bb2d007e82f0f17ceb530a414714a6"
+      "sha256": "419708e82aa1a282b17c081db1079a5e6db9fa219cb56ae6874893aaad9b15d5"
+    },
+    {
+      "path": "proofs/GATE-004DK-bound-aligned-circuit-deficit-or-force-resource.md",
+      "sha256": "e0c239c1ce1d56eb99a22c2f84add15c4f1c88098ad24bb94c6fe810d3ef1f40"
     },
     {
       "path": "proofs/GATE-004E-neutral-family-collisions.md",
@@ -2759,12 +2767,20 @@
       "sha256": "eb12e8452d997aaf7461c1f06446c0863a9976b47dedf72c84b5a9cc7d9f2d0c"
     },
     {
+      "path": "proofs/LEMMA-217-aligned-dag-private-reservoir-descends.md",
+      "sha256": "3bf0e5df8dec453f7fcfce072d30d4ca2d982f6482f0d96c24ad427d6e08dd5c"
+    },
+    {
       "path": "README.md",
-      "sha256": "e5df9809195c387a57fffbc35da80b95087741c316a71c0bef46b32fe9b6caa8"
+      "sha256": "1ad5ad8008cf8d7377c9902ced4aaa8ce3df8d0be474520fae831ce03913bb49"
     },
     {
       "path": "verification/affine_index_extension.py",
       "sha256": "e9452fd7d8d95983eabdace9e8973a2c0ae2f31ca446e4d264067b73bcec985e"
+    },
+    {
+      "path": "verification/aligned_dag_reservoir_audit.py",
+      "sha256": "efb7e5a158783f62891e8e44b70f7f9dc3dcffa6c96177c650e650be6f174223"
     },
     {
       "path": "verification/audit.py",
@@ -2772,7 +2788,7 @@
     },
     {
       "path": "verification/claims.json",
-      "sha256": "80e3c6c5f9c3e1fb8b7429d8f8b981614f59dd378ddc4b0074f1d892d23f12a3"
+      "sha256": "6901dd539f36b9f32429311babbe616954e17e15371815a429d81749ba6ad21f"
     },
     {
       "path": "verification/corrected_quartet_shards.py",
