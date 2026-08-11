@@ -1290,11 +1290,16 @@ it. Arbitrarily many nonconstant aligned masks coexist locally, so boundary
 count is `NO-GO`. GATE-004CP now targets shared realization cost and
 reconvergence of the complete mask family.
 
+The one-hundred-and-sixty-third cycle blocks a hidden row-projection step.
+LEMMA-196 gives a boundary aligned under `01/11` but switching under `00/10`.
+Factoring from satisfying masks alone is therefore `NO-GO`. GATE-004CQ now
+requires complete four-code boundary signatures before a global rewrite.
+
 ## Honest progress estimates
 
 | Measure | Estimate | Meaning |
 |---|---:|---|
-| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–162 reduce the size-three carrier to shared-cost uncrossing of an exact aligned-mask family before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
+| Infrastructure maturity | 94% | Repository, corrected target/bridge labels, exact bit-level SAT language, broad encoding and barrier audits, exact symbolic/literal finite verifiers, ledgers, model-card checker, manifest, cold-clone evidence, and primary-source model boundaries exist. Cycles 113–163 reduce the size-three carrier to a full four-code boundary-signature audit before sizes four through seven and the original two-sided branch. Formal foundations, independent mathematical review, and SAT bridges remain incomplete. |
 | Formally closed proof chain | 0% | No terminal-critical implication has been proof-assistant verified. |
 | Real progress toward P vs NP | 0.00% | The fixed-sign disjoint-clause family now has an exact unrestricted size theorem, but GATE-004AG/AE base-tail rigidity, overlapping/nonclausal predicates, and every unrestricted SAT circuit lower bound remain unresolved. |
 

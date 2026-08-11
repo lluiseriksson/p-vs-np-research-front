@@ -18,6 +18,11 @@ Every complete aligned-mask family yields one of:
 The proof must charge shared realization cost, cover both mask polarities, and
 handle the arbitrarily large local families of the boundary-count no-go.
 
+LEMMA-196 shows that an aligned `01/11` boundary can still carry an unequal
+`00/10` signature. Factoring from satisfying masks alone is therefore
+`NO-GO`. GATE-004CQ is the active refinement and audits complete four-code
+boundary vectors before any global rewrite.
+
 ## Model card
 
 | Field | Value |

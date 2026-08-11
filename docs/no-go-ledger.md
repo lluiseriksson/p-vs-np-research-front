@@ -2826,3 +2826,21 @@ boundary-count-only charging and leaves GATE-004CP to use shared cost.
 Model: unrestricted AND/OR/NOT local family; constant depth, fan-in two/one,
 unbounded `h` fanout; no randomness, advice, oracle, promise, distribution,
 field, or algebraic computation; every `m>=1` and every assignment.
+
+## NG-140 — globally factor a boundary from its satisfying-row mask
+
+**Label: NO-GO**
+
+Scope: replace `h` by its neutral expression using only equality under
+`01/11`, and infer a global function-preserving rewrite.
+
+Failure: with `g=u AND x`, `h=g OR y`,
+`r=NOT x OR NOT t`, and `b=h AND r`, one has
+`b_01=b_11=y AND NOT x`, but `b_00=y` and `b_10=x OR y`. The satisfying-row
+factoring erases the switching behavior needed on the row containing code
+`10`. This constant-size local gadget is not minimum, a full output circuit,
+or a plateau. GATE-004CQ must preserve complete four-code vectors.
+
+Model: unrestricted constant-depth AND/OR/NOT local gadget; fan-in two/one,
+fanout unrestricted; no randomness, advice, oracle, promise, distribution,
+field, or algebraic computation; every assignment to `x,y,u,t`.
